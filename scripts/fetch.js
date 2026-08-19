@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { resample } = require('./ta');
 
 const DATA_DIR = path.join(__dirname, '..', 'data', 'raw');
 fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -102,23 +103,61 @@ async function fetchBinance(symbol, interval, startMs) {
   return rows;
 }
 
+// ---------- Coinbase (crypto fallback, works from anywhere) ----------
+async function fetchCoinbase(pair, granularity, daysBack) {
+  const rows = [];
+  let end = Math.floor(Date.now() / 1000);
+  const startAll = end - daysBack * 86400;
+  while (end > startAll) {
+    const start = Math.max(startAll, end - 300 * granularity);
+    const url = `https://api.exchange.coinbase.com/products/${pair}/candles?granularity=${granularity}&start=${start}&end=${end}`;
+    const data = await fetchJson(url);
+    if (!data || !data.length) break;
+    // coinbase candles: [time, low, high, open, close, volume]
+    for (const c of data) {
+      rows.push([new Date(c[0] * 1000).toISOString(), c[4], c[2], c[1], c[3], c[5]]);
+    }
+    end = Math.min(...data.map((c) => c[0])) - 1;
+    await sleep(200);
+  }
+  rows.sort((a, b) => a[0].localeCompare(b[0]));
+  const seen = new Set();
+  return rows.filter((r) => (seen.has(r[0]) ? false : (seen.add(r[0]), true)));
+}
+
+function resampleToCsv(rows, bucketMs) {
+  const bars = resample(
+    rows.map((r) => ({ t: Date.parse(r[0]), open: +r[1], high: +r[2], low: +r[3], close: +r[4], volume: +r[5] })),
+    bucketMs
+  );
+  return bars.map((b) => [new Date(b.t).toISOString(), b.open, b.high, b.low, b.close, b.volume]);
+}
+
 async function fetchCrypto() {
   const binanceStart = Date.UTC(2017, 7, 17); // BTCUSDT / ETHUSDT listing
   const pairs = [
-    { symbol: 'BTC', binance: 'BTCUSDT', id: 'bitcoin' },
-    { symbol: 'ETH', binance: 'ETHUSDT', id: 'ethereum' },
+    { symbol: 'BTC', binance: 'BTCUSDT', pair: 'BTC-USD', id: 'bitcoin' },
+    { symbol: 'ETH', binance: 'ETHUSDT', pair: 'ETH-USD', id: 'ethereum' },
   ];
   for (const p of pairs) {
-    const hourly = await fetchBinance(p.binance, '1h', binanceStart);
+    let hourly, fourHour, binanceDaily;
+    try {
+      hourly = await fetchBinance(p.binance, '1h', binanceStart);
+      fourHour = await fetchBinance(p.binance, '4h', binanceStart);
+      binanceDaily = await fetchBinance(p.binance, '1d', binanceStart);
+    } catch (e) {
+      console.log(`Binance unavailable (${e.message}) — using Coinbase fallback for ${p.symbol}`);
+      hourly = await fetchCoinbase(p.pair, 3600, 400);
+      fourHour = resampleToCsv(hourly, 4 * 3600e3);
+      binanceDaily = await fetchCoinbase(p.pair, 86400, 3650);
+    }
     saveCsv(path.join(DATA_DIR, `${p.symbol}_1h.csv`), hourly);
     await sleep(300);
 
-    const fourHour = await fetchBinance(p.binance, '4h', binanceStart);
     saveCsv(path.join(DATA_DIR, `${p.symbol}_4h.csv`), fourHour);
     await sleep(300);
 
-    const daily = await fetchBinance(p.binance, '1d', binanceStart);
-    saveCsv(path.join(DATA_DIR, `${p.symbol}_1d_binance.csv`), daily);
+    saveCsv(path.join(DATA_DIR, `${p.symbol}_1d_binance.csv`), binanceDaily);
     await sleep(300);
 
     const yahooDaily = await fetchYahoo(p.symbol + '-USD', '1d', '10y');
@@ -130,7 +169,7 @@ async function fetchCrypto() {
 async function main() {
   console.log('=== Fetching stocks (Yahoo Finance) ===');
   await fetchStocks();
-  console.log('=== Fetching crypto (Binance + CoinGecko) ===');
+  console.log('=== Fetching crypto (Binance + Coinbase fallback) ===');
   await fetchCrypto();
   console.log('=== Done ===');
 }
