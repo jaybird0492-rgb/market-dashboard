@@ -1,0 +1,56 @@
+name: dashboard-update
+
+on:
+  schedule:
+    - cron: '15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch market data
+        run: node scripts/fetch.js
+      - name: Compute strategy signals
+        run: node scripts/tracker.js
+      - name: Compute trade setups
+        run: node scripts/setups.js
+      - name: Precompute static page data
+        run: node scripts/precompute.js
+      - name: Commit data
+        run: |
+          git config user.name "market-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add web/data
+          if git diff --cached --quiet; then
+            echo "no data changes"
+          else
+            git commit -m "data update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

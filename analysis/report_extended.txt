@@ -1,0 +1,39 @@
+========== SPY & QQQ vs SINGLE STOCKS (10y, fees 0.05%/side) ==========
+
+Apple (AAPL) 10y:
+  Buy&Hold        total 1033% | ann 42.3% | sharpe 1.18 | maxDD -39%
+  Skip-September  total 1274% | ann 46.3% | sharpe 1.30 | maxDD -39% | trades 11
+  close>MA200     total 292% | ann 21.9% | sharpe 0.84 | maxDD -36% | in market 73%
+
+Alphabet (GOOGL) 10y:
+  Buy&Hold        total 760% | ann 36.7% | sharpe 1.06 | maxDD -44%
+  Skip-September  total 772% | ann 37.0% | sharpe 1.09 | maxDD -38% | trades 11
+  close>MA200     total 286% | ann 21.7% | sharpe 0.85 | maxDD -30% | in market 71%
+
+Amazon (AMZN) 10y:
+  Buy&Hold        total 585% | ann 32.3% | sharpe 0.90 | maxDD -56%
+  Skip-September  total 780% | ann 37.2% | sharpe 1.01 | maxDD -51% | trades 11
+  close>MA200     total 85% | ann 9.3% | sharpe 0.45 | maxDD -48% | in market 66%
+
+S&P 500 ETF (SPY) 10y:
+  Buy&Hold        total 251% | ann 20.0% | sharpe 0.95 | maxDD -34%
+  Skip-September  total 291% | ann 21.9% | sharpe 1.05 | maxDD -34% | trades 11
+  close>MA200     total 102% | ann 10.7% | sharpe 0.80 | maxDD -22% | in market 75%
+
+Nasdaq 100 ETF (QQQ) 10y:
+  Buy&Hold        total 512% | ann 30.1% | sharpe 1.11 | maxDD -36%
+  Skip-September  total 584% | ann 32.2% | sharpe 1.19 | maxDD -33% | trades 11
+  close>MA200     total 306% | ann 22.6% | sharpe 1.12 | maxDD -22% | in market 76%
+
+========== WALK-FORWARD SPY & QQQ (train 2y / test 6m) ==========
+SPY: OOS total 125% | ann 19.8% | sharpe 0.98 | maxDD -34% | picks: Buy&Hold x2 | B&H-skipSep x5 | close>MA200 x1 | MOM252/20 x1
+   B&H full: total 251% | ann 20.0% | sharpe 0.95 | maxDD -34%
+QQQ: OOS total 202% | ann 27.9% | sharpe 1.12 | maxDD -29% | picks: Buy&Hold x2 | B&H-skipSep x5 | close>MA200 x2
+   B&H full: total 512% | ann 30.1% | sharpe 1.11 | maxDD -36%
+
+========== PORTFOLIO VARIANTS (2017-2026, monthly rebalance, fees incl.) ==========
+Final (AAPL/GOOGL/AMZN/BTC/ETH) + rules              total 751% | ann 26.8% | sharpe 1.39 | maxDD -21%
+ETFs variant (SPY/QQQ/BTC/ETH) + rules               total 429% | ann 20.3% | sharpe 1.27 | maxDD -21%
+Index heavy (SPY 50 / QQQ 15 / BTC 25 / ETH 10) + rules total 386% | ann 19.2% | sharpe 1.24 | maxDD -22%
+SPY only (index benchmark)                           total 216% | ann 13.6% | sharpe 0.77 | maxDD -34%
+60/25/15 no rules (reference)                        total 1503% | ann 36.0% | sharpe 1.05 | maxDD -55%

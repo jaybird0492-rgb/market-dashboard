@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asset analysis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <a href="/" class="back-link">&larr; Dashboard</a>
+    <h1 id="assetTitle">Loading...</h1>
+  </div>
+  <div class="header-meta">
+    <span id="assetMeta"></span>
+    <span id="strategySignal"></span>
+  </div>
+</header>
+
+<div id="summary" class="rules"></div>
+
+<section>
+  <div class="tf-tabs" id="tfTabs"></div>
+  <div class="chart-wrap">
+    <canvas id="chart" height="400"></canvas>
+  </div>
+  <div id="readPanel" class="read-panel"></div>
+  <div id="setupPanel" class="setup-panel"></div>
+  <div id="timeline" class="timeline"></div>
+  <div id="backtestPanel" class="backtest-panel"></div>
+</section>
+
+<script src="candles.js"></script>
+<script src="asset.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+========== SEASONALITY SIGNIFICANCE (permutation tests, 10,000 shuffles) ==========
+p-value = probability that a random month label assignment produces at least as extreme a return.
+  AAPL July (avg +7.02%, up 10/10) -> actual avg 7.02% | p=0.0227 | SIGNIFICANT
+  GOOGL July (avg +5.85%, up 8/10) -> actual avg 5.85% | p=0.0585 | weak
+  AMZN July (avg +6.37%, up 7/10) -> actual avg 6.37% | p=0.0556 | weak
+  BTC October (avg +17.91%, up 8/10) -> actual avg 17.91% | p=0.0404 | SIGNIFICANT
+  BTC April (avg +11.76%, up 7/10) -> actual avg 11.76% | p=0.1891 | not significant
+  BTC June (avg -4.04%) -> actual avg -4.04% | p=0.0516 | weak
+  ETH June (avg -11.67%, up 2/9) -> actual avg -11.67% | p=0.0223 | SIGNIFICANT
+  ETH January (avg +14.70%) -> actual avg 14.70% | p=0.1347 | not significant
+  AAPL September (avg -1.96%) -> actual avg -1.96% | p=0.0328 | SIGNIFICANT

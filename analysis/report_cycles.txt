@@ -1,0 +1,42 @@
+========== BTC HALVING CYCLE ANALYSIS ==========
+Average DAILY return by phase relative to halving (dates: 2016-07-09, 2020-05-11, 2024-04-19)
+  12m before halving: 0.194%/day
+  12m after halving: 0.392%/day
+  months 12-24: 0.116%/day
+  months 24-36: 0.103%/day
+
+BTC yearly returns relative to halving years:
+  Halving 2016: +1y=1318% | +2y=-73%
+  Halving 2020: +1y=58% | +2y=-65%
+  Halving 2024: +1y=-7% | +2y=-28%
+
+========== DRAWDOWN RECOVERY ==========
+Apple: 5 drawdown episodes below 20%
+  peak 2018-10-03 -> bottom 2019-01-03 | -39% | 62d to bottom
+  peak 2020-02-12 -> bottom 2020-03-23 | -31% | 27d to bottom
+  peak 2020-09-01 -> bottom 2020-09-18 | -20% | 12d to bottom
+  peak 2022-01-03 -> bottom 2023-01-05 | -31% | 253d to bottom
+  Recoveries to new high: 5 | avg 196 days | median 203 days | max 361 days
+Alphabet: 6 drawdown episodes below 20%
+  peak 2018-07-26 -> bottom 2018-12-24 | -23% | 104d to bottom
+  peak 2020-02-19 -> bottom 2020-03-23 | -31% | 23d to bottom
+  peak 2021-11-18 -> bottom 2022-11-03 | -44% | 241d to bottom
+  peak 2024-07-10 -> bottom 2024-09-10 | -22% | 43d to bottom
+  Recoveries to new high: 6 | avg 190 days | median 139 days | max 547 days
+Amazon: 5 drawdown episodes below 20%
+  peak 2018-09-04 -> bottom 2018-12-24 | -34% | 77d to bottom
+  peak 2020-02-19 -> bottom 2020-03-12 | -23% | 16d to bottom
+  peak 2021-07-08 -> bottom 2022-12-28 | -56% | 372d to bottom
+  peak 2025-02-04 -> bottom 2025-04-21 | -31% | 52d to bottom
+  Recoveries to new high: 5 | avg 278 days | median 187 days | max 694 days
+Bitcoin: 6 drawdown episodes below 30%
+  peak 2017-01-04 -> bottom 2017-01-11 | -33% | 7d to bottom
+  peak 2017-06-11 -> bottom 2017-07-16 | -35% | 35d to bottom
+  peak 2017-09-01 -> bottom 2017-09-14 | -36% | 13d to bottom
+  peak 2017-12-16 -> bottom 2018-12-15 | -83% | 364d to bottom
+  Recoveries to new high: 6 | avg 377 days | median 189 days | max 1080 days
+Ethereum: 3 drawdown episodes below 30%
+  peak 2018-01-13 -> bottom 2018-12-14 | -94% | 335d to bottom
+  peak 2021-05-11 -> bottom 2021-07-20 | -57% | 70d to bottom
+  peak 2021-11-08 -> bottom 2022-06-18 | -79% | 222d to bottom
+  Recoveries to new high: 3 | avg 888 days | median 1116 days | max 1383 days

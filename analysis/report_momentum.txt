@@ -1,0 +1,116 @@
+
+========== Apple (AAPL) — MOMENTUM & SENTIMENT, 1d ==========
+RSI(14) buckets -> 5d | 10d | 20d | 60d avg fwd return:
+  <30 (oversold) | 52     | 2.97% | 3.41% | 2.91% | 7.91%
+  30-45          | 543    | 0.48% | 1.04% | 2.36% | 9.16%
+  45-55          | 564    | 0.17% | 0.68% | 2.07% | 6.74%
+  55-70          | 1001   | 0.65% | 1.18% | 2.40% | 7.44%
+  >70 (overbought) | 338    | 0.73% | 1.43% | 2.00% | 2.38%
+Consecutive-day streaks -> 5d | 10d | 20d avg fwd return:
+  3+ up days     | 376    | 0.48% | 1.14% | 2.30%
+  3+ down days   | 245    | 0.79% | 1.16% | 2.14%
+  5+ up days     | 107    | 0.23% | 1.11% | 1.64%
+  5+ down days   | 42     | 1.39% | 1.88% | 2.60%
+Volume spike (>2x 20d avg) -> 5d | 10d | 20d avg fwd return:
+  spike          | 53     | 1.38% | 1.41% | 3.09%
+52-week high breakout / low breakdown -> 20d | 60d avg fwd return:
+  52w high       | 228    | 1.22% | 1.22%
+  52w low        | 8      | 12.83% | 27.98%
+Price vs MA200 (extended) -> 20d | 60d avg fwd return:
+  >30% above MA200 | 132    | 0.61% | 0.46%
+  <20% below MA200 | 15     | 11.96% | 29.73%
+Gaps >1%: up 263 | down 259 | next-day avg fwd: up-gap -0.00%, down-gap -0.01%
+
+========== Alphabet (GOOGL) — MOMENTUM & SENTIMENT, 1d ==========
+RSI(14) buckets -> 5d | 10d | 20d | 60d avg fwd return:
+  <30 (oversold) | 32     | 4.08% | 4.77% | 5.82% | 9.75%
+  30-45          | 529    | 0.45% | 0.90% | 1.62% | 7.32%
+  45-55          | 682    | 0.79% | 1.26% | 2.80% | 6.85%
+  55-70          | 1003   | 0.40% | 1.00% | 1.91% | 5.78%
+  >70 (overbought) | 252    | -0.11% | 0.24% | 0.90% | 5.06%
+Consecutive-day streaks -> 5d | 10d | 20d avg fwd return:
+  3+ up days     | 387    | 0.12% | 0.71% | 1.41%
+  3+ down days   | 258    | 1.25% | 1.87% | 3.13%
+  5+ up days     | 98     | 0.28% | 0.55% | 0.98%
+  5+ down days   | 41     | 2.03% | 1.41% | 3.18%
+Volume spike (>2x 20d avg) -> 5d | 10d | 20d avg fwd return:
+  spike          | 79     | 0.54% | 0.84% | 0.53%
+52-week high breakout / low breakdown -> 20d | 60d avg fwd return:
+  52w high       | 250    | -0.15% | 3.23%
+  52w low        | 25     | 4.29% | 3.79%
+Price vs MA200 (extended) -> 20d | 60d avg fwd return:
+  >30% above MA200 | 155    | 1.77% | 8.60%
+  <20% below MA200 | 29     | 7.46% | 7.26%
+Gaps >1%: up 270 | down 288 | next-day avg fwd: up-gap 0.22%, down-gap 0.01%
+
+========== Amazon (AMZN) — MOMENTUM & SENTIMENT, 1d ==========
+RSI(14) buckets -> 5d | 10d | 20d | 60d avg fwd return:
+  <30 (oversold) | 50     | 1.89% | 3.27% | 3.89% | 14.42%
+  30-45          | 539    | 0.75% | 1.26% | 2.15% | 6.96%
+  45-55          | 718    | 0.30% | 0.95% | 2.49% | 4.70%
+  55-70          | 968    | 0.48% | 0.87% | 1.53% | 5.33%
+  >70 (overbought) | 223    | 0.25% | 0.36% | 0.40% | 5.53%
+Consecutive-day streaks -> 5d | 10d | 20d avg fwd return:
+  3+ up days     | 390    | 0.33% | 0.77% | 2.21%
+  3+ down days   | 267    | 0.77% | 1.59% | 1.79%
+  5+ up days     | 99     | 0.31% | 1.62% | 2.66%
+  5+ down days   | 51     | 1.54% | 1.89% | -0.31%
+Volume spike (>2x 20d avg) -> 5d | 10d | 20d avg fwd return:
+  spike          | 71     | 0.13% | 0.57% | 0.68%
+52-week high breakout / low breakdown -> 20d | 60d avg fwd return:
+  52w high       | 178    | 1.50% | 6.73%
+  52w low        | 25     | 9.37% | 15.60%
+Price vs MA200 (extended) -> 20d | 60d avg fwd return:
+  >30% above MA200 | 155    | 2.24% | 5.67%
+  <20% below MA200 | 108    | 5.14% | 11.37%
+Gaps >1%: up 354 | down 283 | next-day avg fwd: up-gap -0.05%, down-gap 0.19%
+
+========== Bitcoin (BTC) — MOMENTUM & SENTIMENT, 1d ==========
+RSI(14) buckets -> 5d | 10d | 20d | 60d avg fwd return:
+  <30 (oversold) | 143    | 2.55% | 2.25% | 2.94% | 6.26%
+  30-45          | 955    | -0.06% | 0.64% | 1.30% | 5.05%
+  45-55          | 991    | 0.29% | 0.41% | 2.31% | 11.38%
+  55-70          | 1088   | 1.33% | 2.83% | 5.63% | 16.56%
+  >70 (overbought) | 461    | 3.10% | 5.74% | 10.25% | 31.99%
+Consecutive-day streaks -> 5d | 10d | 20d avg fwd return:
+  3+ up days     | 481    | 2.03% | 3.37% | 6.78%
+  3+ down days   | 358    | 0.73% | 1.07% | 1.65%
+  5+ up days     | 130    | 2.86% | 6.07% | 10.59%
+  5+ down days   | 59     | 0.05% | -1.28% | -5.06%
+Volume spike (>2x 20d avg) -> 5d | 10d | 20d avg fwd return:
+  spike          | 76     | 2.93% | 6.07% | 9.92%
+52-week high breakout / low breakdown -> 20d | 60d avg fwd return:
+  52w high       | 239    | 14.18% | 31.00%
+  52w low        | 45     | -6.82% | -6.22%
+Price vs MA200 (extended) -> 20d | 60d avg fwd return:
+  >30% above MA200 | 946    | 9.58% | 28.45%
+  <20% below MA200 | 611    | 2.76% | 8.54%
+
+========== Ethereum (ETH) — MOMENTUM & SENTIMENT, 1d ==========
+RSI(14) buckets -> 5d | 10d | 20d | 60d avg fwd return:
+  <30 (oversold) | 160    | -1.26% | -0.07% | 4.65% | 13.51%
+  30-45          | 974    | 0.22% | 0.08% | 0.02% | 3.54%
+  45-55          | 864    | -0.12% | -0.40% | 0.82% | 7.44%
+  55-70          | 888    | 1.94% | 4.77% | 8.05% | 17.35%
+  >70 (overbought) | 305    | 2.18% | 2.84% | 5.28% | 5.27%
+Consecutive-day streaks -> 5d | 10d | 20d avg fwd return:
+  3+ up days     | 372    | 2.15% | 3.40% | 5.22%
+  3+ down days   | 311    | -0.79% | -0.49% | 0.36%
+  5+ up days     | 87     | 4.16% | 7.64% | 7.62%
+  5+ down days   | 66     | -1.20% | -1.70% | 0.01%
+Volume spike (>2x 20d avg) -> 5d | 10d | 20d avg fwd return:
+  spike          | 54     | 5.36% | 4.38% | 8.20%
+52-week high breakout / low breakdown -> 20d | 60d avg fwd return:
+  52w high       | 123    | 7.54% | 14.66%
+  52w low        | 69     | -2.50% | 10.91%
+Price vs MA200 (extended) -> 20d | 60d avg fwd return:
+  >30% above MA200 | 714    | 5.76% | 19.57%
+  <20% below MA200 | 791    | 1.40% | 5.19%
+
+========== CORRELATION OF DAILY RETURNS ==========
+    AAPL GOOGL  AMZN   BTC   ETH
+AAPL  1.00  0.58  0.55  0.19  0.23
+GOOGL  0.58  1.00  0.64  0.20  0.24
+AMZN  0.55  0.64  1.00  0.19  0.22
+ BTC  0.19  0.20  0.19  1.00  0.78
+ ETH  0.23  0.24  0.22  0.78  1.00

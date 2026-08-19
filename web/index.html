@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Strategy Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Market Strategy Dashboard</h1>
+  <div class="header-meta">
+    <span id="updatedAt">loading...</span>
+    <button id="refreshBtn">Refresh signals</button>
+  </div>
+</header>
+
+<section class="rules">
+  <h2>Strategy rules (validated 2017-2026)</h2>
+  <ul>
+    <li><b>Portfolio:</b> AAPL 20% / GOOGL 20% / AMZN 20% / BTC 25% / ETH 15%, rebalanced monthly</li>
+    <li><b>Rule 1:</b> Stocks exit in September (worst month, p=0.033)</li>
+    <li><b>Rule 2:</b> Crypto: long only after a 252-day-high breakout, exit below 20-day MA</li>
+    <li><b>Rule 3:</b> Crypto never held in June (ETH p=0.022, BTC p=0.052)</li>
+    <li><b>Result:</b> CAGR 26.8%, Sharpe 1.39, max drawdown -21% (vs -55% without rules)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Live signals</h2>
+  <div id="signalCards" class="cards"></div>
+  <p id="portfolioNote" class="note"></p>
+</section>
+
+<section>
+  <h2>Trade setups — all assets, all timeframes</h2>
+  <div class="table-wrap"><table id="setupsTable"></table></div>
+</section>
+
+<section>
+  <h2>Portfolio performance (2017-2026, fees included)</h2>
+  <div class="chart-wrap"><canvas id="equityChart"></canvas></div>
+  <div id="statsRow" class="stats-row"></div>
+</section>
+
+<section>
+  <h2>Monthly seasonality (avg return % per calendar month)</h2>
+  <div class="table-wrap"><table id="seasonalityTable"></table></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

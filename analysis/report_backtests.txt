@@ -1,0 +1,46 @@
+========== BACKTESTS (daily, fees: stocks 0.05%/side, crypto 0.1%/side) ==========
+
+--- Apple ---
+  BUY & HOLD                 total 1034% | ann 42.3%
+  July-only (all years)      total 75% | ann 8.4% | maxDD -11% | trades 10 | win 90% | in market 8%
+  September-only             total -19% | ann -3.0% | maxDD -36% | trades 10 | win 40% | in market 8%
+  MA50>MA200 (trend follow)  total 217% | ann 18.3% | maxDD -42% | trades 6 | win 67% | in market 73%
+  RSI<30 buy, RSI>70/20d exit total 54% | ann 6.5% | maxDD -26% | trades 16 | win 75% | in market 13%
+
+--- Alphabet ---
+  BUY & HOLD                 total 761% | ann 36.7%
+  July-only (all years)      total 65% | ann 7.6% | maxDD -16% | trades 10 | win 90% | in market 8%
+  September-only             total -3% | ann -0.5% | maxDD -32% | trades 10 | win 50% | in market 8%
+  MA50>MA200 (trend follow)  total 388% | ann 25.9% | maxDD -31% | trades 6 | win 83% | in market 72%
+  RSI<30 buy, RSI>70/20d exit total 53% | ann 6.3% | maxDD -28% | trades 13 | win 62% | in market 11%
+
+--- Amazon ---
+  BUY & HOLD                 total 585% | ann 32.3%
+  July-only (all years)      total 47% | ann 5.7% | maxDD -17% | trades 10 | win 60% | in market 8%
+  September-only             total -24% | ann -3.9% | maxDD -35% | trades 10 | win 20% | in market 8%
+  MA50>MA200 (trend follow)  total 160% | ann 14.9% | maxDD -43% | trades 7 | win 43% | in market 68%
+  RSI<30 buy, RSI>70/20d exit total 74% | ann 8.4% | maxDD -21% | trades 14 | win 64% | in market 12%
+
+--- Bitcoin ---
+  BUY & HOLD                 total 11074% | ann 60.2%
+  October-only               total 349% | ann 16.2% | maxDD -15% | trades 10 | win 80% | in market 8%
+  All-except-June            total 21506% | ann 71.1% | maxDD -80% | trades 11 | win 73% | in market 92%
+  MA50>MA200 (trend follow)  total 4169% | ann 45.5% | maxDD -69% | trades 9 | win 67% | in market 54%
+  RSI<30 buy, RSI>70/30d exit total 202% | ann 11.7% | maxDD -60% | trades 25 | win 48% | in market 20%
+
+--- Ethereum ---
+  BUY & HOLD                 total 495% | ann 22.5%
+  October-only               total 51% | ann 4.8% | maxDD -21% | trades 8 | win 75% | in market 8%
+  All-except-June            total 2076% | ann 42.0% | maxDD -92% | trades 10 | win 50% | in market 92%
+  MA50>MA200 (trend follow)  total 602% | ann 24.9% | maxDD -78% | trades 8 | win 63% | in market 47%
+  RSI<30 buy, RSI>70/30d exit total -86% | ann -19.9% | maxDD -87% | trades 20 | win 25% | in market 19%
+
+--- Hour-of-day (crypto): hold 20:00->22:00 UTC every day ---
+  BTC 20-22UTC daily         total 87% | ann 0.3% | maxDD -32% | trades 3287 | win 54% | in market 4%
+  BTC 20-22UTC daily (0.1% fee) total -99% | ann -2.4% | maxDD -99% | trades 3287 | win 54% | in market 4%
+  ETH 20-22UTC daily         total 178% | ann 0.5% | maxDD -44% | trades 3287 | win 53% | in market 4%
+  ETH 20-22UTC daily (0.1% fee) total -99% | ann -2.2% | maxDD -99% | trades 3287 | win 53% | in market 4%
+
+--- Bitcoin 52w-high breakout, exit below 20d MA ---
+  BTC 52w-high momentum      total 1374% | ann 30.9% | maxDD -49% | trades 32 | win 47% | in market 16%
+  BUY & HOLD                 total 11074% | ann 60.2%

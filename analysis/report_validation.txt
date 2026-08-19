@@ -1,0 +1,90 @@
+========== WALK-FORWARD TESTS (train 2y, test 6m, stocks fee 0.05%/side) ==========
+
+--- AAPL ---
+  win 0->183: chose B&H-skipSep (train sharpe 1.28, ann 38%) -> test total 18.0%
+  win 183->366: chose Buy&Hold (train sharpe 0.87, ann 30%) -> test total 103.4%
+  win 366->549: chose B&H-skipSep (train sharpe 1.73, ann 86%) -> test total 11.5%
+  win 549->732: chose MA50>MA200 (train sharpe 1.56, ann 67%) -> test total 0.0%
+  win 732->915: chose B&H-skipSep (train sharpe 1.62, ann 78%) -> test total 21.9%
+  win 915->1098: chose B&H-skipSep (train sharpe 1.73, ann 75%) -> test total 35.4%
+  win 1098->1281: chose B&H-skipAugSep (train sharpe 1.15, ann 36%) -> test total 14.8%
+  win 1281->1464: chose B&H-skipAugSep (train sharpe 1.24, ann 40%) -> test total -6.9%
+  win 1464->1647: chose B&H-skipAugSep (train sharpe 1.21, ann 40%) -> test total 0.1%
+  Picks: B&H-skipSep x4 | Buy&Hold x1 | MA50>MA200 x1 | B&H-skipAugSep x3
+  OUT-OF-SAMPLE (stitched): total 375% | ann 41.5% | sharpe 1.19 | maxDD -33%
+  Buy&Hold full period:      total 1033% | ann 42.3% | sharpe 1.18 | maxDD -39%
+
+--- GOOGL ---
+  win 0->183: chose B&H-skipAugSep (train sharpe 0.83, ann 20%) -> test total 3.5%
+  win 183->366: chose B&H-skipAugSep (train sharpe 0.49, ann 11%) -> test total 45.9%
+  win 366->549: chose B&H-skipSep (train sharpe 0.89, ann 29%) -> test total 63.6%
+  win 549->732: chose B&H-skipSep (train sharpe 1.70, ann 72%) -> test total -15.9%
+  win 732->915: chose B&H-skipSep (train sharpe 1.32, ann 52%) -> test total -6.4%
+  win 915->1098: chose B&H-skipSep (train sharpe 1.14, ann 43%) -> test total 47.0%
+  win 1098->1281: chose B&H-skipSep (train sharpe 1.05, ann 38%) -> test total 19.2%
+  win 1281->1464: chose MA50>MA200 (train sharpe 1.09, ann 24%) -> test total 0.0%
+  win 1464->1647: chose close>MA200 (train sharpe 0.99, ann 26%) -> test total 0.0%
+  Picks: B&H-skipAugSep x2 | B&H-skipSep x5 | MA50>MA200 x1 | close>MA200 x1
+  OUT-OF-SAMPLE (stitched): total 241% | ann 31.4% | sharpe 1.00 | maxDD -36%
+  Buy&Hold full period:      total 760% | ann 36.7% | sharpe 1.06 | maxDD -44%
+
+--- AMZN ---
+  win 0->183: chose Buy&Hold (train sharpe 1.62, ann 63%) -> test total 0.2%
+  win 183->366: chose B&H-skipSep (train sharpe 1.28, ann 49%) -> test total 71.1%
+  win 366->549: chose B&H-skipSep (train sharpe 1.39, ann 59%) -> test total 5.8%
+  win 549->732: chose B&H-skipSep (train sharpe 1.31, ann 53%) -> test total -29.3%
+  win 732->915: chose B&H-skipSep (train sharpe 0.62, ann 18%) -> test total -4.7%
+  win 915->1098: chose B&H-skipSep (train sharpe 0.41, ann 8%) -> test total 66.7%
+  win 1098->1281: chose B&H-skipSep (train sharpe 0.34, ann 5%) -> test total 20.6%
+  win 1281->1464: chose MA50>MA200 (train sharpe 0.97, ann 21%) -> test total 0.0%
+  win 1464->1647: chose B&H-skipAugSep (train sharpe 1.31, ann 55%) -> test total 9.7%
+  Picks: Buy&Hold x1 | B&H-skipSep x6 | MA50>MA200 x1 | B&H-skipAugSep x1
+  OUT-OF-SAMPLE (stitched): total 171% | ann 24.8% | sharpe 0.78 | maxDD -48%
+  Buy&Hold full period:      total 585% | ann 32.3% | sharpe 0.90 | maxDD -56%
+
+========== WALK-FORWARD TESTS (train 2y, test 6m, crypto fee 0.1%/side) ==========
+
+--- BTC ---
+  win 0->183: chose MOM252/20-JuneSkip (train sharpe 2.30, ann 135%) -> test total 0.0%
+  win 183->366: chose MOM120/20 (train sharpe 1.70, ann 74%) -> test total 19.0%
+  win 366->549: chose MOM120/20 (train sharpe 1.31, ann 46%) -> test total 0.6%
+  win 549->732: chose MOM120/20 (train sharpe 1.31, ann 47%) -> test total 6.9%
+  win 732->915: chose MOM120/20 (train sharpe 1.38, ann 52%) -> test total 71.4%
+  win 915->1098: chose Buy&Hold (train sharpe 2.11, ann 259%) -> test total -11.8%
+  win 1098->1281: chose MOM365/50 (train sharpe 2.06, ann 109%) -> test total 0.0%
+  win 1281->1464: chose MOM252/50 (train sharpe 1.76, ann 90%) -> test total 0.0%
+  win 1464->1647: chose JuneSkip-only (train sharpe 1.17, ann 76%) -> test total 15.9%
+  win 1647->1830: chose JuneSkip-only (train sharpe 0.06, ann -15%) -> test total -6.9%
+  win 1830->2013: chose close>MA200 (train sharpe 0.70, ann 16%) -> test total 0.0%
+  win 2013->2196: chose close>MA200 (train sharpe 1.53, ann 54%) -> test total 0.0%
+  win 2196->2379: chose close>MA200 (train sharpe 1.34, ann 55%) -> test total 0.0%
+  win 2379->2562: chose Buy&Hold (train sharpe 1.68, ann 100%) -> test total 19.3%
+  win 2562->2745: chose JuneSkip-only (train sharpe 1.87, ann 118%) -> test total -40.4%
+  Picks: MOM252/20-JuneSkip x1 | MOM120/20 x4 | Buy&Hold x2 | MOM365/50 x1 | MOM252/50 x1 | JuneSkip-only x3 | close>MA200 x3
+  OUT-OF-SAMPLE (stitched): total 49% | ann 5.5% | sharpe 0.33 | maxDD -53%
+  Buy&Hold full period:      total 11063% | ann 60.2% | sharpe 1.04 | maxDD -83%
+
+--- ETH ---
+  win 0->183: chose MOM120/20 (train sharpe 0.70, ann 16%) -> test total 0.0%
+  win 183->366: chose MOM120/20 (train sharpe 0.95, ann 28%) -> test total 0.0%
+  win 366->549: chose MOM120/20 (train sharpe 1.10, ann 40%) -> test total 70.3%
+  win 549->732: chose JuneSkip-only (train sharpe 2.13, ann 350%) -> test total 41.1%
+  win 732->915: chose JuneSkip-only (train sharpe 2.32, ann 482%) -> test total -55.4%
+  win 915->1098: chose JuneSkip-only (train sharpe 1.94, ann 281%) -> test total 13.6%
+  win 1098->1281: chose JuneSkip-only (train sharpe 1.43, ann 145%) -> test total 40.3%
+  win 1281->1464: chose JuneSkip-only (train sharpe 0.43, ann 2%) -> test total 10.3%
+  win 1464->1647: chose close>MA200 (train sharpe 0.67, ann 16%) -> test total 0.0%
+  win 1647->1830: chose JuneSkip-only (train sharpe 1.01, ann 54%) -> test total 26.4%
+  win 1830->2013: chose JuneSkip-only (train sharpe 1.27, ann 72%) -> test total -17.5%
+  win 2013->2196: chose MOM252/20 (train sharpe 0.75, ann 9%) -> test total 0.0%
+  win 2196->2379: chose MOM120/20 (train sharpe 0.86, ann 18%) -> test total 0.0%
+  Picks: MOM120/20 x4 | JuneSkip-only x7 | close>MA200 x1 | MOM252/20 x1
+  OUT-OF-SAMPLE (stitched): total 98% | ann 11.1% | sharpe 0.47 | maxDD -63%
+  Buy&Hold full period:      total 495% | ann 22.5% | sharpe 0.67 | maxDD -94%
+
+========== BTC FULL-PERIOD FACE-OFF ==========
+Buy&Hold                   total 11063% | ann 60.2% | sharpe 1.04 | maxDD -83% | 1 trades | in market 100%
+MOM252/20                  total 1374% | ann 30.9% | sharpe 1.06 | maxDD -49% | 32 trades | in market 16%
+MOM252/20 + June skip      total 1109% | ann 28.3% | sharpe 1.06 | maxDD -49% | 31 trades | in market 14%
+June skip only             total 21506% | ann 71.1% | sharpe 1.16 | maxDD -80% | 11 trades | in market 92%
+close>MA200                total 4715% | ann 47.3% | sharpe 1.01 | maxDD -70% | 34 trades | in market 53%
