@@ -137,7 +137,7 @@ document.getElementById('refreshBtn').addEventListener('click', async () => {
   btn.disabled = true;
   btn.textContent = 'Refreshing...';
   try {
-    await fetchJson('/api/refresh');
+    await loadJson('/api/refresh', 'data/last_updated.json');
     await init();
   } finally {
     btn.disabled = false;
