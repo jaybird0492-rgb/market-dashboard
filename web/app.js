@@ -8,7 +8,7 @@ async function loadJson(apiUrl, staticPath) {
   try {
     return await fetchJson(apiUrl);
   } catch {
-    return fetchJson(staticPath);
+    return fetchJson(staticPath + '?v=' + Date.now());
   }
 }
 

@@ -36,7 +36,7 @@ async function loadJson(apiUrl, staticPath) {
     if (r.ok) return r.json();
     throw new Error(String(r.status));
   } catch {
-    const r2 = await fetch(staticPath);
+    const r2 = await fetch(staticPath + '?v=' + Date.now());
     if (!r2.ok) throw new Error(staticPath + ' -> ' + r2.status);
     return r2.json();
   }
