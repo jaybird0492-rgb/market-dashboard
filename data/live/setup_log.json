@@ -10172,17 +10172,6 @@
   "BTC": {
     "1H": [
       {
-        "time": 1787007600000,
-        "tf": "1H",
-        "type": "BUY",
-        "entry": 64610.01,
-        "stopLoss": 64266,
-        "tp1": 64954.02,
-        "tp2": 65298.03,
-        "tp3": 65642.04,
-        "trigger": "Buy when a 1H candle CLOSES above resistance $64,610"
-      },
-      {
         "time": 1787011200000,
         "tf": "1H",
         "type": "BUY",
@@ -10830,6 +10819,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for pullback to MA20 ($69,210)"
+      },
+      {
+        "time": "2026-08-20T11:00:00Z",
+        "tf": "1H",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Wait for pullback to MA20 ($69,512)"
       }
     ],
     "4H": [
@@ -12206,17 +12206,6 @@
   "ETH": {
     "1H": [
       {
-        "time": 1787007600000,
-        "tf": "1H",
-        "type": "BUY",
-        "entry": 1922.51,
-        "stopLoss": 1896.28,
-        "tp1": 1948.73,
-        "tp2": 1974.96,
-        "tp3": 2001.18,
-        "trigger": "Buy on pullback toward MA20 $1,905.13"
-      },
-      {
         "time": 1787011200000,
         "tf": "1H",
         "type": "BUY",
@@ -12864,6 +12853,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for pullback to MA20 ($2,200.99)"
+      },
+      {
+        "time": "2026-08-20T11:00:00Z",
+        "tf": "1H",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Wait for pullback to MA20 ($2,216.78)"
       }
     ],
     "4H": [
