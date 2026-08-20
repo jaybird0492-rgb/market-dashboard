@@ -120,11 +120,13 @@ function selectTf(tf) {
 
   const log = (asset.logs && asset.logs[tf]) || [];
   const tl = document.getElementById('timeline');
+  const sum = document.getElementById('timelineSummary');
   if (!log.length) {
-    tl.innerHTML = '<h2>Signals — ' + tf + ' — none recorded yet (next interval close will add one)</h2>';
+    sum.textContent = 'Signals — ' + tf + ' — none recorded yet (next interval close will add one)';
+    tl.innerHTML = '';
   } else {
+    sum.textContent = 'Signals — ' + tf + ' — ' + log.length + ' recorded (one per closed interval)';
     tl.innerHTML =
-      '<h2>Signals — ' + tf + ' (oldest to newest, one per closed interval)</h2>' +
       log.map((e) => `
         <div class="tl-item">
           <span class="tl-time">${localTime(e.time)}</span>
