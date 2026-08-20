@@ -32,7 +32,7 @@ function appendLog(sym, tf, setup, lastBarT) {
   log[sym] = log[sym] || {};
   log[sym][tf] = log[sym][tf] || [];
   log[sym][tf].push({
-    time: setup.updatedAt,
+    time: lastBarT,
     tf,
     type: setup.type,
     entry: setup.entry,

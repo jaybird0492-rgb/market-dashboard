@@ -372,4 +372,4 @@ function getAsset(sym) {
   };
 }
 
-module.exports = { getAsset, resample, resampleMonth, analyze, computeSetup, validRows, swings, fmtPrice };
+module.exports = { getAsset, resample, resampleMonth, analyze, computeSetup, validRows, loadCsv, swings, fmtPrice };
