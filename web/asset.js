@@ -43,10 +43,11 @@ async function loadJson(apiUrl, staticPath) {
 }
 
 async function load() {
-  const [asset, signals] = await Promise.all([
+  const [resolved, signals] = await Promise.all([
     loadJson('/api/asset?symbol=' + SYMBOL, 'data/asset_' + SYMBOL + '.json'),
     loadJson('/api/signals', 'data/signals.json'),
   ]);
+  asset = resolved;
 
   document.title = asset.name + ' — ' + SYMBOL + ' analysis';
   document.getElementById('assetTitle').textContent = asset.name + ' (' + SYMBOL + ')';
