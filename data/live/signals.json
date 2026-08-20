@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-08-20T13:58:25.907Z",
+  "updatedAt": "2026-08-20T14:39:30.178Z",
   "month": 8,
   "signals": [
     {
       "symbol": "AAPL",
       "name": "Apple",
-      "price": 318.3305969238281,
+      "price": 316.2799987792969,
       "date": "2026-08-20",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "13.1%"
+      "distanceMA200": "12.4%"
     },
     {
       "symbol": "GOOGL",
       "name": "Alphabet",
-      "price": 343.1650085449219,
+      "price": 342.0199890136719,
       "date": "2026-08-20",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "3.1%"
+      "distanceMA200": "2.8%"
     },
     {
       "symbol": "AMZN",
       "name": "Amazon",
-      "price": 262.5,
+      "price": 261.69500732421875,
       "date": "2026-08-20",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "10.1%"
+      "distanceMA200": "9.8%"
     },
     {
       "symbol": "SPY",
       "name": "S&P 500 ETF",
-      "price": 766.35498046875,
+      "price": 766.5701293945312,
       "date": "2026-08-20",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
@@ -41,33 +41,33 @@
     {
       "symbol": "QQQ",
       "name": "Nasdaq 100 ETF",
-      "price": 711.5850219726562,
+      "price": 712.9199829101562,
       "date": "2026-08-20",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "9.1%"
+      "distanceMA200": "9.3%"
     },
     {
       "symbol": "BTC",
       "name": "Bitcoin",
-      "price": 71653.203125,
+      "price": 71489.6484375,
       "date": "2026-08-20",
       "signal": "OUT",
       "detail": "Waiting: buy only on a 252d-high breakout (current 252d high 96929)",
-      "ma20": 64522.176953125,
+      "ma20": 64513.99921875,
       "hi252": 96929.328125,
-      "rsi": "78.4"
+      "rsi": "78.1"
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
-      "price": 2274,
+      "price": 2279.6201171875,
       "date": "2026-08-20",
       "signal": "OUT",
       "detail": "Waiting: buy only on a 252d-high breakout (current 252d high 3355)",
-      "ma20": 1925.1530151367188,
+      "ma20": 1925.4340209960938,
       "hi252": 3354.72265625,
-      "rsi": "82.9"
+      "rsi": "83.1"
     }
   ],
   "portfolio": {
