@@ -1,10 +1,10 @@
 {
   "AAPL": {
     "name": "Apple",
-    "updated": "2026-08-19",
+    "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:50.959Z",
+        "updatedAt": "2026-08-20T13:58:26.577Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -19,7 +19,7 @@
         "text": "LONG 1H: entry $319.28 — trigger: close above $319.28. Stop $314.29 (1.56% risk). Targets: TP1 $324.27 (take 40%), TP2 $329.26 (take 40%), TP3 $334.25 (take 20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:50.959Z",
+        "updatedAt": "2026-08-20T13:58:26.577Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "RANGE",
@@ -30,11 +30,11 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "No trade until price breaks $319.28 (long) or $311.91 (short)",
-        "text": "RANGING on 4H between $311.91 and $319.28 — no entry yet. LONG plan appears only on a close above $319.28; SHORT plan only on a close below $311.91."
+        "trigger": "No trade until price breaks $323.45 (long) or $311.91 (short)",
+        "text": "RANGING on 4H between $311.91 and $323.45 — no entry yet. LONG plan appears only on a close above $323.45; SHORT plan only on a close below $311.91."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:50.959Z",
+        "updatedAt": "2026-08-20T13:58:26.577Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "RANGE",
@@ -45,47 +45,47 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "No trade until price breaks $317.4 (long) or $311.91 (short)",
-        "text": "RANGING on 1D between $311.91 and $317.4 — no entry yet. LONG plan appears only on a close above $317.4; SHORT plan only on a close below $311.91."
+        "trigger": "No trade until price breaks $334.99 (long) or $311.91 (short)",
+        "text": "RANGING on 1D between $311.91 and $334.99 — no entry yet. LONG plan appears only on a close above $334.99; SHORT plan only on a close below $311.91."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:50.960Z",
+        "updatedAt": "2026-08-20T13:58:26.578Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
-        "entry": 346.76,
+        "entry": 348.33,
         "stopLoss": 243.42,
-        "tp1": 450.09,
-        "tp2": 553.43,
-        "tp3": 656.76,
+        "tp1": 453.24,
+        "tp2": 558.14,
+        "tp3": 663.05,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "29.80%",
-        "trigger": "Buy on pullback toward MA20 $255.49",
-        "text": "LONG 1M: entry $346.76 — trigger: pullback to MA20 ($255.49). Stop $243.42 (29.80% risk). Targets: TP1 $450.09 (take 40%), TP2 $553.43 (take 40%), TP3 $656.76 (take 20%)."
+        "risk": "30.12%",
+        "trigger": "Buy on pullback toward MA20 $255.57",
+        "text": "LONG 1M: entry $348.33 — trigger: pullback to MA20 ($255.57). Stop $243.42 (30.12% risk). Targets: TP1 $453.24 (take 40%), TP2 $558.14 (take 40%), TP3 $663.05 (take 20%)."
       }
     }
   },
   "GOOGL": {
     "name": "Alphabet",
-    "updated": "2026-08-19",
+    "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:50.977Z",
+        "updatedAt": "2026-08-20T13:58:26.601Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "SELL",
-        "entry": 343.33,
-        "stopLoss": 346.48,
-        "tp1": 340.18,
-        "tp2": 337.03,
-        "tp3": 333.88,
+        "entry": 341.93,
+        "stopLoss": 344.25,
+        "tp1": 339.61,
+        "tp2": 337.29,
+        "tp3": 334.97,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "0.92%",
-        "trigger": "Sell when a 1H candle CLOSES below support $343.33",
-        "text": "SHORT 1H: entry $343.33 — trigger: close below $343.33. Stop $346.48 (0.92% risk). Targets: TP1 $340.18 (40%), TP2 $337.03 (40%), TP3 $333.88 (20%)."
+        "risk": "0.68%",
+        "trigger": "Sell when a 1H candle CLOSES below support $341.93",
+        "text": "SHORT 1H: entry $341.93 — trigger: close below $341.93. Stop $344.25 (0.68% risk). Targets: TP1 $339.61 (40%), TP2 $337.29 (40%), TP3 $334.97 (20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:50.977Z",
+        "updatedAt": "2026-08-20T13:58:26.602Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -100,7 +100,7 @@
         "text": "LONG 4H: entry $346.73 — trigger: close above $346.73. Stop $341.36 (1.55% risk). Targets: TP1 $352.1 (take 40%), TP2 $357.47 (take 40%), TP3 $362.84 (take 20%)."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:50.977Z",
+        "updatedAt": "2026-08-20T13:58:26.602Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "RANGE",
@@ -115,7 +115,7 @@
         "text": "RANGING on 1D between $341.36 and $350.45 — no entry yet. LONG plan appears only on a close above $350.45; SHORT plan only on a close below $341.36."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:50.977Z",
+        "updatedAt": "2026-08-20T13:58:26.602Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -133,25 +133,25 @@
   },
   "AMZN": {
     "name": "Amazon",
-    "updated": "2026-08-19",
+    "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:50.994Z",
+        "updatedAt": "2026-08-20T13:58:26.626Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "SELL",
-        "entry": 264.82,
-        "stopLoss": 266.51,
-        "tp1": 263.13,
-        "tp2": 261.44,
-        "tp3": 259.75,
+        "entry": 258.58,
+        "stopLoss": 265.15,
+        "tp1": 252.01,
+        "tp2": 245.44,
+        "tp3": 238.87,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "0.64%",
-        "trigger": "Sell when a 1H candle CLOSES below support $264.82",
-        "text": "SHORT 1H: entry $264.82 — trigger: close below $264.82. Stop $266.51 (0.64% risk). Targets: TP1 $263.13 (40%), TP2 $261.44 (40%), TP3 $259.75 (20%)."
+        "risk": "2.54%",
+        "trigger": "Sell when a 1H candle CLOSES below support $258.58",
+        "text": "SHORT 1H: entry $258.58 — trigger: close below $258.58. Stop $265.15 (2.54% risk). Targets: TP1 $252.01 (40%), TP2 $245.44 (40%), TP3 $238.87 (20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:50.994Z",
+        "updatedAt": "2026-08-20T13:58:26.626Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -166,22 +166,22 @@
         "text": "LONG 4H: entry $280.14 — trigger: close above $280.14. Stop $257.73 (8.00% risk). Targets: TP1 $302.55 (take 40%), TP2 $324.96 (take 40%), TP3 $347.37 (take 20%)."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:50.994Z",
+        "updatedAt": "2026-08-20T13:58:26.626Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
         "entry": 274.75,
-        "stopLoss": 243.8,
-        "tp1": 305.7,
-        "tp2": 336.65,
-        "tp3": 367.6,
+        "stopLoss": 257.73,
+        "tp1": 291.77,
+        "tp2": 308.79,
+        "tp3": 325.81,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "11.26%",
+        "risk": "6.19%",
         "trigger": "Buy when a 1D candle CLOSES above resistance $274.75",
-        "text": "LONG 1D: entry $274.75 — trigger: close above $274.75. Stop $243.8 (11.26% risk). Targets: TP1 $305.7 (take 40%), TP2 $336.65 (take 40%), TP3 $367.6 (take 20%)."
+        "text": "LONG 1D: entry $274.75 — trigger: close above $274.75. Stop $257.73 (6.19% risk). Targets: TP1 $291.77 (take 40%), TP2 $308.79 (take 40%), TP3 $325.81 (take 20%)."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:50.994Z",
+        "updatedAt": "2026-08-20T13:58:26.627Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -199,40 +199,40 @@
   },
   "SPY": {
     "name": "S&P 500 ETF",
-    "updated": "2026-08-19",
+    "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:51.010Z",
+        "updatedAt": "2026-08-20T13:58:26.648Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "SELL",
-        "entry": 767.33,
+        "entry": 764.75,
         "stopLoss": 772.47,
-        "tp1": 762.19,
-        "tp2": 757.05,
-        "tp3": 751.91,
+        "tp1": 757.03,
+        "tp2": 749.3,
+        "tp3": 741.58,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "0.67%",
-        "trigger": "Sell when a 1H candle CLOSES below support $767.33",
-        "text": "SHORT 1H: entry $767.33 — trigger: close below $767.33. Stop $772.47 (0.67% risk). Targets: TP1 $762.19 (40%), TP2 $757.05 (40%), TP3 $751.91 (20%)."
+        "risk": "1.01%",
+        "trigger": "Sell on bounce toward MA20 $769.62",
+        "text": "SHORT 1H: entry $764.75 — trigger: bounce to MA20 ($769.62). Stop $772.47 (1.01% risk). Targets: TP1 $757.03 (40%), TP2 $749.3 (40%), TP3 $741.58 (20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:51.010Z",
+        "updatedAt": "2026-08-20T13:58:26.648Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
         "entry": 772.47,
-        "stopLoss": 767.46,
-        "tp1": 777.48,
-        "tp2": 782.49,
-        "tp3": 787.5,
+        "stopLoss": 748,
+        "tp1": 796.94,
+        "tp2": 821.41,
+        "tp3": 845.88,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "0.65%",
+        "risk": "3.17%",
         "trigger": "Buy when a 4H candle CLOSES above resistance $772.47",
-        "text": "LONG 4H: entry $772.47 — trigger: close above $772.47. Stop $767.46 (0.65% risk). Targets: TP1 $777.48 (take 40%), TP2 $782.49 (take 40%), TP3 $787.5 (take 20%)."
+        "text": "LONG 4H: entry $772.47 — trigger: close above $772.47. Stop $748 (3.17% risk). Targets: TP1 $796.94 (take 40%), TP2 $821.41 (take 40%), TP3 $845.88 (take 20%)."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:51.011Z",
+        "updatedAt": "2026-08-20T13:58:26.648Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -247,58 +247,58 @@
         "text": "LONG 1D: entry $775.05 — trigger: close above $775.05. Stop $740.8 (4.42% risk). Targets: TP1 $809.3 (take 40%), TP2 $843.55 (take 40%), TP3 $877.8 (take 20%)."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:51.011Z",
+        "updatedAt": "2026-08-20T13:58:26.649Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
-        "entry": 804.89,
+        "entry": 802.18,
         "stopLoss": 629.28,
-        "tp1": 980.5,
-        "tp2": 1156.1,
-        "tp3": 1331.71,
+        "tp1": 975.09,
+        "tp2": 1147.99,
+        "tp3": 1320.89,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "21.82%",
-        "trigger": "Buy on pullback toward MA20 $663.71",
-        "text": "LONG 1M: entry $804.89 — trigger: pullback to MA20 ($663.71). Stop $629.28 (21.82% risk). Targets: TP1 $980.5 (take 40%), TP2 $1,156.1 (take 40%), TP3 $1,331.71 (take 20%)."
+        "risk": "21.55%",
+        "trigger": "Buy on pullback toward MA20 $663.57",
+        "text": "LONG 1M: entry $802.18 — trigger: pullback to MA20 ($663.57). Stop $629.28 (21.55% risk). Targets: TP1 $975.09 (take 40%), TP2 $1,147.99 (take 40%), TP3 $1,320.89 (take 20%)."
       }
     }
   },
   "QQQ": {
     "name": "Nasdaq 100 ETF",
-    "updated": "2026-08-19",
+    "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:51.027Z",
+        "updatedAt": "2026-08-20T13:58:26.671Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "SELL",
-        "entry": 712.61,
+        "entry": 708.84,
         "stopLoss": 721.5,
-        "tp1": 703.72,
-        "tp2": 694.83,
-        "tp3": 685.94,
+        "tp1": 696.17,
+        "tp2": 683.51,
+        "tp3": 670.84,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "1.25%",
-        "trigger": "Sell when a 1H candle CLOSES below support $712.61",
-        "text": "SHORT 1H: entry $712.61 — trigger: close below $712.61. Stop $721.5 (1.25% risk). Targets: TP1 $703.72 (40%), TP2 $694.83 (40%), TP3 $685.94 (20%)."
+        "risk": "1.79%",
+        "trigger": "Sell on bounce toward MA20 $719.44",
+        "text": "SHORT 1H: entry $708.84 — trigger: bounce to MA20 ($719.44). Stop $721.5 (1.79% risk). Targets: TP1 $696.17 (40%), TP2 $683.51 (40%), TP3 $670.84 (20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:51.027Z",
+        "updatedAt": "2026-08-20T13:58:26.671Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
         "entry": 724.35,
-        "stopLoss": 712.61,
-        "tp1": 736.09,
-        "tp2": 747.83,
-        "tp3": 759.57,
+        "stopLoss": 710.1,
+        "tp1": 738.6,
+        "tp2": 752.85,
+        "tp3": 767.1,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "1.62%",
+        "risk": "1.97%",
         "trigger": "Buy when a 4H candle CLOSES above resistance $724.35",
-        "text": "LONG 4H: entry $724.35 — trigger: close above $724.35. Stop $712.61 (1.62% risk). Targets: TP1 $736.09 (take 40%), TP2 $747.83 (take 40%), TP3 $759.57 (take 20%)."
+        "text": "LONG 4H: entry $724.35 — trigger: close above $724.35. Stop $710.1 (1.97% risk). Targets: TP1 $738.6 (take 40%), TP2 $752.85 (take 40%), TP3 $767.1 (take 20%)."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:51.028Z",
+        "updatedAt": "2026-08-20T13:58:26.671Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -313,7 +313,7 @@
         "text": "LONG 1D: entry $724.36 — trigger: close above $724.36. Stop $710.08 (1.97% risk). Targets: TP1 $738.64 (take 40%), TP2 $752.92 (take 40%), TP3 $767.2 (take 20%)."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:51.028Z",
+        "updatedAt": "2026-08-20T13:58:26.671Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -334,7 +334,7 @@
     "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:51.047Z",
+        "updatedAt": "2026-08-20T13:58:26.699Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -349,7 +349,7 @@
         "text": "Uptrend on 1H but RSI 84 is overbought — no fresh entry. Wait for a pullback toward MA20 ($69,853) before starting a new long. Existing positions: trail the stop."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:51.047Z",
+        "updatedAt": "2026-08-20T13:58:26.699Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -364,7 +364,7 @@
         "text": "Uptrend on 4H but RSI 91 is overbought — no fresh entry. Wait for a pullback toward MA20 ($66,094) before starting a new long. Existing positions: trail the stop."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:51.047Z",
+        "updatedAt": "2026-08-20T13:58:26.699Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "NONE",
@@ -379,7 +379,7 @@
         "text": "No setup on 1D yet — not enough swing structure to define levels. Check back on the next update."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:51.047Z",
+        "updatedAt": "2026-08-20T13:58:26.699Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -400,7 +400,7 @@
     "updated": "2026-08-20",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-20T13:09:51.066Z",
+        "updatedAt": "2026-08-20T13:58:26.725Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -415,7 +415,7 @@
         "text": "Uptrend on 1H but RSI 79 is overbought — no fresh entry. Wait for a pullback toward MA20 ($2,237.29) before starting a new long. Existing positions: trail the stop."
       },
       "4H": {
-        "updatedAt": "2026-08-20T13:09:51.066Z",
+        "updatedAt": "2026-08-20T13:58:26.725Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -430,7 +430,7 @@
         "text": "Uptrend on 4H but RSI 94 is overbought — no fresh entry. Wait for a pullback toward MA20 ($2,009.26) before starting a new long. Existing positions: trail the stop."
       },
       "1D": {
-        "updatedAt": "2026-08-20T13:09:51.066Z",
+        "updatedAt": "2026-08-20T13:58:26.725Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "NONE",
@@ -445,7 +445,7 @@
         "text": "No setup on 1D yet — not enough swing structure to define levels. Check back on the next update."
       },
       "1M": {
-        "updatedAt": "2026-08-20T13:09:51.066Z",
+        "updatedAt": "2026-08-20T13:58:26.725Z",
         "tf": "1M",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "RANGE",
