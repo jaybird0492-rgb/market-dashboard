@@ -39,6 +39,7 @@ jobs:
             echo "no data changes"
           else
             git commit -m "data update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin main || true
             git push
           fi
       - uses: actions/upload-pages-artifact@v3
