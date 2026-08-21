@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Pipeline</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Signal Pipeline</h1>
+  <div class="header-meta">
+    <span id="updatedAt">loading...</span>
+    <button id="notifBtn">Enable notifications</button>
+  </div>
+</header>
+
+<section class="pipeline-legend">
+  <span class="legend-item"><span class="signal sig-long">BUY</span> Entry ready</span>
+  <span class="legend-item"><span class="signal sig-out">SELL</span> Short ready</span>
+  <span class="legend-item"><span class="signal sig-watch">WAIT</span> In pipeline</span>
+  <span class="legend-item"><span class="signal sig-none">NONE</span> No setup</span>
+  <span class="legend-item"><span class="signal sig-expired">EXPIRED</span> Did not fire</span>
+</section>
+
+<div id="pipeline"></div>
+
+<a href="index.html" class="back-link">Back to Dashboard</a>
+
+<script src="pipeline.js"></script>
+</body>
+</html>
