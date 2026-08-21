@@ -55,9 +55,9 @@ function renderEquity(data) {
       labels: data.dates,
       datasets: [
         { label: 'Final strategy (+rules)', data: data.final, borderColor: '#22c55e', borderWidth: 2, pointRadius: 0, tension: 0.1 },
-        { label: '60/25/15 no rules', data: data.plain, borderColor: '#f59e0b', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
-        { label: 'ETF variant (+rules)', data: data.etf, borderColor: '#38bdf8', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
-        { label: 'SPY only (benchmark)', data: data.spy, borderColor: '#94a3b8', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
+        { label: 'No rules', data: data.plain, borderColor: '#f59e0b', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
+        { label: 'BTC only', data: data.btc, borderColor: '#f7931a', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
+        { label: 'ETH only', data: data.eth, borderColor: '#627eea', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
       ],
     },
     options: {
@@ -75,7 +75,7 @@ function renderEquity(data) {
   });
   const row = document.getElementById('statsRow');
   row.innerHTML = '';
-  for (const [key, label] of [['final', 'Final strategy'], ['plain', 'No rules'], ['etf', 'ETF variant'], ['spy', 'SPY']]) {
+  for (const [key, label] of [['final', 'Final strategy'], ['plain', 'No rules'], ['btc', 'BTC only'], ['eth', 'ETH only']]) {
     const s = data.stats[key];
     const el = document.createElement('div');
     el.className = 'stat';

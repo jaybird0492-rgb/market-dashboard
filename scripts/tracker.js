@@ -2,11 +2,6 @@ const { RAW, loadCsv, closes, sma, rsi } = require('./lib');
 const path = require('path');
 
 const ASSETS = {
-  AAPL: { name: 'Apple', file: 'AAPL_1d.csv' },
-  GOOGL: { name: 'Alphabet', file: 'GOOGL_1d.csv' },
-  AMZN: { name: 'Amazon', file: 'AMZN_1d.csv' },
-  SPY: { name: 'S&P 500 ETF', file: 'SPY_1d.csv' },
-  QQQ: { name: 'Nasdaq 100 ETF', file: 'QQQ_1d.csv' },
   BTC: { name: 'Bitcoin', file: 'BTC_1d.csv' },
   ETH: { name: 'Ethereum', file: 'ETH_1d.csv' },
 };
@@ -46,26 +41,6 @@ function computeSignals() {
   const now = new Date().toISOString();
   const month = new Date().getUTCMonth() + 1;
   const signals = [];
-
-  for (const sym of ['AAPL', 'GOOGL', 'AMZN', 'SPY', 'QQQ']) {
-    const a = ASSETS[sym];
-    const rows = loadCsv(path.join(RAW, a.file)).filter((r) => r.close !== null);
-    const c = closes(rows);
-    const last = rows[rows.length - 1];
-    const ma200 = sma(c, 200);
-    const i = c.length - 1;
-    const inSep = month === 9;
-    const signal = inSep ? 'OUT (September)' : 'LONG';
-    signals.push({
-      symbol: sym,
-      name: a.name,
-      price: c[i],
-      date: last.timestamp.slice(0, 10),
-      signal,
-      detail: inSep ? 'Rule 1: exit stocks in September' : 'Rule 1: hold (all months except September)',
-      distanceMA200: ma200[i] ? ((c[i] / ma200[i] - 1) * 100).toFixed(1) + '%' : 'n/a',
-    });
-  }
 
   for (const sym of ['BTC', 'ETH']) {
     const a = ASSETS[sym];

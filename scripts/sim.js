@@ -2,11 +2,6 @@ const { RAW, loadCsv, sma, annualized } = require('./lib');
 const path = require('path');
 
 const ASSETS = {
-  AAPL: 'AAPL_1d.csv',
-  GOOGL: 'GOOGL_1d.csv',
-  AMZN: 'AMZN_1d.csv',
-  SPY: 'SPY_1d.csv',
-  QQQ: 'QQQ_1d.csv',
   BTC: 'BTC_1d.csv',
   ETH: 'ETH_1d.csv',
 };
@@ -39,7 +34,7 @@ function loadAligned() {
   const idx = dates.slice(startIdx);
   const C = {};
   for (const s of Object.keys(ASSETS)) C[s] = series[s].slice(startIdx);
-  const n = C.SPY.length;
+  const n = C.BTC.length;
   const rets = {};
   for (const s of Object.keys(ASSETS)) {
     const arr = new Array(n).fill(0);
@@ -53,11 +48,6 @@ function loadAligned() {
   const bySym = {};
   for (const s of Object.keys(ASSETS)) bySym[s] = loadCsv(path.join(RAW, ASSETS[s])).filter((r) => r.close !== null);
   const O = {};
-  for (const s of ['AAPL', 'GOOGL', 'AMZN', 'SPY', 'QQQ']) {
-    const p = bySym[s].map((r) => (parseInt(r.timestamp.slice(5, 7), 10) === 9 ? 0 : 1));
-    const m = new Map(bySym[s].map((r, i) => [r.timestamp.slice(0, 10), p[i]]));
-    O[s] = idx.map((d) => m.get(d) ?? 1);
-  }
   for (const s of ['BTC', 'ETH']) {
     const c = closes(bySym[s]);
     const ma = sma(c, 20);

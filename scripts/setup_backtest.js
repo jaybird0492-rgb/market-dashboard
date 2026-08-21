@@ -7,7 +7,7 @@ const DAY = 24 * HOUR;
 const RAW = path.join(__dirname, '..', 'data', 'raw');
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const LOG_FILE = path.join(LIVE, 'setup_log.json');
-const SYMBOLS = ['AAPL', 'GOOGL', 'AMZN', 'SPY', 'QQQ', 'BTC', 'ETH'];
+const SYMBOLS = ['BTC', 'ETH'];
 const TFS = ['1H', '4H', '1D', '1M'];
 
 function loadCsv(file) {

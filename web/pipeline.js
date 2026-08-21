@@ -1,10 +1,5 @@
 const TFS = ['1H', '4H', '1D', '1M'];
 const ASSETS = [
-  { sym: 'AAPL', name: 'Apple', group: 'stocks' },
-  { sym: 'GOOGL', name: 'Alphabet', group: 'stocks' },
-  { sym: 'AMZN', name: 'Amazon', group: 'stocks' },
-  { sym: 'SPY', name: 'S&P 500 ETF', group: 'stocks' },
-  { sym: 'QQQ', name: 'Nasdaq 100 ETF', group: 'stocks' },
   { sym: 'BTC', name: 'Bitcoin', group: 'crypto' },
   { sym: 'ETH', name: 'Ethereum', group: 'crypto' },
 ];

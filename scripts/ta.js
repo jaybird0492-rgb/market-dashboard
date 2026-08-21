@@ -379,12 +379,10 @@ function computeSetup(t) {
 
 // ---------- Asset assembly ----------
 const DAILY_FILES = {
-  AAPL: 'AAPL_1d.csv', GOOGL: 'GOOGL_1d.csv', AMZN: 'AMZN_1d.csv',
-  SPY: 'SPY_1d.csv', QQQ: 'QQQ_1d.csv', BTC: 'BTC_1d.csv', ETH: 'ETH_1d.csv',
+  BTC: 'BTC_1d.csv', ETH: 'ETH_1d.csv',
 };
 const NAMES = {
-  AAPL: 'Apple', GOOGL: 'Alphabet', AMZN: 'Amazon',
-  SPY: 'S&P 500 ETF', QQQ: 'Nasdaq 100 ETF', BTC: 'Bitcoin', ETH: 'Ethereum',
+  BTC: 'Bitcoin', ETH: 'Ethereum',
 };
 const HOUR = 3600e3;
 const DAY = 24 * HOUR;

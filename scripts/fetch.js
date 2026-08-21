@@ -51,13 +51,8 @@ async function fetchYahoo(symbol, interval, range) {
 }
 
 async function fetchStocks() {
-  const stocks = [
-    { symbol: 'AAPL', name: 'Apple' },
-    { symbol: 'GOOGL', name: 'Google/Alphabet' },
-    { symbol: 'AMZN', name: 'Amazon' },
-    { symbol: 'SPY', name: 'S&P 500 ETF' },
-    { symbol: 'QQQ', name: 'Nasdaq 100 ETF' },
-  ];
+  console.log('Stock fetching disabled — only BTC and ETH active');
+}
   for (const s of stocks) {
     const daily = await fetchYahoo(s.symbol, '1d', '10y');
     saveCsv(path.join(DATA_DIR, `${s.symbol}_1d.csv`), daily);
