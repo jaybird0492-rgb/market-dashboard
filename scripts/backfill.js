@@ -31,7 +31,8 @@ for (const sym of SYMBOLS) {
     log[sym][tf] = [];
     for (let i = 0; i < bars.length; i++) {
       const t = bars[i].t;
-      if (Date.parse(t) < start) continue;
+      const ts = typeof t === 'number' ? t : Date.parse(t);
+      if (ts < start) continue;
       try {
         const tfData = analyze(bars.slice(0, i + 1), tf);
         const setup = computeSetup(tfData);
