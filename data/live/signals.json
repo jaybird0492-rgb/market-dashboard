@@ -1,71 +1,71 @@
 {
-  "updatedAt": "2026-08-21T13:09:49.972Z",
+  "updatedAt": "2026-08-21T13:57:14.465Z",
   "month": 8,
   "signals": [
     {
       "symbol": "AAPL",
       "name": "Apple",
-      "price": 311.29998779296875,
-      "date": "2026-08-20",
-      "signal": "LONG",
-      "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "10.7%"
-    },
-    {
-      "symbol": "GOOGL",
-      "name": "Alphabet",
-      "price": 340.6700134277344,
-      "date": "2026-08-20",
-      "signal": "LONG",
-      "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "2.4%"
-    },
-    {
-      "symbol": "AMZN",
-      "name": "Amazon",
-      "price": 260.1099853515625,
-      "date": "2026-08-20",
+      "price": 307.3999938964844,
+      "date": "2026-08-21",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
       "distanceMA200": "9.2%"
     },
     {
-      "symbol": "SPY",
-      "name": "S&P 500 ETF",
-      "price": 762.5999755859375,
-      "date": "2026-08-20",
+      "symbol": "GOOGL",
+      "name": "Alphabet",
+      "price": 341.8399963378906,
+      "date": "2026-08-21",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "7.8%"
+      "distanceMA200": "2.7%"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "price": 258.4400939941406,
+      "date": "2026-08-21",
+      "signal": "LONG",
+      "detail": "Rule 1: hold (all months except September)",
+      "distanceMA200": "8.4%"
+    },
+    {
+      "symbol": "SPY",
+      "name": "S&P 500 ETF",
+      "price": 764.4400024414062,
+      "date": "2026-08-21",
+      "signal": "LONG",
+      "detail": "Rule 1: hold (all months except September)",
+      "distanceMA200": "8.0%"
     },
     {
       "symbol": "QQQ",
       "name": "Nasdaq 100 ETF",
-      "price": 710.9299926757812,
-      "date": "2026-08-20",
+      "price": 710.969970703125,
+      "date": "2026-08-21",
       "signal": "LONG",
       "detail": "Rule 1: hold (all months except September)",
-      "distanceMA200": "9.0%"
+      "distanceMA200": "8.9%"
     },
     {
       "symbol": "BTC",
       "name": "Bitcoin",
-      "price": 77190.609375,
+      "price": 77351.1875,
       "date": "2026-08-21",
       "signal": "OUT",
       "detail": "Waiting: buy only on a 252d-high breakout (current 252d high 96929)",
-      "ma20": 65312.519140625,
+      "ma20": 65320.548046875,
       "hi252": 96929.328125,
-      "rsi": "85.1"
+      "rsi": "85.2"
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
-      "price": 2389.679931640625,
+      "price": 2392.260009765625,
       "date": "2026-08-21",
       "signal": "OUT",
       "detail": "Waiting: buy only on a 252d-high breakout (current 252d high 3355)",
-      "ma20": 1955.0853637695313,
+      "ma20": 1955.2143676757812,
       "hi252": 3354.72265625,
       "rsi": "86.0"
     }

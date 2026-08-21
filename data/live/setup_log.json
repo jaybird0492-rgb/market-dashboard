@@ -209,6 +209,17 @@
         "tp2": 339.1,
         "tp3": 349.01,
         "trigger": "Buy when a 1H candle CLOSES above resistance $319.28"
+      },
+      {
+        "time": "2026-08-21T13:30:00Z",
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 309.97,
+        "stopLoss": 305.67,
+        "tp1": 314.27,
+        "tp2": 318.57,
+        "tp3": 322.87,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $309.97"
       }
     ],
     "4H": [
@@ -345,6 +356,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "No trade until price breaks $316.29 (long) or $305.02 (short)"
+      },
+      {
+        "time": "2026-08-20T13:30:00Z",
+        "tf": "1D",
+        "type": "SELL",
+        "entry": 305.02,
+        "stopLoss": 316.29,
+        "tp1": 293.75,
+        "tp2": 282.48,
+        "tp3": 271.21,
+        "trigger": "Sell when a 1D candle CLOSES below support $305.02"
       }
     ],
     "1M": [
@@ -582,6 +604,17 @@
         "tp2": 332.07,
         "tp3": 328.01,
         "trigger": "Sell when a 1H candle CLOSES below support $340.19"
+      },
+      {
+        "time": "2026-08-21T13:30:00Z",
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 340.88,
+        "stopLoss": 344.25,
+        "tp1": 337.51,
+        "tp2": 334.14,
+        "tp3": 330.77,
+        "trigger": "Sell when a 1H candle CLOSES below support $340.88"
       }
     ],
     "4H": [
@@ -718,6 +751,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "No trade until price breaks $350.45 (long) or $330.2 (short)"
+      },
+      {
+        "time": "2026-08-20T13:30:00Z",
+        "tf": "1D",
+        "type": "RANGE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "No trade until price breaks $350.45 (long) or $341.36 (short)"
       }
     ],
     "1M": [
@@ -955,6 +999,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "No trade until price breaks $262.18 (long) or $258.58 (short)"
+      },
+      {
+        "time": "2026-08-21T13:30:00Z",
+        "tf": "1H",
+        "type": "RANGE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "No trade until price breaks $262.18 (long) or $257.73 (short)"
       }
     ],
     "4H": [
@@ -1091,6 +1146,17 @@
         "tp2": 308.79,
         "tp3": 325.81,
         "trigger": "Buy when a 1D candle CLOSES above resistance $274.75"
+      },
+      {
+        "time": "2026-08-20T13:30:00Z",
+        "tf": "1D",
+        "type": "BUY",
+        "entry": 266.4,
+        "stopLoss": 257.73,
+        "tp1": 275.07,
+        "tp2": 283.74,
+        "tp3": 292.41,
+        "trigger": "Buy when a 1D candle CLOSES above resistance $266.4"
       }
     ],
     "1M": [
@@ -1328,6 +1394,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for a bounce toward MA20 ($767.29)"
+      },
+      {
+        "time": "2026-08-21T13:30:00Z",
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 762.04,
+        "stopLoss": 772.47,
+        "tp1": 751.61,
+        "tp2": 741.18,
+        "tp3": 730.75,
+        "trigger": "Sell when a 1H candle CLOSES below support $762.04"
       }
     ],
     "4H": [
@@ -1456,6 +1533,17 @@
       },
       {
         "time": "2026-08-19T13:30:00Z",
+        "tf": "1D",
+        "type": "BUY",
+        "entry": 775.05,
+        "stopLoss": 740.8,
+        "tp1": 809.3,
+        "tp2": 843.55,
+        "tp3": 877.8,
+        "trigger": "Buy when a 1D candle CLOSES above resistance $775.05"
+      },
+      {
+        "time": "2026-08-20T13:30:00Z",
         "tf": "1D",
         "type": "BUY",
         "entry": 775.05,
@@ -1701,6 +1789,17 @@
         "tp2": 682.56,
         "tp3": 669.58,
         "trigger": "Sell when a 1H candle CLOSES below support $708.52"
+      },
+      {
+        "time": "2026-08-21T13:30:00Z",
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 708.52,
+        "stopLoss": 721.5,
+        "tp1": 695.54,
+        "tp2": 682.56,
+        "tp3": 669.58,
+        "trigger": "Sell when a 1H candle CLOSES below support $708.52"
       }
     ],
     "4H": [
@@ -1837,6 +1936,17 @@
         "tp2": 752.92,
         "tp3": 767.2,
         "trigger": "Buy when a 1D candle CLOSES above resistance $724.36"
+      },
+      {
+        "time": "2026-08-20T13:30:00Z",
+        "tf": "1D",
+        "type": "RANGE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "No trade until price breaks $724.36 (long) or $710.08 (short)"
       }
     ],
     "1M": [
