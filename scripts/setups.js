@@ -49,18 +49,25 @@ function appendLog(sym, tf, setup, lastBarT) {
   return true;
 }
 
+const INTERVALS = { '1H': 3600000, '4H': 14400000, '1D': 86400000, '1M': 2592000000 };
+
 function computeAll() {
   const out = {};
   const changes = [];
+  const now = Date.now();
   for (const sym of SYMBOLS) {
     const a = getAsset(sym);
     out[sym] = { name: a.name, updated: a.updated, timeframes: {} };
     for (const tf of TFS) {
       const bars = a.timeframes[tf].bars;
-      const lastBarT = bars && bars.length ? bars[bars.length - 1].t : 0;
+      const closedBarT = bars && bars.length >= 2 ? bars[bars.length - 2].t : 0;
+      if (!closedBarT || (now - closedBarT) < INTERVALS[tf]) {
+        out[sym].timeframes[tf] = a.timeframes[tf].setup;
+        continue;
+      }
       const setup = a.timeframes[tf].setup;
       out[sym].timeframes[tf] = setup;
-      if (appendLog(sym, tf, setup, lastBarT)) changes.push(`${sym} ${tf} -> ${setup.type} (bar ${new Date(lastBarT).toISOString()})`);
+      if (appendLog(sym, tf, setup, closedBarT)) changes.push(sym + ' ' + tf + ' -> ' + setup.type + ' (bar ' + new Date(closedBarT).toISOString() + ')');
     }
   }
   fs.mkdirSync(LIVE, { recursive: true });
@@ -74,8 +81,8 @@ if (require.main === module) {
   for (const c of r.changes) console.log('  NEW LOG:', c);
   for (const sym of SYMBOLS) {
     const tfs = r.setups[sym].timeframes;
-    const line = TFS.map((tf) => `${tf}:${tfs[tf].type}`).join(' | ');
-    console.log(`  ${sym.padEnd(6)} ${line}`);
+    const line = TFS.map(function (tf) { return tf + ':' + tfs[tf].type; }).join(' | ');
+    console.log('  ' + sym.padEnd(6) + ' ' + line);
   }
 }
 
