@@ -221,6 +221,8 @@ function analyze(bars, tf) {
 }
 
 // ---------- Trade setup generation ----------
+const MAX_ENTRY_PCT = 5;
+
 function computeSetup(t) {
   const atrFrac = t.atrPct !== null ? t.atrPct / 100 : 0.01;
   const now = new Date().toISOString();
@@ -245,6 +247,25 @@ function computeSetup(t) {
     }
     const entry = t.resistance || t.price * (1 + atrFrac);
     const stop = t.support || t.price * (1 - 1.5 * atrFrac);
+    const distPct = ((entry / t.price - 1) * 100);
+    if (distPct > MAX_ENTRY_PCT) {
+      const levelDesc = t.resistance
+        ? `nearest resistance (${fmtPrice(t.resistance)})`
+        : `ATR-based entry level (${fmtPrice(entry)})`;
+      return {
+        ...base,
+        type: 'WAIT',
+        entry: null,
+        stopLoss: null,
+        tp1: null,
+        tp2: null,
+        tp3: null,
+        rr: '-',
+        risk: '-',
+        trigger: `Entry ${distPct.toFixed(1)}% above price — too far for a clean setup`,
+        text: `Uptrend on ${t.tf} but the ${levelDesc} is ${distPct.toFixed(1)}% above the current price (${fmtPrice(t.price)}). Entry would be too far away — wait for price to move closer or for a tighter swing structure to form.`,
+      };
+    }
     const R = Math.abs(entry - stop);
     const tp1 = entry + R;
     const tp2 = entry + 2 * R;
@@ -284,6 +305,25 @@ function computeSetup(t) {
     }
     const entry = t.support || t.price * (1 - atrFrac);
     const stop = t.resistance || t.price * (1 + 1.5 * atrFrac);
+    const distPct = ((t.price - entry) / t.price * 100);
+    if (distPct > MAX_ENTRY_PCT) {
+      const levelDesc = t.support
+        ? `nearest support (${fmtPrice(t.support)})`
+        : `ATR-based entry level (${fmtPrice(entry)})`;
+      return {
+        ...base,
+        type: 'WAIT',
+        entry: null,
+        stopLoss: null,
+        tp1: null,
+        tp2: null,
+        tp3: null,
+        rr: '-',
+        risk: '-',
+        trigger: `Entry ${distPct.toFixed(1)}% below price — too far for a clean setup`,
+        text: `Downtrend on ${t.tf} but the ${levelDesc} is ${distPct.toFixed(1)}% below the current price (${fmtPrice(t.price)}). Entry would be too far away — wait for price to move closer or for a tighter swing structure to form.`,
+      };
+    }
     const R = Math.abs(stop - entry);
     const tp1 = entry - R;
     const tp2 = entry - 2 * R;
@@ -306,6 +346,7 @@ function computeSetup(t) {
   }
 
   if (t.support && t.resistance) {
+    const rangeWidth = ((t.resistance / t.support - 1) * 100).toFixed(1);
     return {
       ...base,
       type: 'RANGE',
@@ -317,7 +358,7 @@ function computeSetup(t) {
       rr: '-',
       risk: '-',
       trigger: `No trade until price breaks ${fmtPrice(t.resistance)} (long) or ${fmtPrice(t.support)} (short)`,
-      text: `RANGING on ${t.tf} between ${fmtPrice(t.support)} and ${fmtPrice(t.resistance)} — no entry yet. LONG plan appears only on a close above ${fmtPrice(t.resistance)}; SHORT plan only on a close below ${fmtPrice(t.support)}.`,
+      text: `RANGING on ${t.tf} between ${fmtPrice(t.support)} and ${fmtPrice(t.resistance)} (${rangeWidth}% range) — no entry yet. Wait for a close above ${fmtPrice(t.resistance)} or below ${fmtPrice(t.support)} for a directional setup.`,
     };
   }
 
@@ -372,4 +413,4 @@ function getAsset(sym) {
   };
 }
 
-module.exports = { getAsset, resample, resampleMonth, analyze, computeSetup, validRows, loadCsv, swings, fmtPrice };
+module.exports = { getAsset, resample, resampleMonth, analyze, computeSetup, validRows, loadCsv, swings, fmtPrice, MAX_ENTRY_PCT };
