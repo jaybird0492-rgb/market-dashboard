@@ -38,9 +38,8 @@ jobs:
           if git diff --cached --quiet; then
             echo "no data changes"
           else
-            git commit -m "data update $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase origin main || true
-            git push
+            git commit -m "data update $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            git push origin main || true
           fi
       - uses: actions/upload-pages-artifact@v3
         with:
