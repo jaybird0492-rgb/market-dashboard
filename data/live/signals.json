@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T23:37:54.368Z",
+  "updatedAt": "2026-08-21T01:29:19.985Z",
   "month": 8,
   "signals": [
     {
@@ -50,24 +50,24 @@
     {
       "symbol": "BTC",
       "name": "Bitcoin",
-      "price": 73132.859375,
-      "date": "2026-08-20",
+      "price": 74729.5390625,
+      "date": "2026-08-21",
       "signal": "OUT",
       "detail": "Waiting: buy only on a 252d-high breakout (current 252d high 96929)",
-      "ma20": 64596.159765625,
+      "ma20": 64675.99375,
       "hi252": 96929.328125,
-      "rsi": "80.6"
+      "rsi": "82.5"
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
-      "price": 2327.81005859375,
-      "date": "2026-08-20",
+      "price": 2351.139892578125,
+      "date": "2026-08-21",
       "signal": "OUT",
       "detail": "Waiting: buy only on a 252d-high breakout (current 252d high 3355)",
-      "ma20": 1927.8435180664062,
+      "ma20": 1929.010009765625,
       "hi252": 3354.72265625,
-      "rsi": "84.4"
+      "rsi": "85.0"
     }
   ],
   "portfolio": {
