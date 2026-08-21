@@ -2437,6 +2437,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for pullback to MA20 ($74,152)"
+      },
+      {
+        "time": "2026-08-21T10:00:00Z",
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 79500,
+        "stopLoss": 72481.19,
+        "tp1": 86518.81,
+        "tp2": 93537.62,
+        "tp3": 100556.43,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $79,500"
       }
     ],
     "4H": [
@@ -3231,6 +3242,17 @@
       },
       {
         "time": "2026-08-21T09:00:00Z",
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 2447.74,
+        "stopLoss": 2336.33,
+        "tp1": 2559.15,
+        "tp2": 2670.56,
+        "tp3": 2781.97,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $2,447.74"
+      },
+      {
+        "time": "2026-08-21T10:00:00Z",
         "tf": "1H",
         "type": "BUY",
         "entry": 2447.74,
