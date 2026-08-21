@@ -2584,6 +2584,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for structure to form"
+      },
+      {
+        "time": "2026-08-20T00:00:00Z",
+        "tf": "1D",
+        "type": "NONE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Wait for structure to form"
       }
     ],
     "1M": [
@@ -3323,6 +3334,17 @@
       },
       {
         "time": "2026-08-19T00:00:00Z",
+        "tf": "1D",
+        "type": "NONE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Wait for structure to form"
+      },
+      {
+        "time": "2026-08-20T00:00:00Z",
         "tf": "1D",
         "type": "NONE",
         "entry": null,
