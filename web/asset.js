@@ -1,6 +1,6 @@
 const params = new URLSearchParams(location.search);
 const SYMBOL = (params.get('symbol') || 'BTC').toUpperCase();
-const TF_ORDER = ['1H', '4H', '1D', '1M'];
+const TF_ORDER = ['1H', '4H', '1D'];
 
 let asset = null;
 let activeTf = '1D';

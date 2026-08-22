@@ -37,7 +37,7 @@ function renderSignals(data) {
       <div class="price">${fmtPrice(s.price)}</div>
       <div class="signal ${signalClass(s.signal)}">${s.signal}</div>
       <div class="detail">${s.detail}</div>
-      <div class="meta">click for 1H/4H/1D/1M charts</div>
+      <div class="meta">click for 1H/4H/1D charts</div>
     `;
     wrap.appendChild(card);
   }
@@ -101,7 +101,7 @@ function renderSeasonality(data) {
 
 function renderSetups(data) {
   const table = document.getElementById('setupsTable');
-  const TFS = ['1H', '4H', '1D', '1M'];
+  const TFS = ['1H', '4H', '1D'];
   let html = '<tr><th>Asset</th>' + TFS.map((t) => '<th>' + t + '</th>').join('') + '</tr>';
   for (const [sym, s] of Object.entries(data.setups)) {
     html += `<tr><td class="sym-cell"><a href="asset.html?symbol=${sym}">${sym}</a></td>`;

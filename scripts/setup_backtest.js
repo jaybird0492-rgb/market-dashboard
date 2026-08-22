@@ -8,7 +8,7 @@ const RAW = path.join(__dirname, '..', 'data', 'raw');
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const LOG_FILE = path.join(LIVE, 'setup_log.json');
 const SYMBOLS = ['BTC', 'ETH'];
-const TFS = ['1H', '4H', '1D', '1M'];
+const TFS = ['1H', '4H', '1D'];
 
 function loadCsv(file) {
   const txt = fs.readFileSync(file, 'utf8').trim().split(/\r?\n/);
@@ -39,7 +39,6 @@ function getBars(sym, tf) {
     '1H': hourly,
     '4H': resample(hourly, 4 * HOUR),
     '1D': daily,
-    '1M': resampleMonth(daily),
   };
   barCache.set(key, map[tf]);
   return map[tf];

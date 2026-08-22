@@ -397,7 +397,6 @@ function getAsset(sym) {
     '1H': analyze(hourly.slice(-2200), '1H'),
     '4H': analyze(resample(hourly.slice(-2200), 4 * HOUR), '4H'),
     '1D': analyze(daily.slice(-2200), '1D'),
-    '1M': analyze(resampleMonth(daily), '1M'),
   };
   for (const tf of Object.keys(tfs)) {
     tfs[tf].setup = computeSetup(tfs[tf]);

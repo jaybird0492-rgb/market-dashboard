@@ -17,17 +17,10 @@ for (const sym of SYMBOLS) {
   const daily = validRows(loadCsv(path.join(RAW, sym + '_1d.csv')));
   if (!hourly.length || !daily.length) { console.log('no data for', sym); continue; }
   log[sym] = log[sym] || {};
-  for (const tf of ['1H', '4H', '1D', '1M']) {
-    let bars;
-    let start;
-    if (tf === '1M') {
-      bars = resampleMonth(daily);
-      start = Date.parse('2026-08-01T00:00:00.000Z');
-    } else {
-      const src = tf === '1D' ? daily.slice(-2200) : hourly.slice(-2200);
-      bars = tf === '4H' ? resample(src, 4 * HOUR) : src;
-      start = Date.parse('2026-08-19T04:00:00.000Z');
-    }
+  for (const tf of ['1H', '4H', '1D']) {
+    const src = tf === '1D' ? daily.slice(-2200) : hourly.slice(-2200);
+    const bars = tf === '4H' ? resample(src, 4 * HOUR) : src;
+    const start = Date.parse('2026-08-19T04:00:00.000Z');
     log[sym][tf] = [];
     for (let i = 0; i < bars.length; i++) {
       const t = bars[i].t;
@@ -59,6 +52,6 @@ for (const sym of SYMBOLS) {
 fs.writeFileSync(LOG_FILE, JSON.stringify(log, null, 2), 'utf8');
 console.log('backfill done, added', added, 'entries');
 for (const sym of SYMBOLS) {
-  const line = ['1H', '4H', '1D', '1M'].map((tf) => `${tf}:${((log[sym] && log[sym][tf]) || []).length}`).join(' | ');
+  const line = ['1H', '4H', '1D'].map((tf) => `${tf}:${((log[sym] && log[sym][tf]) || []).length}`).join(' | ');
   console.log(`  ${sym.padEnd(6)} ${line}`);
 }

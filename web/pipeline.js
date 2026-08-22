@@ -1,4 +1,4 @@
-const TFS = ['1H', '4H', '1D', '1M'];
+const TFS = ['1H', '4H', '1D'];
 const ASSETS = [
   { sym: 'BTC', name: 'Bitcoin', group: 'crypto' },
   { sym: 'ETH', name: 'Ethereum', group: 'crypto' },

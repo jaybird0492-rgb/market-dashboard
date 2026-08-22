@@ -627,6 +627,17 @@
         "tp2": 80326.55,
         "tp3": 81554.16,
         "trigger": "Buy when a 1H candle CLOSES above resistance $77,871"
+      },
+      {
+        "time": 1787389200000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 77871.33,
+        "stopLoss": 76643.72,
+        "tp1": 79098.94,
+        "tp2": 80326.55,
+        "tp3": 81554.16,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $77,871"
       }
     ],
     "4H": [
@@ -816,6 +827,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for pullback to MA20 ($72,861)"
+      },
+      {
+        "time": 1787371200000,
+        "tf": "4H",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Wait for pullback to MA20 ($72,861)"
       }
     ],
     "1D": [
@@ -862,30 +884,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Entry 17.4% below price — too far for a clean setup"
-      }
-    ],
-    "1M": [
-      {
-        "time": 1785542400000,
-        "tf": "1M",
-        "type": "BUY",
-        "entry": 73750.07,
-        "stopLoss": 60074.2,
-        "tp1": 87425.94,
-        "tp2": 101101.8,
-        "tp3": 114777.67,
-        "trigger": "Buy when a 1M candle CLOSES above resistance $73,750"
       },
       {
-        "time": "2026-07-01T00:00:00Z",
-        "tf": "1M",
-        "type": "BUY",
-        "entry": 73750.07,
-        "stopLoss": 60074.2,
-        "tp1": 87425.94,
-        "tp2": 101101.8,
-        "tp3": 114777.67,
-        "trigger": "Buy when a 1M candle CLOSES above resistance $73,750"
+        "time": 1787270400000,
+        "tf": "1D",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Entry 17.4% below price — too far for a clean setup"
       }
     ]
   },
@@ -1517,6 +1526,17 @@
         "tp2": 2573.94,
         "tp3": 2636.92,
         "trigger": "Buy when a 1H candle CLOSES above resistance $2,447.98"
+      },
+      {
+        "time": 1787389200000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 2447.98,
+        "stopLoss": 2385,
+        "tp1": 2510.96,
+        "tp2": 2573.94,
+        "tp3": 2636.92,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $2,447.98"
       }
     ],
     "4H": [
@@ -1706,6 +1726,17 @@
         "tp2": 3531.94,
         "tp3": 4073.92,
         "trigger": "Buy when a 4H candle CLOSES above resistance $2,447.98"
+      },
+      {
+        "time": 1787371200000,
+        "tf": "4H",
+        "type": "BUY",
+        "entry": 2447.98,
+        "stopLoss": 1906,
+        "tp1": 2989.96,
+        "tp2": 3531.94,
+        "tp3": 4073.92,
+        "trigger": "Buy when a 4H candle CLOSES above resistance $2,447.98"
       }
     ],
     "1D": [
@@ -1752,30 +1783,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for structure to form"
-      }
-    ],
-    "1M": [
-      {
-        "time": 1785542400000,
-        "tf": "1M",
-        "type": "RANGE",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "No trade until price breaks $3,573.96 (long) or $2,172.3 (short)"
       },
       {
-        "time": "2026-07-01T00:00:00Z",
-        "tf": "1M",
-        "type": "RANGE",
+        "time": 1787270400000,
+        "tf": "1D",
+        "type": "NONE",
         "entry": null,
         "stopLoss": null,
         "tp1": null,
         "tp2": null,
         "tp3": null,
-        "trigger": "No trade until price breaks $3,573.96 (long) or $2,172.3 (short)"
+        "trigger": "Wait for structure to form"
       }
     ]
   }
