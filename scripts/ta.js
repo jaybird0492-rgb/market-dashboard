@@ -230,21 +230,7 @@ function computeSetup(t) {
   const base = { updatedAt: now, tf: t.tf, parts: 'TP1 40% / TP2 40% / TP3 20%' };
 
   if (t.structure === 'uptrend') {
-    if (t.rsi !== null && t.rsi > 75) {
-      return {
-        ...base,
-        type: 'WAIT',
-        entry: null,
-        stopLoss: null,
-        tp1: null,
-        tp2: null,
-        tp3: null,
-        rr: '-',
-        risk: '-',
-        trigger: `Wait for pullback to MA20 (${fmtPrice(t.ma20)})`,
-        text: `Uptrend on ${t.tf} but RSI ${t.rsi.toFixed(0)} is overbought — no fresh entry. Wait for a pullback toward MA20 (${fmtPrice(t.ma20)}) before starting a new long. Existing positions: trail the stop.`,
-      };
-    }
+    const overbought = t.rsi !== null && t.rsi > 75;
     const entry = t.resistance || t.price * (1 + atrFrac);
     const stop = t.support || t.price * (1 - 1.5 * atrFrac);
     const distPct = ((entry / t.price - 1) * 100);
@@ -270,6 +256,7 @@ function computeSetup(t) {
     const tp1 = entry + R;
     const tp2 = entry + 2 * R;
     const tp3 = entry + 3 * R;
+    const warn = overbought ? ` RSI ${t.rsi.toFixed(0)} is overbought — reduce size or wait for pullback.` : '';
     return {
       ...base,
       type: 'BUY',
@@ -281,28 +268,14 @@ function computeSetup(t) {
       rr: '1:1 / 1:2 / 1:3',
       risk: ((R / entry) * 100).toFixed(2) + '%',
       trigger: t.resistance
-        ? `Buy when a ${t.tf} candle CLOSES above resistance ${fmtPrice(t.resistance)}`
+        ? `Buy when a ${t.tf} candle CLOSES above resistance ${fmtPrice(t.resistance)}${overbought ? ' (RSI overbought — cautious)' : ''}`
         : `Buy on pullback toward MA20 ${fmtPrice(t.ma20)}`,
-      text: `LONG ${t.tf}: entry ${fmtPrice(entry)} — trigger: ${t.resistance ? `close above ${fmtPrice(t.resistance)}` : `pullback to MA20 (${fmtPrice(t.ma20)})`}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). Targets: TP1 ${fmtPrice(tp1)} (take 40%), TP2 ${fmtPrice(tp2)} (take 40%), TP3 ${fmtPrice(tp3)} (take 20%).`,
+      text: `LONG ${t.tf}: entry ${fmtPrice(entry)} — trigger: ${t.resistance ? `close above ${fmtPrice(t.resistance)}` : `pullback to MA20 (${fmtPrice(t.ma20)})`}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). Targets: TP1 ${fmtPrice(tp1)} (take 40%), TP2 ${fmtPrice(tp2)} (take 40%), TP3 ${fmtPrice(tp3)} (take 20%).${warn}`,
     };
   }
 
   if (t.structure === 'downtrend') {
-    if (t.rsi !== null && t.rsi < 25) {
-      return {
-        ...base,
-        type: 'WAIT',
-        entry: null,
-        stopLoss: null,
-        tp1: null,
-        tp2: null,
-        tp3: null,
-        rr: '-',
-        risk: '-',
-        trigger: `Wait for a bounce toward MA20 (${fmtPrice(t.ma20)})`,
-        text: `Downtrend on ${t.tf} but RSI ${t.rsi.toFixed(0)} is oversold — no fresh short here. Wait for a bounce toward MA20 (${fmtPrice(t.ma20)}) to short with better entry.`,
-      };
-    }
+    const oversold = t.rsi !== null && t.rsi < 25;
     const entry = t.support || t.price * (1 - atrFrac);
     const stop = t.resistance || t.price * (1 + 1.5 * atrFrac);
     const distPct = ((t.price - entry) / t.price * 100);
@@ -328,6 +301,7 @@ function computeSetup(t) {
     const tp1 = entry - R;
     const tp2 = entry - 2 * R;
     const tp3 = entry - 3 * R;
+    const warn = oversold ? ` RSI ${t.rsi.toFixed(0)} is oversold — reduce size or wait for bounce.` : '';
     return {
       ...base,
       type: 'SELL',
@@ -339,9 +313,9 @@ function computeSetup(t) {
       rr: '1:1 / 1:2 / 1:3',
       risk: ((R / entry) * 100).toFixed(2) + '%',
       trigger: t.support
-        ? `Sell when a ${t.tf} candle CLOSES below support ${fmtPrice(t.support)}`
+        ? `Sell when a ${t.tf} candle CLOSES below support ${fmtPrice(t.support)}${oversold ? ' (RSI oversold — cautious)' : ''}`
         : `Sell on bounce toward MA20 ${fmtPrice(t.ma20)}`,
-      text: `SHORT ${t.tf}: entry ${fmtPrice(entry)} — trigger: ${t.support ? `close below ${fmtPrice(t.support)}` : `bounce to MA20 (${fmtPrice(t.ma20)})`}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). Targets: TP1 ${fmtPrice(tp1)} (40%), TP2 ${fmtPrice(tp2)} (40%), TP3 ${fmtPrice(tp3)} (20%).`,
+      text: `SHORT ${t.tf}: entry ${fmtPrice(entry)} — trigger: ${t.support ? `close below ${fmtPrice(t.support)}` : `bounce to MA20 (${fmtPrice(t.ma20)})`}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). Targets: TP1 ${fmtPrice(tp1)} (take 40%), TP2 ${fmtPrice(tp2)} (take 40%), TP3 ${fmtPrice(tp3)} (take 20%).${warn}`,
     };
   }
 
