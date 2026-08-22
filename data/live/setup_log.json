@@ -860,6 +860,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for pullback to MA20 ($72,861)"
+      },
+      {
+        "time": 1787385600000,
+        "tf": "4H",
+        "type": "BUY",
+        "entry": 78828.37,
+        "stopLoss": 76471.7,
+        "tp1": 81185.04,
+        "tp2": 83541.71,
+        "tp3": 85898.38,
+        "trigger": "Buy when a 4H candle CLOSES above resistance $78,828 (RSI overbought — cautious)"
       }
     ],
     "1D": [
