@@ -638,6 +638,17 @@
         "tp2": 80326.55,
         "tp3": 81554.16,
         "trigger": "Buy when a 1H candle CLOSES above resistance $77,871"
+      },
+      {
+        "time": 1787392800000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 77860.39,
+        "stopLoss": 76594.11,
+        "tp1": 79126.67,
+        "tp2": 80392.95,
+        "tp3": 81659.23,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $77,860"
       }
     ],
     "4H": [
@@ -1537,6 +1548,17 @@
         "tp2": 2573.94,
         "tp3": 2636.92,
         "trigger": "Buy when a 1H candle CLOSES above resistance $2,447.98"
+      },
+      {
+        "time": 1787392800000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 2447.74,
+        "stopLoss": 2385,
+        "tp1": 2510.48,
+        "tp2": 2573.22,
+        "tp3": 2635.96,
+        "trigger": "Buy when a 1H candle CLOSES above resistance $2,447.74"
       }
     ],
     "4H": [
@@ -1737,6 +1759,17 @@
         "tp2": 3531.94,
         "tp3": 4073.92,
         "trigger": "Buy when a 4H candle CLOSES above resistance $2,447.98"
+      },
+      {
+        "time": 1787371200000,
+        "tf": "4H",
+        "type": "BUY",
+        "entry": 2447.74,
+        "stopLoss": 1904.5,
+        "tp1": 2990.98,
+        "tp2": 3534.22,
+        "tp3": 4077.46,
+        "trigger": "Buy when a 4H candle CLOSES above resistance $2,447.74"
       }
     ],
     "1D": [
