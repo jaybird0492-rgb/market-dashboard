@@ -53,24 +53,6 @@ async function fetchYahoo(symbol, interval, range) {
 async function fetchStocks() {
   console.log('Stock fetching disabled — only BTC and ETH active');
 }
-  for (const s of stocks) {
-    const daily = await fetchYahoo(s.symbol, '1d', '10y');
-    saveCsv(path.join(DATA_DIR, `${s.symbol}_1d.csv`), daily);
-    await sleep(600);
-
-    const weekly = await fetchYahoo(s.symbol, '1wk', '10y');
-    saveCsv(path.join(DATA_DIR, `${s.symbol}_1wk.csv`), weekly);
-    await sleep(600);
-
-    const monthly = await fetchYahoo(s.symbol, '1mo', '10y');
-    saveCsv(path.join(DATA_DIR, `${s.symbol}_1mo.csv`), monthly);
-    await sleep(600);
-
-    const hourly = await fetchYahoo(s.symbol, '1h', '730d');
-    saveCsv(path.join(DATA_DIR, `${s.symbol}_1h.csv`), hourly);
-    await sleep(600);
-  }
-}
 
 // ---------- Binance (crypto, since 2017) ----------
 async function fetchBinance(symbol, interval, startMs) {
