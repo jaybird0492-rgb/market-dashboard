@@ -16,7 +16,7 @@ function fmtTime(t) {
   const diffH = Math.round((now - d) / 3600000);
   if (diffH < 1) return 'just now';
   if (diffH < 24) return diffH + 'h ago';
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return d.toLocaleString('en-AU', { timeZone: 'Australia/Perth', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
 }
 
 function signalClass(type) {
@@ -172,7 +172,7 @@ async function init() {
     ]);
 
     document.getElementById('updatedAt').textContent =
-      'Updated: ' + new Date(setups.updatedAt || Date.now()).toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+      'Updated: ' + new Date(setups.updatedAt || Date.now()).toLocaleString('en-AU', { timeZone: 'Australia/Perth', hour: '2-digit', minute: '2-digit', hour12: false }) + ' AWST';
 
     const changes = detectChanges(setups, setups.logs);
     if (changes.length) {

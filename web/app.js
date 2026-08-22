@@ -25,7 +25,7 @@ function signalClass(sig) {
 
 function renderSignals(data) {
   document.getElementById('updatedAt').textContent =
-    'Updated: ' + new Date(data.updatedAt).toISOString().slice(0, 19).replace('T', ' ') + ' UTC';
+    'Updated: ' + new Date(data.updatedAt).toLocaleString('en-AU', { timeZone: 'Australia/Perth', hour: '2-digit', minute: '2-digit', hour12: false }) + ' AWST';
   const wrap = document.getElementById('signalCards');
   wrap.innerHTML = '';
   for (const s of data.signals) {
