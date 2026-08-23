@@ -871,6 +871,17 @@
         "tp2": 83541.71,
         "tp3": 85898.38,
         "trigger": "Buy when a 4H candle CLOSES above resistance $78,828 (RSI overbought — cautious)"
+      },
+      {
+        "time": 1787428800000,
+        "tf": "4H",
+        "type": "BUY",
+        "entry": 77559.46,
+        "stopLoss": 76471.7,
+        "tp1": 78647.22,
+        "tp2": 79734.98,
+        "tp3": 80822.74,
+        "trigger": "Buy when a 4H candle CLOSES above resistance $77,559 (RSI overbought — cautious)"
       }
     ],
     "1D": [
@@ -1803,6 +1814,17 @@
         "tp2": 3534.22,
         "tp3": 4077.46,
         "trigger": "Buy when a 4H candle CLOSES above resistance $2,447.74"
+      },
+      {
+        "time": 1787428800000,
+        "tf": "4H",
+        "type": "BUY",
+        "entry": 2444.52,
+        "stopLoss": 2385,
+        "tp1": 2504.04,
+        "tp2": 2563.56,
+        "tp3": 2623.08,
+        "trigger": "Buy when a 4H candle CLOSES above resistance $2,444.52"
       }
     ],
     "1D": [
