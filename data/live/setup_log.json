@@ -2,17 +2,6 @@
   "BTC": {
     "1H": [
       {
-        "time": 1787115600000,
-        "tf": "1H",
-        "type": "RANGE",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "No trade until price breaks $64,402 (long) or $64,088 (short)"
-      },
-      {
         "time": 1787119200000,
         "tf": "1H",
         "type": "RANGE",
@@ -660,6 +649,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "No trade until price breaks $77,386 (long) or $76,868 (short)"
+      },
+      {
+        "time": 1787464800000,
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 75538.12,
+        "stopLoss": 77386.48,
+        "tp1": 73689.76,
+        "tp2": 71841.4,
+        "tp3": 69993.04,
+        "trigger": "Sell when a 1H candle CLOSES below support $75,538"
       }
     ],
     "4H": [
@@ -939,22 +939,22 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Entry 17.4% below price — too far for a clean setup"
+      },
+      {
+        "time": 1787356800000,
+        "tf": "1D",
+        "type": "RANGE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "No trade until price breaks $79,464 (long) or $63,720 (short)"
       }
     ]
   },
   "ETH": {
     "1H": [
-      {
-        "time": 1787130000000,
-        "tf": "1H",
-        "type": "BUY",
-        "entry": 1923.27,
-        "stopLoss": 1910.87,
-        "tp1": 1935.67,
-        "tp2": 1948.07,
-        "tp3": 1960.47,
-        "trigger": "Buy when a 1H candle CLOSES above resistance $1,923.27"
-      },
       {
         "time": 1787133600000,
         "tf": "1H",
@@ -1603,6 +1603,17 @@
         "tp2": 2198.38,
         "tp3": 2119.45,
         "trigger": "Sell when a 1H candle CLOSES below support $2,356.24"
+      },
+      {
+        "time": 1787464800000,
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 2385,
+        "stopLoss": 2435.17,
+        "tp1": 2334.83,
+        "tp2": 2284.66,
+        "tp3": 2234.49,
+        "trigger": "Sell when a 1H candle CLOSES below support $2,385"
       }
     ],
     "4H": [
@@ -1882,6 +1893,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for structure to form"
+      },
+      {
+        "time": 1787356800000,
+        "tf": "1D",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Entry 6.6% above price — too far for a clean setup"
       }
     ]
   }
