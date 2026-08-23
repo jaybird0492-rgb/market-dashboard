@@ -4,7 +4,7 @@
     "updated": "2026-08-23",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-23T09:40:17.223Z",
+        "updatedAt": "2026-08-23T10:38:04.985Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "SELL",
@@ -19,7 +19,7 @@
         "text": "SHORT 1H: entry $76,202 — trigger: close below $76,202. Stop $77,386 (1.55% risk). Targets: TP1 $75,018 (take 40%), TP2 $73,833 (take 40%), TP3 $72,649 (take 20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-23T09:40:17.224Z",
+        "updatedAt": "2026-08-23T10:38:04.985Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -34,7 +34,7 @@
         "text": "LONG 4H: entry $77,559 — trigger: close above $77,559. Stop $64,112 (17.34% risk). Targets: TP1 $91,007 (take 40%), TP2 $104,454 (take 40%), TP3 $117,902 (take 20%)."
       },
       "1D": {
-        "updatedAt": "2026-08-23T09:40:17.224Z",
+        "updatedAt": "2026-08-23T10:38:04.985Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "RANGE",
@@ -55,22 +55,22 @@
     "updated": "2026-08-23",
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-23T09:40:17.248Z",
+        "updatedAt": "2026-08-23T10:38:05.000Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "SELL",
         "entry": 2405.28,
-        "stopLoss": 2435.17,
-        "tp1": 2375.39,
-        "tp2": 2345.5,
-        "tp3": 2315.61,
+        "stopLoss": 2425.93,
+        "tp1": 2384.63,
+        "tp2": 2363.98,
+        "tp3": 2343.33,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "1.24%",
+        "risk": "0.86%",
         "trigger": "Sell when a 1H candle CLOSES below support $2,405.28",
-        "text": "SHORT 1H: entry $2,405.28 — trigger: close below $2,405.28. Stop $2,435.17 (1.24% risk). Targets: TP1 $2,375.39 (take 40%), TP2 $2,345.5 (take 40%), TP3 $2,315.61 (take 20%)."
+        "text": "SHORT 1H: entry $2,405.28 — trigger: close below $2,405.28. Stop $2,425.93 (0.86% risk). Targets: TP1 $2,384.63 (take 40%), TP2 $2,363.98 (take 40%), TP3 $2,343.33 (take 20%)."
       },
       "4H": {
-        "updatedAt": "2026-08-23T09:40:17.248Z",
+        "updatedAt": "2026-08-23T10:38:05.000Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
@@ -85,7 +85,7 @@
         "text": "LONG 4H: entry $2,444.52 — trigger: close above $2,444.52. Stop $2,385 (2.43% risk). Targets: TP1 $2,504.04 (take 40%), TP2 $2,563.56 (take 40%), TP3 $2,623.08 (take 20%)."
       },
       "1D": {
-        "updatedAt": "2026-08-23T09:40:17.249Z",
+        "updatedAt": "2026-08-23T10:38:05.001Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -96,8 +96,8 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "Entry 5.7% above price — too far for a clean setup",
-        "text": "Uptrend on 1D but the nearest resistance ($2,545.88) is 5.7% above the current price ($2,409.22). Entry would be too far away — wait for price to move closer or for a tighter swing structure to form."
+        "trigger": "Entry 5.3% above price — too far for a clean setup",
+        "text": "Uptrend on 1D but the nearest resistance ($2,545.88) is 5.3% above the current price ($2,416.72). Entry would be too far away — wait for price to move closer or for a tighter swing structure to form."
       }
     }
   }
