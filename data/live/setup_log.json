@@ -945,17 +945,6 @@
   "ETH": {
     "1H": [
       {
-        "time": 1787126400000,
-        "tf": "1H",
-        "type": "BUY",
-        "entry": 1928.13,
-        "stopLoss": 1910.87,
-        "tp1": 1945.39,
-        "tp2": 1962.65,
-        "tp3": 1979.91,
-        "trigger": "Buy on pullback toward MA20 $1,913.31"
-      },
-      {
         "time": 1787130000000,
         "tf": "1H",
         "type": "BUY",
@@ -1603,6 +1592,17 @@
         "tp2": 2345.5,
         "tp3": 2315.61,
         "trigger": "Sell when a 1H candle CLOSES below support $2,405.28"
+      },
+      {
+        "time": 1787457600000,
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 2356.24,
+        "stopLoss": 2435.17,
+        "tp1": 2277.31,
+        "tp2": 2198.38,
+        "tp3": 2119.45,
+        "trigger": "Sell when a 1H candle CLOSES below support $2,356.24"
       }
     ],
     "4H": [
