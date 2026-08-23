@@ -2,17 +2,6 @@
   "BTC": {
     "1H": [
       {
-        "time": 1787122800000,
-        "tf": "1H",
-        "type": "RANGE",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "No trade until price breaks $64,402 (long) or $64,088 (short)"
-      },
-      {
         "time": 1787126400000,
         "tf": "1H",
         "type": "RANGE",
@@ -660,6 +649,17 @@
         "tp2": 73833.22,
         "tp3": 72648.8,
         "trigger": "Sell when a 1H candle CLOSES below support $76,202"
+      },
+      {
+        "time": 1787479200000,
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 76594.11,
+        "stopLoss": 77386.48,
+        "tp1": 75801.74,
+        "tp2": 75009.37,
+        "tp3": 74217,
+        "trigger": "Sell when a 1H candle CLOSES below support $76,594"
       }
     ],
     "4H": [
@@ -1904,6 +1904,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Entry 6.6% above price — too far for a clean setup"
+      },
+      {
+        "time": 1787356800000,
+        "tf": "1D",
+        "type": "BUY",
+        "entry": 2545.88,
+        "stopLoss": 1856.34,
+        "tp1": 3235.42,
+        "tp2": 3924.96,
+        "tp3": 4614.5,
+        "trigger": "Buy when a 1D candle CLOSES above resistance $2,545.88 (RSI overbought — cautious)"
       }
     ]
   }
