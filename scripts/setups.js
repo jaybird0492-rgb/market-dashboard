@@ -8,6 +8,8 @@ const STATE_FILE = path.join(LIVE, 'stamp_state.json');
 const SYMBOLS = ['BTC', 'ETH'];
 const TFS = ['1H', '4H', '1D'];
 
+const HOLD_BARS = { '1H': 3, '4H': 3, '1D': 3 };
+
 function loadJson(file, fallback) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
   catch { return fallback; }
@@ -15,9 +17,13 @@ function loadJson(file, fallback) {
 
 function loadLog() { return loadJson(LOG_FILE, {}); }
 
-function changed(prev, cur) {
+function changed(prev, cur, tf) {
   if (!prev) return true;
-  return prev.type !== cur.type || prev.entry !== cur.entry;
+  if (prev.type === cur.type && prev.entry === cur.entry) return false;
+  const hold = HOLD_BARS[tf] || 3;
+  const elapsed = (cur.barT - prev.barT);
+  if (elapsed < hold) return false;
+  return true;
 }
 
 function appendLog(log, sym, tf, setup, barT) {
@@ -42,12 +48,11 @@ function computeAll() {
   const changes = [];
   const log = loadLog();
   const state = loadJson(STATE_FILE, {});
-  const now = Date.now();
 
   for (const sym of SYMBOLS) {
     const a = getAsset(sym);
     if (!a) continue;
-    out[sym] = { name: a.name, updated: a.updated, timeframes: {} };
+    out[sym] = { name: a.name, updated: a.updated, bias: a.bias, timeframes: {} };
 
     for (const tf of TFS) {
       const analysis = a.timeframes[tf];
@@ -60,14 +65,15 @@ function computeAll() {
         : 0;
 
       const stateKey = sym + '_' + tf;
-      const prevBarT = state[stateKey] || 0;
+      const prev = state[stateKey] || null;
 
-      if (closedBarT && closedBarT !== prevBarT) {
-        if (changed(state[stateKey] ? { type: state[stateKey].type, entry: state[stateKey].entry } : null, setup)) {
+      if (closedBarT) {
+        const curState = { barT: closedBarT, type: setup.type, entry: setup.entry, updatedAt: setup.updatedAt };
+        if (changed(prev, curState, tf)) {
           appendLog(log, sym, tf, setup, closedBarT);
           changes.push(sym + ' ' + tf + ' -> ' + setup.type + ' (bar ' + new Date(closedBarT).toISOString() + ')');
         }
-        state[stateKey] = { barT: closedBarT, type: setup.type, entry: setup.entry, updatedAt: setup.updatedAt };
+        state[stateKey] = curState;
       }
     }
   }
@@ -86,9 +92,10 @@ if (require.main === module) {
   for (const c of r.changes) console.log('  NEW LOG:', c);
   if (!r.changes.length) console.log('  No changes since last run');
   for (const sym of SYMBOLS) {
+    const bias = r.setups[sym].bias;
     const tfs = r.setups[sym].timeframes;
     const line = TFS.map(function (tf) { return tf + ':' + tfs[tf].type; }).join(' | ');
-    console.log('  ' + sym.padEnd(6) + ' ' + line);
+    console.log('  ' + sym.padEnd(6) + ' bias:' + bias.padEnd(8) + line);
   }
 }
 

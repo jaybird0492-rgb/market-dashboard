@@ -221,134 +221,75 @@ function analyze(bars, tf) {
 }
 
 // ---------- Trade setup generation ----------
-const MAX_ENTRY_PCT = 5;
+const TF_CONFIG = {
+  '1H': { maxEntryPct: 3, swingWindow: 2 },
+  '4H': { maxEntryPct: 5, swingWindow: 3 },
+  '1D': { maxEntryPct: 10, swingWindow: 5 },
+};
 
-function computeSetup(t) {
+function getBias(t) {
+  if (t.structure === 'uptrend' && (t.rsi === null || t.rsi < 70)) return 'LONG';
+  if (t.structure === 'downtrend' && (t.rsi === null || t.rsi > 30)) return 'SHORT';
+  return 'NEUTRAL';
+}
+
+function computeSetup(t, bias) {
+  const cfg = TF_CONFIG[t.tf] || TF_CONFIG['1H'];
   const atrFrac = t.atrPct !== null ? t.atrPct / 100 : 0.01;
   const now = new Date().toISOString();
   const r2 = (v) => (v === null || v === undefined ? null : +v.toFixed(2));
   const base = { updatedAt: now, tf: t.tf, parts: 'TP1 40% / TP2 40% / TP3 20%' };
 
+  if (bias === 'NEUTRAL' && t.tf !== '1D') {
+    return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: '1D bias is NEUTRAL — no trades', text: `1D has no clear trend. Wait for 1D to establish direction before trading ${t.tf}.` };
+  }
+
   if (t.structure === 'uptrend') {
+    if (bias === 'SHORT') {
+      return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: '1D bias is SHORT — no longs', text: `Uptrend on ${t.tf} but 1D bias is SHORT. Wait for structure alignment.` };
+    }
     const overbought = t.rsi !== null && t.rsi > 75;
     const entry = t.resistance || t.price * (1 + atrFrac);
     const stop = t.support || t.price * (1 - 1.5 * atrFrac);
     const distPct = ((entry / t.price - 1) * 100);
-    if (distPct > MAX_ENTRY_PCT) {
-      const levelDesc = t.resistance
-        ? `nearest resistance (${fmtPrice(t.resistance)})`
-        : `ATR-based entry level (${fmtPrice(entry)})`;
-      return {
-        ...base,
-        type: 'WAIT',
-        entry: null,
-        stopLoss: null,
-        tp1: null,
-        tp2: null,
-        tp3: null,
-        rr: '-',
-        risk: '-',
-        trigger: `Entry ${distPct.toFixed(1)}% above price — too far for a clean setup`,
-        text: `Uptrend on ${t.tf} but the ${levelDesc} is ${distPct.toFixed(1)}% above the current price (${fmtPrice(t.price)}). Entry would be too far away — wait for price to move closer or for a tighter swing structure to form.`,
-      };
+    if (distPct > cfg.maxEntryPct) {
+      const levelDesc = t.resistance ? `nearest resistance (${fmtPrice(t.resistance)})` : `ATR-based entry level (${fmtPrice(entry)})`;
+      return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: `Entry ${distPct.toFixed(1)}% above price — too far`, text: `Uptrend on ${t.tf} but the ${levelDesc} is ${distPct.toFixed(1)}% above current price (${fmtPrice(t.price)}). Wait for price to move closer.` };
     }
     const R = Math.abs(entry - stop);
     const tp1 = entry + R;
     const tp2 = entry + 2 * R;
     const tp3 = entry + 3 * R;
-    const warn = overbought ? ` RSI ${t.rsi.toFixed(0)} is overbought — reduce size or wait for pullback.` : '';
-    return {
-      ...base,
-      type: 'BUY',
-      entry: r2(entry),
-      stopLoss: r2(stop),
-      tp1: r2(tp1),
-      tp2: r2(tp2),
-      tp3: r2(tp3),
-      rr: '1:1 / 1:2 / 1:3',
-      risk: ((R / entry) * 100).toFixed(2) + '%',
-      trigger: t.resistance
-        ? `Buy when a ${t.tf} candle CLOSES above resistance ${fmtPrice(t.resistance)}${overbought ? ' (RSI overbought — cautious)' : ''}`
-        : `Buy on pullback toward MA20 ${fmtPrice(t.ma20)}`,
-      text: `LONG ${t.tf}: entry ${fmtPrice(entry)} — trigger: ${t.resistance ? `close above ${fmtPrice(t.resistance)}` : `pullback to MA20 (${fmtPrice(t.ma20)})`}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). Targets: TP1 ${fmtPrice(tp1)} (take 40%), TP2 ${fmtPrice(tp2)} (take 40%), TP3 ${fmtPrice(tp3)} (take 20%).${warn}`,
-    };
+    const warn = overbought ? ` RSI ${t.rsi.toFixed(0)} overbought — reduce size.` : '';
+    return { ...base, type: 'BUY', entry: r2(entry), stopLoss: r2(stop), tp1: r2(tp1), tp2: r2(tp2), tp3: r2(tp3), rr: '1:1 / 1:2 / 1:3', risk: ((R / entry) * 100).toFixed(2) + '%', trigger: t.resistance ? `Buy on close above ${fmtPrice(t.resistance)}${overbought ? ' (RSI caution)' : ''}` : `Buy on pullback toward MA20 ${fmtPrice(t.ma20)}`, text: `LONG ${t.tf}: entry ${fmtPrice(entry)}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). TP1 ${fmtPrice(tp1)} (40%), TP2 ${fmtPrice(tp2)} (40%), TP3 ${fmtPrice(tp3)} (20%).${warn}` };
   }
 
   if (t.structure === 'downtrend') {
+    if (bias === 'LONG') {
+      return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: '1D bias is LONG — no shorts', text: `Downtrend on ${t.tf} but 1D bias is LONG. Wait for structure alignment.` };
+    }
     const oversold = t.rsi !== null && t.rsi < 25;
     const entry = t.support || t.price * (1 - atrFrac);
     const stop = t.resistance || t.price * (1 + 1.5 * atrFrac);
     const distPct = ((t.price - entry) / t.price * 100);
-    if (distPct > MAX_ENTRY_PCT) {
-      const levelDesc = t.support
-        ? `nearest support (${fmtPrice(t.support)})`
-        : `ATR-based entry level (${fmtPrice(entry)})`;
-      return {
-        ...base,
-        type: 'WAIT',
-        entry: null,
-        stopLoss: null,
-        tp1: null,
-        tp2: null,
-        tp3: null,
-        rr: '-',
-        risk: '-',
-        trigger: `Entry ${distPct.toFixed(1)}% below price — too far for a clean setup`,
-        text: `Downtrend on ${t.tf} but the ${levelDesc} is ${distPct.toFixed(1)}% below the current price (${fmtPrice(t.price)}). Entry would be too far away — wait for price to move closer or for a tighter swing structure to form.`,
-      };
+    if (distPct > cfg.maxEntryPct) {
+      const levelDesc = t.support ? `nearest support (${fmtPrice(t.support)})` : `ATR-based entry level (${fmtPrice(entry)})`;
+      return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: `Entry ${distPct.toFixed(1)}% below price — too far`, text: `Downtrend on ${t.tf} but the ${levelDesc} is ${distPct.toFixed(1)}% below current price (${fmtPrice(t.price)}). Wait for price to move closer.` };
     }
     const R = Math.abs(stop - entry);
     const tp1 = entry - R;
     const tp2 = entry - 2 * R;
     const tp3 = entry - 3 * R;
-    const warn = oversold ? ` RSI ${t.rsi.toFixed(0)} is oversold — reduce size or wait for bounce.` : '';
-    return {
-      ...base,
-      type: 'SELL',
-      entry: r2(entry),
-      stopLoss: r2(stop),
-      tp1: r2(tp1),
-      tp2: r2(tp2),
-      tp3: r2(tp3),
-      rr: '1:1 / 1:2 / 1:3',
-      risk: ((R / entry) * 100).toFixed(2) + '%',
-      trigger: t.support
-        ? `Sell when a ${t.tf} candle CLOSES below support ${fmtPrice(t.support)}${oversold ? ' (RSI oversold — cautious)' : ''}`
-        : `Sell on bounce toward MA20 ${fmtPrice(t.ma20)}`,
-      text: `SHORT ${t.tf}: entry ${fmtPrice(entry)} — trigger: ${t.support ? `close below ${fmtPrice(t.support)}` : `bounce to MA20 (${fmtPrice(t.ma20)})`}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). Targets: TP1 ${fmtPrice(tp1)} (take 40%), TP2 ${fmtPrice(tp2)} (take 40%), TP3 ${fmtPrice(tp3)} (take 20%).${warn}`,
-    };
+    const warn = oversold ? ` RSI ${t.rsi.toFixed(0)} oversold — reduce size.` : '';
+    return { ...base, type: 'SELL', entry: r2(entry), stopLoss: r2(stop), tp1: r2(tp1), tp2: r2(tp2), tp3: r2(tp3), rr: '1:1 / 1:2 / 1:3', risk: ((R / entry) * 100).toFixed(2) + '%', trigger: t.support ? `Sell on close below ${fmtPrice(t.support)}${oversold ? ' (RSI caution)' : ''}` : `Sell on bounce toward MA20 ${fmtPrice(t.ma20)}`, text: `SHORT ${t.tf}: entry ${fmtPrice(entry)}. Stop ${fmtPrice(stop)} (${((R / entry) * 100).toFixed(2)}% risk). TP1 ${fmtPrice(tp1)} (40%), TP2 ${fmtPrice(tp2)} (40%), TP3 ${fmtPrice(tp3)} (20%).${warn}` };
   }
 
   if (t.support && t.resistance) {
     const rangeWidth = ((t.resistance / t.support - 1) * 100).toFixed(1);
-    return {
-      ...base,
-      type: 'RANGE',
-      entry: null,
-      stopLoss: null,
-      tp1: null,
-      tp2: null,
-      tp3: null,
-      rr: '-',
-      risk: '-',
-      trigger: `No trade until price breaks ${fmtPrice(t.resistance)} (long) or ${fmtPrice(t.support)} (short)`,
-      text: `RANGING on ${t.tf} between ${fmtPrice(t.support)} and ${fmtPrice(t.resistance)} (${rangeWidth}% range) — no entry yet. Wait for a close above ${fmtPrice(t.resistance)} or below ${fmtPrice(t.support)} for a directional setup.`,
-    };
+    return { ...base, type: 'RANGE', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: `No trade until break of ${fmtPrice(t.resistance)} (long) or ${fmtPrice(t.support)} (short)`, text: `RANGING ${t.tf} between ${fmtPrice(t.support)} and ${fmtPrice(t.resistance)} (${rangeWidth}% range). Wait for breakout.` };
   }
 
-  return {
-    ...base,
-    type: 'NONE',
-    entry: null,
-    stopLoss: null,
-    tp1: null,
-    tp2: null,
-    tp3: null,
-    rr: '-',
-    risk: '-',
-    trigger: 'Wait for structure to form',
-    text: `No setup on ${t.tf} yet — not enough swing structure to define levels. Check back on the next update.`,
-  };
+  return { ...base, type: 'NONE', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: 'Wait for structure to form', text: `No setup on ${t.tf} — not enough swing structure. Check back later.` };
 }
 
 // ---------- Asset assembly ----------
@@ -371,17 +312,21 @@ function getAsset(sym) {
     '1H': analyze(hourly.slice(-2200), '1H'),
     '4H': analyze(resample(hourly.slice(-2200), 4 * HOUR), '4H'),
     '1D': analyze(daily.slice(-2200), '1D'),
-  };
-  for (const tf of Object.keys(tfs)) {
-    tfs[tf].setup = computeSetup(tfs[tf]);
   }
+
+  const bias = getBias(tfs['1D']);
+  tfs['1D'].bias = bias;
+  tfs['1D'].setup = computeSetup(tfs['1D'], bias);
+  tfs['4H'].setup = computeSetup(tfs['4H'], bias);
+  tfs['1H'].setup = computeSetup(tfs['1H'], bias);
 
   return {
     symbol: sym,
     name: NAMES[sym],
     updated: new Date(daily[daily.length - 1].t).toISOString().slice(0, 10),
+    bias,
     timeframes: tfs,
   };
 }
 
-module.exports = { getAsset, resample, resampleMonth, analyze, computeSetup, validRows, loadCsv, swings, fmtPrice, MAX_ENTRY_PCT };
+module.exports = { getAsset, resample, resampleMonth, analyze, computeSetup, getBias, validRows, loadCsv, swings, fmtPrice, TF_CONFIG };

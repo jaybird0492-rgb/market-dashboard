@@ -64,9 +64,9 @@ async function load() {
   const buys = Object.values(tfs).filter((t) => t.setup && t.setup.type === 'BUY').length;
   const sells = Object.values(tfs).filter((t) => t.setup && t.setup.type === 'SELL').length;
   document.getElementById('summary').innerHTML =
-    `<b>Multi-timeframe:</b> ${buys}/4 BUY setups, ${sells}/4 SELL setups. ` +
-    (buys >= 3 ? 'Bias: BULLISH — trade the BUY setups (higher timeframes agree).' :
-     sells >= 3 ? 'Bias: BEARISH — stand aside or trade the SELL setups only.' :
+    `<b>Multi-timeframe:</b> ${buys}/3 BUY setups, ${sells}/3 SELL setups. ` +
+    (buys >= 2 ? 'Bias: BULLISH — trade the BUY setups (higher timeframes agree).' :
+     sells >= 2 ? 'Bias: BEARISH — stand aside or trade the SELL setups only.' :
      'Bias: MIXED — wait for at least 2 timeframes to agree on direction.');
 
   const tabs = document.getElementById('tfTabs');
