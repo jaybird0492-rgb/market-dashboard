@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { loadCsv, sma, rsi, mean } = require('./lib');
 const path = require('path');
 
@@ -305,8 +306,12 @@ const DAY = 24 * HOUR;
 function getAsset(sym) {
   sym = sym.toUpperCase();
   if (!DAILY_FILES[sym]) return null;
-  const daily = validRows(loadCsv(path.join(RAW, DAILY_FILES[sym])));
-  const hourly = validRows(loadCsv(path.join(RAW, sym + '_1h.csv')));
+  const dailyPath = path.join(RAW, DAILY_FILES[sym]);
+  const hourlyPath = path.join(RAW, sym + '_1h.csv');
+  if (!fs.existsSync(dailyPath) || !fs.existsSync(hourlyPath)) return null;
+  const daily = validRows(loadCsv(dailyPath));
+  const hourly = validRows(loadCsv(hourlyPath));
+  if (!daily.length || !hourly.length) return null;
 
   const tfs = {
     '1H': analyze(hourly.slice(-2200), '1H'),
