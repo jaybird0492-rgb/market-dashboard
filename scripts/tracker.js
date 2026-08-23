@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { RAW, loadCsv, closes, sma, rsi } = require('./lib');
 const path = require('path');
 
@@ -44,7 +45,16 @@ function computeSignals() {
 
   for (const sym of ['BTC', 'ETH']) {
     const a = ASSETS[sym];
-    const rows = loadCsv(path.join(RAW, a.file)).filter((r) => r.close !== null);
+    const csvPath = path.join(RAW, a.file);
+    if (!fs.existsSync(csvPath)) {
+      signals.push({ symbol: sym, name: a.name, price: null, date: null, signal: 'WAIT', detail: 'Data file missing — fetch failed', ma20: null, hi252: null, rsi: 'n/a' });
+      continue;
+    }
+    const rows = loadCsv(csvPath).filter((r) => r.close !== null);
+    if (!rows.length) {
+      signals.push({ symbol: sym, name: a.name, price: null, date: null, signal: 'WAIT', detail: 'Data file empty — fetch returned no rows', ma20: null, hi252: null, rsi: 'n/a' });
+      continue;
+    }
     const st = momentumState(rows, 252, 20, [6]);
     const isJune = month === 6;
     let signal;

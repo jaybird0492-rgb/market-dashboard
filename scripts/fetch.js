@@ -6,17 +6,24 @@ fs.mkdirSync(DATA_DIR, { recursive: true });
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchJson(url, headers = {}) {
-  const res = await fetch(url, {
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36',
-      Accept: 'application/json',
-      ...headers,
-    },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.json();
+async function fetchJson(url, headers = {}, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await fetch(url, {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36',
+          Accept: 'application/json',
+          ...headers,
+        },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      return res.json();
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      await sleep(1000 * (i + 1));
+    }
+  }
 }
 
 function saveCsv(file, rows) {
