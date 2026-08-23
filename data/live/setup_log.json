@@ -945,17 +945,6 @@
   "ETH": {
     "1H": [
       {
-        "time": 1787115600000,
-        "tf": "1H",
-        "type": "BUY",
-        "entry": 1912.6,
-        "stopLoss": 1906.19,
-        "tp1": 1919.01,
-        "tp2": 1925.42,
-        "tp3": 1931.83,
-        "trigger": "Buy when a 1H candle CLOSES above resistance $1,912.6"
-      },
-      {
         "time": 1787119200000,
         "tf": "1H",
         "type": "BUY",
@@ -1603,6 +1592,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "No trade until price breaks $2,438.18 (long) or $2,405.28 (short)"
+      },
+      {
+        "time": 1787450400000,
+        "tf": "1H",
+        "type": "SELL",
+        "entry": 2405.28,
+        "stopLoss": 2435.17,
+        "tp1": 2375.39,
+        "tp2": 2345.5,
+        "tp3": 2315.61,
+        "trigger": "Sell when a 1H candle CLOSES below support $2,405.28"
       }
     ],
     "4H": [
