@@ -928,6 +928,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Entry 17.4% below price — too far for a clean setup"
+      },
+      {
+        "time": 1787443200000,
+        "tf": "1D",
+        "type": "RANGE",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "No trade until break of $79,511 (long) or $63,692 (short)"
       }
     ]
   },
@@ -1871,6 +1882,17 @@
         "tp2": null,
         "tp3": null,
         "trigger": "Wait for structure to form"
+      },
+      {
+        "time": 1787443200000,
+        "tf": "1D",
+        "type": "BUY",
+        "entry": 2546.62,
+        "stopLoss": 1855,
+        "tp1": 3238.24,
+        "tp2": 3929.86,
+        "tp3": 4621.48,
+        "trigger": "Buy on close above $2,546.62 (RSI caution)"
       }
     ]
   }
