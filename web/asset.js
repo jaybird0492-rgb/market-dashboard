@@ -43,21 +43,18 @@ async function loadJson(apiUrl, staticPath) {
 }
 
 async function load() {
-  const [resolved, signals] = await Promise.all([
-    loadJson('/api/asset?symbol=' + SYMBOL, 'data/asset_' + SYMBOL + '.json'),
-    loadJson('/api/signals', 'data/signals.json'),
-  ]);
+  const resolved = await loadJson('/api/asset?symbol=' + SYMBOL, 'data/asset_' + SYMBOL + '.json');
   asset = resolved;
 
   document.title = asset.name + ' — ' + SYMBOL + ' analysis';
   document.getElementById('assetTitle').textContent = asset.name + ' (' + SYMBOL + ')';
   document.getElementById('assetMeta').textContent = 'Data through ' + asset.updated + ' UTC';
 
-  const strat = signals.signals.find((s) => s.symbol === SYMBOL);
-  if (strat) {
-    const el = document.getElementById('strategySignal');
-    el.textContent = 'Strategy: ' + strat.signal;
-    el.className = 'badge ' + (strat.signal.startsWith('LONG') ? 'sig-long' : 'sig-out');
+  const stratEl = document.getElementById('strategySignal');
+  if (asset.bias && asset.timeframes && asset.timeframes['1D']) {
+    const oneD = asset.timeframes['1D'].setup;
+    stratEl.textContent = '1D bias: ' + asset.bias + ' · Score ' + (oneD && oneD.score !== undefined ? oneD.score : 'n/a');
+    stratEl.className = 'badge ' + (asset.bias === 'LONG' ? 'sig-long' : asset.bias === 'SHORT' ? 'sig-out' : 'sig-watch');
   }
 
   const tfs = asset.timeframes;

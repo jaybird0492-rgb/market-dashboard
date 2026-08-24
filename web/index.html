@@ -18,12 +18,13 @@
 </header>
 
 <section class="rules">
-  <h2>Strategy rules (validated 2017-2026)</h2>
+  <h2>Strategy rules</h2>
   <ul>
     <li><b>Portfolio:</b> BTC 55% / ETH 45%, rebalanced monthly</li>
-    <li><b>Rule 1:</b> Crypto: long only after a 252-day-high breakout, exit below 20-day MA</li>
-    <li><b>Rule 2:</b> Crypto never held in June (ETH p=0.022, BTC p=0.052)</li>
-    <li><b>Result:</b> CAGR 26.8%, Sharpe 1.39, max drawdown -21% (vs -55% without rules)</li>
+    <li><b>Signal engine:</b> multi-factor score (trend, RSI momentum, ADX direction, range breakout) on 1H / 4H / 1D</li>
+    <li><b>Confluence:</b> 1D sets the bias; 1H and 4H only trade in the same direction</li>
+    <li><b>Entry:</b> ATR-adaptive stop (1R) and targets at 1R / 2R / 3R</li>
+    <li><b>Signal fires when:</b> score &gt;= +40 (long) or &lt;= -40 (short), aligned with 1D bias</li>
   </ul>
 </section>
 

@@ -62,7 +62,7 @@ function renderSignals(data) {
     `;
     wrap.appendChild(card);
   }
-  document.getElementById('portfolioNote').textContent = 'Multi-timeframe signals — 1D sets the bias, 1H/4H trade only aligned setups.';
+  document.getElementById('portfolioNote').textContent = 'Multi-factor signals (score = trend · RSI · ADX · breakout). 1D sets the bias — 1H/4H trade only aligned setups.';
 }
 
 let equityChart = null;
