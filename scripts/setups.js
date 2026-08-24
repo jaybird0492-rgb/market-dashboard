@@ -50,30 +50,40 @@ function computeAll() {
   const state = loadJson(STATE_FILE, {});
 
   for (const sym of SYMBOLS) {
-    const a = getAsset(sym);
-    if (!a) continue;
+    let a;
+    try {
+      a = getAsset(sym);
+    } catch (e) {
+      console.error('  getAsset(' + sym + ') FAILED:', e.message);
+      continue;
+    }
+    if (!a) { console.log('  ' + sym + ': no data'); continue; }
     out[sym] = { name: a.name, updated: a.updated, bias: a.bias, timeframes: {} };
 
     for (const tf of TFS) {
-      const analysis = a.timeframes[tf];
-      const setup = analysis.setup;
-      out[sym].timeframes[tf] = setup;
+      try {
+        const analysis = a.timeframes[tf];
+        const setup = analysis.setup;
+        out[sym].timeframes[tf] = setup;
 
-      const bars = analysis.bars;
-      const closedBarT = bars && bars.length >= 2
-        ? Date.parse(bars[bars.length - 2].t) || 0
-        : 0;
+        const bars = analysis.bars;
+        const closedBarT = bars && bars.length >= 2
+          ? Date.parse(bars[bars.length - 2].t) || 0
+          : 0;
 
-      const stateKey = sym + '_' + tf;
-      const prev = state[stateKey] || null;
+        const stateKey = sym + '_' + tf;
+        const prev = state[stateKey] || null;
 
-      if (closedBarT) {
-        const curState = { barT: closedBarT, type: setup.type, entry: setup.entry, updatedAt: setup.updatedAt };
-        if (changed(prev, curState, tf)) {
-          appendLog(log, sym, tf, setup, closedBarT);
-          changes.push(sym + ' ' + tf + ' -> ' + setup.type + ' (bar ' + new Date(closedBarT).toISOString() + ')');
+        if (closedBarT) {
+          const curState = { barT: closedBarT, type: setup.type, entry: setup.entry, updatedAt: setup.updatedAt };
+          if (changed(prev, curState, tf)) {
+            appendLog(log, sym, tf, setup, closedBarT);
+            changes.push(sym + ' ' + tf + ' -> ' + setup.type + ' (bar ' + new Date(closedBarT).toISOString() + ')');
+          }
+          state[stateKey] = curState;
         }
-        state[stateKey] = curState;
+      } catch (e) {
+        console.error('  ' + sym + ' ' + tf + ' FAILED:', e.message);
       }
     }
   }
@@ -87,15 +97,21 @@ function computeAll() {
 }
 
 if (require.main === module) {
-  const r = computeAll();
-  console.log('Setups computed:', new Date().toISOString());
-  for (const c of r.changes) console.log('  NEW LOG:', c);
-  if (!r.changes.length) console.log('  No changes since last run');
-  for (const sym of SYMBOLS) {
-    const bias = r.setups[sym].bias;
-    const tfs = r.setups[sym].timeframes;
-    const line = TFS.map(function (tf) { return tf + ':' + tfs[tf].type; }).join(' | ');
-    console.log('  ' + sym.padEnd(6) + ' bias:' + bias.padEnd(8) + line);
+  try {
+    const r = computeAll();
+    console.log('Setups computed:', new Date().toISOString());
+    for (const c of r.changes) console.log('  NEW LOG:', c);
+    if (!r.changes.length) console.log('  No changes since last run');
+    for (const sym of SYMBOLS) {
+      const bias = r.setups[sym] ? r.setups[sym].bias : 'n/a';
+      const tfs = r.setups[sym] ? r.setups[sym].timeframes : {};
+      const line = TFS.map(function (tf) { return tf + ':' + (tfs[tf] ? tfs[tf].type : 'MISSING'); }).join(' | ');
+      console.log('  ' + sym.padEnd(6) + ' bias:' + String(bias).padEnd(8) + line);
+    }
+  } catch (e) {
+    console.error('SETUPS FAILED:', e.message);
+    console.error(e.stack);
+    process.exit(1);
   }
 }
 
