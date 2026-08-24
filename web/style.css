@@ -46,8 +46,7 @@ button:disabled { opacity: .5; cursor: default; }
 .tf-entry { font-size: .68rem; color: #cbd5e1; }
 
 .chart-wrap { background: #1e293b; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
-.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
-.stat { background: #1e293b; border-radius: 10px; padding: 12px 14px; text-align: center; font-size: .85rem; }
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }.stat { background: #1e293b; border-radius: 10px; padding: 12px 14px; text-align: center; font-size: .85rem; }
 .stat b { display: block; margin-bottom: 6px; color: #93c5fd; }
 
 .table-wrap { background: #1e293b; border-radius: 10px; padding: 16px; overflow-x: auto; }
@@ -71,6 +70,9 @@ th { color: #94a3b8; }
 .tf-tab.active { background: #2563eb; color: white; border-color: #2563eb; }
 .chart-wrap { padding: 8px; }
 canvas#chart { width: 100%; height: 400px; display: block; }
+.tv-chart { width: 100%; height: 420px; }
+.custom-section { margin-top: 8px; }
+.custom-note { font-size: .75rem; color: #94a3b8; margin: -4px 0 16px; }
 
 .read-panel { background: #1e293b; border-radius: 10px; padding: 16px 20px; margin-top: 12px; }
 .read-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }

@@ -1,9 +1,12 @@
 const params = new URLSearchParams(location.search);
 const SYMBOL = (params.get('symbol') || 'BTC').toUpperCase();
 const TF_ORDER = ['1H', '4H', '1D'];
+const TV_SYMBOL = { BTC: 'BITSTAMP:BTCUSD', ETH: 'BITSTAMP:ETHUSD' }[SYMBOL] || 'BITSTAMP:BTCUSD';
+const TV_INTERVAL = { '1H': '60', '4H': '240', '1D': 'D' };
 
 let asset = null;
 let activeTf = '1D';
+let tvWidget = null;
 
 function fmt(v, digits) {
   if (v === null || v === undefined) return '-';
@@ -71,7 +74,32 @@ async function load() {
   tabs.querySelectorAll('.tf-tab').forEach((b) =>
     b.addEventListener('click', () => selectTf(b.dataset.tf))
   );
+  const tabsCustom = document.getElementById('tfTabsCustom');
+  tabsCustom.innerHTML = TF_ORDER.map((tf) => `<button data-tf="${tf}" class="tf-tab">${tf}</button>`).join('');
+  tabsCustom.querySelectorAll('.tf-tab').forEach((b) =>
+    b.addEventListener('click', () => selectTf(b.dataset.tf))
+  );
   selectTf(activeTf);
+}
+
+function renderTvChart(tf) {
+  const container = document.getElementById('tvchart');
+  if (!container) return;
+  container.innerHTML = '';
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+  const config = {
+    autosize: true, symbol: TV_SYMBOL, interval: TV_INTERVAL[tf] || '60',
+    timezone: 'Etc/UTC', theme: 'dark', style: '1', locale: 'en',
+    hide_side_toolbar: false, allow_symbol_change: false, calendar: false,
+    support_host: 'https://www.tradingview.com',
+    studies: ['MASimple@tv-basicstudies', 'RSI@tv-basicstudies'],
+    container_id: 'tvchart',
+  };
+  script.innerHTML = JSON.stringify(config);
+  container.appendChild(script);
 }
 
 function selectTf(tf) {
@@ -79,6 +107,7 @@ function selectTf(tf) {
   document.querySelectorAll('.tf-tab').forEach((b) =>
     b.classList.toggle('active', b.dataset.tf === tf)
   );
+  renderTvChart(tf);
   const t = asset.timeframes[tf];
   renderCandles(document.getElementById('chart'), t);
 

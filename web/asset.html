@@ -23,7 +23,7 @@
 <section>
   <div class="tf-tabs" id="tfTabs"></div>
   <div class="chart-wrap">
-    <canvas id="chart" height="400"></canvas>
+    <div id="tvchart" class="tv-chart"></div>
   </div>
   <div id="readPanel" class="read-panel"></div>
   <div id="setupPanel" class="setup-panel"></div>
@@ -32,6 +32,14 @@
     <div id="timeline" class="timeline"></div>
   </details>
   <div id="backtestPanel" class="backtest-panel"></div>
+</section>
+
+<section class="custom-section">
+  <div class="tf-tabs" id="tfTabsCustom"></div>
+  <div class="chart-wrap">
+    <canvas id="chart" height="400"></canvas>
+  </div>
+  <p class="custom-note">Custom chart with MA/support/resistance overlays</p>
 </section>
 
 <script src="candles.js"></script>
