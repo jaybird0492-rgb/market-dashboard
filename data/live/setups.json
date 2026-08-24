@@ -3,10 +3,10 @@
     "name": "Bitcoin",
     "updated": "2026-08-24",
     "bias": "NEUTRAL",
-    "price": 77482.3,
+    "price": 77461.1,
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-24T06:57:20.138Z",
+        "updatedAt": "2026-08-24T07:00:10.047Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -21,7 +21,7 @@
         "text": "1D has no clear trend. Wait for 1D to establish direction before trading 1H."
       },
       "4H": {
-        "updatedAt": "2026-08-24T06:57:20.138Z",
+        "updatedAt": "2026-08-24T07:00:10.047Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -36,7 +36,7 @@
         "text": "1D has no clear trend. Wait for 1D to establish direction before trading 4H."
       },
       "1D": {
-        "updatedAt": "2026-08-24T06:57:20.137Z",
+        "updatedAt": "2026-08-24T07:00:10.046Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "RANGE",
@@ -56,10 +56,10 @@
     "name": "Ethereum",
     "updated": "2026-08-24",
     "bias": "NEUTRAL",
-    "price": 2455.6,
+    "price": 2456.19,
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-24T06:57:20.142Z",
+        "updatedAt": "2026-08-24T07:00:10.050Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -74,7 +74,7 @@
         "text": "1D has no clear trend. Wait for 1D to establish direction before trading 1H."
       },
       "4H": {
-        "updatedAt": "2026-08-24T06:57:20.142Z",
+        "updatedAt": "2026-08-24T07:00:10.050Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "WAIT",
@@ -89,7 +89,7 @@
         "text": "1D has no clear trend. Wait for 1D to establish direction before trading 4H."
       },
       "1D": {
-        "updatedAt": "2026-08-24T06:57:20.142Z",
+        "updatedAt": "2026-08-24T07:00:10.050Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
         "type": "BUY",
