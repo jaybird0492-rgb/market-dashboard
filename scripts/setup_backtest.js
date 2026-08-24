@@ -11,10 +11,13 @@ const SYMBOLS = ['BTC', 'ETH'];
 const TFS = ['1H', '4H', '1D'];
 
 function loadCsv(file) {
-  const txt = fs.readFileSync(file, 'utf8').trim().split(/\r?\n/);
-  const head = txt[0].split(',');
+  if (!fs.existsSync(file)) return [];
+  const txt = fs.readFileSync(file, 'utf8').trim();
+  if (!txt) return [];
+  const lines = txt.split(/\r?\n/);
+  const head = lines[0].split(',');
   const idx = Object.fromEntries(head.map((h, i) => [h.trim(), i]));
-  return txt.slice(1).map((l) => {
+  return lines.slice(1).map((l) => {
     const p = l.split(',');
     return {
       t: Date.parse(p[idx.timestamp] || p[idx.Timestamp] || p[idx.Date]),
@@ -37,11 +40,11 @@ function getBars(sym, tf) {
   const hourly = loadCsv(s1h).filter((r) => Number.isFinite(r.t) && Number.isFinite(r.close));
   const map = {
     '1H': hourly,
-    '4H': resample(hourly, 4 * HOUR),
+    '4H': hourly.length ? resample(hourly, 4 * HOUR) : [],
     '1D': daily,
   };
-  barCache.set(key, map[tf]);
-  return map[tf];
+  barCache.set(key, map[tf] || []);
+  return map[tf] || [];
 }
 
 function closeRet(long, price, entry) {

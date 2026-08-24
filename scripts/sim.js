@@ -18,6 +18,10 @@ function loadAligned() {
     for (const d of map.keys()) allDates.add(d);
   }
   const dates = [...allDates].sort();
+  if (!dates.length) {
+    CACHE = { idx: [], rets: {}, O: {}, n: 0 };
+    return CACHE;
+  }
   for (const [sym, file] of Object.entries(ASSETS)) {
     const rows = loadCsv(path.join(RAW, file)).filter((r) => r.close !== null);
     const map = new Map(rows.map((r) => [r.timestamp.slice(0, 10), r.close]));
@@ -73,6 +77,7 @@ function loadAligned() {
 
 function computeEquity(weights, overlays) {
   const { idx, rets, O, n } = loadAligned();
+  if (n === 0) return { equity: [], dates: [], n: 0 };
   const equity = new Array(n).fill(1);
   let w = { ...weights };
   for (let i = 1; i < n; i++) {

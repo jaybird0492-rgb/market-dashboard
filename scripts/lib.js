@@ -11,7 +11,10 @@ function num(v) {
 }
 
 function loadCsv(file) {
-  const lines = fs.readFileSync(file, 'utf8').trim().split('\n');
+  if (!fs.existsSync(file)) return [];
+  const txt = fs.readFileSync(file, 'utf8').trim();
+  if (!txt) return [];
+  const lines = txt.split('\n');
   return lines.slice(1).map((l) => {
     const c = l.split(',');
     return {

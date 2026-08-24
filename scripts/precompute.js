@@ -57,5 +57,13 @@ function buildAll() {
   console.log('Precomputed static data ->', WEB);
 }
 
-if (require.main === module) buildAll();
+if (require.main === module) {
+  try {
+    buildAll();
+  } catch (e) {
+    console.error('PRECOMPUTE FAILED:', e.message);
+    console.error(e.stack);
+    process.exit(1);
+  }
+}
 module.exports = { buildAll };
