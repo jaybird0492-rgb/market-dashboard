@@ -2,17 +2,6 @@
   "BTC": {
     "1H": [
       {
-        "time": 1787122800000,
-        "tf": "1H",
-        "type": "RANGE",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "No trade until price breaks $64,402 (long) or $64,088 (short)"
-      },
-      {
         "time": 1787126400000,
         "tf": "1H",
         "type": "RANGE",
@@ -660,6 +649,17 @@
         "tp2": 78383.29,
         "tp3": 78935.54,
         "trigger": "Buy setup: score +43.4 (trend +1 · RSI 51 · ADX 12 · dir +0.04)"
+      },
+      {
+        "time": 1787558400000,
+        "tf": "1H",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Score +39.3 — trend +1 · RSI 48.4 · ADX 11.8 · dir -0.04"
       }
     ],
     "4H": [
@@ -944,17 +944,6 @@
   },
   "ETH": {
     "1H": [
-      {
-        "time": 1787122800000,
-        "tf": "1H",
-        "type": "BUY",
-        "entry": 1918.71,
-        "stopLoss": 1910.87,
-        "tp1": 1926.55,
-        "tp2": 1934.39,
-        "tp3": 1942.23,
-        "trigger": "Buy when a 1H candle CLOSES above resistance $1,918.71"
-      },
       {
         "time": 1787126400000,
         "tf": "1H",
@@ -1603,6 +1592,17 @@
         "tp2": 2507.34,
         "tp3": 2534.66,
         "trigger": "Buy setup: score +48.4 (trend +1 · RSI 54.2 · ADX 15.5 · dir +0.15)"
+      },
+      {
+        "time": 1787558400000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 2456.54,
+        "stopLoss": 2429.64,
+        "tp1": 2483.44,
+        "tp2": 2510.34,
+        "tp3": 2537.24,
+        "trigger": "Buy setup: score +46.9 (trend +1 · RSI 55.5 · ADX 15 · dir +0.05)"
       }
     ],
     "4H": [
