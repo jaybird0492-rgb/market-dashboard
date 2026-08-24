@@ -19,8 +19,16 @@ function fmtPrice(v) {
   return '$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 });
 }
 
-function signalClass(sig) {
-  return sig.startsWith('LONG') ? 'sig-long' : 'sig-out';
+const TF_ORDER = ['1H', '4H', '1D'];
+
+function setupClass(type) {
+  return type === 'BUY' ? 'sig-long' : type === 'SELL' ? 'sig-out' : type === 'RANGE' ? 'sig-watch' : 'sig-none';
+}
+
+function biasLabel(bias) {
+  if (bias === 'LONG') return 'bullish';
+  if (bias === 'SHORT') return 'bearish';
+  return 'neutral';
 }
 
 function renderSignals(data) {
@@ -28,20 +36,33 @@ function renderSignals(data) {
     'Updated: ' + new Date(data.updatedAt).toLocaleString('en-AU', { timeZone: 'Australia/Perth', hour: '2-digit', minute: '2-digit', hour12: false }) + ' AWST';
   const wrap = document.getElementById('signalCards');
   wrap.innerHTML = '';
-  for (const s of data.signals) {
+  for (const [symbol, s] of Object.entries(data.setups)) {
+    const buys = TF_ORDER.filter((tf) => s.timeframes[tf] && s.timeframes[tf].type === 'BUY').length;
+    const sells = TF_ORDER.filter((tf) => s.timeframes[tf] && s.timeframes[tf].type === 'SELL').length;
+    const biasCls = s.bias === 'LONG' ? 'sig-long' : s.bias === 'SHORT' ? 'sig-out' : 'sig-watch';
+    const tfCells = TF_ORDER.map((tf) => {
+      const st = s.timeframes[tf];
+      if (!st) return '';
+      const entry = st.entry ? ' @ ' + fmtPrice(st.entry) : '';
+      return '<div class="tf-cell"><span class="tf-label">' + tf + '</span>' +
+        '<span class="signal ' + setupClass(st.type) + '">' + st.type + '</span>' +
+        '<span class="tf-entry">' + entry + '</span></div>';
+    }).join('');
+
     const card = document.createElement('a');
     card.className = 'card';
-    card.href = 'asset.html?symbol=' + s.symbol;
+    card.href = 'asset.html?symbol=' + symbol;
     card.innerHTML = `
-      <div class="card-head"><span class="sym">${s.symbol}</span><span class="name">${s.name}</span></div>
+      <div class="card-head"><span class="sym">${symbol}</span><span class="name">${s.name}</span></div>
       <div class="price">${fmtPrice(s.price)}</div>
-      <div class="signal ${signalClass(s.signal)}">${s.signal}</div>
-      <div class="detail">${s.detail}</div>
+      <div class="signal ${biasCls}">${s.bias} bias — ${biasLabel(s.bias)}</div>
+      <div class="tf-row">${tfCells}</div>
+      <div class="detail">${buys} BUY / ${sells} SELL across ${TF_ORDER.length} timeframes</div>
       <div class="meta">click for 1H/4H/1D charts</div>
     `;
     wrap.appendChild(card);
   }
-  document.getElementById('portfolioNote').textContent = data.portfolio.note;
+  document.getElementById('portfolioNote').textContent = 'Multi-timeframe signals — 1D sets the bias, 1H/4H trade only aligned setups.';
 }
 
 let equityChart = null;
@@ -118,12 +139,11 @@ function renderSetups(data) {
 
 async function init() {
   try {
-    const [signals, equity, setups] = await Promise.all([
-      loadJson('/api/signals', 'data/signals.json'),
-      loadJson('/api/equity', 'data/equity.json'),
+    const [setups, equity] = await Promise.all([
       loadJson('/api/setups', 'data/setups.json'),
+      loadJson('/api/equity', 'data/equity.json'),
     ]);
-    renderSignals(signals);
+    renderSignals(setups);
     renderEquity(equity);
     renderSeasonality(equity);
     renderSetups(setups);

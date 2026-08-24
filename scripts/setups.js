@@ -58,7 +58,8 @@ function computeAll() {
       continue;
     }
     if (!a) { console.log('  ' + sym + ': no data'); continue; }
-    out[sym] = { name: a.name, updated: a.updated, bias: a.bias, timeframes: {} };
+    const price = (a.timeframes && a.timeframes['1H'] && a.timeframes['1H'].price) || null;
+    out[sym] = { name: a.name, updated: a.updated, bias: a.bias, price, timeframes: {} };
 
     for (const tf of TFS) {
       try {
