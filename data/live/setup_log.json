@@ -2,17 +2,6 @@
   "BTC": {
     "1H": [
       {
-        "time": 1787205600000,
-        "tf": "1H",
-        "type": "WAIT",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "Wait for pullback to MA20 ($68,306)"
-      },
-      {
         "time": 1787209200000,
         "tf": "1H",
         "type": "WAIT",
@@ -660,6 +649,17 @@
         "tp2": 80899.85,
         "tp3": 81709.88,
         "trigger": "Buy setup: score +40.6 (trend +1 · RSI 50.7 · ADX 26.1 · dir -0.03)"
+      },
+      {
+        "time": 1787659200000,
+        "tf": "1H",
+        "type": "WAIT",
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "trigger": "Score +35.2 — trend +1 · RSI 46.4 · ADX 23.6 · dir -0.11"
       }
     ],
     "4H": [
