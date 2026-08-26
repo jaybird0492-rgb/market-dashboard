@@ -967,17 +967,6 @@
   "ETH": {
     "1H": [
       {
-        "time": 1787205600000,
-        "tf": "1H",
-        "type": "WAIT",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "Wait for pullback to MA20 ($2,151.22)"
-      },
-      {
         "time": 1787209200000,
         "tf": "1H",
         "type": "WAIT",
@@ -1625,6 +1614,17 @@
         "tp2": 2515.81,
         "tp3": 2538.17,
         "trigger": "Buy setup: score +41 (trend +1 · RSI 54.7 · ADX 20.8 · dir -0.04)"
+      },
+      {
+        "time": 1787781600000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 2499.13,
+        "stopLoss": 2475.51,
+        "tp1": 2522.75,
+        "tp2": 2546.37,
+        "tp3": 2569.99,
+        "trigger": "Buy setup: score +54.5 (trend +1 · RSI 63.5 · ADX 19.4 · dir +0.22)"
       }
     ],
     "4H": [
