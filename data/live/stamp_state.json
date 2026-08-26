@@ -1,38 +1,38 @@
 {
   "BTC_1H": {
-    "barT": 1787724000000,
+    "barT": 1787731200000,
     "type": "WAIT",
     "entry": null,
-    "updatedAt": "2026-08-26T07:00:00.000Z"
+    "updatedAt": "2026-08-26T09:00:00.000Z"
   },
   "BTC_4H": {
-    "barT": 1787702400000,
+    "barT": 1787716800000,
     "type": "WAIT",
     "entry": null,
-    "updatedAt": "2026-08-26T04:00:00.000Z"
+    "updatedAt": "2026-08-26T08:00:00.000Z"
   },
   "BTC_1D": {
     "barT": 1787616000000,
     "type": "BUY",
-    "entry": 78972.8,
+    "entry": 78707.5,
     "updatedAt": "2026-08-26T00:00:00.000Z"
   },
   "ETH_1H": {
-    "barT": 1787724000000,
+    "barT": 1787731200000,
     "type": "WAIT",
     "entry": null,
-    "updatedAt": "2026-08-26T07:00:00.000Z"
+    "updatedAt": "2026-08-26T09:00:00.000Z"
   },
   "ETH_4H": {
-    "barT": 1787702400000,
+    "barT": 1787716800000,
     "type": "WAIT",
     "entry": null,
-    "updatedAt": "2026-08-26T04:00:00.000Z"
+    "updatedAt": "2026-08-26T08:00:00.000Z"
   },
   "ETH_1D": {
     "barT": 1787616000000,
     "type": "BUY",
-    "entry": 2463.55,
+    "entry": 2455.93,
     "updatedAt": "2026-08-26T00:00:00.000Z"
   }
 }
