@@ -2,17 +2,6 @@
   "BTC": {
     "1H": [
       {
-        "time": 1787212800000,
-        "tf": "1H",
-        "type": "WAIT",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "Wait for pullback to MA20 ($68,906)"
-      },
-      {
         "time": 1787216400000,
         "tf": "1H",
         "type": "WAIT",
@@ -660,6 +649,17 @@
         "tp2": 81366.25,
         "tp3": 81937.88,
         "trigger": "Buy setup: score +58.5 (trend +1 · RSI 71 · ADX 17.6 · dir +0.27)"
+      },
+      {
+        "time": 1787857200000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 80011.1,
+        "stopLoss": 79378.38,
+        "tp1": 80643.82,
+        "tp2": 81276.54,
+        "tp3": 81909.26,
+        "trigger": "Buy setup: score +51.6 (trend +0.98 · RSI 58.9 · ADX 24.5 · dir +0.23)"
       }
     ],
     "4H": [
@@ -977,17 +977,6 @@
   },
   "ETH": {
     "1H": [
-      {
-        "time": 1787212800000,
-        "tf": "1H",
-        "type": "WAIT",
-        "entry": null,
-        "stopLoss": null,
-        "tp1": null,
-        "tp2": null,
-        "tp3": null,
-        "trigger": "Wait for pullback to MA20 ($2,184.91)"
-      },
       {
         "time": 1787216400000,
         "tf": "1H",
@@ -1636,6 +1625,17 @@
         "tp2": 2591.55,
         "tp3": 2616.33,
         "trigger": "Buy setup: score +61.9 (trend +1 · RSI 71.3 · ADX 19.1 · dir +0.34)"
+      },
+      {
+        "time": 1787857200000,
+        "tf": "1H",
+        "type": "BUY",
+        "entry": 2504.4,
+        "stopLoss": 2479.04,
+        "tp1": 2529.76,
+        "tp2": 2555.12,
+        "tp3": 2580.48,
+        "trigger": "Buy setup: score +40.6 (trend +0.96 · RSI 52.4 · ADX 17.8 · dir +0)"
       }
     ],
     "4H": [
