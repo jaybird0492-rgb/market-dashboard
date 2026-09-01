@@ -179,13 +179,13 @@ function evalAt(bars, i, ind) {
   const score = clamp((trend * 0.40 + mom * 0.25 + dir * 0.25 + brk * 0.10) * 100, -100, 100);
 
   let type;
-  if (score >= 40) type = 'BUY';
-  else if (score <= -40) type = 'SELL';
+  if (score >= 5) type = 'BUY';
+  else if (score <= -5) type = 'SELL';
   else type = 'WAIT';
 
   return {
     score: Math.round(score * 10) / 10,
-    sign: score >= 40 ? 1 : score <= -40 ? -1 : 0,
+    sign: score >= 5 ? 1 : score <= -5 ? -1 : 0,
     type,
     factors: {
       trend: Math.round(trend * 100) / 100,
@@ -246,13 +246,20 @@ function buildSetup(bars, tf, bias, i) {
   };
 
   if (e.type === 'BUY') {
-    // respect higher-TF bias: don't long against a clear SHORT
-    if (bias === 'SHORT') return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: '1D bias is SHORT — skipping long', text: `Uptrend score +${e.score} on ${tf} but 1D bias is SHORT. Wait for alignment.` };
-    return buildTrade(1, 'BUY');
+    const trade = buildTrade(1, 'BUY');
+    if (bias === 'SHORT') {
+      trade.trigger += ' — ⚠ against 1D bias';
+      trade.text += ' ⚠ against 1D bias (SHORT) — reduce size.';
+    }
+    return trade;
   }
   if (e.type === 'SELL') {
-    if (bias === 'LONG') return { ...base, type: 'WAIT', entry: null, stopLoss: null, tp1: null, tp2: null, tp3: null, rr: '-', risk: '-', trigger: '1D bias is LONG — skipping short', text: `Downtrend score ${e.score} on ${tf} but 1D bias is LONG. Wait for alignment.` };
-    return buildTrade(-1, 'SELL');
+    const trade = buildTrade(-1, 'SELL');
+    if (bias === 'LONG') {
+      trade.trigger += ' — ⚠ against 1D bias';
+      trade.text += ' ⚠ against 1D bias (LONG) — reduce size.';
+    }
+    return trade;
   }
 
   return {

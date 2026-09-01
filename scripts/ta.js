@@ -229,14 +229,13 @@ const TF_CONFIG = {
   '1D': { maxEntryPct: 10, swingWindow: 5 },
 };
 
-// 1D bias from the multi-factor score: LONG >= +20, SHORT <= -20, else NEUTRAL.
+// 1D bias from the multi-factor score: LONG >= +5, SHORT <= -5, else NEUTRAL.
 function getBias(analysis) {
   const score = analysis && analysis.setup ? analysis.setup.score : 0;
-  if (score >= 20) return 'LONG';
-  if (score <= -20) return 'SHORT';
+  if (score >= 5) return 'LONG';
+  if (score <= -5) return 'SHORT';
   return 'NEUTRAL';
 }
-
 // Build a setup for a timeframe from its raw bars (Kraken shape with t/high/low/close).
 // `t` is the analyze() result (used for price/chart data); bars are passed in so the
 // strategy engine can compute indicators over the full series.
@@ -262,13 +261,15 @@ function getAsset(sym) {
   if (!DAILY_FILES[sym]) return null;
   const dailyPath = path.join(RAW, DAILY_FILES[sym]);
   const hourlyPath = path.join(RAW, sym + '_1h.csv');
+  const fourHPath = path.join(RAW, sym + '_4h.csv');
   if (!fs.existsSync(dailyPath) || !fs.existsSync(hourlyPath)) return null;
   const daily = validRows(loadCsv(dailyPath));
   const hourly = validRows(loadCsv(hourlyPath));
+  const fourH = fs.existsSync(fourHPath) ? validRows(loadCsv(fourHPath)) : resample(hourly.slice(-2200), 4 * HOUR);
   if (!daily.length || !hourly.length) return null;
 
   const bars1H = hourly.slice(-2200);
-  const bars4H = resample(hourly.slice(-2200), 4 * HOUR);
+  const bars4H = fourH.slice(-2200);
   const bars1D = daily.slice(-2200);
 
   const tfs = {
