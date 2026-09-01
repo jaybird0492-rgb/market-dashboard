@@ -33,14 +33,19 @@ function appendLog(log, sym, tf, setup, barT) {
     time: barT,
     tf,
     type: setup.type,
+    score: setup.score !== undefined ? setup.score : null,
+    factors: setup.factors || null,
+    price: setup.entry !== null && setup.entry !== undefined ? setup.entry : null,
     entry: setup.entry,
     stopLoss: setup.stopLoss,
     tp1: setup.tp1,
     tp2: setup.tp2,
     tp3: setup.tp3,
+    risk: setup.risk,
     trigger: setup.trigger,
   });
-  if (log[sym][tf].length > 60) log[sym][tf].shift();
+  // Keep enough history to study 30+ days of signals.
+  if (log[sym][tf].length > 1200) log[sym][tf].shift();
 }
 
 function computeAll() {

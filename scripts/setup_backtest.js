@@ -169,6 +169,22 @@ if (require.main === module) {
           `SL=${s.sl} SLafterTP=${s.slAfterTp} TP1=${s.tp1} TP2=${s.tp2} TP3=${s.tp3} ` +
           `PART=${s.partial} OPEN=${s.open} avgReal=${(s.avgRealized * 100).toFixed(2)}%`
       );
+      // Score-band breakdown: which |score| ranges produced wins vs losses?
+      const bands = {};
+      for (const r of out[tf].results) {
+        const sc = Math.abs(r.entry.score || 0);
+        const key = sc >= 50 ? '50+' : sc >= 35 ? '35-50' : sc >= 20 ? '20-35' : '0-20';
+        bands[key] = bands[key] || { n: 0, win: 0, loss: 0, sumR: 0 };
+        bands[key].n++;
+        if (r.bt.status === 'SL') bands[key].loss++;
+        else if (r.bt.hit.includes('TP1') || r.bt.hit.includes('TP2') || r.bt.hit.includes('TP3')) bands[key].win++;
+        bands[key].sumR += r.bt.realized;
+      }
+      for (const [band, b] of Object.entries(bands)) {
+        const decided = b.win + b.loss;
+        const wr = decided ? Math.round((b.win / decided) * 100) : 0;
+        console.log(`      |score| ${band.padEnd(6)} n=${String(b.n).padStart(3)} win=${String(b.win).padStart(3)} loss=${String(b.loss).padStart(3)} winRate=${wr}% avgReal=${(b.sumR / b.n * 100).toFixed(2)}%`);
+      }
     }
   }
   console.log('Total signals evaluated:', total);
