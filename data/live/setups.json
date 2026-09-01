@@ -1,22 +1,22 @@
 {
   "BTC": {
     "name": "Bitcoin",
-    "updated": "2026-08-31",
+    "updated": "2026-09-01",
     "bias": "LONG",
-    "price": 78533.5,
+    "price": 78834.7,
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-31T23:00:00.000Z",
+        "updatedAt": "2026-09-01T05:00:00.000Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
-        "score": -19.2,
+        "score": 25.9,
         "factors": {
-          "trend": -0.55,
-          "momentum": 0.02,
-          "direction": 0.04,
-          "structure": 0.15,
-          "rsi": 50.9,
-          "adx": 16.8
+          "trend": 0.46,
+          "momentum": 0.14,
+          "direction": 0.06,
+          "structure": 0.27,
+          "rsi": 56.9,
+          "adx": 13.2
         },
         "type": "WAIT",
         "entry": null,
@@ -26,21 +26,21 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "Score -19.2 — trend -0.55 · RSI 50.9 · ADX 16.8 · dir +0.04",
-        "text": "Waiting on 1H: score -19.2. trend -0.55 · RSI 50.9 · ADX 16.8 · dir +0.04 "
+        "trigger": "Score +25.9 — trend +0.46 · RSI 56.9 · ADX 13.2 · dir +0.06",
+        "text": "Waiting on 1H: score +25.9. trend +0.46 · RSI 56.9 · ADX 13.2 · dir +0.06 "
       },
       "4H": {
-        "updatedAt": "2026-08-31T20:00:00.000Z",
+        "updatedAt": "2026-09-01T04:00:00.000Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
-        "score": -5.1,
+        "score": 8.3,
         "factors": {
-          "trend": -0.15,
-          "momentum": 0.05,
-          "direction": 0.04,
-          "structure": -0.11,
-          "rsi": 52.3,
-          "adx": 14.7
+          "trend": 0.15,
+          "momentum": 0.11,
+          "direction": 0,
+          "structure": -0.05,
+          "rsi": 55.5,
+          "adx": 13
         },
         "type": "WAIT",
         "entry": null,
@@ -50,53 +50,53 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "Score -5.1 — trend -0.15 · RSI 52.3 · ADX 14.7 · dir +0.04",
-        "text": "Waiting on 4H: score -5.1. trend -0.15 · RSI 52.3 · ADX 14.7 · dir +0.04 "
+        "trigger": "Score +8.3 — trend +0.15 · RSI 55.5 · ADX 13 · dir +0",
+        "text": "Waiting on 4H: score +8.3. trend +0.15 · RSI 55.5 · ADX 13 · dir +0 "
       },
       "1D": {
-        "updatedAt": "2026-08-31T00:00:00.000Z",
+        "updatedAt": "2026-09-01T00:00:00.000Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
-        "score": 56.8,
+        "score": 57.2,
         "factors": {
           "trend": 0.75,
-          "momentum": 0.33,
+          "momentum": 0.34,
           "direction": 0.6,
-          "structure": 0.35,
-          "rsi": 70.7,
-          "adx": 44
+          "structure": 0.37,
+          "rsi": 71.3,
+          "adx": 45.1
         },
         "type": "BUY",
-        "entry": 78533.5,
-        "stopLoss": 74353.26,
-        "tp1": 82713.74,
-        "tp2": 86893.98,
-        "tp3": 91074.22,
+        "entry": 78834.7,
+        "stopLoss": 74863.38,
+        "tp1": 82806.02,
+        "tp2": 86777.33,
+        "tp3": 90748.65,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "5.32%",
-        "trigger": "Buy setup: score +56.8 (trend +0.75 · RSI 70.7 · ADX 44 · dir +0.6)",
-        "text": "BUY 1D: entry $78,534. Stop $74,353 (5.32% risk). TP1 $82,714 (40%), TP2 $86,894 (40%), TP3 $91,074 (20%). Score +56.8. trend +0.75 · RSI 70.7 · ADX 44 · dir +0.6"
+        "risk": "5.04%",
+        "trigger": "Buy setup: score +57.2 (trend +0.75 · RSI 71.3 · ADX 45.1 · dir +0.6)",
+        "text": "BUY 1D: entry $78,835. Stop $74,863 (5.04% risk). TP1 $82,806 (40%), TP2 $86,777 (40%), TP3 $90,749 (20%). Score +57.2. trend +0.75 · RSI 71.3 · ADX 45.1 · dir +0.6"
       }
     }
   },
   "ETH": {
     "name": "Ethereum",
-    "updated": "2026-08-31",
+    "updated": "2026-09-01",
     "bias": "LONG",
-    "price": 2466.45,
+    "price": 2471.94,
     "timeframes": {
       "1H": {
-        "updatedAt": "2026-08-31T23:00:00.000Z",
+        "updatedAt": "2026-09-01T05:00:00.000Z",
         "tf": "1H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
-        "score": -19.1,
+        "score": 23.6,
         "factors": {
-          "trend": -0.55,
-          "momentum": 0.05,
-          "direction": 0.05,
-          "structure": 0.04,
-          "rsi": 52.5,
-          "adx": 18.6
+          "trend": 0.45,
+          "momentum": 0.09,
+          "direction": 0.09,
+          "structure": 0.08,
+          "rsi": 54.7,
+          "adx": 14.9
         },
         "type": "WAIT",
         "entry": null,
@@ -106,21 +106,21 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "Score -19.1 — trend -0.55 · RSI 52.5 · ADX 18.6 · dir +0.05",
-        "text": "Waiting on 1H: score -19.1. trend -0.55 · RSI 52.5 · ADX 18.6 · dir +0.05 "
+        "trigger": "Score +23.6 — trend +0.45 · RSI 54.7 · ADX 14.9 · dir +0.09",
+        "text": "Waiting on 1H: score +23.6. trend +0.45 · RSI 54.7 · ADX 14.9 · dir +0.09 "
       },
       "4H": {
-        "updatedAt": "2026-08-31T20:00:00.000Z",
+        "updatedAt": "2026-09-01T04:00:00.000Z",
         "tf": "4H",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
-        "score": -1.6,
+        "score": 10.4,
         "factors": {
-          "trend": -0.15,
-          "momentum": 0.04,
-          "direction": 0.15,
-          "structure": -0.05,
-          "rsi": 52,
-          "adx": 20.3
+          "trend": 0.15,
+          "momentum": 0.07,
+          "direction": 0.12,
+          "structure": -0.02,
+          "rsi": 53.3,
+          "adx": 19.8
         },
         "type": "WAIT",
         "entry": null,
@@ -130,32 +130,32 @@
         "tp3": null,
         "rr": "-",
         "risk": "-",
-        "trigger": "Score -1.6 — trend -0.15 · RSI 52 · ADX 20.3 · dir +0.15",
-        "text": "Waiting on 4H: score -1.6. trend -0.15 · RSI 52 · ADX 20.3 · dir +0.15 "
+        "trigger": "Score +10.4 — trend +0.15 · RSI 53.3 · ADX 19.8 · dir +0.12",
+        "text": "Waiting on 4H: score +10.4. trend +0.15 · RSI 53.3 · ADX 19.8 · dir +0.12 "
       },
       "1D": {
-        "updatedAt": "2026-08-31T00:00:00.000Z",
+        "updatedAt": "2026-09-01T00:00:00.000Z",
         "tf": "1D",
         "parts": "TP1 40% / TP2 40% / TP3 20%",
-        "score": 66.3,
+        "score": 66.5,
         "factors": {
           "trend": 1,
-          "momentum": 0.3,
+          "momentum": 0.31,
           "direction": 0.6,
-          "structure": 0.38,
-          "rsi": 68.9,
-          "adx": 46.3
+          "structure": 0.39,
+          "rsi": 69.2,
+          "adx": 47.3
         },
         "type": "BUY",
-        "entry": 2466.45,
-        "stopLoss": 2292.88,
-        "tp1": 2640.02,
-        "tp2": 2813.59,
-        "tp3": 2987.16,
+        "entry": 2471.94,
+        "stopLoss": 2307.23,
+        "tp1": 2636.65,
+        "tp2": 2801.35,
+        "tp3": 2966.06,
         "rr": "1:1 / 1:2 / 1:3",
-        "risk": "7.04%",
-        "trigger": "Buy setup: score +66.3 (trend +1 · RSI 68.9 · ADX 46.3 · dir +0.6)",
-        "text": "BUY 1D: entry $2,466.45. Stop $2,292.88 (7.04% risk). TP1 $2,640.02 (40%), TP2 $2,813.59 (40%), TP3 $2,987.16 (20%). Score +66.3. trend +1 · RSI 68.9 · ADX 46.3 · dir +0.6"
+        "risk": "6.66%",
+        "trigger": "Buy setup: score +66.5 (trend +1 · RSI 69.2 · ADX 47.3 · dir +0.6)",
+        "text": "BUY 1D: entry $2,471.94. Stop $2,307.23 (6.66% risk). TP1 $2,636.65 (40%), TP2 $2,801.35 (40%), TP3 $2,966.06 (20%). Score +66.5. trend +1 · RSI 69.2 · ADX 47.3 · dir +0.6"
       }
     }
   }
