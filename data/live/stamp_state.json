@@ -2,37 +2,37 @@
   "BTC_1H": {
     "barT": 1789099200000,
     "type": "SELL",
-    "entry": 77108.2,
+    "entry": 77141.3,
     "updatedAt": "2026-09-11T05:00:00.000Z"
   },
   "BTC_4H": {
     "barT": 1789084800000,
     "type": "BUY",
-    "entry": 77108.2,
+    "entry": 77141.3,
     "updatedAt": "2026-09-11T04:00:00.000Z"
   },
   "BTC_1D": {
     "barT": 1788998400000,
     "type": "BUY",
-    "entry": 77108.2,
+    "entry": 77141.3,
     "updatedAt": "2026-09-11T00:00:00.000Z"
   },
   "ETH_1H": {
     "barT": 1789099200000,
     "type": "SELL",
-    "entry": 2460,
+    "entry": 2462.57,
     "updatedAt": "2026-09-11T05:00:00.000Z"
   },
   "ETH_4H": {
     "barT": 1789084800000,
     "type": "BUY",
-    "entry": 2460,
+    "entry": 2462.57,
     "updatedAt": "2026-09-11T04:00:00.000Z"
   },
   "ETH_1D": {
     "barT": 1788998400000,
     "type": "BUY",
-    "entry": 2460,
+    "entry": 2462.57,
     "updatedAt": "2026-09-11T00:00:00.000Z"
   }
 }
