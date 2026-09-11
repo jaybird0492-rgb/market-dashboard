@@ -54,7 +54,13 @@ function getEquity() {
   }
   const calc = (eq) => {
     const total = eq.equity[eq.n - 1] - 1;
-    return { total: +total.toFixed(3), ann: +(annualized(total, eq.n) * 100).toFixed(1), maxDD: null };
+    let peak = eq.equity[0], maxDD = 0;
+    for (const v of eq.equity) {
+      if (v > peak) peak = v;
+      const dd = peak > 0 ? (v - peak) / peak : 0;
+      if (dd < maxDD) maxDD = dd;
+    }
+    return { total: +total.toFixed(3), ann: +(annualized(total, eq.n) * 100).toFixed(1), maxDD: +maxDD.toFixed(3) };
   };
   equityCache = {
     dates, plain: p, btc: b, eth: e,
