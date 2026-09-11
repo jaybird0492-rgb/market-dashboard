@@ -54,11 +54,12 @@ function renderSignals(data) {
     const tfCells = TF_ORDER.map((tf) => {
       const st = s.timeframes[tf];
       if (!st) return '';
-      const score = (st.score === null || st.score === undefined) ? '' : ' ' + (st.score >= 0 ? '+' : '') + st.score;
+      const conv = (st.score === null || st.score === undefined) ? '–' : ((st.score >= 0 ? '+' : '') + st.score);
       const entry = st.entry ? ' @ ' + fmtPrice(st.entry) : '';
       const age = signalAge(st.updatedAt);
       return '<div class="tf-cell"><span class="tf-label">' + tf + '</span>' +
-        '<span class="signal ' + setupClass(st.type) + '">' + st.type + score + '</span>' +
+        '<span class="signal ' + setupClass(st.type) + '">' + st.type + '</span>' +
+        '<span class="tf-conv">Conviction ' + conv + '</span>' +
         '<span class="tf-entry">' + entry + '</span>' +
         (age ? '<span class="tf-age">' + age + '</span>' : '') + '</div>';
     }).join('');
@@ -76,7 +77,7 @@ function renderSignals(data) {
     `;
     wrap.appendChild(card);
   }
-  document.getElementById('portfolioNote').textContent = 'Multi-factor signals (score = trend · RSI · ADX · breakout). 1D sets the bias — 1H/4H trade only aligned setups.';
+  document.getElementById('portfolioNote').textContent = 'Conviction runs -100 (max bearish) to +100 (max bullish); further from zero = stronger. Built from trend · RSI · ADX · breakout. 1D sets the bias — 1H/4H trade only aligned setups.';
 }
 
 let equityChart = null;
@@ -170,8 +171,8 @@ function renderSetups(data) {
     for (const tf of TFS) {
       const st = s.timeframes[tf];
       const cls = st.type === 'BUY' ? 'sig-long' : st.type === 'SELL' ? 'sig-out' : st.type === 'RANGE' ? 'sig-watch' : 'sig-none';
-      const score = (st.score === null || st.score === undefined) ? '' : ' ' + (st.score >= 0 ? '+' : '') + st.score;
-      html += `<td><span class="signal ${cls}">${st.type}${score}</span><br><span class="sub">${st.entry !== null ? fmtPrice(st.entry) + ' | SL ' + fmtPrice(st.stopLoss) : st.trigger}</span></td>`;
+      const conv = (st.score === null || st.score === undefined) ? '–' : ((st.score >= 0 ? '+' : '') + st.score);
+      html += `<td><span class="signal ${cls}">${st.type}</span><br><span class="sub">Conviction ${conv} · ${st.entry !== null ? fmtPrice(st.entry) + ' | SL ' + fmtPrice(st.stopLoss) : st.trigger}</span></td>`;
     }
     html += '</tr>';
   }
