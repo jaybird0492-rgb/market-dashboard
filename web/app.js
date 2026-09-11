@@ -114,10 +114,21 @@ function renderEquity(data) {
   row.innerHTML = '';
   for (const [key, label] of [['plain', '55/45 buy & hold'], ['btc', 'BTC only'], ['eth', 'ETH only']]) {
     const s = data.stats[key];
+    const dd = (s.maxDD === null || s.maxDD === undefined) ? '–' : fmtSignedPct(s.maxDD);
     const el = document.createElement('div');
     el.className = 'stat';
-    el.innerHTML = `<b>${label}</b><br>CAGR ${s.ann}%<br>Total ${fmtSignedPct(s.total)}`;
+    el.innerHTML = `<b>${label}</b><br>CAGR ${s.ann}%<br>Total ${fmtSignedPct(s.total)}<br>Worst fall ${dd}`;
     row.appendChild(el);
+  }
+  const note = document.getElementById('perfNote');
+  if (note && data.dates && data.plain) {
+    let peakI = 0;
+    for (let i = 1; i < data.plain.length; i++) if (data.plain[i] > data.plain[peakI]) peakI = i;
+    const dd = (k) => (data.stats[k] && data.stats[k].maxDD != null) ? fmtSignedPct(data.stats[k].maxDD) : '–';
+    note.textContent = 'How to read this: every line starts at 0% — your profit or loss if you bought once at the start and never sold. ' +
+      'The story is the ' + fmtRangeMonth(data.dates[peakI]) + ' peak and the fall after it: the 55/45 mix fell as far as ' + dd('plain') +
+      ', BTC ' + dd('btc') + ', ETH ' + dd('eth') + '. ' +
+      'This is background context, not a grade of the live signals above — those are short-term trades, this is two years of sitting still.';
   }
 }
 
