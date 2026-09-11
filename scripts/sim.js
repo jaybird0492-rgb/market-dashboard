@@ -1,4 +1,4 @@
-const { RAW, loadCsv, sma, annualized } = require('./lib');
+const { RAW, loadCsv, annualized } = require('./lib');
 const path = require('path');
 
 const ASSETS = {
@@ -19,7 +19,7 @@ function loadAligned() {
   }
   const dates = [...allDates].sort();
   if (!dates.length) {
-    CACHE = { idx: [], rets: {}, O: {}, n: 0 };
+    CACHE = { idx: [], rets: {}, n: 0 };
     return CACHE;
   }
   for (const [sym, file] of Object.entries(ASSETS)) {
@@ -49,34 +49,12 @@ function loadAligned() {
     }
     rets[s] = arr;
   }
-  const bySym = {};
-  for (const s of Object.keys(ASSETS)) bySym[s] = loadCsv(path.join(RAW, ASSETS[s])).filter((r) => r.close !== null);
-  const O = {};
-  for (const s of ['BTC', 'ETH']) {
-    const c = closes(bySym[s]);
-    const ma = sma(c, 20);
-    const pos = [];
-    let inPos = 0;
-    for (let i = 0; i < c.length; i++) {
-      let signal = inPos;
-      if (i >= 252) {
-        const win = c.slice(i - 252, i);
-        const month = parseInt(bySym[s][i].timestamp.slice(5, 7), 10);
-        if (!inPos && c[i] > Math.max(...win) && month !== 6) signal = 1;
-        if (inPos && (c[i] < ma[i] || month === 6)) signal = 0;
-      }
-      pos.push(signal);
-      inPos = signal;
-    }
-    const m = new Map(bySym[s].map((r, i) => [r.timestamp.slice(0, 10), pos[i]]));
-    O[s] = idx.map((d) => m.get(d) ?? 0);
-  }
-  CACHE = { idx, rets, O, n };
+  CACHE = { idx, rets, n };
   return CACHE;
 }
 
-function computeEquity(weights, overlays) {
-  const { idx, rets, O, n } = loadAligned();
+function computeEquity(weights) {
+  const { idx, rets, n } = loadAligned();
   if (n === 0) return { equity: [], dates: [], n: 0 };
   const equity = new Array(n).fill(1);
   let w = { ...weights };
@@ -86,16 +64,11 @@ function computeEquity(weights, overlays) {
     if (month !== prevMonth) w = { ...weights };
     let r = 0;
     for (const s of Object.keys(weights)) {
-      const on = overlays ? O[s][i - 1] : 1;
-      r += w[s] * on * rets[s][i];
+      r += w[s] * rets[s][i];
     }
     equity[i] = equity[i - 1] * (1 + r);
   }
   return { equity, dates: idx, n };
-}
-
-function closes(rows) {
-  return rows.map((r) => r.close);
 }
 
 function seasonality() {

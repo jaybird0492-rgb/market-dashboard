@@ -26,8 +26,6 @@ jobs:
           node-version: 22
       - name: Fetch market data
         run: node scripts/fetch.js
-      - name: Compute strategy signals
-        run: node scripts/tracker.js
       - name: Compute trade setups
         run: node scripts/setups.js
       - name: Precompute static page data

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { computeSignals } = require('./tracker');
 const { computeEquity, seasonality, annualized } = require('./sim');
 const { getAsset } = require('./ta');
 const { computeAll, loadLog } = require('./setups');
@@ -15,9 +14,9 @@ function write(name, obj) {
 }
 
 function buildEquity() {
-  const plain = computeEquity({ BTC: 0.55, ETH: 0.45 }, false);
-  const btc = computeEquity({ BTC: 1 }, false);
-  const eth = computeEquity({ ETH: 1 }, false);
+  const plain = computeEquity({ BTC: 0.55, ETH: 0.45 });
+  const btc = computeEquity({ BTC: 1 });
+  const eth = computeEquity({ ETH: 1 });
   const step = 3;
   const dates = [], p = [], b = [], e = [];
   for (let i = 0; i < plain.n; i += step) {
@@ -48,7 +47,6 @@ function buildEquity() {
 }
 
 function buildAll() {
-  write('signals.json', computeSignals());
   write('equity.json', buildEquity());
   const setups = computeAll();
   write('setups.json', { updatedAt: new Date().toISOString(), setups: setups.setups, logs: setups.logs });

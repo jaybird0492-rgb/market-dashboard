@@ -19,6 +19,17 @@ function fmtPrice(v) {
   return '$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 });
 }
 
+function signalAge(iso) {
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return '';
+  const mins = Math.max(0, Math.round((Date.now() - t) / 60000));
+  if (mins < 1) return 'just now';
+  if (mins < 60) return mins + 'm ago';
+  const hrs = Math.round(mins / 60);
+  if (hrs < 48) return hrs + 'h ago';
+  return Math.round(hrs / 24) + 'd ago';
+}
+
 const TF_ORDER = ['1H', '4H', '1D'];
 
 function setupClass(type) {
@@ -43,10 +54,13 @@ function renderSignals(data) {
     const tfCells = TF_ORDER.map((tf) => {
       const st = s.timeframes[tf];
       if (!st) return '';
+      const score = (st.score === null || st.score === undefined) ? '' : ' ' + (st.score >= 0 ? '+' : '') + st.score;
       const entry = st.entry ? ' @ ' + fmtPrice(st.entry) : '';
+      const age = signalAge(st.updatedAt);
       return '<div class="tf-cell"><span class="tf-label">' + tf + '</span>' +
-        '<span class="signal ' + setupClass(st.type) + '">' + st.type + '</span>' +
-        '<span class="tf-entry">' + entry + '</span></div>';
+        '<span class="signal ' + setupClass(st.type) + '">' + st.type + score + '</span>' +
+        '<span class="tf-entry">' + entry + '</span>' +
+        (age ? '<span class="tf-age">' + age + '</span>' : '') + '</div>';
     }).join('');
 
     const card = document.createElement('a');
@@ -156,8 +170,8 @@ function renderSetups(data) {
     for (const tf of TFS) {
       const st = s.timeframes[tf];
       const cls = st.type === 'BUY' ? 'sig-long' : st.type === 'SELL' ? 'sig-out' : st.type === 'RANGE' ? 'sig-watch' : 'sig-none';
-      const entry = st.entry !== null ? ' @ ' + fmtPrice(st.entry) : '';
-      html += `<td><span class="signal ${cls}">${st.type}</span><br><span class="sub">${st.entry !== null ? fmtPrice(st.entry) + ' | SL ' + fmtPrice(st.stopLoss) : st.trigger}</span></td>`;
+      const score = (st.score === null || st.score === undefined) ? '' : ' ' + (st.score >= 0 ? '+' : '') + st.score;
+      html += `<td><span class="signal ${cls}">${st.type}${score}</span><br><span class="sub">${st.entry !== null ? fmtPrice(st.entry) + ' | SL ' + fmtPrice(st.stopLoss) : st.trigger}</span></td>`;
     }
     html += '</tr>';
   }

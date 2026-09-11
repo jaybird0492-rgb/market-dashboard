@@ -1,7 +1,6 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { computeSignals } = require('./scripts/tracker');
 const { computeEquity, seasonality, annualized } = require('./scripts/sim');
 const { getAsset } = require('./scripts/ta');
 const { computeAll, loadLog } = require('./scripts/setups');
@@ -21,25 +20,15 @@ const MIME = {
   '.ico': 'image/x-icon',
 };
 
-let signalsCache = null;
-let signalsCacheTime = 0;
 let equityCache = null;
 const assetCache = {};
 let setupsCache = null;
 
-function getSignals() {
-  const now = Date.now();
-  if (signalsCache && now - signalsCacheTime < 60000) return signalsCache;
-  signalsCache = computeSignals();
-  signalsCacheTime = now;
-  return signalsCache;
-}
-
 function getEquity() {
   if (equityCache) return equityCache;
-  const plain = computeEquity({ BTC: 0.55, ETH: 0.45 }, false);
-  const btc = computeEquity({ BTC: 1 }, false);
-  const eth = computeEquity({ ETH: 1 }, false);
+  const plain = computeEquity({ BTC: 0.55, ETH: 0.45 });
+  const btc = computeEquity({ BTC: 1 });
+  const eth = computeEquity({ ETH: 1 });
   // sample every 3rd point to keep payload small
   const step = 3;
   const dates = [];
@@ -78,12 +67,6 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const pathname = url.pathname;
 
-  if (pathname === '/api/signals') {
-    const data = getSignals();
-    res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
-    res.end(JSON.stringify(data));
-    return;
-  }
   if (pathname === '/api/equity') {
     const data = getEquity();
     res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
@@ -91,12 +74,10 @@ const server = http.createServer((req, res) => {
     return;
   }
   if (pathname === '/api/refresh') {
-    signalsCache = null;
     equityCache = null;
     setupsCache = null;
-    const data = getSignals();
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ ok: true, updatedAt: data.updatedAt }));
+    res.end(JSON.stringify({ ok: true, updatedAt: new Date().toISOString() }));
     return;
   }
   if (pathname === '/api/setups') {
@@ -141,5 +122,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Dashboard running: http://localhost:${PORT}`);
-  console.log('Signals pre-warmed:', getSignals().updatedAt);
 });
