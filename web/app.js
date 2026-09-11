@@ -67,7 +67,24 @@ function renderSignals(data) {
 
 let equityChart = null;
 
+const CHART_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function fmtRangeMonth(ymd) {
+  if (!ymd) return '';
+  const p = ymd.split('-');
+  return CHART_MONTHS[+p[1] - 1] + ' ' + p[0];
+}
+
+function fmtSignedPct(frac) {
+  const v = frac * 100;
+  return (v >= 0 ? '+' : '') + v.toFixed(0) + '%';
+}
+
 function renderEquity(data) {
+  const title = document.getElementById('perfTitle');
+  if (title && data.from && data.to) {
+    title.textContent = 'Buy-and-hold baselines (' + fmtRangeMonth(data.from) + ' – ' + fmtRangeMonth(data.to) + ')';
+  }
   const ctx = document.getElementById('equityChart');
   if (equityChart) equityChart.destroy();
   equityChart = new Chart(ctx, {
@@ -75,8 +92,7 @@ function renderEquity(data) {
     data: {
       labels: data.dates,
       datasets: [
-        { label: 'Final strategy (+rules)', data: data.final, borderColor: '#22c55e', borderWidth: 2, pointRadius: 0, tension: 0.1 },
-        { label: 'No rules', data: data.plain, borderColor: '#f59e0b', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
+        { label: '55/45 buy & hold', data: data.plain, borderColor: '#f59e0b', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
         { label: 'BTC only', data: data.btc, borderColor: '#f7931a', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
         { label: 'ETH only', data: data.eth, borderColor: '#627eea', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
       ],
@@ -86,21 +102,21 @@ function renderEquity(data) {
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { labels: { color: '#e2e8f0' } },
-        tooltip: { callbacks: { label: (c) => c.dataset.label + ': +' + (c.parsed.y * 100).toFixed(0) + '%' } },
+        tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + fmtSignedPct(c.parsed.y) } },
       },
       scales: {
         x: { ticks: { color: '#94a3b8', maxTicksLimit: 10 }, grid: { color: '#1e293b' } },
-        y: { ticks: { color: '#94a3b8', callback: (v) => '+' + Math.round(v * 100) + '%' }, grid: { color: '#1e293b' } },
+        y: { ticks: { color: '#94a3b8', callback: (v) => fmtSignedPct(v) }, grid: { color: '#1e293b' } },
       },
     },
   });
   const row = document.getElementById('statsRow');
   row.innerHTML = '';
-  for (const [key, label] of [['final', 'Final strategy'], ['plain', 'No rules'], ['btc', 'BTC only'], ['eth', 'ETH only']]) {
+  for (const [key, label] of [['plain', '55/45 buy & hold'], ['btc', 'BTC only'], ['eth', 'ETH only']]) {
     const s = data.stats[key];
     const el = document.createElement('div');
     el.className = 'stat';
-    el.innerHTML = `<b>${label}</b><br>CAGR ${s.ann}%<br>Total +${(s.total * 100).toFixed(0)}%`;
+    el.innerHTML = `<b>${label}</b><br>CAGR ${s.ann}%<br>Total ${fmtSignedPct(s.total)}`;
     row.appendChild(el);
   }
 }

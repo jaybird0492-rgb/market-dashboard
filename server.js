@@ -37,20 +37,17 @@ function getSignals() {
 
 function getEquity() {
   if (equityCache) return equityCache;
-  const final = computeEquity({ BTC: 0.55, ETH: 0.45 }, true);
   const plain = computeEquity({ BTC: 0.55, ETH: 0.45 }, false);
   const btc = computeEquity({ BTC: 1 }, false);
   const eth = computeEquity({ ETH: 1 }, false);
   // sample every 3rd point to keep payload small
   const step = 3;
   const dates = [];
-  const f = [];
   const p = [];
   const b = [];
   const e = [];
-  for (let i = 0; i < final.n; i += step) {
-    dates.push(final.dates[i]);
-    f.push(+(final.equity[i] - 1).toFixed(4));
+  for (let i = 0; i < plain.n; i += step) {
+    dates.push(plain.dates[i]);
     p.push(+(plain.equity[i] - 1).toFixed(4));
     b.push(+(btc.equity[i] - 1).toFixed(4));
     e.push(+(eth.equity[i] - 1).toFixed(4));
@@ -60,9 +57,11 @@ function getEquity() {
     return { total: +total.toFixed(3), ann: +(annualized(total, eq.n) * 100).toFixed(1), maxDD: null };
   };
   equityCache = {
-    dates, final: f, plain: p, btc: b, eth: e,
+    dates, plain: p, btc: b, eth: e,
+    from: plain.dates[0] || null,
+    to: plain.dates[plain.n - 1] || null,
     stats: {
-      final: calc(final), plain: calc(plain), btc: calc(btc), eth: calc(eth),
+      plain: calc(plain), btc: calc(btc), eth: calc(eth),
     },
     seasonality: seasonality(),
   };
