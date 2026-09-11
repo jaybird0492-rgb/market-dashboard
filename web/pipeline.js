@@ -101,7 +101,16 @@ function renderPipeline(setups, logs) {
       html += '<div class="pipe-tfs">';
       for (const tf of TFS) {
         const st = s.timeframes[tf];
-        if (!st) continue;
+        if (!st) {
+          html += '<div class="pipe-tf status-none">';
+          html += '<div class="pipe-tf-head">';
+          html += '<span class="pipe-tf-label">' + tf + '</span>';
+          html += '<span class="pipe-status pipe-none">NO DATA</span>';
+          html += '</div>';
+          html += '<div class="pipe-wait">No signal published this hour — check back next update.</div>';
+          html += '</div>';
+          continue;
+        }
         const type = st.type;
         const status = statusFor(type);
         const log = (logs && logs[a.sym] && logs[a.sym][tf]) || [];

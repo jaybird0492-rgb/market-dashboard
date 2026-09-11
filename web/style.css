@@ -131,7 +131,7 @@ canvas#chart { width: 100%; height: 400px; display: block; }
 .pipe-sym:hover { color: #93c5fd; }
 .pipe-name { color: #94a3b8; font-size: .85rem; }
 
-.pipe-tfs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.pipe-tfs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
 @media (max-width: 700px) { .pipe-tfs { grid-template-columns: repeat(2, 1fr); } }
 
 .pipe-tf { padding: 12px; border-right: 1px solid #334155; }
