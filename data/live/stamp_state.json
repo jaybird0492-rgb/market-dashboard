@@ -2,19 +2,19 @@
   "BTC_1H": {
     "barT": 1790172000000,
     "type": "BUY",
-    "entry": 84514.2,
+    "entry": 84537.4,
     "updatedAt": "2026-09-23T15:00:00.000Z"
   },
   "BTC_4H": {
     "barT": 1790150400000,
     "type": "BUY",
-    "entry": 84514.2,
+    "entry": 84525.1,
     "updatedAt": "2026-09-23T12:00:00.000Z"
   },
   "BTC_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 84514.2,
+    "entry": 84525.2,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "ETH_1H": {
@@ -26,31 +26,31 @@
   "ETH_4H": {
     "barT": 1790150400000,
     "type": "BUY",
-    "entry": 2675.53,
+    "entry": 2674.2,
     "updatedAt": "2026-09-23T12:00:00.000Z"
   },
   "ETH_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 2675.97,
+    "entry": 2674.2,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "SOL_1H": {
     "barT": 1790172000000,
     "type": "BUY",
-    "entry": 115.27,
+    "entry": 115.06,
     "updatedAt": "2026-09-23T15:00:00.000Z"
   },
   "SOL_4H": {
     "barT": 1790150400000,
     "type": "BUY",
-    "entry": 115.27,
+    "entry": 115.05,
     "updatedAt": "2026-09-23T12:00:00.000Z"
   },
   "SOL_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 115.27,
+    "entry": 115.05,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "XRP_1H": {
@@ -80,31 +80,31 @@
   "BNB_4H": {
     "barT": 1790150400000,
     "type": "BUY",
-    "entry": 767.22,
+    "entry": 767.16,
     "updatedAt": "2026-09-23T12:00:00.000Z"
   },
   "BNB_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 767.22,
+    "entry": 767.16,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "HYPE_1H": {
     "barT": 1790172000000,
     "type": "BUY",
-    "entry": 94.87,
+    "entry": 94.93,
     "updatedAt": "2026-09-23T15:00:00.000Z"
   },
   "HYPE_4H": {
     "barT": 1790150400000,
     "type": "BUY",
-    "entry": 94.87,
+    "entry": 94.93,
     "updatedAt": "2026-09-23T12:00:00.000Z"
   },
   "HYPE_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 94.87,
+    "entry": 94.93,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 }
