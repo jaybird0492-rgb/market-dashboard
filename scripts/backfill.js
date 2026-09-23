@@ -6,7 +6,7 @@ const { loadLog } = require('./setups');
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const RAW = path.join(__dirname, '..', 'data', 'raw');
 const LOG_FILE = path.join(LIVE, 'setup_log.json');
-const SYMBOLS = ['BTC', 'ETH'];
+const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
 const HOUR = 3600e3;
 
 const log = loadLog();

@@ -34,7 +34,7 @@ function saveCsv(file, rows) {
 // Kraken public OHLC — free, no API key, 721 candles max per request
 // Interval: 1=1min, 5=5min, 15=15min, 30=30min, 60=1h, 240=4h, 1440=1d
 const KRAKEN_INTERVALS = { '1h': 60, '4h': 240, '1d': 1440 };
-const KRAKEN_PAIRS = { BTC: 'XXBTZUSD', ETH: 'XETHZUSD' };
+const KRAKEN_PAIRS = { BTC: 'XXBTZUSD', ETH: 'XETHZUSD', SOL: 'SOLUSD', XRP: 'XRPUSD', BNB: 'BNBUSD', HYPE: 'HYPEUSD' };
 
 async function fetchKraken(krakenPair, interval, retries = 3) {
   const intCode = KRAKEN_INTERVALS[interval];

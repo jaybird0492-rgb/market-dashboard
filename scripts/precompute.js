@@ -6,7 +6,7 @@ const { computeAll, loadLog } = require('./setups');
 const { evaluateAll } = require('./setup_backtest');
 
 const WEB = path.join(__dirname, '..', 'web', 'data');
-const SYMBOLS = ['BTC', 'ETH'];
+const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
 
 function write(name, obj) {
   fs.mkdirSync(WEB, { recursive: true });

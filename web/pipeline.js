@@ -2,6 +2,10 @@ const TFS = ['1H', '4H', '1D'];
 const ASSETS = [
   { sym: 'BTC', name: 'Bitcoin', group: 'crypto' },
   { sym: 'ETH', name: 'Ethereum', group: 'crypto' },
+  { sym: 'SOL', name: 'Solana', group: 'crypto' },
+  { sym: 'XRP', name: 'XRP', group: 'crypto' },
+  { sym: 'BNB', name: 'BNB', group: 'crypto' },
+  { sym: 'HYPE', name: 'Hyperliquid', group: 'crypto' },
 ];
 
 function fmtPrice(v) {
@@ -81,11 +85,12 @@ function notifyBrowser(title, body) {
 
 function renderPipeline(setups, logs) {
   const wrap = document.getElementById('pipeline');
-  const groups = { stocks: 'Stocks', crypto: 'Crypto' };
+  const groups = { crypto: 'Crypto' };
   let html = '';
 
   for (const [grp, grpLabel] of Object.entries(groups)) {
     const assets = ASSETS.filter((a) => a.group === grp);
+    if (!assets.length) continue;
     html += '<div class="pipe-group"><h2>' + grpLabel + '</h2>';
 
     for (const a of assets) {
@@ -175,10 +180,7 @@ let changeLog = [];
 
 async function init() {
   try {
-    const [setups, logs] = await Promise.all([
-      loadJson('/api/setups', 'data/setups.json'),
-      loadJson('/api/setups', 'data/setups.json').catch(() => null),
-    ]);
+    const setups = await loadJson('/api/setups', 'data/setups.json');
 
     document.getElementById('updatedAt').textContent =
       'Updated: ' + new Date(setups.updatedAt || Date.now()).toLocaleString('en-AU', { timeZone: 'Australia/Perth', hour: '2-digit', minute: '2-digit', hour12: false }) + ' AWST';

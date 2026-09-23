@@ -5,7 +5,7 @@ const { getAsset } = require('./ta');
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const LOG_FILE = path.join(LIVE, 'setup_log.json');
 const STATE_FILE = path.join(LIVE, 'stamp_state.json');
-const SYMBOLS = ['BTC', 'ETH'];
+const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
 const TFS = ['1H', '4H', '1D'];
 
 const HOLD_BARS = { '1H': 3, '4H': 3, '1D': 3 };

@@ -1,7 +1,7 @@
 const params = new URLSearchParams(location.search);
 const SYMBOL = (params.get('symbol') || 'BTC').toUpperCase();
 const TF_ORDER = ['1H', '4H', '1D'];
-const TV_SYMBOL = { BTC: 'BITSTAMP:BTCUSD', ETH: 'BITSTAMP:ETHUSD' }[SYMBOL] || 'BITSTAMP:BTCUSD';
+const TV_SYMBOL = { BTC: 'BITSTAMP:BTCUSD', ETH: 'BITSTAMP:ETHUSD', SOL: 'COINBASE:SOLUSD', XRP: 'COINBASE:XRPUSD', BNB: 'BINANCE:BNBUSD', HYPE: 'HYPERLIQUID:HYPEUSD' }[SYMBOL] || 'BITSTAMP:BTCUSD';
 const TV_INTERVAL = { '1H': '60', '4H': '240', '1D': 'D' };
 
 let asset = null;

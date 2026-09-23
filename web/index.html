@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market Strategy Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +19,7 @@
 <section class="rules">
   <h2>Strategy rules</h2>
   <ul>
-    <li><b>Portfolio:</b> BTC 55% / ETH 45%, rebalanced monthly</li>
+    <li><b>Assets:</b> BTC, ETH, SOL, XRP, BNB, HYPE — same signal engine on each</li>
     <li><b>Signal engine:</b> multi-factor score (trend, RSI momentum, ADX direction, range breakout) on 1H / 4H / 1D</li>
     <li><b>Confluence:</b> 1D sets the bias; 1H/4H trades against it are flagged (reduce size)</li>
     <li><b>Entry:</b> ATR-adaptive stop (1R) and targets at 1R / 2R / 3R</li>
@@ -32,23 +31,7 @@
   <h2>Live signals</h2>
   <div id="signalCards" class="cards"></div>
   <p id="portfolioNote" class="note"></p>
-</section>
-
-<section>
-  <h2>Trade setups — all assets, all timeframes</h2>
-  <div class="table-wrap"><table id="setupsTable"></table></div>
-</section>
-
-<section>
-  <h2 id="perfTitle">Buy-and-hold baselines</h2>
-  <div class="chart-wrap"><canvas id="equityChart"></canvas></div>
-  <div id="statsRow" class="stats-row"></div>
-  <p id="perfNote" class="note"></p>
-</section>
-
-<section>
-  <h2>Monthly seasonality (avg return % per calendar month)</h2>
-  <div class="table-wrap"><table id="seasonalityTable"></table></div>
+  <p class="note">Full entry / stop / targets per timeframe live on the <a href="pipeline.html" class="nav-link">Pipeline</a> page. Track record per asset: open a card.</p>
 </section>
 
 <script src="app.js"></script>

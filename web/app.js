@@ -12,8 +12,6 @@ async function loadJson(apiUrl, staticPath) {
   }
 }
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
 function fmtPrice(v) {
   if (typeof v !== 'number') return v;
   return '$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 });
@@ -73,122 +71,17 @@ function renderSignals(data) {
       <div class="signal ${biasCls}">${s.bias} bias — ${biasLabel(s.bias)}</div>
       <div class="tf-row">${tfCells}</div>
       <div class="detail">${buys} BUY / ${sells} SELL across ${TF_ORDER.length} timeframes</div>
-      <div class="meta">click for 1H/4H/1D charts</div>
+      <div class="meta">click for 1H/4H/1D charts + track record</div>
     `;
     wrap.appendChild(card);
   }
   document.getElementById('portfolioNote').textContent = 'Conviction runs -100 (max bearish) to +100 (max bullish); further from zero = stronger. Built from trend · RSI · ADX · breakout. 1D sets the bias — 1H/4H trade only aligned setups.';
 }
 
-let equityChart = null;
-
-const CHART_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-function fmtRangeMonth(ymd) {
-  if (!ymd) return '';
-  const p = ymd.split('-');
-  return CHART_MONTHS[+p[1] - 1] + ' ' + p[0];
-}
-
-function fmtSignedPct(frac) {
-  const v = frac * 100;
-  return (v >= 0 ? '+' : '') + v.toFixed(0) + '%';
-}
-
-function renderEquity(data) {
-  const title = document.getElementById('perfTitle');
-  if (title && data.from && data.to) {
-    title.textContent = 'Buy-and-hold baselines (' + fmtRangeMonth(data.from) + ' – ' + fmtRangeMonth(data.to) + ')';
-  }
-  const ctx = document.getElementById('equityChart');
-  if (equityChart) equityChart.destroy();
-  equityChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: data.dates,
-      datasets: [
-        { label: '55/45 buy & hold', data: data.plain, borderColor: '#f59e0b', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
-        { label: 'BTC only', data: data.btc, borderColor: '#f7931a', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
-        { label: 'ETH only', data: data.eth, borderColor: '#627eea', borderWidth: 1.5, pointRadius: 0, tension: 0.1 },
-      ],
-    },
-    options: {
-      responsive: true,
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        legend: { labels: { color: '#e2e8f0' } },
-        tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + fmtSignedPct(c.parsed.y) } },
-      },
-      scales: {
-        x: { ticks: { color: '#94a3b8', maxTicksLimit: 10 }, grid: { color: '#1e293b' } },
-        y: { ticks: { color: '#94a3b8', callback: (v) => fmtSignedPct(v) }, grid: { color: '#1e293b' } },
-      },
-    },
-  });
-  const row = document.getElementById('statsRow');
-  row.innerHTML = '';
-  for (const [key, label] of [['plain', '55/45 buy & hold'], ['btc', 'BTC only'], ['eth', 'ETH only']]) {
-    const s = data.stats[key];
-    const dd = (s.maxDD === null || s.maxDD === undefined) ? '–' : fmtSignedPct(s.maxDD);
-    const el = document.createElement('div');
-    el.className = 'stat';
-    el.innerHTML = `<b>${label}</b><br>CAGR ${s.ann}%<br>Total ${fmtSignedPct(s.total)}<br>Worst fall ${dd}`;
-    row.appendChild(el);
-  }
-  const note = document.getElementById('perfNote');
-  if (note && data.dates && data.plain) {
-    let peakI = 0;
-    for (let i = 1; i < data.plain.length; i++) if (data.plain[i] > data.plain[peakI]) peakI = i;
-    const dd = (k) => (data.stats[k] && data.stats[k].maxDD != null) ? fmtSignedPct(data.stats[k].maxDD) : '–';
-    note.textContent = 'How to read this: every line starts at 0% — your profit or loss if you bought once at the start and never sold. ' +
-      'The story is the ' + fmtRangeMonth(data.dates[peakI]) + ' peak and the fall after it: the 55/45 mix fell as far as ' + dd('plain') +
-      ', BTC ' + dd('btc') + ', ETH ' + dd('eth') + '. ' +
-      'This is background context, not a grade of the live signals above — those are short-term trades, this is two years of sitting still.';
-  }
-}
-
-function renderSeasonality(data) {
-  const table = document.getElementById('seasonalityTable');
-  let html = '<tr><th>Asset</th>' + MONTHS.map((m) => '<th>' + m + '</th>').join('') + '</tr>';
-  for (const [sym, months] of Object.entries(data.seasonality)) {
-    html += '<tr><td class="sym-cell">' + sym + '</td>';
-    for (const v of months) {
-      if (v === null) { html += '<td>-</td>'; continue; }
-      const cls = v > 2 ? 'pos-strong' : v > 0 ? 'pos' : v > -2 ? 'neg' : 'neg-strong';
-      html += '<td class="' + cls + '">' + (v > 0 ? '+' : '') + v.toFixed(1) + '</td>';
-    }
-    html += '</tr>';
-  }
-  table.innerHTML = html;
-}
-
-function renderSetups(data) {
-  const table = document.getElementById('setupsTable');
-  const TFS = ['1H', '4H', '1D'];
-  let html = '<tr><th>Asset</th>' + TFS.map((t) => '<th>' + t + '</th>').join('') + '</tr>';
-  for (const [sym, s] of Object.entries(data.setups)) {
-    html += `<tr><td class="sym-cell"><a href="asset.html?symbol=${sym}">${sym}</a></td>`;
-    for (const tf of TFS) {
-      const st = s.timeframes[tf];
-      const cls = st.type === 'BUY' ? 'sig-long' : st.type === 'SELL' ? 'sig-out' : st.type === 'RANGE' ? 'sig-watch' : 'sig-none';
-      const conv = (st.score === null || st.score === undefined) ? '–' : ((st.score >= 0 ? '+' : '') + st.score);
-      html += `<td><span class="signal ${cls}">${st.type}</span><br><span class="sub">Conviction ${conv} · ${st.entry !== null ? fmtPrice(st.entry) + ' | SL ' + fmtPrice(st.stopLoss) : st.trigger}</span></td>`;
-    }
-    html += '</tr>';
-  }
-  table.innerHTML = html;
-}
-
 async function init() {
   try {
-    const [setups, equity] = await Promise.all([
-      loadJson('/api/setups', 'data/setups.json'),
-      loadJson('/api/equity', 'data/equity.json'),
-    ]);
+    const setups = await loadJson('/api/setups', 'data/setups.json');
     renderSignals(setups);
-    renderEquity(equity);
-    renderSeasonality(equity);
-    renderSetups(setups);
   } catch (e) {
     document.getElementById('updatedAt').textContent = 'Error loading: ' + e.message;
   }

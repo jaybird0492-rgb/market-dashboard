@@ -248,10 +248,12 @@ function computeSetup(t, bias, bars) {
 
 // ---------- Asset assembly ----------
 const DAILY_FILES = {
-  BTC: 'BTC_1d.csv', ETH: 'ETH_1d.csv',
+  BTC: 'BTC_1d.csv', ETH: 'ETH_1d.csv', SOL: 'SOL_1d.csv',
+  XRP: 'XRP_1d.csv', BNB: 'BNB_1d.csv', HYPE: 'HYPE_1d.csv',
 };
 const NAMES = {
-  BTC: 'Bitcoin', ETH: 'Ethereum',
+  BTC: 'Bitcoin', ETH: 'Ethereum', SOL: 'Solana',
+  XRP: 'XRP', BNB: 'BNB', HYPE: 'Hyperliquid',
 };
 const HOUR = 3600e3;
 const DAY = 24 * HOUR;
