@@ -1,110 +1,110 @@
 {
   "BTC_1H": {
-    "barT": 1790172000000,
-    "type": "BUY",
-    "entry": 84629.7,
-    "updatedAt": "2026-09-23T15:00:00.000Z"
+    "barT": 1790175600000,
+    "type": "WAIT",
+    "entry": null,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "BTC_4H": {
-    "barT": 1790150400000,
+    "barT": 1790164800000,
     "type": "BUY",
-    "entry": 84629.8,
-    "updatedAt": "2026-09-23T12:00:00.000Z"
+    "entry": 83925.3,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "BTC_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 84629.8,
+    "entry": 83925.3,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "ETH_1H": {
-    "barT": 1790172000000,
+    "barT": 1790175600000,
     "type": "WAIT",
     "entry": null,
-    "updatedAt": "2026-09-23T15:00:00.000Z"
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "ETH_4H": {
-    "barT": 1790150400000,
+    "barT": 1790164800000,
     "type": "BUY",
-    "entry": 2678.42,
-    "updatedAt": "2026-09-23T12:00:00.000Z"
+    "entry": 2656.3,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "ETH_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 2678.81,
+    "entry": 2656.05,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "SOL_1H": {
-    "barT": 1790172000000,
-    "type": "BUY",
-    "entry": 115.62,
-    "updatedAt": "2026-09-23T15:00:00.000Z"
+    "barT": 1790175600000,
+    "type": "WAIT",
+    "entry": null,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "SOL_4H": {
-    "barT": 1790150400000,
+    "barT": 1790164800000,
     "type": "BUY",
-    "entry": 115.62,
-    "updatedAt": "2026-09-23T12:00:00.000Z"
+    "entry": 114.03,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "SOL_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 115.63,
+    "entry": 114.03,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "XRP_1H": {
-    "barT": 1790172000000,
+    "barT": 1790175600000,
     "type": "BUY",
-    "entry": 1.53,
-    "updatedAt": "2026-09-23T15:00:00.000Z"
+    "entry": 1.49,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "XRP_4H": {
-    "barT": 1790150400000,
+    "barT": 1790164800000,
     "type": "BUY",
-    "entry": 1.53,
-    "updatedAt": "2026-09-23T12:00:00.000Z"
+    "entry": 1.49,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "XRP_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 1.53,
+    "entry": 1.49,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "BNB_1H": {
-    "barT": 1790172000000,
+    "barT": 1790175600000,
     "type": "WAIT",
     "entry": null,
-    "updatedAt": "2026-09-23T15:00:00.000Z"
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "BNB_4H": {
-    "barT": 1790150400000,
+    "barT": 1790164800000,
     "type": "BUY",
-    "entry": 768.13,
-    "updatedAt": "2026-09-23T12:00:00.000Z"
+    "entry": 763.61,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "BNB_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 768.13,
+    "entry": 763.61,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   },
   "HYPE_1H": {
-    "barT": 1790172000000,
-    "type": "BUY",
-    "entry": 94.93,
-    "updatedAt": "2026-09-23T15:00:00.000Z"
+    "barT": 1790175600000,
+    "type": "WAIT",
+    "entry": null,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "HYPE_4H": {
-    "barT": 1790150400000,
+    "barT": 1790164800000,
     "type": "BUY",
-    "entry": 94.93,
-    "updatedAt": "2026-09-23T12:00:00.000Z"
+    "entry": 92.45,
+    "updatedAt": "2026-09-23T16:00:00.000Z"
   },
   "HYPE_1D": {
     "barT": 1790035200000,
     "type": "BUY",
-    "entry": 94.93,
+    "entry": 92.45,
     "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 }
