@@ -31,8 +31,7 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
 ## Live-path files (touch only these for signals/UI)
 - `scripts/fetch.js` (`KRAKEN_PAIRS`), `ta.js` (`DAILY_FILES`, `NAMES`),
   `setups.js`/`setup_backtest.js`/`precompute.js`/`backfill.js` (`SYMBOLS` — 6 assets).
-- `web/index.html` (signals-only: rules + cards; baselines/seasonality/table were cut as
-  duplication), `web/app.js` (setups-only), `web/pipeline.js` (`ASSETS`),
+- `web/index.html` (rules + live cards + aggregate track-record section), `web/app.js` (setups + `track_record.json`), `web/pipeline.js` (`ASSETS`),
   `web/asset.js` (`TV_SYMBOL` — HYPE's `HYPERLIQUID:HYPEUSD` is best-effort, verify render).
 - Dead-but-harmless: `/api/equity` + `equity.json` still built (BTC/ETH 55/45 baseline);
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).

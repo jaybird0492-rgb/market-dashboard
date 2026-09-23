@@ -46,8 +46,47 @@ function buildEquity() {
   };
 }
 
+function buildTrack() {
+  const log = loadLog();
+  const perCoin = {};
+  const perTf = {};
+  const overall = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
+  for (const sym of SYMBOLS) {
+    const bt = evaluateAll(sym);
+    const coin = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
+    for (const tf of Object.keys(bt)) {
+      const s = bt[tf].stats;
+      const sumR = bt[tf].results.reduce((a, r) => a + r.bt.realized, 0);
+      const noTrade = ((log[sym] && log[sym][tf]) || []).length - s.total;
+      const t = (perTf[tf] = perTf[tf] || { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 });
+      for (const k of ['total', 'sl', 'slAfterTp', 'tp1', 'tp2', 'tp3', 'partial', 'open']) {
+        coin[k] += s[k]; t[k] += s[k]; overall[k] += s[k];
+      }
+      coin.sumRealized += sumR; t.sumRealized += sumR; overall.sumRealized += sumR;
+      coin.noTrade += noTrade; t.noTrade += noTrade; overall.noTrade += noTrade;
+    }
+    for (const k of Object.keys(coin)) {
+      if (k !== 'sumRealized') coin[k] = Math.round(coin[k]);
+      else coin[k] = +coin[k].toFixed(4);
+    }
+    perCoin[sym] = coin;
+  }
+  for (const k of Object.keys(overall)) {
+    if (k !== 'sumRealized') overall[k] = Math.round(overall[k]);
+    else overall[k] = +overall[k].toFixed(4);
+  }
+  for (const tf of Object.keys(perTf)) {
+    for (const k of Object.keys(perTf[tf])) {
+      if (k !== 'sumRealized') perTf[tf][k] = Math.round(perTf[tf][k]);
+      else perTf[tf][k] = +perTf[tf][k].toFixed(4);
+    }
+  }
+  return { updatedAt: new Date().toISOString(), overall, perCoin, perTf };
+}
+
 function buildAll() {
   write('equity.json', buildEquity());
+  write('track_record.json', buildTrack());
   const setups = computeAll();
   write('setups.json', { updatedAt: new Date().toISOString(), setups: setups.setups, logs: setups.logs });
   for (const sym of SYMBOLS) {

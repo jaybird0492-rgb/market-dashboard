@@ -78,12 +78,52 @@ function renderSignals(data) {
   document.getElementById('portfolioNote').textContent = 'Conviction runs -100 (max bearish) to +100 (max bullish); further from zero = stronger. Built from trend · RSI · ADX · breakout. 1D sets the bias — 1H/4H trade only aligned setups.';
 }
 
+function fmtSignedPctFrac(frac) {
+  if (frac === null || frac === undefined) return '-';
+  const v = frac * 100;
+  return (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+}
+
+function renderTrack(data) {
+  const o = data.overall;
+  const decided = o.tp1 + o.sl;
+  const winRate = decided ? Math.round((o.tp1 / decided) * 100) : 0;
+  const chips = document.getElementById('trackChips');
+  chips.innerHTML =
+    '<span class="chip sig-long">' + o.tp1 + ' hit TP1</span>' +
+    '<span class="chip sig-long">' + o.tp2 + ' hit TP1+TP2</span>' +
+    '<span class="chip sig-long">' + o.tp3 + ' hit full TP1+TP2+TP3</span>' +
+    '<span class="chip sig-out">' + o.sl + ' stopped out</span>' +
+    '<span class="chip sig-watch">' + o.slAfterTp + ' stopped after banking TP</span>' +
+    '<span class="chip sig-none">' + (o.partial + o.open) + ' still open</span>' +
+    '<span class="chip sig-watch">' + o.noTrade + ' no-trade signals</span>';
+  let html = '<tr><th>Coin</th><th>Signals</th><th>TP1</th><th>TP1+TP2</th><th>Full TP3</th><th>Stopped</th><th>SL after TP</th><th>Open</th><th>Realized</th></tr>';
+  for (const [sym, c] of Object.entries(data.perCoin)) {
+    const rCls = c.sumRealized >= 0 ? 'pos' : 'neg';
+    html += '<tr><td class="sym-cell"><a href="asset.html?symbol=' + sym + '">' + sym + '</a></td>' +
+      '<td>' + c.total + '</td><td>' + c.tp1 + '</td><td>' + c.tp2 + '</td><td>' + c.tp3 + '</td>' +
+      '<td>' + c.sl + '</td><td>' + c.slAfterTp + '</td><td>' + (c.partial + c.open) + '</td>' +
+      '<td class="' + rCls + '">' + fmtSignedPctFrac(c.sumRealized) + '</td></tr>';
+  }
+  document.getElementById('trackTable').innerHTML = html;
+  document.getElementById('trackNote').textContent =
+    o.total + ' tradable BUY/SELL signals across 1H/4H/1D · TP1 win rate ' + winRate + '% (' + o.tp1 + ' of ' + decided + ' decided) · ' +
+    'combined realized ' + fmtSignedPctFrac(o.sumRealized) + ' (sum of per-signal %, 40/40/20 partials, stop checked before targets — conservative). ' +
+    'TP2 implies TP1 hit, full TP3 implies all three. New coins start at n=1 and build hourly.';
+}
+
 async function init() {
   try {
     const setups = await loadJson('/api/setups', 'data/setups.json');
     renderSignals(setups);
   } catch (e) {
     document.getElementById('updatedAt').textContent = 'Error loading: ' + e.message;
+  }
+  try {
+    const track = await loadJson('/api/track', 'data/track_record.json');
+    renderTrack(track);
+  } catch (e) {
+    document.getElementById('trackNote').textContent = 'Track record unavailable: ' + e.message;
   }
 }
 

@@ -73,8 +73,32 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify(data));
     return;
   }
-  if (pathname === '/api/refresh') {
-    equityCache = null;
+  if (pathname === '/api/track') {
+    const logs = loadLog();
+    const perCoin = {};
+    const overall = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
+    for (const sym of ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE']) {
+      try {
+        const bt = evaluateAll(sym);
+        const coin = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
+        for (const tf of Object.keys(bt)) {
+          const s = bt[tf].stats;
+          const sumR = bt[tf].results.reduce((a, r) => a + r.bt.realized, 0);
+          const noTrade = ((logs[sym] && logs[sym][tf]) || []).length - s.total;
+          for (const k of ['total', 'sl', 'slAfterTp', 'tp1', 'tp2', 'tp3', 'partial', 'open']) {
+            coin[k] += s[k]; overall[k] += s[k];
+          }
+          coin.sumRealized += sumR; overall.sumRealized += sumR;
+          coin.noTrade += noTrade; overall.noTrade += noTrade;
+        }
+        perCoin[sym] = coin;
+      } catch (e) { /* skip symbols with no data yet */ }
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+    res.end(JSON.stringify({ updatedAt: new Date().toISOString(), overall, perCoin }));
+    return;
+  }
+  if (pathname === '/api/refresh') {    equityCache = null;
     setupsCache = null;
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ ok: true, updatedAt: new Date().toISOString() }));
