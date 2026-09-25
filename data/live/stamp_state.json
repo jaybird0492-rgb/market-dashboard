@@ -2,55 +2,55 @@
   "BTC_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 84280.6,
+    "entry": 84328.9,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "BTC_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 84280.6,
+    "entry": 84328.9,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "BTC_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 84280.6,
+    "entry": 84328.9,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "ETH_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 2686.19,
+    "entry": 2688.36,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "ETH_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 2686.14,
+    "entry": 2688.36,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "ETH_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 2686.14,
+    "entry": 2688.36,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "SOL_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 117.01,
+    "entry": 117.16,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "SOL_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 117.01,
+    "entry": 117.16,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "SOL_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 117.02,
+    "entry": 117.16,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "XRP_1H": {
@@ -74,37 +74,37 @@
   "BNB_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 775.53,
+    "entry": 775.14,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "BNB_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 775.53,
+    "entry": 775.14,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "BNB_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 775.53,
+    "entry": 775.14,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "HYPE_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 93.34,
+    "entry": 93.52,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "HYPE_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 93.34,
+    "entry": 93.52,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "HYPE_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 93.34,
+    "entry": 93.52,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   }
 }
