@@ -35,8 +35,10 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
   `web/asset.js` (`TV_SYMBOL` — HYPE's `HYPERLIQUID:HYPEUSD` is best-effort, verify render).
 - Dead-but-harmless: `/api/equity` + `equity.json` still built (BTC/ETH 55/45 baseline);
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
-- Paper bot: `scripts/paper_bot.js` (long+flat, 40/40/20, SL→entry at TP1,
-  state in `data/live/paper_state.json`, gitignored; `--since <ISO>` replays history).
+- Paper bot: `scripts/paper_bot.js` (long+flat, 40/40/20, SL→entry at TP1).
+  STATE OWNERSHIP: CI owns `data/live/paper_state.json` (tracked; `update.yml` runs the bot
+  hourly after setups). NEVER run the bare bot locally — it would fork the state.
+  Local tests MUST use `node scripts/paper_bot.js --state <temp-path>`.
   Backtest of the rule on replay: 20/25 wins, SL_AFTER_TP cases closed green.
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
 - Legacy research scripts (stocks, portfolio, validate, sim weights) are NOT live path — ignore.

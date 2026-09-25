@@ -11,7 +11,16 @@ const { loadLog } = require('./setups');
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const RAW = path.join(__dirname, '..', 'data', 'raw');
 const WEB = path.join(__dirname, '..', 'web', 'data');
-const STATE_FILE = path.join(LIVE, 'paper_state.json');
+// State location: --state <path> (or PAPER_STATE env). CI uses the tracked
+// data/live/paper_state.json; local testing MUST pass a temp path so runs
+// never fight over the committed state.
+function statePath() {
+  const i = process.argv.indexOf('--state');
+  if (i >= 0 && process.argv[i + 1]) return path.resolve(process.argv[i + 1]);
+  if (process.env.PAPER_STATE) return path.resolve(process.env.PAPER_STATE);
+  return path.join(LIVE, 'paper_state.json');
+}
+const STATE_FILE = statePath();
 const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
 const TFS = ['1H', '4H', '1D'];
 const HOUR = 3600e3;

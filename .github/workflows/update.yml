@@ -28,6 +28,8 @@ jobs:
         run: node scripts/fetch.js
       - name: Compute trade setups
         run: node scripts/setups.js
+      - name: Advance paper bot
+        run: node scripts/paper_bot.js
       - name: Precompute static page data
         run: node scripts/precompute.js
       - name: Commit data
