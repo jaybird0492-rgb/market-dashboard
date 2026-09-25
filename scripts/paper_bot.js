@@ -10,6 +10,7 @@ const { loadLog } = require('./setups');
 
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const RAW = path.join(__dirname, '..', 'data', 'raw');
+const WEB = path.join(__dirname, '..', 'web', 'data');
 const STATE_FILE = path.join(LIVE, 'paper_state.json');
 const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
 const TFS = ['1H', '4H', '1D'];
@@ -101,6 +102,43 @@ function finish(pos, status, bar) {
   };
 }
 
+// Public summary for the dashboard (no internal cursor data).
+function buildPublic(state) {
+  const open = [];
+  for (const p of Object.values(state.open || {})) {
+    let mark = null, unrealized = null;
+    try {
+      const bars = getBars(p.sym, p.tf);
+      if (bars.length) {
+        mark = bars[bars.length - 1].close;
+        unrealized = posUnrealized(p, mark);
+      }
+    } catch (e) { /* bars for a delisted feed — leave null */ }
+    open.push({
+      sym: p.sym, tf: p.tf, side: p.side, entry: p.entry, stop: p.stop,
+      tp1: p.tp1, tp2: p.tp2, tp3: p.tp3, openedAt: p.openedAt, score: p.score,
+      tp1hit: p.filled1, breakeven: p.stop === p.entry,
+      mark, unrealizedPct: unrealized === null ? null : +(unrealized * 100).toFixed(2),
+      unrealizedUsd: unrealized === null ? null : +(unrealized * NOTIONAL_USD).toFixed(2),
+    });
+  }
+  const closed = (state.closed || []).slice(-50);
+  const all = state.closed || [];
+  const wins = all.filter((c) => c.realizedUsd > 0).length;
+  return {
+    updatedAt: new Date().toISOString(),
+    notional: NOTIONAL_USD,
+    stats: {
+      open: open.length, closed: all.length, wins,
+      totalUsd: +all.reduce((a, c) => a + c.realizedUsd, 0).toFixed(2),
+    },
+    open, closed,
+  };
+}
+function posUnrealized(p, mark) {
+  return p.realized + p.remaining * closeRet(p.entry, mark);
+}
+
 function main() {
   const sinceArg = process.argv.indexOf('--since');
   const since = sinceArg >= 0 ? Date.parse(process.argv[sinceArg + 1]) : null;
@@ -172,6 +210,10 @@ function main() {
 
   state.initialized = true;
   saveState(state);
+  try {
+    fs.mkdirSync(WEB, { recursive: true });
+    fs.writeFileSync(path.join(WEB, 'paper.json'), JSON.stringify(buildPublic(state)), 'utf8');
+  } catch (e) { console.error('  paper.json write FAILED:', e.message); }
 
   console.log('Paper bot:', new Date().toISOString(), `(notional $${NOTIONAL_USD}/trade)`);
   if (!changes.length) console.log('  No changes');
@@ -187,5 +229,8 @@ function main() {
   console.log(`  Closed P&L: $${tot.toFixed(2)} over ${state.closed.length} trades (${wins} wins)`);
 }
 
-try { main(); }
-catch (e) { console.error('PAPER BOT FAILED:', e.message); console.error(e.stack); process.exit(1); }
+if (require.main === module) {
+  try { main(); }
+  catch (e) { console.error('PAPER BOT FAILED:', e.message); console.error(e.stack); process.exit(1); }
+}
+module.exports = { buildPublic, NOTIONAL_USD };

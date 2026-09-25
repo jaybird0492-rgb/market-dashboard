@@ -112,6 +112,43 @@ function renderTrack(data) {
     'TP2 implies TP1 hit, full TP3 implies all three. New coins start at n=1 and build hourly.';
 }
 
+function renderPaper(data) {
+  const s = data.stats;
+  const tCls = s.totalUsd >= 0 ? 'sig-long' : 'sig-out';
+  document.getElementById('paperChips').innerHTML =
+    '<span class="chip sig-long">' + s.open + ' open</span>' +
+    '<span class="chip sig-watch">' + s.closed + ' closed</span>' +
+    '<span class="chip sig-long">' + s.wins + ' wins</span>' +
+    '<span class="chip ' + tCls + '">$' + s.totalUsd.toFixed(2) + ' total</span>';
+  let openHtml = '<tr><th>Coin</th><th>TF</th><th>Entry</th><th>Stop</th><th>TP1</th><th>Mark</th><th>Unrealized</th></tr>';
+  const sorted = (data.open || []).slice().sort((a, b) => (a.sym + a.tf < b.sym + b.tf ? -1 : 1));
+  for (const p of sorted) {
+    const uCls = (p.unrealizedUsd === null || p.unrealizedUsd >= 0) ? 'pos' : 'neg';
+    const tp1 = p.tp1hit ? fmtPrice(p.tp1) + ' ✓' : fmtPrice(p.tp1);
+    const stop = fmtPrice(p.stop) + (p.breakeven ? ' (BE)' : '');
+    openHtml += '<tr><td class="sym-cell"><a href="asset.html?symbol=' + p.sym + '">' + p.sym + '</a></td>' +
+      '<td>' + p.tf + '</td><td>' + fmtPrice(p.entry) + '</td><td>' + stop + '</td><td>' + tp1 + '</td>' +
+      '<td>' + (p.mark === null ? '-' : fmtPrice(p.mark)) + '</td>' +
+      '<td class="' + uCls + '">' + (p.unrealizedUsd === null ? '-' : '$' + p.unrealizedUsd.toFixed(2)) + '</td></tr>';
+  }
+  if (!sorted.length) openHtml += '<tr><td colspan="7">No open paper positions.</td></tr>';
+  document.getElementById('paperOpen').innerHTML = openHtml;
+  let closedHtml = '<tr><th>Closed</th><th>Coin</th><th>TF</th><th>Outcome</th><th>Realized</th></tr>';
+  const recent = (data.closed || []).slice().reverse().slice(0, 15);
+  for (const c of recent) {
+    const rCls = c.realizedUsd >= 0 ? 'pos' : 'neg';
+    const oCls = c.status === 'TP3' ? 'sig-long' : (c.status === 'SL' ? 'sig-out' : 'sig-watch');
+    closedHtml += '<tr><td class="tl-time">' + signalAge(c.closedAt) + '</td>' +
+      '<td class="sym-cell">' + c.sym + '</td><td>' + c.tf + '</td>' +
+      '<td><span class="signal ' + oCls + '">' + c.status + '</span></td>' +
+      '<td class="' + rCls + '">$' + c.realizedUsd.toFixed(2) + '</td></tr>';
+  }
+  if (!recent.length) closedHtml += '<tr><td colspan="5">No closed paper trades yet.</td></tr>';
+  document.getElementById('paperClosed').innerHTML = closedHtml;
+  document.getElementById('paperNote').textContent =
+    'Paper only — no real orders. $' + data.notional + ' notional per trade, long + flat, stop moves to entry at TP1.';
+}
+
 async function init() {
   try {
     const setups = await loadJson('/api/setups', 'data/setups.json');
@@ -124,6 +161,12 @@ async function init() {
     renderTrack(track);
   } catch (e) {
     document.getElementById('trackNote').textContent = 'Track record unavailable: ' + e.message;
+  }
+  try {
+    const paper = await loadJson('/api/paper', 'data/paper.json');
+    renderPaper(paper);
+  } catch (e) {
+    document.getElementById('paperNote').textContent = 'Paper bot unavailable: ' + e.message;
   }
 }
 

@@ -5,6 +5,7 @@ const { computeEquity, seasonality, annualized } = require('./scripts/sim');
 const { getAsset } = require('./scripts/ta');
 const { computeAll, loadLog } = require('./scripts/setups');
 const { evaluateAll } = require('./scripts/setup_backtest');
+const { buildPublic } = require('./scripts/paper_bot');
 
 const ROOT = __dirname;
 const WEB = path.join(ROOT, 'web');
@@ -96,6 +97,13 @@ const server = http.createServer((req, res) => {
     }
     res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
     res.end(JSON.stringify({ updatedAt: new Date().toISOString(), overall, perCoin }));
+    return;
+  }
+  if (pathname === '/api/paper') {
+    let st = { open: {}, closed: [] };
+    try { st = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'live', 'paper_state.json'), 'utf8')); } catch (e) { /* bot not run yet */ }
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+    res.end(JSON.stringify(buildPublic(st)));
     return;
   }
   if (pathname === '/api/refresh') {    equityCache = null;

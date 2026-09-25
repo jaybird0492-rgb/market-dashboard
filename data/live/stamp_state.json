@@ -2,55 +2,55 @@
   "BTC_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 84304.2,
+    "entry": 84280.6,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "BTC_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 84304.2,
+    "entry": 84280.6,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "BTC_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 84308.7,
+    "entry": 84280.6,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "ETH_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 2686.34,
+    "entry": 2686.19,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "ETH_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 2686.34,
+    "entry": 2686.14,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "ETH_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 2686.34,
+    "entry": 2686.14,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "SOL_1H": {
     "barT": 1790319600000,
     "type": "BUY",
-    "entry": 117.06,
+    "entry": 117.01,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "SOL_4H": {
     "barT": 1790308800000,
     "type": "BUY",
-    "entry": 117.06,
+    "entry": 117.01,
     "updatedAt": "2026-09-25T08:00:00.000Z"
   },
   "SOL_1D": {
     "barT": 1790208000000,
     "type": "BUY",
-    "entry": 117.06,
+    "entry": 117.02,
     "updatedAt": "2026-09-25T00:00:00.000Z"
   },
   "XRP_1H": {
