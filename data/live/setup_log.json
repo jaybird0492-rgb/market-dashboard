@@ -3674,6 +3674,28 @@
         "tp3": 81782.12,
         "risk": "0.55%",
         "trigger": "Sell setup: score -37.2 (trend -0.48 · RSI 31.1 · ADX 17.1 · dir -0.29) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1790604000000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -52.6,
+        "factors": {
+          "trend": -0.9,
+          "momentum": -0.24,
+          "direction": -0.28,
+          "structure": -0.37,
+          "rsi": 37.9,
+          "adx": 25.6
+        },
+        "price": 82892.6,
+        "entry": 82892.6,
+        "stopLoss": 83421.03,
+        "tp1": 82364.17,
+        "tp2": 81835.74,
+        "tp3": 81307.3,
+        "risk": "0.64%",
+        "trigger": "Sell setup: score -52.6 (trend -0.9 · RSI 37.9 · ADX 25.6 · dir -0.28) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -6976,6 +6998,28 @@
         "tp3": 86405.53,
         "risk": "1.31%",
         "trigger": "Buy setup: score +19 (trend +0.67 · RSI 39.7 · ADX 15 · dir -0.08)"
+      },
+      {
+        "time": 1790582400000,
+        "tf": "4H",
+        "type": "BUY",
+        "score": 15.4,
+        "factors": {
+          "trend": 0.66,
+          "momentum": -0.23,
+          "direction": -0.16,
+          "structure": -0.12,
+          "rsi": 38.3,
+          "adx": 16.3
+        },
+        "price": 82892.6,
+        "entry": 82892.6,
+        "stopLoss": 81781.92,
+        "tp1": 84003.28,
+        "tp2": 85113.97,
+        "tp3": 86224.65,
+        "risk": "1.34%",
+        "trigger": "Buy setup: score +15.4 (trend +0.66 · RSI 38.3 · ADX 16.3 · dir -0.16)"
       }
     ],
     "1D": [
@@ -11250,6 +11294,28 @@
         "tp3": 2595.29,
         "risk": "0.68%",
         "trigger": "Sell setup: score -53.3 (trend -0.9 · RSI 32.4 · ADX 18.7 · dir -0.28) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1790604000000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -43.3,
+        "factors": {
+          "trend": -0.89,
+          "momentum": -0.1,
+          "direction": -0.11,
+          "structure": -0.23,
+          "rsi": 44.8,
+          "adx": 22.5
+        },
+        "price": 2659.11,
+        "entry": 2659.11,
+        "stopLoss": 2680.94,
+        "tp1": 2637.28,
+        "tp2": 2615.45,
+        "tp3": 2593.61,
+        "risk": "0.82%",
+        "trigger": "Sell setup: score -43.3 (trend -0.89 · RSI 44.8 · ADX 22.5 · dir -0.11) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -14552,6 +14618,28 @@
         "tp3": 2777.35,
         "risk": "1.61%",
         "trigger": "Buy setup: score +17.3 (trend +0.69 · RSI 39.6 · ADX 15.8 · dir -0.14)"
+      },
+      {
+        "time": 1790582400000,
+        "tf": "4H",
+        "type": "BUY",
+        "score": 20.8,
+        "factors": {
+          "trend": 0.7,
+          "momentum": -0.12,
+          "direction": -0.13,
+          "structure": -0.11,
+          "rsi": 44.2,
+          "adx": 16.7
+        },
+        "price": 2660.58,
+        "entry": 2660.58,
+        "stopLoss": 2615.99,
+        "tp1": 2705.17,
+        "tp2": 2749.75,
+        "tp3": 2794.34,
+        "risk": "1.68%",
+        "trigger": "Buy setup: score +20.8 (trend +0.7 · RSI 44.2 · ADX 16.7 · dir -0.13)"
       }
     ],
     "1D": [
@@ -15856,6 +15944,28 @@
         "tp3": 123.09,
         "risk": "1.23%",
         "trigger": "Buy setup: score +5.2 (trend +0.59 · RSI 31.8 · ADX 18.1 · dir -0.28)"
+      },
+      {
+        "time": 1790604000000,
+        "tf": "1H",
+        "type": "WAIT",
+        "score": 3.6,
+        "factors": {
+          "trend": 0.56,
+          "momentum": -0.25,
+          "direction": -0.33,
+          "structure": -0.42,
+          "rsi": 37.3,
+          "adx": 25.2
+        },
+        "price": null,
+        "entry": null,
+        "stopLoss": null,
+        "tp1": null,
+        "tp2": null,
+        "tp3": null,
+        "risk": "-",
+        "trigger": "Score +3.6 — trend +0.56 · RSI 37.3 · ADX 25.2 · dir -0.33"
       }
     ],
     "4H": [
@@ -16430,6 +16540,28 @@
         "tp3": 128.28,
         "risk": "2.68%",
         "trigger": "Buy setup: score +41.1 (trend +1 · RSI 46.8 · ADX 30.1 · dir +0.05)"
+      },
+      {
+        "time": 1790582400000,
+        "tf": "4H",
+        "type": "BUY",
+        "score": 36.1,
+        "factors": {
+          "trend": 1,
+          "momentum": -0.1,
+          "direction": -0.1,
+          "structure": 0.1,
+          "rsi": 45.2,
+          "adx": 27.2
+        },
+        "price": 118,
+        "entry": 118,
+        "stopLoss": 114.81,
+        "tp1": 121.19,
+        "tp2": 124.39,
+        "tp3": 127.58,
+        "risk": "2.71%",
+        "trigger": "Buy setup: score +36.1 (trend +1 · RSI 45.2 · ADX 27.2 · dir -0.1)"
       }
     ],
     "1D": [
@@ -17472,6 +17604,28 @@
         "tp3": 1.62,
         "risk": "3.20%",
         "trigger": "Buy setup: score +17.9 (trend +0.68 · RSI 39.3 · ADX 21.4 · dir -0.11)"
+      },
+      {
+        "time": 1790582400000,
+        "tf": "4H",
+        "type": "BUY",
+        "score": 19,
+        "factors": {
+          "trend": 0.7,
+          "momentum": -0.15,
+          "direction": -0.16,
+          "structure": -0.1,
+          "rsi": 42.5,
+          "adx": 21.2
+        },
+        "price": 1.49,
+        "entry": 1.49,
+        "stopLoss": 1.44,
+        "tp1": 1.53,
+        "tp2": 1.58,
+        "tp3": 1.63,
+        "risk": "3.30%",
+        "trigger": "Buy setup: score +19 (trend +0.7 · RSI 42.5 · ADX 21.2 · dir -0.16)"
       }
     ],
     "1D": [
@@ -18138,6 +18292,28 @@
         "tp3": 748.7,
         "risk": "0.65%",
         "trigger": "Sell setup: score -54 (trend -0.9 · RSI 30 · ADX 15.2 · dir -0.24) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1790604000000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -56.1,
+        "factors": {
+          "trend": -0.92,
+          "momentum": -0.29,
+          "direction": -0.31,
+          "structure": -0.42,
+          "rsi": 35.4,
+          "adx": 24.4
+        },
+        "price": 758.4,
+        "entry": 758.4,
+        "stopLoss": 763.95,
+        "tp1": 752.85,
+        "tp2": 747.29,
+        "tp3": 741.74,
+        "risk": "0.73%",
+        "trigger": "Sell setup: score -56.1 (trend -0.92 · RSI 35.4 · ADX 24.4 · dir -0.31) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -18712,6 +18888,28 @@
         "tp3": 797.96,
         "risk": "1.50%",
         "trigger": "Buy setup: score +18.1 (trend +0.67 · RSI 40 · ADX 9.9 · dir -0.06)"
+      },
+      {
+        "time": 1790582400000,
+        "tf": "4H",
+        "type": "BUY",
+        "score": 12.1,
+        "factors": {
+          "trend": 0.64,
+          "momentum": -0.25,
+          "direction": -0.17,
+          "structure": -0.32,
+          "rsi": 37.6,
+          "adx": 13
+        },
+        "price": 758.4,
+        "entry": 758.4,
+        "stopLoss": 746.43,
+        "tp1": 770.37,
+        "tp2": 782.35,
+        "tp3": 794.32,
+        "risk": "1.58%",
+        "trigger": "Buy setup: score +12.1 (trend +0.64 · RSI 37.6 · ADX 13 · dir -0.17)"
       }
     ],
     "1D": [
@@ -19532,6 +19730,28 @@
         "tp3": 85.99,
         "risk": "1.14%",
         "trigger": "Sell setup: score -65 (trend -0.98 · RSI 30 · ADX 26.1 · dir -0.54) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1790604000000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -64.2,
+        "factors": {
+          "trend": -1,
+          "momentum": -0.29,
+          "direction": -0.53,
+          "structure": -0.37,
+          "rsi": 31.8,
+          "adx": 32.6
+        },
+        "price": 87.73,
+        "entry": 87.73,
+        "stopLoss": 88.87,
+        "tp1": 86.59,
+        "tp2": 85.45,
+        "tp3": 84.31,
+        "risk": "1.30%",
+        "trigger": "Sell setup: score -64.2 (trend -1 · RSI 31.8 · ADX 32.6 · dir -0.53) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -20106,6 +20326,28 @@
         "tp3": 96.27,
         "risk": "2.71%",
         "trigger": "Buy setup: score +9.1 (trend +0.67 · RSI 36.9 · ADX 17.1 · dir -0.25)"
+      },
+      {
+        "time": 1790582400000,
+        "tf": "4H",
+        "type": "BUY",
+        "score": 5.4,
+        "factors": {
+          "trend": 0.62,
+          "momentum": -0.29,
+          "direction": -0.29,
+          "structure": -0.5,
+          "rsi": 35.3,
+          "adx": 20
+        },
+        "price": 87.73,
+        "entry": 87.73,
+        "stopLoss": 85.09,
+        "tp1": 90.37,
+        "tp2": 93.01,
+        "tp3": 95.65,
+        "risk": "3.01%",
+        "trigger": "Buy setup: score +5.4 (trend +0.62 · RSI 35.3 · ADX 20 · dir -0.29)"
       }
     ],
     "1D": [
