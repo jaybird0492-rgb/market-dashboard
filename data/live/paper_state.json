@@ -1,21 +1,21 @@
 {
   "cursor": {
-    "BTC_1H": 1790604000000,
-    "BTC_4H": 1790582400000,
+    "BTC_1H": 1790625600000,
+    "BTC_4H": 1790611200000,
     "BTC_1D": 1790467200000,
-    "ETH_1H": 1790604000000,
-    "ETH_4H": 1790582400000,
+    "ETH_1H": 1790625600000,
+    "ETH_4H": 1790611200000,
     "ETH_1D": 1790467200000,
-    "SOL_1H": 1790571600000,
-    "SOL_4H": 1790582400000,
+    "SOL_1H": 1790625600000,
+    "SOL_4H": 1790611200000,
     "SOL_1D": 1790467200000,
-    "XRP_1H": 1790571600000,
+    "XRP_1H": 1790625600000,
     "XRP_4H": 1790582400000,
     "XRP_1D": 1790294400000,
-    "BNB_1H": 1790604000000,
-    "BNB_4H": 1790582400000,
+    "BNB_1H": 1790625600000,
+    "BNB_4H": 1790611200000,
     "BNB_1D": 1790467200000,
-    "HYPE_1H": 1790604000000,
+    "HYPE_1H": 1790625600000,
     "HYPE_4H": 1790582400000,
     "HYPE_1D": 1790467200000
   },
@@ -144,17 +144,17 @@
       "tf": "4H",
       "side": "BUY",
       "entry": 82892.6,
-      "stop": 81781.92,
+      "stop": 82892.6,
       "tp1": 84003.28,
       "tp2": 85113.97,
       "tp3": 86224.65,
       "openedAt": 1790582400000,
       "score": 15.4,
-      "filled1": false,
+      "filled1": true,
       "filled2": false,
       "filled3": false,
-      "remaining": 1,
-      "realized": 0
+      "remaining": 0.6,
+      "realized": 0.0053596099048648154
     },
     "SOL_4H": {
       "sym": "SOL",
@@ -172,23 +172,6 @@
       "filled3": false,
       "remaining": 1,
       "realized": 0
-    },
-    "XRP_4H": {
-      "sym": "XRP",
-      "tf": "4H",
-      "side": "BUY",
-      "entry": 1.49,
-      "stop": 1.49,
-      "tp1": 1.53,
-      "tp2": 1.58,
-      "tp3": 1.63,
-      "openedAt": 1790582400000,
-      "score": 19,
-      "filled1": true,
-      "filled2": false,
-      "filled3": false,
-      "remaining": 0.6,
-      "realized": 0.010738255033557033
     }
   },
   "closed": [
@@ -635,6 +618,30 @@
       "realizedPct": 1.2,
       "realizedUsd": 12.04,
       "score": 5.4
+    },
+    {
+      "sym": "XRP",
+      "tf": "4H",
+      "side": "BUY",
+      "entry": 1.49,
+      "openedAt": 1790582400000,
+      "closedAt": "2026-09-28T08:00:00.000Z",
+      "status": "SL_AFTER_TP",
+      "realizedPct": 1.07,
+      "realizedUsd": 10.74,
+      "score": 19
+    },
+    {
+      "sym": "BNB",
+      "tf": "4H",
+      "side": "BUY",
+      "entry": 761.02,
+      "openedAt": 1790611200000,
+      "closedAt": "2026-09-28T20:00:00.000Z",
+      "status": "SL_AFTER_TP",
+      "realizedPct": 0.63,
+      "realizedUsd": 6.26,
+      "score": 16.5
     }
   ],
   "initialized": true
