@@ -40,7 +40,12 @@ function biasLabel(bias) {
   return 'neutral';
 }
 
-function renderSignals(data) {
+function bandOf(score) {
+  const sc = Math.abs(score || 0);
+  return sc >= 50 ? '50+' : sc >= 35 ? '35-50' : sc >= 20 ? '20-35' : '0-20';
+}
+
+function renderSignals(data, track) {
   document.getElementById('updatedAt').textContent =
     'Updated: ' + new Date(data.updatedAt).toLocaleString('en-AU', { timeZone: 'Australia/Perth', hour: '2-digit', minute: '2-digit', hour12: false }) + ' AWST';
   const wrap = document.getElementById('signalCards');
@@ -49,16 +54,21 @@ function renderSignals(data) {
     const buys = TF_ORDER.filter((tf) => s.timeframes[tf] && s.timeframes[tf].type === 'BUY').length;
     const sells = TF_ORDER.filter((tf) => s.timeframes[tf] && s.timeframes[tf].type === 'SELL').length;
     const biasCls = s.bias === 'LONG' ? 'sig-long' : s.bias === 'SHORT' ? 'sig-out' : 'sig-watch';
+    const size = track && track.perCoin && track.perCoin[symbol] ? track.perCoin[symbol].size : null;
     const tfCells = TF_ORDER.map((tf) => {
       const st = s.timeframes[tf];
       if (!st) return '';
       const conv = (st.score === null || st.score === undefined) ? '–' : ((st.score >= 0 ? '+' : '') + st.score);
       const entry = st.entry ? ' @ ' + fmtPrice(st.entry) : '';
       const age = signalAge(st.updatedAt);
+      const band = track && track.bands && track.bands[symbol] && track.bands[symbol][tf]
+        ? track.bands[symbol][tf][bandOf(st.score)] : null;
+      const weakTag = (band && band.weak)
+        ? '<span class="tf-weak" title="This score band won ' + band.winRate + '% over ' + band.n + ' past signals (avg ' + band.avgPct + '%)">weak band · half size or skip</span>' : '';
       return '<div class="tf-cell"><span class="tf-label">' + tf + '</span>' +
         '<span class="signal ' + setupClass(st.type) + '">' + st.type + '</span>' +
         '<span class="tf-conv">Conviction ' + conv + '</span>' +
-        '<span class="tf-entry">' + entry + '</span>' +
+        '<span class="tf-entry">' + entry + '</span>' + weakTag +
         (age ? '<span class="tf-age">' + age + '</span>' : '') + '</div>';
     }).join('');
 
@@ -70,12 +80,13 @@ function renderSignals(data) {
       <div class="price">${fmtPrice(s.price)}</div>
       <div class="signal ${biasCls}">${s.bias} bias — ${biasLabel(s.bias)}</div>
       <div class="tf-row">${tfCells}</div>
-      <div class="detail">${buys} BUY / ${sells} SELL across ${TF_ORDER.length} timeframes</div>
+      <div class="detail">${buys} BUY / ${sells} SELL across ${TF_ORDER.length} timeframes` +
+      (size === 'REDUCED-1D-ONLY' ? ` · <b>reduced size — 1D only</b>` : '') + `</div>
       <div class="meta">click for 1H/4H/1D charts + track record</div>
     `;
     wrap.appendChild(card);
   }
-  document.getElementById('portfolioNote').textContent = 'Conviction runs -100 (max bearish) to +100 (max bullish); further from zero = stronger. Built from trend · RSI · ADX · breakout. 1D sets the bias — 1H/4H trade only aligned setups.';
+  document.getElementById('portfolioNote').textContent = 'Conviction runs -100 (max bearish) to +100 (max bullish); further from zero = stronger. Built from trend · RSI · ADX · breakout. 1D sets the bias — 1H/4H trade only aligned setups. Weak-band flags come from each coin\\u2019s own history (bands under 40% TP1 win rate).';
 }
 
 function fmtSignedPctFrac(frac) {
@@ -150,15 +161,17 @@ function renderPaper(data) {
 }
 
 async function init() {
+  let track = null;
   try {
     const setups = await loadJson('/api/setups', 'data/setups.json');
-    renderSignals(setups);
+    try { track = await loadJson('/api/track', 'data/track_record.json'); } catch (e) { /* bands/sizing unavailable */ }
+    renderSignals(setups, track);
   } catch (e) {
     document.getElementById('updatedAt').textContent = 'Error loading: ' + e.message;
   }
   try {
-    const track = await loadJson('/api/track', 'data/track_record.json');
-    renderTrack(track);
+    const t2 = track || await loadJson('/api/track', 'data/track_record.json');
+    renderTrack(t2);
   } catch (e) {
     document.getElementById('trackNote').textContent = 'Track record unavailable: ' + e.message;
   }

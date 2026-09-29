@@ -46,14 +46,21 @@ function buildEquity() {
   };
 }
 
+function bandOf(score) {
+  const sc = Math.abs(score || 0);
+  return sc >= 50 ? '50+' : sc >= 35 ? '35-50' : sc >= 20 ? '20-35' : '0-20';
+}
+
 function buildTrack() {
   const log = loadLog();
   const perCoin = {};
   const perTf = {};
+  const bands = {}; // bands[sym][tf][band] = {n, winRate, avgPct, weak}
   const overall = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
   for (const sym of SYMBOLS) {
     const bt = evaluateAll(sym);
     const coin = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
+    bands[sym] = {};
     for (const tf of Object.keys(bt)) {
       const s = bt[tf].stats;
       const sumR = bt[tf].results.reduce((a, r) => a + r.bt.realized, 0);
@@ -64,6 +71,22 @@ function buildTrack() {
       }
       coin.sumRealized += sumR; t.sumRealized += sumR; overall.sumRealized += sumR;
       coin.noTrade += noTrade; t.noTrade += noTrade; overall.noTrade += noTrade;
+      // Score-band history for this coin x TF.
+      const bb = (bands[sym][tf] = {});
+      for (const r of bt[tf].results) {
+        const key = bandOf(r.entry.score);
+        bb[key] = bb[key] || { n: 0, w: 0, l: 0, sum: 0 };
+        bb[key].n++;
+        if (r.bt.hit.includes('TP1')) bb[key].w++;
+        if (r.bt.status === 'SL') bb[key].l++;
+        bb[key].sum += r.bt.realized;
+      }
+      for (const key of Object.keys(bb)) {
+        const v = bb[key];
+        const dec = v.w + v.l;
+        const winRate = dec ? Math.round((v.w / dec) * 100) : 0;
+        bb[key] = { n: v.n, winRate, avgPct: +(v.sum / v.n * 100).toFixed(2), weak: v.n >= 5 && winRate < 40 };
+      }
     }
     for (const k of Object.keys(coin)) {
       if (k !== 'sumRealized') coin[k] = Math.round(coin[k]);
@@ -81,7 +104,11 @@ function buildTrack() {
       else perTf[tf][k] = +perTf[tf][k].toFixed(4);
     }
   }
-  return { updatedAt: new Date().toISOString(), overall, perCoin, perTf };
+  // Per-coin sizing: full size only when the coin's history pays overall.
+  for (const sym of SYMBOLS) {
+    perCoin[sym].size = perCoin[sym].sumRealized >= 0 ? 'FULL' : 'REDUCED-1D-ONLY';
+  }
+  return { updatedAt: new Date().toISOString(), overall, perCoin, perTf, bands };
 }
 
 function buildAll() {
@@ -109,4 +136,4 @@ if (require.main === module) {
     process.exit(1);
   }
 }
-module.exports = { buildAll };
+module.exports = { buildAll, buildTrack, bandOf };

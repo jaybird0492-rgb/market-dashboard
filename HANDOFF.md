@@ -33,6 +33,10 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
   `setups.js`/`setup_backtest.js`/`precompute.js`/`backfill.js` (`SYMBOLS` — 6 assets).
 - `web/index.html` (rules + live cards + aggregate track-record section), `web/app.js` (setups + `track_record.json`), `web/pipeline.js` (`ASSETS`),
   `web/asset.js` (`TV_SYMBOL` — HYPE's `HYPERLIQUID:HYPEUSD` is best-effort, verify render).
+- 30-day review (2026-09-29, script in temp `review30.js`, re-runnable): 1D pays
+  (BTC 68%/+1.9%, ETH 90%/+4.0%); 4H high-conviction bands bleed — cards now carry
+  weak-band flags (`track_record.json` → `bands`, weak = <40% TP1 win rate, n≥5) and
+  per-coin sizing (`FULL`: BTC/ETH/SOL; `REDUCED-1D-ONLY`: XRP/BNB/HYPE).
 - Dead-but-harmless: `/api/equity` + `equity.json` still built (BTC/ETH 55/45 baseline);
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
 - Paper bot: `scripts/paper_bot.js` (long+flat, 40/40/20, SL→entry at TP1).
