@@ -43,6 +43,9 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
   STATE OWNERSHIP: CI owns `data/live/paper_state.json` (tracked; `update.yml` runs the bot
   hourly after setups). NEVER run the bare bot locally — it would fork the state.
   Local tests MUST use `node scripts/paper_bot.js --state <temp-path>`.
+  Bot gates entries: 1D always taken; REDUCED coins 1D-only; weak bands skipped
+  (read from `web/data/track_record.json`, fallback take-all). Rebuild paper.json
+  without advancing state via buildPublic (see session 2026-09-29).
   Backtest of the rule on replay: 20/25 wins, SL_AFTER_TP cases closed green.
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
 - Legacy research scripts (stocks, portfolio, validate, sim weights) are NOT live path — ignore.

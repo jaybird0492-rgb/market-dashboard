@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const { loadCsv, validRows, resample } = require('./ta');
 const { loadLog } = require('./setups');
+const { bandOf } = require('./precompute');
 
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const RAW = path.join(__dirname, '..', 'data', 'raw');
@@ -49,6 +50,29 @@ function getBars(sym, tf) {
 }
 const barT = (b) => (typeof b.t === 'number' ? b.t : Date.parse(b.t));
 function closeRet(entry, price) { return price / entry - 1; } // longs only
+
+function loadSizing() {
+  try { return JSON.parse(fs.readFileSync(path.join(WEB, 'track_record.json'), 'utf8')); }
+  catch { return null; } // no history yet — take everything
+}
+
+// 30-day review rules: 1D always taken; REDUCED coins trade 1D only;
+// weak score bands (<40% TP1 win rate, n>=5) are skipped, never chased.
+function shouldTake(sizing, sym, tf, entry) {
+  if (!sizing || tf === '1D') return { take: true };
+  if (sizing.perCoin && sizing.perCoin[sym] && sizing.perCoin[sym].size === 'REDUCED-1D-ONLY') {
+    return { take: false, reason: 'coin-size' };
+  }
+  const band = sizing.bands && sizing.bands[sym] && sizing.bands[sym][tf]
+    ? sizing.bands[sym][tf][bandOf(entry.score)] : null;
+  if (band && band.weak) return { take: false, reason: 'weak-band', band };
+  return { take: true };
+}
+function noteSkip(state, reason) {
+  state.skipped = state.skipped || { weak: 0, size: 0 };
+  if (reason === 'weak-band') state.skipped.weak++;
+  else state.skipped.size++;
+}
 
 function openPosition(entry) {
   return {
@@ -134,12 +158,14 @@ function buildPublic(state) {
   const closed = (state.closed || []).slice(-50);
   const all = state.closed || [];
   const wins = all.filter((c) => c.realizedUsd > 0).length;
+  const skipped = state.skipped || { weak: 0, size: 0 };
   return {
     updatedAt: new Date().toISOString(),
     notional: NOTIONAL_USD,
     stats: {
       open: open.length, closed: all.length, wins,
       totalUsd: +all.reduce((a, c) => a + c.realizedUsd, 0).toFixed(2),
+      skippedWeak: skipped.weak || 0, skippedSize: skipped.size || 0,
     },
     open, closed,
   };
@@ -152,8 +178,21 @@ function main() {
   const sinceArg = process.argv.indexOf('--since');
   const since = sinceArg >= 0 ? Date.parse(process.argv[sinceArg + 1]) : null;
   const log = loadLog();
+  const sizing = loadSizing();
   const state = loadState();
   const changes = [];
+  const consider = (sym, tf, e) => {
+    const gate = shouldTake(sizing, sym, tf, e);
+    if (!gate.take) {
+      noteSkip(state, gate.reason);
+      const why = gate.reason === 'weak-band'
+        ? `weak band ${bandOf(e.score)} (${gate.band.winRate}% over ${gate.band.n})`
+        : `${sym} reduced-size coin, 1D only`;
+      changes.push(`SKIP ${sym} ${tf} BUY @ ${e.entry} — ${why}`);
+      return false;
+    }
+    return true;
+  };
 
   for (const sym of SYMBOLS) {
     for (const tf of TFS) {
@@ -165,8 +204,10 @@ function main() {
         const latest = entries[entries.length - 1];
         state.cursor[key] = latest.time;
         if (latest.type === 'BUY') {
-          state.open[key] = openPosition({ sym, tf, ...latest });
-          changes.push(`OPEN ${sym} ${tf} BUY @ ${latest.entry} (SL ${latest.stopLoss}, TP1 ${latest.tp1})`);
+          if (consider(sym, tf, latest)) {
+            state.open[key] = openPosition({ sym, tf, ...latest });
+            changes.push(`OPEN ${sym} ${tf} BUY @ ${latest.entry} (SL ${latest.stopLoss}, TP1 ${latest.tp1})`);
+          }
         } else {
           changes.push(`FLAT ${sym} ${tf} — latest is ${latest.type}, no position`);
         }
@@ -178,8 +219,10 @@ function main() {
         const cur = state.open[key];
         if (e.type === 'BUY') {
           if (!cur) {
-            state.open[key] = openPosition({ sym, tf, ...e });
-            changes.push(`OPEN ${sym} ${tf} BUY @ ${e.entry} (SL ${e.stopLoss}, TP1 ${e.tp1})`);
+            if (consider(sym, tf, e)) {
+              state.open[key] = openPosition({ sym, tf, ...e });
+              changes.push(`OPEN ${sym} ${tf} BUY @ ${e.entry} (SL ${e.stopLoss}, TP1 ${e.tp1})`);
+            }
           } else {
             changes.push(`SKIP ${sym} ${tf} BUY @ ${e.entry} — already in position from ${cur.entry}`);
           }

@@ -130,7 +130,8 @@ function renderPaper(data) {
     '<span class="chip sig-long">' + s.open + ' open</span>' +
     '<span class="chip sig-watch">' + s.closed + ' closed</span>' +
     '<span class="chip sig-long">' + s.wins + ' wins</span>' +
-    '<span class="chip ' + tCls + '">$' + s.totalUsd.toFixed(2) + ' total</span>';
+    '<span class="chip ' + tCls + '">$' + s.totalUsd.toFixed(2) + ' total</span>' +
+    ((s.skippedWeak + s.skippedSize) > 0 ? '<span class="chip sig-none">' + (s.skippedWeak + s.skippedSize) + ' skipped (weak/size)</span>' : '');
   let openHtml = '<tr><th>Coin</th><th>TF</th><th>Entry</th><th>Stop</th><th>TP1</th><th>Mark</th><th>Unrealized</th></tr>';
   const sorted = (data.open || []).slice().sort((a, b) => (a.sym + a.tf < b.sym + b.tf ? -1 : 1));
   for (const p of sorted) {
