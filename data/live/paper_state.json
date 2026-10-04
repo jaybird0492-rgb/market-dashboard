@@ -1,22 +1,22 @@
 {
   "cursor": {
-    "BTC_1H": 1791122400000,
-    "BTC_4H": 1791100800000,
+    "BTC_1H": 1791136800000,
+    "BTC_4H": 1791115200000,
     "BTC_1D": 1790985600000,
-    "ETH_1H": 1791122400000,
-    "ETH_4H": 1791100800000,
+    "ETH_1H": 1791136800000,
+    "ETH_4H": 1791115200000,
     "ETH_1D": 1790985600000,
-    "SOL_1H": 1791122400000,
-    "SOL_4H": 1791100800000,
+    "SOL_1H": 1791136800000,
+    "SOL_4H": 1791115200000,
     "SOL_1D": 1790985600000,
     "XRP_1H": 1791122400000,
     "XRP_4H": 1791100800000,
     "XRP_1D": 1790899200000,
-    "BNB_1H": 1791122400000,
-    "BNB_4H": 1791100800000,
+    "BNB_1H": 1791136800000,
+    "BNB_4H": 1791115200000,
     "BNB_1D": 1790985600000,
-    "HYPE_1H": 1791122400000,
-    "HYPE_4H": 1791100800000,
+    "HYPE_1H": 1791136800000,
+    "HYPE_4H": 1791115200000,
     "HYPE_1D": 1790985600000
   },
   "open": {
@@ -150,6 +150,40 @@
       "tp3": 88023.05,
       "openedAt": 1791100800000,
       "score": 52.7,
+      "filled1": false,
+      "filled2": false,
+      "filled3": false,
+      "remaining": 1,
+      "realized": 0
+    },
+    "SOL_1H": {
+      "sym": "SOL",
+      "tf": "1H",
+      "side": "BUY",
+      "entry": 121.51,
+      "stop": 120.92,
+      "tp1": 122.1,
+      "tp2": 122.68,
+      "tp3": 123.27,
+      "openedAt": 1791136800000,
+      "score": 56,
+      "filled1": false,
+      "filled2": false,
+      "filled3": false,
+      "remaining": 1,
+      "realized": 0
+    },
+    "SOL_4H": {
+      "sym": "SOL",
+      "tf": "4H",
+      "side": "BUY",
+      "entry": 121.51,
+      "stop": 119.44,
+      "tp1": 123.58,
+      "tp2": 125.64,
+      "tp3": 127.71,
+      "openedAt": 1791115200000,
+      "score": 55.2,
       "filled1": false,
       "filled2": false,
       "filled3": false,
@@ -997,11 +1031,23 @@
       "realizedPct": 0.56,
       "realizedUsd": 5.63,
       "score": 56.2
+    },
+    {
+      "sym": "BTC",
+      "tf": "1H",
+      "side": "BUY",
+      "entry": 85524.5,
+      "openedAt": 1791136800000,
+      "closedAt": "2026-10-04T18:00:00.000Z",
+      "status": "SL",
+      "realizedPct": -0.25,
+      "realizedUsd": -2.52,
+      "score": 57.3
     }
   ],
   "initialized": true,
   "skipped": {
-    "weak": 21,
-    "size": 57
+    "weak": 24,
+    "size": 59
   }
 }
