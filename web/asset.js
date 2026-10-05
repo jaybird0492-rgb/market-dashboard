@@ -6,8 +6,14 @@ const TV_INTERVAL = { '1H': '60', '4H': '240', '1D': 'D' };
 
 let asset = null;
 let autopsy = null;
+let histSel = {};
 let activeTf = '1D';
 let tvWidget = null;
+
+function backToLive() {
+  histSel[activeTf] = null;
+  selectTf(activeTf);
+}
 
 function fmt(v, digits) {
   if (v === null || v === undefined) return '-';
@@ -112,6 +118,18 @@ function selectTf(tf) {
   renderTvChart(tf);
   const t = asset.timeframes[tf];
   renderCandles(document.getElementById('chart'), t);
+  const log = (asset.logs && asset.logs[tf]) || [];
+  const selIdx = histSel[tf];
+  const sel = (selIdx !== null && selIdx !== undefined && log[selIdx]) ? log[selIdx] : null;
+  // Historical pick renders through the same panel + calculators as live.
+  const s = sel ? {
+    type: sel.type, entry: sel.entry, stopLoss: sel.stopLoss,
+    tp1: sel.tp1, tp2: sel.tp2, tp3: sel.tp3,
+    updatedAt: new Date(sel.time).toISOString(),
+    trigger: sel.trigger || '', text: sel.trigger || '',
+    risk: sel.risk || '-', score: sel.score,
+  } : t.setup;
+  const viewingHist = !!sel;
 
   const panel = document.getElementById('readPanel');
   panel.innerHTML = `
@@ -130,7 +148,6 @@ function selectTf(tf) {
     </div>
     <p class="read-text">${t.text}</p>`;
 
-  const s = t.setup;
   const riskDist = (s.entry !== null && s.stopLoss !== null) ? Math.abs(s.entry - s.stopLoss) : null;
   const acctRaw = parseFloat(localStorage.getItem('mr_acct') || '10000');
   const riskRaw = parseFloat(localStorage.getItem('mr_risk') || '1');
@@ -169,8 +186,10 @@ function selectTf(tf) {
   }
   document.getElementById('setupPanel').innerHTML = `
     <div class="setup-head">
-      <span class="signal ${setupClass(s.type)}">SETUP: ${s.type}</span>
-      <span class="setup-time">Updated ${localTime(s.updatedAt)}</span>
+      <span class="signal ${setupClass(s.type)}">${viewingHist ? 'SIGNAL ' + s.type + ' · ' + localTime(sel.time) : 'SETUP: ' + s.type}</span>
+      ${viewingHist
+        ? '<button class="tf-tab" onclick="backToLive()">← back to live</button>'
+        : '<span class="setup-time">Updated ' + localTime(s.updatedAt) + '</span>'}
     </div>
     ${s.type === 'BUY' || s.type === 'SELL' ? `
     <div class="setup-grid">
@@ -184,26 +203,35 @@ function selectTf(tf) {
     ${sizeHtml}
     ${futHtml}`;
 
-  const log = (asset.logs && asset.logs[tf]) || [];
-  const tl = document.getElementById('timeline');
   const sum = document.getElementById('timelineSummary');
   if (!log.length) {
     sum.textContent = 'Signals — ' + tf + ' — none recorded yet (next interval close will add one)';
     tl.innerHTML = '';
   } else {
-    sum.textContent = 'Signals — ' + tf + ' — ' + log.length + ' recorded (one per closed interval)';
+    sum.textContent = 'Signals — ' + tf + ' — ' + log.length + ' recorded — click one to load it into the calculators';
     tl.innerHTML =
-      log.map((e) => `
-        <div class="tl-item">
-          <span class="tl-time">${localTime(e.time)}</span>
-          <span class="signal ${setupClass(e.type)}">${e.type}</span>
-          <span class="tl-detail">
-            ${e.entry ? 'entry ' + fmt(e.entry) : ''}
-            ${e.stopLoss ? ' | SL ' + fmt(e.stopLoss) : ''}
-            ${e.tp1 ? ' | TP1 ' + fmt(e.tp1) + ' TP2 ' + fmt(e.tp2) + ' TP3 ' + fmt(e.tp3) : ''}
-            ${e.trigger ? ' | ' + e.trigger : ''}
-          </span>
-        </div>`).join('');
+      log.map((e, idx) => {
+        if (e.entry === null || e.entry === undefined) {
+          return '<div class="tl-item"><span class="tl-time">' + localTime(e.time) + '</span>' +
+            '<span class="signal ' + setupClass(e.type) + '">' + e.type + '</span>' +
+            '<span class="tl-detail">no levels — nothing to calculate</span></div>';
+        }
+        const picked = histSel[tf] === idx ? ' picked' : '';
+        return '<div class="tl-item clickable' + picked + '" data-idx="' + idx + '">' +
+          '<span class="tl-time">' + localTime(e.time) + '</span>' +
+          '<span class="signal ' + setupClass(e.type) + '">' + e.type + '</span>' +
+          '<span class="tl-detail">' +
+          'entry ' + fmt(e.entry) + ' | SL ' + fmt(e.stopLoss) +
+          ' | TP1 ' + fmt(e.tp1) + ' TP2 ' + fmt(e.tp2) + ' TP3 ' + fmt(e.tp3) +
+          (e.trigger ? ' | ' + e.trigger : '') + '</span></div>';
+      }).join('');
+    tl.querySelectorAll('.tl-item.clickable').forEach((row) =>
+      row.addEventListener('click', () => {
+        const idx = parseInt(row.dataset.idx, 10);
+        histSel[activeTf] = (histSel[activeTf] === idx) ? null : idx;
+        selectTf(activeTf);
+      })
+    );
   }
 
   renderBacktest(tf);

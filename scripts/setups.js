@@ -19,6 +19,7 @@ function loadLog() { return loadJson(LOG_FILE, {}); }
 
 function changed(prev, cur, tf) {
   if (!prev) return true;
+  if (prev.barT === cur.barT) return false; // strict: one signal per closed bar
   if (prev.type === cur.type && prev.entry === cur.entry) return false;
   const hold = HOLD_BARS[tf] || 3;
   const elapsed = (cur.barT - prev.barT);
@@ -73,8 +74,10 @@ function computeAll() {
         out[sym].timeframes[tf] = setup;
 
         const bars = analysis.bars;
-        const closedBarT = bars && bars.length >= 2
-          ? Date.parse(bars[bars.length - 2].t) || 0
+        // analysis.bars already exclude the forming bar (see dropForming),
+        // so the last bar IS the last closed bar.
+        const closedBarT = bars && bars.length >= 1
+          ? Date.parse(bars[bars.length - 1].t) || 0
           : 0;
 
         const stateKey = sym + '_' + tf;

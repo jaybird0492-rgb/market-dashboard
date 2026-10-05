@@ -43,7 +43,9 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
 - Autopsy: `scripts/autopsy.js` → `web/data/autopsy.json` + `/api/autopsy`; index
   "Mistakes & strengths" board; per-TF panel on asset pages. Weak = <40% TP1 win, n≥5.
 - Costs: `FEE_RT` (0.1%/signal) in `setup_backtest.js` + paper fills. Funding NOT modeled.
-- Asset page: hit rate = TP1/(TP1+SL); futures P&L calc (margin×lev, 40/40/20, fees, liq warn).
+- Asset page: hit rate = TP1/(TP1+SL); futures P&L calc (margin×lev, 40/40/20, fees, liq warn);
+  timeline rows clickable → loads that signal into setup + calculators; closed-bar engine
+  (dropForming in ta.js, strict one-per-bar stamp) so box entry always matches a stamped row.
 - Nov 1 package: readiness panel (paper green + 1D edge + manual rails toggle),
   size calculator on asset setup panels, pain stats (maxConsecSL, worstPct) in autopsy.
   STATE OWNERSHIP: CI owns `data/live/paper_state.json` (tracked; `update.yml` runs the bot

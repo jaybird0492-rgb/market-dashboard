@@ -246,9 +246,16 @@ function computeSetup(t, bias, bars) {
   return buildSetup(bars, t.tf, bias);
 }
 
+// Exchanges return the still-forming candle as the last row. Signals must come
+// from closed bars only, so the forming bar is dropped before any computation.
+// Displayed entry/price therefore always matches a stamped log row.
+function dropForming(bars) {
+  if (!bars || bars.length <= 1) return bars || [];
+  return bars.slice(0, -1);
+}
+
 // ---------- Asset assembly ----------
-const DAILY_FILES = {
-  BTC: 'BTC_1d.csv', ETH: 'ETH_1d.csv', SOL: 'SOL_1d.csv',
+const DAILY_FILES = {  BTC: 'BTC_1d.csv', ETH: 'ETH_1d.csv', SOL: 'SOL_1d.csv',
   XRP: 'XRP_1d.csv', BNB: 'BNB_1d.csv', HYPE: 'HYPE_1d.csv',
 };
 const NAMES = {
@@ -270,9 +277,10 @@ function getAsset(sym) {
   const fourH = fs.existsSync(fourHPath) ? validRows(loadCsv(fourHPath)) : resample(hourly.slice(-2200), 4 * HOUR);
   if (!daily.length || !hourly.length) return null;
 
-  const bars1H = hourly.slice(-2200);
-  const bars4H = fourH.slice(-2200);
-  const bars1D = daily.slice(-2200);
+  const bars1H = dropForming(hourly.slice(-2200));
+  const bars4H = dropForming(fourH.slice(-2200));
+  const bars1D = dropForming(daily.slice(-2200));
+  if (!bars1H.length || !bars4H.length || !bars1D.length) return null;
 
   const tfs = {
     '1H': analyze(bars1H, '1H'),
