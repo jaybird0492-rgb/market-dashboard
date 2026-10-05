@@ -1,21 +1,21 @@
 {
   "cursor": {
-    "BTC_1H": 1791169200000,
+    "BTC_1H": 1791172800000,
     "BTC_4H": 1791158400000,
     "BTC_1D": 1791072000000,
-    "ETH_1H": 1791169200000,
+    "ETH_1H": 1791172800000,
     "ETH_4H": 1791158400000,
     "ETH_1D": 1791072000000,
-    "SOL_1H": 1791169200000,
+    "SOL_1H": 1791172800000,
     "SOL_4H": 1791158400000,
     "SOL_1D": 1791072000000,
-    "XRP_1H": 1791169200000,
+    "XRP_1H": 1791172800000,
     "XRP_4H": 1791158400000,
     "XRP_1D": 1791072000000,
-    "BNB_1H": 1791169200000,
+    "BNB_1H": 1791172800000,
     "BNB_4H": 1791158400000,
     "BNB_1D": 1791072000000,
-    "HYPE_1H": 1791169200000,
+    "HYPE_1H": 1791172800000,
     "HYPE_4H": 1791158400000,
     "HYPE_1D": 1791072000000
   },
@@ -133,6 +133,40 @@
       "tp3": 127.71,
       "openedAt": 1791115200000,
       "score": 55.2,
+      "filled1": false,
+      "filled2": false,
+      "filled3": false,
+      "remaining": 1,
+      "realized": 0
+    },
+    "SOL_1H": {
+      "sym": "SOL",
+      "tf": "1H",
+      "side": "BUY",
+      "entry": 120.47,
+      "stop": 119.72,
+      "tp1": 121.22,
+      "tp2": 121.97,
+      "tp3": 122.72,
+      "openedAt": 1791172800000,
+      "score": 26.3,
+      "filled1": false,
+      "filled2": false,
+      "filled3": false,
+      "remaining": 1,
+      "realized": 0
+    },
+    "BNB_1H": {
+      "sym": "BNB",
+      "tf": "1H",
+      "side": "BUY",
+      "entry": 788.8,
+      "stop": 783.85,
+      "tp1": 793.75,
+      "tp2": 798.69,
+      "tp3": 803.64,
+      "openedAt": 1791172800000,
+      "score": 42.7,
       "filled1": false,
       "filled2": false,
       "filled3": false,
@@ -1112,11 +1146,24 @@
       "realizedPct": 0.54,
       "realizedUsd": 5.43,
       "score": 63.1
+    },
+    {
+      "sym": "ETH",
+      "tf": "1H",
+      "side": "BUY",
+      "entry": 2701.73,
+      "openedAt": 1791172800000,
+      "closedAt": "2026-10-05T05:00:00.000Z",
+      "status": "SL_AFTER_TP",
+      "realizedPct": 0.1,
+      "realizedUsd": 0.99,
+      "feeUsd": 1,
+      "score": 39
     }
   ],
   "initialized": true,
   "skipped": {
-    "weak": 31,
-    "size": 69
+    "weak": 32,
+    "size": 71
   }
 }
