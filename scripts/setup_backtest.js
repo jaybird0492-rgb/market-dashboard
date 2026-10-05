@@ -10,6 +10,11 @@ const LOG_FILE = path.join(LIVE, 'setup_log.json');
 const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
 const TFS = ['1H', '4H', '1D'];
 
+// Round-trip cost drag per evaluated signal, as a fraction of notional.
+// Covers exchange fee + slippage on majors (~0.05%/side). Perp funding NOT
+// modeled — add it before judging any leveraged version of these numbers.
+const FEE_RT = 0.001;
+
 function loadCsv(file) {
   if (!fs.existsSync(file)) return [];
   const txt = fs.readFileSync(file, 'utf8').trim();
@@ -102,6 +107,7 @@ function evaluate(sym, tf, logEntry) {
     status = 'OPEN';
     realized += fracOpen * closeRet(long, last.close, entry);
   }
+  if (status !== 'PENDING') realized -= FEE_RT;
   return {
     status,
     hit: hit.join('+'),
@@ -190,4 +196,4 @@ if (require.main === module) {
   console.log('Total signals evaluated:', total);
 }
 
-module.exports = { evaluateAll, evaluate };
+module.exports = { evaluateAll, evaluate, FEE_RT };

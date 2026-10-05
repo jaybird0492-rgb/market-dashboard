@@ -8,6 +8,7 @@ const path = require('path');
 const { loadCsv, validRows, resample } = require('./ta');
 const { loadLog } = require('./setups');
 const { bandOf } = require('./precompute');
+const { FEE_RT } = require('./setup_backtest');
 
 const LIVE = path.join(__dirname, '..', 'data', 'live');
 const RAW = path.join(__dirname, '..', 'data', 'raw');
@@ -125,12 +126,15 @@ function track(pos, bars) {
   return { pos, closed: null }; // still open
 }
 function finish(pos, status, bar) {
+  const gross = pos.realized;
+  const net = gross - FEE_RT;
   return {
     sym: pos.sym, tf: pos.tf, side: pos.side,
     entry: pos.entry, openedAt: pos.openedAt,
     closedAt: new Date(barT(bar)).toISOString(), status,
-    realizedPct: +(pos.realized * 100).toFixed(2),
-    realizedUsd: +(pos.realized * NOTIONAL_USD).toFixed(2),
+    realizedPct: +(net * 100).toFixed(2),
+    realizedUsd: +(net * NOTIONAL_USD).toFixed(2),
+    feeUsd: +(FEE_RT * NOTIONAL_USD).toFixed(2),
     score: pos.score,
   };
 }

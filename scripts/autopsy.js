@@ -63,12 +63,19 @@ function buildAutopsy() {
       const decided = results.filter((r) => r.bt.hit.includes('TP1') || r.bt.status === 'SL').length;
       const tp1 = results.filter((r) => r.bt.hit.includes('TP1')).length;
       const avg = results.length ? results.reduce((a, r) => a + r.bt.realized, 0) / results.length : 0;
+      let run = 0, maxRun = 0, worst = 0;
+      for (const r of results) {
+        if (r.bt.status === 'SL') { run++; if (run > maxRun) maxRun = run; }
+        else run = 0;
+        if (r.bt.realized < worst) worst = r.bt.realized;
+      }
       perAsset[sym][tf] = {
         sl: sls.length, mistakes,
         recent: recent.slice(0, 8),
         n: results.length,
         winRate: decided ? Math.round((tp1 / decided) * 100) : 0,
         avgPct: +(avg * 100).toFixed(2),
+        pain: { maxConsecSL: maxRun, worstPct: +(worst * 100).toFixed(2) },
       };
       unitPerf.push({ sym, tf, n: results.length, winRate: perAsset[sym][tf].winRate, avgPct: perAsset[sym][tf].avgPct });
     }

@@ -183,6 +183,29 @@ function renderAutopsyBoard(data) {
     'Every pure stop-out gets one diagnosed mistake from its own factors (no hindsight beyond the fill bars). Per-asset detail lives on each coin page.';
 }
 
+function renderReadiness(paper, autopsy) {
+  const items = [];
+  const p = paper.stats;
+  const paperOk = p.closed >= 10 && p.totalUsd > 0;
+  items.push({ label: 'Sized-bot paper profitable (≥10 closed): $' + p.totalUsd.toFixed(2) + ' over ' + p.closed, ok: paperOk });
+  let edgeOk = false, edgeLabel = '1D edge holding (BTC/ETH win ≥60%)';
+  try {
+    const b = autopsy.perAsset.BTC['1D'].winRate, e = autopsy.perAsset.ETH['1D'].winRate;
+    edgeOk = b >= 60 && e >= 60;
+    edgeLabel = '1D edge holding: BTC ' + b + '% / ETH ' + e + '% (need ≥60%)';
+  } catch (err) { /* autopsy missing */ }
+  items.push({ label: edgeLabel, ok: edgeOk });
+  const railsOk = localStorage.getItem('mr_rails_ready') === '1';
+  items.push({ label: 'Live rails ready (testnet fills, min size, kill switch, losable stake)', ok: railsOk, manual: true });
+  document.getElementById('readyChips').innerHTML = items.map((it) =>
+    '<span class="chip ' + (it.ok ? 'sig-long' : 'sig-out') + '">' + (it.ok ? '✓ ' : '✗ ') + it.label + '</span>').join('');
+  const n = items.filter((it) => it.ok).length;
+  document.getElementById('readyNote').textContent = n === 3
+    ? 'READY — all three conditions met. Start minimum-size real on 1D signals only.'
+    : 'NOT READY — ' + n + '/3. No real money until all three are green.';
+  document.getElementById('railsBtn').textContent = railsOk ? 'Live rails ready ✓ (click to undo)' : 'Mark live rails ready';
+}
+
 async function init() {
   let track = null;
   try {
@@ -207,6 +230,8 @@ async function init() {
   try {
     const autopsy = await loadJson('/api/autopsy', 'data/autopsy.json');
     renderAutopsyBoard(autopsy);
+    const paper2 = await loadJson('/api/paper', 'data/paper.json').catch(() => null);
+    if (paper2) renderReadiness(paper2, autopsy);
   } catch (e) {
     document.getElementById('autopsyNote').textContent = 'Autopsy unavailable: ' + e.message;
   }
@@ -223,6 +248,12 @@ document.getElementById('refreshBtn').addEventListener('click', async () => {
     btn.disabled = false;
     btn.textContent = 'Refresh signals';
   }
+});
+
+document.getElementById('railsBtn').addEventListener('click', () => {
+  const cur = localStorage.getItem('mr_rails_ready') === '1';
+  localStorage.setItem('mr_rails_ready', cur ? '0' : '1');
+  init();
 });
 
 init();

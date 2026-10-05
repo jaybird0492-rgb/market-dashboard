@@ -131,6 +131,19 @@ function selectTf(tf) {
     <p class="read-text">${t.text}</p>`;
 
   const s = t.setup;
+  const riskDist = (s.entry !== null && s.stopLoss !== null) ? Math.abs(s.entry - s.stopLoss) : null;
+  const acctRaw = parseFloat(localStorage.getItem('mr_acct') || '10000');
+  const riskRaw = parseFloat(localStorage.getItem('mr_risk') || '1');
+  const acct = Number.isFinite(acctRaw) && acctRaw > 0 ? acctRaw : 10000;
+  const riskPct = Number.isFinite(riskRaw) && riskRaw > 0 ? riskRaw : 1;
+  let sizeHtml = '';
+  if (riskDist) {
+    const riskUsd = acct * riskPct / 100;
+    const qty = riskUsd / riskDist;
+    const qFmt = qty >= 1000 ? qty.toLocaleString('en-US', { maximumFractionDigits: 2 }) : qty.toFixed(4);
+    sizeHtml = `<div class="size-calc">Account $ <input id="sizeAcct" type="number" min="0" value="${acct}"> · risk <input id="sizeRisk" type="number" min="0" max="100" step="0.1" value="${riskPct}">% → ` +
+      `<b>${qFmt} ${SYMBOL}</b> ($${(qty * s.entry).toLocaleString('en-US', { maximumFractionDigits: 0 })} notional, ~$${(qty * s.entry * 0.001).toFixed(2)} fees) to lose $${riskUsd.toFixed(2)} at the stop.</div>`;
+  }
   document.getElementById('setupPanel').innerHTML = `
     <div class="setup-head">
       <span class="signal ${setupClass(s.type)}">SETUP: ${s.type}</span>
@@ -144,7 +157,8 @@ function selectTf(tf) {
       <div class="setup-box tp"><div class="box-label">TP2 (40%)</div><div class="box-val">${fmt(s.tp2)}</div><div class="box-sub">RR 1:2</div></div>
       <div class="setup-box tp"><div class="box-label">TP3 (20%)</div><div class="box-val">${fmt(s.tp3)}</div><div class="box-sub">RR 1:3</div></div>
     </div>` : ''}
-    <p class="read-text">${s.text}</p>`;
+    <p class="read-text">${s.text}</p>
+    ${sizeHtml}`;
 
   const log = (asset.logs && asset.logs[tf]) || [];
   const tl = document.getElementById('timeline');
@@ -170,6 +184,16 @@ function selectTf(tf) {
 
   renderBacktest(tf);
   renderAutopsy(tf);
+  const acctEl = document.getElementById('sizeAcct');
+  if (acctEl) {
+    const save = () => {
+      localStorage.setItem('mr_acct', document.getElementById('sizeAcct').value);
+      localStorage.setItem('mr_risk', document.getElementById('sizeRisk').value);
+      selectTf(activeTf);
+    };
+    acctEl.addEventListener('change', save);
+    document.getElementById('sizeRisk').addEventListener('change', save);
+  }
 }
 
 function renderAutopsy(tf) {
@@ -190,6 +214,7 @@ function renderAutopsy(tf) {
     '<b>' + r.mistake.replace(/_/g, ' ') + '</b> — ' + r.note + '</span></div>'
   ).join('');
   box.innerHTML = '<h2>Signal autopsy — ' + tf + ' (' + rec.sl + ' stop-outs)</h2>' +
+    '<div class="bt-summary">Worst run: ' + rec.pain.maxConsecSL + ' straight stops · worst single ' + rec.pain.worstPct + '% (fees included).</div>' +
     '<div class="bt-chips">' + chips + '</div>' + rows;
 }
 
