@@ -204,6 +204,7 @@ function selectTf(tf) {
     ${futHtml}`;
 
   const sum = document.getElementById('timelineSummary');
+  const tl = document.getElementById('timeline');
   if (!log.length) {
     sum.textContent = 'Signals — ' + tf + ' — none recorded yet (next interval close will add one)';
     tl.innerHTML = '';
