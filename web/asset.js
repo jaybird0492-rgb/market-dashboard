@@ -144,6 +144,29 @@ function selectTf(tf) {
     sizeHtml = `<div class="size-calc">Account $ <input id="sizeAcct" type="number" min="0" value="${acct}"> · risk <input id="sizeRisk" type="number" min="0" max="100" step="0.1" value="${riskPct}">% → ` +
       `<b>${qFmt} ${SYMBOL}</b> ($${(qty * s.entry).toLocaleString('en-US', { maximumFractionDigits: 0 })} notional, ~$${(qty * s.entry * 0.001).toFixed(2)} fees) to lose $${riskUsd.toFixed(2)} at the stop.</div>`;
   }
+  let futHtml = '';
+  if (riskDist && (s.type === 'BUY' || s.type === 'SELL')) {
+    const dir = s.type === 'BUY' ? 1 : -1;
+    const mRaw = parseFloat(localStorage.getItem('mr_margin') || '1000');
+    const lRaw = parseFloat(localStorage.getItem('mr_lev') || '5');
+    const margin = Number.isFinite(mRaw) && mRaw > 0 ? mRaw : 1000;
+    const lev = Number.isFinite(lRaw) && lRaw > 0 ? lRaw : 5;
+    const notion = margin * lev;
+    const qty = notion / s.entry;
+    const leg = (px) => dir * (px - s.entry) * qty;
+    const g1 = leg(s.tp1), g2 = leg(s.tp2), g3 = leg(s.tp3);
+    const loss = -Math.abs(s.entry - s.stopLoss) * qty;
+    const fees = notion * 0.001;
+    const money = (v) => (v >= 0 ? '+$' : '−$') + Math.abs(v).toFixed(2);
+    const plan = 0.4 * g1 + 0.4 * g2 + 0.2 * g3 - fees;
+    const liq = Math.abs(loss) + fees >= margin;
+    futHtml = `<div class="size-calc">Futures — margin $ <input id="futMargin" type="number" min="0" value="${margin}"> · <input id="futLev" type="number" min="1" max="125" step="1" value="${lev}">x → ` +
+      `$${notion.toLocaleString('en-US', { maximumFractionDigits: 0 })} position · ` +
+      `all out at TP1 <b>${money(g1 - fees)}</b> · 40/40/20 plan <b>${money(plan)}</b> · full TP3 <b>${money(g3 - fees)}</b> · ` +
+      `stop hit <b>${money(loss - fees)}</b> (margin left $${Math.max(margin + loss - fees, 0).toFixed(2)})` +
+      (liq ? ` · <b style="color:#f87171">LIQUIDATION RISK — loss can exceed margin</b>` : '') +
+      `<br><span class="custom-note">After fees 0.1%. Funding not included — check your exchange.</span></div>`;
+  }
   document.getElementById('setupPanel').innerHTML = `
     <div class="setup-head">
       <span class="signal ${setupClass(s.type)}">SETUP: ${s.type}</span>
@@ -158,7 +181,8 @@ function selectTf(tf) {
       <div class="setup-box tp"><div class="box-label">TP3 (20%)</div><div class="box-val">${fmt(s.tp3)}</div><div class="box-sub">RR 1:3</div></div>
     </div>` : ''}
     <p class="read-text">${s.text}</p>
-    ${sizeHtml}`;
+    ${sizeHtml}
+    ${futHtml}`;
 
   const log = (asset.logs && asset.logs[tf]) || [];
   const tl = document.getElementById('timeline');
@@ -194,6 +218,16 @@ function selectTf(tf) {
     acctEl.addEventListener('change', save);
     document.getElementById('sizeRisk').addEventListener('change', save);
   }
+  const futEl = document.getElementById('futMargin');
+  if (futEl) {
+    const saveFut = () => {
+      localStorage.setItem('mr_margin', document.getElementById('futMargin').value);
+      localStorage.setItem('mr_lev', document.getElementById('futLev').value);
+      selectTf(activeTf);
+    };
+    futEl.addEventListener('change', saveFut);
+    document.getElementById('futLev').addEventListener('change', saveFut);
+  }
 }
 
 function renderAutopsy(tf) {
@@ -210,7 +244,7 @@ function renderAutopsy(tf) {
   const rows = rec.recent.map((r) =>
     '<div class="tl-item"><span class="tl-time">' + localTime(r.time) + '</span>' +
     '<span class="signal ' + setupClass(r.type) + '">' + r.type + '</span>' +
-    '<span class="tl-detail">entry ' + fmt(r.entry) + ' · score ' + r.score + ' · fell ' + r.maePct + '%<br>' +
+    '<span class="tl-detail">entry ' + fmt(r.entry) + ' · score ' + r.score + ' · fell ' + Math.abs(r.maePct) + '%<br>' +
     '<b>' + r.mistake.replace(/_/g, ' ') + '</b> — ' + r.note + '</span></div>'
   ).join('');
   box.innerHTML = '<h2>Signal autopsy — ' + tf + ' (' + rec.sl + ' stop-outs)</h2>' +
@@ -256,8 +290,8 @@ function renderBacktest(tf) {
     return;
   }
   const s = bt.stats;
-  const decided = s.sl + s.slAfterTp + s.tp3;
-  const hitRate = decided ? Math.round(((s.tp1 + s.tp2 + s.tp3) / decided) * 100) : 0;
+  const decided = s.tp1 + s.sl;
+  const hitRate = decided ? Math.round((s.tp1 / decided) * 100) : 0;
   const chips = `
     <div class="bt-chips">
       <span class="chip sig-out">${s.sl} stopped out</span>
@@ -270,7 +304,7 @@ function renderBacktest(tf) {
     </div>
     <div class="bt-summary">
       ${s.total} tradable signals · ${decided} decided ·
-      <b>hit rate ${hitRate}%</b> (${s.tp1 + s.tp2 + s.tp3} of ${decided} hit a target) ·
+      <b>hit rate ${hitRate}%</b> (${s.tp1} of ${decided} hit TP1 without stopping out first) ·
       avg realized <b>${btRealized(s.avgRealized)}</b> ·
       avg MFE <b>${btRealized(s.avgMfe)}</b> · avg MAE <b>${btRealized(s.avgMae)}</b>
     </div>`;
