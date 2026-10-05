@@ -40,6 +40,8 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
 - Dead-but-harmless: `/api/equity` + `equity.json` still built (BTC/ETH 55/45 baseline);
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
 - Paper bot: `scripts/paper_bot.js` (long+flat, 40/40/20, SL→entry at TP1).
+- Autopsy: `scripts/autopsy.js` → `web/data/autopsy.json` + `/api/autopsy`; index
+  "Mistakes & strengths" board; per-TF panel on asset pages. Weak = <40% TP1 win, n≥5.
   STATE OWNERSHIP: CI owns `data/live/paper_state.json` (tracked; `update.yml` runs the bot
   hourly after setups). NEVER run the bare bot locally — it would fork the state.
   Local tests MUST use `node scripts/paper_bot.js --state <temp-path>`.

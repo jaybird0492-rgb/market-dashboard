@@ -161,6 +161,28 @@ function renderPaper(data) {
     'Paper only — no real orders. $' + data.notional + ' notional per trade, long + flat, stop moves to entry at TP1.';
 }
 
+function renderAutopsyBoard(data) {
+  let mHtml = '<tr><th>#</th><th>TF</th><th>Mistake</th><th>Count</th><th>Coins</th><th>Fix</th></tr>';
+  data.mistakes.forEach((m, i) => {
+    mHtml += '<tr><td>' + (i + 1) + '</td><td>' + m.tf + '</td>' +
+      '<td class="sym-cell">' + m.mistake.replace(/_/g, ' ') + '</td>' +
+      '<td>' + m.count + '</td><td>' + m.syms + '</td>' +
+      '<td class="fix-cell">' + m.fix + '</td></tr>';
+  });
+  document.getElementById('mistakeTable').innerHTML = mHtml;
+  let sHtml = '<tr><th>#</th><th>Coin</th><th>TF</th><th>Signals</th><th>Win</th><th>Avg/signal</th></tr>';
+  data.strengths.forEach((s, i) => {
+    sHtml += '<tr><td>' + (i + 1) + '</td>' +
+      '<td class="sym-cell"><a href="asset.html?symbol=' + s.sym + '">' + s.sym + '</a></td>' +
+      '<td>' + s.tf + '</td><td>' + s.n + '</td><td>' + s.winRate + '%</td>' +
+      '<td class="pos">+' + s.avgPct.toFixed(2) + '%</td></tr>';
+  });
+  if (!data.strengths.length) sHtml += '<tr><td colspan="6">No profitable unit yet.</td></tr>';
+  document.getElementById('strengthTable').innerHTML = sHtml;
+  document.getElementById('autopsyNote').textContent =
+    'Every pure stop-out gets one diagnosed mistake from its own factors (no hindsight beyond the fill bars). Per-asset detail lives on each coin page.';
+}
+
 async function init() {
   let track = null;
   try {
@@ -181,6 +203,12 @@ async function init() {
     renderPaper(paper);
   } catch (e) {
     document.getElementById('paperNote').textContent = 'Paper bot unavailable: ' + e.message;
+  }
+  try {
+    const autopsy = await loadJson('/api/autopsy', 'data/autopsy.json');
+    renderAutopsyBoard(autopsy);
+  } catch (e) {
+    document.getElementById('autopsyNote').textContent = 'Autopsy unavailable: ' + e.message;
   }
 }
 

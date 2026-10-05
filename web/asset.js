@@ -5,6 +5,7 @@ const TV_SYMBOL = { BTC: 'BITSTAMP:BTCUSD', ETH: 'BITSTAMP:ETHUSD', SOL: 'COINBA
 const TV_INTERVAL = { '1H': '60', '4H': '240', '1D': 'D' };
 
 let asset = null;
+let autopsy = null;
 let activeTf = '1D';
 let tvWidget = null;
 
@@ -48,6 +49,7 @@ async function loadJson(apiUrl, staticPath) {
 async function load() {
   const resolved = await loadJson('/api/asset?symbol=' + SYMBOL, 'data/asset_' + SYMBOL + '.json');
   asset = resolved;
+  try { autopsy = await loadJson('/api/autopsy', 'data/autopsy.json'); } catch (e) { autopsy = null; }
 
   document.title = asset.name + ' — ' + SYMBOL + ' analysis';
   document.getElementById('assetTitle').textContent = asset.name + ' (' + SYMBOL + ')';
@@ -167,6 +169,28 @@ function selectTf(tf) {
   }
 
   renderBacktest(tf);
+  renderAutopsy(tf);
+}
+
+function renderAutopsy(tf) {
+  const box = document.getElementById('autopsyPanel');
+  const rec = autopsy && autopsy.perAsset && autopsy.perAsset[SYMBOL] && autopsy.perAsset[SYMBOL][tf];
+  if (!rec || !rec.sl) {
+    box.innerHTML = '<h2>Signal autopsy — ' + tf + '</h2><div class="bt-summary">No stop-outs on this timeframe — nothing to diagnose yet.</div>';
+    return;
+  }
+  const chips = Object.entries(rec.mistakes)
+    .sort((a, b) => b[1] - a[1])
+    .map(([m, n]) => '<span class="chip sig-out">' + m.replace(/_/g, ' ') + ' ×' + n + '</span>')
+    .join('');
+  const rows = rec.recent.map((r) =>
+    '<div class="tl-item"><span class="tl-time">' + localTime(r.time) + '</span>' +
+    '<span class="signal ' + setupClass(r.type) + '">' + r.type + '</span>' +
+    '<span class="tl-detail">entry ' + fmt(r.entry) + ' · score ' + r.score + ' · fell ' + r.maePct + '%<br>' +
+    '<b>' + r.mistake.replace(/_/g, ' ') + '</b> — ' + r.note + '</span></div>'
+  ).join('');
+  box.innerHTML = '<h2>Signal autopsy — ' + tf + ' (' + rec.sl + ' stop-outs)</h2>' +
+    '<div class="bt-chips">' + chips + '</div>' + rows;
 }
 
 function btClass(status) {

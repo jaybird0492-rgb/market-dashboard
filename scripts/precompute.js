@@ -4,6 +4,7 @@ const { computeEquity, seasonality, annualized } = require('./sim');
 const { getAsset } = require('./ta');
 const { computeAll, loadLog } = require('./setups');
 const { evaluateAll } = require('./setup_backtest');
+const { buildAutopsy } = require('./autopsy');
 
 const WEB = path.join(__dirname, '..', 'web', 'data');
 const SYMBOLS = ['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'HYPE'];
@@ -114,6 +115,7 @@ function buildTrack() {
 function buildAll() {
   write('equity.json', buildEquity());
   write('track_record.json', buildTrack());
+  write('autopsy.json', buildAutopsy());
   const setups = computeAll();
   write('setups.json', { updatedAt: new Date().toISOString(), setups: setups.setups, logs: setups.logs });
   for (const sym of SYMBOLS) {
@@ -136,4 +138,4 @@ if (require.main === module) {
     process.exit(1);
   }
 }
-module.exports = { buildAll, buildTrack, bandOf };
+module.exports = { buildAll, buildTrack, bandOf, buildAutopsy };

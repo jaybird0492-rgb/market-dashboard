@@ -7,6 +7,7 @@ const { computeAll, loadLog } = require('./scripts/setups');
 const { evaluateAll } = require('./scripts/setup_backtest');
 const { buildPublic } = require('./scripts/paper_bot');
 const { buildTrack } = require('./scripts/precompute');
+const { buildAutopsy } = require('./scripts/autopsy');
 
 const ROOT = __dirname;
 const WEB = path.join(ROOT, 'web');
@@ -78,6 +79,11 @@ const server = http.createServer((req, res) => {
   if (pathname === '/api/track') {
     res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
     res.end(JSON.stringify(buildTrack()));
+    return;
+  }
+  if (pathname === '/api/autopsy') {
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+    res.end(JSON.stringify(buildAutopsy()));
     return;
   }
   if (pathname === '/api/paper') {
