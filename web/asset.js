@@ -6,6 +6,7 @@ const TV_INTERVAL = { '1H': '60', '4H': '240', '1D': 'D' };
 
 let asset = null;
 let autopsy = null;
+let trackData = null;
 let histSel = {};
 let activeTf = '1D';
 let tvWidget = null;
@@ -56,6 +57,7 @@ async function load() {
   const resolved = await loadJson('/api/asset?symbol=' + SYMBOL, 'data/asset_' + SYMBOL + '.json');
   asset = resolved;
   try { autopsy = await loadJson('/api/autopsy', 'data/autopsy.json'); } catch (e) { autopsy = null; }
+  try { trackData = await loadJson('/api/track', 'data/track_record.json'); } catch (e) { trackData = null; }
 
   document.title = asset.name + ' — ' + SYMBOL + ' analysis';
   document.getElementById('assetTitle').textContent = asset.name + ' (' + SYMBOL + ')';
@@ -237,6 +239,7 @@ function selectTf(tf) {
 
   renderBacktest(tf);
   renderAutopsy(tf);
+  renderGuide(tf, s, viewingHist, sel ? sel.time : null);
   const acctEl = document.getElementById('sizeAcct');
   if (acctEl) {
     const save = () => {
@@ -279,6 +282,70 @@ function renderAutopsy(tf) {
   box.innerHTML = '<h2>Signal autopsy — ' + tf + ' (' + rec.sl + ' stop-outs)</h2>' +
     '<div class="bt-summary">Worst run: ' + rec.pain.maxConsecSL + ' straight stops · worst single ' + rec.pain.worstPct + '% (fees included).</div>' +
     '<div class="bt-chips">' + chips + '</div>' + rows;
+}
+
+function bandOf(score) {
+  const sc = Math.abs(score || 0);
+  return sc >= 50 ? '50+' : sc >= 35 ? '35-50' : sc >= 20 ? '20-35' : '0-20';
+}
+
+function renderGuide(tf, s, viewingHist, selTime) {
+  const box = document.getElementById('guidePanel');
+  const long = s.type === 'BUY';
+  const f = s.factors || {};
+  if (s.type !== 'BUY' && s.type !== 'SELL') {
+    box.innerHTML = '<h2>Trade guide — ' + tf + '</h2><div class="bt-summary">No trade to consider — the engine itself is on WAIT ' +
+      '(score ' + (s.score >= 0 ? '+' : '') + s.score + '). Waiting <i>is</i> the decision here.</div>';
+    return;
+  }
+  const why = [];
+  const tr = f.trend || 0;
+  why.push(tr >= 0.8 ? 'Trend is firmly up — price holds above its major averages.'
+    : tr >= 0.3 ? 'Trend leans up but is not commanding.' : 'Trend is weak — this signal leans on momentum, not trend.');
+  const rsi = f.rsi;
+  why.push(rsi === null || rsi === undefined ? 'RSI unavailable.'
+    : long && rsi >= 70 ? 'RSI ' + rsi + ' is overbought — you would be buying high; history punishes this (see autopsy).'
+    : !long && rsi <= 30 ? 'RSI ' + rsi + ' is oversold — you would be selling low.'
+    : 'RSI ' + rsi + ' sits in the healthy zone — momentum without exhaustion.');
+  const adx = f.adx;
+  why.push(adx === null || adx === undefined ? 'ADX unavailable.'
+    : adx < 18 ? 'ADX ' + adx + ' means chop — trends fail here more than anywhere.'
+    : adx < 25 ? 'ADX ' + adx + ' — a trend is forming but fragile.'
+    : 'ADX ' + adx + ' — a strong, proven trend backs this trade.');
+  why.push((f.structure || 0) >= 0
+    ? 'Price sits in the upper part of its recent range — breakout side.'
+    : 'Price sits low in its recent range — there is overhead supply to chew through.');
+  const band = trackData && trackData.bands && trackData.bands[SYMBOL] && trackData.bands[SYMBOL][tf]
+    ? trackData.bands[SYMBOL][tf][bandOf(s.score)] : null;
+  const bandLine = band
+    ? 'This exact conviction band won ' + band.winRate + '% over ' + band.n + ' past ' + SYMBOL + ' ' + tf + ' signals (avg ' + band.avgPct + '%).'
+    : 'Not enough history in this band yet — treat as unproven.';
+  const size = trackData && trackData.perCoin && trackData.perCoin[SYMBOL] ? trackData.perCoin[SYMBOL].size : null;
+  const rec = autopsy && autopsy.perAsset && autopsy.perAsset[SYMBOL] && autopsy.perAsset[SYMBOL][tf];
+  const topRisks = rec ? Object.entries(rec.mistakes).sort((a, b) => b[1] - a[1]).slice(0, 2)
+    .map(([m, n]) => m.replace(/_/g, ' ') + ' ×' + n).join(' · ') : 'no stop-outs yet';
+  const checks = [];
+  const aligned = (asset.bias === 'LONG' && long) || (asset.bias === 'SHORT' && !long);
+  checks.push({ ok: aligned, label: 'Trades with the 1D bias (' + asset.bias + ')' });
+  checks.push({ ok: !band || !band.weak, label: band ? 'Conviction band is proven (' + band.winRate + '% win)' : 'No band history — unproven' });
+  checks.push({ ok: !(size === 'REDUCED-1D-ONLY' && tf !== '1D'), label: size === 'REDUCED-1D-ONLY' && tf !== '1D' ? size + ': this coin earns 1D only' : 'Coin sizing allows this timeframe (' + (size || 'FULL') + ')' });
+  checks.push({ ok: long ? (rsi === null || rsi < 70) : (rsi === null || rsi > 30), label: 'Not chasing an extreme RSI' });
+  const pass = checks.filter((c) => c.ok).length;
+  const verdict = pass === 4 ? 'TAKE' : pass === 3 ? 'TAKE SMALL' : 'SKIP';
+  const vCls = pass === 4 ? 'sig-long' : pass === 3 ? 'sig-watch' : 'sig-out';
+  let histLine = '';
+  if (viewingHist && asset.backtest && asset.backtest[tf]) {
+    const r = asset.backtest[tf].results.find((x) => x.entry.time === selTime);
+    if (r) histLine = '<div class="bt-summary">What actually happened: <b>' + r.bt.status.replace(/_/g, ' ') + '</b> (' +
+      (r.bt.realized >= 0 ? '+' : '') + (r.bt.realized * 100).toFixed(2) + '%). Compare with the guide above — that gap is the lesson.</div>';
+  }
+  box.innerHTML = '<h2>Trade guide — ' + tf + ' ' + s.type + ' ' + (viewingHist ? '(picked signal)' : '(live)') + '</h2>' +
+    '<div class="signal ' + vCls + '">GUIDE: ' + verdict + '</div>' +
+    '<ul class="guide-list">' + why.map((w) => '<li>' + w + '</li>').join('') + '<li>' + bandLine + '</li></ul>' +
+    '<div class="bt-summary">Known risks on ' + SYMBOL + ' ' + tf + ': ' + topRisks + '.</div>' +
+    '<div class="bt-chips">' + checks.map((c) => '<span class="chip ' + (c.ok ? 'sig-long' : 'sig-out') + '">' + (c.ok ? '✓ ' : '✗ ') + c.label + '</span>').join('') + '</div>' +
+    histLine +
+    '<div class="bt-summary">Sizing: ' + (size === 'REDUCED-1D-ONLY' && tf !== '1D' ? 'half size or skip — this coin has not earned full intraday size.' : 'per the calculator below the setup boxes, risking no more than 1%.') + ' Stop moves to entry at TP1.</div>';
 }
 
 function btClass(status) {
