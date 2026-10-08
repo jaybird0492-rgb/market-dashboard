@@ -58,6 +58,7 @@ function buildTrack() {
   const perTf = {};
   const bands = {}; // bands[sym][tf][band] = {n, winRate, avgPct, weak}
   const overall = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
+  const d1stats = {};
   for (const sym of SYMBOLS) {
     const bt = evaluateAll(sym);
     const coin = { total: 0, sl: 0, slAfterTp: 0, tp1: 0, tp2: 0, tp3: 0, partial: 0, open: 0, sumRealized: 0, noTrade: 0 };
@@ -72,6 +73,11 @@ function buildTrack() {
       }
       coin.sumRealized += sumR; t.sumRealized += sumR; overall.sumRealized += sumR;
       coin.noTrade += noTrade; t.noTrade += noTrade; overall.noTrade += noTrade;
+      if (tf === '1D') {
+        const dec = bt[tf].results.filter((r) => r.bt.hit.includes('TP1') || r.bt.status === 'SL');
+        const w = dec.filter((r) => r.bt.hit.includes('TP1')).length;
+        d1stats[sym] = { winRate: dec.length ? Math.round((w / dec.length) * 100) : 0, n: dec.length };
+      }
       // Score-band history for this coin x TF.
       const bb = (bands[sym][tf] = {});
       for (const r of bt[tf].results) {
@@ -105,9 +111,14 @@ function buildTrack() {
       else perTf[tf][k] = +perTf[tf][k].toFixed(4);
     }
   }
-  // Per-coin sizing: full size only when the coin's history pays overall.
+  // Per-coin sizing follows DECIDED 1D outcomes only (TP1-hit or stopped; OPEN
+  // marks excluded so sizing never flip-flops on unrealized swings): FULL at
+  // >=50% win over >=2 decisions, else REDUCED-1D-ONLY. Intraday stays
+  // band-gated on every coin regardless.
   for (const sym of SYMBOLS) {
-    perCoin[sym].size = perCoin[sym].sumRealized >= 0 ? 'FULL' : 'REDUCED-1D-ONLY';
+    const d = d1stats[sym] || { winRate: 0, n: 0 };
+    perCoin[sym].d1winRate = d.winRate;
+    perCoin[sym].size = (d.n >= 2 && d.winRate >= 50) ? 'FULL' : 'REDUCED-1D-ONLY';
   }
   return { updatedAt: new Date().toISOString(), overall, perCoin, perTf, bands };
 }
