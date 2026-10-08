@@ -28,16 +28,61 @@
     if (v === null || v === undefined) return '-';
     return '$' + Number(v).toLocaleString('en-US', { maximumFractionDigits: v >= 10000 ? 0 : 2 });
   }
-  function findCoin(q) {
-    for (const s of Object.keys(COINS)) if (q.includes(s)) return s;
-    for (const [name, s] of Object.entries(ALIAS)) if (q.includes(name)) return s;
-    return null;
+  function lev(a, b) {
+    const m = a.length, n = b.length;
+    if (!m) return n; if (!n) return m;
+    let prev = Array.from({ length: n + 1 }, (_, j) => j);
+    for (let i = 1; i <= m; i++) {
+      let cur = [i];
+      for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+    return prev[n];
+  }
+  function clean(q) {
+    return ' ' + q.toUpperCase().replace(/[^A-Z0-9+]/g, ' ').replace(/\s+/g, ' ') + ' ';
+  }
+  function findCoins(q) {
+    const found = [];
+    for (const s of Object.keys(COINS)) {
+      const re = new RegExp('(^| )' + s + '( |$)');
+      if (re.test(q)) { found.push(s); continue; }
+    }
+    for (const [name, s] of Object.entries(ALIAS)) {
+      if (q.includes(' ' + name + ' ') && !found.includes(s)) found.push(s);
+    }
+    if (!found.length) {
+      const words = q.trim().split(' ');
+      const vocab = [...Object.keys(COINS), ...Object.keys(ALIAS)];
+      for (const w of words) {
+        if (w.length < 4) continue;
+        const lim = w.length <= 4 ? 2 : 3;
+        let best = null, bd = lim;
+        for (const v of vocab) {
+          const d = lev(w, v);
+          if (d < bd) { bd = d; best = v; }
+        }
+        if (best) {
+          const s = COINS[best] ? best : ALIAS[best];
+          if (s && !found.includes(s)) found.push(s);
+        }
+      }
+    }
+    return found;
   }
   function findTf(q) {
     for (const t of TFS) if (q.includes(t)) return t;
-    if (q.includes('HOURLY') || q.includes('HOUR')) return '1H';
-    if (q.includes('DAILY')) return '1D';
+    if (q.includes(' HOURLY ') || q.includes(' HOUR ')) return '1H';
+    if (q.includes(' DAILY ')) return '1D';
+    if (q.includes(' 4HOUR ') || q.includes(' FOUR HOUR ')) return '4H';
     return null;
+  }
+  // Conversation memory: follow-ups like "what about ETH?" or "and the stop?"
+  // reuse the previous turn's coin/timeframe.
+  const CTX = { syms: [], tf: null };
+  function isFollowup(q) {
+    return q.includes('WHAT ABOUT') || q.includes('HOW ABOUT') || q.includes(' AND ') ||
+      q.includes(' ALSO ') || q.includes(' ITS ') || q.includes(' THEIR ') || q.includes(' THAT ONE ');
   }
   function bandOf(score) {
     const sc = Math.abs(score || 0);
@@ -136,21 +181,42 @@
     return sym + ' ' + tf + ' ' + t.type + ' because: ' + bits.join(' · ') + '.' + hist + riskLine;
   }
 
-  function answer(q) {
-    const Q = ' ' + q.toUpperCase() + ' ';
-    const sym = findCoin(Q);
-    const tf = findTf(Q);
+  function answer(raw) {
+    const Q = clean(raw);
+    let syms = findCoins(Q);
+    let tf = findTf(Q);
+    const follow = isFollowup(Q);
+    if (!syms.length && follow && CTX.syms.length) syms = CTX.syms.slice();
+    if (!tf && follow && CTX.tf) tf = CTX.tf;
+    const sym = syms[0] || null;
     const has = (...ws) => ws.some((w) => Q.includes(w));
+    const remember = () => { if (syms.length) CTX.syms = syms.slice(); if (tf) CTX.tf = tf; };
 
     if (has('HELLO', 'HI ', 'HEY', 'THANKS', 'THANK YOU')) {
       return has('THANK') ? 'Anytime. Ask me about any coin, signal, or the paper profit.'
-        : 'Hi. Ask me things like "BTC signal?", "ETH 1H stop loss?", "why is SOL 4H BUY?", "paper profit?", "biggest mistakes?".';
+        : 'Hi. Ask me things like "BTC signal?", "compare BTC vs ETH", "what changed today?", "what should I avoid?".';
     }
     if (has('HELP', 'WHAT CAN YOU', 'COMMANDS', 'HOW DO I')) {
-      return 'I understand: coin signals ("BTC?"), entries/stops/targets ("ETH 4H TP?"), reasons ("why HYPE 1D BUY?"), track record ("win rate?"), paper bot ("paper profit?"), mistakes ("biggest mistakes?"), strengths, readiness ("ready to trade?"). I can also explain the machine itself — try "how are signals generated?", "what is a weak band?", "what is breakeven?".';
+      return 'I understand: coin signals ("BTC?", "BTC and ETH?"), entries/stops/targets ("ETH 4H TP?"), reasons ("why HYPE 1D BUY?"), comparisons ("BTC vs ETH"), market overview ("how is the market?"), fresh signals ("what changed today?"), top conviction, things to avoid, track record, paper bot, mistakes, strengths, readiness. I also explain the machine — "how are signals generated?", "what is a weak band?". Follow-ups work: ask "what about ETH?" next.';
     }
     const know = knowLine(Q);
-    if (know) return know;
+    if (know && !has('HIGHEST', 'TOP SIGNAL', 'MOST CONFIDENT', 'STRONGEST SIGNAL', 'BEST SIGNAL', 'TOP 3')) return know;
+    if (has(' VS ', ' VERSUS ', 'COMPARE', 'COMPARISON', 'BETTER', 'DIFFERENCE BETWEEN') && syms.length >= 2) {
+      remember();
+      return syms.slice(0, 3).map((s) => coinLine(s)).join('\n');
+    }
+    if (has('AVOID', 'STAY AWAY', 'SKIP', "DON'T TAKE", 'WEAK NOW', 'RED FLAG', 'DANGER')) {
+      return avoidLine();
+    }
+    if (has('HIGHEST', 'TOP SIGNAL', 'MOST CONFIDENT', 'STRONGEST SIGNAL', 'BEST SIGNAL', 'TOP 3')) {
+      return convictionLine();
+    }
+    if (has('CHANGED', 'NEW SIGNAL', 'JUST IN', 'FRESH', 'LATELY', 'UPDATE', ' TODAY ')) {
+      return changesLine();
+    }
+    if (has('HOW IS THE MARKET', 'MARKET OVERVIEW', 'MARKET SUMMARY', 'MARKET ROUNDUP', 'OVERVIEW', 'SUMMARY', 'ROUNDUP', 'HOW IS EVERYTHING', 'STRONGEST COIN', 'WHOLE MARKET', 'ALL COINS', 'EVERY COIN')) {
+      return overviewLine();
+    }
     if (has('READY', 'TRADE REAL', 'GO LIVE', 'NOV')) {
       return readinessLine();
     }
@@ -167,26 +233,27 @@
       return recordLine(sym, tf);
     }
     if (has('WHY', 'REASON', 'BECAUSE', 'EXPLAIN')) {
-      if (sym && tf) return whyLine(sym, tf);
-      if (sym) return coinLine(sym) + ' Ask "why ' + sym + ' 1H?" for the reasons.';
+      if (syms.length > 1 && tf) { remember(); return syms.slice(0, 3).map((s) => whyLine(s, tf)).join('\n'); }
+      if (sym && tf) { remember(); return whyLine(sym, tf); }
+      if (sym) { remember(); return coinLine(sym) + ' Ask "why ' + sym + ' 1H?" for the reasons.'; }
       return 'Tell me which coin and timeframe — e.g. "why is BTC 4H BUY?".';
     }
     if (has('STOP LOSS', 'STOPLOSS', ' STOP ', ' RISK')) {
-      if (sym && tf) return signalDetail(sym, tf);
-      if (sym) return stopAllTfs(sym);
+      if (sym && tf) { remember(); return signalDetail(sym, tf); }
+      if (syms.length) { remember(); return syms.slice(0, 3).map((s) => stopAllTfs(s)).join('\n'); }
       return 'Which coin? E.g. "XRP stop loss?" or "SOL 1D stop?".';
     }
     if (has(' TP', 'TARGET', 'TAKE PROFIT', 'ENTRY', 'ENTER', 'BUY AT', 'SELL AT')) {
-      if (sym && tf) return signalDetail(sym, tf);
-      if (sym) return levelsAllTfs(sym);
+      if (sym && tf) { remember(); return signalDetail(sym, tf); }
+      if (syms.length) { remember(); return syms.slice(0, 3).map((s) => levelsAllTfs(s)).join('\n'); }
       return 'Which coin and timeframe? E.g. "BNB 4H entry and targets?".';
     }
     if (has('SIGNAL', 'BIAS', 'BULLISH', 'BEARISH', 'LONG', 'SHORT', 'POSITION', 'PRICE', 'OUTLOOK')) {
-      if (sym && tf) return signalDetail(sym, tf);
-      if (sym) return coinLine(sym);
+      if (sym && tf) { remember(); return signalDetail(sym, tf); }
+      if (syms.length) { remember(); return syms.slice(0, 3).map((s) => coinLine(s)).join('\n'); }
       return allBiasLine();
     }
-    if (sym) return coinLine(sym);
+    if (sym) { remember(); return coinLine(sym); }
     return 'I did not catch that. Try "BTC signal?", "ETH 1D stop?", "paper profit?", or "help".';
   }
 
@@ -213,6 +280,62 @@
       const s = DATA.setups.setups[k];
       return k + ' ' + s.bias + ' @ ' + fmtP(s.price);
     }).join(' · ') + '. Ask any coin for 1H/4H/1D detail.';
+  }
+  function liveWeakList() {
+    const out = [];
+    if (!DATA.track || !DATA.track.bands) return out;
+    for (const sym of Object.keys(DATA.setups.setups)) {
+      for (const tf of TFS) {
+        const st = DATA.setups.setups[sym].timeframes[tf];
+        if (!st || st.entry === null || st.entry === undefined) continue;
+        const b = DATA.track.bands[sym] && DATA.track.bands[sym][tf] ? DATA.track.bands[sym][tf][bandOf(st.score)] : null;
+        if (b && b.weak) out.push(sym + ' ' + tf + ' ' + st.type + ' (' + (st.score >= 0 ? '+' : '') + st.score + ', band ' + b.winRate + '%/' + b.n + ')');
+      }
+    }
+    return out;
+  }
+  function overviewLine() {
+    const rows = Object.keys(DATA.setups.setups).map((k) => coinLine(k));
+    const weak = liveWeakList();
+    return rows.join('\n') + (weak.length ? '\nFlagged weak right now: ' + weak.join(' · ') + '.' : '\nNo weak flags on live signals right now.');
+  }
+  function changesLine() {
+    const logs = DATA.setups.logs || {};
+    const since = Date.now() - 24 * 3600 * 1000;
+    const fresh = [];
+    for (const sym of Object.keys(logs)) {
+      for (const tf of TFS) {
+        const arr = (logs[sym][tf] || []).filter((e) => e.time >= since && e.entry !== null && e.entry !== undefined);
+        if (arr.length) {
+          const e = arr[arr.length - 1];
+          fresh.push(sym + ' ' + tf + ' ' + e.type + ' @ ' + fmtP(e.entry) + ' (' + ageStr(e.time) + ')');
+        }
+      }
+    }
+    if (!fresh.length) return 'No fresh stamped signals in the last 24h — everything live is a holdover. Ask "BTC signal?" for the standing picture.';
+    return 'Fresh in the last 24h: ' + fresh.join(' · ') + '.';
+  }
+  function ageStr(t) {
+    const mins = Math.max(0, Math.round((Date.now() - t) / 60000));
+    if (mins < 60) return mins + 'm ago';
+    const h = Math.round(mins / 60);
+    return h < 48 ? h + 'h ago' : Math.round(h / 24) + 'd ago';
+  }
+  function convictionLine() {
+    const rows = [];
+    for (const sym of Object.keys(DATA.setups.setups)) {
+      for (const tf of TFS) {
+        const st = DATA.setups.setups[sym].timeframes[tf];
+        if (st && (st.type === 'BUY' || st.type === 'SELL')) rows.push({ sym, tf, type: st.type, score: st.score });
+      }
+    }
+    rows.sort((a, b) => Math.abs(b.score) - Math.abs(a.score));
+    return 'Top conviction live: ' + rows.slice(0, 3).map((r) => r.sym + ' ' + r.tf + ' ' + r.type + ' (' + (r.score >= 0 ? '+' : '') + r.score + ')').join(' · ') + '. High score is not a promise — check the band flag.';
+  }
+  function avoidLine() {
+    const weak = liveWeakList();
+    if (!weak.length) return 'Nothing flagged weak on live signals right now — but check each card: history disapproves quietly.';
+    return 'Steer clear or half-size: ' + weak.join(' · ') + '. These bands won under 40% historically.';
   }
   function recordLine(sym, tf) {
     const t = DATA.track;
@@ -284,7 +407,9 @@
       + '.chat-u{align-self:flex-end;background:#2563eb;color:#fff;border-radius:10px 10px 2px 10px;padding:7px 10px;font-size:.82rem;max-width:85%}'
       + '.chat-b{align-self:flex-start;background:#0f172a;color:#cbd5e1;border-radius:10px 10px 10px 2px;padding:7px 10px;font-size:.82rem;max-width:90%}'
       + '#chatRow{display:flex;border-top:1px solid #334155}#chatIn{flex:1;background:#0f172a;border:none;color:#e2e8f0;padding:10px 12px;font-size:.85rem;outline:none}'
-      + '#chatSend{background:#2563eb;color:#fff;border:none;padding:0 16px;cursor:pointer}';
+      + '#chatSend{background:#2563eb;color:#fff;border:none;padding:0 16px;cursor:pointer}'
+      + '#chatChips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;border-top:1px solid #334155}'
+      + '#chatChips button{background:#0f172a;color:#93c5fd;border:1px solid #334155;border-radius:14px;padding:4px 10px;font-size:.72rem;cursor:pointer}';
     document.head.appendChild(css);
     const fab = document.createElement('button');
     fab.id = 'chatFab'; fab.textContent = '💬';
@@ -292,6 +417,7 @@
     const box = document.createElement('div');
     box.id = 'chatBox';
     box.innerHTML = '<div id="chatHead">Signal bot — ask about any trade</div><div id="chatLog"></div>'
+      + '<div id="chatChips"><button>BTC signal?</button><button>What changed today?</button><button>What to avoid?</button><button>Paper profit?</button></div>'
       + '<div id="chatRow"><input id="chatIn" placeholder="e.g. why is BTC 1H SELL?"><button id="chatSend">➤</button></div>';
     document.body.appendChild(fab);
     document.body.appendChild(box);
@@ -323,6 +449,10 @@
     };
     document.getElementById('chatSend').onclick = ask;
     document.getElementById('chatIn').addEventListener('keydown', (e) => { if (e.key === 'Enter') ask(); });
+    if (box.querySelectorAll) box.querySelectorAll('#chatChips button').forEach((b) => b.addEventListener('click', () => {
+      document.getElementById('chatIn').value = b.textContent;
+      ask();
+    }));
     setTimeout(() => {
       document.getElementById('chatBox').classList.add('open');
       say('b', 'Ask me about any signal — e.g. "BTC signal?", "ETH 1D stop?", "paper profit?". I close myself when you start reading.');
@@ -333,4 +463,5 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
   else mount();
   window.__chatAnswer = (q, data) => { DATA = data; return answer(q); };
+  window.__chatReset = () => { CTX.syms = []; CTX.tf = null; };
 })();
