@@ -40,7 +40,12 @@
     return prev[n];
   }
   function clean(q) {
-    return ' ' + q.toUpperCase().replace(/[^A-Z0-9+]/g, ' ').replace(/\s+/g, ' ') + ' ';
+    let s = ' ' + q.toUpperCase().replace(/[^A-Z0-9+]/g, ' ').replace(/\s+/g, ' ') + ' ';
+    // Normalize superlatives so paraphrases hit the same intents.
+    s = s.replace(/ STRONGEST /g, ' STRONG ').replace(/ WEAKEST /g, ' WEAK ')
+      .replace(/ HIGHEST /g, ' HIGH ').replace(/ LOWEST /g, ' LOW ')
+      .replace(/ SAFEST /g, ' SAFE ').replace(/ MOST PROFITABLE /g, ' BEST ');
+    return s;
   }
   function findCoins(q) {
     const found = [];
@@ -199,28 +204,35 @@
     if (has('HELP', 'WHAT CAN YOU', 'COMMANDS', 'HOW DO I')) {
       return 'I understand: coin signals ("BTC?", "BTC and ETH?"), entries/stops/targets ("ETH 4H TP?"), reasons ("why HYPE 1D BUY?"), comparisons ("BTC vs ETH"), market overview ("how is the market?"), fresh signals ("what changed today?"), top conviction, things to avoid, track record, paper bot, mistakes, strengths, readiness. I also explain the machine — "how are signals generated?", "what is a weak band?". Follow-ups work: ask "what about ETH?" next.';
     }
-    const know = knowLine(Q);
-    if (know && !has('HIGHEST', 'TOP SIGNAL', 'MOST CONFIDENT', 'STRONGEST SIGNAL', 'BEST SIGNAL', 'TOP 3')) return know;
+    // (knowledge answers run after the computed intents below)
     if (has(' VS ', ' VERSUS ', 'COMPARE', 'COMPARISON', 'BETTER', 'DIFFERENCE BETWEEN') && syms.length >= 2) {
       remember();
       return syms.slice(0, 3).map((s) => coinLine(s)).join('\n');
     }
-    if (has('AVOID', 'STAY AWAY', 'SKIP', "DON'T TAKE", 'WEAK NOW', 'RED FLAG', 'DANGER')) {
+    if (has('AVOID', 'STAY AWAY', 'SHOULD I SKIP', 'WHAT TO SKIP', 'SKIP THIS', 'SKIP IT', "DON'T TAKE", 'WEAK NOW', 'RED FLAG', 'DANGER')) {
       return avoidLine();
     }
-    if (has('HIGHEST', 'TOP SIGNAL', 'MOST CONFIDENT', 'STRONGEST SIGNAL', 'BEST SIGNAL', 'TOP 3')) {
+    if (has('HIGHEST', 'HIGH CONVICTION', 'TOP SIGNAL', 'MOST CONFIDENT', 'STRONGEST SIGNAL', 'STRONG SIGNAL', 'STRONG CONVICTION', 'BEST SIGNAL', 'TOP 3')) {
       return convictionLine();
+    }
+    if (has('STRONG COIN', 'STRONG MARKET', 'BEST COIN', ' SAFEST ', ' SAFE ') || (has(' STRONG ') && has('COIN', 'MARKET', 'CURRENCY', 'ASSET', 'NOW', 'CURRENT'))) {
+      return strongestCoinLine();
+    }
+    if ((has(' WEAK ') && !has('BAND') && has('COIN', 'MARKET', 'SIGNAL', 'WHICH', 'NOW', 'CURRENT')) || has(' WORST ')) {
+      return weakestCoinLine();
     }
     if (has('CHANGED', 'NEW SIGNAL', 'JUST IN', 'FRESH', 'LATELY', 'UPDATE', ' TODAY ')) {
       return changesLine();
     }
-    if (has('HOW IS THE MARKET', 'MARKET OVERVIEW', 'MARKET SUMMARY', 'MARKET ROUNDUP', 'OVERVIEW', 'SUMMARY', 'ROUNDUP', 'HOW IS EVERYTHING', 'STRONGEST COIN', 'WHOLE MARKET', 'ALL COINS', 'EVERY COIN')) {
+    if (has('HOW IS THE MARKET', 'MARKET OVERVIEW', 'MARKET SUMMARY', 'MARKET ROUNDUP', 'OVERVIEW', 'SUMMARY', 'ROUNDUP', 'HOW IS EVERYTHING', 'WHOLE MARKET', 'ALL COINS', 'EVERY COIN')) {
       return overviewLine();
     }
+    const know = knowLine(Q);
+    if (know) return know;
     if (has('READY', 'TRADE REAL', 'GO LIVE', 'NOV')) {
       return readinessLine();
     }
-    if (has('PAPER', 'FAKE TRADE', 'BOT PROFIT', 'BOT P/L', 'BOT POSITION')) {
+    if (has('PAPER', 'FAKE TRADE', 'BOT PROFIT', 'BOT P/L', 'BOT POSITION', 'SKIPPED', 'BOT SKIP')) {
       return paperLine(sym);
     }
     if (has('MISTAKE', 'WRONG', 'STOPPED OUT', 'STOP LOSS HIT', 'AUTOPSY', 'FAIL')) {
@@ -321,8 +333,38 @@
     const h = Math.round(mins / 60);
     return h < 48 ? h + 'h ago' : Math.round(h / 24) + 'd ago';
   }
-  function convictionLine() {
-    const rows = [];
+  function strongestCoinLine() {
+    const rows = Object.keys(DATA.setups.setups).map((k) => {
+      const t = DATA.setups.setups[k].timeframes['1D'];
+      return { sym: k, type: t ? t.type : 'n/a', score: t ? t.score : 0 };
+    }).sort((a, b) => Math.abs(b.score) - Math.abs(a.score));
+    const top = rows[0];
+    let hist = '';
+    try {
+      const s = DATA.autopsy.strengths[0];
+      if (s) hist = ' Best proven record: ' + s.sym + ' ' + s.tf + ' (' + s.winRate + '%, +' + s.avgPct.toFixed(1) + '%).';
+    } catch (e) { /* no autopsy */ }
+    return 'Strongest right now: ' + top.sym + ' 1D ' + top.type + ' (' + (top.score >= 0 ? '+' : '') + top.score + ').'
+      + hist + ' Full ranking: ' + rows.map((r) => r.sym + ' ' + (r.score >= 0 ? '+' : '') + r.score).join(' · ') + '.';
+  }
+  function weakestCoinLine() {
+    const rows = Object.keys(DATA.setups.setups).map((k) => {
+      const t = DATA.setups.setups[k].timeframes['1D'];
+      return { sym: k, type: t ? t.type : 'n/a', score: t ? t.score : 0 };
+    }).sort((a, b) => Math.abs(a.score) - Math.abs(b.score));
+    const low = rows[0];
+    let hist = '';
+    try {
+      let worst = null;
+      for (const [k, v] of Object.entries(DATA.track.perCoin)) {
+        if (!worst || v.sumRealized < worst[1].sumRealized) worst = [k, v];
+      }
+      if (worst) hist = ' Worst record: ' + worst[0] + ' (' + (worst[1].sumRealized * 100).toFixed(1) + '% all-time).';
+    } catch (e) { /* no track */ }
+    return 'Weakest conviction: ' + low.sym + ' 1D ' + low.type + ' (' + (low.score >= 0 ? '+' : '') + low.score + ').'
+      + hist + ' Ranking: ' + rows.map((r) => r.sym + ' ' + (r.score >= 0 ? '+' : '') + r.score).join(' · ') + '.';
+  }
+  function convictionLine() {    const rows = [];
     for (const sym of Object.keys(DATA.setups.setups)) {
       for (const tf of TFS) {
         const st = DATA.setups.setups[sym].timeframes[tf];
