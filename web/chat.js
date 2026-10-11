@@ -443,9 +443,9 @@
     if (document.getElementById('chatFab')) return;
     const css = document.createElement('style');
     css.innerHTML = '#chatFab{position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:50%;background:#2563eb;color:#fff;font-size:24px;border:none;cursor:pointer;z-index:9999;box-shadow:0 4px 14px rgba(0,0,0,.4)}'
-      + '#chatBox{display:none;position:fixed;right:18px;bottom:80px;width:min(360px,92vw);max-height:60vh;background:#1e293b;border:1px solid #334155;border-radius:12px;z-index:9999;flex-direction:column;overflow:hidden}'
+      + '#chatBox{display:none;position:fixed;right:18px;bottom:80px;width:min(400px,94vw);max-height:76vh;background:#1e293b;border:1px solid #334155;border-radius:12px;z-index:9999;flex-direction:column;overflow:hidden}'
       + '#chatBox.open{display:flex}#chatHead{padding:10px 14px;background:#0f172a;font-weight:700;color:#e2e8f0;font-size:.9rem}'
-      + '#chatLog{padding:10px 12px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:8px;max-height:40vh}'
+      + '#chatLog{padding:10px 12px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:8px;min-height:38vh;max-height:56vh}'
       + '.chat-u{align-self:flex-end;background:#2563eb;color:#fff;border-radius:10px 10px 2px 10px;padding:7px 10px;font-size:.82rem;max-width:85%}'
       + '.chat-b{align-self:flex-start;background:#0f172a;color:#cbd5e1;border-radius:10px 10px 10px 2px;padding:7px 10px;font-size:.82rem;max-width:90%}'
       + '#chatRow{display:flex;border-top:1px solid #334155}#chatIn{flex:1;background:#0f172a;border:none;color:#e2e8f0;padding:10px 12px;font-size:.85rem;outline:none}'
@@ -497,8 +497,7 @@
     }));
     setTimeout(() => {
       document.getElementById('chatBox').classList.add('open');
-      say('b', 'Ask me about any signal — e.g. "BTC signal?", "ETH 1D stop?", "paper profit?". I close myself when you start reading.');
-      setTimeout(() => document.getElementById('chatBox').classList.remove('open'), 9000);
+      say('b', 'Ask me about any signal — e.g. "BTC signal?", "ETH 1D stop?", "paper profit?". I stay open until you close me (💬).');
     }, 1500);
   }
 
