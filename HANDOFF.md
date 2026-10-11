@@ -58,6 +58,17 @@ Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/up
   nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
 - Legacy research scripts (stocks, portfolio, validate, sim weights) are NOT live path — ignore.
 
+## Nov 1 decision — pre-committed thresholds (locked 2026-10-11, frozen till then)
+Window: Oct 1–31 signals. TRADE requires ALL three:
+1. Gated paper: totalUsd > 0 over >= 30 closed trades.
+2. 1D edge holds: BTC AND ETH 1D winRate (TP1/(TP1+SL), decided only) >= 60%.
+3. Rails: testnet fills done + min size defined + kill switch + losable stake (manual).
+Guardrails: worst 1D losing streak <= 8 per coin; no NEW coin×TF leg with October avg < -1%/signal left unaddressed.
+- 3/3 → TRADE Nov: min size, 1D only, BTC/ETH/SOL (+BNB iff still FULL). Intraday stays paper.
+- 2/3 → WAIT to Dec 1 with ONE named change (no rebuilds).
+- BTC or ETH 1D October winRate < 50% → STOP: edge gone, back to research, no real money.
+Freeze: no system changes until Nov 1 except critical bugfixes. Shadow engine parked.
+
 ## Current state (2026-09-23)
 - 6-asset expansion pushed (`d146f4b`): all biases LONG; SOL/XRP/HYPE 1H/4H/1D BUY,
   BNB 1H WAIT + 4H/1D BUY, BTC/ETH all BUY. New-asset backtest history starts at n=1.
