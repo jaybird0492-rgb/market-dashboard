@@ -6710,6 +6710,28 @@
         "tp3": 79020.82,
         "risk": "0.56%",
         "trigger": "Sell setup: score -50 (trend -0.9 · RSI 43.7 · ADX 50.5 · dir -0.4) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1792879200000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -48.7,
+        "factors": {
+          "trend": -0.9,
+          "momentum": -0.06,
+          "direction": -0.45,
+          "structure": -0.01,
+          "rsi": 47.2,
+          "adx": 48.7
+        },
+        "price": 80495.8,
+        "entry": 80495.8,
+        "stopLoss": 80905.06,
+        "tp1": 80086.54,
+        "tp2": 79677.27,
+        "tp3": 79268.01,
+        "risk": "0.51%",
+        "trigger": "Sell setup: score -48.7 (trend -0.9 · RSI 47.2 · ADX 48.7 · dir -0.45) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -20732,6 +20754,28 @@
         "tp3": 2275.29,
         "risk": "0.88%",
         "trigger": "Sell setup: score -55.8 (trend -0.94 · RSI 39.4 · ADX 45.3 · dir -0.48) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1792879200000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -51,
+        "factors": {
+          "trend": -0.93,
+          "momentum": -0.13,
+          "direction": -0.41,
+          "structure": -0.03,
+          "rsi": 43.7,
+          "adx": 44.7
+        },
+        "price": 2343.26,
+        "entry": 2343.26,
+        "stopLoss": 2361.89,
+        "tp1": 2324.63,
+        "tp2": 2305.99,
+        "tp3": 2287.36,
+        "risk": "0.80%",
+        "trigger": "Sell setup: score -51 (trend -0.93 · RSI 43.7 · ADX 44.7 · dir -0.41) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -31850,6 +31894,28 @@
         "tp3": 98.24,
         "risk": "0.92%",
         "trigger": "Sell setup: score -54 (trend -0.94 · RSI 41.5 · ADX 50.3 · dir -0.43) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1792879200000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -47.4,
+        "factors": {
+          "trend": -0.93,
+          "momentum": -0.06,
+          "direction": -0.33,
+          "structure": -0.05,
+          "rsi": 47.1,
+          "adx": 47.5
+        },
+        "price": 101.49,
+        "entry": 101.49,
+        "stopLoss": 102.34,
+        "tp1": 100.64,
+        "tp2": 99.79,
+        "tp3": 98.93,
+        "risk": "0.84%",
+        "trigger": "Sell setup: score -47.4 (trend -0.93 · RSI 47.1 · ADX 47.5 · dir -0.33) — ⚠ against 1D bias"
       }
     ],
     "4H": [
@@ -45440,6 +45506,28 @@
         "tp3": 717.03,
         "risk": "0.57%",
         "trigger": "Sell setup: score -34.3 (trend -0.45 · RSI 43.9 · ADX 50.4 · dir -0.47) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1792879200000,
+        "tf": "1H",
+        "type": "BUY",
+        "score": 20.4,
+        "factors": {
+          "trend": 0.57,
+          "momentum": 0.11,
+          "direction": -0.24,
+          "structure": 0.07,
+          "rsi": 55.7,
+          "adx": 46.3
+        },
+        "price": 735.75,
+        "entry": 735.75,
+        "stopLoss": 731.66,
+        "tp1": 739.84,
+        "tp2": 743.92,
+        "tp3": 748.01,
+        "risk": "0.56%",
+        "trigger": "Buy setup: score +20.4 (trend +0.57 · RSI 55.7 · ADX 46.3 · dir -0.24)"
       }
     ],
     "4H": [
@@ -53236,6 +53324,28 @@
         "tp3": 73.71,
         "risk": "1.05%",
         "trigger": "Sell setup: score -48.1 (trend -0.95 · RSI 46.8 · ADX 46.9 · dir -0.3) — ⚠ against 1D bias"
+      },
+      {
+        "time": 1792879200000,
+        "tf": "1H",
+        "type": "SELL",
+        "score": -43,
+        "factors": {
+          "trend": -0.94,
+          "momentum": 0.01,
+          "direction": -0.2,
+          "structure": -0.05,
+          "rsi": 50.3,
+          "adx": 41.6
+        },
+        "price": 76.37,
+        "entry": 76.37,
+        "stopLoss": 77.13,
+        "tp1": 75.61,
+        "tp2": 74.86,
+        "tp3": 74.1,
+        "risk": "0.99%",
+        "trigger": "Sell setup: score -43 (trend -0.94 · RSI 50.3 · ADX 41.6 · dir -0.2) — ⚠ against 1D bias"
       }
     ],
     "4H": [
