@@ -64,7 +64,9 @@ perturbation. Its weakness is statistical: ~9 years of daily data yields
 tens, not hundreds, of trades, so expectancy estimates remain tail-sensitive.
 
 ## Next steps (in order)
-1. Portfolio-level run: BTC+ETH (later +SOL/BNB) on one shared equity with a
+1. Portfolio-level run: BTC+ETH (universe fixed to BTC/ETH by owner decision
+   2026-10-29; SOL/BNB/XRP/HYPE are out and their history files were deleted)
+   on one shared equity with a
    total-risk cap, instead of separate $10k silos — this is also how it would
    actually be traded, and correlation must be measured, not assumed away.
 2. Decide sizing policy explicitly (risk % and any volatility targeting) —

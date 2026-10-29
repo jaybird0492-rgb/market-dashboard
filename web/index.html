@@ -3,69 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Market Strategy Dashboard</title>
-<link rel="stylesheet" href="style.css">
+<title>Market Strategy — v2</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; background: #0d1117; color: #e6edf3; }
+  main { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 36px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  p, li { line-height: 1.55; color: #c9d1d9; }
+  .sub { color: #8b949e; margin-top: 0; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+  .amber { background: #4d3800; color: #f0b72f; }
+  .red { background: #4d1414; color: #ff7b72; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid #30363d; padding: 6px 9px; text-align: left; }
+  th { background: #161b22; }
+  code { background: #161b22; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+</style>
 </head>
 <body>
-<header>
-  <h1>Market Strategy Dashboard</h1>
-  <div class="header-meta">
-    <a href="pipeline.html" class="nav-link">Pipeline</a>
-    <span id="updatedAt">loading...</span>
-    <button id="refreshBtn">Refresh signals</button>
-  </div>
-</header>
+<main>
+  <h1>Market Strategy — v2</h1>
+  <p class="sub">BTC &amp; ETH only · daily trend-following · research stage</p>
 
-<section class="rules">
-  <h2>Strategy rules</h2>
+  <h2>Status</h2>
+  <p><span class="badge amber">NOT APPROVED FOR REAL MONEY</span></p>
+  <p>v2 has passed historical validation checks that v1 never faced, but its
+  sample size is too small to prove the edge. It is in research. No bot is
+  trading, not even with paper money, until the portfolio test below passes.</p>
+
+  <h2>What happened to v1</h2>
+  <p><span class="badge red">RETIRED 2026-10-29</span></p>
+  <p>The old multi-factor score system (BTC/ETH/SOL/XRP/BNB/HYPE on 1H/4H/1D)
+  lost $940 in paper trading, called 0% of its October daily trades correctly,
+  and never once issued a daily sell signal in 57 days. All of its signals,
+  track record, paper positions and pages were deleted. Summary of the
+  investigation is in <code>analysis/V2_VALIDATION.md</code> in the repo.</p>
+
+  <h2>The v2 strategy (candidate A)</h2>
   <ul>
-    <li><b>Assets:</b> BTC, ETH, SOL, XRP, BNB, HYPE — same signal engine on each</li>
-    <li><b>Signal engine:</b> multi-factor score (trend, RSI momentum, ADX direction, range breakout) on 1H / 4H / 1D</li>
-    <li><b>Confluence:</b> 1D sets the bias; 1H/4H trades against it are flagged (reduce size)</li>
-    <li><b>Entry:</b> ATR-adaptive stop (1R) and targets at 1R / 2R / 3R</li>
-    <li><b>Signal fires when:</b> score &gt;= +5 (long) or &lt;= -5 (short), any direction shown</li>
+    <li><b>Coins:</b> Bitcoin and Ethereum only. All other coins were dropped —
+    XRP failed testing, the rest lack enough trustworthy history.</li>
+    <li><b>Buy:</b> daily close above the highest price of the last 55 days,
+    while above the 200-day average. Shorts mirror this in downtrends.</li>
+    <li><b>Sell:</b> daily close below the lowest price of the last 20 days,
+    with a disaster stop at 2.5× ATR.</li>
+    <li><b>Size:</b> each trade risks 0.75% of the account. No leverage.</li>
+    <li><b>Most of the time it does nothing.</b> It only trades when a real
+    trend exists.</li>
   </ul>
-</section>
 
-<section>
-  <h2>Live signals</h2>
-  <div id="signalCards" class="cards"></div>
-  <p id="portfolioNote" class="note"></p>
-  <p class="note">Full entry / stop / targets per timeframe live on the <a href="pipeline.html" class="nav-link">Pipeline</a> page. Track record per asset: open a card.</p>
-</section>
+  <h2>Evidence so far (2017–2026, honest costs, code-reviewed)</h2>
+  <table>
+    <tr><th>Check</th><th>Result</th></tr>
+    <tr><td>Profitable in untouched 2023–2026 data</td><td>Yes — BTC +0.62R/trade, ETH +1.41R/trade (long)</td></tr>
+    <tr><td>Works if settings are nudged ±25%</td><td>Yes — 54 of 54 nearby combinations profitable</td></tr>
+    <tr><td>Worst market fall while trading</td><td>−12% to −16% (holding BTC/ETH directly: −77% to −90%)</td></tr>
+    <tr><td>Enough trades to prove it</td><td><b>No</b> — ~69 pooled trades since 2017; confidence intervals still include zero</td></tr>
+    <tr><td>Beats just holding Bitcoin</td><td>On safety yes, on total return no — it is mostly in cash by design</td></tr>
+  </table>
 
-<section>
-  <h2>Track record — all coins</h2>
-  <div id="trackChips" class="bt-chips"></div>
-  <div class="table-wrap"><table id="trackTable"></table></div>
-  <p id="trackNote" class="note"></p>
-</section>
-
-<section>
-  <h2>Paper bot — live positions</h2>
-  <div id="paperChips" class="bt-chips"></div>
-  <div class="table-wrap"><table id="paperOpen"></table></div>
-  <div class="table-wrap" style="margin-top:12px"><table id="paperClosed"></table></div>
-  <p id="paperNote" class="note"></p>
-</section>
-
-<section>
-  <h2>Nov 1 readiness — conditions to trade real money</h2>
-  <div id="readyChips" class="bt-chips"></div>
-  <p id="readyNote" class="note"></p>
-  <button id="railsBtn">Mark live rails ready</button>
-</section>
-
-<section>
-  <h2>Mistakes &amp; strengths</h2>
-  <h3 class="sub-head">Biggest mistakes (pure stop-outs)</h3>
-  <div class="table-wrap"><table id="mistakeTable"></table></div>
-  <h3 class="sub-head">Strengths (profitable coin × timeframe)</h3>
-  <div class="table-wrap"><table id="strengthTable"></table></div>
-  <p id="autopsyNote" class="note"></p>
-</section>
-
-<script src="app.js"></script>
-<script src="chat.js"></script>
+  <h2>What happens next</h2>
+  <ol>
+    <li>Portfolio test: BTC + ETH on one shared account with a total risk cap.</li>
+    <li>Agree the position-size policy in writing.</li>
+    <li>Short paper-trading run (4–6 weeks) to check live execution only.</li>
+    <li>Only then: minimum-size real money, with a written switch-off rule.</li>
+  </ol>
+  <p class="sub">Last updated 2026-10-29. Full method, corrections log and
+  numbers: <code>analysis/V2_VALIDATION.md</code>.</p>
+</main>
 </body>
 </html>

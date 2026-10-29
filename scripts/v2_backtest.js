@@ -258,7 +258,7 @@ function main() {
     { name: 'C-donchian-4h', tf: '4h', make: (b, ind, m) => stratA(b, ind, m), maxHoldBars: 2190, mult: 6 },
   ];
   const out = {};
-  for (const sym of ['BTC', 'ETH', 'SOL', 'XRP', 'BNB']) {
+  for (const sym of ['BTC', 'ETH']) { // universe decided 2026-10-29: BTC/ETH only
     for (const cfg of configs) {
       let bars;
       try { bars = loadBars(sym, cfg.tf); } catch { continue; }

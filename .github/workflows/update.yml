@@ -3,8 +3,6 @@ name: dashboard-update
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: '15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,44 +14,20 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# v1's hourly data pipeline (fetch -> setups -> paper bot -> precompute ->
+# commit) was deleted with the v1 strategy on 2026-10-29. The site is now a
+# static v2 status page; it deploys on push only. A v2 data workflow returns
+# when the portfolio test and paper stage are built.
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Fetch market data
-        run: node scripts/fetch.js
-      - name: Compute trade setups
-        run: node scripts/setups.js
-      # v1 paper bot STOPPED 2026-10-29: strategy failed its readiness exam
-      # (paper -$940, 1D edge dead). Do not re-enable. v2 replaces it after
-      # passing historical validation. See HANDOFF / session notes.
-      - name: Precompute static page data
-        run: node scripts/precompute.js
-      - name: Commit data
-        run: |
-          git config user.name "market-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add web/data data/live
-          if git diff --cached --quiet; then
-            echo "no data changes"
-          else
-            git commit -m "data update $(date -u +%Y-%m-%dT%H:%MZ)" || true
-            git push origin main || true
-          fi
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: web
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
       - id: deployment
         uses: actions/deploy-pages@v4

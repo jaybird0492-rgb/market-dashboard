@@ -9,7 +9,7 @@ const path = require('path');
 const OUT = path.join(__dirname, '..', 'data', 'history');
 fs.mkdirSync(OUT, { recursive: true });
 
-const PAIRS = { BTC: 'BTCUSDT', ETH: 'ETHUSDT', SOL: 'SOLUSDT', XRP: 'XRPUSDT', BNB: 'BNBUSDT' };
+const PAIRS = { BTC: 'BTCUSDT', ETH: 'ETHUSDT' }; // universe: BTC/ETH only (decided 2026-10-29)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function fetchKlines(pair, interval, startMs) {

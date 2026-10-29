@@ -2,102 +2,50 @@
 
 Read this file first. It restores full project context in one pass.
 
-## Scope
-- Work ONLY in `market-analysis/`. Ignore `routine-app/`.
-- Live site: https://jaybird0492-rgb.github.io/market-dashboard/
-- Local run: `node scripts/hourly.js` (refresh), then `node server.js` → http://localhost:8899
-- Today: 2026-09-23. Owner TZ display: Australia/Perth (AWST).
+## Current state (2026-10-29) — v1 DELETED, v2 in research
+- v1 (multi-factor score engine, 6 coins × 1H/4H/1D, paper bot) FAILED its
+  readiness exam (paper −$939.74/113 trades, BTC+ETH 1D October win rate 0%,
+  verdict STOP) and was **deleted entirely**: strategy/setups/paper/autopsy/
+  readiness/precompute/ta/fetch scripts, all web pages except a static v2
+  status page, `data/live/*`, and `web/data/*` are gone. Do not resurrect it.
+  Full investigation: conversation of 2026-10-29 + `analysis/V2_VALIDATION.md`.
+- Universe is **BTC and ETH only** (owner decision 2026-10-29). SOL/XRP/BNB
+  local history files were deleted; XRP failed validation, HYPE never had
+  enough history. Do not re-add coins without individual historical validation.
+- Live site: https://jaybird0492-rgb.github.io/market-dashboard/ — now a static
+  v2 status page, deploys on push only (`.github/workflows/update.yml`).
+  Local run: `node server.js` → http://localhost:8899 (static only).
+- Legacy research scripts (stocks: analyze/backtest/portfolio/sim/etc.) remain
+  in `scripts/` but are NOT live path — ignore them.
 
-## What it is
-- BTC/ETH/SOL/XRP/BNB/HYPE × 1H/4H/1D signal dashboard. Same multi-factor engine
-  (`scripts/strategy.js`: trend 40% + RSI momentum 25% + ADX direction 25% + range-breakout 10%,
-  score ±100, BUY ≥ +5 / SELL ≤ −5 / else WAIT) with ATR stops and TP1/TP2/TP3 at 1R/2R/3R (40/40/20).
-- 1D score sets per-asset bias (LONG/SHORT/NEUTRAL); 1H/4H against bias are flagged "reduce size".
-- Backtest verdict (565 signals, `node scripts/setup_backtest.js`): 1D has the edge
-  (BTC +3.21%, ETH +5.70% avg); 1H bleeds on stops (BTC −0.09%, ETH −0.22%);
-  4H conviction inverted (50+ band loses, 0-20 band wins) — needs recalibration.
-- Breakeven-after-TP1 bot idea: viable; 1H SL_AFTER_TP counts (BTC ~54/136, ETH ~47/135)
-  would mostly become scratches. Futures (Kraken Futures or Hyperliquid perps) possible
-  via an execution adapter; paper-first.
+## v2 — the only candidate
+- Strategy A (Donchian daily): buy close > prior 55d high while above SMA200,
+  exit close < prior 20d low, disaster stop 2.5×ATR, size = 0.75% equity at
+  risk, no leverage. Long+short mirror under test. BTC+ETH.
+- Code: `scripts/v2_backtest.js` (engine + pre-registered candidates A/B/C in
+  its header, with correction log), `scripts/v2_sensitivity.js` (plateau),
+  `scripts/fetch_history.js` (Binance klines → `data/history/`, gitignored).
+- Validation status (`analysis/V2_VALIDATION.md`): A passed IS/OOS split,
+  profit factor, and a 54/54 parameter plateau on BTC+ETH pooled; FAILED the
+  ≥150-trades-per-coin gate (only ~69 pooled trades since 2017; per-coin CIs
+  include zero). B (pullback) decays OOS, C (4H) is noisier — do not re-tune
+  them to rescue them.
+- **Verdict: NOT approved for real money.** Next steps in order:
+  1. Portfolio-level run: BTC+ETH shared equity + total risk cap.
+  2. Written sizing policy decision.
+  3. Paper-forward smoke test 4–6 weeks (execution fidelity only).
+  4. Minimum-size live only after 1–3, with a written kill rule.
 
-## Data flow
-`scripts/fetch.js` (Kraken public OHLC, no key) → `data/raw/*.csv` (gitignored)
-→ `scripts/setups.js` (signals + `data/live/setups.json|stamp_state.json|setup_log.json`,
-one log entry per closed bar) → `scripts/precompute.js` → `web/data/*.json`
-→ `server.js` serves `/api/*` live with static `web/data` fallback.
-Hourly: `scripts/hourly.js` = fetch+setups+precompute. CI: `.github/workflows/update.yml`
-(cron `:15 * * * *`: fetch → setups → precompute → commit `web/data data/live` → Pages).
-
-## Live-path files (touch only these for signals/UI)
-- `scripts/fetch.js` (`KRAKEN_PAIRS`), `ta.js` (`DAILY_FILES`, `NAMES`),
-  `setups.js`/`setup_backtest.js`/`precompute.js`/`backfill.js` (`SYMBOLS` — 6 assets).
-- `web/index.html` (rules + live cards + aggregate track-record section), `web/app.js` (setups + `track_record.json`), `web/pipeline.js` (`ASSETS`),
-  `web/asset.js` (`TV_SYMBOL` — HYPE's `HYPERLIQUID:HYPEUSD` is best-effort, verify render).
-- 30-day review (2026-09-29, script in temp `review30.js`, re-runnable): 1D pays
-  (BTC 68%/+1.9%, ETH 90%/+4.0%); 4H high-conviction bands bleed — cards now carry
-  weak-band flags (`track_record.json` → `bands`, weak = <40% TP1 win rate, n≥5) and
-  per-coin sizing (`FULL`: BTC/ETH/SOL; `REDUCED-1D-ONLY`: XRP/BNB/HYPE).
-- Dead-but-harmless: `/api/equity` + `equity.json` still built (BTC/ETH 55/45 baseline);
-  nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
-- Paper bot: `scripts/paper_bot.js` (long+flat, 40/40/20, SL→entry at TP1).
-- Autopsy: `scripts/autopsy.js` → `web/data/autopsy.json` + `/api/autopsy`; index
-  "Mistakes & strengths" board; per-TF panel on asset pages. Weak = <40% TP1 win, n≥5.
-- Costs: `FEE_RT` (0.1%/signal) in `setup_backtest.js` + paper fills. Funding NOT modeled.
-- Asset page: hit rate = TP1/(TP1+SL); futures P&L calc (margin×lev, 40/40/20, fees, liq warn);
-  timeline rows clickable → loads that signal into setup + calculators; closed-bar engine
-  (dropForming in ta.js, strict one-per-bar stamp) so box entry always matches a stamped row.
-- Nov 1 package: readiness panel (paper green + 1D edge + manual rails toggle),
-  size calculator on asset setup panels, pain stats (maxConsecSL, worstPct) in autopsy.
-  STATE OWNERSHIP: CI owns `data/live/paper_state.json` (tracked; `update.yml` runs the bot
-  hourly after setups). NEVER run the bare bot locally — it would fork the state.
-  Local tests MUST use `node scripts/paper_bot.js --state <temp-path>`.
-  Bot gates entries: 1D always taken; REDUCED coins 1D-only; weak bands skipped
-  (read from `web/data/track_record.json`, fallback take-all). Rebuild paper.json
-  without advancing state via buildPublic (see session 2026-09-29).
-  Backtest of the rule on replay: 20/25 wins, SL_AFTER_TP cases closed green.
-  nothing reads them since the index trim. `signals_report.md` is outdated (says 7 assets × 4 TF).
-- Legacy research scripts (stocks, portfolio, validate, sim weights) are NOT live path — ignore.
-
-## Nov 1 decision — pre-committed thresholds (locked 2026-10-11, frozen till then)Window: Oct 1–31 signals. TRADE requires ALL three:
-1. Gated paper: totalUsd > 0 over >= 30 closed trades.
-2. 1D edge holds: BTC AND ETH 1D winRate (TP1/(TP1+SL), decided only) >= 60%.
-3. Rails: testnet fills done + min size defined + kill switch + losable stake (manual).
-Guardrails: worst 1D losing streak <= 8 per coin; no NEW coin×TF leg with October avg < -1%/signal left unaddressed.
-- 3/3 → TRADE Nov: min size, 1D only, BTC/ETH/SOL (+BNB iff still FULL). Intraday stays paper.
-- 2/3 → WAIT to Dec 1 with ONE named change (no rebuilds).
-- BTC or ETH 1D October winRate < 50% → STOP: edge gone, back to research, no real money.
-Freeze: no system changes until Nov 1 except critical bugfixes. Shadow engine parked.
-Exam tool: `node scripts/readiness.js [--since ISO] [--rails-ready]` (read-only, exit 0 = TRADE).
-Exam dates (user pings; agent runs + reports): Oct 15, Oct 22, Oct 31. Dry run Oct 11: all FAIL —
-paper -$634/109 closed, BTC+ETH 1D 0% win Oct 1-7 (17 straight daily stops), SOL 4H -1.03%, streak 9.
-
-## Current state (2026-09-23)
-- 6-asset expansion pushed (`d146f4b`): all biases LONG; SOL/XRP/HYPE 1H/4H/1D BUY,
-  BNB 1H WAIT + 4H/1D BUY, BTC/ETH all BUY. New-asset backtest history starts at n=1.
-- Prior: index trim + pipeline fix (empty Stocks group, double `/api/setups` fetch, dead
-  EXPIRED legend removed); manual data push `49c6b20`.
+## Model setup (project-local, `.opencode/agents/`)
+- Main session: Muse Wonder 1.0 (design, judgement, final verification).
+- `runner` subagent: Muse Spark 1.3 — downloads, backtest runs, raw numbers only.
+- `reviewer` subagent: Muse Wonder 1.0, read-only — audits backtest code for
+  lookahead/accounting/statistical errors. It caught 4 real bugs in v2 run #1;
+  keep using it before believing any new result.
 
 ## Shell gotchas (Windows PowerShell 5.1 tool)
-- `npx` is blocked (`npx.ps1` execution policy) → prefix with `cmd /c`, e.g.
-  `cmd /c "node scripts/hourly.js"`. For git, run bare (`git status`) — `cmd /c` mangles
-  quoted commit messages; use single quotes: `git commit -m 'msg'`.
-- NEVER run bare `npx -y opencode-ai` (interactive TUI hangs and gets killed).
-  Non-interactive only: `cmd /c "npx -y opencode-ai --help"`.
-- `node server.js` never exits → start via
-  `Start-Process -FilePath 'node' -ArgumentList 'server.js' -WorkingDirectory '<repo>'`,
-  verify with `Invoke-WebRequest http://localhost:8899/api/setups`. Restart it after
-  editing `scripts/*.js` (Node caches modules — stale code serves 404 for new assets).
-- `git rebase --continue` opens an editor and hangs the tool →
-  `$env:GIT_EDITOR='true'; git rebase --continue`.
-- `server.js` REWRITES `data/live/*.json` on every `/api/*` hit → `git status` gets dirty
-  from localhost verification alone; re-`git add` before continuing a rebase.
-- Hourly bot commits remotely while you work → `git fetch` + rebase before push;
-  on data-file conflicts keep the fresher side (`--theirs` when rebasing onto origin).
-- No `head` on Windows; use `Select-Object -First N` / `Select-String`.
-
-## Fresh-session checklist
-1. `git fetch origin; git log --oneline -5; git status --short`
-2. Compare live vs local: fetch `.../market-dashboard/data/setups.json` +
-   `last_updated.json` vs `http://localhost:8899/api/setups`.
-3. If stale: discard generated files (`git checkout -- data/live web/data`), pull, run
-   `node scripts/hourly.js`, restart server, verify `/api/setups → 200`.
+- `npx` is blocked → prefix with `cmd /c`. For git use bare commands and
+  single-quoted commit messages.
+- `python3` is NOT installed (Microsoft Store stub) — use `node -e` for data checks.
+- Hourly bot commits no longer happen (v1 pipeline deleted); still
+  `git fetch` before pushing.
