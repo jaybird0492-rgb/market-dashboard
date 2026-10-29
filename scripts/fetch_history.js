@@ -12,11 +12,15 @@ fs.mkdirSync(OUT, { recursive: true });
 const PAIRS = { BTC: 'BTCUSDT', ETH: 'ETHUSDT' }; // universe: BTC/ETH only (decided 2026-10-29)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// data-api.binance.vision is Binance's public market-data domain — same data
+// as api.binance.com but not geo-blocked (api.binance.com returns HTTP 451
+// from GitHub Actions' US runners; verified 2026-10-29).
+const BASE = 'https://data-api.binance.vision';
 async function fetchKlines(pair, interval, startMs) {
   const rows = [];
   let cur = startMs;
   for (;;) {
-    const url = `https://api.binance.com/api/v3/klines?symbol=${pair}&interval=${interval}&startTime=${cur}&limit=1000`;
+    const url = `${BASE}/api/v3/klines?symbol=${pair}&interval=${interval}&startTime=${cur}&limit=1000`;
     const res = await fetch(url, { headers: { Accept: 'application/json' } });
     if (!res.ok) throw new Error(`HTTP ${res.status} for ${pair} ${interval}`);
     const batch = await res.json();
