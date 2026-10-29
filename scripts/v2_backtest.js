@@ -129,7 +129,7 @@ function stratB(bars, ind) {
 }
 
 // mult scales ALL indicator lengths so 4H units match daily units.
-function runBacktest(bars, stratFactory, { allowShort, maxHoldBars, mult = 1, stopMult = 2.5 }) {
+function runBacktest(bars, stratFactory, { allowShort, maxHoldBars, mult = 1, stopMult = 2.5, feeSide = FEE_SIDE, slipSide = SLIP_SIDE, fundingDay = FUNDING_DAY }) {
   const closes = bars.map((b) => b.close);
   const ind = {
     sma20: smaArr(closes, 20 * mult), sma50: smaArr(closes, 50 * mult),
@@ -143,13 +143,13 @@ function runBacktest(bars, stratFactory, { allowShort, maxHoldBars, mult = 1, st
   const trades = [];
   const curve = [];
 
-  const slip = (raw, isBuy) => raw * (1 + (isBuy ? SLIP_SIDE : -SLIP_SIDE));
+  const slip = (raw, isBuy) => raw * (1 + (isBuy ? slipSide : -slipSide));
   function closePos(i, rawPrice, reason) {
     const fill = slip(rawPrice, pos.dir === -1);
     const gross = pos.qty * (fill - pos.entryFill) * pos.dir;
-    const fees = FEE_SIDE * pos.qty * (pos.entryFill + fill);
+    const fees = feeSide * pos.qty * (pos.entryFill + fill);
     const days = (bars[i].t - pos.entryT) / 864e5;
-    const funding = FUNDING_DAY * days * pos.qty * pos.entryFill;
+    const funding = fundingDay * days * pos.qty * pos.entryFill;
     const pnl = gross - fees - funding;
     equity += pnl;
     trades.push({

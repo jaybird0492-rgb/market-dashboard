@@ -5,123 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market Strategy — v2</title>
 <style>
+  * { box-sizing: border-box; }
   body { font-family: system-ui, sans-serif; margin: 0; background: #0d1117; color: #e6edf3; }
-  main { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 19px; margin-top: 36px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
-  p, li { line-height: 1.55; color: #c9d1d9; }
-  .sub { color: #8b949e; margin-top: 0; }
-  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; }
-  .amber { background: #4d3800; color: #f0b72f; }
-  .red { background: #4d1414; color: #ff7b72; }
-  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
-  th, td { border: 1px solid #30363d; padding: 6px 9px; text-align: left; }
-  th { background: #161b22; }
-  code { background: #161b22; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  main { max-width: 1060px; margin: 0 auto; padding: 28px 18px 64px; }
+  h1 { font-size: 27px; margin: 0 0 2px; }
+  h2 { font-size: 19px; margin: 34px 0 10px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  h3 { font-size: 15px; margin: 16px 0 6px; }
+  p, li { line-height: 1.5; color: #c9d1d9; font-size: 14.5px; }
+  .sub { color: #8b949e; font-size: 13px; margin-top: 0; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12.5px; font-weight: 700; }
+  .amber { background: #4d3800; color: #f0b72f; } .red { background: #4d1414; color: #ff7b72; }
+  .green { background: #0f3d1e; color: #3fb950; } .blue { background: #12365e; color: #58a6ff; }
+  .grey { background: #21262d; color: #8b949e; }
+  .accounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-top: 12px; }
+  .acct, .coin { background: #11161d; border: 1px solid #30363d; border-radius: 10px; padding: 14px 16px; }
+  .acct .big { font-size: 22px; font-weight: 700; }
+  .coins { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 14px; }
+  .layers { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+  .layers th, .layers td { border: 1px solid #262c36; padding: 7px 8px; text-align: left; vertical-align: top; }
+  .layers th { background: #161b22; width: 86px; color: #8b949e; font-weight: 600; }
+  table.data { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13.5px; }
+  table.data th, table.data td { border: 1px solid #30363d; padding: 6px 9px; text-align: left; }
+  table.data th { background: #161b22; }
+  .bar-wrap { background: #21262d; border-radius: 6px; height: 10px; position: relative; margin: 4px 0 2px; }
+  .bar-fill { background: #58a6ff; height: 10px; border-radius: 6px; }
+  .bar-fill.short { background: #ff7b72; }
+  .ticket { background: #0f2c18; border: 1px solid #238636; border-radius: 8px; padding: 10px 12px; margin-top: 10px; font-size: 14px; }
+  .wait { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 12px; margin-top: 10px; font-size: 14px; }
+  code { background: #161b22; padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
+  .pos { color: #3fb950; } .neg { color: #ff7b72; }
 </style>
 </head>
 <body>
 <main>
   <h1>Market Strategy — v2</h1>
-  <p class="sub">BTC &amp; ETH only · daily trend-following · research stage</p>
+  <p class="sub">BTC &amp; ETH only · Trend system: <b>1D decides direction · 4H takes trades · 1H only warns</b> · Paper trading, no real money</p>
+  <p><span class="badge amber">NOT APPROVED FOR REAL MONEY</span> <span class="badge blue" id="updatedBadge">loading…</span></p>
 
-  <h2>Status</h2>
-  <p><span class="badge amber">NOT APPROVED FOR REAL MONEY</span></p>
-  <p>v2 has passed historical validation checks that v1 never faced, but its
-  sample size is too small to prove the edge. A paper account (fake money)
-  started on 2026-10-29 to verify live execution matches the backtest.
-  Real money stays off until the paper run and a final review pass.</p>
+  <h2>Accounts (fake money, both started 2026-10-29 at $10,000)</h2>
+  <div class="accounts">
+    <div class="acct"><h3>Daily core (spot-style, long+short)</h3><div class="big" id="d1Equity">—</div><p id="d1Detail" class="sub">loading…</p></div>
+    <div class="acct"><h3>4H futures layer (simulated perps + funding)</h3><div class="big" id="h4Equity">—</div><p id="h4Detail" class="sub">loading…</p></div>
+  </div>
+  <p class="sub">Updated hourly by workflow; trades are only ever decided on closed daily / 4H candles. Kill rule on both: halt if drawdown from peak passes 25% or after 15 straight losing trades.</p>
 
-  <h2>What happened to v1</h2>
-  <p><span class="badge red">RETIRED 2026-10-29</span></p>
-  <p>The old multi-factor score system (BTC/ETH/SOL/XRP/BNB/HYPE on 1H/4H/1D)
-  lost $940 in paper trading, called 0% of its October daily trades correctly,
-  and never once issued a daily sell signal in 57 days. All of its signals,
-  track record, paper positions and pages were deleted. Summary of the
-  investigation is in <code>analysis/V2_VALIDATION.md</code> in the repo.</p>
+  <h2>Setup cards — where each coin is right now</h2>
+  <p class="sub">Read top to bottom: <b>Context</b> says what kind of market it is and what is allowed. <b>Setup</b> shows the exact 4H trigger lines — a trade exists only after a 4H close beyond one of them. <b>Warning</b> is the 1H early signal; historically only ~29% of 1H warnings ever get confirmed by the 4H, so a warning alone is never a trade.</p>
+  <div class="coins" id="coinCards"><p>Loading signals…</p></div>
 
-  <h2>The v2 strategy (candidate A)</h2>
-  <ul>
-    <li><b>Coins:</b> Bitcoin and Ethereum only. All other coins were dropped —
-    XRP failed testing, the rest lack enough trustworthy history.</li>
-    <li><b>Buy:</b> daily close above the highest price of the last 55 days,
-    while above the 200-day average. Shorts mirror this in downtrends.</li>
-    <li><b>Sell:</b> daily close below the lowest price of the last 20 days,
-    with a disaster stop at 2.5× ATR.</li>
-    <li><b>Size:</b> each trade risks 0.75% of the account. No leverage.</li>
-    <li><b>Most of the time it does nothing.</b> It only trades when a real
-    trend exists.</li>
-  </ul>
+  <h2>Open paper positions</h2>
+  <div id="openPositions"><p class="sub">loading…</p></div>
 
-  <h2>Evidence so far (2017–2026, honest costs, code-reviewed)</h2>
-  <table>
+  <h2>Closed paper trades</h2>
+  <div id="closedTrades"><p class="sub">No closed trades yet. This system trades a few times per month across both layers — empty is normal.</p></div>
+
+  <h2>Why these rules (2017–2026 evidence, code-reviewed)</h2>
+  <table class="data">
     <tr><th>Check</th><th>Result</th></tr>
-    <tr><td>Profitable in untouched 2023–2026 data</td><td>Yes — BTC +0.62R/trade, ETH +1.41R/trade (long)</td></tr>
-    <tr><td>Works if settings are nudged ±25%</td><td>Yes — 54 of 54 nearby combinations profitable</td></tr>
-    <tr><td>Worst market fall while trading</td><td>−12% to −16% (holding BTC/ETH directly: −77% to −90%)</td></tr>
-    <tr><td>Enough trades to prove it</td><td><b>No</b> — ~69 pooled trades since 2017; confidence intervals still include zero</td></tr>
-    <tr><td>Beats just holding Bitcoin</td><td>On safety yes, on total return no — it is mostly in cash by design</td></tr>
-    <tr><td>BTC+ETH in one shared account</td><td>+100% total, worst fall −19.7%, 69 trades, still positive without its 3 best trades (+0.39R)</td></tr>
+    <tr><td>Daily system, BTC+ETH shared account</td><td>+100% total, worst fall −19.7%, 69 trades (holding coins: +388%, −81%)</td></tr>
+    <tr><td>4H futures system (daily-gated)</td><td>ETH shorts in bull markets went from −0.19R to +0.03R with the daily gate; 4H was the best timeframe tested</td></tr>
+    <tr><td>1H traded directly</td><td>Failed — BTC expectancy +0.01R out-of-sample. Used as warning layer only</td></tr>
+    <tr><td>Settings nudged ±25%</td><td>54 of 54 nearby combinations profitable (daily system)</td></tr>
+    <tr><td>Enough trades to be proven</td><td><b>Not yet</b> — that is what the paper period is for</td></tr>
   </table>
-
-  <h2>Paper trading — live (fake money)</h2>
-  <p id="paperSummary">Loading paper account…</p>
-  <h3>Signal watch — how close is the next trade?</h3>
-  <p class="sub">Checked once a day after the UTC daily close (workflow runs
-  00:30 UTC). A trade only starts when a daily close breaks the 55-day high
-  (long) or low (short) <b>and</b> the trend filter agrees (longs only above
-  the 200-day average, shorts only below it) — most days, nothing happens,
-  and this table is where you watch it coming.</p>
-  <div id="signalWatch"></div>
-  <div id="paperOpen"></div>
-  <div id="paperClosed"></div>
-  <p class="sub">Started 2026-10-29 with $10,000 fake money. Updated daily after
-  the UTC daily close. Kill rule: halt and review if drawdown from peak passes
-  25% or after 15 straight losing trades. This checks that live execution
-  matches the backtest — the 2017–2026 history above is the actual evidence.</p>
-
-  <h2>What happens next</h2>
-  <ol>
-    <li><s>Portfolio test: BTC + ETH on one shared account</s> — done 2026-10-29:
-    +100% over 2017–2026, max drawdown −19.7% (holding: +388%, −81%).
-    Position size fixed at 0.75% risk per trade, max 2 positions.</li>
-    <li>Paper-trading run (now live, below) for 4–6 weeks to check execution.</li>
-    <li>Final review of paper versus backtest behaviour.</li>
-    <li>Only then: minimum-size real money, with a written switch-off rule.</li>
-  </ol>
-  <p class="sub">Last updated 2026-10-29. Full method, corrections log and
-  numbers: <code>analysis/V2_VALIDATION.md</code>.</p>
+  <p class="sub">v1 (multi-factor score, 6 coins, hourly opinions) lost $940 in paper trading and was deleted on 2026-10-29. Full method and autopsy: <code>analysis/V2_VALIDATION.md</code> · Code &amp; rules: <code>README.md</code></p>
 </main>
 <script>
-fetch('data/v2.json').then(r => r.json()).then(d => {
-  const f = (v, p) => (v >= 0 ? '+' : '') + v.toFixed(p === undefined ? 2 : p);
-  document.getElementById('paperSummary').innerHTML =
-    '<b>Equity: $' + d.equity.toLocaleString() + '</b> (started $' + d.startEquity.toLocaleString() +
-    ') · drawdown from peak ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open, ' +
-    d.stats.closed + ' closed' + (d.halted ? ' · <b>HALTED — kill rule triggered</b>' : '') +
-    '<br>BTC $' + d.lastClose.BTC.toLocaleString() + ' · ETH $' + d.lastClose.ETH.toLocaleString() +
-    ' · updated ' + new Date(d.updatedAt).toLocaleString();
-  if (d.watch) {
-    document.getElementById('signalWatch').innerHTML =
-      '<table><tr><th>Coin</th><th>Price</th><th>Long trade starts if daily close above</th><th>Short trade starts if daily close below</th><th>Trend filter (SMA200)</th><th>Strategy stance</th></tr>' +
-      Object.entries(d.watch).map(([sym, w]) => '<tr><td>' + sym + '</td><td>$' + w.price.toLocaleString() + '</td>' +
-        '<td>$' + w.longTrigger.toLocaleString() + ' (' + w.pctToLong + '% away)</td>' +
-        '<td>$' + w.shortTrigger.toLocaleString() + ' (' + w.pctToShort + '% away)</td>' +
-        '<td>' + (w.aboveSma200 ? 'above — longs allowed' : 'below — shorts allowed') + '</td>' +
-        '<td>' + (w.wouldHold ? w.wouldHold.side + ' since ' + w.wouldHold.since + ' @ $' + w.wouldHold.entry.toLocaleString() : 'flat — no trend trade on') + '</td></tr>').join('') + '</table>' +
-      '<p class="sub">“Strategy stance” is what the system would hold if it had run since 2017. The paper account started flat on 2026-10-29, so it only takes trades that trigger after that date — it will not jump into a trend that is already running.</p>';
-  }
-  const tbl = (rows, head, map) => rows.length ?
-    '<table><tr>' + head.map(h => '<th>' + h + '</th>').join('') + '</tr>' +
-    rows.map(r => '<tr>' + map(r).map(c => '<td>' + c + '</td>').join('') + '</tr>').join('') + '</table>' : '';
-  document.getElementById('paperOpen').innerHTML = d.open.length ?
-    '<h3>Open positions</h3>' + tbl(d.open, ['Coin','Side','Entry','Stop','Mark','Unrealized','Opened'],
-      p => [p.sym, p.side, '$'+p.entry, '$'+p.stop, '$'+p.mark, (p.unrealUsd>=0?'+$':'-$') + Math.abs(p.unrealUsd).toFixed(2), p.openedAt.slice(0,10)]) :
-    '<p>No open positions — the strategy is in cash, waiting for a trend. That is normal most of the time.</p>';
-  document.getElementById('paperClosed').innerHTML = d.closed.length ?
-    '<h3>Closed paper trades</h3>' + tbl([...d.closed].reverse(), ['Coin','Side','Opened','Closed','Result','R','Exit'],
-      t => [t.sym, t.side, t.openedAt.slice(0,10), t.closedAt.slice(0,10), (t.pnlUsd>=0?'+$':'-$') + Math.abs(t.pnlUsd).toFixed(2), t.r.toFixed(2), t.reason]) : '';
-}).catch(() => { document.getElementById('paperSummary').textContent = 'Paper data not available yet.'; });
+const $ = id => document.getElementById(id);
+const money = v => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString(undefined, {maximumFractionDigits: 0});
+const money2 = v => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const pct = v => (v > 0 ? '+' : '') + v + '%';
+let D1 = null, H4 = null, SIG = null;
+
+function acct(elBig, elDet, d, extra) {
+  if (!d) { $(elDet).textContent = 'data unavailable'; return; }
+  $(elBig).textContent = money(d.equity);
+  $(elDet).innerHTML = 'drawdown from peak ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open · ' + d.stats.closed + ' closed' +
+    (d.halted ? ' · <b class="neg">HALTED — kill rule</b>' : '') + (extra || '');
+}
+function renderOpen() {
+  const rows = [];
+  if (D1) for (const p of D1.open) rows.push(['Daily', p]);
+  if (H4) for (const p of H4.open) rows.push(['4H futures', p]);
+  $('openPositions').innerHTML = rows.length ?
+    '<table class="data"><tr><th>Layer</th><th>Coin</th><th>Side</th><th>Entry</th><th>Stop</th><th>Mark</th><th>Unrealized</th><th>Opened</th></tr>' +
+    rows.map(([l, p]) => `<tr><td>${l}</td><td>${p.sym}</td><td>${p.side}</td><td>$${p.entry.toLocaleString()}</td><td>$${p.stop.toLocaleString()}</td><td>$${p.mark.toLocaleString()}</td><td class="${p.unrealUsd >= 0 ? 'pos' : 'neg'}">${money2(p.unrealUsd)}</td><td>${p.openedAt.slice(0, 10)}</td></tr>`).join('') + '</table>'
+    : '<p class="sub">No open positions — both accounts are in cash, waiting for a confirmed trend break. Normal for this system.</p>';
+}
+function renderClosed() {
+  const rows = [];
+  if (D1) for (const t of D1.closed) rows.push(['Daily', t]);
+  if (H4) for (const t of H4.closed) rows.push(['4H futures', t]);
+  if (!rows.length) return;
+  rows.sort((a, b) => b[1].closedAt.localeCompare(a[1].closedAt));
+  $('closedTrades').innerHTML = '<table class="data"><tr><th>Layer</th><th>Coin</th><th>Side</th><th>Opened</th><th>Closed</th><th>Result</th><th>R</th><th>Exit</th></tr>' +
+    rows.map(([l, t]) => `<tr><td>${l}</td><td>${t.sym}</td><td>${t.side}</td><td>${t.openedAt.slice(0, 10)}</td><td>${t.closedAt.slice(0, 10)}</td><td class="${t.pnlUsd >= 0 ? 'pos' : 'neg'}">${money2(t.pnlUsd)}</td><td>${t.r}</td><td>${t.reason}</td></tr>`).join('') + '</table>';
+}
+function distBar(pctAway, isShort) {
+  const w = Math.max(2, Math.min(100, 100 - Math.abs(pctAway) * 8));
+  return `<div class="bar-wrap"><div class="bar-fill${isShort ? ' short' : ''}" style="width:${w}%"></div></div>`;
+}
+function renderCards() {
+  if (!SIG) return;
+  $('coinCards').innerHTML = SIG.coins.map(c => {
+    const w = c.warning1h, s = c.setup4h, x = c.context1d;
+    const inTrade = (H4 && H4.open.find(p => p.sym === c.sym)) || (D1 && D1.open.find(p => p.sym === c.sym));
+    const warnBadge = w.state === 'BREAKOUT' ? '<span class="badge green">BREAKOUT — awaiting 4H close</span>'
+      : w.state === 'FAKEOUT' ? '<span class="badge red">FAKEOUT</span>'
+      : w.state === 'APPROACHING' ? '<span class="badge amber">APPROACHING</span>' : '<span class="badge grey">QUIET</span>';
+    const regimeBadge = x.regime === 'TREND UP' ? '<span class="badge green">TREND UP</span>' : x.regime === 'TREND DOWN' ? '<span class="badge red">TREND DOWN</span>' : '<span class="badge grey">TRANSITION</span>';
+    const verdict = inTrade ? `<div class="ticket"><b>IN TRADE:</b> ${inTrade.side} ${c.sym} @ $${inTrade.entry.toLocaleString()} · stop $${inTrade.stop.toLocaleString()} · unrealized <span class="${inTrade.unrealUsd >= 0 ? 'pos' : 'neg'}">${money2(inTrade.unrealUsd)}</span></div>`
+      : w.state === 'BREAKOUT' ? `<div class="wait"><b>Verdict: WAIT for the 4H close.</b> 1H has broken ${w.dir === 1 ? 'up' : 'down'}; if the current 4H candle also closes beyond $${(w.dir === 1 ? s.longTrigger : s.shortTrigger).toLocaleString()} and the daily context allows it, the futures paper trade fires at the next 4H open. If not, this becomes a logged fakeout.</div>`
+      : (() => {
+          const allowLong = x.regime === 'TREND UP', allowShort = x.regime === 'TREND DOWN';
+          if (!allowLong && !allowShort) return `<div class="wait"><b>Verdict: NO TRADE.</b> Daily context is in transition — both directions are blocked until the daily trend resolves.</div>`;
+          const next = allowLong ? `4H close above $${s.longTrigger.toLocaleString()} (long, ${pct(s.pctToLong)} away)` : `4H close below $${s.shortTrigger.toLocaleString()} (short, ${pct(s.pctToShort)} away)`;
+          const blocked = allowLong ? `the short trigger at $${s.shortTrigger.toLocaleString()} is <b>blocked</b> by the daily uptrend` : `the long trigger at $${s.longTrigger.toLocaleString()} is <b>blocked</b> by the daily downtrend`;
+          return `<div class="wait"><b>Verdict: NO TRADE.</b> Next allowed trade: ${next}. Note ${blocked} — the near trigger is not always the tradeable one.</div>`;
+        })();
+    return `<div class="coin"><h3 style="margin-top:0">${c.sym} — $${x.price.toLocaleString()} <span class="sub">(daily close ${x.asOf})</span></h3>
+    <table class="layers">
+      <tr><th>1D Context</th><td>${regimeBadge} ${x.aboveSma200 ? 'Above' : 'Below'} the 200-day average<br><span class="sub">${x.riskMode}</span></td></tr>
+      <tr><th>4H Setup</th><td>Long triggers above <b>$${s.longTrigger.toLocaleString()}</b> (${pct(s.pctToLong)} away)${distBar(s.pctToLong, false)}
+        Short triggers below <b>$${s.shortTrigger.toLocaleString()}</b> (${pct(-s.pctToShort)} away)${distBar(s.pctToShort, true)}
+        <span class="sub">If triggered: stop ≈ ${s.stopDistPct}% away (2.5×ATR), risk $75 per trade on the $10k account, position ≈ $${s.approxSizeUsd.toLocaleString()}</span></td></tr>
+      <tr><th>1H Warning</th><td>${warnBadge} <span class="sub">${w.detail}</span><br>
+        <span class="sub">Last 180 days: only <b>${w.stats180d.ratePct}%</b> of ${c.sym} 1H warnings were confirmed by a 4H close within 24h (${w.stats180d.confirmed}/${w.stats180d.events}) — most warnings are fake. Data, not opinion.</span></td></tr>
+    </table>${verdict}</div>`;
+  }).join('');
+}
+Promise.all([
+  fetch('data/v2.json').then(r => r.json()).catch(() => null),
+  fetch('data/v2_4h.json').then(r => r.json()).catch(() => null),
+  fetch('data/signals.json').then(r => r.json()).catch(() => null),
+]).then(([d1, h4, sig]) => {
+  D1 = d1; H4 = h4; SIG = sig;
+  acct('d1Equity', 'd1Detail', D1);
+  acct('h4Equity', 'h4Detail', H4);
+  const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt);
+  if (upd) $('updatedBadge').textContent = 'updated ' + new Date(upd).toLocaleString();
+  renderCards(); renderOpen(); renderClosed();
+});
 </script>
 </body>
 </html>

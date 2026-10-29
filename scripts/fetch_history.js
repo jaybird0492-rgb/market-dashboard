@@ -33,8 +33,33 @@ async function fetchKlines(pair, interval, startMs) {
   return rows;
 }
 
+const LIVE_DIR = path.join(__dirname, '..', 'data', 'live');
+const IV_MS = { '1h': 36e5, '4h': 144e5, '1d': 864e5 };
+
+// --live: fetch only the last 1500 bars per symbol/interval into
+// data/live/{SYM}_{tf}_live.csv — enough warmup for signals + paper replay,
+// cheap enough to run hourly in CI.
+async function mainLive(intervals) {
+  fs.mkdirSync(LIVE_DIR, { recursive: true });
+  for (const sym of Object.keys(PAIRS)) {
+    for (const interval of intervals) {
+      const start = Date.now() - 1500 * IV_MS[interval];
+      const klines = await fetchKlines(PAIRS[sym], interval, start);
+      const body = klines.map((k) => [new Date(k[0]).toISOString(), k[1], k[2], k[3], k[4], k[5]].join(',')).join('\n');
+      fs.writeFileSync(path.join(LIVE_DIR, `${sym}_${interval}_live.csv`), 'timestamp,open,high,low,close,volume\n' + body + '\n', 'utf8');
+      console.log(`${sym} ${interval} live: ${klines.length} rows -> ${sym}_${interval}_live.csv`);
+      await sleep(150);
+    }
+  }
+}
+
 async function main() {
   const args = process.argv.slice(2);
+  if (args.includes('--live')) {
+    const ivIdx = args.indexOf('--intervals');
+    const intervals = ivIdx >= 0 ? args[ivIdx + 1].split(',') : ['1h', '4h', '1d'];
+    return mainLive(intervals);
+  }
   const ivIdx = args.indexOf('--intervals');
   const intervals = ivIdx >= 0 ? args[ivIdx + 1].split(',') : ['1d', '4h'];
   const syms = args.filter((a, i) => !a.startsWith('--') && i !== ivIdx + 1);

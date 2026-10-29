@@ -24,6 +24,18 @@ Live status page: https://jaybird0492-rgb.github.io/market-dashboard/
 - **Not proven:** ~69 trades is a small sample; per-coin confidence intervals
   include zero. Full report: `analysis/V2_VALIDATION.md`.
 
+## The three layers (how trades are framed)
+- **1D context** — daily trend regime; decides which direction is allowed and
+  at what size. Rarely trades itself (the daily core account still runs it).
+- **4H setup (the staple)** — Donchian 55/20 trigger levels on futures,
+  daily-gated, simulated perps with funding (`scripts/v2_paper4h.js`).
+  A trade exists only after a 4H close beyond a trigger.
+- **1H warning** — never trades (failed testing: BTC +0.01R out-of-sample).
+  Shows APPROACHING / BREAKOUT / FAKEOUT states plus each coin's measured
+  warning-confirmation rate (~29% over the last 180 days).
+The dashboard's setup cards show all three layers per coin with a plain
+verdict. Signals: `scripts/v2_signals.js` → `web/data/signals.json`, hourly.
+
 ## How it runs
 - `scripts/fetch_history.js` — downloads BTC/ETH daily history from Binance
   (public, no key) into `data/history/` (gitignored).

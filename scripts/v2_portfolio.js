@@ -17,14 +17,14 @@ const MAX_POSITIONS = 2;
 const TOTAL_RISK_CAP = 0.015;
 const NOTIONAL_CAP = 0.60;
 
-function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity } = {}) {
+function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity, makeStrat = null, maxHoldBars = 365, feeSide = FEE_SIDE, slipSide = SLIP_SIDE, fundingDay = FUNDING_DAY } = {}) {
   const syms = Object.keys(barsBySym);
   const state = {};
   for (const sym of syms) {
     const bars = barsBySym[sym];
     const closes = bars.map((b) => b.close);
     const ind = { sma20: smaArr(closes, 20), sma50: smaArr(closes, 50), sma200: smaArr(closes, 200), atr: atrArr(bars, 14) };
-    state[sym] = { bars, ind, strat: stratA(bars, ind, 1), i: 0, pendingEntry: 0, pendingExit: false };
+    state[sym] = { bars, ind, strat: makeStrat ? makeStrat(sym, bars, ind) : stratA(bars, ind, 1), i: 0, pendingEntry: 0, pendingExit: false };
   }
   // merged timeline of all bar timestamps
   const times = [...new Set(syms.flatMap((s) => barsBySym[s].map((b) => b.t)))].sort((a, b) => a - b);
@@ -32,15 +32,15 @@ function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity } = {}
   const positions = {}; // sym -> pos
   const trades = [];
   const curve = [];
-  const slip = (raw, isBuy) => raw * (1 + (isBuy ? SLIP_SIDE : -SLIP_SIDE));
+  const slip = (raw, isBuy) => raw * (1 + (isBuy ? slipSide : -slipSide));
 
   function closePos(sym, t, rawPrice, reason) {
     const pos = positions[sym];
     const fill = slip(rawPrice, pos.dir === -1);
     const gross = pos.qty * (fill - pos.entryFill) * pos.dir;
-    const fees = FEE_SIDE * pos.qty * (pos.entryFill + fill);
+    const fees = feeSide * pos.qty * (pos.entryFill + fill);
     const days = (t - pos.entryT) / 864e5;
-    const funding = FUNDING_DAY * days * pos.qty * pos.entryFill;
+    const funding = fundingDay * days * pos.qty * pos.entryFill;
     const pnl = gross - fees - funding;
     equity += pnl;
     trades.push({ sym, dir: pos.dir, entryT: pos.entryT, exitT: t, pnl, rMultiple: pnl / (pos.equityBefore * RISK_FRAC), reason });
@@ -84,7 +84,7 @@ function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity } = {}
         closePos(sym, t, cur.dir === 1 ? Math.min(b.open, cur.stop) : Math.max(b.open, cur.stop), 'STOP');
       }
       if (positions[sym]) {
-        if (S.strat.exitHit(S.i, positions[sym]) || S.i - positions[sym].entryBar >= 365) S.pendingExit = true;
+        if (S.strat.exitHit(S.i, positions[sym]) || S.i - positions[sym].entryBar >= maxHoldBars) S.pendingExit = true;
       } else if (t >= startMs) {
         const dir = S.strat.entryDir(S.i);
         if (dir !== 0 && (dir === 1 || allowShort) && S.ind.atr[S.i]) S.pendingEntry = dir;

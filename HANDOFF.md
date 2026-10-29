@@ -33,10 +33,15 @@ Read this file first. It restores full project context in one pass.
 - Portfolio test DONE 2026-10-29 (`scripts/v2_portfolio.js`, reviewed):
   shared account LS +100.2%, maxDD −19.7%, n=69, exTop3 +0.39. Sizing kept
   at the tested 0.75% risk/trade — do not raise it casually.
-- **Paper bot LIVE since 2026-10-29** (`scripts/v2_paper.js`): replay-derived
-  state in `data/v2/paper_state.json`, public summary `web/data/v2.json`,
-  daily workflow 00:30 UTC (fetch daily → paper → commit → deploy).
-  Kill rule: DD from peak > 25% or 15 consecutive losers → halt + review.
+- **Paper bots LIVE since 2026-10-29**: daily core (`scripts/v2_paper.js`)
+  + 4H futures layer (`scripts/v2_paper4h.js`, A-regime daily-gated,
+  simulated perps/funding), both replay-derived from PAPER_START, shared
+  $10k each, BTC+ETH. State: `data/v2/*_state.json`; public:
+  `web/data/v2.json`, `web/data/v2_4h.json`, `web/data/signals.json`
+  (three-layer setup cards on the dashboard: 1D context / 4H setup /
+  1H warning with measured fakeout rates). Hourly workflow (:15 UTC:
+  fetch -> both papers -> signals -> commit -> deploy).
+  Kill rule (both): DD from peak > 25% or 15 consecutive losers → halt + review.
 - **Verdict: NOT approved for real money.** Remaining: paper review after
   4–6 weeks (execution fidelity vs backtest), then a fresh real-money
   decision. Nothing about the paper run auto-approves real trading.

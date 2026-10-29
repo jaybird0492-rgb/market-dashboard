@@ -4,10 +4,11 @@ on:
   push:
     branches: [main]
   schedule:
-    # Daily after the UTC daily candle closes: refresh history, advance the
-    # v2 paper account, commit its state, deploy. Kill switch for the paper
-    # bot = delete this schedule block (or the v2_paper step).
-    - cron: '30 0 * * *'
+    # Hourly: refresh live bars, advance both paper accounts (daily + 4H
+    # futures), recompute the three-layer signals, commit, deploy.
+    # Trades are decided only on closed daily/4H candles inside the bots.
+    # Kill switch for all paper trading = delete this schedule block.
+    - cron: '15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,10 +28,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fetch BTC/ETH daily history (Binance)
-        run: node scripts/fetch_history.js --intervals 1d
-      - name: Advance v2 paper account
-        run: node scripts/v2_paper.js
+      - name: Fetch BTC/ETH history + live bars (Binance public data)
+        run: |
+          node scripts/fetch_history.js --intervals 1d
+          node scripts/fetch_history.js --live
+      - name: Advance paper accounts + signals
+        run: |
+          node scripts/v2_paper.js
+          node scripts/v2_paper4h.js
+          node scripts/v2_signals.js
       - name: Commit paper state
         run: |
           git config user.name "market-bot"
@@ -39,7 +45,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "no paper changes"
           else
-            git commit -m "v2 paper update $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            git commit -m "v2 update $(date -u +%Y-%m-%dT%H:%MZ)" || true
             git push origin main || true
           fi
       - uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,79 @@
+{
+  "updatedAt": "2026-10-29T14:46:27.327Z",
+  "coins": [
+    {
+      "sym": "BTC",
+      "context1d": {
+        "regime": "TREND UP",
+        "price": 81343.5,
+        "asOf": "2026-10-28",
+        "aboveSma200": true,
+        "sma50Above200": true,
+        "longTrigger": 87395.67,
+        "shortTrigger": 74967.97,
+        "riskMode": "Longs allowed at full size; shorts blocked"
+      },
+      "setup4h": {
+        "price": 80170.02,
+        "asOf": "2026-10-29T08:00:00.000Z",
+        "longTrigger": 84898,
+        "pctToLong": 5.9,
+        "shortTrigger": 79220.74,
+        "pctToShort": 1.2,
+        "aboveSma200": false,
+        "atr": 784.31,
+        "stopDistPct": 2.45,
+        "riskUsdPerTrade": 75,
+        "approxSizeUsd": 3067
+      },
+      "warning1h": {
+        "state": "QUIET",
+        "dir": 0,
+        "detail": "nearest 1H levels: +1.9% up / -1.0% down",
+        "asOf": "2026-10-29T13:00:00.000Z",
+        "stats180d": {
+          "events": 58,
+          "confirmed": 17,
+          "ratePct": 29
+        }
+      }
+    },
+    {
+      "sym": "ETH",
+      "context1d": {
+        "regime": "TREND UP",
+        "price": 2359.68,
+        "asOf": "2026-10-28",
+        "aboveSma200": true,
+        "sma50Above200": true,
+        "longTrigger": 2807.34,
+        "shortTrigger": 2282.46,
+        "riskMode": "Longs allowed at full size; shorts blocked"
+      },
+      "setup4h": {
+        "price": 2325.28,
+        "asOf": "2026-10-29T08:00:00.000Z",
+        "longTrigger": 2526.62,
+        "pctToLong": 8.66,
+        "shortTrigger": 2282.46,
+        "pctToShort": 1.88,
+        "aboveSma200": false,
+        "atr": 33.3,
+        "stopDistPct": 3.58,
+        "riskUsdPerTrade": 75,
+        "approxSizeUsd": 2095
+      },
+      "warning1h": {
+        "state": "QUIET",
+        "dir": 0,
+        "detail": "nearest 1H levels: +2.8% up / -1.5% down",
+        "asOf": "2026-10-29T13:00:00.000Z",
+        "stats180d": {
+          "events": 45,
+          "confirmed": 13,
+          "ratePct": 29
+        }
+      }
+    }
+  ]
+}

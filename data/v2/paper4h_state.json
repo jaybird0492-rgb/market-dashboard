@@ -1,0 +1,18 @@
+{
+  "updatedAt": "2026-10-29T14:46:27.238Z",
+  "strategy": "4H Donchian 55/20 futures (simulated perps), daily-trend gated, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
+  "paperStart": "2026-10-29T00:00:00.000Z",
+  "startEquity": 10000,
+  "equity": 10000,
+  "realizedEquity": 10000,
+  "drawdownFromPeak": 0,
+  "losingStreak": 0,
+  "halted": false,
+  "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
+  "open": [],
+  "closed": [],
+  "stats": {
+    "closed": 0,
+    "open": 0
+  }
+}
