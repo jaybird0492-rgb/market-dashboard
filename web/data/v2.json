@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T14:26:37.655Z",
+  "updatedAt": "2026-10-29T14:30:14.520Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
@@ -12,6 +12,34 @@
   "lastClose": {
     "BTC": 81343.5,
     "ETH": 2359.68
+  },
+  "watch": {
+    "BTC": {
+      "price": 81343.5,
+      "asOf": "2026-10-28",
+      "aboveSma200": true,
+      "longTrigger": 87395.67,
+      "pctToLong": 7.44,
+      "shortTrigger": 74967.97,
+      "pctToShort": 8.5,
+      "wouldHold": null
+    },
+    "ETH": {
+      "price": 2359.68,
+      "asOf": "2026-10-28",
+      "aboveSma200": true,
+      "longTrigger": 2807.34,
+      "pctToLong": 18.97,
+      "shortTrigger": 2282.46,
+      "pctToShort": 3.38,
+      "wouldHold": {
+        "side": "LONG",
+        "entry": 2253.94,
+        "since": "2026-08-20",
+        "stop": 2070.23,
+        "unrealUsdBacktest": 85.91
+      }
+    }
   },
   "open": [],
   "closed": [],

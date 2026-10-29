@@ -15,7 +15,7 @@
 // Usage: node scripts/v2_paper.js   (run scripts/fetch_history.js first)
 const fs = require('fs');
 const path = require('path');
-const { loadBars } = require('./v2_backtest');
+const { loadBars, smaArr, priorHigh, priorLow } = require('./v2_backtest');
 const { runPortfolio, portfolioStats, START_EQUITY } = require('./v2_portfolio');
 
 const PAPER_START = Date.parse('2026-10-29T00:00:00Z');
@@ -32,7 +32,32 @@ function closedDailyBars(sym) {
 function main() {
   const barsBySym = { BTC: closedDailyBars('BTC'), ETH: closedDailyBars('ETH') };
   const res = runPortfolio(barsBySym, { allowShort: true, startMs: PAPER_START });
-  const s = portfolioStats(runPortfolio(barsBySym, { allowShort: true }), barsBySym); // full-history backtest stats
+  const fullRes = runPortfolio(barsBySym, { allowShort: true });
+  const s = portfolioStats(fullRes, barsBySym); // full-history backtest stats
+
+  // Signal watch: where each coin sits vs its triggers on the last closed
+  // daily bar, plus the position the strategy would hold if it had been
+  // running all along (paper started flat on PAPER_START by design).
+  const stance = {};
+  for (const p of fullRes.openPositions) {
+    stance[p.sym] = { side: p.dir === 1 ? 'LONG' : 'SHORT', entry: +p.entryFill.toFixed(2), since: new Date(p.entryT).toISOString().slice(0, 10), stop: +p.stop.toFixed(2), unrealUsdBacktest: +p.unrealPnl.toFixed(2) };
+  }
+  const watch = {};
+  for (const [sym, bars] of Object.entries(barsBySym)) {
+    const i = bars.length - 1;
+    const closes = bars.map((b) => b.close);
+    const sma200 = smaArr(closes, 200)[i];
+    const up = priorHigh(bars, i + 1, 55); // breakout level from last 55 closed bars
+    const dn = priorLow(bars, i + 1, 55);
+    const px = bars[i].close;
+    watch[sym] = {
+      price: +px.toFixed(2), asOf: new Date(bars[i].t).toISOString().slice(0, 10),
+      aboveSma200: sma200 ? px > sma200 : null,
+      longTrigger: +up.toFixed(2), pctToLong: +((up / px - 1) * 100).toFixed(2),
+      shortTrigger: +dn.toFixed(2), pctToShort: +((px / dn - 1) * 100).toFixed(2),
+      wouldHold: stance[sym] || null,
+    };
+  }
   const lastClose = {};
   for (const [sym, bars] of Object.entries(barsBySym)) lastClose[sym] = bars[bars.length - 1].close;
 
@@ -55,6 +80,7 @@ function main() {
     halted,
     killRule: 'Halt if drawdown from peak > 25% or 15 consecutive losers',
     lastClose,
+    watch,
     open: res.openPositions.map((p) => ({
       sym: p.sym, side: p.dir === 1 ? 'LONG' : 'SHORT',
       entry: +p.entryFill.toFixed(2), stop: +p.stop.toFixed(2),
@@ -81,6 +107,7 @@ function main() {
   fs.writeFileSync(PUBLIC, JSON.stringify(pub, null, 2), 'utf8');
   console.log(`v2 paper: equity $${pub.equity} (realized $${pub.realizedEquity}), open ${pub.open.length}, closed ${pub.stats.closed}, DD ${pub.drawdownFromPeak}%, streak ${streak}${halted ? ' — HALTED (kill rule)' : ''}`);
   for (const p of pub.open) console.log(`  OPEN ${p.sym} ${p.side} @ ${p.entry} stop ${p.stop} mark ${p.mark} (${p.unrealUsd >= 0 ? '+' : ''}$${p.unrealUsd})`);
+  for (const [sym, w] of Object.entries(watch)) console.log(`  WATCH ${sym} $${w.price} | long triggers above $${w.longTrigger} (${w.pctToLong}% away) | short below $${w.shortTrigger} (${w.pctToShort}% away) | ${w.aboveSma200 ? 'above' : 'below'} SMA200${w.wouldHold ? ` | strategy would hold ${w.wouldHold.side} since ${w.wouldHold.since}` : ''}`);
 }
 
 if (require.main === module) main();

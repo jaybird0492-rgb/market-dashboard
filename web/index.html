@@ -66,6 +66,13 @@
 
   <h2>Paper trading — live (fake money)</h2>
   <p id="paperSummary">Loading paper account…</p>
+  <h3>Signal watch — how close is the next trade?</h3>
+  <p class="sub">Checked once a day after the UTC daily close (workflow runs
+  00:30 UTC). A trade only starts when a daily close breaks the 55-day high
+  (long) or low (short) <b>and</b> the trend filter agrees (longs only above
+  the 200-day average, shorts only below it) — most days, nothing happens,
+  and this table is where you watch it coming.</p>
+  <div id="signalWatch"></div>
   <div id="paperOpen"></div>
   <div id="paperClosed"></div>
   <p class="sub">Started 2026-10-29 with $10,000 fake money. Updated daily after
@@ -94,6 +101,16 @@ fetch('data/v2.json').then(r => r.json()).then(d => {
     d.stats.closed + ' closed' + (d.halted ? ' · <b>HALTED — kill rule triggered</b>' : '') +
     '<br>BTC $' + d.lastClose.BTC.toLocaleString() + ' · ETH $' + d.lastClose.ETH.toLocaleString() +
     ' · updated ' + new Date(d.updatedAt).toLocaleString();
+  if (d.watch) {
+    document.getElementById('signalWatch').innerHTML =
+      '<table><tr><th>Coin</th><th>Price</th><th>Long trade starts if daily close above</th><th>Short trade starts if daily close below</th><th>Trend filter (SMA200)</th><th>Strategy stance</th></tr>' +
+      Object.entries(d.watch).map(([sym, w]) => '<tr><td>' + sym + '</td><td>$' + w.price.toLocaleString() + '</td>' +
+        '<td>$' + w.longTrigger.toLocaleString() + ' (' + w.pctToLong + '% away)</td>' +
+        '<td>$' + w.shortTrigger.toLocaleString() + ' (' + w.pctToShort + '% away)</td>' +
+        '<td>' + (w.aboveSma200 ? 'above — longs allowed' : 'below — shorts allowed') + '</td>' +
+        '<td>' + (w.wouldHold ? w.wouldHold.side + ' since ' + w.wouldHold.since + ' @ $' + w.wouldHold.entry.toLocaleString() : 'flat — no trend trade on') + '</td></tr>').join('') + '</table>' +
+      '<p class="sub">“Strategy stance” is what the system would hold if it had run since 2017. The paper account started flat on 2026-10-29, so it only takes trades that trigger after that date — it will not jump into a trend that is already running.</p>';
+  }
   const tbl = (rows, head, map) => rows.length ?
     '<table><tr>' + head.map(h => '<th>' + h + '</th>').join('') + '</tr>' +
     rows.map(r => '<tr>' + map(r).map(c => '<td>' + c + '</td>').join('') + '</tr>').join('') + '</table>' : '';
