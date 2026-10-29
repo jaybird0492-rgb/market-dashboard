@@ -3,148 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Market Strategy — v2</title>
+<title>Trend Strategy — BTC/ETH</title>
 <style>
-  * { box-sizing: border-box; }
-  body { font-family: system-ui, sans-serif; margin: 0; background: #0d1117; color: #e6edf3; }
-  main { max-width: 1060px; margin: 0 auto; padding: 28px 18px 64px; }
-  h1 { font-size: 27px; margin: 0 0 2px; }
-  h2 { font-size: 19px; margin: 34px 0 10px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
-  h3 { font-size: 15px; margin: 16px 0 6px; }
-  p, li { line-height: 1.5; color: #c9d1d9; font-size: 14.5px; }
-  .sub { color: #8b949e; font-size: 13px; margin-top: 0; }
-  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12.5px; font-weight: 700; }
-  .amber { background: #4d3800; color: #f0b72f; } .red { background: #4d1414; color: #ff7b72; }
-  .green { background: #0f3d1e; color: #3fb950; } .blue { background: #12365e; color: #58a6ff; }
-  .grey { background: #21262d; color: #8b949e; }
-  .accounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-top: 12px; }
-  .acct, .coin { background: #11161d; border: 1px solid #30363d; border-radius: 10px; padding: 14px 16px; }
-  .acct .big { font-size: 22px; font-weight: 700; }
-  .coins { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 14px; }
-  .layers { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
-  .layers th, .layers td { border: 1px solid #262c36; padding: 7px 8px; text-align: left; vertical-align: top; }
-  .layers th { background: #161b22; width: 86px; color: #8b949e; font-weight: 600; }
-  table.data { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 13.5px; }
-  table.data th, table.data td { border: 1px solid #30363d; padding: 6px 9px; text-align: left; }
-  table.data th { background: #161b22; }
-  .bar-wrap { background: #21262d; border-radius: 6px; height: 10px; position: relative; margin: 4px 0 2px; }
-  .bar-fill { background: #58a6ff; height: 10px; border-radius: 6px; }
-  .bar-fill.short { background: #ff7b72; }
-  .ticket { background: #0f2c18; border: 1px solid #238636; border-radius: 8px; padding: 10px 12px; margin-top: 10px; font-size: 14px; }
-  .wait { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 12px; margin-top: 10px; font-size: 14px; }
-  code { background: #161b22; padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
-  .pos { color: #3fb950; } .neg { color: #ff7b72; }
+  :root {
+    --bg: #0b0e13; --panel: #11161d; --panel-2: #151b24; --border: #242c38;
+    --text: #e8edf3; --muted: #8d99a8; --faint: #5d6878;
+    --green: #2fb457; --red: #ef5350; --amber: #e8a33d; --blue: #4a9eda;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+  a { color: var(--blue); text-decoration: none; }
+  .topbar { border-bottom: 1px solid var(--border); background: var(--panel); }
+  .topbar-in, main { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .topbar-in { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .brand { display: flex; align-items: baseline; gap: 12px; }
+  .brand h1 { font-size: 16px; font-weight: 650; letter-spacing: .01em; }
+  .brand span { color: var(--muted); font-size: 12.5px; }
+  .top-right { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 12.5px; }
+  .pill { font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 3px 9px; border-radius: 20px; text-transform: uppercase; }
+  .pill-paper { background: rgba(232,163,61,.14); color: var(--amber); border: 1px solid rgba(232,163,61,.4); }
+  .pill-live { background: rgba(47,180,87,.12); color: var(--green); border: 1px solid rgba(47,180,87,.35); }
+  main { padding-top: 20px; padding-bottom: 40px; }
+  section { margin-bottom: 26px; }
+  .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  h2 { font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+  .sec-head .note { font-size: 12px; color: var(--faint); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .kpi { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .kpi .label { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+  .kpi .value { font-size: 21px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .kpi .sub { font-size: 12px; color: var(--muted); margin-top: 5px; font-variant-numeric: tabular-nums; }
+  .pos { color: var(--green); } .neg { color: var(--red); }
+  .coins { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 12px; }
+  .coin { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .coin-head { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; background: var(--panel-2); border-bottom: 1px solid var(--border); }
+  .coin-id { display: flex; align-items: baseline; gap: 10px; }
+  .coin-id .sym { font-size: 16px; font-weight: 700; }
+  .coin-id .px { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .regime { font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 3px 9px; border-radius: 4px; text-transform: uppercase; }
+  .r-up { background: rgba(47,180,87,.13); color: var(--green); }
+  .r-dn { background: rgba(239,83,80,.13); color: var(--red); }
+  .r-tr { background: rgba(141,153,168,.14); color: var(--muted); }
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .sig-cell { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  .sig-cell:nth-child(odd) { border-right: 1px solid var(--border); }
+  .sig-cell .tag { font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+  .sig-val { font-size: 13.5px; line-height: 1.5; }
+  .sig-val .num { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .warn { font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; }
+  .w-break { background: rgba(47,180,87,.14); color: var(--green); }
+  .w-fake { background: rgba(239,83,80,.14); color: var(--red); }
+  .w-appr { background: rgba(232,163,61,.15); color: var(--amber); }
+  .w-quiet { background: rgba(141,153,168,.14); color: var(--muted); }
+  .verdict { padding: 12px 16px; display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.5; }
+  .verdict .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; background: var(--faint); }
+  .verdict.trade .dot { background: var(--green); }
+  .verdict.wait .dot { background: var(--amber); }
+  .verdict b { font-weight: 650; }
+  .table-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; padding: 10px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 9px 14px; border-bottom: 1px solid rgba(36,44,56,.6); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  .empty { padding: 16px; color: var(--faint); font-size: 13px; }
+  .table-scroll { overflow-x: auto; }
+  footer { border-top: 1px solid var(--border); color: var(--faint); font-size: 12px; }
+  .foot-in { max-width: 1200px; margin: 0 auto; padding: 16px 20px 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  @media (max-width: 700px) { .signal-grid { grid-template-columns: 1fr; } .sig-cell:nth-child(odd) { border-right: none; } .coins { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<main>
-  <h1>Market Strategy — v2</h1>
-  <p class="sub">BTC &amp; ETH only · Trend system: <b>1D decides direction · 4H takes trades · 1H only warns</b> · Paper trading, no real money</p>
-  <p><span class="badge amber">NOT APPROVED FOR REAL MONEY</span> <span class="badge blue" id="updatedBadge">loading…</span></p>
-
-  <h2>Accounts (fake money, both started 2026-10-29 at $10,000)</h2>
-  <div class="accounts">
-    <div class="acct"><h3>Daily core (spot-style, long+short)</h3><div class="big" id="d1Equity">—</div><p id="d1Detail" class="sub">loading…</p></div>
-    <div class="acct"><h3>4H futures layer (simulated perps + funding)</h3><div class="big" id="h4Equity">—</div><p id="h4Detail" class="sub">loading…</p></div>
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand"><h1>Trend Strategy</h1><span>BTC · ETH — Daily / 4H Futures</span></div>
+    <div class="top-right"><span id="updatedAt">—</span><span class="pill pill-paper">Paper Trading</span><span class="pill pill-live" id="feedStatus">Feed OK</span></div>
   </div>
-  <p class="sub">Updated hourly by workflow; trades are only ever decided on closed daily / 4H candles. Kill rule on both: halt if drawdown from peak passes 25% or after 15 straight losing trades.</p>
+</header>
 
-  <h2>Setup cards — where each coin is right now</h2>
-  <p class="sub">Read top to bottom: <b>Context</b> says what kind of market it is and what is allowed. <b>Setup</b> shows the exact 4H trigger lines — a trade exists only after a 4H close beyond one of them. <b>Warning</b> is the 1H early signal; historically only ~29% of 1H warnings ever get confirmed by the 4H, so a warning alone is never a trade.</p>
-  <div class="coins" id="coinCards"><p>Loading signals…</p></div>
+<main>
+  <section>
+    <div class="sec-head"><h2>Accounts</h2><span class="note">Started 2026-10-29 · kill rule: −25% from peak or 15 consecutive losses</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="label">Daily Core — Equity</div><div class="value" id="d1Equity">—</div><div class="sub" id="d1Sub">loading</div></div>
+      <div class="kpi"><div class="label">4H Futures — Equity</div><div class="value" id="h4Equity">—</div><div class="sub" id="h4Sub">loading</div></div>
+      <div class="kpi"><div class="label">Combined Exposure</div><div class="value" id="exposure">—</div><div class="sub" id="exposureSub">—</div></div>
+      <div class="kpi"><div class="label">Backtest 2017–2026 (Daily, Shared)</div><div class="value">+100.2%</div><div class="sub">Max DD −19.7% · Exp +1.55R · PF 4.40 · n=69</div></div>
+    </div>
+  </section>
 
-  <h2>Open paper positions</h2>
-  <div id="openPositions"><p class="sub">loading…</p></div>
+  <section>
+    <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note">1D context · 4H trigger · 1H warning — closed candles only</span></div>
+    <div class="coins" id="coinCards"><div class="empty">Loading market state…</div></div>
+  </section>
 
-  <h2>Closed paper trades</h2>
-  <div id="closedTrades"><p class="sub">No closed trades yet. This system trades a few times per month across both layers — empty is normal.</p></div>
+  <section>
+    <div class="sec-head"><h2>Open Positions</h2><span class="note" id="openCount"></span></div>
+    <div class="table-card table-scroll" id="openPositions"><div class="empty">Loading…</div></div>
+  </section>
 
-  <h2>Why these rules (2017–2026 evidence, code-reviewed)</h2>
-  <table class="data">
-    <tr><th>Check</th><th>Result</th></tr>
-    <tr><td>Daily system, BTC+ETH shared account</td><td>+100% total, worst fall −19.7%, 69 trades (holding coins: +388%, −81%)</td></tr>
-    <tr><td>4H futures system (daily-gated)</td><td>ETH shorts in bull markets went from −0.19R to +0.03R with the daily gate; 4H was the best timeframe tested</td></tr>
-    <tr><td>1H traded directly</td><td>Failed — BTC expectancy +0.01R out-of-sample. Used as warning layer only</td></tr>
-    <tr><td>Settings nudged ±25%</td><td>54 of 54 nearby combinations profitable (daily system)</td></tr>
-    <tr><td>Enough trades to be proven</td><td><b>Not yet</b> — that is what the paper period is for</td></tr>
-  </table>
-  <p class="sub">v1 (multi-factor score, 6 coins, hourly opinions) lost $940 in paper trading and was deleted on 2026-10-29. Full method and autopsy: <code>analysis/V2_VALIDATION.md</code> · Code &amp; rules: <code>README.md</code></p>
+  <section>
+    <div class="sec-head"><h2>Closed Trades</h2><span class="note" id="closedCount"></span></div>
+    <div class="table-card table-scroll" id="closedTrades"><div class="empty">No closed trades yet.</div></div>
+  </section>
 </main>
+
+<footer>
+  <div class="foot-in">
+    <span>Donchian 55/20 trend system · 2.5×ATR stop · 0.75% risk per trade · BTC/ETH only</span>
+    <span>Validation: <a href="https://github.com/jaybird0492-rgb/market-dashboard/blob/main/analysis/V2_VALIDATION.md" target="_blank" rel="noopener">methodology &amp; results</a> · Paper only — no real orders</span>
+  </div>
+</footer>
+
 <script>
 const $ = id => document.getElementById(id);
-const money = v => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString(undefined, {maximumFractionDigits: 0});
-const money2 = v => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-const pct = v => (v > 0 ? '+' : '') + v + '%';
+const fmt$ = (v, dec = 0) => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const cls = v => v >= 0 ? 'pos' : 'neg';
 let D1 = null, H4 = null, SIG = null;
 
-function acct(elBig, elDet, d, extra) {
-  if (!d) { $(elDet).textContent = 'data unavailable'; return; }
-  $(elBig).textContent = money(d.equity);
-  $(elDet).innerHTML = 'drawdown from peak ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open · ' + d.stats.closed + ' closed' +
-    (d.halted ? ' · <b class="neg">HALTED — kill rule</b>' : '') + (extra || '');
+function renderAccounts() {
+  const fill = (eqId, subId, d) => {
+    if (!d) { $(subId).textContent = 'data unavailable'; return; }
+    $(eqId).textContent = fmt$(d.equity);
+    $(eqId).className = 'value ' + (d.equity >= d.startEquity ? 'pos' : 'neg');
+    $(subId).innerHTML = 'Started ' + fmt$(d.startEquity) + ' · DD ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open / ' + d.stats.closed + ' closed' +
+      (d.halted ? ' · <span class="neg"><b>HALTED</b></span>' : '');
+  };
+  fill('d1Equity', 'd1Sub', D1);
+  fill('h4Equity', 'h4Sub', H4);
+  const open = [];
+  if (D1) open.push(...D1.open.map(p => ({ ...p, layer: 'Daily' })));
+  if (H4) open.push(...H4.open.map(p => ({ ...p, layer: '4H Fut' })));
+  const unreal = open.reduce((a, p) => a + p.unrealUsd, 0);
+  $('exposure').textContent = open.length ? open.length + (open.length === 1 ? ' position' : ' positions') : 'Flat';
+  $('exposureSub').innerHTML = open.length
+    ? open.map(p => p.sym + ' ' + p.side).join(' · ') + ' · unrealized <span class="' + cls(unreal) + '">' + fmt$(unreal, 2) + '</span>'
+    : 'No open risk';
+  return open;
 }
-function renderOpen() {
-  const rows = [];
-  if (D1) for (const p of D1.open) rows.push(['Daily', p]);
-  if (H4) for (const p of H4.open) rows.push(['4H futures', p]);
-  $('openPositions').innerHTML = rows.length ?
-    '<table class="data"><tr><th>Layer</th><th>Coin</th><th>Side</th><th>Entry</th><th>Stop</th><th>Mark</th><th>Unrealized</th><th>Opened</th></tr>' +
-    rows.map(([l, p]) => `<tr><td>${l}</td><td>${p.sym}</td><td>${p.side}</td><td>$${p.entry.toLocaleString()}</td><td>$${p.stop.toLocaleString()}</td><td>$${p.mark.toLocaleString()}</td><td class="${p.unrealUsd >= 0 ? 'pos' : 'neg'}">${money2(p.unrealUsd)}</td><td>${p.openedAt.slice(0, 10)}</td></tr>`).join('') + '</table>'
-    : '<p class="sub">No open positions — both accounts are in cash, waiting for a confirmed trend break. Normal for this system.</p>';
+
+function renderPositions(open) {
+  $('openCount').textContent = open.length ? open.length + ' open' : '';
+  $('openPositions').innerHTML = open.length
+    ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Entry</th><th>Stop</th><th>Mark</th><th>Unrealized</th><th>Opened</th></tr>' +
+      open.map(p => `<tr><td>${p.layer}</td><td><b>${p.sym}</b></td><td class="${p.side === 'LONG' ? 'pos' : 'neg'}">${p.side}</td><td>${fmt$(p.entry, 2)}</td><td>${fmt$(p.stop, 2)}</td><td>${fmt$(p.mark, 2)}</td><td class="${cls(p.unrealUsd)}">${fmt$(p.unrealUsd, 2)}</td><td>${p.openedAt.slice(0, 10)}</td></tr>`).join('') + '</table>'
+    : '<div class="empty">No open positions — both accounts in cash.</div>';
+  const closed = [];
+  if (D1) closed.push(...D1.closed.map(t => ({ ...t, layer: 'Daily' })));
+  if (H4) closed.push(...H4.closed.map(t => ({ ...t, layer: '4H Fut' })));
+  closed.sort((a, b) => b.closedAt.localeCompare(a.closedAt));
+  $('closedCount').textContent = closed.length ? closed.length + ' total' : '';
+  $('closedTrades').innerHTML = closed.length
+    ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Opened</th><th>Closed</th><th>P&amp;L</th><th>R</th><th>Exit</th></tr>' +
+      closed.map(t => `<tr><td>${t.layer}</td><td><b>${t.sym}</b></td><td class="${t.side === 'LONG' ? 'pos' : 'neg'}">${t.side}</td><td>${t.openedAt.slice(0, 10)}</td><td>${t.closedAt.slice(0, 10)}</td><td class="${cls(t.pnlUsd)}">${fmt$(t.pnlUsd, 2)}</td><td>${t.r}</td><td>${t.reason}</td></tr>`).join('') + '</table>'
+    : '<div class="empty">No closed trades yet.</div>';
 }
-function renderClosed() {
-  const rows = [];
-  if (D1) for (const t of D1.closed) rows.push(['Daily', t]);
-  if (H4) for (const t of H4.closed) rows.push(['4H futures', t]);
-  if (!rows.length) return;
-  rows.sort((a, b) => b[1].closedAt.localeCompare(a[1].closedAt));
-  $('closedTrades').innerHTML = '<table class="data"><tr><th>Layer</th><th>Coin</th><th>Side</th><th>Opened</th><th>Closed</th><th>Result</th><th>R</th><th>Exit</th></tr>' +
-    rows.map(([l, t]) => `<tr><td>${l}</td><td>${t.sym}</td><td>${t.side}</td><td>${t.openedAt.slice(0, 10)}</td><td>${t.closedAt.slice(0, 10)}</td><td class="${t.pnlUsd >= 0 ? 'pos' : 'neg'}">${money2(t.pnlUsd)}</td><td>${t.r}</td><td>${t.reason}</td></tr>`).join('') + '</table>';
-}
-function distBar(pctAway, isShort) {
-  const w = Math.max(2, Math.min(100, 100 - Math.abs(pctAway) * 8));
-  return `<div class="bar-wrap"><div class="bar-fill${isShort ? ' short' : ''}" style="width:${w}%"></div></div>`;
-}
-function renderCards() {
-  if (!SIG) return;
+
+function renderCoins() {
+  if (!SIG) { $('coinCards').innerHTML = '<div class="empty">Signal feed unavailable.</div>'; return; }
   $('coinCards').innerHTML = SIG.coins.map(c => {
-    const w = c.warning1h, s = c.setup4h, x = c.context1d;
+    const x = c.context1d, s = c.setup4h, w = c.warning1h;
+    const regime = x.regime === 'TREND UP' ? ['r-up', 'Trend Up'] : x.regime === 'TREND DOWN' ? ['r-dn', 'Trend Down'] : ['r-tr', 'Transition'];
+    const warnCls = { BREAKOUT: 'w-break', FAKEOUT: 'w-fake', APPROACHING: 'w-appr', QUIET: 'w-quiet' }[w.state] || 'w-quiet';
     const inTrade = (H4 && H4.open.find(p => p.sym === c.sym)) || (D1 && D1.open.find(p => p.sym === c.sym));
-    const warnBadge = w.state === 'BREAKOUT' ? '<span class="badge green">BREAKOUT — awaiting 4H close</span>'
-      : w.state === 'FAKEOUT' ? '<span class="badge red">FAKEOUT</span>'
-      : w.state === 'APPROACHING' ? '<span class="badge amber">APPROACHING</span>' : '<span class="badge grey">QUIET</span>';
-    const regimeBadge = x.regime === 'TREND UP' ? '<span class="badge green">TREND UP</span>' : x.regime === 'TREND DOWN' ? '<span class="badge red">TREND DOWN</span>' : '<span class="badge grey">TRANSITION</span>';
-    const verdict = inTrade ? `<div class="ticket"><b>IN TRADE:</b> ${inTrade.side} ${c.sym} @ $${inTrade.entry.toLocaleString()} · stop $${inTrade.stop.toLocaleString()} · unrealized <span class="${inTrade.unrealUsd >= 0 ? 'pos' : 'neg'}">${money2(inTrade.unrealUsd)}</span></div>`
-      : w.state === 'BREAKOUT' ? `<div class="wait"><b>Verdict: WAIT for the 4H close.</b> 1H has broken ${w.dir === 1 ? 'up' : 'down'}; if the current 4H candle also closes beyond $${(w.dir === 1 ? s.longTrigger : s.shortTrigger).toLocaleString()} and the daily context allows it, the futures paper trade fires at the next 4H open. If not, this becomes a logged fakeout.</div>`
-      : (() => {
-          const allowLong = x.regime === 'TREND UP', allowShort = x.regime === 'TREND DOWN';
-          if (!allowLong && !allowShort) return `<div class="wait"><b>Verdict: NO TRADE.</b> Daily context is in transition — both directions are blocked until the daily trend resolves.</div>`;
-          const next = allowLong ? `4H close above $${s.longTrigger.toLocaleString()} (long, ${pct(s.pctToLong)} away)` : `4H close below $${s.shortTrigger.toLocaleString()} (short, ${pct(s.pctToShort)} away)`;
-          const blocked = allowLong ? `the short trigger at $${s.shortTrigger.toLocaleString()} is <b>blocked</b> by the daily uptrend` : `the long trigger at $${s.longTrigger.toLocaleString()} is <b>blocked</b> by the daily downtrend`;
-          return `<div class="wait"><b>Verdict: NO TRADE.</b> Next allowed trade: ${next}. Note ${blocked} — the near trigger is not always the tradeable one.</div>`;
-        })();
-    return `<div class="coin"><h3 style="margin-top:0">${c.sym} — $${x.price.toLocaleString()} <span class="sub">(daily close ${x.asOf})</span></h3>
-    <table class="layers">
-      <tr><th>1D Context</th><td>${regimeBadge} ${x.aboveSma200 ? 'Above' : 'Below'} the 200-day average<br><span class="sub">${x.riskMode}</span></td></tr>
-      <tr><th>4H Setup</th><td>Long triggers above <b>$${s.longTrigger.toLocaleString()}</b> (${pct(s.pctToLong)} away)${distBar(s.pctToLong, false)}
-        Short triggers below <b>$${s.shortTrigger.toLocaleString()}</b> (${pct(-s.pctToShort)} away)${distBar(s.pctToShort, true)}
-        <span class="sub">If triggered: stop ≈ ${s.stopDistPct}% away (2.5×ATR), risk $75 per trade on the $10k account, position ≈ $${s.approxSizeUsd.toLocaleString()}</span></td></tr>
-      <tr><th>1H Warning</th><td>${warnBadge} <span class="sub">${w.detail}</span><br>
-        <span class="sub">Last 180 days: only <b>${w.stats180d.ratePct}%</b> of ${c.sym} 1H warnings were confirmed by a 4H close within 24h (${w.stats180d.confirmed}/${w.stats180d.events}) — most warnings are fake. Data, not opinion.</span></td></tr>
-    </table>${verdict}</div>`;
+    const allowLong = x.regime === 'TREND UP', allowShort = x.regime === 'TREND DOWN';
+    let verdict, vcls;
+    if (inTrade) { verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · <span class="${cls(inTrade.unrealUsd)}">${fmt$(inTrade.unrealUsd, 2)}</span>`; vcls = 'trade'; }
+    else if (w.state === 'BREAKOUT') { verdict = `<b>Awaiting 4H confirmation.</b> 1H ${w.dir === 1 ? 'breakout' : 'breakdown'} in progress — trade fires on a 4H close beyond ${fmt$(w.dir === 1 ? s.longTrigger : s.shortTrigger, 2)} if context permits.`; vcls = 'wait'; }
+    else if (!allowLong && !allowShort) { verdict = `<b>No trade.</b> Daily context in transition — both directions blocked.`; vcls = 'wait'; }
+    else {
+      const next = allowLong ? `long above ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%)` : `short below ${fmt$(s.shortTrigger, 2)} (${s.pctToShort}% away)`;
+      const blocked = allowLong ? s.shortTrigger : s.longTrigger;
+      verdict = `<b>No trade.</b> Next: ${next}. Opposite trigger ${fmt$(blocked, 2)} blocked by daily context.`; vcls = 'wait';
+    }
+    return `<div class="coin">
+      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px">${fmt$(x.price, 2)}</span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
+      <div class="signal-grid">
+        <div class="sig-cell"><div class="tag">1D Context</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span style="color:var(--muted)">${allowLong ? 'Longs permitted' : allowShort ? 'Shorts permitted' : 'Trading blocked'}</span></div></div>
+        <div class="sig-cell"><div class="tag">1H Warning</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span style="color:var(--muted)">${w.stats180d.ratePct}% confirm rate (180d)</span></div></div>
+        <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span style="color:var(--muted)">+${s.pctToLong}%</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+        <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span style="color:var(--muted)">${s.pctToShort}% away</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+      </div>
+      <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop distance ${s.stopDistPct}% (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
+      <div class="verdict ${vcls}"><span class="dot"></span><span>${verdict}</span></div>
+    </div>`;
   }).join('');
 }
+
 Promise.all([
   fetch('data/v2.json').then(r => r.json()).catch(() => null),
   fetch('data/v2_4h.json').then(r => r.json()).catch(() => null),
   fetch('data/signals.json').then(r => r.json()).catch(() => null),
 ]).then(([d1, h4, sig]) => {
   D1 = d1; H4 = h4; SIG = sig;
-  acct('d1Equity', 'd1Detail', D1);
-  acct('h4Equity', 'h4Detail', H4);
+  if (!d1 && !h4 && !sig) $('feedStatus').textContent = 'Feed Error';
   const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt);
-  if (upd) $('updatedBadge').textContent = 'updated ' + new Date(upd).toLocaleString();
-  renderCards(); renderOpen(); renderClosed();
+  $('updatedAt').textContent = upd ? 'Updated ' + new Date(upd).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+  const open = renderAccounts();
+  renderPositions(open);
+  renderCoins();
 });
 </script>
 </body>
