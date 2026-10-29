@@ -63,6 +63,23 @@ survived honest accounting, code review, out-of-sample split, and parameter
 perturbation. Its weakness is statistical: ~9 years of daily data yields
 tens, not hundreds, of trades, so expectancy estimates remain tail-sensitive.
 
+## Addendum 2026-10-29 — portfolio test + paper launch
+Portfolio run (`scripts/v2_portfolio.js`, shared $10k, max 2 positions,
+1.5% total risk cap — caps never bind with 2 coins): long+short n=69,
+expR +1.55 ±1.43, exTop3 +0.39, PF 4.40, **+100.2% total, CAGR 7.8%,
+maxDD −19.7%**; IS +2.28R / OOS +0.65R. 50/50 buy&hold: +388%, DD −81.1%.
+BTC and ETH positions overlap often (26 joint entries) — correlation is
+real; the shared account is the honest unit. Independently reviewed:
+latent gap/sequencing bugs fixed (forward-filled marks, day-start equity
+for sizing); current numbers were unaffected by them.
+Sizing decision (owner-approved by accepting this plan): keep the tested
+0.75% risk/trade. Do NOT raise it to chase buy&hold returns — drawdown
+scales with it (−19.7% at 0.75% implies roughly −35%+ at 1.5%).
+Paper bot launched 2026-10-29 (`scripts/v2_paper.js`, daily workflow,
+kill rule: DD from peak > 25% or 15 straight losers). Remaining steps:
+paper review after 4–6 weeks, then a real-money decision — a fresh
+decision, not an automatic one.
+
 ## Next steps (in order)
 1. Portfolio-level run: BTC+ETH (universe fixed to BTC/ETH by owner decision
    2026-10-29; SOL/BNB/XRP/HYPE are out and their history files were deleted)

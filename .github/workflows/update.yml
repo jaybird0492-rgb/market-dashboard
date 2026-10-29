@@ -3,6 +3,11 @@ name: dashboard-update
 on:
   push:
     branches: [main]
+  schedule:
+    # Daily after the UTC daily candle closes: refresh history, advance the
+    # v2 paper account, commit its state, deploy. Kill switch for the paper
+    # bot = delete this schedule block (or the v2_paper step).
+    - cron: '30 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -14,20 +19,39 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-# v1's hourly data pipeline (fetch -> setups -> paper bot -> precompute ->
-# commit) was deleted with the v1 strategy on 2026-10-29. The site is now a
-# static v2 status page; it deploys on push only. A v2 data workflow returns
-# when the portfolio test and paper stage are built.
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch BTC/ETH daily history (Binance)
+        run: node scripts/fetch_history.js --intervals 1d
+      - name: Advance v2 paper account
+        run: node scripts/v2_paper.js
+      - name: Commit paper state
+        run: |
+          git config user.name "market-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/v2 web/data
+          if git diff --cached --quiet; then
+            echo "no paper changes"
+          else
+            git commit -m "v2 paper update $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            git push origin main || true
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: web
       - id: deployment
         uses: actions/deploy-pages@v4

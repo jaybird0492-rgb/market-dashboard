@@ -28,8 +28,9 @@
   <h2>Status</h2>
   <p><span class="badge amber">NOT APPROVED FOR REAL MONEY</span></p>
   <p>v2 has passed historical validation checks that v1 never faced, but its
-  sample size is too small to prove the edge. It is in research. No bot is
-  trading, not even with paper money, until the portfolio test below passes.</p>
+  sample size is too small to prove the edge. A paper account (fake money)
+  started on 2026-10-29 to verify live execution matches the backtest.
+  Real money stays off until the paper run and a final review pass.</p>
 
   <h2>What happened to v1</h2>
   <p><span class="badge red">RETIRED 2026-10-29</span></p>
@@ -60,17 +61,50 @@
     <tr><td>Worst market fall while trading</td><td>−12% to −16% (holding BTC/ETH directly: −77% to −90%)</td></tr>
     <tr><td>Enough trades to prove it</td><td><b>No</b> — ~69 pooled trades since 2017; confidence intervals still include zero</td></tr>
     <tr><td>Beats just holding Bitcoin</td><td>On safety yes, on total return no — it is mostly in cash by design</td></tr>
+    <tr><td>BTC+ETH in one shared account</td><td>+100% total, worst fall −19.7%, 69 trades, still positive without its 3 best trades (+0.39R)</td></tr>
   </table>
+
+  <h2>Paper trading — live (fake money)</h2>
+  <p id="paperSummary">Loading paper account…</p>
+  <div id="paperOpen"></div>
+  <div id="paperClosed"></div>
+  <p class="sub">Started 2026-10-29 with $10,000 fake money. Updated daily after
+  the UTC daily close. Kill rule: halt and review if drawdown from peak passes
+  25% or after 15 straight losing trades. This checks that live execution
+  matches the backtest — the 2017–2026 history above is the actual evidence.</p>
 
   <h2>What happens next</h2>
   <ol>
-    <li>Portfolio test: BTC + ETH on one shared account with a total risk cap.</li>
-    <li>Agree the position-size policy in writing.</li>
-    <li>Short paper-trading run (4–6 weeks) to check live execution only.</li>
+    <li><s>Portfolio test: BTC + ETH on one shared account</s> — done 2026-10-29:
+    +100% over 2017–2026, max drawdown −19.7% (holding: +388%, −81%).
+    Position size fixed at 0.75% risk per trade, max 2 positions.</li>
+    <li>Paper-trading run (now live, below) for 4–6 weeks to check execution.</li>
+    <li>Final review of paper versus backtest behaviour.</li>
     <li>Only then: minimum-size real money, with a written switch-off rule.</li>
   </ol>
   <p class="sub">Last updated 2026-10-29. Full method, corrections log and
   numbers: <code>analysis/V2_VALIDATION.md</code>.</p>
 </main>
+<script>
+fetch('data/v2.json').then(r => r.json()).then(d => {
+  const f = (v, p) => (v >= 0 ? '+' : '') + v.toFixed(p === undefined ? 2 : p);
+  document.getElementById('paperSummary').innerHTML =
+    '<b>Equity: $' + d.equity.toLocaleString() + '</b> (started $' + d.startEquity.toLocaleString() +
+    ') · drawdown from peak ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open, ' +
+    d.stats.closed + ' closed' + (d.halted ? ' · <b>HALTED — kill rule triggered</b>' : '') +
+    '<br>BTC $' + d.lastClose.BTC.toLocaleString() + ' · ETH $' + d.lastClose.ETH.toLocaleString() +
+    ' · updated ' + new Date(d.updatedAt).toLocaleString();
+  const tbl = (rows, head, map) => rows.length ?
+    '<table><tr>' + head.map(h => '<th>' + h + '</th>').join('') + '</tr>' +
+    rows.map(r => '<tr>' + map(r).map(c => '<td>' + c + '</td>').join('') + '</tr>').join('') + '</table>' : '';
+  document.getElementById('paperOpen').innerHTML = d.open.length ?
+    '<h3>Open positions</h3>' + tbl(d.open, ['Coin','Side','Entry','Stop','Mark','Unrealized','Opened'],
+      p => [p.sym, p.side, '$'+p.entry, '$'+p.stop, '$'+p.mark, (p.unrealUsd>=0?'+$':'-$') + Math.abs(p.unrealUsd).toFixed(2), p.openedAt.slice(0,10)]) :
+    '<p>No open positions — the strategy is in cash, waiting for a trend. That is normal most of the time.</p>';
+  document.getElementById('paperClosed').innerHTML = d.closed.length ?
+    '<h3>Closed paper trades</h3>' + tbl([...d.closed].reverse(), ['Coin','Side','Opened','Closed','Result','R','Exit'],
+      t => [t.sym, t.side, t.openedAt.slice(0,10), t.closedAt.slice(0,10), (t.pnlUsd>=0?'+$':'-$') + Math.abs(t.pnlUsd).toFixed(2), t.r.toFixed(2), t.reason]) : '';
+}).catch(() => { document.getElementById('paperSummary').textContent = 'Paper data not available yet.'; });
+</script>
 </body>
 </html>

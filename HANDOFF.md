@@ -30,11 +30,16 @@ Read this file first. It restores full project context in one pass.
   ≥150-trades-per-coin gate (only ~69 pooled trades since 2017; per-coin CIs
   include zero). B (pullback) decays OOS, C (4H) is noisier — do not re-tune
   them to rescue them.
-- **Verdict: NOT approved for real money.** Next steps in order:
-  1. Portfolio-level run: BTC+ETH shared equity + total risk cap.
-  2. Written sizing policy decision.
-  3. Paper-forward smoke test 4–6 weeks (execution fidelity only).
-  4. Minimum-size live only after 1–3, with a written kill rule.
+- Portfolio test DONE 2026-10-29 (`scripts/v2_portfolio.js`, reviewed):
+  shared account LS +100.2%, maxDD −19.7%, n=69, exTop3 +0.39. Sizing kept
+  at the tested 0.75% risk/trade — do not raise it casually.
+- **Paper bot LIVE since 2026-10-29** (`scripts/v2_paper.js`): replay-derived
+  state in `data/v2/paper_state.json`, public summary `web/data/v2.json`,
+  daily workflow 00:30 UTC (fetch daily → paper → commit → deploy).
+  Kill rule: DD from peak > 25% or 15 consecutive losers → halt + review.
+- **Verdict: NOT approved for real money.** Remaining: paper review after
+  4–6 weeks (execution fidelity vs backtest), then a fresh real-money
+  decision. Nothing about the paper run auto-approves real trading.
 
 ## Model setup (project-local, `.opencode/agents/`)
 - Main session: Muse Wonder 1.0 (design, judgement, final verification).

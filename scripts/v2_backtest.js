@@ -274,4 +274,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { loadBars, runBacktest, stratA, stratB, stats };
+module.exports = { loadBars, runBacktest, stratA, stratB, stats, smaArr, atrArr, FEE_SIDE, SLIP_SIDE, FUNDING_DAY, RISK_FRAC, START_EQUITY };

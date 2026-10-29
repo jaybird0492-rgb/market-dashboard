@@ -1,0 +1,33 @@
+{
+  "updatedAt": "2026-10-29T14:22:54.873Z",
+  "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
+  "paperStart": "2026-10-29T00:00:00.000Z",
+  "startEquity": 10000,
+  "equity": 10000,
+  "realizedEquity": 10000,
+  "drawdownFromPeak": 0,
+  "losingStreak": 0,
+  "halted": false,
+  "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
+  "lastClose": {
+    "BTC": 81343.5,
+    "ETH": 2359.68
+  },
+  "open": [],
+  "closed": [],
+  "stats": {
+    "closed": 0,
+    "open": 0
+  },
+  "backtest2017_2026": {
+    "note": "Same engine, full history, shared account — see analysis/V2_VALIDATION.md",
+    "trades": 69,
+    "expectancyR": 1.55,
+    "profitFactor": 4.4,
+    "totalRetPct": 100.5,
+    "maxDDPct": -19.7,
+    "oosExpR": 0.65,
+    "buyHoldRetPct": 393.9,
+    "buyHoldDDPct": -81.1
+  }
+}
