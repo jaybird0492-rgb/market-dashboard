@@ -28,8 +28,9 @@ jobs:
         run: node scripts/fetch.js
       - name: Compute trade setups
         run: node scripts/setups.js
-      - name: Advance paper bot
-        run: node scripts/paper_bot.js
+      # v1 paper bot STOPPED 2026-10-29: strategy failed its readiness exam
+      # (paper -$940, 1D edge dead). Do not re-enable. v2 replaces it after
+      # passing historical validation. See HANDOFF / session notes.
       - name: Precompute static page data
         run: node scripts/precompute.js
       - name: Commit data
