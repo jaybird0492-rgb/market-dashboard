@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T14:53:45.906Z",
+  "updatedAt": "2026-10-29T20:21:06.238Z",
   "coins": [
     {
       "sym": "BTC",
@@ -14,23 +14,23 @@
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
       "setup4h": {
-        "price": 80170.02,
-        "asOf": "2026-10-29T08:00:00.000Z",
+        "price": 80848.64,
+        "asOf": "2026-10-29T16:00:00.000Z",
         "longTrigger": 84898,
-        "pctToLong": 5.9,
+        "pctToLong": 5.01,
         "shortTrigger": 79220.74,
-        "pctToShort": 1.2,
+        "pctToShort": 2.05,
         "aboveSma200": false,
-        "atr": 784.31,
-        "stopDistPct": 2.45,
+        "atr": 906.36,
+        "stopDistPct": 2.8,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 3067
+        "approxSizeUsd": 2676
       },
       "warning1h": {
         "state": "QUIET",
         "dir": 0,
-        "detail": "nearest 1H levels: +1.9% up / -1.0% down",
-        "asOf": "2026-10-29T13:00:00.000Z",
+        "detail": "nearest 1H levels: +1.4% up / -1.4% down",
+        "asOf": "2026-10-29T19:00:00.000Z",
         "stats180d": {
           "events": 58,
           "confirmed": 17,
@@ -51,23 +51,23 @@
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
       "setup4h": {
-        "price": 2325.28,
-        "asOf": "2026-10-29T08:00:00.000Z",
+        "price": 2336.89,
+        "asOf": "2026-10-29T16:00:00.000Z",
         "longTrigger": 2526.62,
-        "pctToLong": 8.66,
+        "pctToLong": 8.12,
         "shortTrigger": 2282.46,
-        "pctToShort": 1.88,
+        "pctToShort": 2.38,
         "aboveSma200": false,
-        "atr": 33.3,
-        "stopDistPct": 3.58,
+        "atr": 36.59,
+        "stopDistPct": 3.91,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2095
+        "approxSizeUsd": 1916
       },
       "warning1h": {
         "state": "QUIET",
         "dir": 0,
-        "detail": "nearest 1H levels: +2.8% up / -1.5% down",
-        "asOf": "2026-10-29T13:00:00.000Z",
+        "detail": "nearest 1H levels: +2.3% up / -1.9% down",
+        "asOf": "2026-10-29T19:00:00.000Z",
         "stats180d": {
           "events": 45,
           "confirmed": 13,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T14:53:45.872Z",
+  "updatedAt": "2026-10-29T20:21:06.209Z",
   "strategy": "4H Donchian 55/20 futures (simulated perps), daily-trend gated, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
