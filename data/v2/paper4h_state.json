@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T11:50:15.985Z",
+  "updatedAt": "2026-10-30T11:54:06.559Z",
   "strategy": "4H Donchian 20/10 futures (simulated perps), daily SMA50-gated (F3), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,

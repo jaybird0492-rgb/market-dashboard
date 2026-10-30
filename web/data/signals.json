@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-30T11:50:16.056Z",
+  "updatedAt": "2026-10-30T11:54:06.593Z",
   "coins": [
     {
       "sym": "BTC",
       "context1d": {
         "regime": "TREND UP",
-        "price": 80427.22,
+        "price": 77991.89,
         "asOf": "2026-10-29",
         "aboveSma200": true,
         "sma50Above200": true,
@@ -95,13 +95,13 @@
       "sym": "ETH",
       "context1d": {
         "regime": "TREND UP",
-        "price": 2328.39,
+        "price": 2253.13,
         "asOf": "2026-10-29",
         "aboveSma200": true,
         "sma50Above200": true,
         "aboveSma50": false,
         "longTrigger": 2807.34,
-        "shortTrigger": 2282.46,
+        "shortTrigger": 2233,
         "gate4h": "SHORT side open (price below daily SMA50)",
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
