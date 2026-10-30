@@ -16,24 +16,24 @@ const DAY = 864e5, H4 = 144e5, H1 = 36e5;
 const OUT = path.join(__dirname, '..', 'web', 'data', 'signals.json');
 const closed = (bars, span) => bars.filter((b) => b.t + span <= Date.now());
 
-function triggers(bars, i) {
-  // levels for the NEXT bar: extremes of the 55 bars ending at i
-  return { up: priorHigh(bars, i + 1, 55), dn: priorLow(bars, i + 1, 55) };
+function triggers(bars, i, n = 55) {
+  // levels for the NEXT bar: extremes of the n bars ending at i
+  return { up: priorHigh(bars, i + 1, n), dn: priorLow(bars, i + 1, n) };
 }
 
 function fakeoutStats(bars1h, bars4h, sym) {
   const since = Date.now() - 180 * DAY;
   // 4H confirmation lookup: list of {closeT, dir} where a 4H close broke its range
   const confirms = [];
-  for (let j = 55; j < bars4h.length; j++) {
-    const up = priorHigh(bars4h, j, 55), dn = priorLow(bars4h, j, 55);
+  for (let j = 20; j < bars4h.length; j++) {
+    const up = priorHigh(bars4h, j, 20), dn = priorLow(bars4h, j, 20);
     if (up !== null && bars4h[j].close > up) confirms.push({ t: bars4h[j].t + H4, dir: 1 });
     if (dn !== null && bars4h[j].close < dn) confirms.push({ t: bars4h[j].t + H4, dir: -1 });
   }
   let events = 0, confirmed = 0;
-  for (let i = 55; i < bars1h.length; i++) {
+  for (let i = 20; i < bars1h.length; i++) {
     if (bars1h[i].t < since) continue;
-    const up = priorHigh(bars1h, i, 55), dn = priorLow(bars1h, i, 55);
+    const up = priorHigh(bars1h, i, 20), dn = priorLow(bars1h, i, 20);
     if (up === null) continue;
     let dir = 0, level = 0;
     if (bars1h[i].close > up && bars1h[i - 1].close <= up) { dir = 1; level = up; }
@@ -48,16 +48,16 @@ function fakeoutStats(bars1h, bars4h, sym) {
 
 function warningState(bars1h, bars4h) {
   const i = bars1h.length - 1;
-  if (i < 60) return { state: 'QUIET', dir: 0, detail: 'not enough data' };
+  if (i < 25) return { state: 'QUIET', dir: 0, detail: 'not enough data' };
   const px = bars1h[i].close;
-  const { up, dn } = triggers(bars1h, i);
+  const { up, dn } = triggers(bars1h, i, 20);
   // active breakout on the last closed 1H bar?
-  const upPrev = priorHigh(bars1h, i, 55), dnPrev = priorLow(bars1h, i, 55);
-  if (upPrev !== null && px > upPrev) return { state: 'BREAKOUT', dir: 1, detail: 'last 1H close broke its 55-bar high — waiting for 4H confirmation', level: +upPrev.toFixed(2) };
-  if (dnPrev !== null && px < dnPrev) return { state: 'BREAKOUT', dir: -1, detail: 'last 1H close broke its 55-bar low — waiting for 4H confirmation', level: +dnPrev.toFixed(2) };
+  const upPrev = priorHigh(bars1h, i, 20), dnPrev = priorLow(bars1h, i, 20);
+  if (upPrev !== null && px > upPrev) return { state: 'BREAKOUT', dir: 1, detail: 'last 1H close broke its 20-bar high — waiting for 4H confirmation', level: +upPrev.toFixed(2) };
+  if (dnPrev !== null && px < dnPrev) return { state: 'BREAKOUT', dir: -1, detail: 'last 1H close broke its 20-bar low — waiting for 4H confirmation', level: +dnPrev.toFixed(2) };
   // recent fakeout: a cross in the last 12 bars that fell back inside
-  for (let j = Math.max(55, i - 12); j <= i; j++) {
-    const u = priorHigh(bars1h, j, 55), d = priorLow(bars1h, j, 55);
+  for (let j = Math.max(20, i - 12); j <= i; j++) {
+    const u = priorHigh(bars1h, j, 20), d = priorLow(bars1h, j, 20);
     if (u !== null && bars1h[j].close > u && px < u) return { state: 'FAKEOUT', dir: 1, detail: `1H broke above $${u.toFixed(2)} within the last 12h and fell back inside — fake warning`, level: +u.toFixed(2) };
     if (d !== null && bars1h[j].close < d && px > d) return { state: 'FAKEOUT', dir: -1, detail: `1H broke below $${d.toFixed(2)} within the last 12h and recovered inside — fake warning`, level: +d.toFixed(2) };
   }
@@ -80,27 +80,30 @@ function coinSignals(sym) {
   else if (px < s200 && s50 < s200) regime = 'TREND DOWN';
   const dt = triggers(d1, ci);
   const i4 = h4.length - 1;
-  const t4 = triggers(h4, i4);
+  const t4 = triggers(h4, i4, 20); // traded layer: Donchian 20/10 (variant F3)
   const atr4 = atrArr(h4, 14)[i4];
   const px4 = h4[i4].close;
-  const s200_4 = smaArr(h4.map((b) => b.close), 200)[i4];
+  const gateLong = px > s50; // daily SMA50 gate used by the 4H futures layer
   return {
     sym,
     context1d: {
       regime, price: +px.toFixed(2), asOf: new Date(d1[ci].t).toISOString().slice(0, 10),
-      aboveSma200: px > s200, sma50Above200: s50 > s200,
+      aboveSma200: px > s200, sma50Above200: s50 > s200, aboveSma50: px > s50,
       longTrigger: +dt.up.toFixed(2), shortTrigger: +dt.dn.toFixed(2),
+      gate4h: gateLong ? 'LONG side open (price above daily SMA50)' : 'SHORT side open (price below daily SMA50)',
       riskMode: regime === 'TREND UP' ? 'Longs allowed at full size; shorts blocked' : regime === 'TREND DOWN' ? 'Shorts allowed at full size; longs blocked' : 'No new trades — market in transition',
     },
     setup4h: {
+      rules: 'Donchian 20/10, daily SMA50 gate (F3)',
       price: +px4.toFixed(2), asOf: new Date(h4[i4].t).toISOString(),
       longTrigger: +t4.up.toFixed(2), pctToLong: +((t4.up / px4 - 1) * 100).toFixed(2),
       shortTrigger: +t4.dn.toFixed(2), pctToShort: +((px4 / t4.dn - 1) * 100).toFixed(2),
-      aboveSma200: px4 > s200_4,
+      gateAllows: gateLong ? 'LONG' : 'SHORT',
       atr: +atr4.toFixed(2), stopDistPct: +((2.5 * atr4 / px4) * 100).toFixed(2),
       riskUsdPerTrade: 75, // 0.75% of the $10k paper account
       approxSizeUsd: Math.round(75 / (2.5 * atr4 / px4)),
     },
+    series1h: h1.slice(-48).map((b) => +b.close.toFixed(2)),
     warning1h: { ...warningState(h1, h4), asOf: new Date(h1[h1.length - 1].t).toISOString(), stats180d: fakeoutStats(h1, h4, sym) },
   };
 }

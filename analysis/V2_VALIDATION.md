@@ -80,6 +80,23 @@ kill rule: DD from peak > 25% or 15 straight losers). Remaining steps:
 paper review after 4–6 weeks, then a real-money decision — a fresh
 decision, not an automatic one.
 
+## Addendum 2026-10-30 — faster variants + events layer
+Pre-registered fast matrix (`scripts/v2_fast.js`, futures costs): Donchian
+20/10 and 34/17 on 1H/4H with native / daily-SMA200 / daily-SMA50 gates.
+1H failed the traded gate again on ETH in every variant (OOS −0.08..+0.02) —
+1H stays warning-only. On 4H, **F3 (20/10 + daily SMA50 gate)** passed all
+gates on both coins: BTC expR +0.50 (OOS +0.40, exTop3 +0.31, maxDD −8%),
+ETH +0.36 (OOS +0.36, exTop3 +0.23, maxDD −11%), ~33 trades/yr/coin.
+The 4H futures paper layer was switched from 55/20+SMA200 to F3 on
+2026-10-30. Selection caveat: F3 was chosen from this pre-registered matrix
+after seeing its results; it has not had a separate untouched period since.
+Its first live paper action was instructive: it shorted BTC+ETH into the
+2026-10-30 Binance-hack crash while the daily system was still waiting.
+An events layer (`scripts/v2_events.js`) adds Fear&Greed, perp funding/OI,
+severity-tagged RSS headlines (it correctly flagged the $6.3B Binance hack
+as CRITICAL within the hour) and 1H price-shock detection. Events are
+context for the human, never trade triggers — only price rules trade.
+
 ## Next steps (in order)
 1. Portfolio-level run: BTC+ETH (universe fixed to BTC/ETH by owner decision
    2026-10-29; SOL/BNB/XRP/HYPE are out and their history files were deleted)

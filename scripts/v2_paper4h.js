@@ -1,6 +1,9 @@
 // v2 4H futures paper layer — simulated USDT-perp account, BTC+ETH shared
-// $10,000, candidate A on 4H gated by the daily trend (A-regime: the version
-// that cut ETH drawdown and removed losing bull-market shorts in testing).
+// $10,000. Rules upgraded 2026-10-30 to variant F3 from scripts/v2_fast.js
+// (pre-registered, passed all gates both coins): Donchian 20/10 on 4H gated
+// by the daily SMA50 trend — faster entries and a gate that reacts to
+// crashes weeks before SMA200. BTC +0.50R / ETH +0.36R expectancy,
+// OOS +0.40/+0.36, maxDD -8%/-11% in 2017-2026 testing.
 // Rules file: scripts/v2_timeframes.js (pre-registered). Costs: Binance perp
 // taker fee 0.05%/side, slippage 0.02%/side, funding drag 0.03%/day.
 // Replay-derived state from PAPER_START on every run — cannot fork.
@@ -38,7 +41,7 @@ function main() {
   const barsBySym = { BTC: closedBars('BTC'), ETH: closedBars('ETH') };
   const res = runPortfolio(barsBySym, {
     allowShort: true, startMs: PAPER_START,
-    makeStrat: (sym, bars, ind) => regimeStrat(sym)(bars, ind),
+    makeStrat: (sym, bars, ind) => regimeStrat(sym, 50, { entry: 20, exit: 10 })(bars, ind),
     maxHoldBars: 360, feeSide: 0.0005, slipSide: 0.0002, fundingDay: 0.0003,
   });
   let peak = START_EQUITY;
@@ -49,7 +52,7 @@ function main() {
 
   const pub = {
     updatedAt: new Date().toISOString(),
-    strategy: '4H Donchian 55/20 futures (simulated perps), daily-trend gated, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared',
+    strategy: '4H Donchian 20/10 futures (simulated perps), daily SMA50-gated (F3), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared',
     paperStart: new Date(PAPER_START).toISOString(),
     startEquity: START_EQUITY,
     equity: +res.mtmEquity.toFixed(2),

@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
   schedule:
-    # Hourly: refresh live bars, advance both paper accounts (daily + 4H
-    # futures), recompute the three-layer signals, commit, deploy.
+    # Every 30 min (GitHub may delay): refresh live bars, advance both paper
+    # accounts (daily + 4H futures), recompute signals + events, deploy.
     # Trades are decided only on closed daily/4H candles inside the bots.
     # Kill switch for all paper trading = delete this schedule block.
-    - cron: '15 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -37,6 +37,7 @@ jobs:
           node scripts/v2_paper.js
           node scripts/v2_paper4h.js
           node scripts/v2_signals.js
+          node scripts/v2_events.js
       - name: Commit paper state
         run: |
           git config user.name "market-bot"

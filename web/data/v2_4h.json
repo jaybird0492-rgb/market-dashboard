@@ -1,18 +1,39 @@
 {
-  "updatedAt": "2026-10-30T07:12:23.278Z",
-  "strategy": "4H Donchian 55/20 futures (simulated perps), daily-trend gated, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
+  "updatedAt": "2026-10-30T11:50:15.985Z",
+  "strategy": "4H Donchian 20/10 futures (simulated perps), daily SMA50-gated (F3), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
-  "equity": 10000,
+  "equity": 10005.34,
   "realizedEquity": 10000,
   "drawdownFromPeak": 0,
   "losingStreak": 0,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
-  "open": [],
+  "open": [
+    {
+      "sym": "BTC",
+      "side": "SHORT",
+      "entry": 77976.29,
+      "stop": 80605.33,
+      "mark": 78185.38,
+      "openedAt": "2026-10-30T00:00:00.000Z",
+      "unrealUsd": -5.96,
+      "notionalUsd": 2224.47
+    },
+    {
+      "sym": "ETH",
+      "side": "SHORT",
+      "entry": 2252.68,
+      "stop": 2356.22,
+      "mark": 2237.07,
+      "openedAt": "2026-10-30T00:00:00.000Z",
+      "unrealUsd": 11.31,
+      "notionalUsd": 1631.79
+    }
+  ],
   "closed": [],
   "stats": {
     "closed": 0,
-    "open": 0
+    "open": 2
   }
 }

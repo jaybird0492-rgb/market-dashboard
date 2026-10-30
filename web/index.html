@@ -67,6 +67,19 @@
   tr:last-child td { border-bottom: none; }
   .empty { padding: 16px; color: var(--faint); font-size: 13px; }
   .table-scroll { overflow-x: auto; }
+  .sev { font-size: 10px; font-weight: 700; letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+  .sev-crit { background: rgba(239,83,80,.16); color: var(--red); }
+  .sev-high { background: rgba(232,163,61,.15); color: var(--amber); }
+  .sev-norm { background: rgba(141,153,168,.13); color: var(--muted); }
+  .news-item { padding: 9px 14px; border-bottom: 1px solid rgba(36,44,56,.6); display: flex; gap: 10px; align-items: flex-start; }
+  .news-item:last-child { border-bottom: none; }
+  .news-item a { color: var(--text); font-size: 13px; line-height: 1.4; }
+  .news-item a:hover { color: var(--blue); }
+  .news-meta { font-size: 11px; color: var(--faint); white-space: nowrap; padding-top: 2px; }
+  .shock-item { padding: 9px 14px; border-bottom: 1px solid rgba(36,44,56,.6); font-size: 13px; display: flex; justify-content: space-between; gap: 10px; }
+  .shock-item:last-child { border-bottom: none; }
+  .spark { width: 100%; height: 44px; display: block; }
+  .panel-head { padding: 10px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
   footer { border-top: 1px solid var(--border); color: var(--faint); font-size: 12px; }
   .foot-in { max-width: 1200px; margin: 0 auto; padding: 16px 20px 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
   @media (max-width: 700px) { .signal-grid { grid-template-columns: 1fr; } .sig-cell:nth-child(odd) { border-right: none; } .coins { grid-template-columns: 1fr; } }
@@ -82,6 +95,11 @@
 
 <main>
   <section>
+    <div class="sec-head"><h2>Market</h2><span class="note" id="marketUpdated">—</span></div>
+    <div class="kpis" id="marketStrip"><div class="kpi"><div class="label">Loading</div><div class="value">—</div></div></div>
+  </section>
+
+  <section>
     <div class="sec-head"><h2>Accounts</h2><span class="note">Started 2026-10-29 · kill rule: −25% from peak or 15 consecutive losses</span></div>
     <div class="kpis">
       <div class="kpi"><div class="label">Daily Core — Equity</div><div class="value" id="d1Equity">—</div><div class="sub" id="d1Sub">loading</div></div>
@@ -94,6 +112,14 @@
   <section>
     <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note">1D context · 4H trigger · 1H warning — closed candles only</span></div>
     <div class="coins" id="coinCards"><div class="empty">Loading market state…</div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Events &amp; Shocks</h2><span class="note">News severity + abnormal 1H moves — context only, never a trade trigger</span></div>
+    <div class="coins">
+      <div class="table-card"><div class="empty" id="shockPanel">Loading shocks…</div></div>
+      <div class="table-card"><div class="empty" id="newsPanel">Loading headlines…</div></div>
+    </div>
   </section>
 
   <section>
@@ -177,8 +203,10 @@ function renderCoins() {
     }
     return `<div class="coin">
       <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px">${fmt$(x.price, 2)}</span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
+      <canvas class="spark" id="spark-${c.sym}" height="44"></canvas>
       <div class="signal-grid">
         <div class="sig-cell"><div class="tag">1D Context</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span style="color:var(--muted)">${allowLong ? 'Longs permitted' : allowShort ? 'Shorts permitted' : 'Trading blocked'}</span></div></div>
+        <div class="sig-cell"><div class="tag">4H Gate (Daily SMA50)</div><div class="sig-val"><span class="${s.gateAllows === 'LONG' ? 'pos' : 'neg'}"><b>${s.gateAllows} side open</b></span><br><span style="color:var(--muted)">Fast gate — flips days/weeks before SMA200</span></div></div>
         <div class="sig-cell"><div class="tag">1H Warning</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span style="color:var(--muted)">${w.stats180d.ratePct}% confirm rate (180d)</span></div></div>
         <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span style="color:var(--muted)">+${s.pctToLong}%</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
         <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span style="color:var(--muted)">${s.pctToShort}% away</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
@@ -189,11 +217,49 @@ function renderCoins() {
   }).join('');
 }
 
+function drawSparks() {
+  if (!SIG) return;
+  for (const c of SIG.coins) {
+    const cv = $('spark-' + c.sym);
+    if (!cv || !c.series1h || c.series1h.length < 2) continue;
+    const dpr = window.devicePixelRatio || 1;
+    const w = cv.clientWidth * dpr, h = 44 * dpr;
+    cv.width = w; cv.height = h;
+    const ctx = cv.getContext('2d');
+    const data = c.series1h, min = Math.min(...data), max = Math.max(...data), rng = (max - min) || 1;
+    const X = i => (i / (data.length - 1)) * (w - 4) + 2, Y = v => h - 4 - ((v - min) / rng) * (h - 8);
+    ctx.beginPath();
+    data.forEach((v, i) => i ? ctx.lineTo(X(i), Y(v)) : ctx.moveTo(X(i), Y(v)));
+    ctx.strokeStyle = '#4a9eda'; ctx.lineWidth = 1.4 * dpr; ctx.stroke();
+    ctx.lineTo(X(data.length - 1), h); ctx.lineTo(X(0), h); ctx.closePath();
+    ctx.fillStyle = 'rgba(74,158,218,.10)'; ctx.fill();
+    const line = (v, col) => { if (v > min && v < max) { ctx.beginPath(); ctx.moveTo(0, Y(v)); ctx.lineTo(w, Y(v)); ctx.strokeStyle = col; ctx.setLineDash([4, 4]); ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]); } };
+    line(c.setup4h.longTrigger, 'rgba(47,180,87,.6)');
+    line(c.setup4h.shortTrigger, 'rgba(239,83,80,.6)');
+  }
+}
+function renderMarket(ev) {
+  if (!ev) return;
+  $('marketUpdated').textContent = 'Fear & Greed · futures funding/OI · updated ' + new Date(ev.updatedAt).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+  const fg = ev.fearGreed;
+  const cards = ev.market.map(m => `<div class="kpi"><div class="label">${m.sym} / USDT Perp</div><div class="value">${fmt$(m.price, m.price < 10 ? 4 : 0)}</div><div class="sub"><span class="${cls(m.chg24hPct || 0)}">${m.chg24hPct !== null && m.chg24hPct !== undefined ? (m.chg24hPct >= 0 ? '+' : '') + m.chg24hPct + '% 24h' : '—'}</span> · funding ${m.fundingPct !== undefined ? m.fundingPct + '%' : '—'}${m.openInterest ? ' · OI ' + Number(m.openInterest).toLocaleString() : ''}</div></div>`).join('');
+  const fgCard = fg ? `<div class="kpi"><div class="label">Fear &amp; Greed</div><div class="value" style="color:${fg.value <= 25 ? 'var(--red)' : fg.value <= 45 ? 'var(--amber)' : fg.value >= 75 ? 'var(--red)' : 'var(--green)'}">${fg.value}</div><div class="sub">${fg.label}</div></div>` : '';
+  const shockCard = `<div class="kpi"><div class="label">Shock Alerts (72h)</div><div class="value" style="color:${ev.shocks.length ? 'var(--amber)' : 'var(--green)'}">${ev.shocks.length}</div><div class="sub">${ev.shocks.length ? 'Abnormal 1H moves detected' : 'No abnormal moves'}</div></div>`;
+  $('marketStrip').innerHTML = cards + fgCard + shockCard;
+  $('shockPanel').outerHTML = '<div class="table-card"><div class="panel-head">Price Shocks — abnormal hourly moves</div>' + (ev.shocks.length
+    ? ev.shocks.map(s => `<div class="shock-item"><span><b>${s.sym}</b> <span class="${s.dir === 'UP' ? 'pos' : 'neg'}">${s.dir} ${s.movePct}%</span> <span style="color:var(--muted)">in 1H · ${s.vsAvgMove}× usual move${s.volumeSpike ? ' · volume ' + s.volumeSpike + '×' : ''}</span></span><span class="news-meta">${new Date(s.at).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</span></div>`).join('')
+    : '<div class="empty">No abnormal moves in the last 72 hours.</div>') + '</div>';
+  $('newsPanel').outerHTML = '<div class="table-card"><div class="panel-head">Headlines — last 48h, severity tagged</div>' + (ev.headlines.length
+    ? ev.headlines.map(h => `<div class="news-item"><span class="sev ${h.severity === 'CRITICAL' ? 'sev-crit' : h.severity === 'HIGH' ? 'sev-high' : 'sev-norm'}">${h.severity}</span><span><a href="${h.link}" target="_blank" rel="noopener">${h.title}</a><br><span class="news-meta">${h.source} · ${new Date(h.publishedAt).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</span></span></div>`).join('')
+    : '<div class="empty">No headlines fetched.</div>') + '</div>';
+}
+
 Promise.all([
   fetch('data/v2.json').then(r => r.json()).catch(() => null),
   fetch('data/v2_4h.json').then(r => r.json()).catch(() => null),
   fetch('data/signals.json').then(r => r.json()).catch(() => null),
-]).then(([d1, h4, sig]) => {
+  fetch('data/events.json').then(r => r.json()).catch(() => null),
+]).then(([d1, h4, sig, ev]) => {
   D1 = d1; H4 = h4; SIG = sig;
   if (!d1 && !h4 && !sig) $('feedStatus').textContent = 'Feed Error';
   const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt);
@@ -201,6 +267,8 @@ Promise.all([
   const open = renderAccounts();
   renderPositions(open);
   renderCoins();
+  renderMarket(ev);
+  drawSparks();
 });
 </script>
 </body>

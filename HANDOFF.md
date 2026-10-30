@@ -34,13 +34,14 @@ Read this file first. It restores full project context in one pass.
   shared account LS +100.2%, maxDD −19.7%, n=69, exTop3 +0.39. Sizing kept
   at the tested 0.75% risk/trade — do not raise it casually.
 - **Paper bots LIVE since 2026-10-29**: daily core (`scripts/v2_paper.js`)
-  + 4H futures layer (`scripts/v2_paper4h.js`, A-regime daily-gated,
-  simulated perps/funding), both replay-derived from PAPER_START, shared
-  $10k each, BTC+ETH. State: `data/v2/*_state.json`; public:
-  `web/data/v2.json`, `web/data/v2_4h.json`, `web/data/signals.json`
-  (three-layer setup cards on the dashboard: 1D context / 4H setup /
-  1H warning with measured fakeout rates). Hourly workflow (:15 UTC:
-  fetch -> both papers -> signals -> commit -> deploy).
+  + 4H futures layer (`scripts/v2_paper4h.js`; rules upgraded 2026-10-30 to
+  F3 = Donchian 20/10 + daily SMA50 gate per `scripts/v2_fast.js`, simulated
+  perps/funding), both replay-derived from PAPER_START, shared $10k each,
+  BTC+ETH. State: `data/v2/*_state.json`; public: `web/data/v2.json`,
+  `web/data/v2_4h.json`, `web/data/signals.json`, `web/data/events.json`
+  (Fear&Greed, funding/OI, severity-tagged headlines, 1H shock detector —
+  context only, never trade triggers). Workflow every 30 min UTC:
+  fetch -> both papers -> signals -> events -> commit -> deploy.
   Kill rule (both): DD from peak > 25% or 15 consecutive losers → halt + review.
 - **Verdict: NOT approved for real money.** Remaining: paper review after
   4–6 weeks (execution fidelity vs backtest), then a fresh real-money

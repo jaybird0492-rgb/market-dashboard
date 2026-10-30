@@ -1,0 +1,194 @@
+{
+  "updatedAt": "2026-10-30T11:50:16.137Z",
+  "fearGreed": {
+    "value": 30,
+    "label": "Fear"
+  },
+  "market": [
+    {
+      "sym": "BTC",
+      "price": 77401,
+      "chg24hPct": -3.51,
+      "high24h": 81967,
+      "low24h": 76455,
+      "fundingPct": 0.01,
+      "openInterest": 66183.884
+    },
+    {
+      "sym": "ETH",
+      "price": 2233.76,
+      "chg24hPct": -3.94,
+      "high24h": 2378.63,
+      "low24h": 2172,
+      "fundingPct": 0.0007,
+      "openInterest": 827174.55
+    }
+  ],
+  "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T11:29:23.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
+      "link": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
+      "publishedAt": "2026-10-30T11:09:24.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
+      "link": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T11:00:10.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hacker’s Bitcoin haul tops Coinbase’s corporate treasury",
+      "link": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T10:54:30.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
+      "link": "https://cointelegraph.com/markets/rune-token-surges-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T09:52:29.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+      "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T09:08:25.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Binance finds more breaches in $6.3 billion hack; AI spending fears hit tech",
+      "link": "https://www.coindesk.com/markets/2026/10/30/live-news-binance-hack-rattles-crypto-as-intel-plunges-and-ai-spending-fears-hit-tech",
+      "publishedAt": "2026-10-30T08:36:52.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance hacker dumps a little-known 2017 token and it crashes 90%",
+      "link": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-dumps-a-little-known-2017-token-and-it-crashes-90",
+      "publishedAt": "2026-10-30T07:54:07.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "North Korea’s TraderTraitor linked to $6.3B Binance hack",
+      "link": "https://cointelegraph.com/news/north-korea-linked-to-63b-binance-hack-by-crypto-investigators?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T05:51:41.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance hack bites India's largest crypto exchange as it curbs futures trading",
+      "link": "https://www.coindesk.com/markets/2026/10/30/coindcx-halts-new-crypto-futures-bets-as-binance-incident-disrupts-liquidity",
+      "publishedAt": "2026-10-30T05:43:07.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance hacker splits $1.4 billion of bitcoin into 19 wallets that no one can freeze",
+      "link": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-splits-usd1-4-billion-of-bitcoin-into-19-wallets-that-no-one-can-freeze",
+      "publishedAt": "2026-10-30T04:50:42.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Standard Chartered sees more pain after $6 billion Binance hack sends bitcoin lower",
+      "link": "https://www.coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead",
+      "publishedAt": "2026-10-30T04:00:43.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Institutional crypto investors rush to pull funds from exchanges after Binance hack",
+      "link": "https://www.coindesk.com/markets/2026/10/30/institutional-crypto-investors-rush-to-pull-funds-from-exchanges-after-binance-hack",
+      "publishedAt": "2026-10-30T03:56:40.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hack could accelerate shift to DEXs: Standard Chartered",
+      "link": "https://cointelegraph.com/news/binance-hack-could-accelerate-shift-to-dexs-standard-chartered?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T03:47:01.000Z",
+      "severity": "CRITICAL"
+    }
+  ],
+  "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-10-29T23:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.29,
+      "vsAvgMove": 3.2,
+      "volumeSpike": 2.2
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-10-29T20:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -2.47,
+      "vsAvgMove": 7.9,
+      "volumeSpike": 6.4
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-10-29T20:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -3.38,
+      "vsAvgMove": 9,
+      "volumeSpike": 8.1
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-10-29T15:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.74,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 2
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-10-29T15:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.04,
+      "vsAvgMove": 3.2,
+      "volumeSpike": 2.2
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-10-29T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.09,
+      "vsAvgMove": 4.3,
+      "volumeSpike": 2.8
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-10-29T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.75,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 2
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-10-29T01:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.34,
+      "vsAvgMove": 6.4,
+      "volumeSpike": 1.7
+    }
+  ],
+  "errors": []
+}

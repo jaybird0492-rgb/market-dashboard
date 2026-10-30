@@ -25,10 +25,10 @@ const FUT = { feeSide: 0.0005, slipSide: 0.0002, fundingDay: 0.0003 };
 const MAXHOLD = { '1h': 720, '4h': 360, '1d': 365 };
 const TFS = [['1h', '1H'], ['4h', '4H'], ['1d', '1D']];
 
-function dailyTrendFactory(sym) {
+function dailyTrendFactory(sym, gatePeriod = 200) {
   const daily = loadBars(sym, '1d');
   const closes = daily.map((b) => b.close);
-  const s200 = smaArr(closes, 200);
+  const s200 = smaArr(closes, gatePeriod);
   // trend known at intraday time t = last daily bar fully closed before t
   return (t) => {
     let lo = 0, hi = daily.length - 1, ans = -1;
@@ -41,10 +41,10 @@ function dailyTrendFactory(sym) {
   };
 }
 
-function regimeStrat(sym) {
-  const trendAt = dailyTrendFactory(sym);
+function regimeStrat(sym, gatePeriod = 200, params) {
+  const trendAt = dailyTrendFactory(sym, gatePeriod);
   return (bars, ind) => {
-    const inner = stratA(bars, ind, 1);
+    const inner = stratA(bars, ind, 1, params);
     return {
       warmup: 200,
       entryDir(i) {
