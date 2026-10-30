@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-29T20:21:06.238Z",
+  "updatedAt": "2026-10-30T01:05:27.686Z",
   "coins": [
     {
       "sym": "BTC",
       "context1d": {
         "regime": "TREND UP",
-        "price": 81343.5,
-        "asOf": "2026-10-28",
+        "price": 77991.89,
+        "asOf": "2026-10-29",
         "aboveSma200": true,
         "sma50Above200": true,
         "longTrigger": 87395.67,
@@ -14,27 +14,28 @@
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
       "setup4h": {
-        "price": 80848.64,
-        "asOf": "2026-10-29T16:00:00.000Z",
+        "price": 77991.89,
+        "asOf": "2026-10-29T20:00:00.000Z",
         "longTrigger": 84898,
-        "pctToLong": 5.01,
-        "shortTrigger": 79220.74,
-        "pctToShort": 2.05,
+        "pctToLong": 8.85,
+        "shortTrigger": 77910,
+        "pctToShort": 0.11,
         "aboveSma200": false,
-        "atr": 906.36,
-        "stopDistPct": 2.8,
+        "atr": 1051.62,
+        "stopDistPct": 3.37,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2676
+        "approxSizeUsd": 2225
       },
       "warning1h": {
-        "state": "QUIET",
-        "dir": 0,
-        "detail": "nearest 1H levels: +1.4% up / -1.4% down",
-        "asOf": "2026-10-29T19:00:00.000Z",
+        "state": "BREAKOUT",
+        "dir": -1,
+        "detail": "last 1H close broke its 55-bar low — waiting for 4H confirmation",
+        "level": 77910,
+        "asOf": "2026-10-30T00:00:00.000Z",
         "stats180d": {
-          "events": 58,
-          "confirmed": 17,
-          "ratePct": 29
+          "events": 61,
+          "confirmed": 19,
+          "ratePct": 31
         }
       }
     },
@@ -42,36 +43,37 @@
       "sym": "ETH",
       "context1d": {
         "regime": "TREND UP",
-        "price": 2359.68,
-        "asOf": "2026-10-28",
+        "price": 2253.13,
+        "asOf": "2026-10-29",
         "aboveSma200": true,
         "sma50Above200": true,
         "longTrigger": 2807.34,
-        "shortTrigger": 2282.46,
+        "shortTrigger": 2233,
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
       "setup4h": {
-        "price": 2336.89,
-        "asOf": "2026-10-29T16:00:00.000Z",
+        "price": 2253.13,
+        "asOf": "2026-10-29T20:00:00.000Z",
         "longTrigger": 2526.62,
-        "pctToLong": 8.12,
-        "shortTrigger": 2282.46,
-        "pctToShort": 2.38,
+        "pctToLong": 12.14,
+        "shortTrigger": 2233,
+        "pctToShort": 0.9,
         "aboveSma200": false,
-        "atr": 36.59,
-        "stopDistPct": 3.91,
+        "atr": 41.41,
+        "stopDistPct": 4.6,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 1916
+        "approxSizeUsd": 1632
       },
       "warning1h": {
-        "state": "QUIET",
-        "dir": 0,
-        "detail": "nearest 1H levels: +2.3% up / -1.9% down",
-        "asOf": "2026-10-29T19:00:00.000Z",
+        "state": "BREAKOUT",
+        "dir": -1,
+        "detail": "last 1H close broke its 55-bar low — waiting for 4H confirmation",
+        "level": 2233,
+        "asOf": "2026-10-30T00:00:00.000Z",
         "stats180d": {
-          "events": 45,
-          "confirmed": 13,
-          "ratePct": 29
+          "events": 46,
+          "confirmed": 14,
+          "ratePct": 30
         }
       }
     }
