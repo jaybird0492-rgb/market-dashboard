@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T01:05:27.686Z",
+  "updatedAt": "2026-10-30T07:12:23.312Z",
   "coins": [
     {
       "sym": "BTC",
@@ -14,24 +14,24 @@
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
       "setup4h": {
-        "price": 77991.89,
-        "asOf": "2026-10-29T20:00:00.000Z",
+        "price": 78235.15,
+        "asOf": "2026-10-30T00:00:00.000Z",
         "longTrigger": 84898,
-        "pctToLong": 8.85,
-        "shortTrigger": 77910,
-        "pctToShort": 0.11,
+        "pctToLong": 8.52,
+        "shortTrigger": 76500.11,
+        "pctToShort": 2.27,
         "aboveSma200": false,
-        "atr": 1051.62,
-        "stopDistPct": 3.37,
+        "atr": 1103.21,
+        "stopDistPct": 3.53,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2225
+        "approxSizeUsd": 2127
       },
       "warning1h": {
-        "state": "BREAKOUT",
+        "state": "FAKEOUT",
         "dir": -1,
-        "detail": "last 1H close broke its 55-bar low — waiting for 4H confirmation",
-        "level": 77910,
-        "asOf": "2026-10-30T00:00:00.000Z",
+        "detail": "1H broke below $78297.05 within the last 12h and recovered inside — fake warning",
+        "level": 78297.05,
+        "asOf": "2026-10-30T06:00:00.000Z",
         "stats180d": {
           "events": 61,
           "confirmed": 19,
@@ -52,26 +52,26 @@
         "riskMode": "Longs allowed at full size; shorts blocked"
       },
       "setup4h": {
-        "price": 2253.13,
-        "asOf": "2026-10-29T20:00:00.000Z",
+        "price": 2237.82,
+        "asOf": "2026-10-30T00:00:00.000Z",
         "longTrigger": 2526.62,
-        "pctToLong": 12.14,
-        "shortTrigger": 2233,
-        "pctToShort": 0.9,
+        "pctToLong": 12.91,
+        "shortTrigger": 2174.08,
+        "pctToShort": 2.93,
         "aboveSma200": false,
-        "atr": 41.41,
-        "stopDistPct": 4.6,
+        "atr": 44.44,
+        "stopDistPct": 4.96,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 1632
+        "approxSizeUsd": 1511
       },
       "warning1h": {
-        "state": "BREAKOUT",
+        "state": "FAKEOUT",
         "dir": -1,
-        "detail": "last 1H close broke its 55-bar low — waiting for 4H confirmation",
+        "detail": "1H broke below $2233.00 within the last 12h and recovered inside — fake warning",
         "level": 2233,
-        "asOf": "2026-10-30T00:00:00.000Z",
+        "asOf": "2026-10-30T06:00:00.000Z",
         "stats180d": {
-          "events": 46,
+          "events": 47,
           "confirmed": 14,
           "ratePct": 30
         }
