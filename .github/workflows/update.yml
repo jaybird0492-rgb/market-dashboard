@@ -8,7 +8,7 @@ on:
     # accounts (daily + 4H futures), recompute signals + events, deploy.
     # Trades are decided only on closed daily/4H candles inside the bots.
     # Kill switch for all paper trading = delete this schedule block.
-    - cron: '*/30 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:

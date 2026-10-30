@@ -50,12 +50,29 @@ function main() {
   let streak = 0;
   for (const t of [...res.trades].sort((a, b) => a.exitT - b.exitT)) streak = t.pnl < 0 ? streak + 1 : 0;
 
+  // Display marks use the latest 1H close (trade decisions still use closed
+  // 4H bars only) so unrealized P&L moves between 4H closes.
+  const liveMark = {};
+  for (const sym of Object.keys(barsBySym)) {
+    try {
+      const h1 = loadBarsAny(sym, '1h');
+      if (h1.length) liveMark[sym] = h1[h1.length - 1].close;
+    } catch { /* keep 4H mark */ }
+  }
+  for (const p of res.openPositions) {
+    if (liveMark[p.sym]) {
+      p.mark = liveMark[p.sym];
+      p.unrealPnl = p.qty * (p.mark - p.entryFill) * p.dir;
+    }
+  }
+  const mtmLive = res.finalEquity + res.openPositions.reduce((a, p) => a + p.unrealPnl, 0);
+
   const pub = {
     updatedAt: new Date().toISOString(),
     strategy: '4H Donchian 20/10 futures (simulated perps), daily SMA50-gated (F3), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared',
     paperStart: new Date(PAPER_START).toISOString(),
     startEquity: START_EQUITY,
-    equity: +res.mtmEquity.toFixed(2),
+    equity: +mtmLive.toFixed(2),
     realizedEquity: +res.finalEquity.toFixed(2),
     drawdownFromPeak: +(dd * 100).toFixed(2),
     losingStreak: streak,
