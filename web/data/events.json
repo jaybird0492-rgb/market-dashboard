@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T16:02:38.715Z",
+  "updatedAt": "2026-10-30T20:45:11.299Z",
   "fearGreed": {
     "value": 30,
     "label": "Fear"
@@ -7,38 +7,66 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77299,
-      "chg24hPct": -5.27,
-      "high24h": 81900,
-      "low24h": 76346,
-      "fundingPct": 0.0023,
-      "openInterest": 2712.0024,
+      "price": 76914,
+      "chg24hPct": -2.41,
+      "high24h": 79738,
+      "low24h": 76184,
+      "fundingPct": 0.0022,
+      "openInterest": 2768.2943,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2221.6,
-      "chg24hPct": -6,
-      "high24h": 2377.2,
+      "price": 2237.6,
+      "chg24hPct": -0.94,
+      "high24h": 2291.8,
       "low24h": 2169,
-      "fundingPct": 0,
-      "openInterest": 32180.359,
+      "fundingPct": -0.001,
+      "openInterest": 30680.189,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
     {
       "source": "CoinDesk",
-      "title": "Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack",
-      "link": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack",
-      "publishedAt": "2026-10-30T14:13:34.000Z",
+      "title": "Experts divided over Binance hack asset freezes, warn recovery is another matter",
+      "link": "https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter",
+      "publishedAt": "2026-10-30T19:55:00.000Z",
       "severity": "CRITICAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+      "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
+      "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T17:48:27.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Recap: How Binance’s record $6.3B hack unfolded",
+      "link": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T16:53:46.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "As it happened: Binance’s record $6.3B crypto hack",
       "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T14:12:26.000Z",
+      "publishedAt": "2026-10-30T16:49:50.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart",
+      "link": "https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart",
+      "publishedAt": "2026-10-30T16:31:17.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack",
+      "link": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack",
+      "publishedAt": "2026-10-30T14:13:34.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -95,34 +123,6 @@
       "title": "Binance hacker’s Bitcoin haul tops Coinbase’s corporate treasury",
       "link": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T10:54:30.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
-      "link": "https://cointelegraph.com/markets/rune-token-surges-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T09:52:29.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin falls to $77,000 as Binance exploit combines with tech woes",
-      "link": "https://www.coindesk.com/markets/2026/10/30/live-news-binance-hack-rattles-crypto-as-intel-plunges-and-ai-spending-fears-hit-tech",
-      "publishedAt": "2026-10-30T08:36:52.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance hacker dumps a little-known 2017 token and it crashes 90%",
-      "link": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-dumps-a-little-known-2017-token-and-it-crashes-90",
-      "publishedAt": "2026-10-30T07:54:07.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "North Korea’s TraderTraitor linked to $6.3B Binance hack",
-      "link": "https://cointelegraph.com/news/north-korea-linked-to-63b-binance-hack-by-crypto-investigators?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T05:51:41.000Z",
       "severity": "CRITICAL"
     }
   ],
