@@ -88,21 +88,30 @@ async function main() {
     out.fearGreed = { value: +d.value, label: d.value_classification };
   } catch (e) { out.errors.push('fearGreed: ' + e.message); }
 
+  // Source chain per coin — geo-blocks differ by host (Bybit/Binance futures
+  // are blocked from GitHub's US runners; Kraken Futures and Coinbase are not).
+  const KF = { BTC: 'PF_XBTUSD', ETH: 'PF_ETHUSD' };
+  let kfCache = null;
   for (const sym of ['BTC', 'ETH']) {
+    let done = false;
     try {
       const j = await getJson(`https://api.bybit.com/v5/market/tickers?category=linear&symbol=${sym}USDT`);
       const t = j.result.list[0];
-      out.market.push({
-        sym, price: +t.lastPrice, chg24hPct: +((+t.price24hPcnt) * 100).toFixed(2),
-        high24h: +t.highPrice24h, low24h: +t.lowPrice24h,
-        fundingPct: +((+t.fundingRate) * 100).toFixed(4), openInterest: +t.openInterest,
-      });
-    } catch (e) {
-      try {
-        const j = await getJson(`https://fapi.binance.com/fapi/v1/premiumIndex?symbol=${sym}USDT`);
-        out.market.push({ sym, price: +j.markPrice, chg24hPct: null, fundingPct: +((+j.lastFundingRate) * 100).toFixed(4), openInterest: null });
-      } catch (e2) { out.errors.push(`market ${sym}: ` + e.message + ' / ' + e2.message); }
-    }
+      out.market.push({ sym, price: +t.lastPrice, chg24hPct: +((+t.price24hPcnt) * 100).toFixed(2), high24h: +t.highPrice24h, low24h: +t.lowPrice24h, fundingPct: +((+t.fundingRate) * 100).toFixed(4), openInterest: +t.openInterest, src: 'Bybit perp' });
+      done = true;
+    } catch (e) { /* fall through */ }
+    if (!done) try {
+      if (!kfCache) kfCache = await getJson('https://futures.kraken.com/derivatives/api/v3/tickers');
+      const t = kfCache.tickers.find((x) => x.symbol === KF[sym]);
+      if (!t) throw new Error('symbol missing');
+      out.market.push({ sym, price: +t.last, chg24hPct: +(+t.change24h).toFixed(2), high24h: +t.high24h, low24h: +t.low24h, fundingPct: +((+t.relativeFundingRate) * 100).toFixed(4), openInterest: +t.openInterest, src: 'Kraken perp' });
+      done = true;
+    } catch (e) { /* fall through */ }
+    if (!done) try {
+      const j = await getJson(`https://api.exchange.coinbase.com/products/${sym}-USD/stats`);
+      out.market.push({ sym, price: +j.last, chg24hPct: +(((+j.last / +j.open) - 1) * 100).toFixed(2), high24h: +j.high, low24h: +j.low, fundingPct: null, openInterest: null, src: 'Coinbase spot' });
+      done = true;
+    } catch (e) { out.errors.push(`market ${sym}: all sources failed`); }
   }
 
   let headlines = [];
