@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T11:14:09.796Z",
+  "updatedAt": "2026-10-31T16:07:35.296Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
