@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T19:57:13.012Z",
+  "updatedAt": "2026-10-31T23:05:33.987Z",
   "coins": [
     {
       "sym": "BTC",
@@ -17,23 +17,19 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, daily SMA50 gate (F3)",
-        "price": 77622.01,
-        "asOf": "2026-10-31T12:00:00.000Z",
+        "price": 77588.83,
+        "asOf": "2026-10-31T16:00:00.000Z",
         "longTrigger": 81971,
-        "pctToLong": 5.6,
+        "pctToLong": 5.65,
         "shortTrigger": 76325.98,
-        "pctToShort": 1.7,
+        "pctToShort": 1.65,
         "gateAllows": "SHORT",
-        "atr": 927.54,
-        "stopDistPct": 2.99,
+        "atr": 877.93,
+        "stopDistPct": 2.83,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2511
+        "approxSizeUsd": 2651
       },
       "series1h": [
-        80848.64,
-        78851.99,
-        79033.28,
-        79011.31,
         77991.89,
         77252.14,
         76837.04,
@@ -77,14 +73,18 @@
         77622.01,
         77626.27,
         77718.9,
-        77635.25
+        77635.25,
+        77588.83,
+        77565.87,
+        77682.01,
+        77548.01
       ],
       "warning1h": {
         "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H is 0.21% below its breakout level",
+        "detail": "1H is 0.32% below its breakout level",
         "level": 77796.01,
-        "asOf": "2026-10-31T18:00:00.000Z",
+        "asOf": "2026-10-31T22:00:00.000Z",
         "stats180d": {
           "events": 129,
           "confirmed": 58,
@@ -108,23 +108,19 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, daily SMA50 gate (F3)",
-        "price": 2250.88,
-        "asOf": "2026-10-31T12:00:00.000Z",
+        "price": 2254.68,
+        "asOf": "2026-10-31T16:00:00.000Z",
         "longTrigger": 2391.55,
-        "pctToLong": 6.25,
+        "pctToLong": 6.07,
         "shortTrigger": 2174.08,
-        "pctToShort": 3.53,
+        "pctToShort": 3.71,
         "gateAllows": "SHORT",
-        "atr": 33.29,
-        "stopDistPct": 3.7,
+        "atr": 31.82,
+        "stopDistPct": 3.53,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2028
+        "approxSizeUsd": 2126
       },
       "series1h": [
-        2336.89,
-        2257.88,
-        2273.59,
-        2274.25,
         2253.13,
         2222.69,
         2195.34,
@@ -168,14 +164,18 @@
         2250.88,
         2252.03,
         2255.55,
-        2255.75
+        2255.75,
+        2254.68,
+        2253.94,
+        2255.72,
+        2254.75
       ],
       "warning1h": {
         "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H is 0.15% below its breakout level",
-        "level": 2259.15,
-        "asOf": "2026-10-31T18:00:00.000Z",
+        "detail": "1H is 0.62% below its breakout level",
+        "level": 2268.76,
+        "asOf": "2026-10-31T22:00:00.000Z",
         "stats180d": {
           "events": 99,
           "confirmed": 45,
