@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T05:34:39.775Z",
+  "updatedAt": "2026-10-31T11:14:09.916Z",
   "fearGreed": {
     "value": 30,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77100,
-      "chg24hPct": -1.85,
-      "high24h": 78677,
+      "price": 77321,
+      "chg24hPct": -0.32,
+      "high24h": 77999,
       "low24h": 76184,
-      "fundingPct": 0.0021,
-      "openInterest": 2665.3568,
+      "fundingPct": 0.0029,
+      "openInterest": 2674.0891,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2236.5,
-      "chg24hPct": -0.38,
+      "price": 2242.6,
+      "chg24hPct": 0.06,
       "high24h": 2259.3,
       "low24h": 2204.6,
-      "fundingPct": -0.0016,
-      "openInterest": 31034.304,
+      "fundingPct": -0.0014,
+      "openInterest": 32549.721,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Binance $6.3B record hack sparks pre-election political chatter",
+      "link": "https://cointelegraph.com/news/binance-63b-record-hack-sparks-pre-election-political-chatter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-31T09:58:50.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve",
@@ -116,13 +123,6 @@
       "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
       "link": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T11:29:23.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
-      "link": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
-      "publishedAt": "2026-10-30T11:09:24.000Z",
       "severity": "CRITICAL"
     }
   ],
