@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T20:45:11.131Z",
+  "updatedAt": "2026-10-31T00:08:41.632Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
@@ -10,35 +10,29 @@
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
   "lastClose": {
-    "BTC": 77991.89,
-    "ETH": 2253.13
+    "BTC": 77368.77,
+    "ETH": 2245.54
   },
   "watch": {
     "BTC": {
-      "price": 77991.89,
-      "asOf": "2026-10-29",
+      "price": 77368.77,
+      "asOf": "2026-10-30",
       "aboveSma200": true,
       "longTrigger": 87395.67,
-      "pctToLong": 12.06,
+      "pctToLong": 12.96,
       "shortTrigger": 74967.97,
-      "pctToShort": 4.03,
+      "pctToShort": 3.2,
       "wouldHold": null
     },
     "ETH": {
-      "price": 2253.13,
-      "asOf": "2026-10-29",
+      "price": 2245.54,
+      "asOf": "2026-10-30",
       "aboveSma200": true,
       "longTrigger": 2807.34,
-      "pctToLong": 24.6,
-      "shortTrigger": 2233,
-      "pctToShort": 0.9,
-      "wouldHold": {
-        "side": "LONG",
-        "entry": 2253.94,
-        "since": "2026-08-20",
-        "stop": 2070.23,
-        "unrealUsdBacktest": -0.66
-      }
+      "pctToLong": 25.02,
+      "shortTrigger": 2174.08,
+      "pctToShort": 3.29,
+      "wouldHold": null
     }
   },
   "open": [],
@@ -49,13 +43,13 @@
   },
   "backtest2017_2026": {
     "note": "Same engine, full history, shared account — see analysis/V2_VALIDATION.md",
-    "trades": 69,
-    "expectancyR": 1.55,
-    "profitFactor": 4.4,
-    "totalRetPct": 99.6,
+    "trades": 70,
+    "expectancyR": 1.52,
+    "profitFactor": 4.37,
+    "totalRetPct": 99.4,
     "maxDDPct": -19.7,
-    "oosExpR": 0.65,
-    "buyHoldRetPct": 373,
+    "oosExpR": 0.62,
+    "buyHoldRetPct": 369.9,
     "buyHoldDDPct": -81.1
   }
 }

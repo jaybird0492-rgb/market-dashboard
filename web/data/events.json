@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T20:45:11.299Z",
+  "updatedAt": "2026-10-31T00:08:41.797Z",
   "fearGreed": {
     "value": 30,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 76914,
-      "chg24hPct": -2.41,
-      "high24h": 79738,
+      "price": 77202,
+      "chg24hPct": -1.06,
+      "high24h": 78677,
       "low24h": 76184,
       "fundingPct": 0.0022,
-      "openInterest": 2768.2943,
+      "openInterest": 2761.3677,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2237.6,
-      "chg24hPct": -0.94,
-      "high24h": 2291.8,
+      "price": 2242.9,
+      "chg24hPct": -0.26,
+      "high24h": 2259.3,
       "low24h": 2169,
-      "fundingPct": -0.001,
-      "openInterest": 30680.189,
+      "fundingPct": -0.0006,
+      "openInterest": 30527.03,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hackers raced to move billions before it could be frozen",
+      "link": "https://cointelegraph.com/magazine/binance-hackers-raced-to-move-billions-before-could-be-frozen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-30T22:00:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Experts divided over Binance hack asset freezes, warn recovery is another matter",
@@ -71,7 +78,7 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance working with FBI to recover assets following $6.3B hack",
+      "title": "FBI and Secret Service join response to Binance’s $6.3B hack",
       "link": "https://cointelegraph.com/news/binance-fbi-recover-assets-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T13:11:10.000Z",
       "severity": "CRITICAL"
@@ -116,13 +123,6 @@
       "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
       "link": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T11:00:10.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance hacker’s Bitcoin haul tops Coinbase’s corporate treasury",
-      "link": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T10:54:30.000Z",
       "severity": "CRITICAL"
     }
   ],
