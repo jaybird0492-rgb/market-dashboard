@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T00:08:41.797Z",
+  "updatedAt": "2026-10-31T05:34:39.775Z",
   "fearGreed": {
     "value": 30,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77202,
-      "chg24hPct": -1.06,
+      "price": 77100,
+      "chg24hPct": -1.85,
       "high24h": 78677,
       "low24h": 76184,
-      "fundingPct": 0.0022,
-      "openInterest": 2761.3677,
+      "fundingPct": 0.0021,
+      "openInterest": 2665.3568,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2242.9,
-      "chg24hPct": -0.26,
+      "price": 2236.5,
+      "chg24hPct": -0.38,
       "high24h": 2259.3,
-      "low24h": 2169,
-      "fundingPct": -0.0006,
-      "openInterest": 30527.03,
+      "low24h": 2204.6,
+      "fundingPct": -0.0016,
+      "openInterest": 31034.304,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve",
+      "link": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
+      "publishedAt": "2026-10-31T05:01:32.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance hackers raced to move billions before it could be frozen",
@@ -116,13 +123,6 @@
       "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
       "link": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
       "publishedAt": "2026-10-30T11:09:24.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
-      "link": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T11:00:10.000Z",
       "severity": "CRITICAL"
     }
   ],

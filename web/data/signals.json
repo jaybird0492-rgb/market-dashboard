@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T00:08:41.735Z",
+  "updatedAt": "2026-10-31T05:34:39.726Z",
   "coins": [
     {
       "sym": "BTC",
@@ -17,24 +17,19 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, daily SMA50 gate (F3)",
-        "price": 77368.77,
-        "asOf": "2026-10-30T20:00:00.000Z",
+        "price": 77170.74,
+        "asOf": "2026-10-31T00:00:00.000Z",
         "longTrigger": 81971,
-        "pctToLong": 5.95,
+        "pctToLong": 6.22,
         "shortTrigger": 76325.98,
-        "pctToShort": 1.37,
+        "pctToShort": 1.11,
         "gateAllows": "SHORT",
-        "atr": 1101.3,
-        "stopDistPct": 3.56,
+        "atr": 1059.65,
+        "stopDistPct": 3.43,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2108
+        "approxSizeUsd": 2185
       },
       "series1h": [
-        81106.15,
-        80019.56,
-        79964,
-        79858.01,
-        80256.22,
         80234.14,
         79968.94,
         79861.89,
@@ -77,15 +72,20 @@
         76938.01,
         76721.99,
         76970.35,
-        77368.77
+        77368.77,
+        77568.81,
+        77405.99,
+        77452,
+        77170.74,
+        77193.47
       ],
       "warning1h": {
         "state": "QUIET",
         "dir": 0,
-        "detail": "nearest 1H levels: +1.9% up / -1.4% down",
-        "asOf": "2026-10-30T23:00:00.000Z",
+        "detail": "nearest 1H levels: +1.2% up / -1.1% down",
+        "asOf": "2026-10-31T04:00:00.000Z",
         "stats180d": {
-          "events": 133,
+          "events": 131,
           "confirmed": 58,
           "ratePct": 44
         }
@@ -107,24 +107,19 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, daily SMA50 gate (F3)",
-        "price": 2245.54,
-        "asOf": "2026-10-30T20:00:00.000Z",
+        "price": 2240,
+        "asOf": "2026-10-31T00:00:00.000Z",
         "longTrigger": 2391.55,
-        "pctToLong": 6.5,
+        "pctToLong": 6.77,
         "shortTrigger": 2174.08,
-        "pctToShort": 3.29,
+        "pctToShort": 3.03,
         "gateAllows": "SHORT",
-        "atr": 40.53,
-        "stopDistPct": 4.51,
+        "atr": 38.58,
+        "stopDistPct": 4.31,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 1662
+        "approxSizeUsd": 1742
       },
       "series1h": [
-        2354.51,
-        2314.29,
-        2312.19,
-        2309.03,
-        2321.64,
         2323.07,
         2313.5,
         2310.36,
@@ -167,18 +162,22 @@
         2239.98,
         2238.93,
         2236.27,
-        2245.54
+        2245.54,
+        2250.06,
+        2244.45,
+        2246.51,
+        2240,
+        2239.79
       ],
       "warning1h": {
-        "state": "APPROACHING",
-        "dir": 1,
-        "detail": "1H is 0.75% below its breakout level",
-        "level": 2262.49,
-        "asOf": "2026-10-30T23:00:00.000Z",
+        "state": "QUIET",
+        "dir": 0,
+        "detail": "nearest 1H levels: +1.0% up / -1.4% down",
+        "asOf": "2026-10-31T04:00:00.000Z",
         "stats180d": {
-          "events": 103,
+          "events": 101,
           "confirmed": 45,
-          "ratePct": 44
+          "ratePct": 45
         }
       }
     }
