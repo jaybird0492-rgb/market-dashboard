@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T16:07:35.483Z",
+  "updatedAt": "2026-10-31T19:57:13.079Z",
   "fearGreed": {
     "value": 30,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77521,
-      "chg24hPct": 0.17,
-      "high24h": 77635,
-      "low24h": 76184,
-      "fundingPct": 0.0011,
-      "openInterest": 2631.1081,
+      "price": 77451,
+      "chg24hPct": 0.81,
+      "high24h": 77670,
+      "low24h": 76488,
+      "fundingPct": 0.0019,
+      "openInterest": 2621.1334,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2249.1,
-      "chg24hPct": 1.11,
-      "high24h": 2252.8,
-      "low24h": 2216.2,
-      "fundingPct": -0.0005,
-      "openInterest": 32745.536,
+      "price": 2250.1,
+      "chg24hPct": 0.66,
+      "high24h": 2256.4,
+      "low24h": 2229.7,
+      "fundingPct": 0,
+      "openInterest": 31499.531,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "A stolen iPhone, $14,000 in losses and London's crypto theft problem",
+      "link": "https://www.coindesk.com/business/2026/11/01/a-stolen-iphone-usd14-000-in-losses-and-london-s-crypto-theft-problem",
+      "publishedAt": "2026-10-31T16:09:30.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals",
@@ -116,13 +123,6 @@
       "title": "Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart",
       "link": "https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart",
       "publishedAt": "2026-10-30T16:31:17.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack",
-      "link": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack",
-      "publishedAt": "2026-10-30T14:13:34.000Z",
       "severity": "CRITICAL"
     }
   ],
