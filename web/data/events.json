@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T02:11:11.264Z",
+  "updatedAt": "2026-11-01T09:13:36.874Z",
   "fearGreed": {
     "value": 34,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77657.4,
-      "chg24hPct": 0.41,
-      "high24h": 77844.1,
-      "low24h": 77026.3,
-      "fundingPct": 0.0045,
-      "openInterest": 68731.974,
-      "src": "Bybit perp"
+      "price": 78090,
+      "chg24hPct": 1.02,
+      "high24h": 78149,
+      "low24h": 77264,
+      "fundingPct": 0.0032,
+      "openInterest": 2703.4465,
+      "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2266.39,
-      "chg24hPct": 1.04,
-      "high24h": 2275,
-      "low24h": 2234.22,
-      "fundingPct": -0.0033,
-      "openInterest": 799076.26,
-      "src": "Bybit perp"
+      "price": 2271.2,
+      "chg24hPct": 1.4,
+      "high24h": 2275.1,
+      "low24h": 2239.8,
+      "fundingPct": 0.001,
+      "openInterest": 30756.539,
+      "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "FBI blames North Korea for record $6.3B Binance hack",
+      "link": "https://cointelegraph.com/news/fbi-blames-north-korea-for-record-63b-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-01T07:44:38.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
@@ -117,16 +124,17 @@
       "link": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T16:53:46.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "As it happened: Binance’s record $6.3B crypto hack",
-      "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T16:49:50.000Z",
-      "severity": "CRITICAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-01T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.38,
+      "vsAvgMove": 4,
+      "volumeSpike": 1.6
+    },
     {
       "sym": "ETH",
       "at": "2026-11-01T01:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": 1.04,
       "vsAvgMove": 3.2,
       "volumeSpike": 2.2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-10-29T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.09,
-      "vsAvgMove": 4.3,
-      "volumeSpike": 2.8
     }
   ],
   "errors": []
