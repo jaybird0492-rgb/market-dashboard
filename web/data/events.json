@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T09:13:36.874Z",
+  "updatedAt": "2026-11-01T16:02:47.074Z",
   "fearGreed": {
     "value": 34,
     "label": "Fear"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 78090,
-      "chg24hPct": 1.02,
+      "price": 77886,
+      "chg24hPct": 0.5,
       "high24h": 78149,
-      "low24h": 77264,
-      "fundingPct": 0.0032,
-      "openInterest": 2703.4465,
+      "low24h": 77317,
+      "fundingPct": 0.0013,
+      "openInterest": 2775.4357,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2271.2,
-      "chg24hPct": 1.4,
+      "price": 2263.9,
+      "chg24hPct": 0.65,
       "high24h": 2275.1,
-      "low24h": 2239.8,
-      "fundingPct": 0.001,
-      "openInterest": 30756.539,
+      "low24h": 2243.4,
+      "fundingPct": 0.0015,
+      "openInterest": 30182.489,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
+      "link": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+      "publishedAt": "2026-11-01T10:35:42.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance says phase one of withdrawals opens after $6.3B hack",
+      "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-01T09:38:18.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "FBI blames North Korea for record $6.3B Binance hack",
@@ -110,23 +124,17 @@
       "link": "https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter",
       "publishedAt": "2026-10-30T19:55:00.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
-      "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T17:48:27.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Recap: How Binance’s record $6.3B hack unfolded",
-      "link": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T16:53:46.000Z",
-      "severity": "CRITICAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-01T12:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.37,
+      "vsAvgMove": 3,
+      "volumeSpike": 2.2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-01T08:00:00.000Z",
@@ -174,22 +182,6 @@
       "movePct": -3.38,
       "vsAvgMove": 9,
       "volumeSpike": 8.1
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-10-29T15:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.74,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 2
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-10-29T15:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.04,
-      "vsAvgMove": 3.2,
-      "volumeSpike": 2.2
     }
   ],
   "errors": []
