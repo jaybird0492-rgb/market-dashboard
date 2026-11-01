@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T20:28:32.785Z",
+  "updatedAt": "2026-11-01T23:47:31.312Z",
   "coins": [
     {
       "sym": "BTC",
@@ -30,9 +30,6 @@
         "approxSizeUsd": 3305
       },
       "series1h": [
-        76938.01,
-        76721.99,
-        76970.35,
         77368.77,
         77568.81,
         77405.99,
@@ -77,14 +74,17 @@
         78149.99,
         77980.54,
         77892,
-        77799.29
+        77799.29,
+        77906.33,
+        77889.64,
+        77823.88
       ],
       "warning1h": {
-        "state": "FAKEOUT",
+        "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H broke above $78068.00 within the last 12h and fell back inside — fake warning",
-        "level": 78068,
-        "asOf": "2026-11-01T19:00:00.000Z",
+        "detail": "1H is 0.59% below its breakout level",
+        "level": 78285,
+        "asOf": "2026-11-01T22:00:00.000Z",
         "stats180d": {
           "events": 131,
           "confirmed": 58,
@@ -121,9 +121,6 @@
         "approxSizeUsd": 2603
       },
       "series1h": [
-        2239.98,
-        2238.93,
-        2236.27,
         2245.54,
         2250.06,
         2244.45,
@@ -168,14 +165,17 @@
         2269.74,
         2264.6,
         2263.45,
-        2259.3
+        2259.3,
+        2263.7,
+        2264.17,
+        2260.04
       ],
       "warning1h": {
-        "state": "FAKEOUT",
+        "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H broke above $2276.31 within the last 12h and fell back inside — fake warning",
-        "level": 2276.31,
-        "asOf": "2026-11-01T19:00:00.000Z",
+        "detail": "1H is 0.79% below its breakout level",
+        "level": 2278,
+        "asOf": "2026-11-01T22:00:00.000Z",
         "stats180d": {
           "events": 101,
           "confirmed": 45,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T20:28:32.851Z",
+  "updatedAt": "2026-11-01T23:47:31.372Z",
   "fearGreed": {
     "value": 34,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77682,
-      "chg24hPct": 0.28,
-      "high24h": 78149,
-      "low24h": 77317,
-      "fundingPct": 0.0004,
-      "openInterest": 2682.8284,
+      "price": 78177,
+      "chg24hPct": 1,
+      "high24h": 78300,
+      "low24h": 77392,
+      "fundingPct": 0.0005,
+      "openInterest": 2678.0932,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2254.8,
-      "chg24hPct": 0.2,
+      "price": 2271.2,
+      "chg24hPct": 0.87,
       "high24h": 2275.1,
-      "low24h": 2248.2,
-      "fundingPct": 0.0021,
-      "openInterest": 31806.252,
+      "low24h": 2245.9,
+      "fundingPct": 0.0015,
+      "openInterest": 31782.627,
       "src": "Kraken perp"
     }
   ],
@@ -113,10 +113,10 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance hackers raced to move billions before it could be frozen",
-      "link": "https://cointelegraph.com/magazine/binance-hackers-raced-to-move-billions-before-could-be-frozen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-30T22:00:00.000Z",
-      "severity": "CRITICAL"
+      "title": "$3.6B flees Binance on reopen, THORChain co-founder opposes coin freeze: Hodler’s Digest",
+      "link": "https://cointelegraph.com/magazine/36b-flees-binance-on-reopen-thorchain-co-founder-opposes-coin-freeze-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-01T23:09:13.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -166,22 +166,6 @@
       "movePct": -1.29,
       "vsAvgMove": 3.2,
       "volumeSpike": 2.2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-10-29T20:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -2.47,
-      "vsAvgMove": 7.9,
-      "volumeSpike": 6.4
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-10-29T20:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -3.38,
-      "vsAvgMove": 9,
-      "volumeSpike": 8.1
     }
   ],
   "errors": []
