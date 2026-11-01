@@ -1,32 +1,39 @@
 {
-  "updatedAt": "2026-10-31T23:05:34.052Z",
+  "updatedAt": "2026-11-01T02:11:11.264Z",
   "fearGreed": {
-    "value": 30,
+    "value": 34,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 77429,
-      "chg24hPct": 0.6,
-      "high24h": 77670,
-      "low24h": 76889,
-      "fundingPct": 0.0018,
-      "openInterest": 2639.261,
-      "src": "Kraken perp"
+      "price": 77657.4,
+      "chg24hPct": 0.41,
+      "high24h": 77844.1,
+      "low24h": 77026.3,
+      "fundingPct": 0.0045,
+      "openInterest": 68731.974,
+      "src": "Bybit perp"
     },
     {
       "sym": "ETH",
-      "price": 2249.9,
-      "chg24hPct": 0.64,
-      "high24h": 2265.5,
-      "low24h": 2233.2,
-      "fundingPct": 0.0004,
-      "openInterest": 30512.409,
-      "src": "Kraken perp"
+      "price": 2266.39,
+      "chg24hPct": 1.04,
+      "high24h": 2275,
+      "low24h": 2234.22,
+      "fundingPct": -0.0033,
+      "openInterest": 799076.26,
+      "src": "Bybit perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
+      "link": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
+      "publishedAt": "2026-11-01T01:10:05.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "A stolen iPhone, $14,000 in losses and London's crypto theft problem",
@@ -117,16 +124,25 @@
       "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T16:49:50.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart",
-      "link": "https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart",
-      "publishedAt": "2026-10-30T16:31:17.000Z",
-      "severity": "CRITICAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-01T01:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.36,
+      "vsAvgMove": 2.9,
+      "volumeSpike": 1.8
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-01T00:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.3,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 1.1
+    },
     {
       "sym": "BTC",
       "at": "2026-10-29T23:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": 1.09,
       "vsAvgMove": 4.3,
       "volumeSpike": 2.8
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-10-29T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.75,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-10-29T01:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.34,
-      "vsAvgMove": 6.4,
-      "volumeSpike": 1.7
     }
   ],
   "errors": []

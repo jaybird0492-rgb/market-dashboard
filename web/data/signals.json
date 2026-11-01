@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-31T23:05:33.987Z",
+  "updatedAt": "2026-11-01T02:11:11.193Z",
   "coins": [
     {
       "sym": "BTC",
       "context1d": {
         "regime": "TREND UP",
-        "price": 77368.77,
-        "asOf": "2026-10-30",
+        "price": 77582.02,
+        "asOf": "2026-10-31",
         "aboveSma200": true,
         "sma50Above200": true,
         "aboveSma50": false,
@@ -17,22 +17,19 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, daily SMA50 gate (F3)",
-        "price": 77588.83,
-        "asOf": "2026-10-31T16:00:00.000Z",
+        "price": 77582.02,
+        "asOf": "2026-10-31T20:00:00.000Z",
         "longTrigger": 81971,
-        "pctToLong": 5.65,
+        "pctToLong": 5.66,
         "shortTrigger": 76325.98,
         "pctToShort": 1.65,
         "gateAllows": "SHORT",
-        "atr": 877.93,
-        "stopDistPct": 2.83,
+        "atr": 837.65,
+        "stopDistPct": 2.7,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2651
+        "approxSizeUsd": 2779
       },
       "series1h": [
-        77991.89,
-        77252.14,
-        76837.04,
         77436.43,
         78235.15,
         78280.01,
@@ -77,14 +74,17 @@
         77588.83,
         77565.87,
         77682.01,
-        77548.01
+        77548.01,
+        77582.02,
+        77690.41,
+        77728.38
       ],
       "warning1h": {
         "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H is 0.32% below its breakout level",
+        "detail": "1H is 0.09% below its breakout level",
         "level": 77796.01,
-        "asOf": "2026-10-31T22:00:00.000Z",
+        "asOf": "2026-11-01T01:00:00.000Z",
         "stats180d": {
           "events": 129,
           "confirmed": 58,
@@ -96,8 +96,8 @@
       "sym": "ETH",
       "context1d": {
         "regime": "TREND UP",
-        "price": 2245.54,
-        "asOf": "2026-10-30",
+        "price": 2255.66,
+        "asOf": "2026-10-31",
         "aboveSma200": true,
         "sma50Above200": true,
         "aboveSma50": false,
@@ -108,22 +108,19 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, daily SMA50 gate (F3)",
-        "price": 2254.68,
-        "asOf": "2026-10-31T16:00:00.000Z",
+        "price": 2255.66,
+        "asOf": "2026-10-31T20:00:00.000Z",
         "longTrigger": 2391.55,
-        "pctToLong": 6.07,
+        "pctToLong": 6.02,
         "shortTrigger": 2174.08,
-        "pctToShort": 3.71,
+        "pctToShort": 3.75,
         "gateAllows": "SHORT",
-        "atr": 31.82,
-        "stopDistPct": 3.53,
+        "atr": 30.79,
+        "stopDistPct": 3.41,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 2126
+        "approxSizeUsd": 2198
       },
       "series1h": [
-        2253.13,
-        2222.69,
-        2195.34,
         2210.12,
         2237.82,
         2243.79,
@@ -168,16 +165,19 @@
         2254.68,
         2253.94,
         2255.72,
-        2254.75
+        2254.75,
+        2255.66,
+        2262.42,
+        2270.5
       ],
       "warning1h": {
-        "state": "APPROACHING",
+        "state": "BREAKOUT",
         "dir": 1,
-        "detail": "1H is 0.62% below its breakout level",
+        "detail": "last 1H close broke its 20-bar high — waiting for 4H confirmation",
         "level": 2268.76,
-        "asOf": "2026-10-31T22:00:00.000Z",
+        "asOf": "2026-11-01T01:00:00.000Z",
         "stats180d": {
-          "events": 99,
+          "events": 100,
           "confirmed": 45,
           "ratePct": 45
         }
