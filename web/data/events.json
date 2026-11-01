@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T16:02:47.074Z",
+  "updatedAt": "2026-11-01T20:28:32.851Z",
   "fearGreed": {
     "value": 34,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 77886,
-      "chg24hPct": 0.5,
+      "price": 77682,
+      "chg24hPct": 0.28,
       "high24h": 78149,
       "low24h": 77317,
-      "fundingPct": 0.0013,
-      "openInterest": 2775.4357,
+      "fundingPct": 0.0004,
+      "openInterest": 2682.8284,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2263.9,
-      "chg24hPct": 0.65,
+      "price": 2254.8,
+      "chg24hPct": 0.2,
       "high24h": 2275.1,
-      "low24h": 2243.4,
-      "fundingPct": 0.0015,
-      "openInterest": 30182.489,
+      "low24h": 2248.2,
+      "fundingPct": 0.0021,
+      "openInterest": 31806.252,
       "src": "Kraken perp"
     }
   ],
@@ -120,10 +120,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Experts divided over Binance hack asset freezes, warn recovery is another matter",
-      "link": "https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter",
-      "publishedAt": "2026-10-30T19:55:00.000Z",
-      "severity": "CRITICAL"
+      "title": "The crypto reader's guide to the 2026 midterm election: State of Crypto",
+      "link": "https://www.coindesk.com/policy/2026/11/01/the-crypto-reader-s-guide-to-the-2026-midterm-election-state-of-crypto",
+      "publishedAt": "2026-11-01T19:30:00.000Z",
+      "severity": "NORMAL"
     }
   ],
   "shocks": [
