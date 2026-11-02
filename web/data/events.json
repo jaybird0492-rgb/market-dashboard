@@ -1,32 +1,46 @@
 {
-  "updatedAt": "2026-11-01T23:47:31.372Z",
+  "updatedAt": "2026-11-02T03:44:00.678Z",
   "fearGreed": {
-    "value": 34,
+    "value": 37,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 78177,
-      "chg24hPct": 1,
-      "high24h": 78300,
-      "low24h": 77392,
-      "fundingPct": 0.0005,
-      "openInterest": 2678.0932,
+      "price": 78536,
+      "chg24hPct": 1.05,
+      "high24h": 78679,
+      "low24h": 77504,
+      "fundingPct": 0.0009,
+      "openInterest": 2625.0517,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2271.2,
-      "chg24hPct": 0.87,
-      "high24h": 2275.1,
+      "price": 2305.1,
+      "chg24hPct": 1.64,
+      "high24h": 2319.2,
       "low24h": 2245.9,
-      "fundingPct": 0.0015,
-      "openInterest": 31782.627,
+      "fundingPct": 0.0024,
+      "openInterest": 31570.079,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "THORChain halts swaps after block reorg bug, slowing Binance hackers",
+      "link": "https://cointelegraph.com/news/thorchain-halts-swaps-after-block-reorg-bug-slowing-binance-hackers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-02T01:51:48.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance net outflows surge to $5.8B as withdrawals resume after record hack",
+      "link": "https://cointelegraph.com/news/binance-net-outflows-surge-to-58b-as-withdrawals-resume-after-record-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-01T23:59:27.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
@@ -110,23 +124,33 @@
       "link": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
       "publishedAt": "2026-10-31T05:01:32.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "$3.6B flees Binance on reopen, THORChain co-founder opposes coin freeze: Hodler’s Digest",
-      "link": "https://cointelegraph.com/magazine/36b-flees-binance-on-reopen-thorchain-co-founder-opposes-coin-freeze-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-01T23:09:13.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "The crypto reader's guide to the 2026 midterm election: State of Crypto",
-      "link": "https://www.coindesk.com/policy/2026/11/01/the-crypto-reader-s-guide-to-the-2026-midterm-election-state-of-crypto",
-      "publishedAt": "2026-11-01T19:30:00.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-02T01:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.73,
+      "vsAvgMove": 4,
+      "volumeSpike": 5
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-01T23:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.68,
+      "vsAvgMove": 5.9,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-01T23:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.68,
+      "vsAvgMove": 4.2,
+      "volumeSpike": 3
+    },
     {
       "sym": "ETH",
       "at": "2026-11-01T12:00:00.000Z",
@@ -158,14 +182,6 @@
       "movePct": 0.3,
       "vsAvgMove": 2.5,
       "volumeSpike": 1.1
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-10-29T23:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.29,
-      "vsAvgMove": 3.2,
-      "volumeSpike": 2.2
     }
   ],
   "errors": []
