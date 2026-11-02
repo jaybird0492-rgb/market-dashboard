@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T03:44:00.678Z",
+  "updatedAt": "2026-11-02T11:42:22.126Z",
   "fearGreed": {
     "value": 37,
     "label": "Fear"
@@ -7,26 +7,61 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 78536,
-      "chg24hPct": 1.05,
-      "high24h": 78679,
+      "price": 77809,
+      "chg24hPct": -0.04,
+      "high24h": 78759,
       "low24h": 77504,
-      "fundingPct": 0.0009,
-      "openInterest": 2625.0517,
+      "fundingPct": 0.0005,
+      "openInterest": 2622.3424,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2305.1,
-      "chg24hPct": 1.64,
+      "price": 2283.8,
+      "chg24hPct": 0.77,
       "high24h": 2319.2,
       "low24h": 2245.9,
-      "fundingPct": 0.0024,
-      "openInterest": 31570.079,
+      "fundingPct": 0.0033,
+      "openInterest": 33362.382,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "From Uptober to Hacktober: Are Bitcoin’s seasonal patterns becoming obsolete?",
+      "link": "https://cointelegraph.com/markets/uptober-hacktober-bitcoin-seasonal-pattern?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-02T11:19:18.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance hack fallout, U.S. midterms and jobs report: Crypto Week Ahead",
+      "link": "https://www.coindesk.com/markets/2026/11/02/binance-hack-fallout-u-s-midterms-and-jobs-report-crypto-week-ahead",
+      "publishedAt": "2026-11-02T09:04:49.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin ETFs sink into October outflows with $643M exit after Binance hack",
+      "link": "https://cointelegraph.com/markets/bitcoin-etfs-october-red-binance-hack-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-02T07:50:36.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Strangers are begging the Binance hacker for bitcoin, one ‘help me bro’ at a time",
+      "link": "https://www.coindesk.com/tech/2026/11/02/strangers-are-begging-the-binance-hacker-for-bitcoin-one-help-me-bro-at-a-time",
+      "publishedAt": "2026-11-02T05:18:12.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin claws back toward $79,000 as markets shake off crypto's biggest hack",
+      "link": "https://www.coindesk.com/markets/2026/11/02/bitcoin-claws-back-toward-usd79-000-as-markets-shake-off-crypto-s-biggest-hack",
+      "publishedAt": "2026-11-02T04:42:22.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "THORChain halts swaps after block reorg bug, slowing Binance hackers",
@@ -89,44 +124,25 @@
       "link": "https://cointelegraph.com/markets/bitcoin-binance-hack-strive-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-31T15:26:46.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance says it has replaced 90% of stolen crypto after massive $6.3 billion breach",
-      "link": "https://www.coindesk.com/business/2026/10/31/binance-says-it-has-replaced-90-of-stolen-crypto-after-massive-usd6-3-billion-breach",
-      "publishedAt": "2026-10-31T15:24:10.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "A Nasdaq-listed company may sell $450 million bitcoin, citing Binance hack and quantum fears",
-      "link": "https://www.coindesk.com/markets/2026/10/31/a-nasdaq-listed-company-may-sell-usd450-million-bitcoin-citing-binance-hack-and-quantum-fears",
-      "publishedAt": "2026-10-31T12:49:47.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "The $6.3 billion Binance hack paradox: Centralization made the hack possible, but also saved $3 billion",
-      "link": "https://www.coindesk.com/business/2026/10/31/the-usd6-3-billion-binance-hack-paradox-centralization-made-the-hack-possible-but-also-saved-usd3-billion",
-      "publishedAt": "2026-10-31T12:00:00.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance $6.3B record hack sparks pre-election political clashes",
-      "link": "https://cointelegraph.com/news/binance-63b-record-hack-sparks-pre-election-political-chatter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-31T09:58:50.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve",
-      "link": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
-      "publishedAt": "2026-10-31T05:01:32.000Z",
-      "severity": "CRITICAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-02T04:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.7,
+      "vsAvgMove": 3.3,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-02T03:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.59,
+      "vsAvgMove": 3,
+      "volumeSpike": 3.3
+    },
     {
       "sym": "ETH",
       "at": "2026-11-02T01:00:00.000Z",
@@ -174,14 +190,6 @@
       "movePct": 0.36,
       "vsAvgMove": 2.9,
       "volumeSpike": 1.8
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-01T00:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.3,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 1.1
     }
   ],
   "errors": []
