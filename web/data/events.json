@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T10:06:11.768Z",
+  "updatedAt": "2026-11-03T17:48:36.142Z",
   "fearGreed": {
     "value": 26,
     "label": "Fear"
@@ -7,26 +7,75 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 76961,
-      "chg24hPct": -1.19,
-      "high24h": 78144,
+      "price": 77620,
+      "chg24hPct": 1.11,
+      "high24h": 77787,
       "low24h": 76251,
-      "fundingPct": 0.0011,
-      "openInterest": 2723.8261,
+      "fundingPct": 0.0009,
+      "openInterest": 2553.3262,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2264.1,
-      "chg24hPct": -0.91,
-      "high24h": 2301.1,
+      "price": 2295.7,
+      "chg24hPct": 2.36,
+      "high24h": 2307.1,
       "low24h": 2233.7,
-      "fundingPct": 0.0011,
-      "openInterest": 33804.378,
+      "fundingPct": -0.0006,
+      "openInterest": 30561.49,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "South Korea's president says country needs a ‘cybersecurity czar’ following $6.3 billion Binance hack",
+      "link": "https://www.coindesk.com/tech/2026/11/03/south-korea-s-president-says-country-needs-a-cybersecurity-czar-following-usd6-3-billion-binance-hack",
+      "publishedAt": "2026-11-03T16:49:56.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance traces $6.3B hack to fake job interviews, compromised AI tool",
+      "link": "https://cointelegraph.com/news/binance-fake-job-interviews-compromised-ai-tool-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-03T16:44:06.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance's $6.3 billion hack began with a fake job interview, and a campaign 'built over many months'",
+      "link": "https://www.coindesk.com/business/2026/11/03/binance-s-usd6-3-billion-hack-began-with-a-fake-job-interview-exchange-says",
+      "publishedAt": "2026-11-03T14:53:19.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "South Korea asks its biggest banks how a major crypto hack would hit them",
+      "link": "https://www.coindesk.com/business/2026/11/03/south-korea-asks-its-biggest-banks-how-a-major-crypto-hack-would-hit-them",
+      "publishedAt": "2026-11-03T14:42:30.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "CZ warns of more AI-driven hacks following Binance’s historic $6.3 billion heist",
+      "link": "https://www.coindesk.com/business/2026/11/03/cz-warns-of-more-ai-driven-hacks-following-binance-s-historic-usd6-4-billion-heist",
+      "publishedAt": "2026-11-03T14:22:09.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance net outflows reach $5.3 billion after record hack. CEO says recovery underway",
+      "link": "https://www.coindesk.com/business/2026/11/03/binance-net-outflows-reach-usd5-3b-after-record-hack-though-ceo-cites-recovery",
+      "publishedAt": "2026-11-03T12:57:28.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Liquid’s bitcoin IOUs are fully backed again after a $320 million exploit",
+      "link": "https://www.coindesk.com/markets/2026/11/03/liquid-s-bitcoin-ious-are-fully-backed-again-after-a-usd320-million-exploit",
+      "publishedAt": "2026-11-03T11:12:12.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "North Korea denies role in $6.4 billion Binance hack after FBI points to TraderTraitor",
@@ -70,63 +119,22 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Binance hackers begin swapping stolen Solana tokens for Bitcoin: Chainalysis",
-      "link": "https://cointelegraph.com/news/binance-hackers-solana-new-phase-laundering-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T12:40:45.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "No proof of AI in North Korean hackers move of stolen Binance funds",
-      "link": "https://www.coindesk.com/tech/2026/11/02/no-proof-of-ai-in-north-korean-hackers-move-of-stolen-binance-funds-through-thousands-of-wallets",
-      "publishedAt": "2026-11-02T11:57:45.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "From Uptober to Hacktober: Are Bitcoin’s seasonal patterns becoming obsolete?",
-      "link": "https://cointelegraph.com/markets/uptober-hacktober-bitcoin-seasonal-pattern?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T11:19:18.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance hack fallout, U.S. midterms and jobs report: Crypto Week Ahead",
-      "link": "https://www.coindesk.com/markets/2026/11/02/binance-hack-fallout-u-s-midterms-and-jobs-report-crypto-week-ahead",
-      "publishedAt": "2026-11-02T09:04:49.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs sink into October outflows with $643M exit after Binance hack",
-      "link": "https://cointelegraph.com/markets/bitcoin-etfs-october-red-binance-hack-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T07:50:36.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
       "title": "Bitcoin’s latest chart signal looks a lot like the ones before its big crashes",
       "link": "https://www.coindesk.com/markets/2026/11/03/bitcoin-s-price-chart-is-flashing-a-red-signal",
       "publishedAt": "2026-11-03T08:50:56.000Z",
       "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin risks drop below $76K as 7% oil slide fails to spark BTC price rally",
-      "link": "https://cointelegraph.com/markets/bitcoin-risks-sub-76k-drop-as-7-fall-in-oil-fails-to-spark-btc-price-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T19:27:58.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin traders eye post-election rally as exchange outflows point to supply squeeze",
-      "link": "https://www.coindesk.com/markets/2026/11/02/bitcoin-traders-eye-post-election-rally-as-exchange-outflows-point-to-supply-squeeze",
-      "publishedAt": "2026-11-02T18:13:57.000Z",
-      "severity": "HIGH"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-03T12:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.7,
+      "vsAvgMove": 3,
+      "volumeSpike": 1.1
+    },
     {
       "sym": "BTC",
       "at": "2026-11-03T09:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": 0.59,
       "vsAvgMove": 3,
       "volumeSpike": 3.3
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-02T01:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.73,
-      "vsAvgMove": 4,
-      "volumeSpike": 5
     }
   ],
   "errors": []
