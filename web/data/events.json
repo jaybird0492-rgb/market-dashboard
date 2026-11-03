@@ -1,32 +1,46 @@
 {
-  "updatedAt": "2026-11-02T20:53:09.221Z",
+  "updatedAt": "2026-11-03T02:44:05.267Z",
   "fearGreed": {
-    "value": 37,
+    "value": 26,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 76780,
-      "chg24hPct": -1.33,
+      "price": 76786,
+      "chg24hPct": -2.02,
       "high24h": 78759,
-      "low24h": 76582,
-      "fundingPct": 0.0024,
-      "openInterest": 2727.2298,
+      "low24h": 76543,
+      "fundingPct": 0.0033,
+      "openInterest": 2799.3377,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2247,
-      "chg24hPct": -0.65,
+      "price": 2255,
+      "chg24hPct": -1.61,
       "high24h": 2319.2,
       "low24h": 2233.7,
-      "fundingPct": 0.0026,
-      "openInterest": 34349.399,
+      "fundingPct": 0.0023,
+      "openInterest": 33740.877,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "South Korea urges exchanges to boost cold storage after Binance hack",
+      "link": "https://cointelegraph.com/news/south-korea-urges-exchanges-to-boost-cold-storage-after-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-03T01:32:39.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "North Korea denies role in $6.3B Binance hack, points finger at US",
+      "link": "https://cointelegraph.com/news/north-korea-denies-role-in-63b-binance-hack-points-finger-at-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-02T23:07:07.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Mercado Bitcoin wallets show post-hack transfers after $46M theft",
@@ -110,20 +124,6 @@
       "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-01T09:38:18.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "FBI blames North Korea for record $6.3B Binance hack",
-      "link": "https://cointelegraph.com/news/fbi-blames-north-korea-for-record-63b-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-01T07:44:38.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin risks drop below $76K as 7% oil slide fails to spark BTC price rally",
-      "link": "https://cointelegraph.com/markets/bitcoin-risks-sub-76k-drop-as-7-fall-in-oil-fails-to-spark-btc-price-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T19:27:58.000Z",
-      "severity": "HIGH"
     }
   ],
   "shocks": [
