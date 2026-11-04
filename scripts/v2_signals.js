@@ -11,10 +11,12 @@ const fs = require('fs');
 const path = require('path');
 const { loadBars, smaArr, atrArr, priorHigh, priorLow } = require('./v2_backtest');
 const { loadBarsAny } = require('./v2_paper4h');
+const { dailyGateFactory } = require('./v2_timeframes');
 
 const DAY = 864e5, H4 = 144e5, H1 = 36e5;
 const OUT = path.join(__dirname, '..', 'web', 'data', 'signals.json');
 const closed = (bars, span) => bars.filter((b) => b.t + span <= Date.now());
+const fmtLevel = (v) => (v >= 1000 ? '$' + Math.round(v).toLocaleString('en-US') : '$' + v.toFixed(2));
 
 function triggers(bars, i, n = 55) {
   // levels for the NEXT bar: extremes of the n bars ending at i
@@ -83,25 +85,76 @@ function coinSignals(sym) {
   const t4 = triggers(h4, i4, 20); // traded layer: Donchian 20/10 (variant F3)
   const atr4 = atrArr(h4, 14)[i4];
   const px4 = h4[i4].close;
-  const gateLong = px > s50; // daily SMA50 gate used by the 4H futures layer
+  const s200_4hArr = smaArr(h4.map((b) => b.close), 200);
+  const s200_4h = s200_4hArr[i4];
+  const nativeLong = px4 > s200_4h, nativeShort = px4 < s200_4h;
+  // Dual gate: longs need the daily close above SMA50, shorts need it below
+  // SMA200. Between the averages both sides are open. The 4H Donchian also
+  // carries its own native 4H SMA200 filter — effective permission needs both.
+  const gateAt = dailyGateFactory(sym);
+  const g = gateAt(Date.now()) || { long: px > s50, short: px < s200, px, sma50: s50, sma200: s200, at: d1[ci].t };
+  const effLong = !!g.long && nativeLong, effShort = !!g.short && nativeShort;
+  const gateLabel = g.long && g.short
+    ? 'BOTH sides open (price between SMA50 and SMA200)'
+    : g.long ? 'LONG side open (close above SMA50)'
+      : g.short ? 'SHORT side open (close below SMA200)'
+        : 'No side open';
+  // Most recent closed 4H breakout, and whether the full rule allowed it
+  // (daily gate + native 4H SMA200 filter). A blocked breakout is a decision,
+  // not a missing feed.
+  let lastBreakout = null;
+  for (let j = i4; j >= Math.max(20, i4 - 6); j--) {
+    const u = priorHigh(h4, j, 20), dn = priorLow(h4, j, 20);
+    const br = u !== null && h4[j].close > u ? 1 : dn !== null && h4[j].close < dn ? -1 : 0;
+    if (br) {
+      const gg = gateAt(h4[j].t);
+      const dailyOk = !!(gg && (br === 1 ? gg.long : gg.short));
+      const nativeOk = br === 1 ? h4[j].close > s200_4hArr[j] : h4[j].close < s200_4hArr[j];
+      lastBreakout = {
+        dir: br === 1 ? 'LONG' : 'SHORT',
+        at: new Date(h4[j].t).toISOString(),
+        close: +h4[j].close.toFixed(2),
+        level: +(br === 1 ? u : dn).toFixed(2),
+        allowed: dailyOk && nativeOk,
+        blockedBy: dailyOk && nativeOk ? null : !dailyOk ? 'daily gate' : '4H trend filter',
+      };
+      break;
+    }
+  }
   return {
     sym,
     context1d: {
       regime, price: +px.toFixed(2), asOf: new Date(d1[ci].t).toISOString().slice(0, 10),
       aboveSma200: px > s200, sma50Above200: s50 > s200, aboveSma50: px > s50,
+      sma50: +s50.toFixed(2), sma200: +s200.toFixed(2),
+      pctToSma50: +((s50 / px - 1) * 100).toFixed(2), pctToSma200: +((s200 / px - 1) * 100).toFixed(2),
       longTrigger: +dt.up.toFixed(2), shortTrigger: +dt.dn.toFixed(2),
-      gate4h: gateLong ? 'LONG side open (price above daily SMA50)' : 'SHORT side open (price below daily SMA50)',
-      riskMode: regime === 'TREND UP' ? 'Longs allowed at full size; shorts blocked' : regime === 'TREND DOWN' ? 'Shorts allowed at full size; longs blocked' : 'No new trades — market in transition',
+      gate4h: gateLabel, gateAsOf: g.at,
+      gateDetail: `Daily close ${fmtLevel(g.px)} · SMA50 ${fmtLevel(g.sma50)} · SMA200 ${fmtLevel(g.sma200)} — ${g.long && g.short ? 'both sides open (price between the averages)' : g.long ? 'long side open (above SMA50)' : g.short ? 'short side open (below SMA200)' : 'no side open'}.`,
+      riskMode: g.long && g.short
+        ? '4H layer: both directions open (daily price between SMA50 and SMA200); 0.75% risk per trade'
+        : g.long ? '4H layer: long entries only; short entries blocked by the daily gate'
+          : g.short ? '4H layer: short entries only; long entries blocked by the daily gate'
+            : '4H layer: no entries — daily gate blocks both sides',
     },
     setup4h: {
-      rules: 'Donchian 20/10, daily SMA50 gate (F3)',
+      rules: 'Donchian 20/10, dual daily gate (long above SMA50, short below SMA200, both in between) + native 4H SMA200 filter',
       price: +px4.toFixed(2), asOf: new Date(h4[i4].t).toISOString(),
       longTrigger: +t4.up.toFixed(2), pctToLong: +((t4.up / px4 - 1) * 100).toFixed(2),
       shortTrigger: +t4.dn.toFixed(2), pctToShort: +((px4 / t4.dn - 1) * 100).toFixed(2),
-      gateAllows: gateLong ? 'LONG' : 'SHORT',
+      // Daily gate (what the daily averages permit) …
+      dailyLong: !!g.long, dailyShort: !!g.short,
+      gateAllows: g.long && g.short ? 'BOTH' : g.long ? 'LONG' : g.short ? 'SHORT' : 'NONE',
+      // … and the native 4H trend filter that stratA applies to every entry.
+      sma200_4h: +s200_4h.toFixed(2), pctTo4hSma200: +((s200_4h / px4 - 1) * 100).toFixed(2),
+      nativeLong, nativeShort,
+      // Effective permission = daily gate AND native 4H filter.
+      longAllowed: effLong, shortAllowed: effShort,
+      effectiveAllows: effLong && effShort ? 'BOTH' : effLong ? 'LONG' : effShort ? 'SHORT' : 'NONE',
       atr: +atr4.toFixed(2), stopDistPct: +((2.5 * atr4 / px4) * 100).toFixed(2),
-      riskUsdPerTrade: 75, // 0.75% of the $10k paper account
+      riskUsdPerTrade: 75, // 0.75% of the $10k paper account — indicative
       approxSizeUsd: Math.round(75 / (2.5 * atr4 / px4)),
+      lastBreakout,
     },
     series1h: h1.slice(-48).map((b) => +b.close.toFixed(2)),
     warning1h: { ...warningState(h1, h4), asOf: new Date(h1[h1.length - 1].t).toISOString(), stats180d: fakeoutStats(h1, h4, sym) },
@@ -109,11 +162,17 @@ function coinSignals(sym) {
 }
 
 function main() {
-  const out = { updatedAt: new Date().toISOString(), coins: [coinSignals('BTC'), coinSignals('ETH')] };
+  const now = Date.now();
+  const out = {
+    updatedAt: new Date(now).toISOString(),
+    next4hCloseAt: new Date(Math.ceil(now / H4) * H4).toISOString(),
+    coins: [coinSignals('BTC'), coinSignals('ETH')],
+  };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(out, null, 2), 'utf8');
   for (const c of out.coins) {
-    console.log(`${c.sym} 1D=${c.context1d.regime} | 4H long>${c.setup4h.longTrigger} (${c.setup4h.pctToLong}%) short<${c.setup4h.shortTrigger} (${c.setup4h.pctToShort}%) | 1H=${c.warning1h.state}${c.warning1h.dir ? (c.warning1h.dir === 1 ? ' LONG' : ' SHORT') : ''} — ${c.warning1h.detail} | 1H warnings confirmed ${c.warning1h.stats180d.ratePct}% (${c.warning1h.stats180d.confirmed}/${c.warning1h.stats180d.events}, 180d)`);
+    const s = c.setup4h, b = s.lastBreakout;
+    console.log(`${c.sym} 1D=${c.context1d.regime} | daily gate ${s.gateAllows} · effective ${s.effectiveAllows} | 4H long>${s.longTrigger} (${s.pctToLong}%) short<${s.shortTrigger} (${s.pctToShort}%) | 1H=${c.warning1h.state}${c.warning1h.dir ? (c.warning1h.dir === 1 ? ' LONG' : ' SHORT') : ''} — ${c.warning1h.detail} | 1H warnings confirmed ${c.warning1h.stats180d.ratePct}% (${c.warning1h.stats180d.confirmed}/${c.warning1h.stats180d.events}, 180d)${b ? ` | last 4H breakout ${b.dir} at ${b.at.slice(5, 16)} ${b.allowed ? 'ALLOWED' : 'BLOCKED by ' + b.blockedBy}` : ''}`);
   }
 }
 

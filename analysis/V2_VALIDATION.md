@@ -97,6 +97,77 @@ severity-tagged RSS headlines (it correctly flagged the $6.3B Binance hack
 as CRITICAL within the hour) and 1H price-shock detection. Events are
 context for the human, never trade triggers — only price rules trade.
 
+## Addendum 2026-11-04 — why the site went quiet, and the dual gate
+Owner reported the site "not generating any signals". Investigation:
+- The pipeline was healthy. Scheduled runs were throttled to ~4-5/day (data
+  up to 5.6h stale), but both bots replay from their start date on every run,
+  so no closed 4H bar was skipped. Staleness is a display problem, not a
+  missed-trade problem.
+- The 4H F3 layer did trade: BTC short and ETH short from 2026-10-30, both
+  closed by signal exit on 2026-11-02 at -0.21R and -0.59R (-$59.97,
+  -0.80R combined). Equity $9,940.02. The account was not frozen.
+- The silence after that was the gate, not the feed. On 2026-11-04 both coins
+  closed 4H bars above their 20-bar highs while price was above the daily
+  SMA200 but below the daily SMA50. F3's single SMA50 gate allowed shorts
+  only, so it blocked both recovery longs. The dashboard also said "longs
+  permitted" because it used the 1D regime instead of the gate (fixed).
+- Every 4H 20/10 entry since 2017 was tagged by daily state at entry
+  (n=388 BTC / 384 ETH): blocked longs in a bull pullback were positive —
+  BTC n=24 expR +0.36, ETH n=22 expR +0.41. The gate was discarding edge
+  exactly in the live recovery setup.
+
+Pre-registered gate matrix (`scripts/v2_gates.js`, 4H 20/10, futures costs):
+G0 SMA50 (F3), G1 SMA200 (F2), G2 none (F1), G3 SMA20, G4 EMA21,
+G5 transition gate, G6 daily Donchian-20 direction with hysteresis.
+Acceptance unchanged: OOS > +0.15R and exTop3 > 0 on both coins.
+G5 rule exactly: long allowed when the last COMPLETED daily close is above
+the daily SMA50; short allowed when it is below the daily SMA200; when it is
+between the two averages BOTH sides are open. (The first draft of this note
+described the rule backwards; review caught it, the code and this note now
+match the tested `transition` branch order, and `v2_gates.js` imports the
+same `dailyGateFactory` the paper bot uses so they cannot drift again.)
+
+Re-run on the unified code (2026-11-04), 95% CI on expectancy:
+**G5**: BTC n=295 expR +0.47±0.34, OOS +0.43 (n=136, OOS exTop3 +0.06),
+maxDD -9%; ETH n=311 expR +0.42±0.30, OOS +0.35 (n=140, OOS exTop3 +0.05),
+maxDD -9%. G0 (F3) BTC OOS +0.40, OOS exTop3 +0.02; ETH OOS +0.36, exTop3
++0.05. G2/no-gate and G6 also passed; G1/SMA200 failed the BTC OOS test
+(+0.13). Six of seven gates passed the letter of the rule, so the matrix
+mostly says "the 4H Donchian works with many daily filters", not "G5 is
+uniquely good". G5 was chosen because it is the minimal change that removes
+the identified failure (no side is vetoed inside the pullback band) while
+keeping a long-term long filter and a short-term short filter.
+
+Portfolio-level check (reviewer item M2: silo stats hide shared-account
+drawdown), BTC+ETH sharing one $10k account, same costs and 0.75% risk:
+n=606, win 34.5%, expR +0.44±0.23, exTop3 +0.33, PF 1.63, total +511.5%,
+CAGR 21.8%, **maxDD -15.2%** (vs -9% per silo; 247 overlapping entries mean
+BTC and ETH mostly fire together). OOS n=276 expR +0.39, OOS exTop3 +0.19.
+50/50 buy & hold same window: +1316% with -87.1% drawdown. The -15.2% is
+the number to quote for this layer, not -9%.
+
+Selection caveat: this test was motivated by the live failure, so G5 was
+chosen with hindsight. Its paper period is the real out-of-sample check.
+Action: 4H paper account reset at 2026-11-04T16:00Z with G5, $10,000, same
+costs, same kill rule. The 6-week clock restarts; earliest review is
+mid-December 2026. The daily core is unchanged.
+
+Reviewer findings on this change (2026-11-04, read-only audit):
+- C1 gate identity mismatch — FIXED: `dailyGateFactory` now implements the
+  tested branch order and `v2_gates.js` imports it instead of duplicating.
+- C2 `makeStrat` factory double-call crash — FIXED: `runPortfolio` calls
+  `makeStrat(sym, bars, ind)`; `v2_paper4h.js` was passing a pre-built
+  strategy. Would have crashed on the first post-reset bar.
+- H1/H2 hindsight selection, OOS exTop3 — reported above and in the script.
+- M2 silo vs portfolio drawdown — reported above (-15.2%).
+- M3 pending-entry staleness — `pending` is emitted only from the last
+  processed bar (`v2_portfolio.js`), so it cannot outlive one bar; the UI
+  labels it PENDING and shows the signal time.
+- L1 native 4H SMA200 filter was invisible in the UI — FIXED: `signals.json`
+  now exposes `dailyLong/dailyShort`, `nativeLong/nativeShort`,
+  `sma200_4h`, effective `longAllowed/shortAllowed`, and `lastBreakout
+  .blockedBy`; the dashboard shows daily gate + 4H trend + effective side.
+
 ## Next steps (in order)
 1. Portfolio-level run: BTC+ETH (universe fixed to BTC/ETH by owner decision
    2026-10-29; SOL/BNB/XRP/HYPE are out and their history files were deleted)

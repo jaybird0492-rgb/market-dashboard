@@ -102,7 +102,14 @@ function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity, makeS
     const last = S.bars[S.bars.length - 1];
     return { sym, dir: p.dir, entryFill: p.entryFill, entryT: p.entryT, stop: p.stop, qty: p.qty, mark: last.close, unrealPnl: p.qty * (last.close - p.entryFill) * p.dir };
   });
-  return { trades, curve, openPositions, finalEquity: equity, mtmEquity: curve.length ? curve[curve.length - 1].eq : equity };
+  const pending = Object.entries(state)
+    .filter(([, S]) => S.pendingEntry !== 0 && S.i >= 0 && S.i < S.bars.length)
+    .map(([sym, S]) => {
+      const span = S.bars.length > 1 ? S.bars[S.bars.length - 1].t - S.bars[S.bars.length - 2].t : 0;
+      const lastT = S.bars[S.i].t;
+      return { sym, dir: S.pendingEntry, signalT: lastT, nextOpenT: lastT + span };
+    });
+  return { trades, curve, openPositions, pending, finalEquity: equity, mtmEquity: curve.length ? curve[curve.length - 1].eq : equity };
 }
 
 function portfolioStats(res, barsBySym) {

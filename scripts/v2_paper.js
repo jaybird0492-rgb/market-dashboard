@@ -87,6 +87,10 @@ function main() {
       mark: +p.mark.toFixed(2), openedAt: new Date(p.entryT).toISOString(),
       unrealUsd: +p.unrealPnl.toFixed(2),
     })),
+    pending: res.pending.map((p) => ({
+      sym: p.sym, side: p.dir === 1 ? 'LONG' : 'SHORT',
+      signalAt: new Date(p.signalT).toISOString(), fillsAt: new Date(p.nextOpenT).toISOString(),
+    })),
     closed: res.trades.slice(-50).map((t) => ({
       sym: t.sym, side: t.dir === 1 ? 'LONG' : 'SHORT',
       openedAt: new Date(t.entryT).toISOString(), closedAt: new Date(t.exitT).toISOString(),

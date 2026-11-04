@@ -1,13 +1,16 @@
 // v2 4H futures paper layer — simulated USDT-perp account, BTC+ETH shared
-// $10,000. Rules upgraded 2026-10-30 to variant F3 from scripts/v2_fast.js
-// (pre-registered, passed all gates both coins): Donchian 20/10 on 4H gated
-// by the daily SMA50 trend — faster entries and a gate that reacts to
-// crashes weeks before SMA200. BTC +0.50R / ETH +0.36R expectancy,
-// OOS +0.40/+0.36, maxDD -8%/-11% in 2017-2026 testing.
-// Rules file: scripts/v2_timeframes.js (pre-registered). Costs: Binance perp
-// taker fee 0.05%/side, slippage 0.02%/side, funding drag 0.03%/day.
-// Replay-derived state from PAPER_START on every run — cannot fork.
-// Only closed 4H bars are used (the still-forming bar is dropped).
+// $10,000. Rules from 2026-11-04: Donchian 20/10 on 4H with the dual daily
+// gate (longs need the daily close above SMA50, shorts need it below SMA200;
+// both sides open in the band between the two averages). This replaced the
+// single SMA50 gate (F3) after it blocked valid recovery longs on both coins
+// while price was still above its 200-day trend. Gate matrix and evidence:
+// scripts/v2_gates.js. 4H 20/10 + dual gate: BTC +0.47R (OOS +0.43),
+// ETH +0.42R (OOS +0.35), maxDD -9% both, ~32 trades/yr/coin. The paper
+// clock restarts here because this is a rule change; the old F3 record
+// (2 trades, -0.80R combined) is kept in analysis/V2_VALIDATION.md.
+// Costs: Binance perp taker fee 0.05%/side, slippage 0.02%/side, funding
+// drag 0.03%/day. Replay-derived state from PAPER4H_START on every run —
+// cannot fork. Only closed 4H bars are used (the forming bar is dropped).
 // Kill rule (same as daily layer): halt if drawdown from peak > 25% or
 // 15 consecutive losers. Halting = remove the step from the workflow.
 //
@@ -16,10 +19,10 @@
 const fs = require('fs');
 const path = require('path');
 const { runPortfolio, START_EQUITY } = require('./v2_portfolio');
-const { regimeStrat } = require('./v2_timeframes');
-const { PAPER_START } = require('./v2_paper');
+const { dualGateStrat } = require('./v2_timeframes');
 
 const H4 = 144e5;
+const PAPER4H_START = Date.parse('2026-11-04T16:00:00Z');
 const STATE = path.join(__dirname, '..', 'data', 'v2', 'paper4h_state.json');
 const PUBLIC = path.join(__dirname, '..', 'web', 'data', 'v2_4h.json');
 
@@ -40,8 +43,8 @@ function closedBars(sym) {
 function main() {
   const barsBySym = { BTC: closedBars('BTC'), ETH: closedBars('ETH') };
   const res = runPortfolio(barsBySym, {
-    allowShort: true, startMs: PAPER_START,
-    makeStrat: (sym, bars, ind) => regimeStrat(sym, 50, { entry: 20, exit: 10 })(bars, ind),
+    allowShort: true, startMs: PAPER4H_START,
+    makeStrat: (sym, bars, ind) => dualGateStrat(sym)(bars, ind),
     maxHoldBars: 360, feeSide: 0.0005, slipSide: 0.0002, fundingDay: 0.0003,
   });
   let peak = START_EQUITY;
@@ -69,8 +72,8 @@ function main() {
 
   const pub = {
     updatedAt: new Date().toISOString(),
-    strategy: '4H Donchian 20/10 futures (simulated perps), daily SMA50-gated (F3), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared',
-    paperStart: new Date(PAPER_START).toISOString(),
+    strategy: '4H Donchian 20/10 futures (simulated perps), dual daily gate (longs > SMA50, shorts < SMA200, both in the band), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared',
+    paperStart: new Date(PAPER4H_START).toISOString(),
     startEquity: START_EQUITY,
     equity: +mtmLive.toFixed(2),
     realizedEquity: +res.finalEquity.toFixed(2),
@@ -83,6 +86,10 @@ function main() {
       stop: +p.stop.toFixed(2), mark: +p.mark.toFixed(2),
       openedAt: new Date(p.entryT).toISOString(), unrealUsd: +p.unrealPnl.toFixed(2),
       notionalUsd: +(p.qty * p.entryFill).toFixed(2),
+    })),
+    pending: res.pending.map((p) => ({
+      sym: p.sym, side: p.dir === 1 ? 'LONG' : 'SHORT',
+      signalAt: new Date(p.signalT).toISOString(), fillsAt: new Date(p.nextOpenT).toISOString(),
     })),
     closed: res.trades.slice(-50).map((t) => ({
       sym: t.sym, side: t.dir === 1 ? 'LONG' : 'SHORT',

@@ -27,14 +27,17 @@ Live status page: https://jaybird0492-rgb.github.io/market-dashboard/
 ## The three layers (how trades are framed)
 - **1D context** — daily trend regime; decides which direction is allowed and
   at what size. Rarely trades itself (the daily core account still runs it).
-- **4H setup (the staple)** — Donchian 55/20 trigger levels on futures,
-  daily-gated, simulated perps with funding (`scripts/v2_paper4h.js`).
-  A trade exists only after a 4H close beyond a trigger.
+- **4H setup (the staple)** — Donchian 20/10 on futures with a **dual daily
+  gate** (longs need the last daily close above SMA50, shorts need it below
+  SMA200; both sides open in the band between the two averages), simulated
+  perps with funding (`scripts/v2_paper4h.js`). A trade exists only after a
+  4H close beyond a trigger. Rule evidence: `scripts/v2_gates.js`.
 - **1H warning** — never trades (failed testing: BTC +0.01R out-of-sample).
   Shows APPROACHING / BREAKOUT / FAKEOUT states plus each coin's measured
-  warning-confirmation rate (~29% over the last 180 days).
-The dashboard's setup cards show all three layers per coin with a plain
-verdict. Signals: `scripts/v2_signals.js` → `web/data/signals.json`, hourly.
+  warning-confirmation rate (~40% over the last 180 days).
+The dashboard's setup cards show all three layers per coin, the exact gate
+condition, the last 4H breakout and whether it was allowed or blocked.
+Signals: `scripts/v2_signals.js` → `web/data/signals.json`, every run.
 
 ## How it runs
 - `scripts/fetch_history.js` — downloads BTC/ETH daily history from Binance
@@ -42,14 +45,19 @@ verdict. Signals: `scripts/v2_signals.js` → `web/data/signals.json`, hourly.
 - `scripts/v2_backtest.js` — the backtester + pre-registered candidates.
 - `scripts/v2_sensitivity.js` — parameter-plateau check.
 - `scripts/v2_portfolio.js` — shared-account portfolio test.
-- `scripts/v2_paper.js` — paper bot. Replays from 2026-10-29 on every run
+- `scripts/v2_paper.js` — daily paper bot. Replays from 2026-10-29 on every run
   (state cannot fork), writes `data/v2/paper_state.json` + `web/data/v2.json`.
-- GitHub Actions (`.github/workflows/update.yml`) runs fetch → paper → commit
-  → deploy daily at 00:30 UTC. Kill switch: delete the schedule or the
-  v2_paper step. Paper kill rule: halt if drawdown from peak > 25% or
-  15 consecutive losers.
-- Local: `node scripts/fetch_history.js --intervals 1d`, then
-  `node scripts/v2_paper.js`, then `node server.js` → http://localhost:8899
+- `scripts/v2_paper4h.js` — 4H futures paper bot, replay from 2026-11-04,
+  writes `data/v2/paper4h_state.json` + `web/data/v2_4h.json`.
+- `scripts/v2_signals.js` / `scripts/v2_events.js` — setup cards + news/shock
+  context into `web/data/`.
+- GitHub Actions (`.github/workflows/update.yml`) attempts a run every 15 min
+  (GitHub throttles low-activity repos to a few runs/day), then commits and
+  deploys. Kill switch: delete the schedule or the paper steps. Paper kill
+  rule: halt if drawdown from peak > 25% or 15 consecutive losers.
+- Local: `node scripts/fetch_history.js --intervals 1d`,
+  `node scripts/fetch_history.js --live`, then the four v2 scripts, then
+  `node server.js` → http://localhost:8899
 
 ## History
 v1 (multi-factor score, 6 coins × 1H/4H/1D) lost $940 in paper trading and was

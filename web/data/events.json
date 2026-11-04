@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T02:44:42.134Z",
+  "updatedAt": "2026-11-04T15:48:21.406Z",
   "fearGreed": {
     "value": 34,
     "label": "Fear"
@@ -7,26 +7,47 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 76565,
-      "chg24hPct": -0.33,
-      "high24h": 77985,
-      "low24h": 76251,
-      "fundingPct": 0.0013,
-      "openInterest": 2590.1052,
-      "src": "Kraken perp"
+      "price": 80483.1,
+      "chg24hPct": 3.59,
+      "high24h": 81181.1,
+      "low24h": 75673.2,
+      "fundingPct": 0.01,
+      "openInterest": 67040.56,
+      "src": "Bybit perp"
     },
     {
       "sym": "ETH",
-      "price": 2253.5,
-      "chg24hPct": -0.12,
-      "high24h": 2307.1,
-      "low24h": 2237.6,
-      "fundingPct": 0.0008,
-      "openInterest": 30621.018,
-      "src": "Kraken perp"
+      "price": 2426.2,
+      "chg24hPct": 5.93,
+      "high24h": 2451.35,
+      "low24h": 2225.27,
+      "fundingPct": 0.01,
+      "openInterest": 802660.35,
+      "src": "Bybit perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "THORChain's RUNE jumps 10% as North Korean hackers resume laundering Binance loot",
+      "link": "https://www.coindesk.com/markets/2026/11/04/thorchain-s-rune-jumps-10-as-north-korean-hackers-resume-laundering-binance-loot",
+      "publishedAt": "2026-11-04T12:49:56.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says",
+      "link": "https://cointelegraph.com/markets/crypto-market-recovery-grayscale-binance-hack-temporary-setback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T11:11:57.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hackers move 81% of stolen Solana, route funds via THORChain",
+      "link": "https://cointelegraph.com/news/binance-hackers-move-81-stolen-solana-route-thorchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T09:15:55.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "South Korea's president says country needs a ‘cybersecurity czar’ following $6.3 billion Binance hack",
@@ -42,91 +63,126 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Binance's $6.3 billion hack began with a fake job interview, and a campaign 'built over many months'",
-      "link": "https://www.coindesk.com/business/2026/11/03/binance-s-usd6-3-billion-hack-began-with-a-fake-job-interview-exchange-says",
-      "publishedAt": "2026-11-03T14:53:19.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "South Korea asks its biggest banks how a major crypto hack would hit them",
-      "link": "https://www.coindesk.com/business/2026/11/03/south-korea-asks-its-biggest-banks-how-a-major-crypto-hack-would-hit-them",
-      "publishedAt": "2026-11-03T14:42:30.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "CZ warns of more AI-driven hacks following Binance’s historic $6.3 billion heist",
-      "link": "https://www.coindesk.com/business/2026/11/03/cz-warns-of-more-ai-driven-hacks-following-binance-s-historic-usd6-4-billion-heist",
-      "publishedAt": "2026-11-03T14:22:09.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance net outflows reach $5.3 billion after record hack. CEO says recovery underway",
-      "link": "https://www.coindesk.com/business/2026/11/03/binance-net-outflows-reach-usd5-3b-after-record-hack-though-ceo-cites-recovery",
-      "publishedAt": "2026-11-03T12:57:28.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Liquid’s bitcoin IOUs are fully backed again after a $320 million exploit",
-      "link": "https://www.coindesk.com/markets/2026/11/03/liquid-s-bitcoin-ious-are-fully-backed-again-after-a-usd320-million-exploit",
-      "publishedAt": "2026-11-03T11:12:12.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "North Korea denies role in $6.4 billion Binance hack after FBI points to TraderTraitor",
-      "link": "https://www.coindesk.com/business/2026/11/03/north-korea-denies-role-in-usd6-4-billion-binance-hack-after-fbi-points-to-tradertraitor",
-      "publishedAt": "2026-11-03T09:40:32.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Mercado Bitcoin pledges to cover all user losses after near $40 million hack",
-      "link": "https://www.coindesk.com/business/2026/11/03/mercado-bitcoin-pledges-to-cover-all-user-losses-after-near-usd40-million-hack",
-      "publishedAt": "2026-11-03T08:56:48.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
-      "title": "South Korea urges exchanges to boost cold storage after Binance hack",
-      "link": "https://cointelegraph.com/news/south-korea-urges-exchanges-to-boost-cold-storage-after-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-03T01:32:39.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "North Korea denies role in $6.3B Binance hack, points finger at US",
-      "link": "https://cointelegraph.com/news/north-korea-denies-role-in-63b-binance-hack-points-finger-at-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T23:07:07.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin’s latest chart signal looks a lot like the ones before its big crashes",
-      "link": "https://www.coindesk.com/markets/2026/11/03/bitcoin-s-price-chart-is-flashing-a-red-signal",
-      "publishedAt": "2026-11-03T08:50:56.000Z",
+      "title": "Bitcoin hits $80.5K as US stocks rally on midterm election results",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T15:29:23.000Z",
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Bitcoin risks drop below $76K as 7% oil slide fails to spark BTC price rally",
-      "link": "https://cointelegraph.com/markets/bitcoin-risks-sub-76k-drop-as-7-fall-in-oil-fails-to-spark-btc-price-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T19:27:58.000Z",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin and stocks post big gains, reversing overnight plunge following Blue Wave landslide",
+      "link": "https://www.coindesk.com/tech/2026/11/04/live-updates-bitcoin-and-stocks-reverse-overnight-plunge-following-blue-wave-landslide",
+      "publishedAt": "2026-11-04T14:00:53.000Z",
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Jack Dorsey's Block faces $764 million DOJ settlement as bitcoin profit plunges 50%",
+      "link": "https://www.coindesk.com/markets/2026/11/04/jack-dorsey-s-block-faces-usd764-million-doj-settlement-as-bitcoin-profit-plunges-50",
+      "publishedAt": "2026-11-04T06:06:04.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Democrats surge toward Senate, House majorities, with crypto braced for new direction",
+      "link": "https://www.coindesk.com/policy/2026/11/03/democrats-surge-toward-senate-house-majorities-with-crypto-braced-for-new-direction",
+      "publishedAt": "2026-11-04T04:55:11.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin and stocks reverse overnight plunge following Blue Wave landslide",
+      "link": "https://www.coindesk.com/tech/2026/11/03/election-2026-coindesk-live-blog",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "The election changes Washington. The work on crypto continues",
+      "link": "https://www.coindesk.com/opinion/2026/11/04/the-election-changes-washington-the-work-on-crypto-continues",
+      "publishedAt": "2026-11-04T14:25:12.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
-      "title": "US midterms election 2026 live: Crypto-backed Andy Barr wins Kentucky Senate seat",
-      "link": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T02:20:00.000Z",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T13:47:43.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "France backs reporting for self-custodied crypto worth 100K euros or more",
+      "link": "https://cointelegraph.com/news/france-approves-amendment-self-custodied-crypto-wallets-100k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T13:44:52.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Global asset manager Schroders brings emerging market bond fund to Solana",
+      "link": "https://www.coindesk.com/business/2026/11/04/global-asset-manager-schroders-brings-emerging-market-bond-fund-to-solana",
+      "publishedAt": "2026-11-04T13:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-04T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.25,
+      "vsAvgMove": 4.2,
+      "volumeSpike": 3
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-04T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 2.58,
+      "vsAvgMove": 7.6,
+      "volumeSpike": 4.1
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-04T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.85,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 2
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-04T04:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.17,
+      "vsAvgMove": 4.8,
+      "volumeSpike": 1.8
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-04T04:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.36,
+      "vsAvgMove": 4.7,
+      "volumeSpike": 1.6
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-04T02:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.12,
+      "vsAvgMove": 5.2,
+      "volumeSpike": 1.6
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-04T02:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.87,
+      "vsAvgMove": 3.4,
+      "volumeSpike": 1.3
+    },
     {
       "sym": "BTC",
       "at": "2026-11-03T23:00:00.000Z",
@@ -134,62 +190,6 @@
       "movePct": -0.54,
       "vsAvgMove": 2.8,
       "volumeSpike": 0.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-03T23:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.8,
-      "vsAvgMove": 3.7,
-      "volumeSpike": 0.6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-03T12:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.7,
-      "vsAvgMove": 3,
-      "volumeSpike": 1.1
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-03T09:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.56,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 0.8
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-03T07:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.56,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 2.4
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-03T02:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.53,
-      "vsAvgMove": 2.9,
-      "volumeSpike": 1.7
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-02T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.45,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 2.4
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-02T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.8,
-      "vsAvgMove": 3.2,
-      "volumeSpike": 1.6
     }
   ],
   "errors": []

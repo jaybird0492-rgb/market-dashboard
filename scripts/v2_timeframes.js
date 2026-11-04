@@ -41,6 +41,59 @@ function dailyTrendFactory(sym, gatePeriod = 200) {
   };
 }
 
+// Dual gate — pre-registered 2026-11-04 after the single SMA50 gate blocked
+// a valid recovery long on both coins. Rule (the exact "transition" variant
+// from scripts/v2_gates.js, which passed on both coins):
+//   long  allowed when the last completed daily close > daily SMA50
+//   short allowed when the last completed daily close < daily SMA200
+//   otherwise (price between the two averages in a bull market) BOTH sides
+//   are open, so the 4H Donchian decides instead of a daily average vetoing it.
+// Evidence: scripts/v2_gates.js — 4H 20/10 with this gate: BTC expR +0.47,
+// OOS +0.43, maxDD -9%; ETH +0.42, OOS +0.35, maxDD -9%.
+function dailyGateFactory(sym) {
+  const daily = loadBars(sym, '1d');
+  const closes = daily.map((b) => b.close);
+  const s50 = smaArr(closes, 50), s200 = smaArr(closes, 200);
+  return (t) => {
+    let lo = 0, hi = daily.length - 1, ans = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (daily[mid].t + DAY <= t) { ans = mid; lo = mid + 1; } else hi = mid - 1;
+    }
+    if (ans < 0 || s200[ans] === null) return null;
+    const px = daily[ans].close;
+    // Same branch order as the tested transition gate: +1 long-only,
+    // -1 short-only, 0 both. Expressed as two booleans for the live engine.
+    let long, short;
+    if (px > s50[ans]) { long = true; short = false; }
+    else if (px < s200[ans]) { long = false; short = true; }
+    else { long = true; short = true; }
+    return {
+      long, short,
+      px, sma50: s50[ans], sma200: s200[ans],
+      at: new Date(daily[ans].t).toISOString().slice(0, 10),
+    };
+  };
+}
+
+function dualGateStrat(sym) {
+  const gateAt = dailyGateFactory(sym);
+  return (bars, ind) => {
+    const inner = stratA(bars, ind, 1, { entry: 20, exit: 10 });
+    return {
+      warmup: 200,
+      entryDir(i) {
+        const d = inner.entryDir(i);
+        if (d === 0) return 0;
+        const g = gateAt(bars[i].t);
+        if (!g) return 0;
+        return d === 1 ? (g.long ? 1 : 0) : (g.short ? -1 : 0);
+      },
+      exitHit: inner.exitHit,
+    };
+  };
+}
+
 function regimeStrat(sym, gatePeriod = 200, params) {
   const trendAt = dailyTrendFactory(sym, gatePeriod);
   return (bars, ind) => {
@@ -87,4 +140,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { regimeStrat, FUT, MAXHOLD };
+module.exports = { regimeStrat, dualGateStrat, dailyGateFactory, FUT, MAXHOLD };

@@ -23,6 +23,7 @@
   .pill { font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 3px 9px; border-radius: 20px; text-transform: uppercase; }
   .pill-paper { background: rgba(232,163,61,.14); color: var(--amber); border: 1px solid rgba(232,163,61,.4); }
   .pill-live { background: rgba(47,180,87,.12); color: var(--green); border: 1px solid rgba(47,180,87,.35); }
+  .pill-stale { background: rgba(239,83,80,.12); color: var(--red); border: 1px solid rgba(239,83,80,.35); }
   main { padding-top: 20px; padding-bottom: 40px; }
   section { margin-bottom: 26px; }
   .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
@@ -59,7 +60,14 @@
   .verdict .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; background: var(--faint); }
   .verdict.trade .dot { background: var(--green); }
   .verdict.wait .dot { background: var(--amber); }
+  .verdict.blocked { background: rgba(239,83,80,.05); }
+  .verdict.blocked .dot { background: var(--red); }
   .verdict b { font-weight: 650; }
+  .break-line { padding: 9px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .gate-tag { font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 4px; }
+  .gate-both { background: rgba(74,158,218,.14); color: var(--blue); }
+  .gate-one { background: rgba(232,163,61,.15); color: var(--amber); }
+  .gate-none { background: rgba(239,83,80,.14); color: var(--red); }
   .table-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th { text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; padding: 10px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -100,17 +108,18 @@
   </section>
 
   <section>
-    <div class="sec-head"><h2>Accounts</h2><span class="note">Started 2026-10-29 · kill rule: −25% from peak or 15 consecutive losses</span></div>
+    <div class="sec-head"><h2>Accounts</h2><span class="note">Daily core from 2026-10-29 · 4H layer rules v2 from 2026-11-04 · kill rule: −25% from peak or 15 consecutive losses</span></div>
     <div class="kpis">
       <div class="kpi"><div class="label">Daily Core — Equity</div><div class="value" id="d1Equity">—</div><div class="sub" id="d1Sub">loading</div></div>
       <div class="kpi"><div class="label">4H Futures — Equity</div><div class="value" id="h4Equity">—</div><div class="sub" id="h4Sub">loading</div></div>
       <div class="kpi"><div class="label">Combined Exposure</div><div class="value" id="exposure">—</div><div class="sub" id="exposureSub">—</div></div>
       <div class="kpi"><div class="label">Backtest 2017–2026 (Daily, Shared)</div><div class="value">+100.2%</div><div class="sub">Max DD −19.7% · Exp +1.55R · PF 4.40 · n=69</div></div>
+      <div class="kpi"><div class="label">Backtest 2017–2026 (4H Futures, Dual Gate)</div><div class="value">+0.44R</div><div class="sub">Shared BTC+ETH · OOS +0.39R · max DD −15.2% · n=606</div></div>
     </div>
   </section>
 
   <section>
-    <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note">1D context · 4H trigger · 1H warning — closed candles only</span></div>
+    <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note" id="nextClose">closed candles only</span></div>
     <div class="coins" id="coinCards"><div class="empty">Loading market state…</div></div>
   </section>
 
@@ -135,7 +144,7 @@
 
 <footer>
   <div class="foot-in">
-    <span>Donchian 55/20 trend system · 2.5×ATR stop · 0.75% risk per trade · BTC/ETH only</span>
+    <span>1D Donchian 55/20 core · 4H Donchian 20/10 futures with dual daily gate · 2.5×ATR stop · 0.75% risk per trade · BTC/ETH only</span>
     <span>Validation: <a href="https://github.com/jaybird0492-rgb/market-dashboard/blob/main/analysis/V2_VALIDATION.md" target="_blank" rel="noopener">methodology &amp; results</a> · Paper only — no real orders</span>
   </div>
 </footer>
@@ -144,13 +153,27 @@
 const $ = id => document.getElementById(id);
 const fmt$ = (v, dec = 0) => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
 const cls = v => v >= 0 ? 'pos' : 'neg';
-let D1 = null, H4 = null, SIG = null;
+let D1 = null, H4 = null, SIG = null, OPEN = [];
+const LIVE = {}; // coin -> last browser-fetched perp price (display only)
+
+function qtyOf(p) {
+  if (p.notionalUsd && p.entry) return p.notionalUsd / p.entry;
+  if (p.stop && p.entry && p.stop !== p.entry) return 75 / Math.abs(p.entry - p.stop);
+  return null;
+}
+function unrealOf(p) {
+  const px = LIVE[p.sym];
+  const qty = qtyOf(p);
+  if (!px || !qty) return p.unrealUsd;
+  return qty * (px - p.entry) * (p.side === 'LONG' ? 1 : -1);
+}
 
 function renderAccounts() {
   const fill = (eqId, subId, d) => {
     if (!d) { $(subId).textContent = 'data unavailable'; return; }
-    $(eqId).textContent = fmt$(d.equity);
-    $(eqId).className = 'value ' + (d.equity >= d.startEquity ? 'pos' : 'neg');
+    const liveEq = (d.realizedEquity !== undefined) ? d.realizedEquity + d.open.reduce((a, p) => a + unrealOf(p), 0) : d.equity;
+    $(eqId).textContent = fmt$(liveEq);
+    $(eqId).className = 'value ' + (liveEq >= d.startEquity ? 'pos' : 'neg');
     $(subId).innerHTML = 'Started ' + fmt$(d.startEquity) + ' · DD ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open / ' + d.stats.closed + ' closed' +
       (d.halted ? ' · <span class="neg"><b>HALTED</b></span>' : '');
   };
@@ -159,19 +182,33 @@ function renderAccounts() {
   const open = [];
   if (D1) open.push(...D1.open.map(p => ({ ...p, layer: 'Daily' })));
   if (H4) open.push(...H4.open.map(p => ({ ...p, layer: '4H Fut' })));
-  const unreal = open.reduce((a, p) => a + p.unrealUsd, 0);
-  $('exposure').textContent = open.length ? open.length + (open.length === 1 ? ' position' : ' positions') : 'Flat';
+  const pending = [];
+  if (D1) pending.push(...(D1.pending || []).map(p => ({ ...p, layer: 'Daily' })));
+  if (H4) pending.push(...(H4.pending || []).map(p => ({ ...p, layer: '4H Fut' })));
+  const unreal = open.reduce((a, p) => a + unrealOf(p), 0);
+  $('exposure').textContent = open.length ? open.length + (open.length === 1 ? ' position' : ' positions') : pending.length ? pending.length + ' pending' : 'Flat';
   $('exposureSub').innerHTML = open.length
     ? open.map(p => p.sym + ' ' + p.side).join(' · ') + ' · unrealized <span class="' + cls(unreal) + '">' + fmt$(unreal, 2) + '</span>'
-    : 'No open risk';
+    : pending.length
+      ? 'Signalled: ' + pending.map(p => p.sym + ' ' + p.side).join(' · ') + ' · fills at next bar open'
+      : 'No open risk';
   return open;
 }
 
 function renderPositions(open) {
-  $('openCount').textContent = open.length ? open.length + ' open' : '';
-  $('openPositions').innerHTML = open.length
-    ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Entry</th><th>Stop</th><th>Mark</th><th>Unrealized</th><th>Opened</th></tr>' +
-      open.map(p => `<tr><td>${p.layer}</td><td><b>${p.sym}</b></td><td class="${p.side === 'LONG' ? 'pos' : 'neg'}">${p.side}</td><td>${fmt$(p.entry, 2)}</td><td>${fmt$(p.stop, 2)}</td><td>${fmt$(p.mark, 2)}</td><td class="${cls(p.unrealUsd)}">${fmt$(p.unrealUsd, 2)}</td><td>${p.openedAt.slice(0, 10)}</td></tr>`).join('') + '</table>'
+  const pending = [];
+  if (D1) pending.push(...(D1.pending || []).map(p => ({ ...p, layer: 'Daily' })));
+  if (H4) pending.push(...(H4.pending || []).map(p => ({ ...p, layer: '4H Fut' })));
+  $('openCount').textContent = (open.length ? open.length + ' open' : '') + (pending.length ? (open.length ? ' · ' : '') + pending.length + ' pending' : '');
+  $('openPositions').innerHTML = (open.length || pending.length)
+    ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Entry</th><th>Stop</th><th>Mark</th><th>Unrealized</th><th>Opened / Signal</th></tr>' +
+      open.map(p => {
+        const mark = LIVE[p.sym] || p.mark;
+        const unreal = unrealOf(p);
+        const liveTag = LIVE[p.sym] ? ' <span style="font-size:10px;color:var(--green)">LIVE</span>' : '';
+        return `<tr><td>${p.layer}</td><td><b>${p.sym}</b></td><td class="${p.side === 'LONG' ? 'pos' : 'neg'}">${p.side}</td><td>${fmt$(p.entry, 2)}</td><td>${fmt$(p.stop, 2)}</td><td>${fmt$(mark, 2)}${liveTag}</td><td class="${cls(unreal)}">${fmt$(unreal, 2)}</td><td>${p.openedAt.slice(0, 10)}</td></tr>`;
+      }).join('') +
+      pending.map(p => `<tr><td>${p.layer}</td><td><b>${p.sym}</b></td><td class="${p.side === 'LONG' ? 'pos' : 'neg'}">${p.side} <span style="font-size:10px;color:var(--faint)">PENDING</span></td><td>next bar open</td><td>—</td><td>—</td><td>—</td><td>${new Date(p.signalAt).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</td></tr>`).join('') + '</table>'
     : '<div class="empty">No open positions — both accounts in cash.</div>';
   const closed = [];
   if (D1) closed.push(...D1.closed.map(t => ({ ...t, layer: 'Daily' })));
@@ -181,7 +218,18 @@ function renderPositions(open) {
   $('closedTrades').innerHTML = closed.length
     ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Opened</th><th>Closed</th><th>P&amp;L</th><th>R</th><th>Exit</th></tr>' +
       closed.map(t => `<tr><td>${t.layer}</td><td><b>${t.sym}</b></td><td class="${t.side === 'LONG' ? 'pos' : 'neg'}">${t.side}</td><td>${t.openedAt.slice(0, 10)}</td><td>${t.closedAt.slice(0, 10)}</td><td class="${cls(t.pnlUsd)}">${fmt$(t.pnlUsd, 2)}</td><td>${t.r}</td><td>${t.reason}</td></tr>`).join('') + '</table>'
-    : '<div class="empty">No closed trades yet.</div>';
+    : '<div class="empty">No closed trades yet. The 4H layer restarted on 2026-11-04 with the dual-gate rules; its retired F3 account (2 trades, −0.80R combined) is recorded in the validation log.</div>';
+}
+
+function timeUntil(ms) {
+  if (!Number.isFinite(ms)) return '—';
+  if (ms <= 0) return 'now';
+  const h = Math.floor(ms / 36e5), m = Math.round((ms % 36e5) / 6e4);
+  return (h ? h + 'h ' : '') + m + 'm';
+}
+function next4hTxt() {
+  const next = Math.ceil(Date.now() / 144e5) * 144e5;
+  return timeUntil(next - Date.now());
 }
 
 function renderCoins() {
@@ -191,27 +239,57 @@ function renderCoins() {
     const regime = x.regime === 'TREND UP' ? ['r-up', 'Trend Up'] : x.regime === 'TREND DOWN' ? ['r-dn', 'Trend Down'] : ['r-tr', 'Transition'];
     const warnCls = { BREAKOUT: 'w-break', FAKEOUT: 'w-fake', APPROACHING: 'w-appr', QUIET: 'w-quiet' }[w.state] || 'w-quiet';
     const inTrade = (H4 && H4.open.find(p => p.sym === c.sym)) || (D1 && D1.open.find(p => p.sym === c.sym));
-    const allowLong = x.regime === 'TREND UP', allowShort = x.regime === 'TREND DOWN';
+    const allowLong = !!s.longAllowed, allowShort = !!s.shortAllowed;
+    const gateBoth = allowLong && allowShort;
+    const gateLabel = gateBoth ? 'BOTH sides' : allowLong ? 'LONG only' : allowShort ? 'SHORT only' : 'NONE';
+    const gateCls = gateBoth ? 'gate-both' : (allowLong || allowShort) ? 'gate-one' : 'gate-none';
+    const dailyTxt = s.gateAllows === 'BOTH' ? 'both sides open (price between SMA50 and SMA200)'
+      : s.gateAllows === 'LONG' ? 'longs only (close above SMA50)'
+        : s.gateAllows === 'SHORT' ? 'shorts only (close below SMA200)' : 'no side open';
+    const livePx = (c.series1h && c.series1h.length) ? c.series1h[c.series1h.length - 1] : x.price;
+
     let verdict, vcls;
-    if (inTrade) { verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · <span class="${cls(inTrade.unrealUsd)}">${fmt$(inTrade.unrealUsd, 2)}</span>`; vcls = 'trade'; }
-    else if (w.state === 'BREAKOUT') { verdict = `<b>Awaiting 4H confirmation.</b> 1H ${w.dir === 1 ? 'breakout' : 'breakdown'} in progress — trade fires on a 4H close beyond ${fmt$(w.dir === 1 ? s.longTrigger : s.shortTrigger, 2)} if context permits.`; vcls = 'wait'; }
-    else if (!allowLong && !allowShort) { verdict = `<b>No trade.</b> Daily context in transition — both directions blocked.`; vcls = 'wait'; }
-    else {
-      const next = allowLong ? `long above ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%)` : `short below ${fmt$(s.shortTrigger, 2)} (${s.pctToShort}% away)`;
-      const blocked = allowLong ? s.shortTrigger : s.longTrigger;
-      verdict = `<b>No trade.</b> Next: ${next}. Opposite trigger ${fmt$(blocked, 2)} blocked by daily context.`; vcls = 'wait';
+    if (inTrade) {
+      verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · <span class="${cls(inTrade.unrealUsd)}">${fmt$(inTrade.unrealUsd, 2)}</span>`;
+      vcls = 'trade';
+    } else {
+      const longLine = `Long: 4H close &gt; ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%) — entry rule <b class="${allowLong ? 'pos' : 'neg'}">${allowLong ? 'open' : 'blocked'}</b>`;
+      const shortLine = `Short: 4H close &lt; ${fmt$(s.shortTrigger, 2)} (${s.pctToShort}% lower) — entry rule <b class="${allowShort ? 'pos' : 'neg'}">${allowShort ? 'open' : 'blocked'}</b>`;
+      if (w.state === 'BREAKOUT') {
+        const dir = w.dir, trig = dir === 1 ? s.longTrigger : s.shortTrigger;
+        const ok = dir === 1 ? allowLong : allowShort;
+        const blockers = dir === 1
+          ? [!s.dailyLong ? 'daily gate' : null, !s.nativeLong ? `4H SMA200 filter (${fmt$(s.sma200_4h, 0)} is ${s.pctTo4hSma200}% above price)` : null].filter(Boolean).join(' + ')
+          : [!s.dailyShort ? 'daily gate' : null, !s.nativeShort ? `4H SMA200 filter (${fmt$(s.sma200_4h, 0)} is ${Math.abs(s.pctTo4hSma200)}% below price)` : null].filter(Boolean).join(' + ');
+        const head = ok
+          ? `<b>${dir === 1 ? 'Long' : 'Short'} setup building.</b> 1H ${dir === 1 ? 'broke above' : 'broke below'} its 20-bar range; the trade fires only if the current 4H candle closes ${dir === 1 ? 'above' : 'below'} ${fmt$(trig, 2)}. `
+          : `<b>1H ${dir === 1 ? 'breakout' : 'breakdown'} cannot become a trade — blocked by the ${blockers}.</b> The 1H move is real, but the 4H entry rule still says no. `;
+        verdict = head + longLine + ' · ' + shortLine + `. Next 4H close in ${next4hTxt()}.`;
+        vcls = ok ? 'wait' : 'blocked';
+      } else {
+        verdict = `<b>No trade yet — waiting for a 4H close.</b> ${longLine} · ${shortLine}. Nothing fires mid-candle; next decision in ${next4hTxt()}.`;
+        vcls = 'wait';
+      }
     }
+
+    const lb = s.lastBreakout;
+    const lbHtml = lb
+      ? `Last 4H breakout: <b class="${lb.allowed ? 'pos' : 'neg'}">${lb.dir} ${lb.allowed ? 'allowed' : 'BLOCKED by ' + (lb.blockedBy || 'rule')}</b> · ${new Date(lb.at).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}`
+      : 'Last 4H breakout: none in the last 24h.';
+
     return `<div class="coin">
-      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px">${fmt$(x.price, 2)}</span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
+      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px" id="livePx-${c.sym}">${fmt$(livePx, 2)} <span style="font-size:10px;color:var(--faint)">1H close</span></span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
       <canvas class="spark" id="spark-${c.sym}" height="44"></canvas>
       <div class="signal-grid">
-        <div class="sig-cell"><div class="tag">1D Context</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span style="color:var(--muted)">${allowLong ? 'Longs permitted' : allowShort ? 'Shorts permitted' : 'Trading blocked'}</span></div></div>
-        <div class="sig-cell"><div class="tag">4H Gate (Daily SMA50)</div><div class="sig-val"><span class="${s.gateAllows === 'LONG' ? 'pos' : 'neg'}"><b>${s.gateAllows} side open</b></span><br><span style="color:var(--muted)">Fast gate — flips days/weeks before SMA200</span></div></div>
-        <div class="sig-cell"><div class="tag">1H Warning</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span style="color:var(--muted)">${w.stats180d.ratePct}% confirm rate (180d)</span></div></div>
-        <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span style="color:var(--muted)">+${s.pctToLong}%</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
-        <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span style="color:var(--muted)">${s.pctToShort}% away</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+        <div class="sig-cell"><div class="tag">1D Regime (daily close)</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span style="color:var(--muted)">close ${fmt$(x.price, 2)} · ${x.asOf}</span></div></div>
+        <div class="sig-cell"><div class="tag">4H Trade Gate</div><div class="sig-val"><span class="gate-tag ${gateCls}">${gateLabel} effective</span><br><span style="color:var(--muted)">Daily: ${dailyTxt} · 4H trend: price ${s.nativeLong ? 'above' : 'below'} SMA200 ${fmt$(s.sma200_4h, 0)}</span></div></div>
+        <div class="sig-cell"><div class="tag">1H Warning (never trades)</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span style="color:var(--muted)">${w.stats180d.ratePct}% confirm rate (180d)</span><br><span style="color:var(--muted)">${w.detail}</span></div></div>
+        <div class="sig-cell"><div class="tag">1D Trend Triggers (slow core)</div><div class="sig-val"><span class="num">${fmt$(x.longTrigger, 2)}</span> long · <span class="num">${fmt$(x.shortTrigger, 2)}</span> short<br><span style="color:var(--muted)">55-day Donchian, needs a daily close</span></div></div>
+        <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span style="color:var(--muted)">+${s.pctToLong}% from last 4H close</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+        <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span style="color:var(--muted)">${s.pctToShort}% lower</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
       </div>
-      <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop distance ${s.stopDistPct}% (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
+      <div class="break-line">${lbHtml}</div>
+      <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop ${s.stopDistPct}% away (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
       <div class="verdict ${vcls}"><span class="dot"></span><span>${verdict}</span></div>
     </div>`;
   }).join('');
@@ -254,6 +332,37 @@ function renderMarket(ev) {
     : '<div class="empty">No headlines fetched.</div>') + '</div>';
 }
 
+async function getPx(sym) {
+  try {
+    const j = await (await fetch(`https://api.bybit.com/v5/market/tickers?category=linear&symbol=${sym}USDT`)).json();
+    const p = +j.result.list[0].lastPrice;
+    if (p) return p;
+  } catch (e) { /* next source */ }
+  try {
+    const j = await (await fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${sym}USDT`)).json();
+    const p = +j.price;
+    if (p) return p;
+  } catch (e) { /* next source */ }
+  try {
+    const j = await (await fetch(`https://api.exchange.coinbase.com/products/${sym}-USD/stats`)).json();
+    const p = +j.last;
+    if (p) return p;
+  } catch (e) { /* give up quietly */ }
+  return null;
+}
+async function refreshLive() {
+  const [b, e] = await Promise.all([getPx('BTC'), getPx('ETH')]);
+  if (b) LIVE.BTC = b;
+  if (e) LIVE.ETH = e;
+  if (!SIG) return;
+  for (const c of SIG.coins) {
+    const el = $('livePx-' + c.sym);
+    if (el && LIVE[c.sym]) el.innerHTML = fmt$(LIVE[c.sym], 2) + ' <span style="font-size:10px;color:var(--faint)">live</span>';
+  }
+  OPEN = renderAccounts();
+  renderPositions(OPEN);
+}
+
 Promise.all([
   fetch('data/v2.json').then(r => r.json()).catch(() => null),
   fetch('data/v2_4h.json').then(r => r.json()).catch(() => null),
@@ -261,14 +370,24 @@ Promise.all([
   fetch('data/events.json').then(r => r.json()).catch(() => null),
 ]).then(([d1, h4, sig, ev]) => {
   D1 = d1; H4 = h4; SIG = sig;
-  if (!d1 && !h4 && !sig) $('feedStatus').textContent = 'Feed Error';
   const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt);
-  $('updatedAt').textContent = upd ? 'Updated ' + new Date(upd).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+  const ageMin = upd ? (Date.now() - Date.parse(upd)) / 6e4 : null;
+  const stale = ageMin !== null && ageMin > 120;
+  $('updatedAt').innerHTML = upd
+    ? 'Updated ' + new Date(upd).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) + (stale ? ` <span class="neg">(${(ageMin / 60).toFixed(1)}h old)</span>` : '')
+    : '—';
+  $('feedStatus').textContent = (!d1 && !h4 && !sig) ? 'Feed Error' : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
+  $('feedStatus').className = 'pill ' + ((!d1 && !h4 && !sig) || stale ? 'pill-stale' : 'pill-live');
+  const tick = () => { $('nextClose').textContent = 'closed candles only · next 4H close in ' + next4hTxt(); };
+  tick(); setInterval(tick, 30000);
   const open = renderAccounts();
-  renderPositions(open);
+  OPEN = open;
+  renderPositions(OPEN);
   renderCoins();
   renderMarket(ev);
   drawSparks();
+  refreshLive();
+  setInterval(refreshLive, 60000);
 });
 </script>
 </body>

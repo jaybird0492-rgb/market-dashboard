@@ -2,7 +2,7 @@
 
 Read this file first. It restores full project context in one pass.
 
-## Current state (2026-10-29) — v1 DELETED, v2 in research
+## Current state (2026-11-04) — v1 DELETED, v2 in paper trading
 - v1 (multi-factor score engine, 6 coins × 1H/4H/1D, paper bot) FAILED its
   readiness exam (paper −$939.74/113 trades, BTC+ETH 1D October win rate 0%,
   verdict STOP) and was **deleted entirely**: strategy/setups/paper/autopsy/
@@ -34,15 +34,21 @@ Read this file first. It restores full project context in one pass.
   shared account LS +100.2%, maxDD −19.7%, n=69, exTop3 +0.39. Sizing kept
   at the tested 0.75% risk/trade — do not raise it casually.
 - **Paper bots LIVE since 2026-10-29**: daily core (`scripts/v2_paper.js`)
-  + 4H futures layer (`scripts/v2_paper4h.js`; rules upgraded 2026-10-30 to
-  F3 = Donchian 20/10 + daily SMA50 gate per `scripts/v2_fast.js`, simulated
-  perps/funding), both replay-derived from PAPER_START, shared $10k each,
-  BTC+ETH. State: `data/v2/*_state.json`; public: `web/data/v2.json`,
+  + 4H futures layer (`scripts/v2_paper4h.js`; rules reset 2026-11-04 to
+  Donchian 20/10 + **dual daily gate** = longs above daily SMA50, shorts
+  below daily SMA200, both sides open in the band between the averages
+  (plus the native 4H SMA200 filter inside the entry rule; evidence in
+  `scripts/v2_gates.js`, portfolio maxDD −15.2% shared-account), both
+  replay-derived from their start dates, shared
+  $10k each, BTC+ETH. State: `data/v2/*_state.json`; public: `web/data/v2.json`,
   `web/data/v2_4h.json`, `web/data/signals.json`, `web/data/events.json`
   (Fear&Greed, funding/OI, severity-tagged headlines, 1H shock detector —
-  context only, never trade triggers). Workflow every 30 min UTC:
-  fetch -> both papers -> signals -> events -> commit -> deploy.
+  context only, never trade triggers). Workflow attempts every 15 min UTC
+  (GitHub throttles to ~4-5/day): fetch -> both papers -> signals -> events
+  -> commit -> deploy. The dashboard shows data age and warns above 2h.
   Kill rule (both): DD from peak > 25% or 15 consecutive losers → halt + review.
+  Retired F3 record (2026-10-30..11-02): 2 trades, -0.80R combined; 4H paper
+  clock restarted 2026-11-04T16:00Z. Earliest real-money review mid-Dec 2026.
 - **Verdict: NOT approved for real money.** Remaining: paper review after
   4–6 weeks (execution fidelity vs backtest), then a fresh real-money
   decision. Nothing about the paper run auto-approves real trading.
