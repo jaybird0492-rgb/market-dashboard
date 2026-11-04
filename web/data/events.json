@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T17:40:37.008Z",
+  "updatedAt": "2026-11-04T22:52:45.999Z",
   "fearGreed": {
     "value": 34,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 80185,
-      "chg24hPct": 3.28,
+      "price": 80732,
+      "chg24hPct": 3.8,
       "high24h": 81102,
       "low24h": 75624,
-      "fundingPct": -0.0003,
-      "openInterest": 2325.3571,
+      "fundingPct": 0.0007,
+      "openInterest": 2333.1997,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2417.5,
-      "chg24hPct": 5.38,
+      "price": 2436.6,
+      "chg24hPct": 6.35,
       "high24h": 2448.5,
       "low24h": 2223,
-      "fundingPct": -0.0016,
-      "openInterest": 27083.097,
+      "fundingPct": -0.0001,
+      "openInterest": 27322.162,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "BitMart founder says security team ‘severely understaffed’ after new hack",
+      "link": "https://cointelegraph.com/news/bitmart-hack-security-staffing-crypto-exchange-restructuring?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T22:31:58.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "THORChain's RUNE jumps 10% as North Korean hackers resume laundering Binance loot",
@@ -57,16 +64,16 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin hits $80.5K as US stocks rally on midterm election results",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T15:29:23.000Z",
+      "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
+      "link": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T18:47:56.000Z",
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin and stocks post big gains, reversing overnight plunge following Blue Wave landslide",
-      "link": "https://www.coindesk.com/tech/2026/11/04/live-updates-bitcoin-and-stocks-reverse-overnight-plunge-following-blue-wave-landslide",
-      "publishedAt": "2026-11-04T14:00:53.000Z",
+      "source": "Cointelegraph",
+      "title": "Bitcoin hits $80.5K as US stocks rally on midterm election results",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T15:29:23.000Z",
       "severity": "HIGH"
     },
     {
@@ -92,37 +99,30 @@
     },
     {
       "source": "CoinDesk",
-      "title": "U.S. Democratic sweep could be the final nail in the ‘Clarity Act’s coffin’",
-      "link": "https://www.coindesk.com/policy/2026/11/04/u-s-democratic-sweep-could-be-the-final-nail-in-the-clarity-act-s-coffin",
-      "publishedAt": "2026-11-04T16:11:29.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Wall Street rethinks AI data center boom as Texas election raises new risks",
-      "link": "https://www.coindesk.com/markets/2026/11/04/wall-street-cuts-bitcoin-miner-price-targets-after-democrats-texas-win-threatens-ai-data-center-boom",
-      "publishedAt": "2026-11-04T16:08:14.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Crypto Long & Short: ICE is betting on retail’s appetite for quick outcomes",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/11/04/crypto-long-and-short-ice-is-betting-on-retail-s-appetite-for-quick-outcomes",
-      "publishedAt": "2026-11-04T15:27:20.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "The election changes Washington. The work on crypto continues",
-      "link": "https://www.coindesk.com/opinion/2026/11/04/the-election-changes-washington-the-work-on-crypto-continues",
-      "publishedAt": "2026-11-04T14:25:12.000Z",
+      "title": "Crypto's Washington hopes fade, but Grayscale and BlackRock see growth ahead",
+      "link": "https://www.coindesk.com/business/2026/11/04/crypto-s-washington-hopes-fade-but-grayscale-and-blackrock-see-growth-ahead",
+      "publishedAt": "2026-11-04T22:51:42.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T13:47:43.000Z",
+      "title": "Crypto PACs eye 2028 “new map” as Democrats take Congress",
+      "link": "https://cointelegraph.com/news/crypto-superpac-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T22:17:33.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "How Aussie Bitcoiners can avoid 2027’s shock CGT hike: Part 1",
+      "link": "https://cointelegraph.com/magazine/how-aussie-bitcoiners-can-avoid-2027s-shock-cgt-increase-part-1?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T21:30:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Crypto's powerhouse super PAC, Fairshake, found its kryptonite",
+      "link": "https://www.coindesk.com/news-analysis/2026/11/04/crypto-s-powerhouse-super-pac-fairshake-found-its-kryptonite",
+      "publishedAt": "2026-11-04T20:29:12.000Z",
       "severity": "NORMAL"
     }
   ],
