@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T22:44:21.218Z",
+  "updatedAt": "2026-11-04T02:44:41.964Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
@@ -10,28 +10,28 @@
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
   "lastClose": {
-    "BTC": 76816,
-    "ETH": 2253.29
+    "BTC": 77453.86,
+    "ETH": 2274.77
   },
   "watch": {
     "BTC": {
-      "price": 76816,
-      "asOf": "2026-11-02",
+      "price": 77453.86,
+      "asOf": "2026-11-03",
       "aboveSma200": true,
       "longTrigger": 87395.67,
-      "pctToLong": 13.77,
+      "pctToLong": 12.84,
       "shortTrigger": 74967.97,
-      "pctToShort": 2.47,
+      "pctToShort": 3.32,
       "wouldHold": null
     },
     "ETH": {
-      "price": 2253.29,
-      "asOf": "2026-11-02",
+      "price": 2274.77,
+      "asOf": "2026-11-03",
       "aboveSma200": true,
       "longTrigger": 2807.34,
-      "pctToLong": 24.59,
+      "pctToLong": 23.41,
       "shortTrigger": 2174.08,
-      "pctToShort": 3.64,
+      "pctToShort": 4.63,
       "wouldHold": null
     }
   },
@@ -49,7 +49,7 @@
     "totalRetPct": 99.4,
     "maxDDPct": -19.7,
     "oosExpR": 0.62,
-    "buyHoldRetPct": 367.9,
+    "buyHoldRetPct": 371.9,
     "buyHoldDDPct": -81.1
   }
 }

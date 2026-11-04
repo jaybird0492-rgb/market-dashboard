@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-03T22:44:21.410Z",
+  "updatedAt": "2026-11-04T02:44:42.134Z",
   "fearGreed": {
-    "value": 26,
+    "value": 34,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 77729,
-      "chg24hPct": 1.33,
+      "price": 76565,
+      "chg24hPct": -0.33,
       "high24h": 77985,
       "low24h": 76251,
-      "fundingPct": 0.0009,
-      "openInterest": 2502.7249,
+      "fundingPct": 0.0013,
+      "openInterest": 2590.1052,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2290.4,
-      "chg24hPct": 1.89,
+      "price": 2253.5,
+      "chg24hPct": -0.12,
       "high24h": 2307.1,
       "low24h": 2237.6,
-      "fundingPct": 0.0004,
-      "openInterest": 30425.286,
+      "fundingPct": 0.0008,
+      "openInterest": 30621.018,
       "src": "Kraken perp"
     }
   ],
@@ -91,13 +91,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Arbitrum’s council moved $30 million of Binance hack funds without the hacker’s key",
-      "link": "https://www.coindesk.com/tech/2026/11/03/arbitrum-s-council-moved-usd30-million-of-binance-hack-funds-without-the-hacker-s-key",
-      "publishedAt": "2026-11-03T05:25:12.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "South Korea urges exchanges to boost cold storage after Binance hack",
       "link": "https://cointelegraph.com/news/south-korea-urges-exchanges-to-boost-cold-storage-after-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -112,21 +105,44 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Mercado Bitcoin wallets show post-hack transfers after $46M theft",
-      "link": "https://cointelegraph.com/news/mercado-bitcoin-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-02T19:05:35.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
       "title": "Bitcoin’s latest chart signal looks a lot like the ones before its big crashes",
       "link": "https://www.coindesk.com/markets/2026/11/03/bitcoin-s-price-chart-is-flashing-a-red-signal",
       "publishedAt": "2026-11-03T08:50:56.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin risks drop below $76K as 7% oil slide fails to spark BTC price rally",
+      "link": "https://cointelegraph.com/markets/bitcoin-risks-sub-76k-drop-as-7-fall-in-oil-fails-to-spark-btc-price-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-02T19:27:58.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "US midterms election 2026 live: Crypto-backed Andy Barr wins Kentucky Senate seat",
+      "link": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T02:20:00.000Z",
+      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-03T23:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.54,
+      "vsAvgMove": 2.8,
+      "volumeSpike": 0.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-03T23:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.8,
+      "vsAvgMove": 3.7,
+      "volumeSpike": 0.6
+    },
     {
       "sym": "ETH",
       "at": "2026-11-03T12:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": -0.8,
       "vsAvgMove": 3.2,
       "volumeSpike": 1.6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-02T04:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.7,
-      "vsAvgMove": 3.3,
-      "volumeSpike": 1.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-02T03:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.59,
-      "vsAvgMove": 3,
-      "volumeSpike": 3.3
     }
   ],
   "errors": []
