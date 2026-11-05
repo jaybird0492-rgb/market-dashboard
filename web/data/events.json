@@ -1,32 +1,39 @@
 {
-  "updatedAt": "2026-11-04T22:52:45.999Z",
+  "updatedAt": "2026-11-05T02:59:20.351Z",
   "fearGreed": {
-    "value": 34,
-    "label": "Fear"
+    "value": 50,
+    "label": "Neutral"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 80732,
-      "chg24hPct": 3.8,
+      "price": 80517,
+      "chg24hPct": 5.6,
       "high24h": 81102,
       "low24h": 75624,
-      "fundingPct": 0.0007,
-      "openInterest": 2333.1997,
+      "fundingPct": 0.0018,
+      "openInterest": 2537.9307,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2436.6,
-      "chg24hPct": 6.35,
+      "price": 2427.8,
+      "chg24hPct": 8.06,
       "high24h": 2448.5,
       "low24h": 2223,
-      "fundingPct": -0.0001,
-      "openInterest": 27322.162,
+      "fundingPct": 0.0018,
+      "openInterest": 31012.298,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "India warns AI-powered hackers targeting crypto exchanges at ‘machine speed’",
+      "link": "https://cointelegraph.com/news/india-warns-ai-powered-hackers-targeting-crypto-exchanges-at-machine-speed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T01:51:21.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "BitMart founder says security team ‘severely understaffed’ after new hack",
@@ -98,31 +105,24 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Crypto's Washington hopes fade, but Grayscale and BlackRock see growth ahead",
-      "link": "https://www.coindesk.com/business/2026/11/04/crypto-s-washington-hopes-fade-but-grayscale-and-blackrock-see-growth-ahead",
-      "publishedAt": "2026-11-04T22:51:42.000Z",
-      "severity": "NORMAL"
-    },
-    {
       "source": "Cointelegraph",
-      "title": "Crypto PACs eye 2028 “new map” as Democrats take Congress",
-      "link": "https://cointelegraph.com/news/crypto-superpac-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T22:17:33.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "How Aussie Bitcoiners can avoid 2027’s shock CGT hike: Part 1",
-      "link": "https://cointelegraph.com/magazine/how-aussie-bitcoiners-can-avoid-2027s-shock-cgt-increase-part-1?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T21:30:00.000Z",
+      "title": "Mercado Bitcoin says phased reopening to begin Monday, will cover losses",
+      "link": "https://cointelegraph.com/news/mercado-bitcoin-phased-reopening-to-begin-monday-pledges-to-cover-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T23:20:17.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Crypto's powerhouse super PAC, Fairshake, found its kryptonite",
-      "link": "https://www.coindesk.com/news-analysis/2026/11/04/crypto-s-powerhouse-super-pac-fairshake-found-its-kryptonite",
-      "publishedAt": "2026-11-04T20:29:12.000Z",
+      "title": "Tokenization and stablecoins may weather Democrats' sweep as broader crypto rules face uncertainty",
+      "link": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
+      "publishedAt": "2026-11-04T22:55:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-04T22:54:23.000Z",
       "severity": "NORMAL"
     }
   ],
