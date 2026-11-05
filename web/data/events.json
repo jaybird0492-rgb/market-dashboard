@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T02:59:20.351Z",
+  "updatedAt": "2026-11-05T10:30:50.462Z",
   "fearGreed": {
     "value": 50,
     "label": "Neutral"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 80517,
-      "chg24hPct": 5.6,
+      "price": 80455,
+      "chg24hPct": 2.55,
       "high24h": 81102,
-      "low24h": 75624,
-      "fundingPct": 0.0018,
-      "openInterest": 2537.9307,
+      "low24h": 77888,
+      "fundingPct": 0.0043,
+      "openInterest": 2539.3001,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2427.8,
-      "chg24hPct": 8.06,
+      "price": 2419,
+      "chg24hPct": 4.04,
       "high24h": 2448.5,
-      "low24h": 2223,
-      "fundingPct": 0.0018,
-      "openInterest": 31012.298,
+      "low24h": 2307.4,
+      "fundingPct": 0.0042,
+      "openInterest": 31210.748,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto",
+      "link": "https://cointelegraph.com/news/polygon-hard-fork-binance-polymarket-6-8m-hack-recovery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T06:02:29.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "The pile of lawsuits against Kalshi just grew by one",
+      "link": "https://www.coindesk.com/policy/2026/11/05/the-pile-of-lawsuits-against-kalshi-just-grew-by-one",
+      "publishedAt": "2026-11-05T05:28:52.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "India warns AI-powered hackers targeting crypto exchanges at ‘machine speed’",
@@ -64,13 +78,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance traces $6.3B hack to fake job interviews, compromised AI tool",
-      "link": "https://cointelegraph.com/news/binance-fake-job-interviews-compromised-ai-tool-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-03T16:44:06.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
       "link": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-04T18:47:56.000Z",
@@ -85,44 +92,37 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Jack Dorsey's Block faces $764 million DOJ settlement as bitcoin profit plunges 50%",
-      "link": "https://www.coindesk.com/markets/2026/11/04/jack-dorsey-s-block-faces-usd764-million-doj-settlement-as-bitcoin-profit-plunges-50",
-      "publishedAt": "2026-11-04T06:06:04.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Democrats surge toward Senate, House majorities, with crypto braced for new direction",
-      "link": "https://www.coindesk.com/policy/2026/11/03/democrats-surge-toward-senate-house-majorities-with-crypto-braced-for-new-direction",
-      "publishedAt": "2026-11-04T04:55:11.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin and stocks reverse overnight plunge following Blue Wave landslide",
-      "link": "https://www.coindesk.com/tech/2026/11/03/election-2026-coindesk-live-blog",
-      "publishedAt": "2026-11-04T00:00:00.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Mercado Bitcoin says phased reopening to begin Monday, will cover losses",
-      "link": "https://cointelegraph.com/news/mercado-bitcoin-phased-reopening-to-begin-monday-pledges-to-cover-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T23:20:17.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Tokenization and stablecoins may weather Democrats' sweep as broader crypto rules face uncertainty",
-      "link": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
-      "publishedAt": "2026-11-04T22:55:00.000Z",
+      "title": "Bitcoin miner Riot could pay Anthropic 12% interest under $28 billion AI deal",
+      "link": "https://www.coindesk.com/tech/2026/11/05/bitcoin-miner-riot-could-pay-anthropic-12-interest-under-usd28-billion-ai-deal",
+      "publishedAt": "2026-11-05T09:36:32.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T22:54:23.000Z",
+      "title": "South Korea seeks 4th crypto tax delay, targets 2029 start",
+      "link": "https://cointelegraph.com/news/south-korea-crypto-tax-fourth-delay-2029?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T09:35:29.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "France budget rejection sidelines stablecoin tax, wallet reporting",
+      "link": "https://cointelegraph.com/news/france-rejects-budget-revenue-sidelines-crypto-amendments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T09:04:42.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Hong Kong passes law requiring crypto exchanges to report customer transactions to tax authorities",
+      "link": "https://www.coindesk.com/policy/2026/11/04/hong-kong-passes-law-requiring-crypto-exchanges-to-report-customer-transactions-to-tax-authorities",
+      "publishedAt": "2026-11-05T08:35:37.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "OpenAI says its AI can break into Linux at scale. Here's what it means for crypto",
+      "link": "https://www.coindesk.com/tech/2026/11/05/openai-says-its-ai-can-break-into-linux-at-scale-here-s-what-it-means-for-crypto",
+      "publishedAt": "2026-11-05T08:26:26.000Z",
       "severity": "NORMAL"
     }
   ],
