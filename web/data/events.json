@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T18:17:13.686Z",
+  "updatedAt": "2026-11-05T23:45:21.548Z",
   "fearGreed": {
     "value": 50,
     "label": "Neutral"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75880,
-      "chg24hPct": -5.82,
-      "high24h": 80899,
-      "low24h": 75465,
-      "fundingPct": 0.0043,
-      "openInterest": 3080.9717,
+      "price": 75960,
+      "chg24hPct": -5.79,
+      "high24h": 80861,
+      "low24h": 74986,
+      "fundingPct": 0.0022,
+      "openInterest": 2804.0267,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2249.8,
-      "chg24hPct": -7.51,
-      "high24h": 2442.7,
-      "low24h": 2232.7,
-      "fundingPct": 0.0008,
-      "openInterest": 33751.032,
+      "price": 2235.2,
+      "chg24hPct": -7.98,
+      "high24h": 2435.1,
+      "low24h": 2200.2,
+      "fundingPct": 0.0015,
+      "openInterest": 32943.461,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Asian crypto exchanges batten down the hatches as hacks surge: Asia Express",
+      "link": "https://cointelegraph.com/magazine/asian-crypto-exchanges-bunker-down-as-hacks-surge-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T22:18:42.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Fed, OCC check US banks after Binance hack as experts flag security risks",
+      "link": "https://cointelegraph.com/news/fed-occ-check-us-banks-binance-hack-security-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T18:32:45.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Paraguay president resigns after collapse of Ueno digital bank",
@@ -36,7 +50,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "What is TraderTraitor, the hacking squad behind the $6.3 billion Binance heist",
+      "title": "What is TraderTraitor, the hacking squad behind the $6.3 billion Binance heist?",
       "link": "https://www.coindesk.com/business/2026/11/05/what-is-tradertraitor-the-hacking-squad-behind-the-usd6-3-billion-binance-heist",
       "publishedAt": "2026-11-05T16:58:21.000Z",
       "severity": "CRITICAL"
@@ -84,24 +98,17 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says",
-      "link": "https://cointelegraph.com/markets/crypto-market-recovery-grayscale-binance-hack-temporary-setback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T11:11:57.000Z",
-      "severity": "CRITICAL"
+      "source": "CoinDesk",
+      "title": "Bitcion tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
+      "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
+      "publishedAt": "2026-11-05T18:48:40.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
       "title": "Bitcoin crashes 6% to 7-week low as US stocks erase election gains",
       "link": "https://cointelegraph.com/markets/bitcoin-price-crashes-7-week-low-stocks-election-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-05T16:48:41.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin plunges as Nasdaq falls 4% in panicky selloff",
-      "link": "https://www.coindesk.com/business/2026/11/05/live-updates-bitcoin-steady-around-usd80-000-as-markets-rally-after-democratic-sweep",
-      "publishedAt": "2026-11-05T10:57:11.000Z",
       "severity": "HIGH"
     },
     {
@@ -117,13 +124,6 @@
       "link": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-04T15:29:23.000Z",
       "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Europe’s largest asset manager Amundi tokenizes equity index fund on Ethereum",
-      "link": "https://cointelegraph.com/news/amundi-tokenizes-european-equity-index-fund-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T18:09:38.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
