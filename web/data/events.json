@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T10:30:50.462Z",
+  "updatedAt": "2026-11-05T18:17:13.686Z",
   "fearGreed": {
     "value": 50,
     "label": "Neutral"
@@ -7,26 +7,54 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 80455,
-      "chg24hPct": 2.55,
-      "high24h": 81102,
-      "low24h": 77888,
+      "price": 75880,
+      "chg24hPct": -5.82,
+      "high24h": 80899,
+      "low24h": 75465,
       "fundingPct": 0.0043,
-      "openInterest": 2539.3001,
+      "openInterest": 3080.9717,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2419,
-      "chg24hPct": 4.04,
-      "high24h": 2448.5,
-      "low24h": 2307.4,
-      "fundingPct": 0.0042,
-      "openInterest": 31210.748,
+      "price": 2249.8,
+      "chg24hPct": -7.51,
+      "high24h": 2442.7,
+      "low24h": 2232.7,
+      "fundingPct": 0.0008,
+      "openInterest": 33751.032,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Paraguay president resigns after collapse of Ueno digital bank",
+      "link": "https://cointelegraph.com/news/paraguay-president-resigns-after-collapse-ueno-digital-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T17:40:25.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "What is TraderTraitor, the hacking squad behind the $6.3 billion Binance heist",
+      "link": "https://www.coindesk.com/business/2026/11/05/what-is-tradertraitor-the-hacking-squad-behind-the-usd6-3-billion-binance-heist",
+      "publishedAt": "2026-11-05T16:58:21.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Gate CEO says crypto exchanges must prove they can survive a hack like Binance’s",
+      "link": "https://www.coindesk.com/business/2026/11/05/gate-ceo-says-crypto-exchanges-must-prove-they-can-survive-a-hack-like-binance-s",
+      "publishedAt": "2026-11-05T14:21:50.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Mercado Bitcoin hack continued hours after exchange said attack was contained, report finds",
+      "link": "https://www.coindesk.com/business/2026/11/05/mercado-bitcoin-hack-continued-hours-after-exchange-said-attack-was-contained-report-finds",
+      "publishedAt": "2026-11-05T10:44:54.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto",
@@ -56,13 +84,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "THORChain's RUNE jumps 10% as North Korean hackers resume laundering Binance loot",
-      "link": "https://www.coindesk.com/markets/2026/11/04/thorchain-s-rune-jumps-10-as-north-korean-hackers-resume-laundering-binance-loot",
-      "publishedAt": "2026-11-04T12:49:56.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says",
       "link": "https://cointelegraph.com/markets/crypto-market-recovery-grayscale-binance-hack-temporary-setback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -71,10 +92,17 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance hackers move 81% of stolen Solana, route funds via THORChain",
-      "link": "https://cointelegraph.com/news/binance-hackers-move-81-stolen-solana-route-thorchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T09:15:55.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin crashes 6% to 7-week low as US stocks erase election gains",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-crashes-7-week-low-stocks-election-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T16:48:41.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin plunges as Nasdaq falls 4% in panicky selloff",
+      "link": "https://www.coindesk.com/business/2026/11/05/live-updates-bitcoin-steady-around-usd80-000-as-markets-rally-after-democratic-sweep",
+      "publishedAt": "2026-11-05T10:57:11.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -91,42 +119,54 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Bitcoin miner Riot could pay Anthropic 12% interest under $28 billion AI deal",
-      "link": "https://www.coindesk.com/tech/2026/11/05/bitcoin-miner-riot-could-pay-anthropic-12-interest-under-usd28-billion-ai-deal",
-      "publishedAt": "2026-11-05T09:36:32.000Z",
-      "severity": "NORMAL"
-    },
-    {
       "source": "Cointelegraph",
-      "title": "South Korea seeks 4th crypto tax delay, targets 2029 start",
-      "link": "https://cointelegraph.com/news/south-korea-crypto-tax-fourth-delay-2029?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T09:35:29.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "France budget rejection sidelines stablecoin tax, wallet reporting",
-      "link": "https://cointelegraph.com/news/france-rejects-budget-revenue-sidelines-crypto-amendments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T09:04:42.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Hong Kong passes law requiring crypto exchanges to report customer transactions to tax authorities",
-      "link": "https://www.coindesk.com/policy/2026/11/04/hong-kong-passes-law-requiring-crypto-exchanges-to-report-customer-transactions-to-tax-authorities",
-      "publishedAt": "2026-11-05T08:35:37.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "OpenAI says its AI can break into Linux at scale. Here's what it means for crypto",
-      "link": "https://www.coindesk.com/tech/2026/11/05/openai-says-its-ai-can-break-into-linux-at-scale-here-s-what-it-means-for-crypto",
-      "publishedAt": "2026-11-05T08:26:26.000Z",
+      "title": "Europe’s largest asset manager Amundi tokenizes equity index fund on Ethereum",
+      "link": "https://cointelegraph.com/news/amundi-tokenizes-european-equity-index-fund-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T18:09:38.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-05T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -2.88,
+      "vsAvgMove": 8.9,
+      "volumeSpike": 8.3
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-05T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -3.9,
+      "vsAvgMove": 8.5,
+      "volumeSpike": 6.9
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-05T14:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.72,
+      "vsAvgMove": 5.6,
+      "volumeSpike": 2
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-05T14:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.81,
+      "vsAvgMove": 3.7,
+      "volumeSpike": 2.6
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-05T12:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.91,
+      "vsAvgMove": 3.2,
+      "volumeSpike": 1.1
+    },
     {
       "sym": "BTC",
       "at": "2026-11-04T15:00:00.000Z",
@@ -150,46 +190,6 @@
       "movePct": 1.25,
       "vsAvgMove": 4.2,
       "volumeSpike": 3
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-04T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 2.58,
-      "vsAvgMove": 7.6,
-      "volumeSpike": 4.1
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-04T08:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.85,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-04T04:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.17,
-      "vsAvgMove": 4.8,
-      "volumeSpike": 1.8
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-04T04:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.36,
-      "vsAvgMove": 4.7,
-      "volumeSpike": 1.6
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-04T02:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.12,
-      "vsAvgMove": 5.2,
-      "volumeSpike": 1.6
     }
   ],
   "errors": []
