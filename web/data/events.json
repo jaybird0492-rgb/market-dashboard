@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T16:04:32.388Z",
+  "updatedAt": "2026-11-06T19:36:24.835Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,29 +7,29 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75715,
-      "chg24hPct": -0.17,
-      "high24h": 76950,
+      "price": 75622,
+      "chg24hPct": -0.54,
+      "high24h": 76467,
       "low24h": 74700,
-      "fundingPct": 0.0015,
-      "openInterest": 2750.7691,
+      "fundingPct": 0.0011,
+      "openInterest": 2731.5607,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2228,
-      "chg24hPct": -0.84,
-      "high24h": 2284.2,
+      "price": 2227.1,
+      "chg24hPct": -1,
+      "high24h": 2266.2,
       "low24h": 2200.2,
-      "fundingPct": -0.0008,
-      "openInterest": 32428.618,
+      "fundingPct": -0.0013,
+      "openInterest": 31522.495,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
     {
       "source": "Cointelegraph",
-      "title": "Binance hackers had 8 weeks of access before $6.3B exploit, Security Alliance estimates",
+      "title": "Binance hackers had 8-week intrusion window before $6.3B exploit: SEAL",
       "link": "https://cointelegraph.com/news/binance-hackers-8-weeks-access-63b-exploit-security-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-06T11:26:30.000Z",
       "severity": "CRITICAL"
