@@ -17,6 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const { loadBars, smaArr, priorHigh, priorLow } = require('./v2_backtest');
 const { runPortfolio, portfolioStats, START_EQUITY } = require('./v2_portfolio');
+const { buildPayload } = require('./v2_paperlib');
 
 const PAPER_START = Date.parse('2026-10-29T00:00:00Z');
 const STATE = path.join(__dirname, '..', 'data', 'v2', 'paper_state.json');
@@ -61,56 +62,27 @@ function main() {
   const lastClose = {};
   for (const [sym, bars] of Object.entries(barsBySym)) lastClose[sym] = bars[bars.length - 1].close;
 
-  let peak = START_EQUITY, dd = 0;
-  for (const p of res.curve) { if (p.eq > peak) peak = p.eq; }
-  dd = peak > 0 ? res.mtmEquity / peak - 1 : 0;
-  let streak = 0;
-  for (const t of [...res.trades].sort((a, b) => a.exitT - b.exitT)) streak = t.pnl < 0 ? streak + 1 : 0;
-  const halted = dd < -0.25 || streak >= 15;
-
-  const pub = {
-    updatedAt: new Date().toISOString(),
+  const pub = buildPayload(res, {
     strategy: 'Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short',
+    rules: 'Daily Donchian 55/20 + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared, long+short',
     paperStart: new Date(PAPER_START).toISOString(),
     startEquity: START_EQUITY,
-    equity: +res.mtmEquity.toFixed(2),
-    realizedEquity: +res.finalEquity.toFixed(2),
-    drawdownFromPeak: +(dd * 100).toFixed(2),
-    losingStreak: streak,
-    halted,
-    killRule: 'Halt if drawdown from peak > 25% or 15 consecutive losers',
-    lastClose,
-    watch,
-    open: res.openPositions.map((p) => ({
-      sym: p.sym, side: p.dir === 1 ? 'LONG' : 'SHORT',
-      entry: +p.entryFill.toFixed(2), stop: +p.stop.toFixed(2),
-      mark: +p.mark.toFixed(2), openedAt: new Date(p.entryT).toISOString(),
-      unrealUsd: +p.unrealPnl.toFixed(2),
-    })),
-    pending: res.pending.map((p) => ({
-      sym: p.sym, side: p.dir === 1 ? 'LONG' : 'SHORT',
-      signalAt: new Date(p.signalT).toISOString(), fillsAt: new Date(p.nextOpenT).toISOString(),
-    })),
-    closed: res.trades.slice(-50).map((t) => ({
-      sym: t.sym, side: t.dir === 1 ? 'LONG' : 'SHORT',
-      openedAt: new Date(t.entryT).toISOString(), closedAt: new Date(t.exitT).toISOString(),
-      pnlUsd: +t.pnl.toFixed(2), r: +t.rMultiple.toFixed(2), reason: t.reason,
-    })),
-    stats: { closed: res.trades.length, open: res.openPositions.length },
-    backtest2017_2026: {
-      note: 'Same engine, full history, shared account — see analysis/V2_VALIDATION.md',
+    reference: {
+      label: 'Backtest 2017-2026 (daily, shared)',
       trades: s.n, expectancyR: +s.expectancyR.toFixed(2), profitFactor: +s.profitFactor.toFixed(2),
       totalRetPct: +(s.totalRet * 100).toFixed(1), maxDDPct: +(s.maxDD * 100).toFixed(1),
       oosExpR: +s.oosExpR.toFixed(2), buyHoldRetPct: +(s.bhRet * 100).toFixed(1), buyHoldDDPct: +(s.bhDD * 100).toFixed(1),
+      note: 'Same engine, full history, shared account — see analysis/V2_VALIDATION.md',
     },
-  };
+    extra: { lastClose, watch },
+  });
 
   fs.mkdirSync(path.dirname(STATE), { recursive: true });
   fs.mkdirSync(path.dirname(PUBLIC), { recursive: true });
   fs.writeFileSync(STATE, JSON.stringify(pub, null, 2), 'utf8');
   fs.writeFileSync(PUBLIC, JSON.stringify(pub, null, 2), 'utf8');
-  console.log(`v2 paper: equity $${pub.equity} (realized $${pub.realizedEquity}), open ${pub.open.length}, closed ${pub.stats.closed}, DD ${pub.drawdownFromPeak}%, streak ${streak}${halted ? ' — HALTED (kill rule)' : ''}`);
-  for (const p of pub.open) console.log(`  OPEN ${p.sym} ${p.side} @ ${p.entry} stop ${p.stop} mark ${p.mark} (${p.unrealUsd >= 0 ? '+' : ''}$${p.unrealUsd})`);
+  console.log(`v2 paper: equity $${pub.equity} (realized $${pub.realizedEquity}), open ${pub.open.length}, closed ${pub.stats.closed}, DD ${pub.drawdownFromPeak}%, streak ${pub.losingStreak}${pub.halted ? ' — HALTED (kill rule)' : ''}`);
+  for (const p of pub.open) console.log(`  OPEN ${p.sym} ${p.side} @ ${p.entry} stop ${p.stop} mark ${p.mark} (${p.unrealUsd >= 0 ? '+' : ''}$${p.unrealUsd}, ${p.unrealR}R)`);
   for (const [sym, w] of Object.entries(watch)) console.log(`  WATCH ${sym} $${w.price} | long triggers above $${w.longTrigger} (${w.pctToLong}% away) | short below $${w.shortTrigger} (${w.pctToShort}% away) | ${w.aboveSma200 ? 'above' : 'below'} SMA200${w.wouldHold ? ` | strategy would hold ${w.wouldHold.side} since ${w.wouldHold.since}` : ''}`);
 }
 

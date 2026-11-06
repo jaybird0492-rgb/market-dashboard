@@ -43,9 +43,38 @@ function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity, makeS
     const funding = fundingDay * days * pos.qty * pos.entryFill;
     const pnl = gross - fees - funding;
     equity += pnl;
-    trades.push({ sym, dir: pos.dir, entryT: pos.entryT, exitT: t, pnl, rMultiple: pnl / (pos.equityBefore * RISK_FRAC), reason });
+    // rMultiple keeps the original nominal-risk denominator so historical
+    // backtest numbers stay comparable. rMultipleActual uses the capital
+    // actually put at risk (qty * stop distance), which is what the dashboard
+    // reports for live/open positions.
+    const nominalRisk = pos.equityBefore * RISK_FRAC;
+    const rMultiple = nominalRisk > 0 ? pnl / nominalRisk : 0;
+    const rMultipleActual = pos.riskUsd > 0 ? pnl / pos.riskUsd : 0;
+    trades.push({
+      sym, dir: pos.dir, entryT: pos.entryT, exitT: t,
+      entryFill: pos.entryFill, exitFill: fill, stop: pos.stop, qty: pos.qty,
+      entryBar: pos.entryBar, exitBar: state[sym].i,
+      barsHeld: state[sym].i - pos.entryBar,
+      holdHours: (t - pos.entryT) / 36e5,
+      gross, fees, funding, pnl,
+      equityBefore: pos.equityBefore, equityAfter: equity,
+      riskUsd: pos.riskUsd, riskNominalUsd: nominalRisk,
+      rMultiple, rMultipleActual,
+      mfeR: pos.mfeR, maeR: pos.maeR,
+      reason,
+    });
     delete positions[sym];
     state[sym].pendingExit = false;
+  }
+
+  // Track best/worst excursion in R while the position is open. Uses the
+  // bar's high/low; the bar that fills the entry at the open counts too.
+  function updateExcursion(pos, bar, stopDist) {
+    if (!(stopDist > 0)) return;
+    const best = pos.dir === 1 ? (bar.high - pos.entryFill) / stopDist : (pos.entryFill - bar.low) / stopDist;
+    const worst = pos.dir === 1 ? (bar.low - pos.entryFill) / stopDist : (pos.entryFill - bar.high) / stopDist;
+    if (best > pos.mfeR) pos.mfeR = best;
+    if (worst < pos.maeR) pos.maeR = worst;
   }
 
   const lastClose = {}; // forward-filled marks for symbols missing a bar at t
@@ -73,13 +102,19 @@ function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity, makeS
           let qty = (dayStartEquity * RISK_FRAC) / stopDist;
           qty = Math.min(qty, (dayStartEquity * NOTIONAL_CAP) / entryFill);
           if (qty > 0) {
-            positions[sym] = { dir, entryFill, qty, equityBefore: dayStartEquity, riskFrac: RISK_FRAC, stop: dir === 1 ? entryFill - stopDist : entryFill + stopDist, entryBar: S.i, entryT: t };
+            positions[sym] = {
+              dir, entryFill, qty, equityBefore: dayStartEquity, riskFrac: RISK_FRAC,
+              stop: dir === 1 ? entryFill - stopDist : entryFill + stopDist,
+              stopDist, riskUsd: qty * stopDist,
+              entryBar: S.i, entryT: t, mfeR: 0, maeR: 0,
+            };
           }
         }
       }
       S.pendingEntry = 0;
 
       const cur = positions[sym];
+      if (cur) updateExcursion(cur, b, cur.stopDist);
       if (cur && (cur.dir === 1 ? b.low <= cur.stop : b.high >= cur.stop)) {
         closePos(sym, t, cur.dir === 1 ? Math.min(b.open, cur.stop) : Math.max(b.open, cur.stop), 'STOP');
       }
@@ -99,8 +134,24 @@ function runPortfolio(barsBySym, { allowShort = true, startMs = -Infinity, makeS
 
   const openPositions = Object.entries(positions).map(([sym, p]) => {
     const S = state[sym];
-    const last = S.bars[S.bars.length - 1];
-    return { sym, dir: p.dir, entryFill: p.entryFill, entryT: p.entryT, stop: p.stop, qty: p.qty, mark: last.close, unrealPnl: p.qty * (last.close - p.entryFill) * p.dir };
+    const last = S.bars[S.i];
+    const stopDist = Math.abs(p.entryFill - p.stop);
+    const riskUsd = p.qty * stopDist;
+    const unrealPnl = p.qty * (last.close - p.entryFill) * p.dir;
+    return {
+      sym, dir: p.dir, entryFill: p.entryFill, entryT: p.entryT,
+      stop: p.stop, qty: p.qty, mark: last.close, markT: last.t,
+      unrealPnl, stopDist, riskUsd,
+      riskFrac: p.equityBefore > 0 ? riskUsd / p.equityBefore : 0,
+      notionalUsd: p.qty * p.entryFill,
+      equityBefore: p.equityBefore,
+      entryBar: p.entryBar, barsHeld: S.i - p.entryBar,
+      holdHours: (last.t - p.entryT) / 36e5,
+      mfeR: p.mfeR, maeR: p.maeR,
+      unrealR: riskUsd > 0 ? unrealPnl / riskUsd : 0,
+      stopDistPct: p.entryFill > 0 ? (stopDist / p.entryFill) * 100 : 0,
+      pctToStop: last.close > 0 ? (Math.abs(p.stop - last.close) / last.close) * 100 : 0,
+    };
   });
   const pending = Object.entries(state)
     .filter(([, S]) => S.pendingEntry !== 0 && S.i >= 0 && S.i < S.bars.length)

@@ -39,6 +39,8 @@ jobs:
           node scripts/v2_paper4h.js
           node scripts/v2_signals.js
           node scripts/v2_events.js
+      - name: Verify dashboard data
+        run: node scripts/v2_verify.js
       - name: Commit paper state
         run: |
           git config user.name "market-bot"

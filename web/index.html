@@ -14,7 +14,7 @@
   body { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
   a { color: var(--blue); text-decoration: none; }
   .topbar { border-bottom: 1px solid var(--border); background: var(--panel); }
-  .topbar-in, main { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .topbar-in, main { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
   .topbar-in { display: flex; align-items: center; justify-content: space-between; height: 56px; }
   .brand { display: flex; align-items: baseline; gap: 12px; }
   .brand h1 { font-size: 16px; font-weight: 650; letter-spacing: .01em; }
@@ -24,61 +24,90 @@
   .pill-paper { background: rgba(232,163,61,.14); color: var(--amber); border: 1px solid rgba(232,163,61,.4); }
   .pill-live { background: rgba(47,180,87,.12); color: var(--green); border: 1px solid rgba(47,180,87,.35); }
   .pill-stale { background: rgba(239,83,80,.12); color: var(--red); border: 1px solid rgba(239,83,80,.35); }
-  main { padding-top: 20px; padding-bottom: 40px; }
-  section { margin-bottom: 26px; }
-  .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  main { padding-top: 18px; padding-bottom: 40px; }
+  section { margin-bottom: 24px; }
+  .sec-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; gap: 12px; }
   h2 { font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
   .sec-head .note { font-size: 12px; color: var(--faint); }
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-  .kpi { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
-  .kpi .label { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
-  .kpi .value { font-size: 21px; font-weight: 650; font-variant-numeric: tabular-nums; }
-  .kpi .sub { font-size: 12px; color: var(--muted); margin-top: 5px; font-variant-numeric: tabular-nums; }
   .pos { color: var(--green); } .neg { color: var(--red); }
-  .coins { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 12px; }
+  .muted { color: var(--muted); } .faint { color: var(--faint); }
+  .acct-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+  .acct { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .acct-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+  .acct-head .name { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
+  .acct .eq { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .acct .net { font-size: 12.5px; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .acct-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .acct-grid2 div { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; }
+  .acct-grid2 span { color: var(--faint); }
+  .acct-grid2 b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .badge { font-size: 10px; font-weight: 700; letter-spacing: .05em; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; }
+  .badge-none { background: rgba(141,153,168,.14); color: var(--muted); }
+  .badge-check { background: rgba(47,180,87,.12); color: var(--green); }
+  .badge-warn { background: rgba(232,163,61,.15); color: var(--amber); }
+  .badge-bad { background: rgba(239,83,80,.14); color: var(--red); }
+  .table-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; padding: 9px 12px; background: var(--panel-2); border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 9px 12px; border-bottom: 1px solid rgba(36,44,56,.6); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  td.r, th.r { text-align: right; }
+  .table-scroll { overflow-x: auto; }
+  .empty { padding: 16px; color: var(--faint); font-size: 13px; line-height: 1.6; }
+  .flat { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 16px; line-height: 1.6; }
+  .flat b { font-weight: 650; }
+  .flat .flat-title { font-size: 15px; margin-bottom: 4px; }
+  .flat table { margin-top: 10px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .layer { font-size: 10.5px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 4px; background: rgba(74,158,218,.13); color: var(--blue); text-transform: uppercase; }
+  .side-long { color: var(--green); font-weight: 700; }
+  .side-short { color: var(--red); font-weight: 700; }
+  .live-tag { font-size: 9.5px; color: var(--green); border: 1px solid rgba(47,180,87,.35); border-radius: 3px; padding: 0 4px; margin-left: 4px; }
+  .perf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 12px; }
+  .perf { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .perf-head { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); }
+  .perf-head .name { font-size: 12px; font-weight: 650; letter-spacing: .02em; }
+  .perf-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+  .perf-kpi { background: var(--panel); padding: 9px 12px; }
+  .perf-kpi span { display: block; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin-bottom: 3px; }
+  .perf-kpi b { font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .chart-wrap { padding: 10px 12px 4px; }
+  .chart-label { font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+  canvas.chart { width: 100%; height: 112px; display: block; }
+  canvas.rchart { width: 100%; height: 54px; display: block; }
+  .chart-empty { height: 112px; display: flex; align-items: center; justify-content: center; color: var(--faint); font-size: 12px; border: 1px dashed var(--border); border-radius: 5px; }
+  .perf-foot { padding: 9px 12px 12px; font-size: 11.5px; color: var(--muted); line-height: 1.55; border-top: 1px solid var(--border); }
+  .perf-foot b { color: var(--text); font-weight: 600; }
+  .coin-grid, .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 12px; }
   .coin { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  .coin-head { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; background: var(--panel-2); border-bottom: 1px solid var(--border); }
+  .coin-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); }
   .coin-id { display: flex; align-items: baseline; gap: 10px; }
   .coin-id .sym { font-size: 16px; font-weight: 700; }
-  .coin-id .px { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
-  .regime { font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 3px 9px; border-radius: 4px; text-transform: uppercase; }
+  .coin-id .px { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .regime { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; padding: 3px 9px; border-radius: 4px; text-transform: uppercase; }
   .r-up { background: rgba(47,180,87,.13); color: var(--green); }
   .r-dn { background: rgba(239,83,80,.13); color: var(--red); }
   .r-tr { background: rgba(141,153,168,.14); color: var(--muted); }
   .signal-grid { display: grid; grid-template-columns: 1fr 1fr; }
-  .sig-cell { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  .sig-cell { padding: 11px 14px; border-bottom: 1px solid var(--border); }
   .sig-cell:nth-child(odd) { border-right: 1px solid var(--border); }
-  .sig-cell .tag { font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
-  .sig-val { font-size: 13.5px; line-height: 1.5; }
+  .sig-cell .tag { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 5px; }
+  .sig-val { font-size: 13px; line-height: 1.5; }
   .sig-val .num { font-variant-numeric: tabular-nums; font-weight: 600; }
-  .warn { font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; }
+  .warn { font-size: 10.5px; font-weight: 700; letter-spacing: .05em; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; }
   .w-break { background: rgba(47,180,87,.14); color: var(--green); }
   .w-fake { background: rgba(239,83,80,.14); color: var(--red); }
   .w-appr { background: rgba(232,163,61,.15); color: var(--amber); }
   .w-quiet { background: rgba(141,153,168,.14); color: var(--muted); }
-  .verdict { padding: 12px 16px; display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.5; }
+  .verdict { padding: 11px 14px; display: flex; gap: 9px; align-items: flex-start; font-size: 13px; line-height: 1.5; }
   .verdict .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; background: var(--faint); }
   .verdict.trade .dot { background: var(--green); }
   .verdict.wait .dot { background: var(--amber); }
   .verdict.blocked { background: rgba(239,83,80,.05); }
   .verdict.blocked .dot { background: var(--red); }
-  .verdict b { font-weight: 650; }
-  .break-line { padding: 9px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); line-height: 1.5; }
-  .gate-tag { font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 4px; }
+  .gate-tag { font-size: 10.5px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 4px; }
   .gate-both { background: rgba(74,158,218,.14); color: var(--blue); }
   .gate-one { background: rgba(232,163,61,.15); color: var(--amber); }
   .gate-none { background: rgba(239,83,80,.14); color: var(--red); }
-  .table-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th { text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; padding: 10px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); white-space: nowrap; }
-  td { padding: 9px 14px; border-bottom: 1px solid rgba(36,44,56,.6); font-variant-numeric: tabular-nums; white-space: nowrap; }
-  tr:last-child td { border-bottom: none; }
-  .empty { padding: 16px; color: var(--faint); font-size: 13px; }
-  .table-scroll { overflow-x: auto; }
-  .sev { font-size: 10px; font-weight: 700; letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
-  .sev-crit { background: rgba(239,83,80,.16); color: var(--red); }
-  .sev-high { background: rgba(232,163,61,.15); color: var(--amber); }
-  .sev-norm { background: rgba(141,153,168,.13); color: var(--muted); }
   .news-item { padding: 9px 14px; border-bottom: 1px solid rgba(36,44,56,.6); display: flex; gap: 10px; align-items: flex-start; }
   .news-item:last-child { border-bottom: none; }
   .news-item a { color: var(--text); font-size: 13px; line-height: 1.4; }
@@ -86,11 +115,22 @@
   .news-meta { font-size: 11px; color: var(--faint); white-space: nowrap; padding-top: 2px; }
   .shock-item { padding: 9px 14px; border-bottom: 1px solid rgba(36,44,56,.6); font-size: 13px; display: flex; justify-content: space-between; gap: 10px; }
   .shock-item:last-child { border-bottom: none; }
-  .spark { width: 100%; height: 44px; display: block; }
+  .sev { font-size: 10px; font-weight: 700; letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+  .sev-crit { background: rgba(239,83,80,.16); color: var(--red); }
+  .sev-high { background: rgba(232,163,61,.15); color: var(--amber); }
+  .sev-norm { background: rgba(141,153,168,.13); color: var(--muted); }
   .panel-head { padding: 10px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+  .spark { width: 100%; height: 42px; display: block; }
+  .preview-banner { max-width: 1240px; margin: 12px auto 0; padding: 10px 14px; border-radius: 8px; background: rgba(232,163,61,.12); border: 1px solid rgba(232,163,61,.45); color: var(--amber); font-size: 13px; line-height: 1.5; }
+  body.preview #marketSection, body.preview #eventsSection { display: none; }
   footer { border-top: 1px solid var(--border); color: var(--faint); font-size: 12px; }
-  .foot-in { max-width: 1200px; margin: 0 auto; padding: 16px 20px 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-  @media (max-width: 700px) { .signal-grid { grid-template-columns: 1fr; } .sig-cell:nth-child(odd) { border-right: none; } .coins { grid-template-columns: 1fr; } }
+  .foot-in { max-width: 1240px; margin: 0 auto; padding: 16px 20px 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  @media (max-width: 760px) {
+    .signal-grid { grid-template-columns: 1fr; }
+    .sig-cell:nth-child(odd) { border-right: none; }
+    .coin-grid, .event-grid, .perf-grid { grid-template-columns: 1fr; }
+    .perf-kpis { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -101,44 +141,41 @@
   </div>
 </header>
 
+<div id="previewBanner" class="preview-banner" hidden></div>
+
 <main>
-  <section>
-    <div class="sec-head"><h2>Market</h2><span class="note" id="marketUpdated">—</span></div>
-    <div class="kpis" id="marketStrip"><div class="kpi"><div class="label">Loading</div><div class="value">—</div></div></div>
+  <section id="accountsSection">
+    <div class="sec-head"><h2>Accounts</h2><span class="note" id="accountNote">paper only · no real orders · 0.75% risk per trade</span></div>
+    <div class="acct-grid" id="accountCards"><div class="empty">Loading accounts…</div></div>
   </section>
 
-  <section>
-    <div class="sec-head"><h2>Accounts</h2><span class="note">Daily core from 2026-10-29 · 4H layer rules v2 from 2026-11-04 · kill rule: −25% from peak or 15 consecutive losses</span></div>
-    <div class="kpis">
-      <div class="kpi"><div class="label">Daily Core — Equity</div><div class="value" id="d1Equity">—</div><div class="sub" id="d1Sub">loading</div></div>
-      <div class="kpi"><div class="label">4H Futures — Equity</div><div class="value" id="h4Equity">—</div><div class="sub" id="h4Sub">loading</div></div>
-      <div class="kpi"><div class="label">Combined Exposure</div><div class="value" id="exposure">—</div><div class="sub" id="exposureSub">—</div></div>
-      <div class="kpi"><div class="label">Backtest 2017–2026 (Daily, Shared)</div><div class="value">+100.2%</div><div class="sub">Max DD −19.7% · Exp +1.55R · PF 4.40 · n=69</div></div>
-      <div class="kpi"><div class="label">Backtest 2017–2026 (4H Futures, Dual Gate)</div><div class="value">+0.44R</div><div class="sub">Shared BTC+ETH · OOS +0.39R · max DD −15.2% · n=606</div></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note" id="nextClose">closed candles only</span></div>
-    <div class="coins" id="coinCards"><div class="empty">Loading market state…</div></div>
-  </section>
-
-  <section>
-    <div class="sec-head"><h2>Events &amp; Shocks</h2><span class="note">News severity + abnormal 1H moves — context only, never a trade trigger</span></div>
-    <div class="coins">
-      <div class="table-card"><div class="empty" id="shockPanel">Loading shocks…</div></div>
-      <div class="table-card"><div class="empty" id="newsPanel">Loading headlines…</div></div>
-    </div>
-  </section>
-
-  <section>
+  <section id="positionsSection">
     <div class="sec-head"><h2>Open Positions</h2><span class="note" id="openCount"></span></div>
     <div class="table-card table-scroll" id="openPositions"><div class="empty">Loading…</div></div>
+    <div id="flatState" class="flat" hidden></div>
   </section>
 
-  <section>
-    <div class="sec-head"><h2>Closed Trades</h2><span class="note" id="closedCount"></span></div>
-    <div class="table-card table-scroll" id="closedTrades"><div class="empty">No closed trades yet.</div></div>
+  <section id="performanceSection">
+    <div class="sec-head"><h2>Strategy Performance</h2><span class="note">real paper results · no edge conclusion below 10 closed trades</span></div>
+    <div class="perf-grid" id="perfGrid"><div class="empty">Loading performance…</div></div>
+  </section>
+
+  <section id="marketSection">
+    <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note" id="nextClose">closed candles only</span></div>
+    <div class="coin-grid" id="coinCards"><div class="empty">Loading market state…</div></div>
+  </section>
+
+  <section id="eventsSection">
+    <div class="sec-head"><h2>Events &amp; Shocks</h2><span class="note">news severity + abnormal 1H moves — context only, never a trade trigger</span></div>
+    <div class="event-grid">
+      <div class="table-card" id="shockPanel"><div class="empty">Loading shocks…</div></div>
+      <div class="table-card" id="newsPanel"><div class="empty">Loading headlines…</div></div>
+    </div>
+  </section>
+
+  <section id="journalSection">
+    <div class="sec-head"><h2>Trade Journal</h2><span class="note" id="journalCount"></span></div>
+    <div class="table-card table-scroll" id="journal"><div class="empty">No closed trades yet — the journal fills when a position exits.</div></div>
   </section>
 </main>
 
@@ -150,77 +187,321 @@
 </footer>
 
 <script>
-const $ = id => document.getElementById(id);
-const fmt$ = (v, dec = 0) => (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
-const cls = v => v >= 0 ? 'pos' : 'neg';
-let D1 = null, H4 = null, SIG = null, OPEN = [];
-const LIVE = {}; // coin -> last browser-fetched perp price (display only)
+const $ = (id) => document.getElementById(id);
+const PREVIEW = new URLSearchParams(location.search).get('preview') === '1';
 
-function qtyOf(p) {
-  if (p.notionalUsd && p.entry) return p.notionalUsd / p.entry;
-  if (p.stop && p.entry && p.stop !== p.entry) return 75 / Math.abs(p.entry - p.stop);
-  return null;
-}
-function unrealOf(p) {
+const fmt$ = (v, dec = 0) => (v === null || v === undefined || !Number.isFinite(v)) ? '—'
+  : (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const fmtR = (v) => (v === null || v === undefined || !Number.isFinite(v)) ? '—' : (v >= 0 ? '+' : '') + v.toFixed(2) + 'R';
+const fmtPct = (v, dec = 1) => (v === null || v === undefined || !Number.isFinite(v)) ? '—' : (v >= 0 ? '+' : '') + v.toFixed(dec) + '%';
+const cls = (v) => (v > 0 ? 'pos' : v < 0 ? 'neg' : '');
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const holdTxt = (h) => {
+  if (h === null || h === undefined || !Number.isFinite(h)) return '—';
+  const d = Math.floor(h / 24), r = Math.round(h % 24);
+  return d ? `${d}d ${r}h` : `${Math.max(1, Math.round(h))}h`;
+};
+const when = (iso) => iso ? new Date(iso).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+
+let D1 = null, H4 = null, SIG = null, EV = null;
+const LIVE = {}; // symbol -> browser-fetched price (display only)
+
+function liveUnreal(p) {
   const px = LIVE[p.sym];
-  const qty = qtyOf(p);
-  if (!px || !qty) return p.unrealUsd;
-  return qty * (px - p.entry) * (p.side === 'LONG' ? 1 : -1);
+  if (!px || !p.qty || !p.entry) return { usd: p.unrealUsd, r: p.unrealR, live: false };
+  const usd = p.qty * (px - p.entry) * (p.side === 'LONG' ? 1 : -1);
+  return { usd, r: p.riskUsd ? usd / p.riskUsd : null, live: true };
+}
+function liveEquity(d) {
+  if (!d) return null;
+  return (d.realizedEquity !== undefined ? d.realizedEquity : d.startEquity) + d.open.reduce((a, p) => a + liveUnreal(p).usd, 0);
+}
+function openPositionsOf(layer, d) {
+  if (!d) return [];
+  return d.open.map((p) => ({ ...p, layer }));
+}
+function pendingOf(layer, d) {
+  if (!d) return [];
+  return (d.pending || []).map((p) => ({ ...p, layer }));
+}
+function allOpen() {
+  return [...openPositionsOf('Daily', PREVIEW ? null : D1), ...openPositionsOf(PREVIEW ? '4H preview' : '4H', H4)];
+}
+function allPending() {
+  return [...pendingOf('Daily', PREVIEW ? null : D1), ...pendingOf('4H', H4)];
+}
+
+/* ---------- accounts ---------- */
+function accountCard(name, d, layer, opts = {}) {
+  if (!d) return `<div class="acct"><div class="acct-head"><span class="name">${name}</span></div><div class="empty">data unavailable</div></div>`;
+  const eq = liveEquity(d);
+  const net = eq - d.startEquity;
+  const day = PREVIEW && layer === '4H' ? 'replay' : `Day ${d.daysElapsed || 1}/${d.daysTotal || 42}`;
+  const halted = d.halted ? '<span class="badge badge-bad">Halted</span>' : '';
+  return `<div class="acct">
+    <div class="acct-head"><span class="name">${name}</span><span class="badge badge-none">${day}</span>${halted}</div>
+    <div class="eq ${cls(net)}">${fmt$(eq)}</div>
+    <div class="net">${net >= 0 ? '+' : ''}${fmt$(net, 2)} net · DD ${d.drawdownFromPeak === null ? '—' : d.drawdownFromPeak.toFixed(1) + '%'} · ${d.halted ? 'HALTED' : 'active'}</div>
+    <div class="acct-grid2">
+      <div><span>Open risk</span><b>${fmt$(d.openRiskUsd, 0)}${d.openRiskPct ? ' · ' + d.openRiskPct.toFixed(2) + '%' : ''}</b></div>
+      <div><span>Realized</span><b class="${cls(d.realizedEquity - d.startEquity)}">${fmt$(d.realizedEquity - d.startEquity, 2)}</b></div>
+      <div><span>Trades</span><b>${d.stats.open} open / ${d.stats.closed} closed</b></div>
+      <div><span>Losing streak</span><b>${d.losingStreak}</b></div>
+    </div>
+  </div>`;
 }
 
 function renderAccounts() {
-  const fill = (eqId, subId, d) => {
-    if (!d) { $(subId).textContent = 'data unavailable'; return; }
-    const liveEq = (d.realizedEquity !== undefined) ? d.realizedEquity + d.open.reduce((a, p) => a + unrealOf(p), 0) : d.equity;
-    $(eqId).textContent = fmt$(liveEq);
-    $(eqId).className = 'value ' + (liveEq >= d.startEquity ? 'pos' : 'neg');
-    $(subId).innerHTML = 'Started ' + fmt$(d.startEquity) + ' · DD ' + d.drawdownFromPeak + '% · ' + d.stats.open + ' open / ' + d.stats.closed + ' closed' +
-      (d.halted ? ' · <span class="neg"><b>HALTED</b></span>' : '');
-  };
-  fill('d1Equity', 'd1Sub', D1);
-  fill('h4Equity', 'h4Sub', H4);
-  const open = [];
-  if (D1) open.push(...D1.open.map(p => ({ ...p, layer: 'Daily' })));
-  if (H4) open.push(...H4.open.map(p => ({ ...p, layer: '4H Fut' })));
-  const pending = [];
-  if (D1) pending.push(...(D1.pending || []).map(p => ({ ...p, layer: 'Daily' })));
-  if (H4) pending.push(...(H4.pending || []).map(p => ({ ...p, layer: '4H Fut' })));
-  const unreal = open.reduce((a, p) => a + unrealOf(p), 0);
-  $('exposure').textContent = open.length ? open.length + (open.length === 1 ? ' position' : ' positions') : pending.length ? pending.length + ' pending' : 'Flat';
-  $('exposureSub').innerHTML = open.length
-    ? open.map(p => p.sym + ' ' + p.side).join(' · ') + ' · unrealized <span class="' + cls(unreal) + '">' + fmt$(unreal, 2) + '</span>'
-    : pending.length
-      ? 'Signalled: ' + pending.map(p => p.sym + ' ' + p.side).join(' · ') + ' · fills at next bar open'
-      : 'No open risk';
-  return open;
+  const open = allOpen();
+  const notional = open.reduce((a, p) => a + (p.notionalUsd || 0), 0);
+  const unreal = open.reduce((a, p) => a + liveUnreal(p).usd, 0);
+  const risk = open.reduce((a, p) => a + (p.riskUsd || 0), 0);
+  const eq = (PREVIEW ? 0 : (D1 ? liveEquity(D1) : 0)) + (H4 ? liveEquity(H4) : 0);
+  const combined = `<div class="acct">
+    <div class="acct-head"><span class="name">Combined Exposure</span><span class="badge ${open.length ? 'badge-warn' : 'badge-check'}">${open.length ? open.length + ' open' : 'flat'}</span></div>
+    <div class="eq">${open.length ? fmt$(notional) : 'Flat'}</div>
+    <div class="net">${open.length ? open.map((p) => p.sym + ' ' + p.side).join(' · ') : 'No open risk'}${open.length ? ' · unrealized ' + fmt$(unreal, 2) : ''}</div>
+    <div class="acct-grid2">
+      <div><span>Combined equity</span><b>${eq ? fmt$(eq) : '—'}</b></div>
+      <div><span>Open risk</span><b>${fmt$(risk, 0)}</b></div>
+      <div><span>Risk / equity</span><b>${eq ? ((risk / eq) * 100).toFixed(2) + '%' : '—'}</b></div>
+      <div><span>Pending</span><b>${allPending().length}</b></div>
+    </div>
+  </div>`;
+  $('accountCards').innerHTML =
+    (PREVIEW ? '' : accountCard('Daily Core', D1, 'Daily')) +
+    accountCard(PREVIEW ? '4H Futures — preview' : '4H Futures', H4, '4H') +
+    combined;
+  $('accountNote').textContent = PREVIEW
+    ? 'historical replay · not the live paper account'
+    : `paper only · no real orders · 0.75% risk per trade · updated ${when(D1 && D1.updatedAt)}`;
 }
 
-function renderPositions(open) {
-  const pending = [];
-  if (D1) pending.push(...(D1.pending || []).map(p => ({ ...p, layer: 'Daily' })));
-  if (H4) pending.push(...(H4.pending || []).map(p => ({ ...p, layer: '4H Fut' })));
-  $('openCount').textContent = (open.length ? open.length + ' open' : '') + (pending.length ? (open.length ? ' · ' : '') + pending.length + ' pending' : '');
-  $('openPositions').innerHTML = (open.length || pending.length)
-    ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Entry</th><th>Stop</th><th>Mark</th><th>Unrealized</th><th>Opened / Signal</th></tr>' +
-      open.map(p => {
-        const mark = LIVE[p.sym] || p.mark;
-        const unreal = unrealOf(p);
-        const liveTag = LIVE[p.sym] ? ' <span style="font-size:10px;color:var(--green)">LIVE</span>' : '';
-        return `<tr><td>${p.layer}</td><td><b>${p.sym}</b></td><td class="${p.side === 'LONG' ? 'pos' : 'neg'}">${p.side}</td><td>${fmt$(p.entry, 2)}</td><td>${fmt$(p.stop, 2)}</td><td>${fmt$(mark, 2)}${liveTag}</td><td class="${cls(unreal)}">${fmt$(unreal, 2)}</td><td>${p.openedAt.slice(0, 10)}</td></tr>`;
-      }).join('') +
-      pending.map(p => `<tr><td>${p.layer}</td><td><b>${p.sym}</b></td><td class="${p.side === 'LONG' ? 'pos' : 'neg'}">${p.side} <span style="font-size:10px;color:var(--faint)">PENDING</span></td><td>next bar open</td><td>—</td><td>—</td><td>—</td><td>${new Date(p.signalAt).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</td></tr>`).join('') + '</table>'
-    : '<div class="empty">No open positions — both accounts in cash.</div>';
-  const closed = [];
-  if (D1) closed.push(...D1.closed.map(t => ({ ...t, layer: 'Daily' })));
-  if (H4) closed.push(...H4.closed.map(t => ({ ...t, layer: '4H Fut' })));
-  closed.sort((a, b) => b.closedAt.localeCompare(a.closedAt));
-  $('closedCount').textContent = closed.length ? closed.length + ' total' : '';
-  $('closedTrades').innerHTML = closed.length
-    ? '<table><tr><th>Layer</th><th>Asset</th><th>Side</th><th>Opened</th><th>Closed</th><th>P&amp;L</th><th>R</th><th>Exit</th></tr>' +
-      closed.map(t => `<tr><td>${t.layer}</td><td><b>${t.sym}</b></td><td class="${t.side === 'LONG' ? 'pos' : 'neg'}">${t.side}</td><td>${t.openedAt.slice(0, 10)}</td><td>${t.closedAt.slice(0, 10)}</td><td class="${cls(t.pnlUsd)}">${fmt$(t.pnlUsd, 2)}</td><td>${t.r}</td><td>${t.reason}</td></tr>`).join('') + '</table>'
-    : '<div class="empty">No closed trades yet. The 4H layer restarted on 2026-11-04 with the dual-gate rules; its retired F3 account (2 trades, −0.80R combined) is recorded in the validation log.</div>';
+/* ---------- open positions ---------- */
+function renderPositions() {
+  const open = allOpen();
+  const pending = allPending();
+  $('openCount').textContent = (open.length ? open.length + ' open' : '') +
+    (pending.length ? (open.length ? ' · ' : '') + pending.length + ' pending' : '') ||
+    (PREVIEW ? 'historical replay' : 'live paper accounts');
+
+  if (!open.length && !pending.length) {
+    $('openPositions').hidden = true;
+    $('flatState').hidden = false;
+    $('flatState').innerHTML = flatHtml();
+    return;
+  }
+  $('openPositions').hidden = false;
+  $('flatState').hidden = true;
+
+  const rows = open.map((p) => {
+    const u = liveUnreal(p);
+    const stopSide = p.side === 'LONG' ? -1 : 1;
+    const toStop = p.mark ? ((p.stop - p.mark) / p.mark) * 100 : null;
+    const opened = when(p.openedAt);
+    const held = holdTxt(p.holdHours);
+    return `<tr>
+      <td><span class="layer">${p.layer}</span></td>
+      <td><b>${p.sym}</b></td>
+      <td class="${p.side === 'LONG' ? 'side-long' : 'side-short'}">${p.side}</td>
+      <td class="r">${fmt$(p.notionalUsd)}<div class="faint" style="font-size:10.5px">${p.qty} ${p.sym}</div></td>
+      <td class="r">${fmt$(p.entry, 2)}</td>
+      <td class="r">${fmt$(p.mark, 2)}${u.live ? '<span class="live-tag">LIVE</span>' : ''}</td>
+      <td class="r">${fmt$(p.stop, 2)}</td>
+      <td class="r ${toStop < 0 ? 'neg' : 'pos'}">${toStop === null ? '—' : (toStop >= 0 ? '+' : '') + toStop.toFixed(2) + '%'}</td>
+      <td class="r ${cls(u.usd)}">${fmt$(u.usd, 2)}</td>
+      <td class="r ${cls(u.r)}">${fmtR(u.r)}</td>
+      <td class="r">${fmt$(p.riskUsd, 0)}<div class="faint" style="font-size:10.5px">${p.riskPct === null ? '' : p.riskPct.toFixed(2) + '%'}</div></td>
+      <td class="r">${held}</td>
+      <td class="r">${opened}</td>
+    </tr>`;
+  }).join('');
+
+  const pend = pending.map((p) => `<tr>
+      <td><span class="layer">${p.layer}</span></td>
+      <td><b>${p.sym}</b></td>
+      <td class="${p.side === 'LONG' ? 'side-long' : 'side-short'}">${p.side} <span class="badge badge-warn">pending</span></td>
+      <td class="r">next open</td>
+      <td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td>
+      <td class="r">${when(p.signalAt)}</td>
+    </tr>`).join('');
+
+  $('openPositions').innerHTML = `<table>
+    <tr><th>Layer</th><th>Asset</th><th>Side</th><th class="r">Size</th><th class="r">Entry</th><th class="r">Mark</th><th class="r">Stop</th><th class="r">To stop</th><th class="r">Unrealized</th><th class="r">Unreal R</th><th class="r">Risk</th><th class="r">Held</th><th class="r">Opened / signal</th></tr>
+    ${rows}${pend}
+  </table>`;
 }
 
+function flatHtml() {
+  const trig = (SIG && SIG.coins) ? SIG.coins.map((c) => {
+    const s = c.setup4h;
+    return `<tr><td><b>${c.sym}</b></td><td class="r">${fmt$(s.longTrigger, 2)} <span class="faint">(+${s.pctToLong}%)</span></td><td class="r">${fmt$(s.shortTrigger, 2)} <span class="faint">(-${s.pctToShort}%)</span></td><td class="r">${s.effectiveAllows}</td></tr>`;
+  }).join('') : '';
+  return `<div class="flat-title"><b>Flat — no open risk.</b></div>
+    <div class="muted">Both paper accounts are in cash. Nothing is at risk right now.</div>
+    <div class="muted" style="margin-top:6px">Next 4H decision in <b id="flatNext">${next4hTxt()}</b>. A position opens only after a closed 4H candle breaks its trigger; fills happen at the next bar open.</div>
+    ${trig ? `<table><tr><th>Asset</th><th class="r">Long trigger</th><th class="r">Short trigger</th><th class="r">Allowed</th></tr>${trig}</table>` : ''}`;
+}
+
+/* ---------- performance ---------- */
+function perfPanel(name, d, layer) {
+  if (!d) return `<div class="perf"><div class="perf-head"><span class="name">${name}</span></div><div class="empty">data unavailable</div></div>`;
+  const s = d.stats;
+  const st = s.sampleStatus;
+  const badge = st === 'usable' ? '<span class="badge badge-check">n≥30 · usable</span>'
+    : st === 'building' ? '<span class="badge badge-warn">n 10–29 · early</span>'
+      : '<span class="badge badge-none">n&lt;10 · not meaningful</span>';
+  const ref = d.reference || {};
+  const curveId = 'curve-' + layer;
+  const rId = 'r-' + layer;
+  const hasCurve = d.equityCurve && d.equityCurve.length > 1;
+  const hasTrades = d.closed && d.closed.length > 0;
+  return `<div class="perf">
+    <div class="perf-head"><span class="name">${name}</span>${badge}</div>
+    <div class="perf-kpis">
+      <div class="perf-kpi"><span>Trades</span><b>${s.closed}</b></div>
+      <div class="perf-kpi"><span>Win rate</span><b>${s.winRatePct === null ? '—' : s.winRatePct.toFixed(0) + '%'}</b></div>
+      <div class="perf-kpi"><span>Expectancy</span><b>${fmtR(s.expectancyR)}</b></div>
+      <div class="perf-kpi"><span>Profit factor</span><b>${s.profitFactor === null ? '—' : s.profitFactor.toFixed(2)}</b></div>
+      <div class="perf-kpi"><span>Max DD</span><b>${d.drawdownFromPeak === null ? '—' : d.drawdownFromPeak.toFixed(1) + '%'}</b></div>
+      <div class="perf-kpi"><span>Avg hold</span><b>${holdTxt(s.avgHoldHours)}</b></div>
+      <div class="perf-kpi"><span>Best / worst</span><b>${s.bestR === null ? '—' : fmtR(s.bestR) + ' / ' + fmtR(s.worstR)}</b></div>
+      <div class="perf-kpi"><span>Net P&amp;L</span><b class="${cls(s.netPnlUsd)}">${fmt$(s.netPnlUsd, 2)}</b></div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-label">Equity curve</div>
+      ${hasCurve ? `<canvas class="chart" id="${curveId}"></canvas>` : '<div class="chart-empty">No equity history yet</div>'}
+    </div>
+    <div class="chart-wrap" style="padding-top:0">
+      <div class="chart-label">Trade R multiples</div>
+      ${hasTrades ? `<canvas class="rchart" id="${rId}"></canvas>` : '<div class="chart-empty" style="height:54px">No closed trades yet</div>'}
+    </div>
+    <div class="perf-foot">
+      Live: <b>${s.expectancyR === null ? '—' : fmtR(s.expectancyR)}</b> over <b>${s.closed}</b> trades ·
+      backtest: <b>${ref.expectancyR === undefined ? '—' : fmtR(ref.expectancyR)}</b> over <b>${ref.trades || '—'}</b>${ref.oosExpR !== undefined ? ' (OOS ' + fmtR(ref.oosExpR) + ')' : ''} ·
+      max DD <b>${ref.maxDDPct === undefined ? '—' : ref.maxDDPct + '%'}</b>.
+      ${st !== 'usable' ? '<br><span class="faint">The live sample is too small to compare. Keep the clock running.</span>' : ''}
+    </div>
+  </div>`;
+}
+
+function renderPerformance() {
+  $('perfGrid').innerHTML =
+    (PREVIEW ? '' : perfPanel('Daily Core', D1, 'd1')) +
+    perfPanel(PREVIEW ? '4H Futures — preview replay' : '4H Futures', H4, 'h4');
+  // Draw immediately: requestAnimationFrame is throttled in background tabs,
+  // which would leave the charts blank until the next resize.
+  drawCurvesAndBars();
+}
+function drawCurvesAndBars() {
+  if (!PREVIEW) { drawCurve('curve-d1', D1); drawRBars('r-d1', D1); }
+  drawCurve('curve-h4', H4);
+  drawRBars('r-h4', H4);
+}
+
+function chartCanvas(id, h) {
+  const cv = $(id);
+  if (!cv) return null;
+  const w = cv.clientWidth || cv.parentElement.clientWidth || 480;
+  if (!w) return null;
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = Math.round(w * dpr);
+  cv.height = Math.round(h * dpr);
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { cv, ctx, w, h };
+}
+function drawCurve(id, d) {
+  if (!d || !d.equityCurve || d.equityCurve.length < 2) return;
+  const c = chartCanvas(id, 112);
+  if (!c) return;
+  const { ctx, w, h } = c;
+  const pts = d.equityCurve.map((p) => ({ t: Date.parse(p.t), v: p.equity }));
+  const start = d.startEquity;
+  let min = Math.min(start, ...pts.map((p) => p.v));
+  let max = Math.max(start, ...pts.map((p) => p.v));
+  const pad = Math.max((max - min) * 0.12, 1);
+  min -= pad; max += pad;
+  const X = (t) => 4 + ((t - pts[0].t) / ((pts[pts.length - 1].t - pts[0].t) || 1)) * (w - 8);
+  const Y = (v) => h - 6 - ((v - min) / (max - min || 1)) * (h - 12);
+  ctx.clearRect(0, 0, w, h);
+  ctx.strokeStyle = 'rgba(141,153,168,.35)';
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(0, Y(start)); ctx.lineTo(w, Y(start)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.beginPath();
+  pts.forEach((p, i) => i ? ctx.lineTo(X(p.t), Y(p.v)) : ctx.moveTo(X(p.t), Y(p.v)));
+  ctx.strokeStyle = pts[pts.length - 1].v >= start ? '#2fb457' : '#ef5350';
+  ctx.lineWidth = 1.6; ctx.stroke();
+  ctx.lineTo(X(pts[pts.length - 1].t), h); ctx.lineTo(X(pts[0].t), h); ctx.closePath();
+  ctx.fillStyle = pts[pts.length - 1].v >= start ? 'rgba(47,180,87,.09)' : 'rgba(239,83,80,.09)';
+  ctx.fill();
+  ctx.fillStyle = '#5d6878';
+  ctx.font = '10px Inter, system-ui, sans-serif';
+  ctx.fillText(fmt$(max - pad), 2, 10);
+  ctx.fillText(fmt$(min + pad), 2, h - 2);
+}
+function drawRBars(id, d) {
+  if (!d || !d.closed || !d.closed.length) return;
+  const c = chartCanvas(id, 54);
+  if (!c) return;
+  const { ctx, w, h } = c;
+  const trades = d.closed.slice(-40);
+  const maxAbs = Math.max(0.5, ...trades.map((t) => Math.abs(t.r || 0)));
+  const bw = Math.max(2, Math.min(12, (w - 8) / trades.length - 2));
+  const zero = h / 2;
+  ctx.clearRect(0, 0, w, h);
+  ctx.strokeStyle = 'rgba(141,153,168,.35)';
+  ctx.beginPath(); ctx.moveTo(0, zero); ctx.lineTo(w, zero); ctx.stroke();
+  trades.forEach((t, i) => {
+    const r = t.r || 0;
+    const x = 4 + i * ((w - 8) / trades.length);
+    const bh = (Math.abs(r) / maxAbs) * (h / 2 - 4);
+    ctx.fillStyle = r >= 0 ? 'rgba(47,180,87,.8)' : 'rgba(239,83,80,.8)';
+    ctx.fillRect(x, r >= 0 ? zero - bh : zero, bw, bh);
+  });
+  ctx.fillStyle = '#5d6878';
+  ctx.font = '9px Inter, system-ui, sans-serif';
+  ctx.fillText('+' + maxAbs.toFixed(1) + 'R', 2, 9);
+  ctx.fillText('-' + maxAbs.toFixed(1) + 'R', 2, h - 2);
+}
+
+/* ---------- journal ---------- */
+function renderJournal() {
+  const rows = [];
+  for (const [layer, d] of PREVIEW ? [[ '4H preview', H4]] : [['Daily', D1], ['4H', H4]]) {
+    if (!d) continue;
+    for (const t of d.closed) rows.push({ ...t, layer });
+  }
+  rows.sort((a, b) => String(b.closedAt).localeCompare(String(a.closedAt)));
+  $('journalCount').textContent = rows.length
+    ? `${rows.length} closed · newest first${rows.length > 100 ? ' · showing 100' : ''}`
+    : '';
+  if (!rows.length) {
+    $('journal').innerHTML = '<div class="empty">No closed trades yet — the journal fills when a position exits. Both layers use replay-derived state, so the full history is always shown.</div>';
+    return;
+  }
+  $('journal').innerHTML = `<table>
+    <tr><th>Layer</th><th>Asset</th><th>Side</th><th class="r">Entry</th><th class="r">Exit</th><th class="r">Opened</th><th class="r">Closed</th><th class="r">Held</th><th class="r">P&amp;L</th><th class="r">R</th><th class="r">MFE / MAE</th><th class="r">Risk</th><th>Exit reason</th></tr>
+    ${rows.slice(0, 100).map((t) => `<tr>
+      <td><span class="layer">${t.layer}</span></td>
+      <td><b>${t.sym}</b></td>
+      <td class="${t.side === 'LONG' ? 'side-long' : 'side-short'}">${t.side}</td>
+      <td class="r">${fmt$(t.entry, 2)}</td>
+      <td class="r">${fmt$(t.exit, 2)}</td>
+      <td class="r">${when(t.openedAt)}</td>
+      <td class="r">${when(t.closedAt)}</td>
+      <td class="r">${holdTxt(t.holdHours)}</td>
+      <td class="r ${cls(t.pnlUsd)}">${fmt$(t.pnlUsd, 2)}</td>
+      <td class="r ${cls(t.r)}">${fmtR(t.r)}</td>
+      <td class="r faint">${fmtR(t.mfeR)} / ${fmtR(t.maeR)}</td>
+      <td class="r">${fmt$(t.riskUsd, 0)}</td>
+      <td>${esc(t.reason || '—')}</td>
+    </tr>`).join('')}
+  </table>`;
+}
+
+/* ---------- market / setups ---------- */
 function timeUntil(ms) {
   if (!Number.isFinite(ms)) return '—';
   if (ms <= 0) return 'now';
@@ -231,14 +512,13 @@ function next4hTxt() {
   const next = Math.ceil(Date.now() / 144e5) * 144e5;
   return timeUntil(next - Date.now());
 }
-
 function renderCoins() {
   if (!SIG) { $('coinCards').innerHTML = '<div class="empty">Signal feed unavailable.</div>'; return; }
-  $('coinCards').innerHTML = SIG.coins.map(c => {
+  $('coinCards').innerHTML = SIG.coins.map((c) => {
     const x = c.context1d, s = c.setup4h, w = c.warning1h;
     const regime = x.regime === 'TREND UP' ? ['r-up', 'Trend Up'] : x.regime === 'TREND DOWN' ? ['r-dn', 'Trend Down'] : ['r-tr', 'Transition'];
     const warnCls = { BREAKOUT: 'w-break', FAKEOUT: 'w-fake', APPROACHING: 'w-appr', QUIET: 'w-quiet' }[w.state] || 'w-quiet';
-    const inTrade = (H4 && H4.open.find(p => p.sym === c.sym)) || (D1 && D1.open.find(p => p.sym === c.sym));
+    const inTrade = (H4 && H4.open.find((p) => p.sym === c.sym)) || (D1 && D1.open.find((p) => p.sym === c.sym));
     const allowLong = !!s.longAllowed, allowShort = !!s.shortAllowed;
     const gateBoth = allowLong && allowShort;
     const gateLabel = gateBoth ? 'BOTH sides' : allowLong ? 'LONG only' : allowShort ? 'SHORT only' : 'NONE';
@@ -250,7 +530,8 @@ function renderCoins() {
 
     let verdict, vcls;
     if (inTrade) {
-      verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · <span class="${cls(inTrade.unrealUsd)}">${fmt$(inTrade.unrealUsd, 2)}</span>`;
+      const u = liveUnreal(inTrade);
+      verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · <span class="${cls(u.usd)}">${fmt$(u.usd, 2)}</span> (${fmtR(u.r)})`;
       vcls = 'trade';
     } else {
       const longLine = `Long: 4H close &gt; ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%) — entry rule <b class="${allowLong ? 'pos' : 'neg'}">${allowLong ? 'open' : 'blocked'}</b>`;
@@ -274,21 +555,21 @@ function renderCoins() {
 
     const lb = s.lastBreakout;
     const lbHtml = lb
-      ? `Last 4H breakout: <b class="${lb.allowed ? 'pos' : 'neg'}">${lb.dir} ${lb.allowed ? 'allowed' : 'BLOCKED by ' + (lb.blockedBy || 'rule')}</b> · ${new Date(lb.at).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}`
+      ? `Last 4H breakout: <b class="${lb.allowed ? 'pos' : 'neg'}">${lb.dir} ${lb.allowed ? 'allowed' : 'BLOCKED by ' + (lb.blockedBy || 'rule')}</b> · ${when(lb.at)} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}`
       : 'Last 4H breakout: none in the last 24h.';
 
     return `<div class="coin">
-      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px" id="livePx-${c.sym}">${fmt$(livePx, 2)} <span style="font-size:10px;color:var(--faint)">1H close</span></span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
-      <canvas class="spark" id="spark-${c.sym}" height="44"></canvas>
+      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px" id="livePx-${c.sym}">${fmt$(livePx, 2)} <span class="faint" style="font-size:10px">1H close</span></span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
+      <canvas class="spark" id="spark-${c.sym}" height="42"></canvas>
       <div class="signal-grid">
-        <div class="sig-cell"><div class="tag">1D Regime (daily close)</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span style="color:var(--muted)">close ${fmt$(x.price, 2)} · ${x.asOf}</span></div></div>
-        <div class="sig-cell"><div class="tag">4H Trade Gate</div><div class="sig-val"><span class="gate-tag ${gateCls}">${gateLabel} effective</span><br><span style="color:var(--muted)">Daily: ${dailyTxt} · 4H trend: price ${s.nativeLong ? 'above' : 'below'} SMA200 ${fmt$(s.sma200_4h, 0)}</span></div></div>
-        <div class="sig-cell"><div class="tag">1H Warning (never trades)</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span style="color:var(--muted)">${w.stats180d.ratePct}% confirm rate (180d)</span><br><span style="color:var(--muted)">${w.detail}</span></div></div>
-        <div class="sig-cell"><div class="tag">1D Trend Triggers (slow core)</div><div class="sig-val"><span class="num">${fmt$(x.longTrigger, 2)}</span> long · <span class="num">${fmt$(x.shortTrigger, 2)}</span> short<br><span style="color:var(--muted)">55-day Donchian, needs a daily close</span></div></div>
-        <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span style="color:var(--muted)">+${s.pctToLong}% from last 4H close</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
-        <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span style="color:var(--muted)">${s.pctToShort}% lower</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+        <div class="sig-cell"><div class="tag">1D Regime (daily close)</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span class="muted">close ${fmt$(x.price, 2)} · ${x.asOf}</span></div></div>
+        <div class="sig-cell"><div class="tag">4H Trade Gate</div><div class="sig-val"><span class="gate-tag ${gateCls}">${gateLabel} effective</span><br><span class="muted">Daily: ${dailyTxt} · 4H trend: price ${s.nativeLong ? 'above' : 'below'} SMA200 ${fmt$(s.sma200_4h, 0)}</span></div></div>
+        <div class="sig-cell"><div class="tag">1H Warning (never trades)</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span class="muted">${w.stats180d.ratePct}% confirm rate (180d)</span><br><span class="muted">${w.detail}</span></div></div>
+        <div class="sig-cell"><div class="tag">1D Trend Triggers (slow core)</div><div class="sig-val"><span class="num">${fmt$(x.longTrigger, 2)}</span> long · <span class="num">${fmt$(x.shortTrigger, 2)}</span> short<br><span class="muted">55-day Donchian, needs a daily close</span></div></div>
+        <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span class="muted">+${s.pctToLong}% from last 4H close</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+        <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span class="muted">${s.pctToShort}% lower</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
       </div>
-      <div class="break-line">${lbHtml}</div>
+      <div class="break-line" style="padding:9px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.5">${lbHtml}</div>
       <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop ${s.stopDistPct}% away (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
       <div class="verdict ${vcls}"><span class="dot"></span><span>${verdict}</span></div>
     </div>`;
@@ -301,11 +582,12 @@ function drawSparks() {
     const cv = $('spark-' + c.sym);
     if (!cv || !c.series1h || c.series1h.length < 2) continue;
     const dpr = window.devicePixelRatio || 1;
-    const w = cv.clientWidth * dpr, h = 44 * dpr;
+    const w = cv.clientWidth * dpr, h = 42 * dpr;
+    if (!w) continue;
     cv.width = w; cv.height = h;
     const ctx = cv.getContext('2d');
     const data = c.series1h, min = Math.min(...data), max = Math.max(...data), rng = (max - min) || 1;
-    const X = i => (i / (data.length - 1)) * (w - 4) + 2, Y = v => h - 4 - ((v - min) / rng) * (h - 8);
+    const X = (i) => (i / (data.length - 1)) * (w - 4) + 2, Y = (v) => h - 4 - ((v - min) / rng) * (h - 8);
     ctx.beginPath();
     data.forEach((v, i) => i ? ctx.lineTo(X(i), Y(v)) : ctx.moveTo(X(i), Y(v)));
     ctx.strokeStyle = '#4a9eda'; ctx.lineWidth = 1.4 * dpr; ctx.stroke();
@@ -316,22 +598,24 @@ function drawSparks() {
     line(c.setup4h.shortTrigger, 'rgba(239,83,80,.6)');
   }
 }
+
 function renderMarket(ev) {
   if (!ev) return;
-  $('marketUpdated').textContent = 'Fear & Greed · futures funding/OI · updated ' + new Date(ev.updatedAt).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+  $('marketUpdated') && ($('marketUpdated').textContent = '');
   const fg = ev.fearGreed;
-  const cards = ev.market.map(m => `<div class="kpi"><div class="label">${m.sym} / USDT Perp</div><div class="value">${fmt$(m.price, m.price < 10 ? 4 : 0)}</div><div class="sub"><span class="${cls(m.chg24hPct || 0)}">${m.chg24hPct !== null && m.chg24hPct !== undefined ? (m.chg24hPct >= 0 ? '+' : '') + m.chg24hPct + '% 24h' : '—'}</span> · funding ${m.fundingPct !== undefined ? m.fundingPct + '%' : '—'}${m.openInterest ? ' · OI ' + Number(m.openInterest).toLocaleString() : ''}</div></div>`).join('');
-  const fgCard = fg ? `<div class="kpi"><div class="label">Fear &amp; Greed</div><div class="value" style="color:${fg.value <= 25 ? 'var(--red)' : fg.value <= 45 ? 'var(--amber)' : fg.value >= 75 ? 'var(--red)' : 'var(--green)'}">${fg.value}</div><div class="sub">${fg.label}</div></div>` : '';
-  const shockCard = `<div class="kpi"><div class="label">Shock Alerts (72h)</div><div class="value" style="color:${ev.shocks.length ? 'var(--amber)' : 'var(--green)'}">${ev.shocks.length}</div><div class="sub">${ev.shocks.length ? 'Abnormal 1H moves detected' : 'No abnormal moves'}</div></div>`;
-  $('marketStrip').innerHTML = cards + fgCard + shockCard;
-  $('shockPanel').outerHTML = '<div class="table-card"><div class="panel-head">Price Shocks — abnormal hourly moves</div>' + (ev.shocks.length
-    ? ev.shocks.map(s => `<div class="shock-item"><span><b>${s.sym}</b> <span class="${s.dir === 'UP' ? 'pos' : 'neg'}">${s.dir} ${s.movePct}%</span> <span style="color:var(--muted)">in 1H · ${s.vsAvgMove}× usual move${s.volumeSpike ? ' · volume ' + s.volumeSpike + '×' : ''}</span></span><span class="news-meta">${new Date(s.at).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</span></div>`).join('')
-    : '<div class="empty">No abnormal moves in the last 72 hours.</div>') + '</div>';
-  $('newsPanel').outerHTML = '<div class="table-card"><div class="panel-head">Headlines — last 48h, severity tagged</div>' + (ev.headlines.length
-    ? ev.headlines.map(h => `<div class="news-item"><span class="sev ${h.severity === 'CRITICAL' ? 'sev-crit' : h.severity === 'HIGH' ? 'sev-high' : 'sev-norm'}">${h.severity}</span><span><a href="${h.link}" target="_blank" rel="noopener">${h.title}</a><br><span class="news-meta">${h.source} · ${new Date(h.publishedAt).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</span></span></div>`).join('')
-    : '<div class="empty">No headlines fetched.</div>') + '</div>';
+  const cards = ev.market.map((m) => `<div class="acct"><div class="acct-head"><span class="name">${m.sym} / USDT Perp</span></div><div class="eq">${fmt$(m.price, m.price < 10 ? 4 : 0)}</div><div class="net"><span class="${cls(m.chg24hPct || 0)}">${m.chg24hPct !== null && m.chg24hPct !== undefined ? (m.chg24hPct >= 0 ? '+' : '') + m.chg24hPct + '% 24h' : '—'}</span> · funding ${m.fundingPct !== undefined ? m.fundingPct + '%' : '—'}${m.openInterest ? ' · OI ' + Number(m.openInterest).toLocaleString() : ''}</div></div>`).join('');
+  const fgCard = fg ? `<div class="acct"><div class="acct-head"><span class="name">Fear &amp; Greed</span></div><div class="eq" style="color:${fg.value <= 25 ? 'var(--red)' : fg.value <= 45 ? 'var(--amber)' : fg.value >= 75 ? 'var(--red)' : 'var(--green)'}">${fg.value}</div><div class="net">${fg.label}</div></div>` : '';
+  const shockCard = `<div class="acct"><div class="acct-head"><span class="name">Shock Alerts (72h)</span></div><div class="eq" style="color:${ev.shocks.length ? 'var(--amber)' : 'var(--green)'}">${ev.shocks.length}</div><div class="net">${ev.shocks.length ? 'Abnormal 1H moves detected' : 'No abnormal moves'}</div></div>`;
+  $('marketStrip') && ($('marketStrip').innerHTML = cards + fgCard + shockCard);
+  $('shockPanel').innerHTML = '<div class="panel-head">Price Shocks — abnormal hourly moves</div>' + (ev.shocks.length
+    ? ev.shocks.map((s) => `<div class="shock-item"><span><b>${s.sym}</b> <span class="${s.dir === 'UP' ? 'pos' : 'neg'}">${s.dir} ${s.movePct}%</span> <span class="muted">in 1H · ${s.vsAvgMove}× usual move${s.volumeSpike ? ' · volume ' + s.volumeSpike + '×' : ''}</span></span><span class="news-meta">${when(s.at)}</span></div>`).join('')
+    : '<div class="empty">No abnormal moves in the last 72 hours.</div>');
+  $('newsPanel').innerHTML = '<div class="panel-head">Headlines — last 48h, severity tagged</div>' + (ev.headlines.length
+    ? ev.headlines.map((h) => `<div class="news-item"><span class="sev ${h.severity === 'CRITICAL' ? 'sev-crit' : h.severity === 'HIGH' ? 'sev-high' : 'sev-norm'}">${h.severity}</span><span><a href="${h.link}" target="_blank" rel="noopener">${h.title}</a><br><span class="news-meta">${h.source} · ${when(h.publishedAt)}</span></span></div>`).join('')
+    : '<div class="empty">No headlines fetched.</div>');
 }
 
+/* ---------- live prices ---------- */
 async function getPx(sym) {
   try {
     const j = await (await fetch(`https://api.bybit.com/v5/market/tickers?category=linear&symbol=${sym}USDT`)).json();
@@ -351,43 +635,65 @@ async function getPx(sym) {
   return null;
 }
 async function refreshLive() {
+  if (PREVIEW) return;
   const [b, e] = await Promise.all([getPx('BTC'), getPx('ETH')]);
   if (b) LIVE.BTC = b;
   if (e) LIVE.ETH = e;
   if (!SIG) return;
   for (const c of SIG.coins) {
     const el = $('livePx-' + c.sym);
-    if (el && LIVE[c.sym]) el.innerHTML = fmt$(LIVE[c.sym], 2) + ' <span style="font-size:10px;color:var(--faint)">live</span>';
+    if (el && LIVE[c.sym]) el.innerHTML = fmt$(LIVE[c.sym], 2) + ' <span class="faint" style="font-size:10px">live</span>';
   }
-  OPEN = renderAccounts();
-  renderPositions(OPEN);
+  renderAccounts();
+  renderPositions();
 }
 
+/* ---------- boot ---------- */
 Promise.all([
-  fetch('data/v2.json').then(r => r.json()).catch(() => null),
-  fetch('data/v2_4h.json').then(r => r.json()).catch(() => null),
-  fetch('data/signals.json').then(r => r.json()).catch(() => null),
-  fetch('data/events.json').then(r => r.json()).catch(() => null),
+  fetch('data/v2.json').then((r) => r.json()).catch(() => null),
+  fetch(PREVIEW ? 'data/preview_4h.json' : 'data/v2_4h.json').then((r) => r.json()).catch(() => null),
+  fetch('data/signals.json').then((r) => r.json()).catch(() => null),
+  fetch('data/events.json').then((r) => r.json()).catch(() => null),
 ]).then(([d1, h4, sig, ev]) => {
-  D1 = d1; H4 = h4; SIG = sig;
-  const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt);
+  D1 = d1; H4 = h4; SIG = sig; EV = ev;
+  if (PREVIEW) {
+    document.body.classList.add('preview');
+    const banner = $('previewBanner');
+    banner.hidden = false;
+    banner.innerHTML = h4
+      ? `<b>PREVIEW — historical replay as of ${when(h4.previewAsOf || h4.updatedAt)}.</b> This is NOT the live paper account. It exists to test the position and performance layout; marks are replay closes, not live prices.`
+      : '<b>Preview data missing.</b> Run <code>node scripts/v2_preview.js</code> first.';
+  }
+
+  const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt) || (h4 && h4.updatedAt);
   const ageMin = upd ? (Date.now() - Date.parse(upd)) / 6e4 : null;
-  const stale = ageMin !== null && ageMin > 120;
-  $('updatedAt').innerHTML = upd
-    ? 'Updated ' + new Date(upd).toLocaleString('en-AU', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) + (stale ? ` <span class="neg">(${(ageMin / 60).toFixed(1)}h old)</span>` : '')
-    : '—';
-  $('feedStatus').textContent = (!d1 && !h4 && !sig) ? 'Feed Error' : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
-  $('feedStatus').className = 'pill ' + ((!d1 && !h4 && !sig) || stale ? 'pill-stale' : 'pill-live');
-  const tick = () => { $('nextClose').textContent = 'closed candles only · next 4H close in ' + next4hTxt(); };
+  const stale = !PREVIEW && ageMin !== null && ageMin > 120;
+  $('updatedAt').innerHTML = PREVIEW
+    ? 'Preview replay'
+    : upd
+      ? 'Updated ' + when(upd) + (stale ? ` <span class="neg">(${(ageMin / 60).toFixed(1)}h old)</span>` : '')
+      : '—';
+  $('feedStatus').textContent = PREVIEW ? 'Preview' : (!d1 && !h4 && !sig) ? 'Feed Error' : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
+  $('feedStatus').className = 'pill ' + (PREVIEW ? 'pill-paper' : ((!d1 && !h4 && !sig) || stale ? 'pill-stale' : 'pill-live'));
+
+  const tick = () => {
+    $('nextClose').textContent = PREVIEW ? 'historical replay' : 'closed candles only · next 4H close in ' + next4hTxt();
+    const fn = $('flatNext'); if (fn) fn.textContent = next4hTxt();
+  };
   tick(); setInterval(tick, 30000);
-  const open = renderAccounts();
-  OPEN = open;
-  renderPositions(OPEN);
+
+  renderAccounts();
+  renderPositions();
+  renderPerformance();
+  renderJournal();
   renderCoins();
   renderMarket(ev);
   drawSparks();
   refreshLive();
   setInterval(refreshLive, 60000);
+  setInterval(() => { renderAccounts(); renderPositions(); }, 30000);
+  let rz;
+  window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { drawSparks(); drawCurvesAndBars(); }, 150); });
 });
 </script>
 </body>

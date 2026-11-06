@@ -51,13 +51,19 @@ Signals: `scripts/v2_signals.js` → `web/data/signals.json`, every run.
   writes `data/v2/paper4h_state.json` + `web/data/v2_4h.json`.
 - `scripts/v2_signals.js` / `scripts/v2_events.js` — setup cards + news/shock
   context into `web/data/`.
+- `scripts/v2_paperlib.js` — shared schema-v3 exporter for both paper accounts
+  (full stats, equity curve, open risk, complete journal). `scripts/v2_verify.js`
+  reconciles the published JSON and fails CI on any accounting drift;
+  `scripts/v2_preview.js` writes a labelled historical replay used by
+  `/?preview=1` to test the position/performance layout before a live fill.
 - GitHub Actions (`.github/workflows/update.yml`) attempts a run every 15 min
   (GitHub throttles low-activity repos to a few runs/day), then commits and
   deploys. Kill switch: delete the schedule or the paper steps. Paper kill
   rule: halt if drawdown from peak > 25% or 15 consecutive losers.
 - Local: `node scripts/fetch_history.js --intervals 1d`,
   `node scripts/fetch_history.js --live`, then the four v2 scripts, then
-  `node server.js` → http://localhost:8899
+  `node scripts/v2_verify.js`, then `node server.js` → http://localhost:8899
+  (add `?preview=1` for the replay fixture).
 
 ## History
 v1 (multi-factor score, 6 coins × 1H/4H/1D) lost $940 in paper trading and was

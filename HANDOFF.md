@@ -44,8 +44,15 @@ Read this file first. It restores full project context in one pass.
   `web/data/v2_4h.json`, `web/data/signals.json`, `web/data/events.json`
   (Fear&Greed, funding/OI, severity-tagged headlines, 1H shock detector —
   context only, never trade triggers). Workflow attempts every 15 min UTC
-  (GitHub throttles to ~4-5/day): fetch -> both papers -> signals -> events
-  -> commit -> deploy. The dashboard shows data age and warns above 2h.
+  (GitHub throttles to ~4-5/day): fetch -> both papers -> signals -> events ->
+  verify -> commit -> deploy. The dashboard shows data age and warns above 2h.
+  Dashboard data schema v3 (2026-11-06): both paper JSONs export full stats,
+  equity curve, open-position size/risk/distance-to-stop/unrealized R, and a
+  complete trade journal; `scripts/v2_paperlib.js` is the shared exporter,
+  `scripts/v2_verify.js` reconciles equity = start + Σclosed + Σunrealized and
+  runs in CI, `scripts/v2_preview.js` writes a labelled historical replay
+  (`web/data/preview_4h.json`, view with `/?preview=1`). Plan/contract:
+  `analysis/DASHBOARD_PLAN.md`.
   Kill rule (both): DD from peak > 25% or 15 consecutive losers → halt + review.
   Retired F3 record (2026-10-30..11-02): 2 trades, -0.80R combined; 4H paper
   clock restarted 2026-11-04T16:00Z. Earliest real-money review mid-Dec 2026.

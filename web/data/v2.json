@@ -1,14 +1,97 @@
 {
-  "updatedAt": "2026-11-06T15:40:01.499Z",
+  "schema": 3,
+  "updatedAt": "2026-11-06T16:03:15.886Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
+  "rules": "Daily Donchian 55/20 + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
   "equity": 10000,
   "realizedEquity": 10000,
+  "openRiskUsd": 0,
+  "openRiskPct": 0,
+  "openNotionalUsd": 0,
   "drawdownFromPeak": 0,
   "losingStreak": 0,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
+  "daysElapsed": 9,
+  "daysTotal": 42,
+  "open": [],
+  "pending": [],
+  "closed": [],
+  "stats": {
+    "closed": 0,
+    "open": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRatePct": null,
+    "avgWinR": null,
+    "avgLossR": null,
+    "expectancyR": null,
+    "profitFactor": null,
+    "totalR": null,
+    "totalPnlUsd": 0,
+    "netPnlUsd": 0,
+    "maxDDPct": 0,
+    "currentStreak": 0,
+    "bestR": null,
+    "worstR": null,
+    "avgHoldHours": null,
+    "openRiskUsd": 0,
+    "since": "2026-10-29T00:00:00.000Z",
+    "lastTradeAt": null,
+    "sampleStatus": "insufficient"
+  },
+  "equityCurve": [
+    {
+      "t": "2026-10-29T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-10-30T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-10-31T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-01T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-02T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-03T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-04T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-05T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-06T16:03:15.886Z",
+      "equity": 10000
+    }
+  ],
+  "reference": {
+    "label": "Backtest 2017-2026 (daily, shared)",
+    "trades": 70,
+    "expectancyR": 1.52,
+    "profitFactor": 4.37,
+    "totalRetPct": 99.4,
+    "maxDDPct": -19.7,
+    "oosExpR": 0.62,
+    "buyHoldRetPct": 363.8,
+    "buyHoldDDPct": -81.1,
+    "note": "Same engine, full history, shared account — see analysis/V2_VALIDATION.md"
+  },
   "lastClose": {
     "BTC": 76088.01,
     "ETH": 2238.01
@@ -34,23 +117,5 @@
       "pctToShort": 2.94,
       "wouldHold": null
     }
-  },
-  "open": [],
-  "pending": [],
-  "closed": [],
-  "stats": {
-    "closed": 0,
-    "open": 0
-  },
-  "backtest2017_2026": {
-    "note": "Same engine, full history, shared account — see analysis/V2_VALIDATION.md",
-    "trades": 70,
-    "expectancyR": 1.52,
-    "profitFactor": 4.37,
-    "totalRetPct": 99.4,
-    "maxDDPct": -19.7,
-    "oosExpR": 0.62,
-    "buyHoldRetPct": 363.8,
-    "buyHoldDDPct": -81.1
   }
 }
