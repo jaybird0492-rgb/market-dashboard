@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T12:23:23.139Z",
+  "updatedAt": "2026-11-06T15:39:22.114Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,23 +7,23 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 76169,
-      "chg24hPct": -4.89,
-      "high24h": 80120,
-      "low24h": 74986,
-      "fundingPct": 0.0004,
-      "openInterest": 2634.5112,
-      "src": "Kraken perp"
+      "price": 75392.7,
+      "chg24hPct": -1.46,
+      "high24h": 76971.3,
+      "low24h": 74810,
+      "fundingPct": 0.0053,
+      "openInterest": 70474.958,
+      "src": "Bybit perp"
     },
     {
       "sym": "ETH",
-      "price": 2244,
-      "chg24hPct": -6.86,
-      "high24h": 2411.1,
-      "low24h": 2200.2,
-      "fundingPct": -0.0006,
-      "openInterest": 32454.663,
-      "src": "Kraken perp"
+      "price": 2216.33,
+      "chg24hPct": -2.88,
+      "high24h": 2285.6,
+      "low24h": 2204.75,
+      "fundingPct": 0.0002,
+      "openInterest": 796297.88,
+      "src": "Bybit perp"
     }
   ],
   "headlines": [
@@ -85,23 +85,9 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Mercado Bitcoin hack continued hours after exchange said attack was contained, report finds",
-      "link": "https://www.coindesk.com/business/2026/11/05/mercado-bitcoin-hack-continued-hours-after-exchange-said-attack-was-contained-report-finds",
-      "publishedAt": "2026-11-05T10:44:54.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto",
-      "link": "https://cointelegraph.com/news/polygon-hard-fork-binance-polymarket-6-8m-hack-recovery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T06:02:29.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Nasdaq 100 futures rally points to stock market respite",
-      "link": "https://www.coindesk.com/tech/2026/11/06/live-updates-nasdaq-100-futures-rally-points-to-stock-market-respite",
-      "publishedAt": "2026-11-06T11:58:40.000Z",
+      "title": "Over $1 billion in bullish bets liquidated while ETF flows suggest no help in spot market",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
+      "publishedAt": "2026-11-06T12:30:00.000Z",
       "severity": "HIGH"
     },
     {
@@ -123,6 +109,20 @@
       "title": "Core Scientific to quit Bitcoin mining by year-end as AI business surges",
       "link": "https://cointelegraph.com/news/core-scientific-to-quit-bitcoin-mining-by-year-end-as-ai-business-surges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-06T00:19:49.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
+      "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
+      "publishedAt": "2026-11-05T18:48:40.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin crashes 6% to 7-week low as US stocks erase election gains",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-crashes-7-week-low-stocks-election-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-05T16:48:41.000Z",
       "severity": "HIGH"
     }
   ],
