@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-05T23:45:21.548Z",
+  "updatedAt": "2026-11-06T04:29:53.215Z",
   "fearGreed": {
-    "value": 50,
-    "label": "Neutral"
+    "value": 28,
+    "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 75960,
-      "chg24hPct": -5.79,
-      "high24h": 80861,
+      "price": 75554,
+      "chg24hPct": -5.99,
+      "high24h": 80723,
       "low24h": 74986,
-      "fundingPct": 0.0022,
-      "openInterest": 2804.0267,
+      "fundingPct": 0.0006,
+      "openInterest": 2675.8287,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2235.2,
-      "chg24hPct": -7.98,
-      "high24h": 2435.1,
+      "price": 2227.4,
+      "chg24hPct": -7.99,
+      "high24h": 2432.8,
       "low24h": 2200.2,
-      "fundingPct": 0.0015,
-      "openInterest": 32943.461,
+      "fundingPct": -0.0013,
+      "openInterest": 32753.304,
       "src": "Kraken perp"
     }
   ],
@@ -98,8 +98,15 @@
       "severity": "CRITICAL"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Core Scientific to quit Bitcoin mining by year-end as AI business surges",
+      "link": "https://cointelegraph.com/news/core-scientific-to-quit-bitcoin-mining-by-year-end-as-ai-business-surges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T00:19:49.000Z",
+      "severity": "HIGH"
+    },
+    {
       "source": "CoinDesk",
-      "title": "Bitcion tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
+      "title": "Bitcoin tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
       "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
       "publishedAt": "2026-11-05T18:48:40.000Z",
       "severity": "HIGH"
@@ -116,13 +123,6 @@
       "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
       "link": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-04T18:47:56.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin hits $80.5K as US stocks rally on midterm election results",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T15:29:23.000Z",
       "severity": "HIGH"
     }
   ],
