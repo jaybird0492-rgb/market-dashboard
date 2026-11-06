@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T04:29:53.215Z",
+  "updatedAt": "2026-11-06T12:23:23.139Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,26 +7,47 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75554,
-      "chg24hPct": -5.99,
-      "high24h": 80723,
+      "price": 76169,
+      "chg24hPct": -4.89,
+      "high24h": 80120,
       "low24h": 74986,
-      "fundingPct": 0.0006,
-      "openInterest": 2675.8287,
+      "fundingPct": 0.0004,
+      "openInterest": 2634.5112,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2227.4,
-      "chg24hPct": -7.99,
-      "high24h": 2432.8,
+      "price": 2244,
+      "chg24hPct": -6.86,
+      "high24h": 2411.1,
       "low24h": 2200.2,
-      "fundingPct": -0.0013,
-      "openInterest": 32753.304,
+      "fundingPct": -0.0006,
+      "openInterest": 32454.663,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hackers had 8 weeks of access before $6.3B exploit, Security Alliance estimates",
+      "link": "https://cointelegraph.com/news/binance-hackers-8-weeks-access-63b-exploit-security-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T11:26:30.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance’s $6.3B hack leaves questions over hot wallet safeguards",
+      "link": "https://cointelegraph.com/news/binances-hack-questions-hot-wallet-risk-controls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T10:40:57.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Chainalysis says breach exposed password hashes and live tokens",
+      "link": "https://cointelegraph.com/news/chainalysis-cyberattack-password-hashes-live-tokens-exposed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T06:54:34.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Asian crypto exchanges batten down the hatches as hacks surge: Asia Express",
@@ -78,51 +99,30 @@
     },
     {
       "source": "CoinDesk",
-      "title": "The pile of lawsuits against Kalshi just grew by one",
-      "link": "https://www.coindesk.com/policy/2026/11/05/the-pile-of-lawsuits-against-kalshi-just-grew-by-one",
-      "publishedAt": "2026-11-05T05:28:52.000Z",
-      "severity": "CRITICAL"
+      "title": "Live updates: Nasdaq 100 futures rally points to stock market respite",
+      "link": "https://www.coindesk.com/tech/2026/11/06/live-updates-nasdaq-100-futures-rally-points-to-stock-market-respite",
+      "publishedAt": "2026-11-06T11:58:40.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin steadies after AI-led selloff as eyes turn to latest U.S. jobs figures",
+      "link": "https://www.coindesk.com/markets/2026/11/06/bitcoin-steadies-near-usd76-000-after-ai-led-selloff",
+      "publishedAt": "2026-11-06T11:49:35.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
-      "title": "India warns AI-powered hackers targeting crypto exchanges at ‘machine speed’",
-      "link": "https://cointelegraph.com/news/india-warns-ai-powered-hackers-targeting-crypto-exchanges-at-machine-speed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T01:51:21.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BitMart founder says security team ‘severely understaffed’ after new hack",
-      "link": "https://cointelegraph.com/news/bitmart-hack-security-staffing-crypto-exchange-restructuring?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T22:31:58.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin holds $75K as AI regulation fears see KOSPI halted after 8% crash",
+      "link": "https://cointelegraph.com/markets/bitcoin-holds-ai-regulation-fears-kospi-halted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T11:16:53.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
       "title": "Core Scientific to quit Bitcoin mining by year-end as AI business surges",
       "link": "https://cointelegraph.com/news/core-scientific-to-quit-bitcoin-mining-by-year-end-as-ai-business-surges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-06T00:19:49.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
-      "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
-      "publishedAt": "2026-11-05T18:48:40.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin crashes 6% to 7-week low as US stocks erase election gains",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-crashes-7-week-low-stocks-election-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T16:48:41.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
-      "link": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-04T18:47:56.000Z",
       "severity": "HIGH"
     }
   ],
