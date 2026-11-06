@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T19:36:24.835Z",
+  "updatedAt": "2026-11-06T23:48:56.365Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75622,
-      "chg24hPct": -0.54,
-      "high24h": 76467,
+      "price": 75891,
+      "chg24hPct": -0.04,
+      "high24h": 76315,
       "low24h": 74700,
-      "fundingPct": 0.0011,
-      "openInterest": 2731.5607,
+      "fundingPct": 0.0012,
+      "openInterest": 2715.058,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2227.1,
-      "chg24hPct": -1,
-      "high24h": 2266.2,
-      "low24h": 2200.2,
-      "fundingPct": -0.0013,
-      "openInterest": 31522.495,
+      "price": 2238.1,
+      "chg24hPct": 0.21,
+      "high24h": 2251.4,
+      "low24h": 2206.9,
+      "fundingPct": 0.0014,
+      "openInterest": 31411.748,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Gnosis Pay breach exposes card details, personal data and crypto wallet information",
+      "link": "https://cointelegraph.com/news/gnosis-pay-breach-exposes-card-details-personal-data-crypto-wallet-information?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T20:51:23.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hack is ‘cyber war,’ TRM Labs executive says",
+      "link": "https://cointelegraph.com/interview/trm-labs-binance-hack-interview?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-06T20:36:25.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance hackers had 8-week intrusion window before $6.3B exploit: SEAL",
@@ -109,20 +123,6 @@
       "title": "Core Scientific to quit Bitcoin mining by year-end as AI business surges",
       "link": "https://cointelegraph.com/news/core-scientific-to-quit-bitcoin-mining-by-year-end-as-ai-business-surges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-06T00:19:49.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
-      "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
-      "publishedAt": "2026-11-05T18:48:40.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin crashes 6% to 7-week low as US stocks erase election gains",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-crashes-7-week-low-stocks-election-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T16:48:41.000Z",
       "severity": "HIGH"
     }
   ],
