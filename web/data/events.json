@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T16:42:18.386Z",
+  "updatedAt": "2026-11-07T20:30:47.090Z",
   "fearGreed": {
     "value": 25,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75691,
-      "chg24hPct": 0.11,
+      "price": 75668,
+      "chg24hPct": -0.08,
       "high24h": 76160,
-      "low24h": 75419,
-      "fundingPct": 0.0007,
-      "openInterest": 2672.0573,
+      "low24h": 75525,
+      "fundingPct": 0.0015,
+      "openInterest": 2668.872,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2233,
-      "chg24hPct": 0.36,
+      "price": 2229.5,
+      "chg24hPct": 0,
       "high24h": 2251.4,
-      "low24h": 2216,
-      "fundingPct": 0,
-      "openInterest": 31175.938,
+      "low24h": 2222.5,
+      "fundingPct": 0.0008,
+      "openInterest": 30740.277,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
+      "link": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
+      "publishedAt": "2026-11-07T16:51:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Gnosis Pay breach exposes card details, personal data and crypto wallet information",
@@ -71,13 +78,6 @@
     },
     {
       "source": "CoinDesk",
-      "title": "What is TraderTraitor, the hacking squad behind the $6.3 billion Binance heist?",
-      "link": "https://www.coindesk.com/business/2026/11/05/what-is-tradertraitor-the-hacking-squad-behind-the-usd6-3-billion-binance-heist",
-      "publishedAt": "2026-11-05T16:58:21.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
       "title": "Over $1 billion in bullish bets liquidated while ETF flows suggest no help in spot market",
       "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
       "publishedAt": "2026-11-06T12:30:00.000Z",
@@ -106,23 +106,23 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin tumbles to $76,000 as collapsing AI trade drags stocks sharply lower",
-      "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
-      "publishedAt": "2026-11-05T18:48:40.000Z",
-      "severity": "HIGH"
+      "title": "Binance users in some European countries told to pull crypto before fees kick in, with accounts closing by year end",
+      "link": "https://www.coindesk.com/business/2026/11/07/binance-users-in-some-european-countries-told-to-pull-crypto-before-fees-kick-in-with-accounts-closing-by-year-end",
+      "publishedAt": "2026-11-07T19:13:16.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
+      "link": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
+      "publishedAt": "2026-11-07T17:36:46.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-07T14:22:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
-      "link": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-07T14:16:00.000Z",
       "severity": "NORMAL"
     }
   ],
