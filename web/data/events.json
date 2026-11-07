@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T20:30:47.090Z",
+  "updatedAt": "2026-11-07T23:57:26.097Z",
   "fearGreed": {
     "value": 25,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75668,
-      "chg24hPct": -0.08,
+      "price": 75755,
+      "chg24hPct": -0.11,
       "high24h": 76160,
-      "low24h": 75525,
-      "fundingPct": 0.0015,
-      "openInterest": 2668.872,
+      "low24h": 75468,
+      "fundingPct": 0.0018,
+      "openInterest": 2680.5805,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2229.5,
+      "price": 2235.8,
       "chg24hPct": 0,
-      "high24h": 2251.4,
-      "low24h": 2222.5,
-      "fundingPct": 0.0008,
-      "openInterest": 30740.277,
+      "high24h": 2248.9,
+      "low24h": 2219.7,
+      "fundingPct": 0.0009,
+      "openInterest": 30626.522,
       "src": "Kraken perp"
     }
   ],
@@ -67,13 +67,6 @@
       "title": "Chainalysis says breach exposed password hashes and live tokens",
       "link": "https://cointelegraph.com/news/chainalysis-cyberattack-password-hashes-live-tokens-exposed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-06T06:54:34.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Asian crypto exchanges batten down the hatches as hacks surge: Asia Express",
-      "link": "https://cointelegraph.com/magazine/asian-crypto-exchanges-bunker-down-as-hacks-surge-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T22:18:42.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -123,6 +116,13 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-07T14:22:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
+      "link": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-07T14:16:00.000Z",
       "severity": "NORMAL"
     }
   ],
