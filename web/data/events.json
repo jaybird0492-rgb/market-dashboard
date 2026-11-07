@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T10:52:02.076Z",
+  "updatedAt": "2026-11-07T16:42:18.386Z",
   "fearGreed": {
     "value": 25,
     "label": "Extreme Fear"
@@ -7,23 +7,23 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75930.1,
-      "chg24hPct": -0.31,
-      "high24h": 76350,
-      "low24h": 74810,
-      "fundingPct": 0.0026,
-      "openInterest": 69698.823,
-      "src": "Bybit perp"
+      "price": 75691,
+      "chg24hPct": 0.11,
+      "high24h": 76160,
+      "low24h": 75419,
+      "fundingPct": 0.0007,
+      "openInterest": 2672.0573,
+      "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2244.33,
-      "chg24hPct": 0.28,
-      "high24h": 2253.3,
-      "low24h": 2208,
-      "fundingPct": 0.0091,
-      "openInterest": 771281.95,
-      "src": "Bybit perp"
+      "price": 2233,
+      "chg24hPct": 0.36,
+      "high24h": 2251.4,
+      "low24h": 2216,
+      "fundingPct": 0,
+      "openInterest": 31175.938,
+      "src": "Kraken perp"
     }
   ],
   "headlines": [
@@ -70,24 +70,10 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Fed, OCC check US banks after Binance hack as experts flag security risks",
-      "link": "https://cointelegraph.com/news/fed-occ-check-us-banks-binance-hack-security-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-05T18:32:45.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
       "title": "What is TraderTraitor, the hacking squad behind the $6.3 billion Binance heist?",
       "link": "https://www.coindesk.com/business/2026/11/05/what-is-tradertraitor-the-hacking-squad-behind-the-usd6-3-billion-binance-heist",
       "publishedAt": "2026-11-05T16:58:21.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Gate CEO says crypto exchanges must prove they can survive a hack like Binance’s",
-      "link": "https://www.coindesk.com/business/2026/11/05/gate-ceo-says-crypto-exchanges-must-prove-they-can-survive-a-hack-like-binance-s",
-      "publishedAt": "2026-11-05T14:21:50.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -124,9 +110,31 @@
       "link": "https://www.coindesk.com/markets/2026/11/05/bitcoin-crypto-stocks-caught-in-ai-trade-meltdown-but-wintermute-trader-sees-glass-half-full",
       "publishedAt": "2026-11-05T18:48:40.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-07T14:22:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
+      "link": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-07T14:16:00.000Z",
+      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-07T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.42,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 0.8
+    },
     {
       "sym": "BTC",
       "at": "2026-11-05T15:00:00.000Z",
@@ -166,30 +174,6 @@
       "movePct": -0.91,
       "vsAvgMove": 3.2,
       "volumeSpike": 1.1
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-04T15:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.2,
-      "vsAvgMove": 3.4,
-      "volumeSpike": 6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-04T15:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.97,
-      "vsAvgMove": 4.4,
-      "volumeSpike": 8.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-04T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.25,
-      "vsAvgMove": 4.2,
-      "volumeSpike": 3
     }
   ],
   "errors": []
