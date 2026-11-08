@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T17:14:28.715Z",
+  "updatedAt": "2026-11-08T21:11:51.747Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75629,
-      "chg24hPct": -0.13,
+      "price": 75656,
+      "chg24hPct": 0.12,
       "high24h": 76100,
       "low24h": 75468,
-      "fundingPct": 0.0008,
-      "openInterest": 2660.8093,
+      "fundingPct": 0.0012,
+      "openInterest": 2630.0616,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2224.3,
-      "chg24hPct": -0.41,
+      "price": 2223.1,
+      "chg24hPct": -0.05,
       "high24h": 2243.1,
       "low24h": 2219.7,
-      "fundingPct": 0.0005,
-      "openInterest": 30331.63,
+      "fundingPct": -0.0006,
+      "openInterest": 30425.9,
       "src": "Kraken perp"
     }
   ],
@@ -35,18 +35,18 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Gnosis Pay breach exposes card details, personal data and crypto wallet information",
-      "link": "https://cointelegraph.com/news/gnosis-pay-breach-exposes-card-details-personal-data-crypto-wallet-information?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T20:51:23.000Z",
-      "severity": "CRITICAL"
+      "source": "CoinDesk",
+      "title": "What the election results mean for crypto: State of Crypto",
+      "link": "https://www.coindesk.com/policy/2026/11/08/what-the-election-results-mean-for-crypto-state-of-crypto",
+      "publishedAt": "2026-11-08T19:30:00.000Z",
+      "severity": "NORMAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Binance hack is ‘cyber war,’ TRM Labs executive says",
-      "link": "https://cointelegraph.com/interview/trm-labs-binance-hack-interview?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T20:36:25.000Z",
-      "severity": "CRITICAL"
+      "source": "CoinDesk",
+      "title": "Stablecoin growth has stalled. The payments boom hasn't",
+      "link": "https://www.coindesk.com/business/2026/11/08/stablecoin-growth-has-stalled-the-payments-boom-hasn-t",
+      "publishedAt": "2026-11-08T19:16:42.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -127,6 +127,22 @@
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-08T20:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.24,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 0.7
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-08T18:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.25,
+      "vsAvgMove": 3,
+      "volumeSpike": 0.6
+    },
     {
       "sym": "BTC",
       "at": "2026-11-08T16:00:00.000Z",
