@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-07T23:57:26.097Z",
+  "updatedAt": "2026-11-08T04:30:25.660Z",
   "fearGreed": {
-    "value": 25,
-    "label": "Extreme Fear"
+    "value": 28,
+    "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 75755,
-      "chg24hPct": -0.11,
+      "price": 75857,
+      "chg24hPct": 0.12,
       "high24h": 76160,
       "low24h": 75468,
-      "fundingPct": 0.0018,
-      "openInterest": 2680.5805,
+      "fundingPct": 0.0014,
+      "openInterest": 2649.0936,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2235.8,
-      "chg24hPct": 0,
+      "price": 2236,
+      "chg24hPct": -0.2,
       "high24h": 2248.9,
       "low24h": 2219.7,
-      "fundingPct": 0.0009,
-      "openInterest": 30626.522,
+      "fundingPct": 0.0011,
+      "openInterest": 30539.965,
       "src": "Kraken perp"
     }
   ],
@@ -91,13 +91,6 @@
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Core Scientific to quit Bitcoin mining by year-end as AI business surges",
-      "link": "https://cointelegraph.com/news/core-scientific-to-quit-bitcoin-mining-by-year-end-as-ai-business-surges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T00:19:49.000Z",
-      "severity": "HIGH"
-    },
-    {
       "source": "CoinDesk",
       "title": "Binance users in some European countries told to pull crypto before fees kick in, with accounts closing by year end",
       "link": "https://www.coindesk.com/business/2026/11/07/binance-users-in-some-european-countries-told-to-pull-crypto-before-fees-kick-in-with-accounts-closing-by-year-end",
@@ -123,6 +116,13 @@
       "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
       "link": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-07T14:16:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin holders have received eCash — What can you do with it?",
+      "link": "https://cointelegraph.com/magazine/bitcoin-holders-have-received-ecash-what-can-you-with-it?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-07T13:30:00.000Z",
       "severity": "NORMAL"
     }
   ],
