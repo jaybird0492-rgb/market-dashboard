@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T04:30:25.660Z",
+  "updatedAt": "2026-11-08T11:31:30.057Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75857,
-      "chg24hPct": 0.12,
-      "high24h": 76160,
+      "price": 75895,
+      "chg24hPct": 0.01,
+      "high24h": 75951,
       "low24h": 75468,
-      "fundingPct": 0.0014,
-      "openInterest": 2649.0936,
+      "fundingPct": 0.001,
+      "openInterest": 2661.4318,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2236,
-      "chg24hPct": -0.2,
-      "high24h": 2248.9,
+      "price": 2237.3,
+      "chg24hPct": -0.21,
+      "high24h": 2245.5,
       "low24h": 2219.7,
-      "fundingPct": 0.0011,
-      "openInterest": 30539.965,
+      "fundingPct": 0.0006,
+      "openInterest": 30480.096,
       "src": "Kraken perp"
     }
   ],
@@ -49,27 +49,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Binance hackers had 8-week intrusion window before $6.3B exploit: SEAL",
-      "link": "https://cointelegraph.com/news/binance-hackers-8-weeks-access-63b-exploit-security-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T11:26:30.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance’s $6.3B hack leaves questions over hot wallet safeguards",
-      "link": "https://cointelegraph.com/news/binances-hack-questions-hot-wallet-risk-controls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T10:40:57.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Chainalysis says breach exposed password hashes and live tokens",
-      "link": "https://cointelegraph.com/news/chainalysis-cyberattack-password-hashes-live-tokens-exposed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T06:54:34.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
       "title": "Over $1 billion in bullish bets liquidated while ETF flows suggest no help in spot market",
       "link": "https://www.coindesk.com/daybook-us/2026/11/06/over-usd1-billion-in-bullish-bets-liquidated-while-etf-flows-suggest-no-help-in-spot-market",
@@ -85,10 +64,17 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin holds $75K as AI regulation fears see KOSPI halted after 8% crash",
-      "link": "https://cointelegraph.com/markets/bitcoin-holds-ai-regulation-fears-kospi-halted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-06T11:16:53.000Z",
-      "severity": "HIGH"
+      "title": "Amsterdam protesters break into Microsoft data center construction site: Report",
+      "link": "https://cointelegraph.com/news/amsterdam-data-center-protesters-break-into-construction-site-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-08T09:48:48.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance’s  finance chief Kaiser Ng to leave company, report says",
+      "link": "https://cointelegraph.com/news/binances-finance-chief-kaiser-ng-to-leave-company-report-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-08T08:12:56.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -123,6 +109,20 @@
       "title": "Bitcoin holders have received eCash — What can you do with it?",
       "link": "https://cointelegraph.com/magazine/bitcoin-holders-have-received-ecash-what-can-you-with-it?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-07T13:30:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "US sanctions Canadian money-exchange firms over Iran ties",
+      "link": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-07T11:10:47.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Suspicious prediction market activity seen before election poll release: NYT",
+      "link": "https://cointelegraph.com/news/suspicious-prediction-market-activity-seen-before-election-poll-release-nyt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-07T09:10:35.000Z",
       "severity": "NORMAL"
     }
   ],
