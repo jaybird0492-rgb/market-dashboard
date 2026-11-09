@@ -256,15 +256,23 @@ function renderAccounts() {
   const notional = open.reduce((a, p) => a + (p.notionalUsd || 0), 0);
   const unreal = open.reduce((a, p) => a + liveUnreal(p).usd, 0);
   const risk = open.reduce((a, p) => a + (p.riskUsd || 0), 0);
-  const eq = (PREVIEW ? 0 : (D1 ? liveEquity(D1) : 0)) + (H4 ? liveEquity(H4) : 0);
+  const d1Eq = PREVIEW ? 0 : (D1 ? liveEquity(D1) : 0);
+  const h4Eq = H4 ? liveEquity(H4) : 0;
+  const d1Risk = PREVIEW ? 0 : (D1 ? D1.open.reduce((a, p) => a + (p.riskUsd || 0), 0) : 0);
+  const h4Risk = H4 ? H4.open.reduce((a, p) => a + (p.riskUsd || 0), 0) : 0;
+  const eq = d1Eq + h4Eq;
+  const riskTxt = [
+    h4Eq ? `${((h4Risk / h4Eq) * 100).toFixed(2)}% of 4H` : null,
+    d1Eq ? `${((d1Risk / d1Eq) * 100).toFixed(2)}% of daily` : null,
+  ].filter(Boolean).join(' · ') || '—';
   const combined = `<div class="acct">
     <div class="acct-head"><span class="name">Combined Exposure</span><span class="badge ${open.length ? 'badge-warn' : 'badge-check'}">${open.length ? open.length + ' open' : 'flat'}</span></div>
     <div class="eq">${open.length ? fmt$(notional) : 'Flat'}</div>
     <div class="net">${open.length ? open.map((p) => p.sym + ' ' + p.side).join(' · ') : 'No open risk'}${open.length ? ' · unrealized ' + fmt$(unreal, 2) : ''}</div>
     <div class="acct-grid2">
-      <div><span>Combined equity</span><b>${eq ? fmt$(eq) : '—'}</b></div>
+      <div><span>Total paper capital</span><b>${eq ? fmt$(eq) : '—'}</b></div>
       <div><span>Open risk</span><b>${fmt$(risk, 0)}</b></div>
-      <div><span>Risk / equity</span><b>${eq ? ((risk / eq) * 100).toFixed(2) + '%' : '—'}</b></div>
+      <div><span>Risk / own equity</span><b>${riskTxt}</b></div>
       <div><span>Pending</span><b>${allPending().length}</b></div>
     </div>
   </div>`;
