@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-08T21:11:51.747Z",
+  "updatedAt": "2026-11-09T00:53:56.492Z",
   "fearGreed": {
-    "value": 28,
+    "value": 29,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 75656,
-      "chg24hPct": 0.12,
+      "price": 75087,
+      "chg24hPct": -0.78,
       "high24h": 76100,
-      "low24h": 75468,
-      "fundingPct": 0.0012,
-      "openInterest": 2630.0616,
+      "low24h": 73342,
+      "fundingPct": 0.0008,
+      "openInterest": 2534.6043,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2223.1,
-      "chg24hPct": -0.05,
+      "price": 2141.1,
+      "chg24hPct": -4.09,
       "high24h": 2243.1,
-      "low24h": 2219.7,
-      "fundingPct": -0.0006,
-      "openInterest": 30425.9,
+      "low24h": 2002.9,
+      "fundingPct": -0.0019,
+      "openInterest": 31738.444,
       "src": "Kraken perp"
     }
   ],
@@ -33,6 +33,13 @@
       "link": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
       "publishedAt": "2026-11-07T16:51:00.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Vitalik ‘pivots’ ETH to store of value, crypto suffers after US midterms: Hodler’s Digest",
+      "link": "https://cointelegraph.com/magazine/vitaliks-pivots-to-eth-as-a-store-of-value-us-election-weighs-on-crypto-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-08T22:59:06.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -117,16 +124,33 @@
       "link": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-07T11:10:47.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Suspicious prediction market activity seen before election poll release: NYT",
-      "link": "https://cointelegraph.com/news/suspicious-prediction-market-activity-seen-before-election-poll-release-nyt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-07T09:10:35.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-08T23:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.51,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 3.6
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-08T21:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -2.12,
+      "vsAvgMove": 22,
+      "volumeSpike": 11
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-08T21:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -4.46,
+      "vsAvgMove": 30.6,
+      "volumeSpike": 34.6
+    },
     {
       "sym": "BTC",
       "at": "2026-11-08T20:00:00.000Z",

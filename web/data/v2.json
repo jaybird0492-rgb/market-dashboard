@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-08T21:11:51.531Z",
+  "updatedAt": "2026-11-09T00:53:56.280Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "rules": "Daily Donchian 55/20 + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
@@ -14,10 +14,17 @@
   "losingStreak": 0,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
-  "daysElapsed": 11,
+  "daysElapsed": 12,
   "daysTotal": 42,
   "open": [],
-  "pending": [],
+  "pending": [
+    {
+      "sym": "ETH",
+      "side": "SHORT",
+      "signalAt": "2026-11-08T00:00:00.000Z",
+      "fillsAt": "2026-11-09T00:00:00.000Z"
+    }
+  ],
   "closed": [],
   "stats": {
     "closed": 0,
@@ -84,7 +91,11 @@
       "equity": 10000
     },
     {
-      "t": "2026-11-08T21:11:51.531Z",
+      "t": "2026-11-08T00:00:00.000Z",
+      "equity": 10000
+    },
+    {
+      "t": "2026-11-09T00:53:56.280Z",
       "equity": 10000
     }
   ],
@@ -96,33 +107,33 @@
     "totalRetPct": 99.4,
     "maxDDPct": -19.7,
     "oosExpR": 0.62,
-    "buyHoldRetPct": 363,
+    "buyHoldRetPct": 351.9,
     "buyHoldDDPct": -81.1,
     "note": "Same engine, full history, shared account — see analysis/V2_VALIDATION.md"
   },
   "lastClose": {
-    "BTC": 75867.59,
-    "ETH": 2240.24
+    "BTC": 74851.44,
+    "ETH": 2127.46
   },
   "watch": {
     "BTC": {
-      "price": 75867.59,
-      "asOf": "2026-11-07",
+      "price": 74851.44,
+      "asOf": "2026-11-08",
       "aboveSma200": true,
       "longTrigger": 87395.67,
-      "pctToLong": 15.19,
-      "shortTrigger": 74888,
-      "pctToShort": 1.31,
+      "pctToLong": 16.76,
+      "shortTrigger": 73510,
+      "pctToShort": 1.82,
       "wouldHold": null
     },
     "ETH": {
-      "price": 2240.24,
-      "asOf": "2026-11-07",
-      "aboveSma200": true,
+      "price": 2127.46,
+      "asOf": "2026-11-08",
+      "aboveSma200": false,
       "longTrigger": 2807.34,
-      "pctToLong": 25.31,
-      "shortTrigger": 2174.08,
-      "pctToShort": 3.04,
+      "pctToLong": 31.96,
+      "shortTrigger": 2060,
+      "pctToShort": 3.27,
       "wouldHold": null
     }
   }
