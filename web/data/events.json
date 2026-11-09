@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T00:53:56.492Z",
+  "updatedAt": "2026-11-09T07:30:16.139Z",
   "fearGreed": {
     "value": 29,
     "label": "Fear"
@@ -7,32 +7,88 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75087,
-      "chg24hPct": -0.78,
+      "price": 73793,
+      "chg24hPct": -2.57,
       "high24h": 76100,
       "low24h": 73342,
       "fundingPct": 0.0008,
-      "openInterest": 2534.6043,
+      "openInterest": 2553.2829,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2141.1,
-      "chg24hPct": -4.09,
+      "price": 2082.6,
+      "chg24hPct": -6.71,
       "high24h": 2243.1,
       "low24h": 2002.9,
-      "fundingPct": -0.0019,
-      "openInterest": 31738.444,
+      "fundingPct": -0.0002,
+      "openInterest": 30093.311,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
     {
       "source": "CoinDesk",
+      "title": "Solana moves to scrap the transaction feature used in the $270 million Drift hack",
+      "link": "https://www.coindesk.com/tech/2026/11/09/solana-moves-to-scrap-the-transaction-feature-used-in-the-usd270-million-drift-hack",
+      "publishedAt": "2026-11-09T06:36:45.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
       "link": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
       "publishedAt": "2026-11-07T16:51:00.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "SpaceX proposes a $24 billion Texas supercomputer worth 17 times its bitcoin pile",
+      "link": "https://www.coindesk.com/markets/2026/11/09/spacex-proposes-a-usd24-billion-texas-supercomputer-worth-17-times-its-bitcoin-pile",
+      "publishedAt": "2026-11-09T06:54:41.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T05:44:53.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Zcash devs propose another block time cut days after NU7 upgrade",
+      "link": "https://cointelegraph.com/news/zcash-developers-propose-20-second-blocks-nu7-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T05:36:08.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Two rival Ethereum proposals aim to stop Glamsterdam breaking old contracts",
+      "link": "https://www.coindesk.com/tech/2026/11/09/two-rival-ethereum-proposals-aim-to-stop-glamsterdam-breaking-old-contracts",
+      "publishedAt": "2026-11-09T05:16:54.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Binance's bitcoin mining pool finds just one block in a week as shutdown nears",
+      "link": "https://www.coindesk.com/tech/2026/11/09/binance-s-bitcoin-mining-pool-finds-just-one-block-in-a-week-as-shutdown-nears",
+      "publishedAt": "2026-11-09T04:54:39.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "tBTC bridge partially resumes as $120M Aave reserve remains frozen",
+      "link": "https://cointelegraph.com/news/tbtc-bridge-resumes-aave-120m-reserve-frozen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T04:03:08.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin drops, then pops as Nvidia cheating scandal and failed Iran talks trigger volatility",
+      "link": "https://www.coindesk.com/markets/2026/11/09/bitcoin-drops-then-pops-as-nvidia-cheating-scandal-and-failed-iran-talks-trigger-volatility",
+      "publishedAt": "2026-11-09T03:21:49.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -57,13 +113,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-08T13:33:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "Binance France emails announce closure of its users’ accounts on Dec. 31",
       "link": "https://cointelegraph.com/news/binance-france-emails-announce-closure-of-its-users-accounts-on-dec-31?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-08T12:57:51.000Z",
@@ -75,58 +124,17 @@
       "link": "https://www.coindesk.com/markets/2026/11/08/these-finland-homes-get-free-heat-from-bitcoin-miners-as-long-as-btc-stays-above-usd70-000",
       "publishedAt": "2026-11-08T12:55:59.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Amsterdam protesters break into Microsoft data center construction site: Report",
-      "link": "https://cointelegraph.com/news/amsterdam-data-center-protesters-break-into-construction-site-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-08T09:48:48.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance’s  finance chief Kaiser Ng to leave company, report says",
-      "link": "https://cointelegraph.com/news/binances-finance-chief-kaiser-ng-to-leave-company-report-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-08T08:12:56.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance users in some European countries told to pull crypto before fees kick in, with accounts closing by year end",
-      "link": "https://www.coindesk.com/business/2026/11/07/binance-users-in-some-european-countries-told-to-pull-crypto-before-fees-kick-in-with-accounts-closing-by-year-end",
-      "publishedAt": "2026-11-07T19:13:16.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
-      "link": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
-      "publishedAt": "2026-11-07T17:36:46.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
-      "link": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-07T14:16:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin holders have received eCash — What can you do with it?",
-      "link": "https://cointelegraph.com/magazine/bitcoin-holders-have-received-ecash-what-can-you-with-it?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-07T13:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "US sanctions Canadian money-exchange firms over Iran ties",
-      "link": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-07T11:10:47.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-09T00:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.79,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 2.5
+    },
     {
       "sym": "BTC",
       "at": "2026-11-08T23:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": -0.5,
       "vsAvgMove": 4,
       "volumeSpike": 1.4
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-07T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.42,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 0.8
     }
   ],
   "errors": []
