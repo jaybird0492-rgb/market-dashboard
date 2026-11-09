@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T07:30:16.139Z",
+  "updatedAt": "2026-11-09T13:33:32.154Z",
   "fearGreed": {
     "value": 29,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 73793,
-      "chg24hPct": -2.57,
-      "high24h": 76100,
+      "price": 74619,
+      "chg24hPct": -1.71,
+      "high24h": 76006,
       "low24h": 73342,
       "fundingPct": 0.0008,
-      "openInterest": 2553.2829,
+      "openInterest": 2567.8407,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2082.6,
-      "chg24hPct": -6.71,
-      "high24h": 2243.1,
+      "price": 2117.3,
+      "chg24hPct": -5.41,
+      "high24h": 2240.7,
       "low24h": 2002.9,
-      "fundingPct": -0.0002,
-      "openInterest": 30093.311,
+      "fundingPct": 0.0005,
+      "openInterest": 29563.646,
       "src": "Kraken perp"
     }
   ],
@@ -43,90 +43,106 @@
     },
     {
       "source": "CoinDesk",
-      "title": "SpaceX proposes a $24 billion Texas supercomputer worth 17 times its bitcoin pile",
-      "link": "https://www.coindesk.com/markets/2026/11/09/spacex-proposes-a-usd24-billion-texas-supercomputer-worth-17-times-its-bitcoin-pile",
-      "publishedAt": "2026-11-09T06:54:41.000Z",
+      "title": "Nvidia-led tech selloff weighs on crypto majors",
+      "link": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
+      "publishedAt": "2026-11-09T11:42:04.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Solana set for its first tokenized stock venue under SEC framework, listing Galaxy",
+      "link": "https://www.coindesk.com/business/2026/11/06/solana-lset-for-its-first-tokenized-stock-venue-under-sec-framework-listing-galaxy",
+      "publishedAt": "2026-11-09T12:41:35.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Trump says he knows ‘nothing’ about World Liberty’s UAE ties as Justin Sun challenges filings",
+      "link": "https://www.coindesk.com/business/2026/11/09/trump-says-he-knows-nothing-about-world-liberty-s-uae-ties-as-justin-sun-challenges-filings",
+      "publishedAt": "2026-11-09T12:37:13.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin bulls can't rely on ETF flows",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/09/bitcoin-bulls-can-t-rely-on-etf-flows",
+      "publishedAt": "2026-11-09T12:30:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T05:44:53.000Z",
+      "title": "EU taps industry to set standards for tokenized securities",
+      "link": "https://cointelegraph.com/news/eu-nominations-tokenization-standards-group?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T12:27:06.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Zcash devs propose another block time cut days after NU7 upgrade",
-      "link": "https://cointelegraph.com/news/zcash-developers-propose-20-second-blocks-nu7-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T05:36:08.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Two rival Ethereum proposals aim to stop Glamsterdam breaking old contracts",
-      "link": "https://www.coindesk.com/tech/2026/11/09/two-rival-ethereum-proposals-aim-to-stop-glamsterdam-breaking-old-contracts",
-      "publishedAt": "2026-11-09T05:16:54.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance's bitcoin mining pool finds just one block in a week as shutdown nears",
-      "link": "https://www.coindesk.com/tech/2026/11/09/binance-s-bitcoin-mining-pool-finds-just-one-block-in-a-week-as-shutdown-nears",
-      "publishedAt": "2026-11-09T04:54:39.000Z",
+      "title": "Coinbase’s US national trust bank charter takes effect",
+      "link": "https://cointelegraph.com/news/coinbase-occ-approval-national-trust-bank-charter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T11:38:52.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "tBTC bridge partially resumes as $120M Aave reserve remains frozen",
-      "link": "https://cointelegraph.com/news/tbtc-bridge-resumes-aave-120m-reserve-frozen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T04:03:08.000Z",
+      "title": "Robinhood opens access to US IPOs for UK retail investors",
+      "link": "https://cointelegraph.com/news/robinhood-us-ipo-access-uk-retail-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T11:14:08.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin drops, then pops as Nvidia cheating scandal and failed Iran talks trigger volatility",
-      "link": "https://www.coindesk.com/markets/2026/11/09/bitcoin-drops-then-pops-as-nvidia-cheating-scandal-and-failed-iran-talks-trigger-volatility",
-      "publishedAt": "2026-11-09T03:21:49.000Z",
+      "title": "Zcash developers want 20-second blocks just days after major speed upgrade",
+      "link": "https://www.coindesk.com/tech/2026/11/09/zcash-developers-want-20-second-blocks-just-days-after-major-speed-upgrade",
+      "publishedAt": "2026-11-09T10:52:49.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live news: Bitcoin slides to $74,000 as Huang scandal weighs on Nvidia",
+      "link": "https://www.coindesk.com/tech/2026/11/09/live-news-nvidia-slides-on-ceo-allegations-as-bitcoin-hovers-just-above-its-200-day-average",
+      "publishedAt": "2026-11-09T10:51:48.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Vitalik ‘pivots’ ETH to store of value, crypto suffers after US midterms: Hodler’s Digest",
-      "link": "https://cointelegraph.com/magazine/vitaliks-pivots-to-eth-as-a-store-of-value-us-election-weighs-on-crypto-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-08T22:59:06.000Z",
+      "title": "BTC price eyes $73K amid Nvidia volatility: Three things to know in Bitcoin this week",
+      "link": "https://cointelegraph.com/markets/btc-price-nvidia-volatility-three-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T10:03:40.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "What the election results mean for crypto: State of Crypto",
-      "link": "https://www.coindesk.com/policy/2026/11/08/what-the-election-results-mean-for-crypto-state-of-crypto",
-      "publishedAt": "2026-11-08T19:30:00.000Z",
+      "title": "Coinbase gets full U.S. trust charter from federal banking regulator",
+      "link": "https://www.coindesk.com/policy/2026/11/09/coinbase-gets-full-u-s-trust-charter-from-federal-banking-regulator",
+      "publishedAt": "2026-11-09T10:00:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Stablecoin growth has stalled. The payments boom hasn't",
-      "link": "https://www.coindesk.com/business/2026/11/08/stablecoin-growth-has-stalled-the-payments-boom-hasn-t",
-      "publishedAt": "2026-11-08T19:16:42.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance France emails announce closure of its users’ accounts on Dec. 31",
-      "link": "https://cointelegraph.com/news/binance-france-emails-announce-closure-of-its-users-accounts-on-dec-31?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-08T12:57:51.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "These Finland homes get free heat from bitcoin miners (as long as BTC stays above $70,000)",
-      "link": "https://www.coindesk.com/markets/2026/11/08/these-finland-homes-get-free-heat-from-bitcoin-miners-as-long-as-btc-stays-above-usd70-000",
-      "publishedAt": "2026-11-08T12:55:59.000Z",
+      "title": "U.S. inflation, corporate earnings: Crypto Week Ahead",
+      "link": "https://www.coindesk.com/markets/2026/11/09/u-s-inflation-corporate-earnings-crypto-week-ahead",
+      "publishedAt": "2026-11-09T09:33:27.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-09T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.95,
+      "vsAvgMove": 3.2,
+      "volumeSpike": 2.7
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-09T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.39,
+      "vsAvgMove": 3.3,
+      "volumeSpike": 2.9
+    },
     {
       "sym": "ETH",
       "at": "2026-11-09T00:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": 0.25,
       "vsAvgMove": 3,
       "volumeSpike": 0.6
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-08T16:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.39,
-      "vsAvgMove": 5.3,
-      "volumeSpike": 1.3
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-08T16:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.5,
-      "vsAvgMove": 4,
-      "volumeSpike": 1.4
     }
   ],
   "errors": []
