@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T13:33:32.154Z",
+  "updatedAt": "2026-11-09T17:48:57.319Z",
   "fearGreed": {
     "value": 29,
     "label": "Fear"
@@ -7,26 +7,47 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 74619,
-      "chg24hPct": -1.71,
-      "high24h": 76006,
+      "price": 74672,
+      "chg24hPct": -1.34,
+      "high24h": 75882,
       "low24h": 73342,
-      "fundingPct": 0.0008,
-      "openInterest": 2567.8407,
+      "fundingPct": 0.0001,
+      "openInterest": 2555.8844,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2117.3,
-      "chg24hPct": -5.41,
-      "high24h": 2240.7,
+      "price": 2122.3,
+      "chg24hPct": -4.71,
+      "high24h": 2234.6,
       "low24h": 2002.9,
-      "fundingPct": 0.0005,
-      "openInterest": 29563.646,
+      "fundingPct": -0.0005,
+      "openInterest": 29705.882,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
+      "link": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
+      "publishedAt": "2026-11-09T15:00:44.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Analysts see no broader ‘contagion’ from $6.3B Binance hack",
+      "link": "https://cointelegraph.com/markets/analysts-no-contagion-effect-63b-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T13:52:46.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "The $2.85B Binance hackers lost shows why the UK needs stablecoin freeze rules",
+      "link": "https://cointelegraph.com/opinion/285b-binance-hackers-lost-shows-why-uk-needs-stablecoin-freeze-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T13:30:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Solana moves to scrap the transaction feature used in the $270 million Drift hack",
@@ -36,17 +57,59 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
-      "link": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
-      "publishedAt": "2026-11-07T16:51:00.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
       "title": "Nvidia-led tech selloff weighs on crypto majors",
       "link": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
       "publishedAt": "2026-11-09T11:42:04.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live news: Bitcoin narrows loss as Nasdaq surges more than 2%",
+      "link": "https://www.coindesk.com/tech/2026/11/09/live-news-nvidia-slides-on-ceo-allegations-as-bitcoin-hovers-just-above-its-200-day-average",
+      "publishedAt": "2026-11-09T10:51:48.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin, tech stocks brush off Nvidia nerves as analyst mulls $68K target",
+      "link": "https://cointelegraph.com/markets/bitcoin-stocks-nvidia-analyst-68k-target?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T17:13:25.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "A Bitcoin block just neared a 2015 transaction record, but paid only $180 in fees",
+      "link": "https://www.coindesk.com/tech/2026/11/09/a-bitcoin-block-just-neared-a-2015-transaction-record-but-paid-only-usd180-in-fees",
+      "publishedAt": "2026-11-09T16:19:45.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Google’s AI chip push adds more pressure on Nvidia",
+      "link": "https://www.coindesk.com/markets/2026/11/09/google-s-ai-chip-push-adds-more-pressure-on-nvidia",
+      "publishedAt": "2026-11-09T15:20:05.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "NYSE picks Avalanche to settle tokenized stocks amid Wall Street's blockchain race",
+      "link": "https://www.coindesk.com/business/2026/11/09/nyse-picks-avalanche-to-settle-tokenized-stocks-amid-wall-street-s-blockchain-race",
+      "publishedAt": "2026-11-09T13:40:06.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T13:36:56.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Strategy buys 1,036 Bitcoin as BTC holdings climb to 850,364",
+      "link": "https://cointelegraph.com/news/strategy-buy-1036-bitcoin-holdings-850364-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T13:29:47.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -60,69 +123,6 @@
       "title": "Trump says he knows ‘nothing’ about World Liberty’s UAE ties as Justin Sun challenges filings",
       "link": "https://www.coindesk.com/business/2026/11/09/trump-says-he-knows-nothing-about-world-liberty-s-uae-ties-as-justin-sun-challenges-filings",
       "publishedAt": "2026-11-09T12:37:13.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin bulls can't rely on ETF flows",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/09/bitcoin-bulls-can-t-rely-on-etf-flows",
-      "publishedAt": "2026-11-09T12:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "EU taps industry to set standards for tokenized securities",
-      "link": "https://cointelegraph.com/news/eu-nominations-tokenization-standards-group?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T12:27:06.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Coinbase’s US national trust bank charter takes effect",
-      "link": "https://cointelegraph.com/news/coinbase-occ-approval-national-trust-bank-charter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T11:38:52.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Robinhood opens access to US IPOs for UK retail investors",
-      "link": "https://cointelegraph.com/news/robinhood-us-ipo-access-uk-retail-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T11:14:08.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Zcash developers want 20-second blocks just days after major speed upgrade",
-      "link": "https://www.coindesk.com/tech/2026/11/09/zcash-developers-want-20-second-blocks-just-days-after-major-speed-upgrade",
-      "publishedAt": "2026-11-09T10:52:49.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live news: Bitcoin slides to $74,000 as Huang scandal weighs on Nvidia",
-      "link": "https://www.coindesk.com/tech/2026/11/09/live-news-nvidia-slides-on-ceo-allegations-as-bitcoin-hovers-just-above-its-200-day-average",
-      "publishedAt": "2026-11-09T10:51:48.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BTC price eyes $73K amid Nvidia volatility: Three things to know in Bitcoin this week",
-      "link": "https://cointelegraph.com/markets/btc-price-nvidia-volatility-three-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T10:03:40.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Coinbase gets full U.S. trust charter from federal banking regulator",
-      "link": "https://www.coindesk.com/policy/2026/11/09/coinbase-gets-full-u-s-trust-charter-from-federal-banking-regulator",
-      "publishedAt": "2026-11-09T10:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "U.S. inflation, corporate earnings: Crypto Week Ahead",
-      "link": "https://www.coindesk.com/markets/2026/11/09/u-s-inflation-corporate-earnings-crypto-week-ahead",
-      "publishedAt": "2026-11-09T09:33:27.000Z",
       "severity": "NORMAL"
     }
   ],
