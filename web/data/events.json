@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T08:23:50.896Z",
+  "updatedAt": "2026-11-10T16:30:21.552Z",
   "fearGreed": {
     "value": 32,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 74630,
-      "chg24hPct": 0.73,
-      "high24h": 75500,
-      "low24h": 73961,
-      "fundingPct": 0.0016,
-      "openInterest": 2529.6796,
+      "price": 73148,
+      "chg24hPct": -2.16,
+      "high24h": 75344,
+      "low24h": 72787,
+      "fundingPct": 0.0007,
+      "openInterest": 2580.9905,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2109.8,
-      "chg24hPct": 0.26,
-      "high24h": 2149.7,
-      "low24h": 2097.4,
-      "fundingPct": 0.0015,
-      "openInterest": 30006.231,
+      "price": 2024.3,
+      "chg24hPct": -4.76,
+      "high24h": 2141.2,
+      "low24h": 2002.7,
+      "fundingPct": -0.0022,
+      "openInterest": 30698.717,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Coinbase, Kalshi join lawsuit backing CFTC over US stock perp futures",
+      "link": "https://cointelegraph.com/news/coinbase-kalshi-cftc-stock-perpetual-futures-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T11:44:55.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "North Korean hackers create memecoins to launder funds from Binance hack: Elliptic",
@@ -64,10 +71,24 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Solana moves to scrap the transaction feature used in the $270 million Drift hack",
-      "link": "https://www.coindesk.com/tech/2026/11/09/solana-moves-to-scrap-the-transaction-feature-used-in-the-usd270-million-drift-hack",
-      "publishedAt": "2026-11-09T06:36:45.000Z",
-      "severity": "CRITICAL"
+      "title": "U.S. CPI rose stronger than expected 0.4% in October; core rate rose 0.3%",
+      "link": "https://www.coindesk.com/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3",
+      "publishedAt": "2026-11-10T13:32:09.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin slips before U.S. inflation report as traders price in Fed rate increase",
+      "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-slips-before-u-s-inflation-report-as-traders-price-in-fed-rate-increase",
+      "publishedAt": "2026-11-10T10:48:37.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin price eyes $74K as Fed rate-hike bets hit 96% after Waller speech",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-74k-fed-rate-hike-expected-after-waller-speech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T10:08:22.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -85,111 +106,90 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live news: Crypto prices give ground even as stocks and gold surge, oil plunges",
-      "link": "https://www.coindesk.com/tech/2026/11/09/live-news-nvidia-slides-on-ceo-allegations-as-bitcoin-hovers-just-above-its-200-day-average",
-      "publishedAt": "2026-11-09T10:51:48.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BlackRock Bitcoin ETF outflows hit $1.66B over seven trading sessions",
-      "link": "https://cointelegraph.com/markets/blackrock-ibit-bitcoin-etf-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T08:02:05.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Securitize agrees to buy River One to expand into asset-backed lending",
-      "link": "https://cointelegraph.com/news/securitize-river-one-asset-backed-lending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T07:49:14.000Z",
+      "title": "Plume affiliate lands broker-dealer license to bring real U.S. assets onchain",
+      "link": "https://www.coindesk.com/markets/2026/11/10/emb-10-am-et-plume-affiliate-gets-the-legal-green-light-to-trade-regulated-security-entitlements-onchain",
+      "publishedAt": "2026-11-10T15:51:56.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "An 11-year-old Ethereum wallet moved $4.6 million and dodged a scam set up in minutes",
-      "link": "https://www.coindesk.com/tech/2026/11/10/an-11-year-old-ethereum-wallet-moved-usd4-6-million-and-dodged-a-scam-set-up-in-minutes",
-      "publishedAt": "2026-11-10T07:01:06.000Z",
+      "title": "Will stablecoins survive once the banks catch up?",
+      "link": "https://www.coindesk.com/opinion/2026/11/10/will-stablecoins-survive-once-the-banks-catch-up",
+      "publishedAt": "2026-11-10T14:00:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T06:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin miner MARA sold 13,597 BTC for $1.1 billion in six weeks, plans to sell more",
-      "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-miner-mara-sold-13-597-btc-for-usd1-1-billion-in-six-weeks-plans-to-sell-more",
-      "publishedAt": "2026-11-10T05:18:31.000Z",
+      "title": "Poland’s lower house backs sanctions bill covering crypto freezes",
+      "link": "https://cointelegraph.com/news/poland-bill-freeze-sanctions-crypto-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T13:40:39.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
     {
       "sym": "BTC",
-      "at": "2026-11-09T08:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.95,
-      "vsAvgMove": 3.2,
-      "volumeSpike": 2.7
+      "at": "2026-11-10T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.59,
+      "vsAvgMove": 5,
+      "volumeSpike": 4.4
     },
     {
       "sym": "ETH",
-      "at": "2026-11-09T08:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.39,
-      "vsAvgMove": 3.3,
-      "volumeSpike": 2.9
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-09T00:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.79,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 2.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-08T23:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.51,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 3.6
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-08T21:00:00.000Z",
+      "at": "2026-11-10T15:00:00.000Z",
       "dir": "DOWN",
-      "movePct": -2.12,
-      "vsAvgMove": 22,
-      "volumeSpike": 11
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-08T21:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -4.46,
-      "vsAvgMove": 30.6,
-      "volumeSpike": 34.6
+      "movePct": -2.82,
+      "vsAvgMove": 8,
+      "volumeSpike": 5.6
     },
     {
       "sym": "BTC",
-      "at": "2026-11-08T20:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.24,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 0.7
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-08T18:00:00.000Z",
+      "at": "2026-11-10T14:00:00.000Z",
       "dir": "UP",
-      "movePct": 0.25,
+      "movePct": 0.88,
       "vsAvgMove": 3,
-      "volumeSpike": 0.6
+      "volumeSpike": 1.6
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-10T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.83,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 1.8
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-10T13:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.87,
+      "vsAvgMove": 3.3,
+      "volumeSpike": 4.4
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-10T13:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.58,
+      "vsAvgMove": 5.9,
+      "volumeSpike": 6.6
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-10T10:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.65,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 1.9
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-10T09:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.66,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 2.3
     }
   ],
   "errors": []
