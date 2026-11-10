@@ -1,32 +1,46 @@
 {
-  "updatedAt": "2026-11-09T17:48:57.319Z",
+  "updatedAt": "2026-11-10T01:01:51.487Z",
   "fearGreed": {
-    "value": 29,
+    "value": 32,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 74672,
-      "chg24hPct": -1.34,
-      "high24h": 75882,
-      "low24h": 73342,
-      "fundingPct": 0.0001,
-      "openInterest": 2555.8844,
+      "price": 75129,
+      "chg24hPct": -0.16,
+      "high24h": 75507,
+      "low24h": 73651,
+      "fundingPct": 0.0004,
+      "openInterest": 2518.4505,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2122.3,
-      "chg24hPct": -4.71,
-      "high24h": 2234.6,
-      "low24h": 2002.9,
-      "fundingPct": -0.0005,
-      "openInterest": 29705.882,
+      "price": 2129.2,
+      "chg24hPct": -0.71,
+      "high24h": 2157.8,
+      "low24h": 2080.1,
+      "fundingPct": 0.0003,
+      "openInterest": 29401.613,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "North Korean hackers create memecoins to launder funds from Binance hack: Elliptic",
+      "link": "https://cointelegraph.com/news/north-korean-hackers-memecoins-launder-binance-hack-elliptic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T20:26:34.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Mercado Bitcoin begins post-hack reopening without a timeline for withdrawals",
+      "link": "https://cointelegraph.com/news/mercado-bitcoin-reopening-withdrawals-hack-suspended?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T18:25:29.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
@@ -64,65 +78,51 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live news: Bitcoin narrows loss as Nasdaq surges more than 2%",
+      "title": "Live news: Crypto prices give ground even as stocks and gold surge, oil plunges",
       "link": "https://www.coindesk.com/tech/2026/11/09/live-news-nvidia-slides-on-ceo-allegations-as-bitcoin-hovers-just-above-its-200-day-average",
       "publishedAt": "2026-11-09T10:51:48.000Z",
       "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin, tech stocks brush off Nvidia nerves as analyst mulls $68K target",
-      "link": "https://cointelegraph.com/markets/bitcoin-stocks-nvidia-analyst-68k-target?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T17:13:25.000Z",
+      "title": "HIVE’s Bitcoin output jumps 49%, but mining revenue still falls",
+      "link": "https://cointelegraph.com/news/hives-bitcoin-output-jumps-49-but-mining-revenue-falls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T00:42:39.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "A Bitcoin block just neared a 2015 transaction record, but paid only $180 in fees",
-      "link": "https://www.coindesk.com/tech/2026/11/09/a-bitcoin-block-just-neared-a-2015-transaction-record-but-paid-only-usd180-in-fees",
-      "publishedAt": "2026-11-09T16:19:45.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Google’s AI chip push adds more pressure on Nvidia",
-      "link": "https://www.coindesk.com/markets/2026/11/09/google-s-ai-chip-push-adds-more-pressure-on-nvidia",
-      "publishedAt": "2026-11-09T15:20:05.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "NYSE picks Avalanche to settle tokenized stocks amid Wall Street's blockchain race",
-      "link": "https://www.coindesk.com/business/2026/11/09/nyse-picks-avalanche-to-settle-tokenized-stocks-amid-wall-street-s-blockchain-race",
-      "publishedAt": "2026-11-09T13:40:06.000Z",
+      "title": "Securitize pushes into $6 trillion asset-backed finance market with River One acquisition",
+      "link": "https://www.coindesk.com/business/2026/11/09/securitize-pushes-into-usd6-trillion-asset-backed-finance-market-with-river-one-acquisition",
+      "publishedAt": "2026-11-09T22:56:27.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T13:36:56.000Z",
+      "publishedAt": "2026-11-09T22:06:26.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Strategy buys 1,036 Bitcoin as BTC holdings climb to 850,364",
-      "link": "https://cointelegraph.com/news/strategy-buy-1036-bitcoin-holdings-850364-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T13:29:47.000Z",
+      "title": "Should you leave Australia to avoid paying 47% tax on crypto gains?",
+      "link": "https://cointelegraph.com/magazine/should-you-leave-australia-to-avoid-47-tax-on-crypto-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T21:00:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Formation Securities plans Solana stock trading venue under SEC exemption",
+      "link": "https://cointelegraph.com/news/formation-securities-solana-stock-trading-venue-sec-exemption?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-09T19:52:34.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Solana set for its first tokenized stock venue under SEC framework, listing Galaxy",
-      "link": "https://www.coindesk.com/business/2026/11/06/solana-lset-for-its-first-tokenized-stock-venue-under-sec-framework-listing-galaxy",
-      "publishedAt": "2026-11-09T12:41:35.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Trump says he knows ‘nothing’ about World Liberty’s UAE ties as Justin Sun challenges filings",
-      "link": "https://www.coindesk.com/business/2026/11/09/trump-says-he-knows-nothing-about-world-liberty-s-uae-ties-as-justin-sun-challenges-filings",
-      "publishedAt": "2026-11-09T12:37:13.000Z",
+      "title": "Robinhood backs tokenization of its stock on OKX–ICE platform even as most companies opt out",
+      "link": "https://www.coindesk.com/business/2026/11/09/robinhood-backs-tokenization-of-its-stock-on-okx-ice-platform-even-as-most-companies-opt-out",
+      "publishedAt": "2026-11-09T19:36:15.000Z",
       "severity": "NORMAL"
     }
   ],
