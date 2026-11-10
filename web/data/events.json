@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T01:01:51.487Z",
+  "updatedAt": "2026-11-10T08:23:50.896Z",
   "fearGreed": {
     "value": 32,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 75129,
-      "chg24hPct": -0.16,
-      "high24h": 75507,
-      "low24h": 73651,
-      "fundingPct": 0.0004,
-      "openInterest": 2518.4505,
+      "price": 74630,
+      "chg24hPct": 0.73,
+      "high24h": 75500,
+      "low24h": 73961,
+      "fundingPct": 0.0016,
+      "openInterest": 2529.6796,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2129.2,
-      "chg24hPct": -0.71,
-      "high24h": 2157.8,
-      "low24h": 2080.1,
-      "fundingPct": 0.0003,
-      "openInterest": 29401.613,
+      "price": 2109.8,
+      "chg24hPct": 0.26,
+      "high24h": 2149.7,
+      "low24h": 2097.4,
+      "fundingPct": 0.0015,
+      "openInterest": 30006.231,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough",
+      "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief-may-not-be-enough",
+      "publishedAt": "2026-11-10T03:22:26.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Nvidia-led tech selloff weighs on crypto majors",
       "link": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
       "publishedAt": "2026-11-09T11:42:04.000Z",
@@ -85,44 +92,37 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "HIVE’s Bitcoin output jumps 49%, but mining revenue still falls",
-      "link": "https://cointelegraph.com/news/hives-bitcoin-output-jumps-49-but-mining-revenue-falls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T00:42:39.000Z",
+      "title": "BlackRock Bitcoin ETF outflows hit $1.66B over seven trading sessions",
+      "link": "https://cointelegraph.com/markets/blackrock-ibit-bitcoin-etf-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T08:02:05.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Securitize agrees to buy River One to expand into asset-backed lending",
+      "link": "https://cointelegraph.com/news/securitize-river-one-asset-backed-lending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T07:49:14.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Securitize pushes into $6 trillion asset-backed finance market with River One acquisition",
-      "link": "https://www.coindesk.com/business/2026/11/09/securitize-pushes-into-usd6-trillion-asset-backed-finance-market-with-river-one-acquisition",
-      "publishedAt": "2026-11-09T22:56:27.000Z",
+      "title": "An 11-year-old Ethereum wallet moved $4.6 million and dodged a scam set up in minutes",
+      "link": "https://www.coindesk.com/tech/2026/11/10/an-11-year-old-ethereum-wallet-moved-usd4-6-million-and-dodged-a-scam-set-up-in-minutes",
+      "publishedAt": "2026-11-10T07:01:06.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T22:06:26.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Should you leave Australia to avoid paying 47% tax on crypto gains?",
-      "link": "https://cointelegraph.com/magazine/should-you-leave-australia-to-avoid-47-tax-on-crypto-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T21:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Formation Securities plans Solana stock trading venue under SEC exemption",
-      "link": "https://cointelegraph.com/news/formation-securities-solana-stock-trading-venue-sec-exemption?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T19:52:34.000Z",
+      "publishedAt": "2026-11-10T06:00:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Robinhood backs tokenization of its stock on OKX–ICE platform even as most companies opt out",
-      "link": "https://www.coindesk.com/business/2026/11/09/robinhood-backs-tokenization-of-its-stock-on-okx-ice-platform-even-as-most-companies-opt-out",
-      "publishedAt": "2026-11-09T19:36:15.000Z",
+      "title": "Bitcoin miner MARA sold 13,597 BTC for $1.1 billion in six weeks, plans to sell more",
+      "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-miner-mara-sold-13-597-btc-for-usd1-1-billion-in-six-weeks-plans-to-sell-more",
+      "publishedAt": "2026-11-10T05:18:31.000Z",
       "severity": "NORMAL"
     }
   ],
