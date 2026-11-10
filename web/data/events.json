@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T16:30:21.552Z",
+  "updatedAt": "2026-11-10T21:55:16.677Z",
   "fearGreed": {
     "value": 32,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 73148,
-      "chg24hPct": -2.16,
+      "price": 73772,
+      "chg24hPct": -1.62,
       "high24h": 75344,
-      "low24h": 72787,
-      "fundingPct": 0.0007,
-      "openInterest": 2580.9905,
+      "low24h": 72665,
+      "fundingPct": 0.0016,
+      "openInterest": 2650.4668,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2024.3,
-      "chg24hPct": -4.76,
-      "high24h": 2141.2,
+      "price": 2055.1,
+      "chg24hPct": -3.46,
+      "high24h": 2134.8,
       "low24h": 2002.7,
-      "fundingPct": -0.0022,
-      "openInterest": 30698.717,
+      "fundingPct": -0.0012,
+      "openInterest": 31544.254,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Mercado Bitcoin to resume cash withdrawals after $49M hack",
+      "link": "https://cointelegraph.com/news/pix-withdrawals-resume-mercado-bitcoin-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T18:12:07.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Coinbase, Kalshi join lawsuit backing CFTC over US stock perp futures",
@@ -64,10 +71,17 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "The $2.85B Binance hackers lost shows why the UK needs stablecoin freeze rules",
-      "link": "https://cointelegraph.com/opinion/285b-binance-hackers-lost-shows-why-uk-needs-stablecoin-freeze-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T13:30:00.000Z",
-      "severity": "CRITICAL"
+      "title": "Hot US inflation raises odds of half-point Fed hike in December",
+      "link": "https://cointelegraph.com/news/hot-us-inflation-raises-rate-hike-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T17:31:09.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin nears 11-week low after ‘discouraging’ US CPI inflation beat",
+      "link": "https://cointelegraph.com/markets/bitcoin-11-week-low-discouraging-us-cpi-inflation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T16:25:03.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -98,31 +112,17 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Nvidia-led tech selloff weighs on crypto majors",
-      "link": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
-      "publishedAt": "2026-11-09T11:42:04.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Plume affiliate lands broker-dealer license to bring real U.S. assets onchain",
-      "link": "https://www.coindesk.com/markets/2026/11/10/emb-10-am-et-plume-affiliate-gets-the-legal-green-light-to-trade-regulated-security-entitlements-onchain",
-      "publishedAt": "2026-11-10T15:51:56.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Will stablecoins survive once the banks catch up?",
-      "link": "https://www.coindesk.com/opinion/2026/11/10/will-stablecoins-survive-once-the-banks-catch-up",
-      "publishedAt": "2026-11-10T14:00:00.000Z",
+      "source": "Cointelegraph",
+      "title": "Can crypto trust firms compete with banks in US derivatives settlements?",
+      "link": "https://cointelegraph.com/news/crypto-trust-firms-compete-banks-us-derivatives-settlements?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T21:34:40.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Poland’s lower house backs sanctions bill covering crypto freezes",
-      "link": "https://cointelegraph.com/news/poland-bill-freeze-sanctions-crypto-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T13:40:39.000Z",
+      "title": "Across Protocol warns users to avoid app amid reports of drained wallets",
+      "link": "https://cointelegraph.com/news/across-protocol-warns-avoid-app-drained-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T21:24:36.000Z",
       "severity": "NORMAL"
     }
   ],
