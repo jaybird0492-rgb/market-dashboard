@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T16:26:03.017Z",
+  "updatedAt": "2026-11-11T22:53:39.278Z",
   "fearGreed": {
     "value": 29,
     "label": "Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 74223,
-      "chg24hPct": 1.3,
-      "high24h": 74424,
-      "low24h": 72665,
-      "fundingPct": 0.0017,
-      "openInterest": 2609.2137,
+      "price": 73851,
+      "chg24hPct": 0.15,
+      "high24h": 74730,
+      "low24h": 73131,
+      "fundingPct": 0.001,
+      "openInterest": 2565.4852,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2077.6,
-      "chg24hPct": 2.65,
-      "high24h": 2088.4,
-      "low24h": 2007.6,
-      "fundingPct": 0.0019,
-      "openInterest": 30108.858,
+      "price": 2053.7,
+      "chg24hPct": 0.21,
+      "high24h": 2101.9,
+      "low24h": 2040.4,
+      "fundingPct": 0.0008,
+      "openInterest": 28720.978,
       "src": "Kraken perp"
     }
   ],
@@ -49,31 +49,10 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Mercado Bitcoin to resume cash withdrawals after $49M hack",
-      "link": "https://cointelegraph.com/news/pix-withdrawals-resume-mercado-bitcoin-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T18:12:07.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
       "title": "Bitcoin barely flinches at hot CPI as ETF selling slows",
       "link": "https://www.coindesk.com/daybook-us/2026/11/11/bitcoin-barely-flinches-at-hot-cpi-as-etf-selling-slows",
       "publishedAt": "2026-11-11T12:19:30.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Hot US inflation raises odds of half-point Fed hike in December",
-      "link": "https://cointelegraph.com/news/hot-us-inflation-raises-rate-hike-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T17:31:09.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin nears 11-week low after ‘discouraging’ US CPI inflation beat",
-      "link": "https://cointelegraph.com/markets/bitcoin-11-week-low-discouraging-us-cpi-inflation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T16:25:03.000Z",
       "severity": "HIGH"
     },
     {
@@ -91,38 +70,59 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Crypto Long & Short: The GENIUS Act’s guarantees don’t cover DeFi lending",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/11/11/crypto-long-and-short-the-genius-act-s-guarantees-don-t-cover-defi-lending",
-      "publishedAt": "2026-11-11T16:00:45.000Z",
-      "severity": "NORMAL"
-    },
-    {
       "source": "Cointelegraph",
-      "title": "Deutsche Bank launches crypto custody for companies and institutions",
-      "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T14:02:18.000Z",
+      "title": "Nvidia preparing to oust CEO Jensen Huang: WSJ",
+      "link": "https://cointelegraph.com/news/nvidia-preparing-to-oust-ceo-jensen-huang-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T22:44:47.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T13:38:15.000Z",
+      "publishedAt": "2026-11-11T22:15:26.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin Covenants Part 5: MATT and OP_CHECKCONTRACTVERIFY — How Bitcoin could carry state across transactions",
-      "link": "https://cointelegraph.com/research/bitcoin-covenants-part-5-matt-op-ccv?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T13:26:18.000Z",
+      "title": "Uncalled US House races could send more crypto allies to Congress",
+      "link": "https://cointelegraph.com/news/uncalled-midterm-races-add-more-crypto-supporters-congress?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T22:05:17.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates",
-      "link": "https://cointelegraph.com/markets/coreweave-stock-surges-pre-market-q3-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T13:02:30.000Z",
+      "title": "Nomura explores sale of crypto unit Laser Digital: Bloomberg",
+      "link": "https://cointelegraph.com/news/nomura-sale-crypto-unit-laser-digital?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T21:36:01.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "US data center restrictions could give Bitcoin miners an edge in AI, though challenges remain",
+      "link": "https://cointelegraph.com/news/us-data-center-restrictions-bitcoin-miners-edge-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T20:43:19.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "OKXICE moves ahead with tokenized stocks as blue chips push back",
+      "link": "https://cointelegraph.com/news/okxice-tokenized-stocks-blue-chips-push-back?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T18:30:43.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound",
+      "link": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T16:26:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Crypto Long & Short: The GENIUS Act’s guarantees don’t cover DeFi lending",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/11/11/crypto-long-and-short-the-genius-act-s-guarantees-don-t-cover-defi-lending",
+      "publishedAt": "2026-11-11T16:00:45.000Z",
       "severity": "NORMAL"
     }
   ],
