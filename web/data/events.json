@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T08:23:19.208Z",
+  "updatedAt": "2026-11-11T16:26:03.017Z",
   "fearGreed": {
     "value": 29,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 73858,
-      "chg24hPct": -1.06,
-      "high24h": 74758,
+      "price": 74223,
+      "chg24hPct": 1.3,
+      "high24h": 74424,
       "low24h": 72665,
-      "fundingPct": 0.0022,
-      "openInterest": 2705.959,
+      "fundingPct": 0.0017,
+      "openInterest": 2609.2137,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2061.7,
-      "chg24hPct": -2.32,
-      "high24h": 2116,
-      "low24h": 2002.7,
-      "fundingPct": 0.0016,
-      "openInterest": 29987.582,
+      "price": 2077.6,
+      "chg24hPct": 2.65,
+      "high24h": 2088.4,
+      "low24h": 2007.6,
+      "fundingPct": 0.0019,
+      "openInterest": 30108.858,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Paraguay bank collapse shows stablecoins can offer a lifeline... of sorts",
+      "link": "https://cointelegraph.com/magazine/paraguay-bank-collapse-shows-stablecoins-can-offer-a-lifeline-of-sorts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T13:30:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Initia confirms second exploit in 3 weeks, $3.27M stolen in latest attack",
@@ -49,25 +56,11 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Coinbase, Kalshi join lawsuit backing CFTC over US stock perp futures",
-      "link": "https://cointelegraph.com/news/coinbase-kalshi-cftc-stock-perpetual-futures-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T11:44:55.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "North Korean hackers create memecoins to launder funds from Binance hack: Elliptic",
-      "link": "https://cointelegraph.com/news/north-korean-hackers-memecoins-launder-binance-hack-elliptic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T20:26:34.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
-      "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
-      "link": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
-      "publishedAt": "2026-11-09T15:00:44.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin barely flinches at hot CPI as ETF selling slows",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/11/bitcoin-barely-flinches-at-hot-cpi-as-etf-selling-slows",
+      "publishedAt": "2026-11-11T12:19:30.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -98,31 +91,38 @@
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Bitcoin price eyes $74K as Fed rate-hike bets hit 96% after Waller speech",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-74k-fed-rate-hike-expected-after-waller-speech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T10:08:22.000Z",
-      "severity": "HIGH"
+      "source": "CoinDesk",
+      "title": "Crypto Long & Short: The GENIUS Act’s guarantees don’t cover DeFi lending",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/11/11/crypto-long-and-short-the-genius-act-s-guarantees-don-t-cover-defi-lending",
+      "publishedAt": "2026-11-11T16:00:45.000Z",
+      "severity": "NORMAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough",
-      "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief-may-not-be-enough",
-      "publishedAt": "2026-11-10T03:22:26.000Z",
-      "severity": "HIGH"
+      "source": "Cointelegraph",
+      "title": "Deutsche Bank launches crypto custody for companies and institutions",
+      "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T14:02:18.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T06:00:00.000Z",
+      "publishedAt": "2026-11-11T13:38:15.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Crypto ally Tom Emmer elected House GOP minority whip",
-      "link": "https://cointelegraph.com/news/crypto-ally-tom-emmer-elected-house-gop-minority-whip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T03:07:45.000Z",
+      "title": "Bitcoin Covenants Part 5: MATT and OP_CHECKCONTRACTVERIFY — How Bitcoin could carry state across transactions",
+      "link": "https://cointelegraph.com/research/bitcoin-covenants-part-5-matt-op-ccv?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T13:26:18.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "CoreWeave stock jumps 15% premarket after Q3 revenue beats estimates",
+      "link": "https://cointelegraph.com/markets/coreweave-stock-surges-pre-market-q3-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T13:02:30.000Z",
       "severity": "NORMAL"
     }
   ],
