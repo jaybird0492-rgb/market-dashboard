@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-10T21:55:16.677Z",
+  "updatedAt": "2026-11-11T01:37:57.382Z",
   "fearGreed": {
-    "value": 32,
+    "value": 29,
     "label": "Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 73772,
-      "chg24hPct": -1.62,
-      "high24h": 75344,
+      "price": 73803,
+      "chg24hPct": -1.4,
+      "high24h": 75062,
       "low24h": 72665,
-      "fundingPct": 0.0016,
-      "openInterest": 2650.4668,
+      "fundingPct": 0.0019,
+      "openInterest": 2638.1364,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2055.1,
-      "chg24hPct": -3.46,
-      "high24h": 2134.8,
+      "price": 2057.3,
+      "chg24hPct": -2.98,
+      "high24h": 2129.5,
       "low24h": 2002.7,
-      "fundingPct": -0.0012,
-      "openInterest": 31544.254,
+      "fundingPct": 0.0003,
+      "openInterest": 31173.923,
       "src": "Kraken perp"
     }
   ],
@@ -60,13 +60,6 @@
       "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
       "link": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
       "publishedAt": "2026-11-09T15:00:44.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Analysts see no broader ‘contagion’ from $6.3B Binance hack",
-      "link": "https://cointelegraph.com/markets/analysts-no-contagion-effect-63b-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T13:52:46.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -113,16 +106,23 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Can crypto trust firms compete with banks in US derivatives settlements?",
-      "link": "https://cointelegraph.com/news/crypto-trust-firms-compete-banks-us-derivatives-settlements?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T21:34:40.000Z",
+      "title": "LNbits rushes emergency patch after reported Bitcoin wallet thefts",
+      "link": "https://cointelegraph.com/news/lnbits-rushes-emergency-patch-after-reported-bitcoin-wallet-thefts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T01:16:58.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Across Protocol warns users to avoid app amid reports of drained wallets",
-      "link": "https://cointelegraph.com/news/across-protocol-warns-avoid-app-drained-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T21:24:36.000Z",
+      "title": "CFTC warns Kalshi of imminent charges over notification of contracts: Politico",
+      "link": "https://cointelegraph.com/news/cftc-warns-kalshi-imminent-charges-over-contracts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T23:49:51.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Global banks commit $270M to stablecoin venture targeting 2027 launch",
+      "link": "https://cointelegraph.com/news/banks-270m-project-faro-stablecoin-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-10T23:08:28.000Z",
       "severity": "NORMAL"
     }
   ],
