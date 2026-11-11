@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T01:37:57.382Z",
+  "updatedAt": "2026-11-11T08:23:19.208Z",
   "fearGreed": {
     "value": 29,
     "label": "Fear"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 73803,
-      "chg24hPct": -1.4,
-      "high24h": 75062,
+      "price": 73858,
+      "chg24hPct": -1.06,
+      "high24h": 74758,
       "low24h": 72665,
-      "fundingPct": 0.0019,
-      "openInterest": 2638.1364,
+      "fundingPct": 0.0022,
+      "openInterest": 2705.959,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2057.3,
-      "chg24hPct": -2.98,
-      "high24h": 2129.5,
+      "price": 2061.7,
+      "chg24hPct": -2.32,
+      "high24h": 2116,
       "low24h": 2002.7,
-      "fundingPct": 0.0003,
-      "openInterest": 31173.923,
+      "fundingPct": 0.0016,
+      "openInterest": 29987.582,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Initia confirms second exploit in 3 weeks, $3.27M stolen in latest attack",
+      "link": "https://cointelegraph.com/news/initia-second-crypto-exploit-three-weeks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T05:52:14.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Across Protocol restores website after hackers hijack domain",
+      "link": "https://cointelegraph.com/news/across-protocol-restores-website-after-hackers-hijack-domain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T04:42:30.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Mercado Bitcoin to resume cash withdrawals after $49M hack",
@@ -46,13 +60,6 @@
       "title": "North Korean hackers create memecoins to launder funds from Binance hack: Elliptic",
       "link": "https://cointelegraph.com/news/north-korean-hackers-memecoins-launder-binance-hack-elliptic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-09T20:26:34.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Mercado Bitcoin begins post-hack reopening without a timeline for withdrawals",
-      "link": "https://cointelegraph.com/news/mercado-bitcoin-reopening-withdrawals-hack-suspended?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-09T18:25:29.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -106,23 +113,16 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "LNbits rushes emergency patch after reported Bitcoin wallet thefts",
-      "link": "https://cointelegraph.com/news/lnbits-rushes-emergency-patch-after-reported-bitcoin-wallet-thefts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T01:16:58.000Z",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T06:00:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "CFTC warns Kalshi of imminent charges over notification of contracts: Politico",
-      "link": "https://cointelegraph.com/news/cftc-warns-kalshi-imminent-charges-over-contracts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T23:49:51.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Global banks commit $270M to stablecoin venture targeting 2027 launch",
-      "link": "https://cointelegraph.com/news/banks-270m-project-faro-stablecoin-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-10T23:08:28.000Z",
+      "title": "Crypto ally Tom Emmer elected House GOP minority whip",
+      "link": "https://cointelegraph.com/news/crypto-ally-tom-emmer-elected-house-gop-minority-whip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-11T03:07:45.000Z",
       "severity": "NORMAL"
     }
   ],
