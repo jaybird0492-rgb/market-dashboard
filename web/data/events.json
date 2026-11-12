@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T11:50:18.233Z",
+  "updatedAt": "2026-11-12T19:23:51.542Z",
   "fearGreed": {
     "value": 28,
     "label": "Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 72825,
-      "chg24hPct": -1.58,
+      "price": 71544,
+      "chg24hPct": -3.56,
       "high24h": 74730,
-      "low24h": 72820,
-      "fundingPct": -0.0002,
-      "openInterest": 2533.0323,
+      "low24h": 71139,
+      "fundingPct": 0.0016,
+      "openInterest": 2523.1621,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2021.7,
-      "chg24hPct": -1.69,
-      "high24h": 2101.9,
-      "low24h": 2021.5,
-      "fundingPct": -0.0011,
-      "openInterest": 27414.61,
+      "price": 2013.5,
+      "chg24hPct": -2.95,
+      "high24h": 2083.2,
+      "low24h": 1981.3,
+      "fundingPct": 0.0017,
+      "openInterest": 29411.822,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente",
+      "link": "https://cointelegraph.com/news/crypto-hackers-stole-57-cents-every-1-earned-ark?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T13:31:59.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "South Korea to permit crypto withdrawal freezes during hacking threats",
@@ -50,16 +57,30 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Initia confirms second exploit in 3 weeks, $3.27M stolen in latest attack",
-      "link": "https://cointelegraph.com/news/initia-second-crypto-exploit-three-weeks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T05:52:14.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin slides toward $71K as Nvidia stock tumbles after Huang steps down",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-drops-71k-stocks-nvidia-huang-resignation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T15:46:06.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Jensen Huang resigns as Nvidia CEO, exits board; shares plunge",
+      "link": "https://cointelegraph.com/news/jensen-huang-resigns-nvidia-ceo-board-member?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T13:59:02.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
       "title": "Polymarket trims workforce under investor pressure as Kalshi surges ahead",
       "link": "https://www.coindesk.com/business/2026/11/12/polymarket-trims-workforce-under-investor-pressure-as-kalshi-surges-ahead",
       "publishedAt": "2026-11-12T10:42:06.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin slumps below $72,000 as Nvidia's Huang resigns, interest rates surge",
+      "link": "https://www.coindesk.com/tech/2026/11/12/live-news-strategy-kicked-out-of-msci-indexes-as-nvidia-slump-rattles-markets",
+      "publishedAt": "2026-11-12T09:15:04.000Z",
       "severity": "HIGH"
     },
     {
@@ -71,62 +92,65 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin barely flinches at hot CPI as ETF selling slows",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/11/bitcoin-barely-flinches-at-hot-cpi-as-etf-selling-slows",
-      "publishedAt": "2026-11-11T12:19:30.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Stablecoin supply falls $14.2B in biggest 30-day drop since June 2022",
-      "link": "https://cointelegraph.com/markets/stablecoin-supply-drops-worst-slump-since-mid-2022?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T11:38:50.000Z",
+      "title": "Illinois crypto tax is impossible to enforce as written, crypto industry tells court",
+      "link": "https://www.coindesk.com/policy/2026/11/12/illinois-crypto-tax-is-impossible-to-enforce-as-written-crypto-industry-tells-court",
+      "publishedAt": "2026-11-12T16:45:52.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin dips with Nvidia as ETF outflows reach day five",
-      "link": "https://www.coindesk.com/markets/2026/11/12/bitcoin-dips-with-nvidia-as-etf-outflows-reach-day-five",
-      "publishedAt": "2026-11-12T11:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Tron and Tether bring in Chainalysis after T3 crime unit folds",
-      "link": "https://cointelegraph.com/news/tron-tether-chainalysis-cybercrime-task-force-laundering?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T11:00:00.000Z",
+      "title": "DTCC adds Solana to Wall Street tokenization plans, targeting 2027 rollout",
+      "link": "https://www.coindesk.com/business/2026/11/12/dtcc-adds-solana-to-wall-street-tokenization-plans-targeting-2027-rollout",
+      "publishedAt": "2026-11-12T15:45:48.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Nomura weighs Laser Digital sale as European losses hit four straight quarters",
-      "link": "https://www.coindesk.com/business/2026/11/12/nomura-weighs-laser-digital-sale-as-european-losses-hit-four-straight-quarters-bloomberg",
-      "publishedAt": "2026-11-12T10:32:35.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ethlabs drops Hegotá slot proposal in push for 2027 quantum readiness",
-      "link": "https://cointelegraph.com/news/ethlabs-ethereum-quantum-security-2027-quick-slots?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T10:30:29.000Z",
+      "title": "Crypto for Advisors: The blockchain built to run financial markets",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/11/12/crypto-for-advisors-the-blockchain-built-to-run-financial-markets",
+      "publishedAt": "2026-11-12T15:34:29.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "India’s financial crimes watchdog raids crypto exchanges CoinDCX and Delta over alleged illegal cross-border trades",
-      "link": "https://www.coindesk.com/policy/2026/11/12/india-s-financial-crimes-watchdog-raids-crypto-exchanges-coindcx-and-delta-over-alleged-illegal-cross-border-trades",
-      "publishedAt": "2026-11-12T10:10:48.000Z",
+      "title": "Jupiter adds Anchorage-backed USDGO to its $1 billion Solana lending platform",
+      "link": "https://www.coindesk.com/business/2026/11/12/jupiter-adds-anchorage-backed-usdgo-to-its-usd1-billion-solana-lending-platform",
+      "publishedAt": "2026-11-12T14:45:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin ETFs bleed $300 million as AI stocks slide again",
-      "link": "https://www.coindesk.com/tech/2026/11/12/live-news-strategy-kicked-out-of-msci-indexes-as-nvidia-slump-rattles-markets",
-      "publishedAt": "2026-11-12T09:15:04.000Z",
+      "title": "The next Congress will write rules for AI and emerging tech. They should use the stuff first.",
+      "link": "https://www.coindesk.com/opinion/2026/11/12/the-next-congress-will-write-rules-for-ai-and-emerging-tech-they-should-use-the-stuff-first",
+      "publishedAt": "2026-11-12T14:24:51.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-12T14:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.18,
+      "vsAvgMove": 4.6,
+      "volumeSpike": 4.9
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-12T11:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.69,
+      "vsAvgMove": 3.2,
+      "volumeSpike": 1.6
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-12T11:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.06,
+      "vsAvgMove": 3.7,
+      "volumeSpike": 2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-10T15:00:00.000Z",
@@ -166,30 +190,6 @@
       "movePct": -0.87,
       "vsAvgMove": 3.3,
       "volumeSpike": 4.4
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-10T13:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.58,
-      "vsAvgMove": 5.9,
-      "volumeSpike": 6.6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-10T10:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.65,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 1.9
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-10T09:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.66,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 2.3
     }
   ],
   "errors": []
