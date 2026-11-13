@@ -1,32 +1,46 @@
 {
-  "updatedAt": "2026-11-12T19:23:51.542Z",
+  "updatedAt": "2026-11-13T00:36:39.865Z",
   "fearGreed": {
-    "value": 28,
-    "label": "Fear"
+    "value": 20,
+    "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 71544,
-      "chg24hPct": -3.56,
-      "high24h": 74730,
-      "low24h": 71139,
-      "fundingPct": 0.0016,
-      "openInterest": 2523.1621,
+      "price": 70681,
+      "chg24hPct": -4.43,
+      "high24h": 74129,
+      "low24h": 70605,
+      "fundingPct": 0.0015,
+      "openInterest": 2581.2368,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2013.5,
-      "chg24hPct": -2.95,
-      "high24h": 2083.2,
+      "price": 2001.8,
+      "chg24hPct": -2.79,
+      "high24h": 2063.5,
       "low24h": 1981.3,
-      "fundingPct": 0.0017,
-      "openInterest": 29411.822,
+      "fundingPct": 0.0008,
+      "openInterest": 30447.141,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "North Korea's Binance hack faces U.S. crackdown as DOJ targets $1.2 billion in stolen crypto",
+      "link": "https://www.coindesk.com/policy/2026/11/12/north-korea-s-binance-hack-faces-u-s-crackdown-as-doj-targets-usd1-2-billion-in-stolen-crypto",
+      "publishedAt": "2026-11-12T22:55:52.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "NK hackers join memecoin trenches, xStocks adds Hong Kong equities: Asia Express",
+      "link": "https://cointelegraph.com/magazine/nk-hackers-join-memecoin-trenches-xstocks-adds-hong-kong-equities-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T22:29:58.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente",
@@ -50,10 +64,10 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Paraguay bank collapse shows stablecoins can offer a lifeline... of sorts",
-      "link": "https://cointelegraph.com/magazine/paraguay-bank-collapse-shows-stablecoins-can-offer-a-lifeline-of-sorts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-11T13:30:00.000Z",
-      "severity": "CRITICAL"
+      "title": "Strategy stock sheds 5% amid MSCI index removal, Bitcoin sell-off",
+      "link": "https://cointelegraph.com/markets/strategy-shares-fall-5-msci-index-removal-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T21:52:04.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -91,38 +105,24 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Illinois crypto tax is impossible to enforce as written, crypto industry tells court",
-      "link": "https://www.coindesk.com/policy/2026/11/12/illinois-crypto-tax-is-impossible-to-enforce-as-written-crypto-industry-tells-court",
-      "publishedAt": "2026-11-12T16:45:52.000Z",
+      "source": "Cointelegraph",
+      "title": "Maple Finance’s strategy rift sends co-founder, COO to the exits",
+      "link": "https://cointelegraph.com/news/maple-finance-strategy-rift-co-founder-coo-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T23:12:55.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "DTCC adds Solana to Wall Street tokenization plans, targeting 2027 rollout",
-      "link": "https://www.coindesk.com/business/2026/11/12/dtcc-adds-solana-to-wall-street-tokenization-plans-targeting-2027-rollout",
-      "publishedAt": "2026-11-12T15:45:48.000Z",
+      "title": "U.S. President Trump names CFTC, SEC nominees for first time in a year",
+      "link": "https://www.coindesk.com/policy/2026/11/12/u-s-president-names-cftc-sec-nominees-for-first-time-in-a-year",
+      "publishedAt": "2026-11-12T22:47:41.000Z",
       "severity": "NORMAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Crypto for Advisors: The blockchain built to run financial markets",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/11/12/crypto-for-advisors-the-blockchain-built-to-run-financial-markets",
-      "publishedAt": "2026-11-12T15:34:29.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Jupiter adds Anchorage-backed USDGO to its $1 billion Solana lending platform",
-      "link": "https://www.coindesk.com/business/2026/11/12/jupiter-adds-anchorage-backed-usdgo-to-its-usd1-billion-solana-lending-platform",
-      "publishedAt": "2026-11-12T14:45:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "The next Congress will write rules for AI and emerging tech. They should use the stuff first.",
-      "link": "https://www.coindesk.com/opinion/2026/11/12/the-next-congress-will-write-rules-for-ai-and-emerging-tech-they-should-use-the-stuff-first",
-      "publishedAt": "2026-11-12T14:24:51.000Z",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-12T22:11:41.000Z",
       "severity": "NORMAL"
     }
   ],
