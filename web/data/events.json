@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T15:33:25.431Z",
+  "updatedAt": "2026-11-13T21:37:33.369Z",
   "fearGreed": {
     "value": 20,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 68348,
-      "chg24hPct": -4.17,
-      "high24h": 72145,
+      "price": 68231,
+      "chg24hPct": -4.5,
+      "high24h": 71564,
       "low24h": 67422,
-      "fundingPct": 0.0016,
-      "openInterest": 2537.3325,
+      "fundingPct": 0.0014,
+      "openInterest": 2511.0082,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1920.7,
-      "chg24hPct": -3.79,
-      "high24h": 2027.7,
+      "price": 1927,
+      "chg24hPct": -4.45,
+      "high24h": 2020.2,
       "low24h": 1892.8,
-      "fundingPct": 0.0014,
-      "openInterest": 29286.615,
+      "fundingPct": 0,
+      "openInterest": 28959.266,
       "src": "Kraken perp"
     }
   ],
@@ -64,6 +64,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
+      "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
+      "publishedAt": "2026-11-13T18:39:58.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
       "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
       "publishedAt": "2026-11-13T11:52:25.000Z",
@@ -71,7 +78,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live news: Bitcoin plunges back towards bear market lows, wiping out late summer rally",
+      "title": "Live updates: Bitcoin eyes bear market lows as late summer rally mostly wiped out",
       "link": "https://www.coindesk.com/tech/2026/11/13/live-news-bitcoin-drops-below-200-week-moving-average-as-dollar-strength-pressures-risk-assets",
       "publishedAt": "2026-11-13T09:16:58.000Z",
       "severity": "HIGH"
@@ -98,31 +105,24 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Polymarket trims workforce under investor pressure as Kalshi surges ahead",
-      "link": "https://www.coindesk.com/business/2026/11/12/polymarket-trims-workforce-under-investor-pressure-as-kalshi-surges-ahead",
-      "publishedAt": "2026-11-12T10:42:06.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Kraken parent Payward says expansion outside crypto trading helps cushion revenue decline",
-      "link": "https://www.coindesk.com/business/2026/11/13/kraken-parent-payward-says-expansion-outside-crypto-trading-helps-cushion-revenue-decline",
-      "publishedAt": "2026-11-13T14:02:00.000Z",
+      "source": "Cointelegraph",
+      "title": "Kraken parent Payward gains market share as slower trading weighs on earnings",
+      "link": "https://cointelegraph.com/news/kraken-parent-payward-gains-market-share-slower-trading-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-13T21:01:39.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T13:49:44.000Z",
+      "title": "US regulators move ahead on crypto trust charters as Senate scrutiny grows",
+      "link": "https://cointelegraph.com/news/us-regulators-crypto-trust-charters-senate-scrutiny-grows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-13T20:53:20.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Arthur Hayes ‘flattered’ as Coinbase backs US stock perps",
-      "link": "https://cointelegraph.com/news/arthur-hayes-coinbase-us-stock-perps-cftc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T13:41:26.000Z",
+      "title": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
+      "link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-13T18:28:29.000Z",
       "severity": "NORMAL"
     }
   ],
