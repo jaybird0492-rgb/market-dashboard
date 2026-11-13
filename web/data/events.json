@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T00:36:39.865Z",
+  "updatedAt": "2026-11-13T07:17:43.798Z",
   "fearGreed": {
     "value": 20,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 70681,
-      "chg24hPct": -4.43,
-      "high24h": 74129,
-      "low24h": 70605,
-      "fundingPct": 0.0015,
-      "openInterest": 2581.2368,
+      "price": 69018,
+      "chg24hPct": -5.98,
+      "high24h": 73603,
+      "low24h": 67422,
+      "fundingPct": -0.0006,
+      "openInterest": 2490.1938,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 2001.8,
-      "chg24hPct": -2.79,
-      "high24h": 2063.5,
-      "low24h": 1981.3,
-      "fundingPct": 0.0008,
-      "openInterest": 30447.141,
+      "price": 1940.9,
+      "chg24hPct": -5.1,
+      "high24h": 2050.7,
+      "low24h": 1892.8,
+      "fundingPct": -0.0023,
+      "openInterest": 28483.574,
       "src": "Kraken perp"
     }
   ],
@@ -99,34 +99,82 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Nvidia perps crash 7% as CEO Jensen Huang reportedly faces the axe",
-      "link": "https://www.coindesk.com/markets/2026/11/12/bitcoin-listless-nvidia-perps-crash-7-as-ceo-jensen-huang-reportedly-faces-the-axe",
-      "publishedAt": "2026-11-12T04:03:47.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Maple Finance’s strategy rift sends co-founder, COO to the exits",
-      "link": "https://cointelegraph.com/news/maple-finance-strategy-rift-co-founder-coo-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T23:12:55.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "U.S. President Trump names CFTC, SEC nominees for first time in a year",
-      "link": "https://www.coindesk.com/policy/2026/11/12/u-s-president-names-cftc-sec-nominees-for-first-time-in-a-year",
-      "publishedAt": "2026-11-12T22:47:41.000Z",
+      "title": "Ethereum treasury firm BTCS sold ether at a loss to keep $64 million Aave loan healthy",
+      "link": "https://www.coindesk.com/markets/2026/11/13/ethereum-treasury-firm-btcs-sold-ether-at-a-loss-to-keep-usd64-million-aave-loan-healthy",
+      "publishedAt": "2026-11-13T07:05:29.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T22:11:41.000Z",
+      "publishedAt": "2026-11-13T06:16:46.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin firm Nakamoto owes Kraken $165 million, more than its entire market value",
+      "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-firm-nakamoto-owes-kraken-usd165-million-more-than-its-entire-market-value",
+      "publishedAt": "2026-11-13T06:03:41.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin slides below $70K amid thin liquidity, ETF outflows",
+      "link": "https://cointelegraph.com/markets/bitcoin-falls-below-70k-crypto-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-13T06:00:15.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-13T06:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.37,
+      "vsAvgMove": 3.6,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-13T06:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.43,
+      "vsAvgMove": 3.6,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-13T03:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.83,
+      "vsAvgMove": 6.8,
+      "volumeSpike": 5.6
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-13T03:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -2.8,
+      "vsAvgMove": 11.1,
+      "volumeSpike": 5.4
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-13T02:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -0.98,
+      "vsAvgMove": 4.2,
+      "volumeSpike": 3.4
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-13T02:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.07,
+      "vsAvgMove": 4.8,
+      "volumeSpike": 2.2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-12T14:00:00.000Z",
@@ -142,54 +190,6 @@
       "movePct": -0.69,
       "vsAvgMove": 3.2,
       "volumeSpike": 1.6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-12T11:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.06,
-      "vsAvgMove": 3.7,
-      "volumeSpike": 2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-10T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.59,
-      "vsAvgMove": 5,
-      "volumeSpike": 4.4
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-10T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -2.82,
-      "vsAvgMove": 8,
-      "volumeSpike": 5.6
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-10T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.88,
-      "vsAvgMove": 3,
-      "volumeSpike": 1.6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-10T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 0.83,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 1.8
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-10T13:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.87,
-      "vsAvgMove": 3.3,
-      "volumeSpike": 4.4
     }
   ],
   "errors": []
