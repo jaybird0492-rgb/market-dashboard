@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T19:56:55.425Z",
+  "updatedAt": "2026-11-14T23:37:29.741Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 65611,
-      "chg24hPct": -4.88,
-      "high24h": 69072,
-      "low24h": 64956,
-      "fundingPct": 0.0004,
-      "openInterest": 2283.8682,
+      "price": 63468,
+      "chg24hPct": -6.83,
+      "high24h": 68387,
+      "low24h": 63088,
+      "fundingPct": -0.0007,
+      "openInterest": 2265.18,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1831.8,
-      "chg24hPct": -6.07,
-      "high24h": 1954.7,
-      "low24h": 1807.1,
-      "fundingPct": -0.001,
-      "openInterest": 29020.387,
+      "price": 1738.2,
+      "chg24hPct": -9.6,
+      "high24h": 1935,
+      "low24h": 1727.6,
+      "fundingPct": -0.0049,
+      "openInterest": 29252.739,
       "src": "Kraken perp"
     }
   ],
@@ -50,17 +50,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "North Korea's Binance hack faces U.S. crackdown as DOJ targets $1.2 billion in stolen crypto",
-      "link": "https://www.coindesk.com/policy/2026/11/12/north-korea-s-binance-hack-faces-u-s-crackdown-as-doj-targets-usd1-2-billion-in-stolen-crypto",
-      "publishedAt": "2026-11-12T22:55:52.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "NK hackers join memecoin trenches, xStocks adds Hong Kong equities: Asia Express",
-      "link": "https://cointelegraph.com/magazine/nk-hackers-join-memecoin-trenches-xstocks-adds-hong-kong-equities-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T22:29:58.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin crashes to 3-month low below $64,000 as analyst flags fourth capitulation wave",
+      "link": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
+      "publishedAt": "2026-11-14T16:33:29.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -82,20 +75,6 @@
       "link": "https://www.coindesk.com/tech/2026/11/13/live-news-bitcoin-drops-below-200-week-moving-average-as-dollar-strength-pressures-risk-assets",
       "publishedAt": "2026-11-13T09:16:58.000Z",
       "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Strategy stock sheds 5% amid MSCI index removal, Bitcoin sell-off",
-      "link": "https://cointelegraph.com/markets/strategy-shares-fall-5-msci-index-removal-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T21:52:04.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin slides to 3-month low of $65,000 as analyst flags fourth capitulation wave",
-      "link": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
-      "publishedAt": "2026-11-14T16:33:29.000Z",
-      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -124,9 +103,54 @@
       "link": "https://www.coindesk.com/policy/2026/11/13/britain-could-turn-wasted-scottish-wind-power-into-bitcoin-to-cut-its-usd1-3-billion-grid-bill",
       "publishedAt": "2026-11-14T13:00:00.000Z",
       "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "A behind the scenes force may amplify bitcoin and ether price volatility",
+      "link": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
+      "publishedAt": "2026-11-14T12:57:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-14T11:28:12.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Microsoft confirms global outage resolved, rules out cyberattack",
+      "link": "https://cointelegraph.com/news/microsoft-365-outage-resolved-cyberattack-ruled-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-14T10:34:06.000Z",
+      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-14T22:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.41,
+      "vsAvgMove": 3,
+      "volumeSpike": 2.5
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-14T20:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.46,
+      "vsAvgMove": 3.4,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-14T20:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -2.79,
+      "vsAvgMove": 4.9,
+      "volumeSpike": 2.7
+    },
     {
       "sym": "BTC",
       "at": "2026-11-14T14:00:00.000Z",
@@ -166,30 +190,6 @@
       "movePct": 1.43,
       "vsAvgMove": 3.6,
       "volumeSpike": 1.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-13T03:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.83,
-      "vsAvgMove": 6.8,
-      "volumeSpike": 5.6
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-13T03:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -2.8,
-      "vsAvgMove": 11.1,
-      "volumeSpike": 5.4
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-13T02:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.98,
-      "vsAvgMove": 4.2,
-      "volumeSpike": 3.4
     }
   ],
   "errors": []
