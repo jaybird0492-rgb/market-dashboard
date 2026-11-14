@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-13T21:37:33.369Z",
+  "updatedAt": "2026-11-14T01:46:59.692Z",
   "fearGreed": {
-    "value": 20,
+    "value": 13,
     "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 68231,
-      "chg24hPct": -4.5,
-      "high24h": 71564,
+      "price": 68282,
+      "chg24hPct": -3.63,
+      "high24h": 70922,
       "low24h": 67422,
-      "fundingPct": 0.0014,
-      "openInterest": 2511.0082,
+      "fundingPct": 0.0013,
+      "openInterest": 2535.5679,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1927,
-      "chg24hPct": -4.45,
-      "high24h": 2020.2,
+      "price": 1928.6,
+      "chg24hPct": -3.97,
+      "high24h": 2011.4,
       "low24h": 1892.8,
-      "fundingPct": 0,
-      "openInterest": 28959.266,
+      "fundingPct": -0.0002,
+      "openInterest": 28996.757,
       "src": "Kraken perp"
     }
   ],
@@ -105,24 +105,24 @@
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Kraken parent Payward gains market share as slower trading weighs on earnings",
-      "link": "https://cointelegraph.com/news/kraken-parent-payward-gains-market-share-slower-trading-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T21:01:39.000Z",
+      "source": "CoinDesk",
+      "title": "Bitcoin miners pay Paraguay $350 million a year, but AI is pushing them out",
+      "link": "https://www.coindesk.com/tech/2026/11/13/bitcoin-miners-pay-paraguay-usd350-million-a-year-but-ai-is-pushing-them-out",
+      "publishedAt": "2026-11-13T23:30:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "US regulators move ahead on crypto trust charters as Senate scrutiny grows",
-      "link": "https://cointelegraph.com/news/us-regulators-crypto-trust-charters-senate-scrutiny-grows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T20:53:20.000Z",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-13T22:08:37.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
-      "link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T18:28:29.000Z",
+      "title": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex",
+      "link": "https://cointelegraph.com/news/openai-ai-payments-chatgpt-wallet-visa-mastercard-amex?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-13T22:01:03.000Z",
       "severity": "NORMAL"
     }
   ],
