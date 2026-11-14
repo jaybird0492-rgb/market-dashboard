@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T01:46:59.692Z",
+  "updatedAt": "2026-11-14T08:23:53.293Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 68282,
-      "chg24hPct": -3.63,
-      "high24h": 70922,
-      "low24h": 67422,
-      "fundingPct": 0.0013,
-      "openInterest": 2535.5679,
+      "price": 67189,
+      "chg24hPct": -1.89,
+      "high24h": 70175,
+      "low24h": 66381,
+      "fundingPct": 0.0002,
+      "openInterest": 2341.5902,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1928.6,
-      "chg24hPct": -3.97,
-      "high24h": 2011.4,
-      "low24h": 1892.8,
-      "fundingPct": -0.0002,
-      "openInterest": 28996.757,
+      "price": 1902.7,
+      "chg24hPct": -1.24,
+      "high24h": 1987.1,
+      "low24h": 1870.6,
+      "fundingPct": 0.0002,
+      "openInterest": 28654.17,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
+      "link": "https://www.coindesk.com/markets/2026/11/13/satoshi-era-wallet-served-in-a-usd260-billion-lawsuit-moves-75-btc-it-held-since-2011",
+      "publishedAt": "2026-11-14T04:30:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Unocoin keeps deposits and withdrawals halted over suspect transfers",
@@ -53,13 +60,6 @@
       "title": "NK hackers join memecoin trenches, xStocks adds Hong Kong equities: Asia Express",
       "link": "https://cointelegraph.com/magazine/nk-hackers-join-memecoin-trenches-xstocks-adds-hong-kong-equities-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-12T22:29:58.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente",
-      "link": "https://cointelegraph.com/news/crypto-hackers-stole-57-cents-every-1-earned-ark?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-12T13:31:59.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -105,28 +105,36 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "MegaETH parent cuts 20% of staff amid restructuring, AI push",
+      "link": "https://cointelegraph.com/news/megaeth-parent-cuts-20-percent-staff-ai-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-14T08:12:30.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
+      "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-14T06:33:13.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Bitcoin miners pay Paraguay $350 million a year, but AI is pushing them out",
       "link": "https://www.coindesk.com/tech/2026/11/13/bitcoin-miners-pay-paraguay-usd350-million-a-year-but-ai-is-pushing-them-out",
       "publishedAt": "2026-11-13T23:30:00.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T22:08:37.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex",
-      "link": "https://cointelegraph.com/news/openai-ai-payments-chatgpt-wallet-visa-mastercard-amex?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T22:01:03.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-14T03:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.37,
+      "vsAvgMove": 3,
+      "volumeSpike": 1.2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-13T06:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": -1.18,
       "vsAvgMove": 4.6,
       "volumeSpike": 4.9
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-12T11:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.69,
-      "vsAvgMove": 3.2,
-      "volumeSpike": 1.6
     }
   ],
   "errors": []
