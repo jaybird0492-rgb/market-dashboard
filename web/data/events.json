@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-14T23:37:29.741Z",
+  "updatedAt": "2026-11-15T03:04:25.373Z",
   "fearGreed": {
-    "value": 13,
+    "value": 10,
     "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 63468,
-      "chg24hPct": -6.83,
-      "high24h": 68387,
-      "low24h": 63088,
-      "fundingPct": -0.0007,
-      "openInterest": 2265.18,
+      "price": 65310,
+      "chg24hPct": -3.34,
+      "high24h": 67696,
+      "low24h": 61950,
+      "fundingPct": -0.0011,
+      "openInterest": 2155.6962,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1738.2,
-      "chg24hPct": -9.6,
-      "high24h": 1935,
-      "low24h": 1727.6,
-      "fundingPct": -0.0049,
-      "openInterest": 29252.739,
+      "price": 1826,
+      "chg24hPct": -4.27,
+      "high24h": 1917.9,
+      "low24h": 1709.6,
+      "fundingPct": -0.0028,
+      "openInterest": 28953.005,
       "src": "Kraken perp"
     }
   ],
@@ -50,7 +50,14 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin crashes to 3-month low below $64,000 as analyst flags fourth capitulation wave",
+      "title": "XRP crashes to its lowest since November 2024 as money leaves crypto",
+      "link": "https://www.coindesk.com/markets/2026/11/15/xrp-crashes-to-its-lowest-since-november-2024-as-money-leaves-crypto",
+      "publishedAt": "2026-11-15T02:50:57.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave",
       "link": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
       "publishedAt": "2026-11-14T16:33:29.000Z",
       "severity": "HIGH"
@@ -117,16 +124,25 @@
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-14T11:28:12.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Microsoft confirms global outage resolved, rules out cyberattack",
-      "link": "https://cointelegraph.com/news/microsoft-365-outage-resolved-cyberattack-ruled-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-14T10:34:06.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-15T02:00:00.000Z",
+      "dir": "UP",
+      "movePct": 3.63,
+      "vsAvgMove": 5.5,
+      "volumeSpike": 2.2
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-15T02:00:00.000Z",
+      "dir": "UP",
+      "movePct": 4.9,
+      "vsAvgMove": 5.8,
+      "volumeSpike": 2.3
+    },
     {
       "sym": "BTC",
       "at": "2026-11-14T22:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": -1.37,
       "vsAvgMove": 3,
       "volumeSpike": 1.2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-13T06:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.37,
-      "vsAvgMove": 3.6,
-      "volumeSpike": 1.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-13T06:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.43,
-      "vsAvgMove": 3.6,
-      "volumeSpike": 1.5
     }
   ],
   "errors": []

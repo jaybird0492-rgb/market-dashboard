@@ -1,20 +1,20 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-14T23:37:29.084Z",
+  "updatedAt": "2026-11-15T03:04:25.197Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "rules": "Daily Donchian 55/20 + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
   "startEquity": 10000,
-  "equity": 10099.81,
+  "equity": 10202.5,
   "realizedEquity": 10000,
   "openRiskUsd": 150,
-  "openRiskPct": 1.49,
+  "openRiskPct": 1.47,
   "openNotionalUsd": 1571.28,
   "drawdownFromPeak": -0.03,
   "losingStreak": 0,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
-  "daysElapsed": 17,
+  "daysElapsed": 18,
   "daysTotal": 42,
   "open": [
     {
@@ -22,20 +22,20 @@
       "side": "SHORT",
       "entry": 2126.4,
       "stop": 2374.71,
-      "mark": 1929.88,
-      "markAt": "2026-11-13T00:00:00.000Z",
+      "mark": 1769.2,
+      "markAt": "2026-11-14T00:00:00.000Z",
       "qty": 0.30203655,
       "notionalUsd": 642.25,
       "riskUsd": 75,
       "riskPct": 0.74,
       "stopDistPct": 11.68,
-      "pctToStop": 23.05,
-      "unrealUsd": 59.36,
-      "unrealR": 0.79,
+      "pctToStop": 34.23,
+      "unrealUsd": 107.89,
+      "unrealR": 1.44,
       "openedAt": "2026-11-09T00:00:00.000Z",
-      "barsHeld": 4,
-      "holdHours": 143.62,
-      "mfeR": 0.93,
+      "barsHeld": 5,
+      "holdHours": 147.07,
+      "mfeR": 1.6,
       "maeR": -0.14
     },
     {
@@ -43,20 +43,20 @@
       "side": "SHORT",
       "entry": 71424.27,
       "stop": 77190.27,
-      "mark": 68314,
-      "markAt": "2026-11-13T00:00:00.000Z",
+      "mark": 64150,
+      "markAt": "2026-11-14T00:00:00.000Z",
       "qty": 0.01300728,
       "notionalUsd": 929.04,
       "riskUsd": 75,
       "riskPct": 0.74,
       "stopDistPct": 8.07,
-      "pctToStop": 12.99,
-      "unrealUsd": 40.46,
-      "unrealR": 0.54,
+      "pctToStop": 20.33,
+      "unrealUsd": 94.62,
+      "unrealR": 1.26,
       "openedAt": "2026-11-13T00:00:00.000Z",
-      "barsHeld": 0,
-      "holdHours": 47.62,
-      "mfeR": 0.67,
+      "barsHeld": 1,
+      "holdHours": 51.07,
+      "mfeR": 1.41,
       "maeR": -0.02
     }
   ],
@@ -74,7 +74,7 @@
     "profitFactor": null,
     "totalR": null,
     "totalPnlUsd": 0,
-    "netPnlUsd": 99.81,
+    "netPnlUsd": 202.5,
     "maxDDPct": -0.03,
     "currentStreak": 0,
     "bestR": null,
@@ -151,8 +151,12 @@
       "equity": 10099.81
     },
     {
-      "t": "2026-11-14T23:37:29.084Z",
-      "equity": 10099.81
+      "t": "2026-11-14T00:00:00.000Z",
+      "equity": 10202.5
+    },
+    {
+      "t": "2026-11-15T03:04:25.197Z",
+      "equity": 10202.5
     }
   ],
   "reference": {
@@ -160,48 +164,48 @@
     "trades": 70,
     "expectancyR": 1.52,
     "profitFactor": 4.37,
-    "totalRetPct": 101.4,
+    "totalRetPct": 103.5,
     "maxDDPct": -19.7,
     "oosExpR": 0.62,
-    "buyHoldRetPct": 311.8,
+    "buyHoldRetPct": 284.1,
     "buyHoldDDPct": -81.1,
     "note": "Same engine, full history, shared account — see analysis/V2_VALIDATION.md"
   },
   "lastClose": {
-    "BTC": 68314,
-    "ETH": 1929.88
+    "BTC": 64150,
+    "ETH": 1769.2
   },
   "watch": {
     "BTC": {
-      "price": 68314,
-      "asOf": "2026-11-13",
+      "price": 64150,
+      "asOf": "2026-11-14",
       "aboveSma200": false,
       "longTrigger": 87395.67,
-      "pctToLong": 27.93,
-      "shortTrigger": 67568,
-      "pctToShort": 1.1,
+      "pctToLong": 36.24,
+      "shortTrigger": 63320,
+      "pctToShort": 1.31,
       "wouldHold": {
         "side": "SHORT",
         "entry": 71424.27,
         "since": "2026-11-13",
         "stop": 77190.27,
-        "unrealUsdBacktest": 80.68
+        "unrealUsdBacktest": 188.7
       }
     },
     "ETH": {
-      "price": 1929.88,
-      "asOf": "2026-11-13",
+      "price": 1769.2,
+      "asOf": "2026-11-14",
       "aboveSma200": false,
       "longTrigger": 2807.34,
-      "pctToLong": 45.47,
-      "shortTrigger": 1895.95,
-      "pctToShort": 1.79,
+      "pctToLong": 58.68,
+      "shortTrigger": 1729.16,
+      "pctToShort": 2.32,
       "wouldHold": {
         "side": "SHORT",
         "entry": 2126.4,
         "since": "2026-11-09",
         "stop": 2374.71,
-        "unrealUsdBacktest": 118.37
+        "unrealUsdBacktest": 215.16
       }
     }
   }
