@@ -1,20 +1,20 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-15T10:46:16.492Z",
+  "updatedAt": "2026-11-15T17:30:33.471Z",
   "strategy": "4H Donchian 20/10 futures (simulated perps), dual daily gate (longs > SMA50, shorts < SMA200, both in the band), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "rules": "4H Donchian 20/10 + dual daily gate (long > SMA50, short < SMA200, both in band) + native 4H SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-11-04T16:00:00.000Z",
   "startEquity": 10000,
-  "equity": 10716.25,
+  "equity": 10663.29,
   "realizedEquity": 10000,
   "openRiskUsd": 150,
-  "openRiskPct": 1.4,
+  "openRiskPct": 1.41,
   "openNotionalUsd": 4734.3,
   "drawdownFromPeak": -1.1,
   "losingStreak": 0,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
-  "daysElapsed": 11,
+  "daysElapsed": 12,
   "daysTotal": 42,
   "open": [
     {
@@ -22,19 +22,19 @@
       "side": "SHORT",
       "entry": 74836.47,
       "stop": 76752.23,
-      "mark": 64012.6,
-      "markAt": "2026-11-15T04:00:00.000Z",
+      "mark": 64748.3,
+      "markAt": "2026-11-15T12:00:00.000Z",
       "qty": 0.03914885,
       "notionalUsd": 2929.76,
       "riskUsd": 75,
       "riskPct": 0.7,
       "stopDistPct": 2.56,
-      "pctToStop": 19.9,
-      "unrealUsd": 423.74,
-      "unrealR": 5.65,
+      "pctToStop": 18.54,
+      "unrealUsd": 394.94,
+      "unrealR": 5.27,
       "openedAt": "2026-11-09T00:00:00.000Z",
-      "barsHeld": 37,
-      "holdHours": 154.77,
+      "barsHeld": 39,
+      "holdHours": 161.51,
       "mfeR": 6.7,
       "maeR": -0.4
     },
@@ -43,19 +43,19 @@
       "side": "SHORT",
       "entry": 2127.03,
       "stop": 2215.44,
-      "mark": 1782.25,
-      "markAt": "2026-11-15T04:00:00.000Z",
+      "mark": 1810.73,
+      "markAt": "2026-11-15T12:00:00.000Z",
       "qty": 0.84838159,
       "notionalUsd": 1804.54,
       "riskUsd": 75,
       "riskPct": 0.7,
       "stopDistPct": 4.16,
-      "pctToStop": 24.31,
-      "unrealUsd": 292.51,
-      "unrealR": 3.9,
+      "pctToStop": 22.35,
+      "unrealUsd": 268.35,
+      "unrealR": 3.58,
       "openedAt": "2026-11-09T00:00:00.000Z",
-      "barsHeld": 37,
-      "holdHours": 154.77,
+      "barsHeld": 39,
+      "holdHours": 161.51,
       "mfeR": 4.71,
       "maeR": -0.38
     }
@@ -74,7 +74,7 @@
     "profitFactor": null,
     "totalR": null,
     "totalPnlUsd": 0,
-    "netPnlUsd": 716.25,
+    "netPnlUsd": 663.29,
     "maxDDPct": -1.1,
     "currentStreak": 0,
     "bestR": null,
@@ -343,8 +343,16 @@
       "equity": 10716.25
     },
     {
-      "t": "2026-11-15T10:46:16.492Z",
-      "equity": 10716.25
+      "t": "2026-11-15T08:00:00.000Z",
+      "equity": 10628.7
+    },
+    {
+      "t": "2026-11-15T12:00:00.000Z",
+      "equity": 10663.29
+    },
+    {
+      "t": "2026-11-15T17:30:33.471Z",
+      "equity": 10663.29
     }
   ],
   "reference": {
