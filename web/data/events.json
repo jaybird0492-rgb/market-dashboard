@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T17:30:33.600Z",
+  "updatedAt": "2026-11-15T22:05:09.388Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 64826,
-      "chg24hPct": -1.21,
-      "high24h": 66148,
+      "price": 65051,
+      "chg24hPct": 1.34,
+      "high24h": 66087,
       "low24h": 61950,
-      "fundingPct": -0.0003,
-      "openInterest": 2274.3755,
+      "fundingPct": 0.0011,
+      "openInterest": 2292.0624,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1814.6,
-      "chg24hPct": -1.61,
-      "high24h": 1856.6,
+      "price": 1821.3,
+      "chg24hPct": 3.27,
+      "high24h": 1844,
       "low24h": 1709.6,
-      "fundingPct": -0.0009,
-      "openInterest": 28061.467,
+      "fundingPct": 0.0004,
+      "openInterest": 28578.068,
       "src": "Kraken perp"
     }
   ],
@@ -64,10 +64,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
-      "link": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
-      "publishedAt": "2026-11-13T18:39:58.000Z",
-      "severity": "HIGH"
+      "title": "Did prediction markets call the U.S. midterm election?: State of Crypto",
+      "link": "https://www.coindesk.com/policy/2026/11/15/did-prediction-markets-call-the-u-s-midterm-election-state-of-crypto",
+      "publishedAt": "2026-11-15T19:30:00.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
