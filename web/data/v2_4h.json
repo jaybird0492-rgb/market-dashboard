@@ -1,11 +1,11 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-15T03:04:25.260Z",
+  "updatedAt": "2026-11-15T10:46:16.492Z",
   "strategy": "4H Donchian 20/10 futures (simulated perps), dual daily gate (longs > SMA50, shorts < SMA200, both in the band), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "rules": "4H Donchian 20/10 + dual daily gate (long > SMA50, short < SMA200, both in band) + native 4H SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-11-04T16:00:00.000Z",
   "startEquity": 10000,
-  "equity": 10721.94,
+  "equity": 10716.25,
   "realizedEquity": 10000,
   "openRiskUsd": 150,
   "openRiskPct": 1.4,
@@ -22,20 +22,20 @@
       "side": "SHORT",
       "entry": 74836.47,
       "stop": 76752.23,
-      "mark": 64150,
-      "markAt": "2026-11-14T20:00:00.000Z",
+      "mark": 64012.6,
+      "markAt": "2026-11-15T04:00:00.000Z",
       "qty": 0.03914885,
       "notionalUsd": 2929.76,
       "riskUsd": 75,
       "riskPct": 0.7,
       "stopDistPct": 2.56,
-      "pctToStop": 19.64,
-      "unrealUsd": 418.36,
-      "unrealR": 5.58,
+      "pctToStop": 19.9,
+      "unrealUsd": 423.74,
+      "unrealR": 5.65,
       "openedAt": "2026-11-09T00:00:00.000Z",
-      "barsHeld": 35,
-      "holdHours": 147.07,
-      "mfeR": 6.01,
+      "barsHeld": 37,
+      "holdHours": 154.77,
+      "mfeR": 6.7,
       "maeR": -0.4
     },
     {
@@ -43,20 +43,20 @@
       "side": "SHORT",
       "entry": 2127.03,
       "stop": 2215.44,
-      "mark": 1769.2,
-      "markAt": "2026-11-14T20:00:00.000Z",
+      "mark": 1782.25,
+      "markAt": "2026-11-15T04:00:00.000Z",
       "qty": 0.84838159,
       "notionalUsd": 1804.54,
       "riskUsd": 75,
       "riskPct": 0.7,
       "stopDistPct": 4.16,
-      "pctToStop": 25.22,
-      "unrealUsd": 303.58,
-      "unrealR": 4.05,
+      "pctToStop": 24.31,
+      "unrealUsd": 292.51,
+      "unrealR": 3.9,
       "openedAt": "2026-11-09T00:00:00.000Z",
-      "barsHeld": 35,
-      "holdHours": 147.07,
-      "mfeR": 4.5,
+      "barsHeld": 37,
+      "holdHours": 154.77,
+      "mfeR": 4.71,
       "maeR": -0.38
     }
   ],
@@ -74,7 +74,7 @@
     "profitFactor": null,
     "totalR": null,
     "totalPnlUsd": 0,
-    "netPnlUsd": 721.94,
+    "netPnlUsd": 716.25,
     "maxDDPct": -1.1,
     "currentStreak": 0,
     "bestR": null,
@@ -335,8 +335,16 @@
       "equity": 10721.94
     },
     {
-      "t": "2026-11-15T03:04:25.260Z",
-      "equity": 10721.94
+      "t": "2026-11-15T00:00:00.000Z",
+      "equity": 10653.39
+    },
+    {
+      "t": "2026-11-15T04:00:00.000Z",
+      "equity": 10716.25
+    },
+    {
+      "t": "2026-11-15T10:46:16.492Z",
+      "equity": 10716.25
     }
   ],
   "reference": {

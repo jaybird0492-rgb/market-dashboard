@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T03:04:25.373Z",
+  "updatedAt": "2026-11-15T10:46:16.934Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 65310,
-      "chg24hPct": -3.34,
-      "high24h": 67696,
+      "price": 65536,
+      "chg24hPct": -2.44,
+      "high24h": 67300,
       "low24h": 61950,
-      "fundingPct": -0.0011,
-      "openInterest": 2155.6962,
+      "fundingPct": 0.0001,
+      "openInterest": 2279.4138,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1826,
-      "chg24hPct": -4.27,
-      "high24h": 1917.9,
+      "price": 1829.1,
+      "chg24hPct": -4.07,
+      "high24h": 1909.9,
       "low24h": 1709.6,
-      "fundingPct": -0.0028,
-      "openInterest": 28953.005,
+      "fundingPct": 0.0003,
+      "openInterest": 28531.816,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Coinone warns of phishing, identity theft after customer data breach",
+      "link": "https://cointelegraph.com/news/coinone-data-breach-phishing-identity-theft-customer-information?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-15T08:07:58.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
@@ -36,17 +43,10 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Unocoin keeps deposits and withdrawals halted over suspect transfers",
-      "link": "https://cointelegraph.com/news/unocoin-withdrawals-halted-bitgo-wallet-transfer-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T09:58:21.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "DOJ moves to seize $1.2B from Binance hack, disrupts FaceStealer scam",
-      "link": "https://cointelegraph.com/news/doj-12b-north-korean-crypto-seizure-400m-facestealer-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T09:27:14.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+      "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-15T10:23:17.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -77,11 +77,11 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin eyes bear market lows as late summer rally mostly wiped out",
-      "link": "https://www.coindesk.com/tech/2026/11/13/live-news-bitcoin-drops-below-200-week-moving-average-as-dollar-strength-pressures-risk-assets",
-      "publishedAt": "2026-11-13T09:16:58.000Z",
-      "severity": "HIGH"
+      "source": "Cointelegraph",
+      "title": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
+      "link": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-15T06:27:26.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -127,6 +127,14 @@
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-15T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.88,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 1.1
+    },
     {
       "sym": "BTC",
       "at": "2026-11-15T02:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": -2.11,
       "vsAvgMove": 4.3,
       "volumeSpike": 4.1
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-14T03:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.37,
-      "vsAvgMove": 3,
-      "volumeSpike": 1.2
     }
   ],
   "errors": []
