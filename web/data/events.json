@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T14:29:38.305Z",
+  "updatedAt": "2026-11-16T19:44:37.983Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 64465,
-      "chg24hPct": -0.54,
-      "high24h": 65480,
+      "price": 64776,
+      "chg24hPct": -0.25,
+      "high24h": 65648,
       "low24h": 63834,
-      "fundingPct": 0.0024,
-      "openInterest": 2181.2959,
+      "fundingPct": 0.0013,
+      "openInterest": 2280.9366,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1824.1,
-      "chg24hPct": 0.8,
-      "high24h": 1841.8,
+      "price": 1813.8,
+      "chg24hPct": -0.66,
+      "high24h": 1864.6,
       "low24h": 1784.3,
-      "fundingPct": 0.0002,
-      "openInterest": 31204.042,
+      "fundingPct": -0.0012,
+      "openInterest": 27762.326,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Lighter suspends all withdrawals after $10.4 million crypto exploit",
+      "link": "https://www.coindesk.com/tech/2026/11/16/lighter-suspends-all-withdrawals-after-usd10-4-million-crypto-exploit",
+      "publishedAt": "2026-11-16T16:41:42.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Coinone warns of phishing, identity theft after customer data breach",
@@ -53,13 +60,6 @@
       "title": "Bitcoin slips after rebounding from July 14 low that triggered $2 billion of liquidations",
       "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-slips-to-usd64-000-after-usd2-billion-weekend-flush",
       "publishedAt": "2026-11-16T11:03:14.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin holding weekend plunge as November losses deepen to 17%",
-      "link": "https://www.coindesk.com/tech/2026/11/16/live-news-bitcoin-posts-sixth-weekly-loss-as-tech-stocks-and-metals-slide",
-      "publishedAt": "2026-11-16T09:34:18.000Z",
       "severity": "HIGH"
     },
     {
@@ -106,27 +106,59 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave",
-      "link": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
-      "publishedAt": "2026-11-14T16:33:29.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Lighter pauses withdrawals after reported $10M account theft",
-      "link": "https://cointelegraph.com/news/lighter-dex-pauses-withdrawals-10m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-16T14:19:50.000Z",
+      "title": "U.S. Senate Democrats tell CFTC to back off its demand prediction markets defy bans",
+      "link": "https://www.coindesk.com/policy/2026/11/16/u-s-senate-democrats-tell-cftc-to-back-off-its-demand-prediction-markets-defy-bans",
+      "publishedAt": "2026-11-16T18:54:19.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-16T13:31:49.000Z",
+      "title": "Nvidia turmoil tests Bitcoin miners’ AI funding plans",
+      "link": "https://cointelegraph.com/news/nvidia-turmoil-tests-bitcoin-miners-ai-funding-plans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T18:07:49.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Safe wallet reportedly loses $6.5M as Zodiac suspects key compromise",
+      "link": "https://cointelegraph.com/news/safe-wallet-reportedly-loses-millions-after-key-compromise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T17:49:13.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-16T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.07,
+      "vsAvgMove": 2.7,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-16T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.43,
+      "vsAvgMove": 3,
+      "volumeSpike": 2.3
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-16T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.53,
+      "vsAvgMove": 4,
+      "volumeSpike": 2
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-16T14:00:00.000Z",
+      "dir": "UP",
+      "movePct": 2.37,
+      "vsAvgMove": 5.5,
+      "volumeSpike": 3.5
+    },
     {
       "sym": "BTC",
       "at": "2026-11-15T08:00:00.000Z",
@@ -158,38 +190,6 @@
       "movePct": -1.41,
       "vsAvgMove": 3,
       "volumeSpike": 2.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-14T20:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.46,
-      "vsAvgMove": 3.4,
-      "volumeSpike": 1.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-14T20:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -2.79,
-      "vsAvgMove": 4.9,
-      "volumeSpike": 2.7
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-14T14:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.38,
-      "vsAvgMove": 4,
-      "volumeSpike": 3.4
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-14T14:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -2.11,
-      "vsAvgMove": 4.3,
-      "volumeSpike": 4.1
     }
   ],
   "errors": []
