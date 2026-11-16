@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T01:59:49.561Z",
+  "updatedAt": "2026-11-16T09:16:15.239Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 64620,
-      "chg24hPct": 3.27,
-      "high24h": 66087,
-      "low24h": 62441,
-      "fundingPct": 0.0002,
-      "openInterest": 2172.731,
+      "price": 64130,
+      "chg24hPct": -2.42,
+      "high24h": 65784,
+      "low24h": 64067,
+      "fundingPct": 0.0004,
+      "openInterest": 2164.3653,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1805.9,
-      "chg24hPct": 4.41,
-      "high24h": 1844,
-      "low24h": 1724.3,
-      "fundingPct": 0.0004,
-      "openInterest": 29743.635,
+      "price": 1792.9,
+      "chg24hPct": -2.23,
+      "high24h": 1841.8,
+      "low24h": 1789.7,
+      "fundingPct": -0.0008,
+      "openInterest": 30594.693,
       "src": "Kraken perp"
     }
   ],
@@ -35,11 +35,25 @@
       "severity": "CRITICAL"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Aster CEO suspects foul play after token plunges 32% in minutes",
+      "link": "https://cointelegraph.com/markets/aster-ceo-suspects-foul-play-after-token-plunges-32-in-minutes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T05:28:40.000Z",
+      "severity": "HIGH"
+    },
+    {
       "source": "CoinDesk",
-      "title": "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
-      "link": "https://www.coindesk.com/markets/2026/11/13/satoshi-era-wallet-served-in-a-usd260-billion-lawsuit-moves-75-btc-it-held-since-2011",
-      "publishedAt": "2026-11-14T04:30:00.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin’s biggest bet is now a drop below $60,000, not a rally above $100,000",
+      "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-biggest-bet-is-now-a-drop-below-usd60-000-not-a-rally-above-usd100-000",
+      "publishedAt": "2026-11-16T05:01:17.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Asian chip stocks tumble ahead of Nvidia Q3 earnings",
+      "link": "https://cointelegraph.com/markets/asian-chip-stocks-tumble-ahead-of-nvidia-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T04:42:07.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -50,7 +64,7 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+      "title": "Bitcoin falls to 4-month low near $62K as crypto selloff deepens",
       "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-15T10:23:17.000Z",
       "severity": "HIGH"
@@ -71,58 +85,44 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Jensen Huang weighs Nvidia comeback days after shock exit: FT",
-      "link": "https://cointelegraph.com/news/jensen-huang-weighs-nvidia-comeback-days-after-shock-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-15T23:47:45.000Z",
+      "title": "DBS, JPMorgan’s Kinexys launch 24/7 transfers of tokenized deposits",
+      "link": "https://cointelegraph.com/news/dbs-jpmorgans-kinexys-launch-tokenized-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T08:50:50.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Did prediction markets call the U.S. midterm election?: State of Crypto",
-      "link": "https://www.coindesk.com/policy/2026/11/15/did-prediction-markets-call-the-u-s-midterm-election-state-of-crypto",
-      "publishedAt": "2026-11-15T19:30:00.000Z",
+      "title": "JPMorgan and DBS let clients move dollars across borders on weekends",
+      "link": "https://www.coindesk.com/business/2026/11/16/j-p-morgan-and-dbs-let-clients-move-dollars-across-borders-on-weekends",
+      "publishedAt": "2026-11-16T08:46:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Enterprise blockchain is going to come back from the dead",
-      "link": "https://cointelegraph.com/opinion/enterprise-blockchain-come-back-from-dead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-15T14:30:00.000Z",
+      "title": "Harvard, Dartmouth keep Bitcoin ETF stakes steady as fund gains 42% in Q3",
+      "link": "https://cointelegraph.com/news/harvard-dartmouth-bitcoin-etf-ibit-up-q3?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T08:27:39.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Crypto insiders aren't counting on silver linings in Congress' 'lame duck' session",
-      "link": "https://www.coindesk.com/news-analysis/2026/11/13/crypto-insiders-aren-t-counting-on-silver-linings-in-congress-lame-duck-session",
-      "publishedAt": "2026-11-15T14:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-15T11:18:48.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
-      "link": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-15T06:27:26.000Z",
+      "title": "Vitalik Buterin flips to ‘total bull’ on a faster route to quantum-safe Ethereum",
+      "link": "https://www.coindesk.com/tech/2026/11/16/vitalik-buterin-flips-to-total-bull-on-a-faster-route-to-quantum-safe-ethereum",
+      "publishedAt": "2026-11-16T08:18:03.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Ethereum scaling project MegaETH slashes staff by 20% as it pursues AI business",
-      "link": "https://www.coindesk.com/business/2026/11/14/ethereum-scaling-project-megaeth-slashes-staff-by-20-as-it-pursues-ai-business",
-      "publishedAt": "2026-11-14T16:33:23.000Z",
+      "title": "Bitcoin miners were hijacked and their BTC rewards redirected to an attacker",
+      "link": "https://www.coindesk.com/tech/2026/11/16/bitcoin-miners-were-hijacked-and-their-btc-rewards-redirected-to-an-attacker",
+      "publishedAt": "2026-11-16T07:51:15.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Kazakhstan plans tokenized government bonds in first quarter after $22 million note sale",
-      "link": "https://www.coindesk.com/business/2026/11/14/kazakhstan-plans-tokenized-government-bonds-in-first-quarter-after-usd22-million-note-sale",
-      "publishedAt": "2026-11-14T15:38:27.000Z",
+      "title": "Cardano holders vote down $5 million bid to buy warehouse copper",
+      "link": "https://www.coindesk.com/markets/2026/11/16/cardano-holders-vote-down-usd5-million-bid-to-buy-warehouse-copper",
+      "publishedAt": "2026-11-16T06:27:42.000Z",
       "severity": "NORMAL"
     }
   ],
