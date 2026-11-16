@@ -308,6 +308,14 @@ function renderPositions() {
     const toStop = p.mark ? ((p.stop - p.mark) / p.mark) * 100 : null;
     const opened = when(p.openedAt);
     const held = holdTxt(p.holdHours);
+    // TP1/2/3 = 1R/2R/3R from entry (R = stop distance) — display only; the
+    // engine exits on the Donchian trail / ATR stop, never at a fixed target.
+    const r1 = Math.abs(p.stop - p.entry);
+    const tpCell = (n) => {
+      const v = p.side === 'LONG' ? p.entry + n * r1 : p.entry - n * r1;
+      const hit = p.mark ? (p.side === 'LONG' ? p.mark >= v : p.mark <= v) : false;
+      return `<td class="r${hit ? ' pos' : ''}">${fmt$(v, 2)}${hit ? ' ✓' : ''}</td>`;
+    };
     return `<tr>
       <td><span class="layer">${p.layer}</span></td>
       <td><b>${p.sym}</b></td>
@@ -316,6 +324,7 @@ function renderPositions() {
       <td class="r">${fmt$(p.entry, 2)}</td>
       <td class="r">${fmt$(p.mark, 2)}${u.live ? '<span class="live-tag">LIVE</span>' : ''}</td>
       <td class="r">${fmt$(p.stop, 2)}</td>
+      ${tpCell(1)}${tpCell(2)}${tpCell(3)}
       <td class="r ${toStop < 0 ? 'neg' : 'pos'}">${toStop === null ? '—' : (toStop >= 0 ? '+' : '') + toStop.toFixed(2) + '%'}</td>
       <td class="r ${cls(u.usd)}">${fmt$(u.usd, 2)}</td>
       <td class="r ${cls(u.r)}">${fmtR(u.r)}</td>
@@ -330,14 +339,15 @@ function renderPositions() {
       <td><b>${p.sym}</b></td>
       <td class="${p.side === 'LONG' ? 'side-long' : 'side-short'}">${p.side} <span class="badge badge-warn">pending</span></td>
       <td class="r">next open</td>
-      <td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td>
+      <td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td>
       <td class="r">${when(p.signalAt)}</td>
     </tr>`).join('');
 
   $('openPositions').innerHTML = `<table>
-    <tr><th>Layer</th><th>Asset</th><th>Side</th><th class="r">Size</th><th class="r">Entry</th><th class="r">Mark</th><th class="r">Stop</th><th class="r">To stop</th><th class="r">Unrealized</th><th class="r">Unreal R</th><th class="r">Risk</th><th class="r">Held</th><th class="r">Opened / signal</th></tr>
+    <tr><th>Layer</th><th>Asset</th><th>Side</th><th class="r">Size</th><th class="r">Entry</th><th class="r">Mark</th><th class="r">Stop</th><th class="r">TP1</th><th class="r">TP2</th><th class="r">TP3</th><th class="r">To stop</th><th class="r">Unrealized</th><th class="r">Unreal R</th><th class="r">Risk</th><th class="r">Held</th><th class="r">Opened / signal</th></tr>
     ${rows}${pend}
-  </table>`;
+  </table>
+  <div class="muted" style="font-size:11px;margin-top:6px">TP1/TP2/TP3 = 1R/2R/3R from entry (R = stop distance). <b>Reference levels only</b> — ✓ marks a level price has passed. The engine never takes profit at a target: it exits on the Donchian trail (10-bar 4H / 20-day close-through) or the 2.5×ATR stop.</div>`;
 }
 
 function flatHtml() {
@@ -539,7 +549,10 @@ function renderCoins() {
     let verdict, vcls;
     if (inTrade) {
       const u = liveUnreal(inTrade);
-      verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · <span class="${cls(u.usd)}">${fmt$(u.usd, 2)}</span> (${fmtR(u.r)})`;
+      // display-only TPs at 1R/2R/3R from entry (R = stop distance)
+      const r1 = Math.abs(inTrade.stop - inTrade.entry);
+      const tp = (n) => fmt$(inTrade.side === 'LONG' ? inTrade.entry + n * r1 : inTrade.entry - n * r1, 2);
+      verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · TP ${tp(1)} / ${tp(2)} / ${tp(3)} (reference only) · <span class="${cls(u.usd)}">${fmt$(u.usd, 2)}</span> (${fmtR(u.r)})`;
       vcls = 'trade';
     } else {
       const longLine = `Long: 4H close &gt; ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%) — entry rule <b class="${allowLong ? 'pos' : 'neg'}">${allowLong ? 'open' : 'blocked'}</b>`;
