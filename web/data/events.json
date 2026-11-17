@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T11:08:35.192Z",
+  "updatedAt": "2026-11-17T19:49:41.340Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 64168,
-      "chg24hPct": -0.7,
-      "high24h": 65648,
-      "low24h": 63834,
-      "fundingPct": 0.0004,
-      "openInterest": 2203.5681,
+      "price": 63669,
+      "chg24hPct": -1.75,
+      "high24h": 65482,
+      "low24h": 63263,
+      "fundingPct": 0.0015,
+      "openInterest": 2335.2338,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1792.4,
-      "chg24hPct": -1,
-      "high24h": 1864.6,
-      "low24h": 1783.7,
-      "fundingPct": -0.0006,
-      "openInterest": 32866.992,
+      "price": 1787.7,
+      "chg24hPct": -1.43,
+      "high24h": 1841.7,
+      "low24h": 1749.7,
+      "fundingPct": -0.0003,
+      "openInterest": 30746.327,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Fed’s Waller cites Binance hack in warning over tokenized finance",
+      "link": "https://cointelegraph.com/news/feds-waller-cites-binance-hack-in-warning-over-tokenized-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-17T17:39:41.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Hackers plant crypto-stealing code on 178 major websites, including HSBC and Ledger",
@@ -85,6 +92,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "U.S. Fed Governor Waller pitches keeping central bank at the center of tokenization",
+      "link": "https://www.coindesk.com/policy/2026/11/17/u-s-fed-governor-waller-pitches-keeping-central-bank-at-the-center-of-tokenization",
+      "publishedAt": "2026-11-17T17:00:05.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Fed Governor Michael Barr warns AI agents could trigger bank runs in minutes",
       "link": "https://www.coindesk.com/business/2026/11/17/fed-governor-michael-barr-warns-ai-agents-could-trigger-bank-runs-in-minutes",
       "publishedAt": "2026-11-17T10:48:12.000Z",
@@ -110,23 +124,41 @@
       "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
       "publishedAt": "2026-11-16T20:35:21.000Z",
       "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Old crypto feud reignites: Why OKX's Star Xu blames Binance for two years of October crashes",
-      "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-slide-reopens-an-old-feud-between-crypto-s-most-powerful-founders",
-      "publishedAt": "2026-11-16T12:55:46.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin was supposed to gain as AI faltered, but it crashed. Here's why.",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/16/bitcoin-was-supposed-to-gain-as-ai-faltered-but-it-crashed-here-s-why",
-      "publishedAt": "2026-11-16T12:09:00.000Z",
-      "severity": "HIGH"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-17T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.39,
+      "vsAvgMove": 3.8,
+      "volumeSpike": 2.1
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-17T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.64,
+      "vsAvgMove": 3.3,
+      "volumeSpike": 3.5
+    },
+    {
+      "sym": "BTC",
+      "at": "2026-11-17T11:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.37,
+      "vsAvgMove": 3.6,
+      "volumeSpike": 1.3
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-17T11:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.86,
+      "vsAvgMove": 3.8,
+      "volumeSpike": 1.5
+    },
     {
       "sym": "ETH",
       "at": "2026-11-17T10:00:00.000Z",
@@ -158,38 +190,6 @@
       "movePct": 1.53,
       "vsAvgMove": 4,
       "volumeSpike": 2
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-16T14:00:00.000Z",
-      "dir": "UP",
-      "movePct": 2.37,
-      "vsAvgMove": 5.5,
-      "volumeSpike": 3.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-15T08:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.88,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 1.1
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-15T02:00:00.000Z",
-      "dir": "UP",
-      "movePct": 3.63,
-      "vsAvgMove": 5.5,
-      "volumeSpike": 2.2
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-15T02:00:00.000Z",
-      "dir": "UP",
-      "movePct": 4.9,
-      "vsAvgMove": 5.8,
-      "volumeSpike": 2.3
     }
   ],
   "errors": []
