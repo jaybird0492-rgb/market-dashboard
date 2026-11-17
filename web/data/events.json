@@ -1,32 +1,46 @@
 {
-  "updatedAt": "2026-11-16T19:44:37.983Z",
+  "updatedAt": "2026-11-17T02:38:00.299Z",
   "fearGreed": {
-    "value": 10,
+    "value": 12,
     "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 64776,
-      "chg24hPct": -0.25,
+      "price": 64435,
+      "chg24hPct": -1.13,
       "high24h": 65648,
       "low24h": 63834,
-      "fundingPct": 0.0013,
-      "openInterest": 2280.9366,
+      "fundingPct": 0.001,
+      "openInterest": 2254.933,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1813.8,
-      "chg24hPct": -0.66,
+      "price": 1812.7,
+      "chg24hPct": -0.76,
       "high24h": 1864.6,
       "low24h": 1784.3,
       "fundingPct": -0.0012,
-      "openInterest": 27762.326,
+      "openInterest": 28560.048,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Hackers inject credit card, crypto-stealing malware into 178 major websites",
+      "link": "https://cointelegraph.com/news/hackers-inject-malware-into-178-major-websites?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-17T01:02:05.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hack may push institutions to outside custody, FalconX exec says",
+      "link": "https://cointelegraph.com/news/binance-hack-institutional-crypto-custody-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T22:19:41.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Lighter suspends all withdrawals after $10.4 million crypto exploit",
@@ -36,10 +50,31 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Lighter recovers $5M after $10M exploit linked to compromised API keys",
+      "link": "https://cointelegraph.com/news/lighter-dex-pauses-withdrawals-10m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T14:19:50.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Coinone warns of phishing, identity theft after customer data breach",
       "link": "https://cointelegraph.com/news/coinone-data-breach-phishing-identity-theft-customer-information?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-15T08:07:58.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Custodia Bank loses Supreme Court bid for direct Fed payment access",
+      "link": "https://cointelegraph.com/news/custodia-bank-loses-supreme-court-bid-for-direct-fed-payment-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T22:54:57.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off",
+      "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
+      "publishedAt": "2026-11-16T20:35:21.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -89,41 +124,6 @@
       "link": "https://cointelegraph.com/magazine/us-sellers-drive-bitcoin-crash-jensen-plots-comeback-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-15T22:50:59.000Z",
       "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin falls to 4-month low near $62K as crypto selloff deepens",
-      "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-15T10:23:17.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "XRP crashes to its lowest since November 2024 as money leaves crypto",
-      "link": "https://www.coindesk.com/markets/2026/11/15/xrp-crashes-to-its-lowest-since-november-2024-as-money-leaves-crypto",
-      "publishedAt": "2026-11-15T02:50:57.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "U.S. Senate Democrats tell CFTC to back off its demand prediction markets defy bans",
-      "link": "https://www.coindesk.com/policy/2026/11/16/u-s-senate-democrats-tell-cftc-to-back-off-its-demand-prediction-markets-defy-bans",
-      "publishedAt": "2026-11-16T18:54:19.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Nvidia turmoil tests Bitcoin miners’ AI funding plans",
-      "link": "https://cointelegraph.com/news/nvidia-turmoil-tests-bitcoin-miners-ai-funding-plans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-16T18:07:49.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Safe wallet reportedly loses $6.5M as Zodiac suspects key compromise",
-      "link": "https://cointelegraph.com/news/safe-wallet-reportedly-loses-millions-after-key-compromise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-16T17:49:13.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
