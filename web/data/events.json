@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T01:58:48.339Z",
+  "updatedAt": "2026-11-18T09:50:52.441Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 64265,
-      "chg24hPct": -0.62,
+      "price": 64502,
+      "chg24hPct": 0.23,
       "high24h": 65395,
       "low24h": 63263,
-      "fundingPct": 0,
-      "openInterest": 2231.7264,
+      "fundingPct": 0.0001,
+      "openInterest": 2273.8166,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1801.7,
-      "chg24hPct": -0.87,
-      "high24h": 1841.7,
+      "price": 1809.6,
+      "chg24hPct": -0.01,
+      "high24h": 1834.1,
       "low24h": 1749.7,
-      "fundingPct": -0.0002,
-      "openInterest": 30658.083,
+      "fundingPct": 0.0006,
+      "openInterest": 31373.337,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Google finds self-running AI hacking tool with Russian comments in its files",
+      "link": "https://www.coindesk.com/tech/2026/11/18/google-finds-self-running-ai-hacking-tool-with-russian-comments-in-its-files",
+      "publishedAt": "2026-11-18T07:37:59.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Fed’s Waller cites Binance hack in warning over tokenized finance",
@@ -46,13 +53,6 @@
       "title": "Google says hackers use AI agents to find and exploit software flaws",
       "link": "https://cointelegraph.com/news/google-ai-agents-automated-cyberattacks-software-flaws?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-17T10:05:59.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance hacker moves $63 million in stolen ether after 2 weeks of silence",
-      "link": "https://www.coindesk.com/business/2026/11/17/binance-hacker-moves-usd63-million-in-stolen-ether-after-two-weeks-of-silence",
-      "publishedAt": "2026-11-17T09:21:19.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -78,6 +78,20 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Strategy stock could plunge 76% to $23, chart analyst warns",
+      "link": "https://www.coindesk.com/markets/2026/11/18/strategy-stock-could-crash-76-to-usd23-chart-analyst-warns",
+      "publishedAt": "2026-11-18T09:31:41.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "XRP whales moved $270 million during the selloff. The coins didn’t go to exchanges",
+      "link": "https://www.coindesk.com/markets/2026/11/18/xrp-whales-moved-usd270-million-during-the-selloff-the-coins-didn-t-go-to-exchanges",
+      "publishedAt": "2026-11-18T04:28:37.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
       "title": "U.S. Fed Governor Waller pitches keeping central bank at the center of tokenization",
       "link": "https://www.coindesk.com/policy/2026/11/17/u-s-fed-governor-waller-pitches-keeping-central-bank-at-the-center-of-tokenization",
       "publishedAt": "2026-11-17T17:00:05.000Z",
@@ -91,13 +105,6 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Bitcoin could slide into the $50,000s as Fed rate hike bets build, Wintermute says",
-      "link": "https://www.coindesk.com/markets/2026/11/17/bitcoin-could-slide-into-the-usd50-000s-as-fed-rate-hike-bets-build-wintermute-says",
-      "publishedAt": "2026-11-17T07:38:07.000Z",
-      "severity": "HIGH"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Custodia Bank loses Supreme Court bid for direct Fed payment access",
       "link": "https://cointelegraph.com/news/custodia-bank-loses-supreme-court-bid-for-direct-fed-payment-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -105,24 +112,17 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto selloff",
-      "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
-      "publishedAt": "2026-11-16T20:35:21.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "CFTC nominee questions public benefit of prediction markets as legal fight grows",
-      "link": "https://www.coindesk.com/policy/2026/11/17/nominee-says-u-s-cftc-must-think-hard-about-public-benefit-of-prediction-markets",
-      "publishedAt": "2026-11-18T00:46:25.000Z",
+      "source": "Cointelegraph",
+      "title": "World Bank partners with Circle, Citi to explore stablecoins for payments",
+      "link": "https://cointelegraph.com/news/world-bank-circle-citi-explore-stablecoins-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-18T09:17:18.000Z",
       "severity": "NORMAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Nvidia board rejects Huang comeback despite record $116B quarter",
-      "link": "https://cointelegraph.com/markets/nvidia-board-rejects-huang-comeback-amid-record-116b-quarter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-18T00:16:43.000Z",
+      "source": "CoinDesk",
+      "title": "Hyundai tests AI agent commerce on JPMorgan’s Kinexys blockchain",
+      "link": "https://www.coindesk.com/business/2026/11/18/hyundai-tests-ai-agent-commerce-on-jpmorgan-s-kinexys-blockchain",
+      "publishedAt": "2026-11-18T09:14:15.000Z",
       "severity": "NORMAL"
     }
   ],
