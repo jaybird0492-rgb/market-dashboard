@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-17T19:49:41.340Z",
+  "updatedAt": "2026-11-18T01:58:48.339Z",
   "fearGreed": {
-    "value": 12,
+    "value": 11,
     "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 63669,
-      "chg24hPct": -1.75,
-      "high24h": 65482,
+      "price": 64265,
+      "chg24hPct": -0.62,
+      "high24h": 65395,
       "low24h": 63263,
-      "fundingPct": 0.0015,
-      "openInterest": 2335.2338,
+      "fundingPct": 0,
+      "openInterest": 2231.7264,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1787.7,
-      "chg24hPct": -1.43,
+      "price": 1801.7,
+      "chg24hPct": -0.87,
       "high24h": 1841.7,
       "low24h": 1749.7,
-      "fundingPct": -0.0003,
-      "openInterest": 30746.327,
+      "fundingPct": -0.0002,
+      "openInterest": 30658.083,
       "src": "Kraken perp"
     }
   ],
@@ -78,20 +78,6 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Lighter suspends all withdrawals after $10.4 million crypto exploit",
-      "link": "https://www.coindesk.com/tech/2026/11/16/lighter-suspends-all-withdrawals-after-usd10-4-million-crypto-exploit",
-      "publishedAt": "2026-11-16T16:41:42.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Lighter recovers $5M after $10M exploit linked to compromised API keys",
-      "link": "https://cointelegraph.com/news/lighter-dex-pauses-withdrawals-10m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-16T14:19:50.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
       "title": "U.S. Fed Governor Waller pitches keeping central bank at the center of tokenization",
       "link": "https://www.coindesk.com/policy/2026/11/17/u-s-fed-governor-waller-pitches-keeping-central-bank-at-the-center-of-tokenization",
       "publishedAt": "2026-11-17T17:00:05.000Z",
@@ -124,6 +110,20 @@
       "link": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
       "publishedAt": "2026-11-16T20:35:21.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "CFTC nominee questions public benefit of prediction markets as legal fight grows",
+      "link": "https://www.coindesk.com/policy/2026/11/17/nominee-says-u-s-cftc-must-think-hard-about-public-benefit-of-prediction-markets",
+      "publishedAt": "2026-11-18T00:46:25.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Nvidia board rejects Huang comeback despite record $116B quarter",
+      "link": "https://cointelegraph.com/markets/nvidia-board-rejects-huang-comeback-amid-record-116b-quarter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-18T00:16:43.000Z",
+      "severity": "NORMAL"
     }
   ],
   "shocks": [
