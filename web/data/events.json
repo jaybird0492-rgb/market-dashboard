@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T15:20:32.505Z",
+  "updatedAt": "2026-11-19T15:40:52.819Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 63181,
-      "chg24hPct": -0.73,
+      "price": 62842,
+      "chg24hPct": -0.71,
       "high24h": 64016,
       "low24h": 61988,
       "fundingPct": -0.0001,
-      "openInterest": 2284.357,
+      "openInterest": 2228.6123,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1786.7,
-      "chg24hPct": 0.66,
+      "price": 1772.4,
+      "chg24hPct": 0.41,
       "high24h": 1815.6,
       "low24h": 1730.9,
       "fundingPct": -0.0001,
-      "openInterest": 29919.236,
+      "openInterest": 29798.954,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
+      "link": "https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft",
+      "publishedAt": "2026-11-19T15:20:38.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "North Korean hackers used Sky's stablecoin system, putting billions at freeze risk",
@@ -116,13 +123,6 @@
       "title": "Hong Kong adds Hyperliquid to list of ‘suspicious’ crypto platforms",
       "link": "https://cointelegraph.com/news/hyperliquid-hong-kong-regulators-alert-list?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-19T12:44:06.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Trump Media wants to clear $884 million of debt without selling its bitcoin",
-      "link": "https://www.coindesk.com/markets/2026/11/19/trump-media-wants-to-clear-usd884-million-of-debt-without-selling-its-bitcoin",
-      "publishedAt": "2026-11-19T12:40:12.000Z",
       "severity": "NORMAL"
     }
   ],
