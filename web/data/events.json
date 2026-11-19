@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T07:58:24.564Z",
+  "updatedAt": "2026-11-19T15:03:55.037Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 63717,
-      "chg24hPct": -1.72,
-      "high24h": 64853,
+      "price": 63798,
+      "chg24hPct": 0.12,
+      "high24h": 64016,
       "low24h": 61988,
-      "fundingPct": 0.0004,
-      "openInterest": 2369.7004,
+      "fundingPct": -0.0001,
+      "openInterest": 2278.114,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1804.6,
-      "chg24hPct": -0.65,
-      "high24h": 1817.1,
+      "price": 1812.2,
+      "chg24hPct": 2.15,
+      "high24h": 1815.6,
       "low24h": 1730.9,
-      "fundingPct": 0.0005,
-      "openInterest": 30736.82,
+      "fundingPct": -0.0001,
+      "openInterest": 30901.821,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "North Korean hackers used Sky's stablecoin system, putting billions at freeze risk",
+      "link": "https://www.coindesk.com/business/2026/11/19/north-korean-hackers-used-sky-s-stablecoin-system-putting-billions-at-freeze-risk",
+      "publishedAt": "2026-11-19T11:30:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Ethereum block builders received the most in a $3.4 million vault hack, data shows",
@@ -50,10 +57,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Google finds self-running AI hacking tool with Russian comments in its files",
-      "link": "https://www.coindesk.com/tech/2026/11/18/google-finds-self-running-ai-hacking-tool-with-russian-comments-in-its-files",
-      "publishedAt": "2026-11-18T07:37:59.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin holds above $63,750 but Fed rate-hike threats loom large",
+      "link": "https://www.coindesk.com/markets/2026/11/19/bitcoin-holds-above-usd63-750-but-fed-rate-hike-threats-loom-large",
+      "publishedAt": "2026-11-19T12:08:06.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -84,45 +91,38 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Bitcoin outpaces gold even as both assets tumble ahead of a likely Fed rate hike",
-      "link": "https://www.coindesk.com/markets/2026/11/18/bitcoin-outpaces-gold-even-as-both-assets-tumble-ahead-of-a-likely-fed-rate-hike",
-      "publishedAt": "2026-11-18T10:58:36.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Strategy stock could plunge 76% to $23, chart analyst warns",
-      "link": "https://www.coindesk.com/markets/2026/11/18/strategy-stock-could-crash-76-to-usd23-chart-analyst-warns",
-      "publishedAt": "2026-11-18T09:31:41.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "XRP whales moved $270 million during the selloff. The coins didn’t go to exchanges",
-      "link": "https://www.coindesk.com/markets/2026/11/18/xrp-whales-moved-usd270-million-during-the-selloff-the-coins-didn-t-go-to-exchanges",
-      "publishedAt": "2026-11-18T04:28:37.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts",
-      "link": "https://cointelegraph.com/markets/sygnum-bitcoin-carry-trades-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T06:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T06:00:00.000Z",
+      "publishedAt": "2026-11-19T13:48:14.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Senators warn GENIUS Act rules could push stablecoin firms toward federal oversight",
-      "link": "https://cointelegraph.com/news/us-senators-genius-act-rules-favor-federal-stablecoin-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T05:27:45.000Z",
+      "title": "Ethereum’s new DeFi security tool raises questions over censorship",
+      "link": "https://cointelegraph.com/magazine/ethereums-new-defi-security-tool-raises-questions-over-censorship?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-19T13:30:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Crypto traders vs. Wall Street: OKX’s Anthropic markets put IPO pricing to the test",
+      "link": "https://www.coindesk.com/markets/2026/11/19/crypto-traders-vs-wall-street-okx-s-anthropic-markets-put-ipo-pricing-to-the-test",
+      "publishedAt": "2026-11-19T13:11:31.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Hong Kong adds Hyperliquid to list of ‘suspicious’ crypto platforms",
+      "link": "https://cointelegraph.com/news/hyperliquid-hong-kong-regulators-alert-list?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-19T12:44:06.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Trump Media wants to clear $884 million of debt without selling its bitcoin",
+      "link": "https://www.coindesk.com/markets/2026/11/19/trump-media-wants-to-clear-usd884-million-of-debt-without-selling-its-bitcoin",
+      "publishedAt": "2026-11-19T12:40:12.000Z",
       "severity": "NORMAL"
     }
   ],
