@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Paper Signal Status</title>
+<style>body{font:1rem/1.6 system-ui;background:#101722;color:#e7eef8;margin:3rem auto;padding:0 1.2rem;max-width:48rem}a{color:#9dd6ff}section{background:#192332;padding:1rem 1.4rem;border-radius:.75rem;margin:1rem 0}li{margin:.5rem 0}</style>
+<main><a href="./">Back to dashboard</a><h1>BTC / ETH Paper Signal Status</h1><section><h2>4H data freshness</h2><p id="status" role="status">Checking published signal data…</p><ul id="bars"></ul></section><section><h2>How to read this</h2><p>A breakout is a rule check, not a fill. Paper fills are reconstructed by replay using historical prices; this page does not verify when anybody received an alert or could have executed.</p><p>The daily gate checks above SMA50 first (long only), then below SMA200 (short only); otherwise both sides are permitted by the daily gate. The separate 4H filter still applies.</p><p>Paper only. No real orders or strategy changes.</p></section></main>
+<script>
+(async () => {
+  const status = document.getElementById('status');
+  const list = document.getElementById('bars');
+  const span = 4 * 60 * 60 * 1000;
+  try {
+    const response = await fetch('data/signals.json', {cache:'no-store'});
+    if (!response.ok) throw new Error('Signal file unavailable');
+    const snapshot = await response.json();
+    const now = Date.now();
+    const updated = Date.parse(snapshot.updatedAt);
+    if (!Number.isFinite(updated) || updated > now) throw new Error('Invalid snapshot timestamp');
+    let stale = false;
+    for (const symbol of ['BTC','ETH']) {
+      const barOpen = Date.parse(snapshot.coins.find(coin => coin.sym === symbol)?.setup4h?.asOf);
+      const close = barOpen + span;
+      if (!Number.isFinite(close) || close > now) throw new Error('Missing or invalid candle timestamp');
+      const late = now - close >= span + 15 * 60 * 1000;
+      stale ||= late;
+      const item = document.createElement('li');
+      item.textContent = symbol + ' last recorded 4H close: ' + new Date(close).toISOString() + (late ? ' — STALE' : '');
+      list.append(item);
+    }
+    status.textContent = (stale ? 'STALE — at least one expected 4H close is overdue. ' : 'No 4H close overdue (15-minute grace period). ') + 'Snapshot generated: ' + new Date(updated).toISOString();
+  } catch {
+    list.replaceChildren();
+    status.textContent = 'UNAVAILABLE — could not verify published 4H data freshness.';
+  }
+})();
+</script>
+</html>
