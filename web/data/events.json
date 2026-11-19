@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T00:44:12.231Z",
+  "updatedAt": "2026-11-19T07:58:24.564Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 63090,
-      "chg24hPct": -2.41,
-      "high24h": 64884,
+      "price": 63717,
+      "chg24hPct": -1.72,
+      "high24h": 64853,
       "low24h": 61988,
-      "fundingPct": 0.0008,
-      "openInterest": 2392.4406,
+      "fundingPct": 0.0004,
+      "openInterest": 2369.7004,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1781,
-      "chg24hPct": -1.93,
-      "high24h": 1820.1,
+      "price": 1804.6,
+      "chg24hPct": -0.65,
+      "high24h": 1817.1,
       "low24h": 1730.9,
-      "fundingPct": 0.0027,
-      "openInterest": 32865.91,
+      "fundingPct": 0.0005,
+      "openInterest": 30736.82,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Ethereum block builders received the most in a $3.4 million vault hack, data shows",
+      "link": "https://www.coindesk.com/tech/2026/11/19/ethereum-block-builders-received-the-most-in-a-usd3-4-million-vault-hack-data-shows",
+      "publishedAt": "2026-11-19T05:39:06.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hackers stole 192 tokens across 11 networks, court docs show",
+      "link": "https://cointelegraph.com/news/binance-hackers-stole-192-tokens-across-11-networks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-19T05:09:45.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance says it obtained $6.5B worldwide freezing order after hack",
@@ -42,11 +56,11 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Fed’s Waller cites Binance hack in warning over tokenized finance",
-      "link": "https://cointelegraph.com/news/feds-waller-cites-binance-hack-in-warning-over-tokenized-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-17T17:39:41.000Z",
-      "severity": "CRITICAL"
+      "source": "CoinDesk",
+      "title": "Fed's rate hike push may be a mistake. Here's why",
+      "link": "https://www.coindesk.com/markets/2026/11/19/fed-s-push-for-more-rate-hikes-leans-on-backward-looking-data-as-gas-prices-slide-analysts-argue",
+      "publishedAt": "2026-11-19T06:23:19.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -91,42 +105,44 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "U.S. Fed Governor Waller pitches keeping central bank at the center of tokenization",
-      "link": "https://www.coindesk.com/policy/2026/11/17/u-s-fed-governor-waller-pitches-keeping-central-bank-at-the-center-of-tokenization",
-      "publishedAt": "2026-11-17T17:00:05.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Another U.S. appellate court goes against Kalshi, building the industry's legal headwinds",
-      "link": "https://www.coindesk.com/policy/2026/11/18/another-u-s-appellate-court-goes-against-kalshi-building-the-industry-s-legal-headwinds",
-      "publishedAt": "2026-11-19T00:33:46.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Payward, the owner of crypto exchange Kraken, is buying its CEO’s venture capital business, Tribe",
-      "link": "https://www.coindesk.com/business/2026/11/18/payward-the-owner-of-crypto-exchange-kraken-is-buying-its-ceo-s-venture-capital-business-tribe",
-      "publishedAt": "2026-11-18T22:30:00.000Z",
+      "source": "Cointelegraph",
+      "title": "Bitcoin carry trades could beat Treasury bills in 2027, Sygnum predicts",
+      "link": "https://cointelegraph.com/markets/sygnum-bitcoin-carry-trades-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-19T06:00:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-18T22:09:15.000Z",
+      "publishedAt": "2026-11-19T06:00:00.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Tether invokes The Big Short in swipe at S&P over USDT reserve risks",
-      "link": "https://cointelegraph.com/news/tether-usdt-sp-stability-assessment-reserve-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-18T21:57:35.000Z",
+      "title": "Senators warn GENIUS Act rules could push stablecoin firms toward federal oversight",
+      "link": "https://cointelegraph.com/news/us-senators-genius-act-rules-favor-federal-stablecoin-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-19T05:27:45.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-19T03:00:00.000Z",
+      "dir": "UP",
+      "movePct": 0.97,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 1
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-19T03:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.34,
+      "vsAvgMove": 3,
+      "volumeSpike": 0.9
+    },
     {
       "sym": "BTC",
       "at": "2026-11-18T23:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": -1.39,
       "vsAvgMove": 3.8,
       "volumeSpike": 2.1
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-17T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.64,
-      "vsAvgMove": 3.3,
-      "volumeSpike": 3.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-17T11:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.37,
-      "vsAvgMove": 3.6,
-      "volumeSpike": 1.3
     }
   ],
   "errors": []
