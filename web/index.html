@@ -122,7 +122,41 @@
   .panel-head { padding: 10px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
   .spark { width: 100%; height: 42px; display: block; }
   .preview-banner { max-width: 1240px; margin: 12px auto 0; padding: 10px 14px; border-radius: 8px; background: rgba(232,163,61,.12); border: 1px solid rgba(232,163,61,.45); color: var(--amber); font-size: 13px; line-height: 1.5; }
+  /* signals-first engine strip */
+  .engine-bar { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  .engine-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 600; padding: 7px 12px; border-radius: 6px; border: 1px solid rgba(74,158,218,.45); background: rgba(74,158,218,.12); color: var(--blue); }
+  .btn:hover { background: rgba(74,158,218,.2); }
+  .btn-alt { border-color: var(--border); background: var(--panel); color: var(--muted); }
+  .btn-alt:hover { background: var(--panel-2); color: var(--text); }
+  .engine-note { font-size: 11.5px; color: var(--faint); line-height: 1.5; max-width: 660px; }
+  .status-ok { color: var(--green); font-weight: 700; }
+  .status-warn { color: var(--amber); font-weight: 700; }
+  .status-bad { color: var(--red); font-weight: 700; }
+  .candle-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
+  .candle-strip > div { background: var(--panel); padding: 8px 14px; }
+  .candle-strip span { display: block; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+  .candle-strip b { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .candle-strip .sub { font-size: 10.5px; letter-spacing: 0; text-transform: none; color: var(--muted); margin-top: 1px; }
+  /* collapsible research / journal / events */
+  details.collapsible { border: 1px solid var(--border); border-radius: 8px; background: var(--panel); margin-bottom: 12px; }
+  details.collapsible > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+  details.collapsible > summary::-webkit-details-marker { display: none; }
+  details.collapsible > summary::after { content: '▸'; color: var(--faint); font-size: 12px; }
+  details.collapsible[open] > summary::after { content: '▾'; }
+  details.collapsible[open] > summary { border-bottom: 1px solid var(--border); }
+  details.collapsible > summary:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+  .collapsible-body { padding: 14px 16px 6px; }
+  .collapsible-body .table-card { border: none; }
+  .collapsible-note { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--faint); }
   body.preview #marketSection, body.preview #eventsSection { display: none; }
+  @media (max-width: 640px) {
+    .candle-strip { grid-template-columns: 1fr; }
+    .engine-bar { flex-direction: column; }
+    .topbar-in { height: auto; padding: 10px 16px; flex-wrap: wrap; gap: 8px; }
+    .brand span { display: none; }
+    .top-right { gap: 10px; font-size: 11.5px; }
+  }
   footer { border-top: 1px solid var(--border); color: var(--faint); font-size: 12px; }
   .foot-in { max-width: 1240px; margin: 0 auto; padding: 16px 20px 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
   @media (max-width: 760px) {
@@ -144,39 +178,56 @@
 <div id="previewBanner" class="preview-banner" hidden></div>
 
 <main>
+  <section id="marketSection">
+    <div class="sec-head">
+      <h2>Signals Engine — Market State &amp; Setups</h2>
+      <span class="note" id="nextClose">checking published data…</span>
+    </div>
+    <div class="engine-bar">
+      <div class="engine-links">
+        <a class="btn" href="signals.html">Signals Engine detail</a>
+        <a class="btn btn-alt" href="signal-status.html">Feed status</a>
+      </div>
+      <div class="engine-note">Paper only · published snapshot, not a live alert. A signal exists only when a published candle closes through a trigger — wicks, forming candles, live quotes and replayed fills do not count.</div>
+    </div>
+    <div class="coin-grid" id="coinCards"><div class="empty">Loading market state…</div></div>
+  </section>
+
   <section id="accountsSection">
     <div class="sec-head"><h2>Accounts</h2><span class="note" id="accountNote">paper only · no real orders · 0.75% risk per trade</span></div>
     <div class="acct-grid" id="accountCards"><div class="empty">Loading accounts…</div></div>
   </section>
 
   <section id="positionsSection">
-    <div class="sec-head"><h2>Open Positions</h2><span class="note" id="openCount"></span></div>
+    <div class="sec-head"><h2>Open Paper Positions</h2><span class="note" id="openCount"></span></div>
     <div class="table-card table-scroll" id="openPositions"><div class="empty">Loading…</div></div>
     <div id="flatState" class="flat" hidden></div>
   </section>
 
-  <section id="performanceSection">
-    <div class="sec-head"><h2>Strategy Performance</h2><span class="note">real paper results · no edge conclusion below 10 closed trades</span></div>
-    <div class="perf-grid" id="perfGrid"><div class="empty">Loading performance…</div></div>
-  </section>
-
-  <section id="marketSection">
-    <div class="sec-head"><h2>Market State &amp; Setups</h2><span class="note" id="nextClose">closed candles only</span></div>
-    <div class="coin-grid" id="coinCards"><div class="empty">Loading market state…</div></div>
-  </section>
-
-  <section id="eventsSection">
-    <div class="sec-head"><h2>Events &amp; Shocks</h2><span class="note">news severity + abnormal 1H moves — context only, never a trade trigger</span></div>
-    <div class="event-grid">
-      <div class="table-card" id="shockPanel"><div class="empty">Loading shocks…</div></div>
-      <div class="table-card" id="newsPanel"><div class="empty">Loading headlines…</div></div>
+  <details class="collapsible" id="performanceSection">
+    <summary><span>Strategy Performance &amp; Research <span class="collapsible-note">paper results · no edge conclusion below 10 closed trades</span></span></summary>
+    <div class="collapsible-body">
+      <div class="perf-grid" id="perfGrid"><div class="empty">Loading performance…</div></div>
+      <div class="faint" style="font-size:11.5px;padding:10px 2px 12px">Backtest references and methodology: <a href="https://github.com/jaybird0492-rgb/market-dashboard/blob/main/analysis/V2_VALIDATION.md" target="_blank" rel="noopener">V2 validation report</a> · <a href="https://github.com/jaybird0492-rgb/market-dashboard/blob/main/analysis/SIGNAL_REPORT.md" target="_blank" rel="noopener">signal report</a>.</div>
     </div>
-  </section>
+  </details>
 
-  <section id="journalSection">
-    <div class="sec-head"><h2>Trade Journal</h2><span class="note" id="journalCount"></span></div>
-    <div class="table-card table-scroll" id="journal"><div class="empty">No closed trades yet — the journal fills when a position exits.</div></div>
-  </section>
+  <details class="collapsible" id="journalSection">
+    <summary><span>Trade Journal <span class="collapsible-note" id="journalCount"></span></span></summary>
+    <div class="collapsible-body">
+      <div class="table-card table-scroll" id="journal"><div class="empty">No closed trades yet — the journal fills when a position exits.</div></div>
+    </div>
+  </details>
+
+  <details class="collapsible" id="eventsSection">
+    <summary><span>Events &amp; Shocks <span class="collapsible-note">news severity + abnormal 1H moves — context only, never a trade trigger</span></span></summary>
+    <div class="collapsible-body">
+      <div class="event-grid">
+        <div class="table-card" id="shockPanel"><div class="empty">Loading shocks…</div></div>
+        <div class="table-card" id="newsPanel"><div class="empty">Loading headlines…</div></div>
+      </div>
+    </div>
+  </details>
 </main>
 
 <footer>
@@ -205,6 +256,66 @@ const when = (iso) => iso ? new Date(iso).toLocaleString('en-AU', { day: '2-digi
 
 let D1 = null, H4 = null, SIG = null, EV = null;
 const LIVE = {}; // symbol -> browser-fetched price (display only)
+const MS_4H = 144e5, MS_DAY = 864e5;
+const SNAP_STALE_MS = 2 * 36e5;      // published snapshot older than this = stale
+const CANDLE_GRACE_MS = 15 * 6e4;    // grace after an expected 4H close before calling it overdue
+let FEED = null;
+
+/* ---------- published-data freshness ----------
+   Currency is judged from published candle timestamps, never from the browser
+   clock or a live quote alone. Three distinct states:
+     CURRENT     — latest expected close is published and the snapshot is fresh
+     STALE       — a published candle is overdue, or the snapshot is >2h old
+     UNAVAILABLE — feed/fields/timestamps missing or invalid (NOT "no breakout") */
+const stampUTC = (ms) => Number.isFinite(ms) ? new Date(ms).toISOString().slice(0, 16).replace('T', ' ') + ' UTC' : '—';
+const stampHM = (ms) => Number.isFinite(ms) ? new Date(ms).toISOString().slice(11, 16) + ' UTC' : '—';
+
+function feedState() {
+  if (!SIG || !Array.isArray(SIG.coins) || !SIG.coins.length) {
+    return { state: 'UNAVAILABLE', reason: 'signals.json is not published', coins: [], snapT: NaN, now: Date.now() };
+  }
+  const snapT = Date.parse(SIG.updatedAt);
+  const now = Date.now();
+  const coins = SIG.coins.map((c) => {
+    const s = c && c.setup4h, x = c && c.context1d;
+    const complete = !!(s && x
+      && Number.isFinite(s.longTrigger) && Number.isFinite(s.shortTrigger) && Number.isFinite(s.price) && s.gateAllows
+      && Number.isFinite(x.longTrigger) && Number.isFinite(x.shortTrigger) && Number.isFinite(x.price));
+    if (!complete) return { sym: c && c.sym, state: 'UNAVAILABLE', reason: 'snapshot is missing trigger or gate fields' };
+    const barOpen = Date.parse(s.asOf);
+    if (!Number.isFinite(barOpen) || !Number.isFinite(snapT)) {
+      return { sym: c.sym, state: 'UNAVAILABLE', reason: 'missing published candle timestamp' };
+    }
+    const close = barOpen + MS_4H, next = close + MS_4H;
+    if (close > now) return { sym: c.sym, state: 'UNAVAILABLE', reason: 'published candle timestamp is in the future', close, next };
+    if (snapT > now) return { sym: c.sym, state: 'UNAVAILABLE', reason: 'snapshot timestamp is in the future', close, next };
+    if (now >= next + CANDLE_GRACE_MS) return { sym: c.sym, state: 'STALE', reason: 'expected 4H close not yet published', close, next };
+    if (now - snapT > SNAP_STALE_MS) return { sym: c.sym, state: 'STALE', reason: 'snapshot is more than 2h old', close, next };
+    return { sym: c.sym, state: 'CURRENT', close, next };
+  });
+  const state = coins.some((c) => c.state === 'UNAVAILABLE') ? 'UNAVAILABLE'
+    : coins.some((c) => c.state === 'STALE') ? 'STALE' : 'CURRENT';
+  return { state, coins, snapT, now };
+}
+
+function engineStatusText(f) {
+  if (!f || f.state === 'UNAVAILABLE') {
+    const why = (f && f.coins || []).filter((c) => c.state === 'UNAVAILABLE').map((c) => c.sym + ': ' + c.reason).join('; ')
+      || (f && f.reason) || 'signal feed unavailable';
+    return '<span class="status-bad">UNAVAILABLE</span> — ' + esc(why) + '. This is not &ldquo;no breakout&rdquo;: no decision was published.';
+  }
+  const nexts = f.coins.filter((c) => Number.isFinite(c.next)).map((c) => c.next);
+  const next = nexts.length ? Math.min(...nexts) : NaN;
+  const due = next - f.now;
+  const cadence = 'next expected 4H close ' + stampHM(next) + ' (' + (due > 0 ? 'in ' + timeUntil(due) : 'overdue') + ')';
+  const base = 'snapshot ' + stampUTC(f.snapT) + ' · ' + cadence;
+  if (f.state === 'STALE') {
+    const stale = f.coins.filter((c) => c.state === 'STALE').map((c) => c.sym + ' — ' + c.reason).join('; ');
+    return '<span class="status-warn">STALE</span> — ' + esc(stale) + ' · ' + base + '. Levels are from the last published snapshot, not a live signal.';
+  }
+  return '<span class="status-ok">CURRENT</span> — ' + f.coins.length + '/' + f.coins.length + ' coins on the latest published 4H close · ' + base;
+}
+
 
 function liveUnreal(p) {
   const px = LIVE[p.sym];
@@ -357,7 +468,7 @@ function flatHtml() {
   }).join('') : '';
   return `<div class="flat-title"><b>Flat — no open risk.</b></div>
     <div class="muted">Both paper accounts are in cash. Nothing is at risk right now.</div>
-    <div class="muted" style="margin-top:6px">Next 4H decision in <b id="flatNext">${next4hTxt()}</b>. A position opens only after a closed 4H candle breaks its trigger; fills happen at the next bar open.</div>
+    <div class="muted" style="margin-top:6px">Next published 4H decision: <b>${nextDecisionTxt()}</b>. A position opens only after a published 4H candle closes through its trigger; fills happen at the next bar open.</div>
     ${trig ? `<table><tr><th>Asset</th><th class="r">Long trigger</th><th class="r">Short trigger</th><th class="r">Allowed</th></tr>${trig}</table>` : ''}`;
 }
 
@@ -526,75 +637,119 @@ function timeUntil(ms) {
   const h = Math.floor(ms / 36e5), m = Math.round((ms % 36e5) / 6e4);
   return (h ? h + 'h ' : '') + m + 'm';
 }
-function next4hTxt() {
-  const next = Math.ceil(Date.now() / 144e5) * 144e5;
-  return timeUntil(next - Date.now());
+function nextDecisionTxt() {
+  if (!SIG || !Array.isArray(SIG.coins)) return 'unavailable — no published snapshot';
+  const f = feedState();
+  const c = f.coins.find((x) => Number.isFinite(x.next));
+  if (!c) return 'unavailable';
+  const due = c.next - Date.now();
+  return stampHM(c.next) + (due > 0 ? ' (in ' + timeUntil(due) + ')' : ' (overdue — snapshot stale)');
 }
 function renderCoins() {
-  if (!SIG) { $('coinCards').innerHTML = '<div class="empty">Signal feed unavailable.</div>'; return; }
-  $('coinCards').innerHTML = SIG.coins.map((c) => {
-    const x = c.context1d, s = c.setup4h, w = c.warning1h;
-    const regime = x.regime === 'TREND UP' ? ['r-up', 'Trend Up'] : x.regime === 'TREND DOWN' ? ['r-dn', 'Trend Down'] : ['r-tr', 'Transition'];
-    const warnCls = { BREAKOUT: 'w-break', FAKEOUT: 'w-fake', APPROACHING: 'w-appr', QUIET: 'w-quiet' }[w.state] || 'w-quiet';
-    const inTrade = (H4 && H4.open.find((p) => p.sym === c.sym)) || (D1 && D1.open.find((p) => p.sym === c.sym));
-    const allowLong = !!s.longAllowed, allowShort = !!s.shortAllowed;
-    const gateBoth = allowLong && allowShort;
-    const gateLabel = gateBoth ? 'BOTH sides' : allowLong ? 'LONG only' : allowShort ? 'SHORT only' : 'NONE';
-    const gateCls = gateBoth ? 'gate-both' : (allowLong || allowShort) ? 'gate-one' : 'gate-none';
-    const dailyTxt = s.gateAllows === 'BOTH' ? 'both sides open (price between SMA50 and SMA200)'
-      : s.gateAllows === 'LONG' ? 'longs only (close above SMA50)'
-        : s.gateAllows === 'SHORT' ? 'shorts only (close below SMA200)' : 'no side open';
-    const livePx = (c.series1h && c.series1h.length) ? c.series1h[c.series1h.length - 1] : x.price;
+  FEED = feedState();
+  $('nextClose').innerHTML = engineStatusText(FEED);
+  const coins = (SIG && Array.isArray(SIG.coins)) ? SIG.coins : [];
+  if (!coins.length) {
+    $('coinCards').innerHTML = `<div class="flat"><div class="flat-title"><b>Signals Engine — UNAVAILABLE.</b></div>
+      <div class="muted">No published signal snapshot. There is no decision for the current 4H candle; this is not &ldquo;no breakout.&rdquo; Check the <a href="signal-status.html">feed status</a>.</div></div>`;
+    return;
+  }
+  $('coinCards').innerHTML = coins.map((c) => cardHtml(c, FEED.coins.find((f) => f.sym === c.sym))).join('');
+  drawSparks();
+}
 
-    let verdict, vcls;
-    if (inTrade) {
-      const u = liveUnreal(inTrade);
-      // display-only TPs at 1R/2R/3R from entry (R = stop distance)
-      const r1 = Math.abs(inTrade.stop - inTrade.entry);
-      const tp = (n) => fmt$(inTrade.side === 'LONG' ? inTrade.entry + n * r1 : inTrade.entry - n * r1, 2);
-      verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · TP ${tp(1)} / ${tp(2)} / ${tp(3)} (reference only) · <span class="${cls(u.usd)}">${fmt$(u.usd, 2)}</span> (${fmtR(u.r)})`;
-      vcls = 'trade';
-    } else {
-      const longLine = `Long: 4H close &gt; ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%) — entry rule <b class="${allowLong ? 'pos' : 'neg'}">${allowLong ? 'open' : 'blocked'}</b>`;
-      const shortLine = `Short: 4H close &lt; ${fmt$(s.shortTrigger, 2)} (${s.pctToShort}% lower) — entry rule <b class="${allowShort ? 'pos' : 'neg'}">${allowShort ? 'open' : 'blocked'}</b>`;
-      if (w.state === 'BREAKOUT') {
-        const dir = w.dir, trig = dir === 1 ? s.longTrigger : s.shortTrigger;
-        const ok = dir === 1 ? allowLong : allowShort;
-        const blockers = dir === 1
-          ? [!s.dailyLong ? 'daily gate' : null, !s.nativeLong ? `4H SMA200 filter (${fmt$(s.sma200_4h, 0)} is ${s.pctTo4hSma200}% above price)` : null].filter(Boolean).join(' + ')
-          : [!s.dailyShort ? 'daily gate' : null, !s.nativeShort ? `4H SMA200 filter (${fmt$(s.sma200_4h, 0)} is ${Math.abs(s.pctTo4hSma200)}% below price)` : null].filter(Boolean).join(' + ');
-        const head = ok
-          ? `<b>${dir === 1 ? 'Long' : 'Short'} setup building.</b> 1H ${dir === 1 ? 'broke above' : 'broke below'} its 20-bar range; the trade fires only if the current 4H candle closes ${dir === 1 ? 'above' : 'below'} ${fmt$(trig, 2)}. `
-          : `<b>1H ${dir === 1 ? 'breakout' : 'breakdown'} cannot become a trade — blocked by the ${blockers}.</b> The 1H move is real, but the 4H entry rule still says no. `;
-        verdict = head + longLine + ' · ' + shortLine + `. Next 4H close in ${next4hTxt()}.`;
-        vcls = ok ? 'wait' : 'blocked';
-      } else {
-        verdict = `<b>No trade yet — waiting for a 4H close.</b> ${longLine} · ${shortLine}. Nothing fires mid-candle; next decision in ${next4hTxt()}.`;
-        vcls = 'wait';
-      }
-    }
+function cardHtml(c, f) {
+  const x = c.context1d || {}, s = c.setup4h || {}, w = c.warning1h || {};
+  const state = f ? f.state : 'UNAVAILABLE';
+  const regime = x.regime === 'TREND UP' ? ['r-up', 'Trend Up'] : x.regime === 'TREND DOWN' ? ['r-dn', 'Trend Down'] : ['r-tr', 'Transition'];
 
-    const lb = s.lastBreakout;
-    const lbHtml = lb
-      ? `Last 4H breakout: <b class="${lb.allowed ? 'pos' : 'neg'}">${lb.dir} ${lb.allowed ? 'allowed' : 'BLOCKED by ' + (lb.blockedBy || 'rule')}</b> · ${when(lb.at)} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}`
-      : 'Last 4H breakout: none in the last 24h.';
-
+  if (state === 'UNAVAILABLE') {
     return `<div class="coin">
-      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px" id="livePx-${c.sym}">${fmt$(livePx, 2)} <span class="faint" style="font-size:10px">1H close</span></span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
-      <canvas class="spark" id="spark-${c.sym}" height="42"></canvas>
-      <div class="signal-grid">
-        <div class="sig-cell"><div class="tag">1D Regime (daily close)</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span class="muted">close ${fmt$(x.price, 2)} · ${x.asOf}</span></div></div>
-        <div class="sig-cell"><div class="tag">4H Trade Gate</div><div class="sig-val"><span class="gate-tag ${gateCls}">${gateLabel} effective</span><br><span class="muted">Daily: ${dailyTxt} · 4H trend: price ${s.nativeLong ? 'above' : 'below'} SMA200 ${fmt$(s.sma200_4h, 0)}</span></div></div>
-        <div class="sig-cell"><div class="tag">1H Warning (never trades)</div><div class="sig-val"><span class="warn ${warnCls}">${w.state}</span> <span class="muted">${w.stats180d.ratePct}% confirm rate (180d)</span><br><span class="muted">${w.detail}</span></div></div>
-        <div class="sig-cell"><div class="tag">1D Trend Triggers (slow core)</div><div class="sig-val"><span class="num">${fmt$(x.longTrigger, 2)}</span> long · <span class="num">${fmt$(x.shortTrigger, 2)}</span> short<br><span class="muted">55-day Donchian, needs a daily close</span></div></div>
-        <div class="sig-cell"><div class="tag">4H Long Trigger</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span class="muted">+${s.pctToLong}% from last 4H close</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
-        <div class="sig-cell"><div class="tag">4H Short Trigger</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span class="muted">${s.pctToShort}% lower</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
-      </div>
-      <div class="break-line" style="padding:9px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.5">${lbHtml}</div>
-      <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop ${s.stopDistPct}% away (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
-      <div class="verdict ${vcls}"><span class="dot"></span><span>${verdict}</span></div>
+      <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px faint" style="font-size:11px">no published candle</span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
+      <div class="verdict blocked"><span class="dot"></span><span><b>UNAVAILABLE — ${esc((f && f.reason) || 'snapshot is incomplete')}.</b> The feed provides no decision for this coin. This is not &ldquo;no breakout.&rdquo; See the <a href="signals.html">Signals Engine detail</a> and <a href="signal-status.html">feed status</a>.</span></div>
     </div>`;
-  }).join('');
+  }
+
+  const inTrade = (H4 && H4.open.find((p) => p.sym === c.sym)) || (D1 && D1.open.find((p) => p.sym === c.sym));
+  const allowLong = !!s.longAllowed, allowShort = !!s.shortAllowed;
+  const gateBoth = allowLong && allowShort;
+  const gateLabel = gateBoth ? 'BOTH sides' : allowLong ? 'LONG only' : allowShort ? 'SHORT only' : 'NONE';
+  const gateCls = gateBoth ? 'gate-both' : (allowLong || allowShort) ? 'gate-one' : 'gate-none';
+  const dailyTxt = s.gateAllows === 'BOTH' ? 'both sides open (price between SMA50 and SMA200)'
+    : s.gateAllows === 'LONG' ? 'longs only (close above SMA50)'
+      : s.gateAllows === 'SHORT' ? 'shorts only (close below SMA200)' : 'no side open';
+  const livePx = (c.series1h && c.series1h.length) ? c.series1h[c.series1h.length - 1] : x.price;
+  const closeT = f.close, nextT = f.next;
+  const due = nextT - Date.now();
+  const nextTxt = due > 0 ? 'in ' + timeUntil(due) : 'overdue by ' + timeUntil(-due);
+  const feedTxt = stampHM(nextT) + ' (' + nextTxt + ')';
+
+  let verdict, vcls;
+  if (inTrade) {
+    const u = liveUnreal(inTrade);
+    // display-only TPs at 1R/2R/3R from entry (R = stop distance)
+    const r1 = Math.abs(inTrade.stop - inTrade.entry);
+    const tp = (n) => fmt$(inTrade.side === 'LONG' ? inTrade.entry + n * r1 : inTrade.entry - n * r1, 2);
+    verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · TP ${tp(1)} / ${tp(2)} / ${tp(3)} (reference only) · <span class="${cls(u.usd)}">${fmt$(u.usd, 2)}</span> (${fmtR(u.r)})`;
+    vcls = 'trade';
+    if (state === 'STALE') {
+      verdict += ` <span class="status-warn">Stale snapshot — no decision for the current candle.</span> Last published close ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; next close was expected ${stampHM(nextT)}.`;
+    }
+  } else if (state === 'STALE') {
+    verdict = `<b>No decision for the current candle — published data is stale.</b> Last published 4H close ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; the next close was expected at ${stampHM(nextT)}. The levels on this card are the last published snapshot, not a live signal. This is not &ldquo;no breakout.&rdquo;`;
+    vcls = 'blocked';
+  } else {
+    const longLine = `Long: 4H close &gt; ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%) — entry rule <b class="${allowLong ? 'pos' : 'neg'}">${allowLong ? 'open' : 'blocked'}</b>`;
+    const shortLine = `Short: 4H close &lt; ${fmt$(s.shortTrigger, 2)} (${s.pctToShort}% lower) — entry rule <b class="${allowShort ? 'pos' : 'neg'}">${allowShort ? 'open' : 'blocked'}</b>`;
+    if (w.state === 'BREAKOUT') {
+      const dir = w.dir, trig = dir === 1 ? s.longTrigger : s.shortTrigger;
+      const ok = dir === 1 ? allowLong : allowShort;
+      const blockers = dir === 1
+        ? [!s.dailyLong ? 'daily gate' : null, !s.nativeLong ? `4H SMA200 filter (${fmt$(s.sma200_4h, 0)} is ${s.pctTo4hSma200}% above price)` : null].filter(Boolean).join(' + ')
+        : [!s.dailyShort ? 'daily gate' : null, !s.nativeShort ? `4H SMA200 filter (${fmt$(s.sma200_4h, 0)} is ${Math.abs(s.pctTo4hSma200)}% below price)` : null].filter(Boolean).join(' + ');
+      const head = ok
+        ? `<b>${dir === 1 ? 'Long' : 'Short'} setup building.</b> 1H ${dir === 1 ? 'broke above' : 'broke below'} its 20-bar range; the trade fires only if the current 4H candle closes ${dir === 1 ? 'above' : 'below'} ${fmt$(trig, 2)}. `
+        : `<b>1H ${dir === 1 ? 'breakout' : 'breakdown'} cannot become a trade — blocked by the ${blockers}.</b> The 1H move is real, but the 4H entry rule still says no. `;
+      verdict = head + longLine + ' · ' + shortLine + `. Next expected 4H close ${feedTxt}.`;
+      vcls = ok ? 'wait' : 'blocked';
+    } else {
+      verdict = `<b>No trade yet — waiting for a published 4H close.</b> ${longLine} · ${shortLine}. Nothing fires mid-candle; next expected close ${feedTxt}.`;
+      vcls = 'wait';
+    }
+  }
+
+  const lb = s.lastBreakout;
+  const lbHtml = state === 'STALE'
+    ? `<b class="status-warn">Stale snapshot</b> — the breakout check is not current, so this is not &ldquo;no breakout.&rdquo; ` +
+      (lb ? `Last recorded: ${lb.dir} ${lb.allowed ? 'allowed' : 'blocked'} · ${when(lb.at)} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}.`
+        : `No breakout was recorded in the last snapshot (close ${stampUTC(closeT)}).`)
+    : lb
+      ? `Last 4H breakout: <b class="${lb.allowed ? 'pos' : 'neg'}">${lb.dir} ${lb.allowed ? 'allowed' : 'BLOCKED by ' + (lb.blockedBy || 'rule')}</b> · ${when(lb.at)} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}`
+      : 'Last 4H breakout: none recorded in this snapshot (checked the last 7 4H closes).';
+
+  const warnRate = (w.stats180d && Number.isFinite(w.stats180d.ratePct)) ? w.stats180d.ratePct + '% confirm rate (180d)' : 'confirm rate —';
+  const warnCls = { BREAKOUT: 'w-break', FAKEOUT: 'w-fake', APPROACHING: 'w-appr', QUIET: 'w-quiet' }[w.state] || 'w-quiet';
+
+  return `<div class="coin">
+    <div class="coin-head"><div class="coin-id"><span class="sym">${c.sym}</span><span class="px" id="livePx-${c.sym}">${fmt$(livePx, 2)} <span class="faint" style="font-size:10px">1H close</span></span></div><span class="regime ${regime[0]}">${regime[1]}</span></div>
+    <canvas class="spark" id="spark-${c.sym}" height="42"></canvas>
+    <div class="candle-strip">
+      <div><span>Published 4H close</span><b>${fmt$(s.price, 2)}</b><span class="sub">${stampUTC(closeT)}</span></div>
+      <div><span>Next expected 4H close</span><b>${stampHM(nextT)}</b><span class="sub">${nextTxt} · published cadence</span></div>
+      <div><span>Published daily close</span><b>${fmt$(x.price, 2)}</b><span class="sub">${esc(String(x.asOf || '—'))}</span></div>
+    </div>
+    <div class="signal-grid">
+      <div class="sig-cell"><div class="tag">1D Regime (daily close)</div><div class="sig-val">${x.aboveSma200 ? 'Above' : 'Below'} SMA200 · ${x.sma50Above200 ? 'SMA50 &gt; SMA200' : 'SMA50 &lt; SMA200'}<br><span class="muted">close ${fmt$(x.price, 2)} · ${esc(String(x.asOf || '—'))}</span></div></div>
+      <div class="sig-cell"><div class="tag">4H Trade Gate</div><div class="sig-val"><span class="gate-tag ${gateCls}">${gateLabel} effective</span><br><span class="muted">Daily: ${dailyTxt} · 4H trend: price ${s.nativeLong ? 'above' : 'below'} SMA200 ${fmt$(s.sma200_4h, 0)} · published gate <b>${esc(String(s.gateAllows))}</b></span></div></div>
+      <div class="sig-cell"><div class="tag">1H Warning (never trades)</div><div class="sig-val"><span class="warn ${warnCls}">${w.state || '—'}</span> <span class="muted">${warnRate}</span><br><span class="muted">${w.detail || '—'}</span></div></div>
+      <div class="sig-cell"><div class="tag">Daily Core Triggers (55-day)</div><div class="sig-val"><span class="num">${fmt$(x.longTrigger, 2)}</span> long · <span class="num">${fmt$(x.shortTrigger, 2)}</span> short<br><span class="muted">55-day Donchian, needs a daily close</span></div></div>
+      <div class="sig-cell"><div class="tag">4H Long Trigger (20-bar)</div><div class="sig-val"><span class="num">${fmt$(s.longTrigger, 2)}</span> <span class="muted">+${s.pctToLong}% from last 4H close</span>${allowLong ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+      <div class="sig-cell"><div class="tag">4H Short Trigger (20-bar)</div><div class="sig-val"><span class="num">${fmt$(s.shortTrigger, 2)}</span> <span class="muted">${s.pctToShort}% lower</span>${allowShort ? '' : ' <span class="neg">· blocked</span>'}</div></div>
+    </div>
+    <div class="break-line" style="padding:9px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.5">${lbHtml}</div>
+    <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop ${s.stopDistPct}% away (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
+    <div class="verdict ${vcls}"><span class="dot"></span><span>${verdict}</span></div>
+  </div>`;
 }
 
 function drawSparks() {
@@ -684,24 +839,28 @@ Promise.all([
     banner.innerHTML = h4
       ? `<b>PREVIEW — historical replay as of ${when(h4.previewAsOf || h4.updatedAt)}.</b> This is NOT the live paper account. It exists to test the position and performance layout; marks are replay closes, not live prices.`
       : '<b>Preview data missing.</b> Run <code>node scripts/v2_preview.js</code> first.';
+    // Preview exists to exercise the position + performance layout, so open
+    // those sections by default (charts draw on open).
+    $('performanceSection').open = true;
+    $('journalSection').open = true;
   }
 
   const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt) || (h4 && h4.updatedAt);
   const ageMin = upd ? (Date.now() - Date.parse(upd)) / 6e4 : null;
   const stale = !PREVIEW && ageMin !== null && ageMin > 120;
+  const noSig = !sig || !Array.isArray(sig.coins) || !sig.coins.length;
   $('updatedAt').innerHTML = PREVIEW
     ? 'Preview replay'
     : upd
       ? 'Updated ' + when(upd) + (stale ? ` <span class="neg">(${(ageMin / 60).toFixed(1)}h old)</span>` : '')
       : '—';
-  $('feedStatus').textContent = PREVIEW ? 'Preview' : (!d1 && !h4 && !sig) ? 'Feed Error' : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
-  $('feedStatus').className = 'pill ' + (PREVIEW ? 'pill-paper' : ((!d1 && !h4 && !sig) || stale ? 'pill-stale' : 'pill-live'));
+  $('feedStatus').textContent = PREVIEW ? 'Preview'
+    : noSig ? 'Signals unavailable'
+      : (!d1 && !h4) ? 'Feed Error'
+        : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
+  $('feedStatus').className = 'pill ' + (PREVIEW ? 'pill-paper' : ((noSig || (!d1 && !h4) || stale) ? 'pill-stale' : 'pill-live'));
 
-  const tick = () => {
-    $('nextClose').textContent = PREVIEW ? 'historical replay' : 'closed candles only · next 4H close in ' + next4hTxt();
-    const fn = $('flatNext'); if (fn) fn.textContent = next4hTxt();
-  };
-  tick(); setInterval(tick, 30000);
+  if (PREVIEW) $('nextClose').textContent = 'historical replay — not live signals';
 
   renderAccounts();
   renderPositions();
@@ -712,7 +871,13 @@ Promise.all([
   drawSparks();
   refreshLive();
   setInterval(refreshLive, 60000);
-  setInterval(() => { renderAccounts(); renderPositions(); }, 30000);
+  setInterval(() => { renderAccounts(); renderPositions(); renderCoins(); }, 30000);
+  // Charts inside <details> have zero width while closed — redraw on open.
+  document.querySelectorAll('details.collapsible').forEach((d) => {
+    d.addEventListener('toggle', () => {
+      if (d.open) setTimeout(() => { drawCurvesAndBars(); drawSparks(); }, 0);
+    });
+  });
   let rz;
   window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { drawSparks(); drawCurvesAndBars(); }, 150); });
 });
