@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T04:17:55.721Z",
+  "updatedAt": "2026-11-20T13:22:30.850Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61782,
-      "chg24hPct": -2.24,
-      "high24h": 64016,
-      "low24h": 61153,
-      "fundingPct": 0.0015,
-      "openInterest": 2264.2007,
+      "price": 61458,
+      "chg24hPct": -3.5,
+      "high24h": 64011,
+      "low24h": 61152,
+      "fundingPct": -0.0002,
+      "openInterest": 2165.2396,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1733.2,
-      "chg24hPct": -3.41,
+      "price": 1732.8,
+      "chg24hPct": -3.85,
       "high24h": 1815.6,
-      "low24h": 1721.7,
-      "fundingPct": 0.0015,
-      "openInterest": 28862.709,
+      "low24h": 1715.8,
+      "fundingPct": 0.0006,
+      "openInterest": 29553.638,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
+      "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T11:31:41.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "SEC charges eight firms over fake crypto platforms tied to $37M fraud",
+      "link": "https://cointelegraph.com/news/sec-charges-eight-fake-crypto-platforms-37m-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T08:03:34.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
@@ -42,13 +56,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Ethereum block builders received the most in a $3.4 million vault hack, data shows",
-      "link": "https://www.coindesk.com/tech/2026/11/19/ethereum-block-builders-received-the-most-in-a-usd3-4-million-vault-hack-data-shows",
-      "publishedAt": "2026-11-19T05:39:06.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Binance hackers stole 192 tokens across 11 networks, court docs show",
       "link": "https://cointelegraph.com/news/binance-hackers-stole-192-tokens-across-11-networks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -56,11 +63,18 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Binance says it obtained $6.5B worldwide freezing order after hack",
-      "link": "https://cointelegraph.com/news/binance-says-won-65b-worldwide-freezing-order-after-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-18T20:20:37.000Z",
-      "severity": "CRITICAL"
+      "source": "CoinDesk",
+      "title": "Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million",
+      "link": "https://www.coindesk.com/markets/2026/11/20/wrapped-monero-token-plunges-99-as-issuer-linked-wallet-sells-usd13-5-million",
+      "publishedAt": "2026-11-20T08:04:40.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Here's what's crashing gold and likely weighing on bitcoin too",
+      "link": "https://www.coindesk.com/markets/2026/11/20/here-s-what-s-crashing-gold-and-likely-weighing-on-bitcoin-too",
+      "publishedAt": "2026-11-20T06:12:15.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -71,58 +85,44 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin plunges to lowest since July as Anthropic gains, but broader markets tumble",
-      "link": "https://www.coindesk.com/markets/2026/11/19/live-updates-bitcoin-nears-usd64-000-as-anthropic-s-record-ipo-lifts-tech",
-      "publishedAt": "2026-11-19T10:48:26.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Fed's rate hike push may be a mistake. Here's why",
-      "link": "https://www.coindesk.com/markets/2026/11/19/fed-s-push-for-more-rate-hikes-leans-on-backward-looking-data-as-gas-prices-slide-analysts-argue",
-      "publishedAt": "2026-11-19T06:23:19.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Fed officials saw October rate hold as a ‘close call,’ minutes show",
-      "link": "https://cointelegraph.com/markets/fed-officials-saw-october-rate-hold-as-close-call-minutes-show?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T00:35:49.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Institutions pile back into US Bitcoin ETFs in Q3 after selling streak",
-      "link": "https://cointelegraph.com/markets/institutional-bitcoin-etf-holdings-clock-record-quarter-after-selling-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T03:33:22.000Z",
+      "title": "ECB’s Largarde warns Europe could lose control of growing tokenized asset market",
+      "link": "https://www.coindesk.com/policy/2026/11/20/ecb-s-largarde-warns-europe-could-lose-control-of-growing-tokenized-asset-market",
+      "publishedAt": "2026-11-20T13:11:49.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin hits four-month low after Anthropic's IPO as tech stocks wilt",
-      "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-hits-four-month-low-after-anthropic-s-ipo-as-tech-stocks-wilt",
-      "publishedAt": "2026-11-20T03:32:30.000Z",
+      "title": "Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/20/bitcoin-stocks-and-gold-traders-getting-nervous-and-volatility-gauges-are-surging",
+      "publishedAt": "2026-11-20T12:15:08.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin drops for third straight day as Asian tech shares slide",
+      "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-drops-for-third-straight-day-as-asian-tech-shares-slide",
+      "publishedAt": "2026-11-20T11:42:02.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Ledger CTO Charles Guillemet to leave after nine years at company",
-      "link": "https://cointelegraph.com/news/ledger-cto-charles-guillemet-to-leave-after-nine-years-at-company?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T23:44:02.000Z",
+      "title": "VanEck to end Gemini ETF custody deals, keeps Coinbase",
+      "link": "https://cointelegraph.com/news/vaneck-gemini-etf-custody-end-keep-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T10:54:38.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Coinbase targets first-half 2027 for its own prediction market contracts",
+      "link": "https://www.coindesk.com/business/2026/11/20/coinbase-targets-first-half-2027-for-its-own-prediction-market-contracts",
+      "publishedAt": "2026-11-20T10:48:04.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express",
-      "link": "https://cointelegraph.com/magazine/binances-65b-freeze-order-hong-kong-suspicious-of-hype-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T22:25:18.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "MoonPay seeks US bank charter for stablecoin, custody services",
-      "link": "https://cointelegraph.com/news/moonpay-seeks-us-bank-charter-for-stablecoin-custody-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T21:01:42.000Z",
+      "title": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest",
+      "link": "https://cointelegraph.com/markets/bitcoin-first-death-cross-repeat-2023-bottom-25k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T10:29:10.000Z",
       "severity": "NORMAL"
     }
   ],
