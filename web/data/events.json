@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-11-19T23:33:57.695Z",
+  "updatedAt": "2026-11-20T02:51:29.829Z",
   "fearGreed": {
-    "value": 10,
+    "value": 12,
     "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 61855,
-      "chg24hPct": -1.56,
+      "price": 61716,
+      "chg24hPct": -1.32,
       "high24h": 64016,
-      "low24h": 61358,
-      "fundingPct": 0.0013,
-      "openInterest": 2305.2727,
+      "low24h": 61153,
+      "fundingPct": 0.0019,
+      "openInterest": 2270.9736,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1750.7,
-      "chg24hPct": -1.21,
+      "price": 1735.9,
+      "chg24hPct": -1.8,
       "high24h": 1815.6,
-      "low24h": 1734.4,
-      "fundingPct": 0,
-      "openInterest": 29707.578,
+      "low24h": 1721.7,
+      "fundingPct": 0.0009,
+      "openInterest": 29047.046,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Ledger CTO Charles Guillemet to leave after nine years at company",
+      "link": "https://cointelegraph.com/news/ledger-cto-charles-guillemet-to-leave-after-nine-years-at-company?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-19T23:44:02.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express",
       "link": "https://cointelegraph.com/magazine/binances-65b-freeze-order-hong-kong-suspicious-of-hype-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-19T22:25:18.000Z",
@@ -117,16 +124,17 @@
       "link": "https://cointelegraph.com/markets/hyperliquid-anthropic-futures-nasdaq-opening-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-19T20:33:24.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Trump’s SEC nominee Johnson backs formal rulemaking for tokenized stock trading",
-      "link": "https://cointelegraph.com/news/sec-nominees-johnson-levine-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T20:06:34.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "ETH",
+      "at": "2026-11-20T01:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.24,
+      "vsAvgMove": 2.8,
+      "volumeSpike": 1.5
+    },
     {
       "sym": "BTC",
       "at": "2026-11-19T03:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": -0.87,
       "vsAvgMove": 2.6,
       "volumeSpike": 1.8
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-17T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.39,
-      "vsAvgMove": 3.8,
-      "volumeSpike": 2.1
     }
   ],
   "errors": []
