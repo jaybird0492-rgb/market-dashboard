@@ -149,13 +149,54 @@
   .collapsible-body { padding: 14px 16px 6px; }
   .collapsible-body .table-card { border: none; }
   .collapsible-note { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--faint); }
+  /* read-only decision review */
+  .review { border: 1px solid var(--border); border-radius: 8px; background: var(--panel); margin-top: 12px; overflow: hidden; }
+  .review-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 11px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); }
+  .review-head h3 { font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text); }
+  .review-sub { font-size: 11px; color: var(--faint); }
+  .review-timing { padding: 9px 14px; border-bottom: 1px solid var(--border); font-size: 11.5px; color: var(--muted); line-height: 1.55; }
+  .review-timing:empty { display: none; }
+  .review-timing b { color: var(--text); font-weight: 600; }
+  .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+  .review-col { background: var(--panel); min-width: 0; }
+  .review-strategy { padding: 9px 14px; background: rgba(74,158,218,.06); border-bottom: 1px solid var(--border); font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--blue); display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .review-strategy span { font-size: 10.5px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--faint); }
+  .rv { padding: 11px 14px; border-bottom: 1px solid var(--border); }
+  .rv:last-child { border-bottom: none; }
+  .rv-head { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; flex-wrap: wrap; }
+  .rv-head b { font-size: 13.5px; }
+  .rv-out { font-size: 12.5px; line-height: 1.55; }
+  .rv-out b { font-weight: 650; }
+  .rv-levels { margin-top: 6px; font-size: 11.5px; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .rv-levels b { color: var(--text); font-weight: 600; }
+  .rv-paper { margin-top: 7px; font-size: 12px; line-height: 1.5; color: var(--muted); }
+  .rv-paper .badge { margin-right: 6px; }
+  .rv-details { margin-top: 7px; }
+  .rv-details > summary { list-style: none; cursor: pointer; font-size: 11.5px; color: var(--blue); display: inline-flex; align-items: center; gap: 5px; }
+  .rv-details > summary::-webkit-details-marker { display: none; }
+  .rv-details > summary::after { content: '▸'; font-size: 10px; }
+  .rv-details[open] > summary::after { content: '▾'; }
+  .rv-details > summary:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  .rv-why { margin-top: 6px; border-top: 1px dashed var(--border); padding-top: 7px; }
+  .why-row { display: flex; justify-content: space-between; gap: 12px; font-size: 11.5px; line-height: 1.5; padding: 2px 0; }
+  .why-row span { color: var(--faint); flex: none; max-width: 45%; }
+  .why-row b { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+  .why-note { font-size: 11px; color: var(--faint); line-height: 1.5; margin-top: 5px; }
+  .review-foot { padding: 9px 14px; border-top: 1px solid var(--border); font-size: 11px; color: var(--faint); line-height: 1.5; }
   body.preview #marketSection, body.preview #eventsSection { display: none; }
+  @media (max-width: 900px) {
+    .review-grid { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
     .candle-strip { grid-template-columns: 1fr; }
     .engine-bar { flex-direction: column; }
     .topbar-in { height: auto; padding: 10px 16px; flex-wrap: wrap; gap: 8px; }
     .brand span { display: none; }
     .top-right { gap: 10px; font-size: 11.5px; }
+    .review-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+    .why-row { flex-direction: column; gap: 0; }
+    .why-row span { max-width: none; }
+    .why-row b { text-align: left; }
   }
   footer { border-top: 1px solid var(--border); color: var(--faint); font-size: 12px; }
   .foot-in { max-width: 1240px; margin: 0 auto; padding: 16px 20px 28px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -191,6 +232,16 @@
       <div class="engine-note">Paper only · published snapshot, not a live alert. A signal exists only when a published candle closes through a trigger — wicks, forming candles, live quotes and replayed fills do not count.</div>
     </div>
     <div class="coin-grid" id="coinCards"><div class="empty">Loading market state…</div></div>
+
+    <div class="review" id="decisionReview">
+      <div class="review-head">
+        <h3>Decision Review</h3>
+        <span class="review-sub">read-only · explained from published snapshots</span>
+      </div>
+      <div class="review-timing" id="reviewTiming"></div>
+      <div class="review-grid" id="reviewGrid"><div class="empty">Loading decision review…</div></div>
+      <div class="review-foot">A confirmed signal, a blocked setup, a queued paper entry and an open paper position are separate records and are reported separately. Historical breakouts are never shown as the current signal. Nothing here can place, change or cancel an order.</div>
+    </div>
   </section>
 
   <section id="accountsSection">
@@ -670,7 +721,7 @@ function cardHtml(c, f) {
     </div>`;
   }
 
-  const inTrade = (H4 && H4.open.find((p) => p.sym === c.sym)) || (D1 && D1.open.find((p) => p.sym === c.sym));
+  const inTrade = H4 && H4.open.find((p) => p.sym === c.sym);
   const allowLong = !!s.longAllowed, allowShort = !!s.shortAllowed;
   const gateBoth = allowLong && allowShort;
   const gateLabel = gateBoth ? 'BOTH sides' : allowLong ? 'LONG only' : allowShort ? 'SHORT only' : 'NONE';
@@ -750,6 +801,272 @@ function cardHtml(c, f) {
     <div class="sig-cell" style="border-bottom:1px solid var(--border)"><div class="tag">Trade Ticket (if triggered)</div><div class="sig-val">Stop ${s.stopDistPct}% away (2.5×ATR) · Risk $75.00 · Indicative size ${fmt$(s.approxSizeUsd)}</div></div>
     <div class="verdict ${vcls}"><span class="dot"></span><span>${verdict}</span></div>
   </div>`;
+}
+
+/* ---------- decision review (read-only, published snapshots only) ----------
+   Separate records, never inferred from each other:
+     signal    — a published candle close through a trigger (4H only; the
+                 daily snapshot publishes levels, not a decision)
+     paper     — pending / open rows in that strategy's own account payload
+   A historical lastBreakout is only a record. It is current only when its
+   bar open timestamp equals setup4h.asOf (the latest published 4H bar). */
+function whyRow(label, value) {
+  return `<div class="why-row"><span>${label}</span><b>${value}</b></div>`;
+}
+function riskText(acc) {
+  if (!acc || typeof acc !== 'object') return 'not recorded — no account snapshot published';
+  return acc.halted
+    ? 'account halted by the published kill rule'
+    : 'no veto recorded — the published account is not halted';
+}
+function barRange(openMs, span) {
+  if (!Number.isFinite(openMs)) return 'timestamp not recorded';
+  const a = new Date(openMs).toISOString(), b = new Date(openMs + span).toISOString();
+  return `${a.slice(0, 10)} ${a.slice(11, 16)}–${b.slice(11, 16)} UTC`;
+}
+function expectedDailyAsOf(now) {
+  const d = new Date(now);
+  d.setUTCHours(0, 0, 0, 0);
+  return new Date(d.getTime() - MS_DAY).toISOString().slice(0, 10);
+}
+function paperLine(acc, sym, layer) {
+  if (!acc || typeof acc !== 'object') {
+    return `<div class="rv-paper"><span class="badge badge-none">Paper state</span> Not recorded — no ${layer} account snapshot was published.</div>`;
+  }
+  const pending = (Array.isArray(acc.pending) ? acc.pending : []).filter((z) => z && z.sym === sym);
+  const open = (Array.isArray(acc.open) ? acc.open : []).filter((z) => z && z.sym === sym);
+  const out = [];
+  for (const p of pending) {
+    const sideCls = p.side === 'LONG' ? 'side-long' : 'side-short';
+    const fillT = Date.parse(p.fillsAt);
+    const late = Number.isFinite(fillT) && fillT <= Date.now();
+    out.push(`<div class="rv-paper"><span class="badge badge-warn">Paper entry queued</span> <span class="${sideCls}">${esc(String(p.side))}</span> — ${layer} signal closed ${stampUTC(fillT)}${late ? ' (fill time passed — still queued in the published replay)' : ''}. No fill recorded yet.</div>`);
+  }
+  for (const o of open) {
+    const sideCls = o.side === 'LONG' ? 'side-long' : 'side-short';
+    out.push(`<div class="rv-paper"><span class="badge badge-check">Paper position open</span> <span class="${sideCls}">${esc(String(o.side))}</span> from ${fmt$(o.entry, 2)} · opened ${stampUTC(Date.parse(o.openedAt))} · full ticket in Open Paper Positions.</div>`);
+  }
+  if (!out.length) {
+    out.push(`<div class="rv-paper"><span class="badge badge-none">Paper state</span> No queued entry and no open position recorded for ${sym} in this strategy.</div>`);
+  }
+  return out.join('');
+}
+function sideBlock4h(s, dir) {
+  const daily = dir === 'long' ? !!s.dailyLong : !!s.dailyShort;
+  const native = dir === 'long' ? !!s.nativeLong : !!s.nativeShort;
+  const effective = dir === 'long' ? !!s.longAllowed : !!s.shortAllowed;
+  const blockers = [];
+  if (!daily) blockers.push('daily gate');
+  if (!native) blockers.push('4H trend filter');
+  return { daily, native, effective, blockers };
+}
+
+function rv4hCard(sym, c, f, snapT) {
+  const s = c && c.setup4h, x = c && c.context1d;
+  const paper = paperLine(H4, sym, '4H');
+  const shell = (chipCls, chip, out, why, levels) => `<div class="rv">
+    <div class="rv-head"><b>${sym}</b><span class="badge ${chipCls}">${chip}</span></div>
+    <div class="rv-out">${out}</div>
+    ${levels ? `<div class="rv-levels">${levels}</div>` : ''}
+    ${paper}
+    <details class="rv-details" data-rv="4h-${sym}"><summary>Why this status?</summary><div class="rv-why">${why}</div></details>
+  </div>`;
+
+  if (!s || !x) {
+    return shell('badge-bad', 'No decision — data unavailable',
+      `No decision — data unavailable (${esc((f && f.reason) || 'no usable 4H fields')}). This is not &ldquo;no breakout.&rdquo;`,
+      `<div class="why-note">The published snapshot cannot support a current 4H outcome for ${sym}, so none is asserted.</div>`);
+  }
+
+  const state = f ? f.state : 'UNAVAILABLE';
+  if (state === 'UNAVAILABLE') {
+    const why = [];
+    if (Number.isFinite(s.longTrigger)) why.push(whyRow('Published long trigger', fmt$(s.longTrigger, 2)));
+    if (Number.isFinite(s.shortTrigger)) why.push(whyRow('Published short trigger', fmt$(s.shortTrigger, 2)));
+    if (s.gateAllows) why.push(whyRow('Published daily gate', esc(String(s.gateAllows))));
+    why.push(whyRow('Snapshot', stampUTC(snapT)));
+    why.push(`<div class="why-note">${esc((f && f.reason) || 'a required field or timestamp is missing')}. No current signal is inferred from these levels.</div>`);
+    return shell('badge-bad', 'No decision — data unavailable',
+      `No decision — data unavailable. ${esc((f && f.reason) || 'the snapshot is incomplete')}. This is not &ldquo;no breakout.&rdquo;`,
+      why.join(''));
+  }
+
+  const asOf = Date.parse(s.asOf);
+  const closeT = asOf + MS_4H, nextT = closeT + MS_4H;
+  const due = nextT - Date.now();
+  const dueTxt = due > 0 ? `in ${timeUntil(due)}` : `overdue by ${timeUntil(-due)}`;
+  const longB = sideBlock4h(s, 'long'), shortB = sideBlock4h(s, 'short');
+  const sideTxt = (b) => b.effective ? 'allowed' : 'blocked' + (b.blockers.length ? ' by ' + b.blockers.join(' + ') : '');
+  const levelsLine = `Latest close <b>${fmt$(s.price, 2)}</b> at ${stampUTC(closeT)}<br>Long <b>${fmt$(s.longTrigger, 2)}</b> · ${sideTxt(longB)} &nbsp;|&nbsp; Short <b>${fmt$(s.shortTrigger, 2)}</b> · ${sideTxt(shortB)}`;
+
+  if (state === 'STALE') {
+    const why = [
+      whyRow('Last published 4H close', `${fmt$(s.price, 2)} · ${stampUTC(closeT)}`),
+      whyRow('Next expected 4H close', `${stampHM(nextT)} · ${dueTxt}`),
+      whyRow('Published long trigger', `${fmt$(s.longTrigger, 2)} · ${s.longAllowed ? 'allowed' : 'blocked'}`),
+      whyRow('Published short trigger', `${fmt$(s.shortTrigger, 2)} · ${s.shortAllowed ? 'allowed' : 'blocked'}`),
+      whyRow('Published daily gate', esc(String(s.gateAllows || '—'))),
+      whyRow('Risk veto', riskText(H4)),
+      whyRow('Snapshot', stampUTC(snapT)),
+    ].join('');
+    return shell('badge-warn', 'No decision — stale data',
+      `No decision — stale data (${esc(f.reason)}). Last published close ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; the next close was expected ${stampHM(nextT)}. The levels below are the last published snapshot, not a current signal, and this is not &ldquo;no breakout.&rdquo;`,
+      why, levelsLine);
+  }
+
+  const lb = s.lastBreakout;
+  const lbAt = lb ? Date.parse(lb.at) : NaN;
+  const isCurrent = Number.isFinite(lbAt) && lbAt === asOf;
+
+  let chipCls, chip, out;
+  if (isCurrent) {
+    const side = lb.dir === 'LONG' ? 'Long' : 'Short';
+    const belowAbove = lb.dir === 'LONG' ? 'above' : 'below';
+    if (lb.allowed) {
+      chipCls = 'badge-check'; chip = 'Confirmed signal';
+      out = `<b>${side} breakout confirmed</b> on the latest published 4H close (${stampHM(closeT)}) — close ${fmt$(lb.close, 2)} was ${belowAbove} the ${fmt$(lb.level, 2)} trigger. The published daily gate and 4H trend filter both allowed it.`;
+    } else {
+      chipCls = 'badge-bad'; chip = 'Blocked setup';
+      out = `<b>${side} breakout on the latest published 4H close (${stampHM(closeT)})</b> — close ${fmt$(lb.close, 2)} was ${belowAbove} the ${fmt$(lb.level, 2)} trigger — but it was <b>blocked by ${esc(lb.blockedBy || 'a published filter')}</b>. The breakout happened; no entry follows.`;
+    }
+  } else {
+    chipCls = 'badge-none'; chip = 'No breakout';
+    out = `<b>No breakout on the latest published 4H close (${stampHM(closeT)}).</b> Long needs a close above ${fmt$(s.longTrigger, 2)} (${sideTxt(longB)}); short needs a close below ${fmt$(s.shortTrigger, 2)} (${sideTxt(shortB)}).`;
+  }
+
+  const whyRows = [
+    whyRow('Latest published 4H close', `${fmt$(s.price, 2)} · ${stampUTC(closeT)} (bar ${barRange(asOf, MS_4H)})`),
+    whyRow('Next expected 4H close', `${stampHM(nextT)} · ${dueTxt}`),
+    whyRow('Breakout check (latest candle)', isCurrent
+      ? `${lb.dir} close ${fmt$(lb.close, 2)} vs ${fmt$(lb.level, 2)} · ${lb.allowed ? 'allowed' : 'blocked by ' + esc(lb.blockedBy || 'filter')}`
+      : 'no close outside either trigger'),
+    whyRow('Long trigger (20-bar)', `${fmt$(s.longTrigger, 2)} · ${sideTxt(longB)}`),
+    whyRow('Short trigger (20-bar)', `${fmt$(s.shortTrigger, 2)} · ${sideTxt(shortB)}`),
+    whyRow('Published daily gate', `${esc(String(s.gateAllows || '—'))} · daily close ${fmt$(x.price, 2)} (${esc(String(x.asOf || '—'))})`),
+    whyRow('4H trend filter', `price ${s.nativeLong ? 'above' : 'below'} SMA200 ${fmt$(s.sma200_4h, 2)} · ${Math.abs(s.pctTo4hSma200)}% ${s.pctTo4hSma200 > 0 ? 'above' : 'below'} price`),
+    whyRow('Risk veto', riskText(H4)),
+    whyRow('Snapshot', stampUTC(snapT)),
+  ];
+  if (lb && !isCurrent) {
+    whyRows.push(whyRow('Earlier breakout (historical)', `${lb.dir} · bar ${barRange(lbAt, MS_4H)} · close ${fmt$(lb.close, 2)} vs ${fmt$(lb.level, 2)} · ${lb.allowed ? 'allowed' : 'blocked by ' + esc(lb.blockedBy || 'filter')}`));
+    whyRows.push('<div class="why-note">That earlier breakout is a historical record only — it is not the current 4H signal.</div>');
+  } else if (!lb) {
+    whyRows.push(whyRow('Earlier breakout', 'none recorded in the last 7 published 4H candles'));
+  }
+
+  return shell(chipCls, chip, out, whyRows.join(''), levelsLine);
+}
+
+function rvDailyCard(sym, c, snapT) {
+  const x = c && c.context1d;
+  const paper = paperLine(D1, sym, 'daily');
+  const shell = (chipCls, chip, out, why) => `<div class="rv">
+    <div class="rv-head"><b>${sym}</b><span class="badge ${chipCls}">${chip}</span></div>
+    <div class="rv-out">${out}</div>
+    ${paper}
+    <details class="rv-details" data-rv="1d-${sym}"><summary>Why this status?</summary><div class="rv-why">${why}</div></details>
+  </div>`;
+
+  if (!x) {
+    return shell('badge-bad', 'No decision — data unavailable',
+      'No decision — data unavailable. The published snapshot has no daily context, so no daily levels are shown.',
+      '<div class="why-note">Daily Core publishes levels only; with the snapshot missing there is nothing to label.</div>');
+  }
+  const levelsOk = Number.isFinite(x.longTrigger) && Number.isFinite(x.shortTrigger) && Number.isFinite(x.price) && x.price > 0;
+  if (!levelsOk) {
+    return shell('badge-bad', 'No decision — data unavailable',
+      `No decision — data unavailable. The published daily levels for ${sym} are incomplete. This is not &ldquo;no breakout.&rdquo;`,
+      '<div class="why-note">A decision is not inferred from missing daily levels.</div>');
+  }
+
+  const expected = expectedDailyAsOf(Date.now());
+  const asOf = typeof x.asOf === 'string' ? x.asOf : '';
+  const dated = /^\d{4}-\d{2}-\d{2}$/.test(asOf);
+  if (dated && asOf > expected) {
+    return shell('badge-bad', 'No decision — data unavailable',
+      `No decision — data unavailable. The published daily timestamp (${esc(asOf)}) is ahead of the last completed daily bar (${expected}).`,
+      '<div class="why-note">A future-dated daily bar cannot support a current outcome.</div>');
+  }
+  const behind = dated && asOf < expected;
+  const lagDays = behind ? Math.round((Date.parse(expected) - Date.parse(asOf)) / MS_DAY) : 0;
+  const dailyCloseMs = dated ? Date.parse(asOf + 'T00:00:00.000Z') + MS_DAY : NaN;
+  const smaKnown = typeof x.aboveSma200 === 'boolean';
+
+  let out = `<b>No daily entry decision is published — levels only.</b> Long needs a daily close above ${fmt$(x.longTrigger, 2)} (${fmtPct((x.longTrigger / x.price - 1) * 100)} away); short needs a daily close below ${fmt$(x.shortTrigger, 2)} (${fmtPct((x.shortTrigger / x.price - 1) * 100)} away).`;
+  if (x.price > x.longTrigger) out += ' The published daily close is already above the long level; the snapshot still publishes no daily decision record.';
+  else if (x.price < x.shortTrigger) out += ' The published daily close is already below the short level; the snapshot still publishes no daily decision record.';
+  if (behind) out += ` These levels come from the ${esc(asOf)} close, ${lagDays === 1 ? 'one daily bar' : lagDays + ' daily bars'} behind the last completed day (${expected}) — stale.`;
+
+  const whyRows = [
+    whyRow('Published daily close', `${fmt$(x.price, 2)}${dated ? ' · bar ' + esc(asOf) + ' (closed ' + stampUTC(dailyCloseMs) + ')' : ''}`),
+    whyRow('Long level (55-day)', `${fmt$(x.longTrigger, 2)} · ${fmtPct((x.longTrigger / x.price - 1) * 100)} away`),
+    whyRow('Short level (55-day)', `${fmt$(x.shortTrigger, 2)} · ${fmtPct((x.shortTrigger / x.price - 1) * 100)} away`),
+    whyRow('SMA200 filter', smaKnown
+      ? `close ${x.aboveSma200 ? 'above' : 'below'} SMA200 ${fmt$(x.sma200, 2)} · longs ${x.aboveSma200 ? 'permitted' : 'blocked'}, shorts ${x.aboveSma200 ? 'blocked' : 'permitted'}`
+      : 'not recorded in this snapshot'),
+    whyRow('Daily entry decision', 'not recorded — the snapshot publishes levels only'),
+    whyRow('Daily bar freshness', dated
+      ? (behind ? `${lagDays === 1 ? 'one bar' : lagDays + ' bars'} behind (last completed ${expected})` : `current (last completed ${expected})`)
+      : 'timestamp not recorded'),
+    whyRow('Risk veto', riskText(D1)),
+    whyRow('Snapshot', stampUTC(snapT)),
+  ];
+  whyRows.push('<div class="why-note">Daily Core levels are context, not a published decision. Only a queued or open row from the daily paper account is shown as paper state.</div>');
+
+  return shell(behind ? 'badge-warn' : 'badge-none', behind ? 'Levels only · stale' : 'Levels only', out, whyRows.join(''));
+}
+
+function renderDecisionReview() {
+  const grid = $('reviewGrid');
+  if (!grid) return;
+  const timing = $('reviewTiming');
+  if (PREVIEW) {
+    grid.innerHTML = '<div class="empty">Replay mode — current decisions are not shown.</div>';
+    if (timing) timing.innerHTML = '';
+    return;
+  }
+  const openKeys = new Set([...grid.querySelectorAll('details[data-rv]')].filter((d) => d.open).map((d) => d.getAttribute('data-rv')));
+  const f = feedState();
+  const snapT = Number.isFinite(f.snapT) ? f.snapT : NaN;
+  const coins = (SIG && Array.isArray(SIG.coins)) ? SIG.coins : [];
+  const get = (sym) => coins.find((c) => c && c.sym === sym) || null;
+  const fs = (sym) => {
+    const one = (f.coins || []).find((z) => z && z.sym === sym);
+    if (one) return one;
+    return { state: 'UNAVAILABLE', reason: (f.state === 'UNAVAILABLE' && f.reason) || 'coin is not present in the published snapshot' };
+  };
+  const b = get('BTC'), e = get('ETH');
+  const fb = fs('BTC'), fe = fs('ETH');
+
+  if (timing) {
+    const bc = fb.close, ec = fe.close;
+    if (Number.isFinite(bc) && Number.isFinite(ec) && bc === ec) {
+      const next = Number.isFinite(fb.next) ? fb.next : bc + MS_4H;
+      const due = next - Date.now();
+      timing.innerHTML = `<b>Shared timing — BTC and ETH agree.</b> Latest published 4H candle closed ${stampUTC(bc)} · next expected ${stampHM(next)} (${due > 0 ? 'in ' + timeUntil(due) : 'overdue by ' + timeUntil(-due)}) · snapshot ${stampUTC(snapT)}.`;
+    } else if (Number.isFinite(bc) && Number.isFinite(ec)) {
+      timing.innerHTML = '<b>BTC and ETH published 4H candles are not aligned.</b> Timing is shown per asset below.';
+    } else {
+      timing.innerHTML = '';
+    }
+  }
+
+  grid.innerHTML = `
+    <div class="review-col">
+      <div class="review-strategy">4H Futures breakout <span>Donchian 20/10 · daily gate + 4H SMA200 filter</span></div>
+      ${rv4hCard('BTC', b, fb, snapT)}
+      ${rv4hCard('ETH', e, fe, snapT)}
+    </div>
+    <div class="review-col">
+      <div class="review-strategy">Daily Core <span>Donchian 55/20 + SMA200 · levels only</span></div>
+      ${rvDailyCard('BTC', b, snapT)}
+      ${rvDailyCard('ETH', e, snapT)}
+    </div>`;
+
+  openKeys.forEach((k) => {
+    const d = grid.querySelector(`details[data-rv="${k}"]`);
+    if (d) d.open = true;
+  });
 }
 
 function drawSparks() {
@@ -867,11 +1184,12 @@ Promise.all([
   renderPerformance();
   renderJournal();
   renderCoins();
+  renderDecisionReview();
   renderMarket(ev);
   drawSparks();
   refreshLive();
   setInterval(refreshLive, 60000);
-  setInterval(() => { renderAccounts(); renderPositions(); renderCoins(); }, 30000);
+  setInterval(() => { renderAccounts(); renderPositions(); renderCoins(); renderDecisionReview(); }, 30000);
   // Charts inside <details> have zero width while closed — redraw on open.
   document.querySelectorAll('details.collapsible').forEach((d) => {
     d.addEventListener('toggle', () => {
