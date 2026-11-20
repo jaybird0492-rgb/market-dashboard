@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T13:22:30.850Z",
+  "updatedAt": "2026-11-20T21:23:39.609Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61458,
-      "chg24hPct": -3.5,
-      "high24h": 64011,
-      "low24h": 61152,
-      "fundingPct": -0.0002,
-      "openInterest": 2165.2396,
+      "price": 58588,
+      "chg24hPct": -4.76,
+      "high24h": 62578,
+      "low24h": 57662,
+      "fundingPct": 0.0013,
+      "openInterest": 2235.2148,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1732.8,
-      "chg24hPct": -3.85,
-      "high24h": 1815.6,
-      "low24h": 1715.8,
-      "fundingPct": 0.0006,
-      "openInterest": 29553.638,
+      "price": 1607.4,
+      "chg24hPct": -7.78,
+      "high24h": 1768.8,
+      "low24h": 1578.5,
+      "fundingPct": -0.0012,
+      "openInterest": 33692.874,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit",
+      "link": "https://cointelegraph.com/news/wrapped-monero-token-crashes-998-amid-suspected-135m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T19:37:27.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
@@ -36,7 +43,7 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "SEC charges eight firms over fake crypto platforms tied to $37M fraud",
+      "title": "SEC charges 8 firms over fake crypto platforms tied to $37M fraud",
       "link": "https://cointelegraph.com/news/sec-charges-eight-fake-crypto-platforms-37m-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-20T08:03:34.000Z",
       "severity": "CRITICAL"
@@ -50,17 +57,24 @@
     },
     {
       "source": "CoinDesk",
-      "title": "North Korean hackers used Sky's stablecoin system, putting billions at freeze risk",
-      "link": "https://www.coindesk.com/business/2026/11/19/north-korean-hackers-used-sky-s-stablecoin-system-putting-billions-at-freeze-risk",
-      "publishedAt": "2026-11-19T11:30:00.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play",
+      "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
+      "publishedAt": "2026-11-20T18:13:52.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance hackers stole 192 tokens across 11 networks, court docs show",
-      "link": "https://cointelegraph.com/news/binance-hackers-stole-192-tokens-across-11-networks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T05:09:45.000Z",
-      "severity": "CRITICAL"
+      "title": "Bitcoin falls below $60K for first time since July amid broader market selloff",
+      "link": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T16:55:51.000Z",
+      "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off",
+      "link": "https://cointelegraph.com/markets/bitcoin-hits-new-20-week-low-anthropic-drops-87-tech-sell-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T15:52:06.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -77,56 +91,58 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Bitcoin holds above $63,750 but Fed rate-hike threats loom large",
-      "link": "https://www.coindesk.com/markets/2026/11/19/bitcoin-holds-above-usd63-750-but-fed-rate-hike-threats-loom-large",
-      "publishedAt": "2026-11-19T12:08:06.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "ECB’s Largarde warns Europe could lose control of growing tokenized asset market",
-      "link": "https://www.coindesk.com/policy/2026/11/20/ecb-s-largarde-warns-europe-could-lose-control-of-growing-tokenized-asset-market",
-      "publishedAt": "2026-11-20T13:11:49.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/20/bitcoin-stocks-and-gold-traders-getting-nervous-and-volatility-gauges-are-surging",
-      "publishedAt": "2026-11-20T12:15:08.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin drops for third straight day as Asian tech shares slide",
-      "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-drops-for-third-straight-day-as-asian-tech-shares-slide",
-      "publishedAt": "2026-11-20T11:42:02.000Z",
+      "source": "Cointelegraph",
+      "title": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims",
+      "link": "https://cointelegraph.com/news/sky-protocol-sees-2b-in-stablecoin-withdrawals-disputes-illicit-fund-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T18:37:10.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "VanEck to end Gemini ETF custody deals, keeps Coinbase",
-      "link": "https://cointelegraph.com/news/vaneck-gemini-etf-custody-end-keep-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T10:54:38.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Coinbase targets first-half 2027 for its own prediction market contracts",
-      "link": "https://www.coindesk.com/business/2026/11/20/coinbase-targets-first-half-2027-for-its-own-prediction-market-contracts",
-      "publishedAt": "2026-11-20T10:48:04.000Z",
+      "title": "US Senate advances prediction market restrictions with DEATH BETS Act",
+      "link": "https://cointelegraph.com/news/us-senate-advances-prediction-market-restrictions-with-death-bets-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T15:55:22.000Z",
       "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest",
-      "link": "https://cointelegraph.com/markets/bitcoin-first-death-cross-repeat-2023-bottom-25k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T10:29:10.000Z",
+      "title": "DBS bets it can lose the deposit and keep the client",
+      "link": "https://cointelegraph.com/news/dbs-bets-it-can-lose-the-deposit-and-keep-the-client?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T15:32:30.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Former Point72 head of proprietary research says AI could turn data into a new asset class for Wall Street",
+      "link": "https://www.coindesk.com/markets/2026/11/20/former-point72-head-of-proprietary-research-says-ai-could-turn-data-into-a-new-asset-class-for-wall-street",
+      "publishedAt": "2026-11-20T14:54:30.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians",
+      "link": "https://www.coindesk.com/policy/2026/11/20/hong-kong-moves-to-extend-crypto-licensing-rules-to-brokers-advisers-and-custodians",
+      "publishedAt": "2026-11-20T14:38:30.000Z",
       "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-20T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -3.71,
+      "vsAvgMove": 7.3,
+      "volumeSpike": 6.1
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-20T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -5.03,
+      "vsAvgMove": 8.7,
+      "volumeSpike": 7
+    },
     {
       "sym": "BTC",
       "at": "2026-11-20T02:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": 1.11,
       "vsAvgMove": 2.7,
       "volumeSpike": 1.2
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-18T17:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.1,
-      "vsAvgMove": 3,
-      "volumeSpike": 2
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-18T16:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.09,
-      "vsAvgMove": 3.2,
-      "volumeSpike": 2.9
     }
   ],
   "errors": []
