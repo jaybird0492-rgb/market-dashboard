@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T02:51:29.829Z",
+  "updatedAt": "2026-11-20T04:17:55.721Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61716,
-      "chg24hPct": -1.32,
+      "price": 61782,
+      "chg24hPct": -2.24,
       "high24h": 64016,
       "low24h": 61153,
-      "fundingPct": 0.0019,
-      "openInterest": 2270.9736,
+      "fundingPct": 0.0015,
+      "openInterest": 2264.2007,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1735.9,
-      "chg24hPct": -1.8,
+      "price": 1733.2,
+      "chg24hPct": -3.41,
       "high24h": 1815.6,
       "low24h": 1721.7,
-      "fundingPct": 0.0009,
-      "openInterest": 29047.046,
+      "fundingPct": 0.0015,
+      "openInterest": 28862.709,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,20 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Institutions pile back into US Bitcoin ETFs in Q3 after selling streak",
+      "link": "https://cointelegraph.com/markets/institutional-bitcoin-etf-holdings-clock-record-quarter-after-selling-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-20T03:33:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin hits four-month low after Anthropic's IPO as tech stocks wilt",
+      "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-hits-four-month-low-after-anthropic-s-ipo-as-tech-stocks-wilt",
+      "publishedAt": "2026-11-20T03:32:30.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Ledger CTO Charles Guillemet to leave after nine years at company",
       "link": "https://cointelegraph.com/news/ledger-cto-charles-guillemet-to-leave-after-nine-years-at-company?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-19T23:44:02.000Z",
@@ -106,27 +120,21 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T21:42:20.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "MoonPay seeks US bank charter for stablecoin, custody services",
       "link": "https://cointelegraph.com/news/moonpay-seeks-us-bank-charter-for-stablecoin-custody-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-19T21:01:42.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price",
-      "link": "https://cointelegraph.com/markets/hyperliquid-anthropic-futures-nasdaq-opening-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-19T20:33:24.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-20T02:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.12,
+      "vsAvgMove": 2.5,
+      "volumeSpike": 1.7
+    },
     {
       "sym": "ETH",
       "at": "2026-11-20T01:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": -1.09,
       "vsAvgMove": 3.2,
       "volumeSpike": 2.9
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-18T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -0.87,
-      "vsAvgMove": 2.6,
-      "volumeSpike": 1.8
     }
   ],
   "errors": []
