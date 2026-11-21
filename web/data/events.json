@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T21:23:39.609Z",
+  "updatedAt": "2026-11-21T02:38:37.858Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58588,
-      "chg24hPct": -4.76,
-      "high24h": 62578,
+      "price": 58648,
+      "chg24hPct": -4.77,
+      "high24h": 62333,
       "low24h": 57662,
-      "fundingPct": 0.0013,
-      "openInterest": 2235.2148,
+      "fundingPct": 0.0017,
+      "openInterest": 2374.2165,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1607.4,
-      "chg24hPct": -7.78,
-      "high24h": 1768.8,
+      "price": 1617.1,
+      "chg24hPct": -6.75,
+      "high24h": 1761.4,
       "low24h": 1578.5,
-      "fundingPct": -0.0012,
-      "openInterest": 33692.874,
+      "fundingPct": 0.0004,
+      "openInterest": 34290.064,
       "src": "Kraken perp"
     }
   ],
@@ -46,13 +46,6 @@
       "title": "SEC charges 8 firms over fake crypto platforms tied to $37M fraud",
       "link": "https://cointelegraph.com/news/sec-charges-eight-fake-crypto-platforms-37m-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-20T08:03:34.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Binance wins $6.5 billion feezing order against hackers behind crypto's largest theft",
-      "link": "https://www.coindesk.com/business/2026/11/19/binance-wins-usd6-5-billion-feezing-order-against-hackers-behind-crypto-s-largest-theft",
-      "publishedAt": "2026-11-19T15:20:38.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -91,6 +84,20 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Kalshi races to get ahead of New York order that could shut down exchange",
+      "link": "https://www.coindesk.com/policy/2026/11/20/kalshi-races-to-get-ahead-of-new-york-order-that-could-shut-down-exchange",
+      "publishedAt": "2026-11-20T22:51:14.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Fairmint plans tokenized stock venue on Canton, Ethereum under SEC experiment",
+      "link": "https://www.coindesk.com/business/2026/11/20/fairmint-plans-tokenized-stock-venue-on-canton-ethereum-under-sec-experiment",
+      "publishedAt": "2026-11-20T22:05:31.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims",
       "link": "https://cointelegraph.com/news/sky-protocol-sees-2b-in-stablecoin-withdrawals-disputes-illicit-fund-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Former Point72 head of proprietary research says AI could turn data into a new asset class for Wall Street",
       "link": "https://www.coindesk.com/markets/2026/11/20/former-point72-head-of-proprietary-research-says-ai-could-turn-data-into-a-new-asset-class-for-wall-street",
       "publishedAt": "2026-11-20T14:54:30.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians",
-      "link": "https://www.coindesk.com/policy/2026/11/20/hong-kong-moves-to-extend-crypto-licensing-rules-to-brokers-advisers-and-custodians",
-      "publishedAt": "2026-11-20T14:38:30.000Z",
       "severity": "NORMAL"
     }
   ],
