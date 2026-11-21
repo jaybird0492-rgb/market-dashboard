@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T09:36:29.490Z",
+  "updatedAt": "2026-11-21T10:13:24.872Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 57879,
-      "chg24hPct": -6.03,
+      "price": 57870,
+      "chg24hPct": -6.27,
       "high24h": 62284,
       "low24h": 55076,
-      "fundingPct": 0.001,
-      "openInterest": 2120.7852,
+      "fundingPct": 0.0004,
+      "openInterest": 2104.1994,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1635.6,
-      "chg24hPct": -6.31,
+      "price": 1633,
+      "chg24hPct": -6.68,
       "high24h": 1761.4,
       "low24h": 1534.7,
-      "fundingPct": 0.0023,
-      "openInterest": 32561.443,
+      "fundingPct": 0.0017,
+      "openInterest": 33297.598,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
+      "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-21T09:48:56.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
       "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T07:51:47.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin tanks below $57,000 for the first time in two years, and its not alone",
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-tanks-below-usd57-000-for-the-first-time-in-two-years-and-its-not-alone",
       "publishedAt": "2026-11-21T04:10:07.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Kalshi races to get ahead of New York order that could shut down exchange",
-      "link": "https://www.coindesk.com/policy/2026/11/20/kalshi-races-to-get-ahead-of-new-york-order-that-could-shut-down-exchange",
-      "publishedAt": "2026-11-20T22:51:14.000Z",
       "severity": "NORMAL"
     }
   ],
