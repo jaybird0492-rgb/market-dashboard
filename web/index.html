@@ -207,6 +207,15 @@
     .perf-kpis { grid-template-columns: 1fr 1fr; }
   }
 </style>
+<style>
+.workspace-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+.workspace-chart{min-width:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--panel)}
+.workspace-chart figcaption{display:flex;justify-content:space-between;gap:8px;padding:10px 14px}
+.workspace-chart iframe{width:100%;height:360px;border:0;display:block}
+.workspace-caption{color:var(--muted);font-size:12px;line-height:1.5;margin:0 0 14px}
+.workspace-setups{margin-bottom:12px}.workspace-setups>summary{cursor:pointer;padding:9px 0;color:var(--blue)}
+@media(max-width:760px){.workspace-charts{grid-template-columns:minmax(0,1fr)}.workspace-chart iframe{height:290px}}
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -231,7 +240,9 @@
       </div>
       <div class="engine-note">Paper only · published snapshot, not a live alert. A signal exists only when a published candle closes through a trigger — wicks, forming candles, live quotes and replayed fills do not count.</div>
     </div>
-    <div class="coin-grid" id="coinCards"><div class="empty">Loading market state…</div></div>
+    <div class="workspace-charts"><figure class="workspace-chart"><figcaption><strong>BTC / USDT perpetual</strong><a href="https://www.tradingview.com/chart/?symbol=BYBIT%3ABTCUSDT.P" target="_blank" rel="noopener noreferrer">Open TradingView ↗</a></figcaption><iframe title="BTC TradingView chart" src="https://s.tradingview.com/widgetembed/?symbol=BYBIT%3ABTCUSDT.P&amp;interval=240&amp;theme=dark&amp;timezone=Etc%2FUTC&amp;style=1&amp;locale=en&amp;hidesidetoolbar=1" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></figure><figure class="workspace-chart"><figcaption><strong>ETH / USDT perpetual</strong><a href="https://www.tradingview.com/chart/?symbol=BYBIT%3AETHUSDT.P" target="_blank" rel="noopener noreferrer">Open TradingView ↗</a></figcaption><iframe title="ETH TradingView chart" src="https://s.tradingview.com/widgetembed/?symbol=BYBIT%3AETHUSDT.P&amp;interval=240&amp;theme=dark&amp;timezone=Etc%2FUTC&amp;style=1&amp;locale=en&amp;hidesidetoolbar=1" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></figure></div>
+<p class="workspace-caption">TradingView market charts · 4H by default. Paper signals and positions below use the engine’s published data, not the chart feed.</p>
+
 
     <div class="review" id="decisionReview">
       <div class="review-head">
@@ -242,17 +253,18 @@
       <div class="review-grid" id="reviewGrid"><div class="empty">Loading decision review…</div></div>
       <div class="review-foot">A confirmed signal, a blocked setup, a queued paper entry and an open paper position are separate records and are reported separately. Historical breakouts are never shown as the current signal. Nothing here can place, change or cancel an order.</div>
     </div>
+  <details class="workspace-setups" open><summary>BTC &amp; ETH setup details</summary><div class="coin-grid" id="coinCards"><div class="empty">Loading market state…</div></div></details>
+  </section>
+
+<section id="positionsSection">
+    <div class="sec-head"><h2>Open Paper Positions</h2><span class="note" id="openCount"></span></div>
+    <div class="table-card table-scroll" id="openPositions"><div class="empty">Loading…</div></div>
+    <div id="flatState" class="flat" hidden></div>
   </section>
 
   <section id="accountsSection">
     <div class="sec-head"><h2>Accounts</h2><span class="note" id="accountNote">paper only · no real orders · 0.75% risk per trade</span></div>
     <div class="acct-grid" id="accountCards"><div class="empty">Loading accounts…</div></div>
-  </section>
-
-  <section id="positionsSection">
-    <div class="sec-head"><h2>Open Paper Positions</h2><span class="note" id="openCount"></span></div>
-    <div class="table-card table-scroll" id="openPositions"><div class="empty">Loading…</div></div>
-    <div id="flatState" class="flat" hidden></div>
   </section>
 
   <details class="collapsible" id="performanceSection">
