@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-22T20:00:56.965Z",
+  "updatedAt": "2026-11-22T20:15:55.537Z",
   "strategy": "Donchian 55/20 daily + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared account, long+short",
   "rules": "Daily Donchian 55/20 + SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared, long+short",
   "paperStart": "2026-10-29T00:00:00.000Z",
@@ -34,7 +34,7 @@
       "unrealR": 1.78,
       "openedAt": "2026-11-09T00:00:00.000Z",
       "barsHeld": 12,
-      "holdHours": 332.02,
+      "holdHours": 332.27,
       "mfeR": 2.37,
       "maeR": -0.14
     },
@@ -55,7 +55,7 @@
       "unrealR": 1.94,
       "openedAt": "2026-11-13T00:00:00.000Z",
       "barsHeld": 8,
-      "holdHours": 236.02,
+      "holdHours": 236.27,
       "mfeR": 2.83,
       "maeR": -0.02
     }
@@ -183,7 +183,7 @@
       "equity": 10278.92
     },
     {
-      "t": "2026-11-22T20:00:56.965Z",
+      "t": "2026-11-22T20:15:55.537Z",
       "equity": 10278.92
     }
   ],
