@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T02:26:54.474Z",
+  "updatedAt": "2026-11-22T10:03:43.849Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,40 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59741,
-      "chg24hPct": 1.53,
-      "high24h": 60897,
-      "low24h": 55076,
-      "fundingPct": 0.0017,
-      "openInterest": 2122.7751,
+      "price": 60768,
+      "chg24hPct": 4.91,
+      "high24h": 61310,
+      "low24h": 57741,
+      "fundingPct": 0,
+      "openInterest": 1952.9546,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1677.1,
-      "chg24hPct": 3.44,
-      "high24h": 1714.6,
-      "low24h": 1534.7,
-      "fundingPct": 0.0016,
-      "openInterest": 33302.113,
+      "price": 1707.7,
+      "chg24hPct": 4.41,
+      "high24h": 1721.4,
+      "low24h": 1632.2,
+      "fundingPct": 0,
+      "openInterest": 32746.451,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
+      "link": "https://cointelegraph.com/news/upbit-bithumb-suspend-cyber-transfers-bridge-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T07:24:05.000Z",
+      "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Chainflip confirms $12M hack, offers attacker 10% bounty",
+      "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T05:28:43.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit",
@@ -39,13 +53,6 @@
       "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
       "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-20T11:31:41.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "SEC charges 8 firms over fake crypto platforms tied to $37M fraud",
-      "link": "https://cointelegraph.com/news/sec-charges-eight-fake-crypto-platforms-37m-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T08:03:34.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -84,18 +91,11 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Wrapped Monero token plunges 99% as issuer-linked wallet sells $13.5 million",
-      "link": "https://www.coindesk.com/markets/2026/11/20/wrapped-monero-token-plunges-99-as-issuer-linked-wallet-sells-usd13-5-million",
-      "publishedAt": "2026-11-20T08:04:40.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Here's what's crashing gold and likely weighing on bitcoin too",
-      "link": "https://www.coindesk.com/markets/2026/11/20/here-s-what-s-crashing-gold-and-likely-weighing-on-bitcoin-too",
-      "publishedAt": "2026-11-20T06:12:15.000Z",
-      "severity": "HIGH"
+      "source": "Cointelegraph",
+      "title": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
+      "link": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T09:33:06.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -127,6 +127,30 @@
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-22T09:00:00.000Z",
+      "dir": "UP",
+      "movePct": 2.21,
+      "vsAvgMove": 4.7,
+      "volumeSpike": 1.8
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-22T09:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.77,
+      "vsAvgMove": 3.9,
+      "volumeSpike": 1.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-22T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.26,
+      "vsAvgMove": 3.1,
+      "volumeSpike": 1.2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-21T13:00:00.000Z",
@@ -166,30 +190,6 @@
       "movePct": -2.97,
       "vsAvgMove": 4.3,
       "volumeSpike": 2.6
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-20T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -3.71,
-      "vsAvgMove": 7.3,
-      "volumeSpike": 6.1
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-20T15:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -5.03,
-      "vsAvgMove": 8.7,
-      "volumeSpike": 7
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-20T02:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.12,
-      "vsAvgMove": 2.5,
-      "volumeSpike": 1.7
     }
   ],
   "errors": []
