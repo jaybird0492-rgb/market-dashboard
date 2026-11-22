@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T22:45:55.904Z",
+  "updatedAt": "2026-11-22T23:00:58.092Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60742,
-      "chg24hPct": 1.1,
+      "price": 61121,
+      "chg24hPct": 1.85,
       "high24h": 61586,
       "low24h": 58639,
-      "fundingPct": 0.0007,
-      "openInterest": 1954.1634,
+      "fundingPct": 0.0012,
+      "openInterest": 1954.7619,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1710,
-      "chg24hPct": 1.97,
+      "price": 1721.1,
+      "chg24hPct": 2.64,
       "high24h": 1729.8,
       "low24h": 1644.7,
-      "fundingPct": 0.0004,
-      "openInterest": 31966.17,
+      "fundingPct": 0.0016,
+      "openInterest": 32054.55,
       "src": "Kraken perp"
     }
   ],
@@ -54,6 +54,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
       "publishedAt": "2026-11-21T12:30:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
+      "link": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T22:47:09.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
       "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T07:51:47.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug",
-      "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
-      "publishedAt": "2026-11-21T06:16:42.000Z",
       "severity": "NORMAL"
     }
   ],
