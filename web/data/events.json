@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T16:45:56.023Z",
+  "updatedAt": "2026-11-22T17:00:56.777Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61228,
-      "chg24hPct": 2.06,
+      "price": 61137,
+      "chg24hPct": 1.91,
       "high24h": 61586,
       "low24h": 58639,
-      "fundingPct": 0.0002,
-      "openInterest": 1954.9641,
+      "fundingPct": 0.0006,
+      "openInterest": 1958.7899,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1720.4,
-      "chg24hPct": 2.23,
+      "price": 1720.2,
+      "chg24hPct": 2.24,
       "high24h": 1729.8,
       "low24h": 1644.7,
-      "fundingPct": 0.0001,
-      "openInterest": 32392.918,
+      "fundingPct": -0.0001,
+      "openInterest": 32436.807,
       "src": "Kraken perp"
     }
   ],
@@ -67,13 +67,6 @@
       "title": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play",
       "link": "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
       "publishedAt": "2026-11-20T18:13:52.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin falls below $60K for first time since July amid broader market selloff",
-      "link": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T16:55:51.000Z",
       "severity": "HIGH"
     },
     {
@@ -123,6 +116,13 @@
       "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
       "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T07:51:47.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug",
+      "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
+      "publishedAt": "2026-11-21T06:16:42.000Z",
       "severity": "NORMAL"
     }
   ],
