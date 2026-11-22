@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T15:46:03.046Z",
+  "updatedAt": "2026-11-22T16:01:09.328Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60686,
-      "chg24hPct": 1.14,
+      "price": 60831,
+      "chg24hPct": 1.63,
       "high24h": 61586,
       "low24h": 58639,
-      "fundingPct": -0.0003,
-      "openInterest": 1923.0846,
+      "fundingPct": 0.0002,
+      "openInterest": 1921.9526,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
       "price": 1716.4,
-      "chg24hPct": 1.88,
+      "chg24hPct": 2.1,
       "high24h": 1729.8,
       "low24h": 1644.7,
-      "fundingPct": -0.0002,
-      "openInterest": 32313.313,
+      "fundingPct": 0.0001,
+      "openInterest": 32336.875,
       "src": "Kraken perp"
     }
   ],
@@ -78,13 +78,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off",
-      "link": "https://cointelegraph.com/markets/bitcoin-hits-new-20-week-low-anthropic-drops-87-tech-sell-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T15:52:06.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "The future of onchain FX could start with users, not institutional liquidity",
       "link": "https://cointelegraph.com/opinion/future-onchain-fx-could-start-with-users-not-institutional-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T14:30:00.000Z",
@@ -123,6 +116,13 @@
       "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
       "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T09:48:56.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
+      "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-21T07:51:47.000Z",
       "severity": "NORMAL"
     }
   ],
