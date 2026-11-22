@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T10:03:43.849Z",
+  "updatedAt": "2026-11-22T11:52:50.221Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60768,
-      "chg24hPct": 4.91,
+      "price": 60936,
+      "chg24hPct": 4.94,
       "high24h": 61310,
-      "low24h": 57741,
-      "fundingPct": 0,
-      "openInterest": 1952.9546,
+      "low24h": 58017,
+      "fundingPct": 0.0015,
+      "openInterest": 1959.5965,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1707.7,
-      "chg24hPct": 4.41,
+      "price": 1706.3,
+      "chg24hPct": 3.42,
       "high24h": 1721.4,
-      "low24h": 1632.2,
-      "fundingPct": 0,
-      "openInterest": 32746.451,
+      "low24h": 1644.7,
+      "fundingPct": 0.0004,
+      "openInterest": 32990.959,
       "src": "Kraken perp"
     }
   ],
@@ -46,13 +46,6 @@
       "title": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit",
       "link": "https://cointelegraph.com/news/wrapped-monero-token-crashes-998-amid-suspected-135m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-20T19:37:27.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
-      "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T11:31:41.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -92,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T11:25:27.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
       "link": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T09:33:06.000Z",
@@ -106,13 +106,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-21T11:18:52.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
       "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T09:48:56.000Z",
@@ -123,6 +116,13 @@
       "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
       "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T07:51:47.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug",
+      "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
+      "publishedAt": "2026-11-21T06:16:42.000Z",
       "severity": "NORMAL"
     }
   ],
