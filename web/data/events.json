@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T19:30:56.856Z",
+  "updatedAt": "2026-11-22T19:45:56.054Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60671,
-      "chg24hPct": 0.79,
+      "price": 60643,
+      "chg24hPct": 0.61,
       "high24h": 61586,
       "low24h": 58639,
       "fundingPct": -0.0002,
-      "openInterest": 1971.0876,
+      "openInterest": 1973.1318,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
       "price": 1712.9,
-      "chg24hPct": 1.84,
+      "chg24hPct": 1.64,
       "high24h": 1729.8,
       "low24h": 1644.7,
       "fundingPct": 0.0007,
-      "openInterest": 32167.757,
+      "openInterest": 32166.018,
       "src": "Kraken perp"
     }
   ],
@@ -42,13 +42,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit",
-      "link": "https://cointelegraph.com/news/wrapped-monero-token-crashes-998-amid-suspected-135m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T19:37:27.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "CoinDesk",
       "title": "Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave",
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
@@ -61,6 +54,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
       "publishedAt": "2026-11-21T12:30:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "More on the pending oversight hearings: State of Crypto",
+      "link": "https://www.coindesk.com/",
+      "publishedAt": "2026-11-22T19:30:00.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
