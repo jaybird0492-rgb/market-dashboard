@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T17:00:56.777Z",
+  "updatedAt": "2026-11-22T17:15:57.087Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61137,
-      "chg24hPct": 1.91,
+      "price": 60712,
+      "chg24hPct": 1.01,
       "high24h": 61586,
       "low24h": 58639,
       "fundingPct": 0.0006,
-      "openInterest": 1958.7899,
+      "openInterest": 1947.9023,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1720.2,
-      "chg24hPct": 2.24,
+      "price": 1711.2,
+      "chg24hPct": 1.66,
       "high24h": 1729.8,
       "low24h": 1644.7,
       "fundingPct": -0.0001,
-      "openInterest": 32436.807,
+      "openInterest": 32253.501,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "NORMAL"
     },
     {
+      "source": "CoinDesk",
+      "title": "OpenAI, Anthropic and rivals seek AI agent rules to prevent commerce chaos",
+      "link": "https://www.coindesk.com/tech/2026/11/21/openai-anthropic-and-rivals-seek-ai-agent-rules-to-prevent-commerce-chaos",
+      "publishedAt": "2026-11-21T14:00:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
       "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
       "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T07:51:47.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug",
-      "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
-      "publishedAt": "2026-11-21T06:16:42.000Z",
       "severity": "NORMAL"
     }
   ],
