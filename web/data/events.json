@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T12:15:56.929Z",
+  "updatedAt": "2026-11-23T12:30:56.691Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61245,
-      "chg24hPct": -0.34,
+      "price": 61291,
+      "chg24hPct": 1.07,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": 0,
-      "openInterest": 2000.1591,
+      "openInterest": 1996.2007,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1719.5,
-      "chg24hPct": 0.12,
+      "price": 1720.1,
+      "chg24hPct": 0.94,
       "high24h": 1750.8,
-      "low24h": 1693.2,
+      "low24h": 1693.8,
       "fundingPct": -0.0003,
-      "openInterest": 33921.635,
+      "openInterest": 33945.826,
       "src": "Kraken perp"
     }
   ],
@@ -64,10 +64,17 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated",
-      "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
-      "publishedAt": "2026-11-21T12:30:00.000Z",
-      "severity": "HIGH"
+      "title": "Bitcoin's losing streak is second-longest ever, and some observers see more downside",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/23/bitcoin-s-losing-streak-is-second-longest-ever-and-some-observers-see-more-downside",
+      "publishedAt": "2026-11-23T12:30:25.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Ethereum wallets holding $72 billion ETH are under threat of a future quantum attack",
+      "link": "https://www.coindesk.com/markets/2026/11/23/ethereum-wallets-holding-usd72-billion-eth-are-under-threat-of-a-future-quantum-attack",
+      "publishedAt": "2026-11-23T12:13:35.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Bitcoin breaks a record streak of 'lower highs.' Here's what it means",
       "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-breaks-a-record-streak-of-lower-highs-here-s-what-it-means",
       "publishedAt": "2026-11-23T10:31:02.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "U.S. inflation, Thanksgiving trading: Crypto Week Ahead",
-      "link": "https://www.coindesk.com/markets/2026/11/23/u-s-inflation-thanksgiving-trading-crypto-week-ahead",
-      "publishedAt": "2026-11-23T09:40:25.000Z",
       "severity": "NORMAL"
     }
   ],
