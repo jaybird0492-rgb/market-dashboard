@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T14:15:57.770Z",
+  "updatedAt": "2026-11-23T14:30:56.799Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 63231,
-      "chg24hPct": 4.22,
-      "high24h": 63860,
+      "price": 63916,
+      "chg24hPct": 5.59,
+      "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0,
-      "openInterest": 2060.385,
+      "openInterest": 2083.3107,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1800.5,
-      "chg24hPct": 5.61,
-      "high24h": 1811.5,
+      "price": 1823.2,
+      "chg24hPct": 7.18,
+      "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.0005,
-      "openInterest": 32033.762,
+      "openInterest": 34351.309,
       "src": "Kraken perp"
     }
   ],
@@ -40,13 +40,6 @@
       "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T05:28:43.000Z",
       "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Nvidia shares surge 27% as Jensen Huang returns as CEO",
-      "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
-      "publishedAt": "2026-11-23T13:01:20.000Z",
-      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -123,6 +116,13 @@
       "title": "Critics of Netflix’s FTX drama point to Obama’s producer credit",
       "link": "https://cointelegraph.com/news/netflix-ftx-scrutiny-obama-production-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T13:15:03.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Nasdaq jumps nearly 7% as Nvidia brings back Jensen Huang",
+      "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
+      "publishedAt": "2026-11-23T13:01:20.000Z",
       "severity": "NORMAL"
     }
   ],
