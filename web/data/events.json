@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T13:45:56.404Z",
+  "updatedAt": "2026-11-23T14:00:56.467Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61202,
-      "chg24hPct": 1.11,
-      "high24h": 61990,
+      "price": 63358,
+      "chg24hPct": 4.36,
+      "high24h": 63860,
       "low24h": 60225,
-      "fundingPct": -0.0002,
-      "openInterest": 1934.7288,
+      "fundingPct": 0,
+      "openInterest": 2052.087,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1722.6,
-      "chg24hPct": 1.4,
-      "high24h": 1750.8,
+      "price": 1797.7,
+      "chg24hPct": 5.57,
+      "high24h": 1811.5,
       "low24h": 1693.8,
-      "fundingPct": -0.0002,
-      "openInterest": 33854.581,
+      "fundingPct": -0.0005,
+      "openInterest": 34721.986,
       "src": "Kraken perp"
     }
   ],
@@ -61,6 +61,20 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
       "publishedAt": "2026-11-21T17:50:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue",
+      "link": "https://www.coindesk.com/business/2026/11/23/fidelity-investments-strive-etoro-join-okx-ice-tokenized-securities-venue",
+      "publishedAt": "2026-11-23T13:49:44.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Trump-linked American Bitcoin secures $150M credit line from FalconX",
+      "link": "https://cointelegraph.com/news/trumps-american-bitcoin-rises-150m-credit-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T13:44:16.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -110,23 +124,25 @@
       "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebounds-from-2-year-low-as-wall-street-futures-recover",
       "publishedAt": "2026-11-23T11:51:09.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "ECB to let banks pledge more tokenized securities as collateral",
-      "link": "https://cointelegraph.com/news/ecb-expands-eurosystem-collateral-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T11:49:38.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Japan to ramp up crypto tax audits after uncovering $24.5 million in hidden income",
-      "link": "https://www.coindesk.com/business/2026/11/23/japan-to-ramp-up-crypto-tax-audits-after-uncovering-usd24-5-million-in-hidden-income",
-      "publishedAt": "2026-11-23T11:33:00.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-23T13:00:00.000Z",
+      "dir": "UP",
+      "movePct": 4.1,
+      "vsAvgMove": 14.3,
+      "volumeSpike": 4.5
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-23T13:00:00.000Z",
+      "dir": "UP",
+      "movePct": 5.12,
+      "vsAvgMove": 17.6,
+      "volumeSpike": 4.5
+    },
     {
       "sym": "BTC",
       "at": "2026-11-23T03:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": 2.88,
       "vsAvgMove": 3.3,
       "volumeSpike": 1.6
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-21T06:00:00.000Z",
-      "dir": "UP",
-      "movePct": 4.08,
-      "vsAvgMove": 5.9,
-      "volumeSpike": 2.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-21T06:00:00.000Z",
-      "dir": "UP",
-      "movePct": 5.02,
-      "vsAvgMove": 6.7,
-      "volumeSpike": 2.4
     }
   ],
   "errors": []
