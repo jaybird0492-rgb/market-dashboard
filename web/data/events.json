@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T14:46:05.198Z",
+  "updatedAt": "2026-11-23T15:01:08.186Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 63167,
-      "chg24hPct": 3.89,
+      "price": 62923,
+      "chg24hPct": 3.45,
       "high24h": 64532,
       "low24h": 60225,
-      "fundingPct": 0,
-      "openInterest": 2042.6277,
+      "fundingPct": 0.0022,
+      "openInterest": 2281.6452,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1793.7,
-      "chg24hPct": 4.89,
+      "price": 1778.2,
+      "chg24hPct": 4.03,
       "high24h": 1844.2,
       "low24h": 1693.8,
-      "fundingPct": -0.0005,
-      "openInterest": 36228.131,
+      "fundingPct": 0.0055,
+      "openInterest": 33571.197,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
       "publishedAt": "2026-11-21T17:50:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe",
+      "link": "https://cointelegraph.com/news/nvidia-reinstates-jensen-huang-ceo-intelligence-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T14:47:00.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -117,16 +124,25 @@
       "link": "https://cointelegraph.com/news/strategy-buy-457-bitcoin-btc-treasury-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T13:31:01.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "AI agents are using credit cards. Where does that leave crypto?",
-      "link": "https://cointelegraph.com/magazine/ai-agents-are-using-credit-cards-where-does-that-leave-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T13:30:00.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-23T14:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.48,
+      "vsAvgMove": 3.3,
+      "volumeSpike": 8.8
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-23T14:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.72,
+      "vsAvgMove": 3.5,
+      "volumeSpike": 10.5
+    },
     {
       "sym": "BTC",
       "at": "2026-11-23T13:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": 1.77,
       "vsAvgMove": 3.9,
       "volumeSpike": 1.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-22T08:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.26,
-      "vsAvgMove": 3.1,
-      "volumeSpike": 1.2
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-21T13:00:00.000Z",
-      "dir": "UP",
-      "movePct": 2.88,
-      "vsAvgMove": 3.3,
-      "volumeSpike": 1.6
     }
   ],
   "errors": []
