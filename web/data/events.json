@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T16:45:56.839Z",
+  "updatedAt": "2026-11-23T17:00:57.602Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 62051,
-      "chg24hPct": 1.34,
+      "price": 62094,
+      "chg24hPct": 1.57,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0012,
-      "openInterest": 2377.4439,
+      "openInterest": 2377.5975,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1760.4,
-      "chg24hPct": 2.3,
+      "price": 1764.5,
+      "chg24hPct": 2.58,
       "high24h": 1844.2,
       "low24h": 1693.8,
-      "fundingPct": -0.0027,
-      "openInterest": 32504.812,
+      "fundingPct": -0.001,
+      "openInterest": 32513.666,
       "src": "Kraken perp"
     }
   ],
@@ -47,6 +47,13 @@
       "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T05:28:43.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations",
+      "link": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T16:51:17.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe",
       "link": "https://cointelegraph.com/news/nvidia-reinstates-jensen-huang-ceo-intelligence-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T14:47:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed",
-      "link": "https://www.coindesk.com/opinion/2026/11/23/bitcoin-s-5-year-return-is-nearly-zero-great-narratives-are-fading-and-what-s-left-is-the-fed",
-      "publishedAt": "2026-11-23T14:43:18.000Z",
       "severity": "NORMAL"
     }
   ],
