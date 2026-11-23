@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T10:31:09.057Z",
+  "updatedAt": "2026-11-23T10:45:57.298Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61402,
-      "chg24hPct": 1.03,
+      "price": 61268,
+      "chg24hPct": 0.96,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": 0.0008,
-      "openInterest": 2004.981,
+      "openInterest": 2008.301,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1723,
-      "chg24hPct": 0.96,
+      "price": 1720.4,
+      "chg24hPct": 0.8,
       "high24h": 1750.8,
       "low24h": 1693.2,
       "fundingPct": 0.0001,
-      "openInterest": 33784.503,
+      "openInterest": 33798.112,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Bitcoin breaks a record streak of 'lower highs.' Here's what it means",
+      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-breaks-a-record-streak-of-lower-highs-here-s-what-it-means",
+      "publishedAt": "2026-11-23T10:31:02.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "U.S. inflation, Thanksgiving trading: Crypto Week Ahead",
       "link": "https://www.coindesk.com/markets/2026/11/23/u-s-inflation-thanksgiving-trading-crypto-week-ahead",
       "publishedAt": "2026-11-23T09:40:25.000Z",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T06:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin sold for $17,000 on Kraken's Canadian dollar market, and the trades stand",
-      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-sold-for-usd17-000-on-kraken-s-canadian-dollar-market-and-the-trades-stand",
-      "publishedAt": "2026-11-23T05:42:22.000Z",
       "severity": "NORMAL"
     }
   ],
