@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T09:30:57.066Z",
+  "updatedAt": "2026-11-23T09:45:58.417Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61600,
-      "chg24hPct": 2.95,
+      "price": 61406,
+      "chg24hPct": 2.09,
       "high24h": 61990,
-      "low24h": 59818,
+      "low24h": 60071,
       "fundingPct": -0.0002,
-      "openInterest": 2007.8509,
+      "openInterest": 2003.9813,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1727.8,
-      "chg24hPct": 2.56,
+      "price": 1721,
+      "chg24hPct": 1.67,
       "high24h": 1750.8,
-      "low24h": 1684.6,
+      "low24h": 1691.5,
       "fundingPct": -0.0002,
-      "openInterest": 33938.539,
+      "openInterest": 33959.164,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
       "publishedAt": "2026-11-21T12:30:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "U.S. inflation, Thanksgiving trading: Crypto Week Ahead",
+      "link": "https://www.coindesk.com/markets/2026/11/23/u-s-inflation-thanksgiving-trading-crypto-week-ahead",
+      "publishedAt": "2026-11-23T09:40:25.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Bitcoin sold for $17,000 on Kraken's Canadian dollar market, and the trades stand",
       "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-sold-for-usd17-000-on-kraken-s-canadian-dollar-market-and-the-trades-stand",
       "publishedAt": "2026-11-23T05:42:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Trump renews call for Nvidia to rehire Jensen Huang as CEO",
-      "link": "https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T03:37:20.000Z",
       "severity": "NORMAL"
     }
   ],
