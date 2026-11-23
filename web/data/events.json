@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T03:00:57.457Z",
+  "updatedAt": "2026-11-23T03:15:55.644Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60572,
-      "chg24hPct": 2,
+      "price": 60990,
+      "chg24hPct": 3,
       "high24h": 61586,
       "low24h": 58639,
       "fundingPct": 0.0001,
-      "openInterest": 1930.4345,
+      "openInterest": 1936.6433,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1703.8,
-      "chg24hPct": 2.09,
+      "price": 1717.5,
+      "chg24hPct": 3.46,
       "high24h": 1729.8,
       "low24h": 1644.7,
       "fundingPct": -0.0003,
-      "openInterest": 33003.177,
+      "openInterest": 32793.696,
       "src": "Kraken perp"
     }
   ],
@@ -40,6 +40,13 @@
       "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T05:28:43.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Billionaire Bill Ackman warns Fed will make a rate ‘mistake’ in December",
+      "link": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T02:47:39.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "OpenAI, Anthropic and rivals seek AI agent rules to prevent commerce chaos",
       "link": "https://www.coindesk.com/tech/2026/11/21/openai-anthropic-and-rivals-seek-ai-agent-rules-to-prevent-commerce-chaos",
       "publishedAt": "2026-11-21T14:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
-      "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-21T09:48:56.000Z",
       "severity": "NORMAL"
     }
   ],
