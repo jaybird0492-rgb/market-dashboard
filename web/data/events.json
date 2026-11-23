@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T06:15:56.353Z",
+  "updatedAt": "2026-11-23T06:30:55.816Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61707,
-      "chg24hPct": 4.61,
+      "price": 61496,
+      "chg24hPct": 4.33,
       "high24h": 61990,
-      "low24h": 58855,
+      "low24h": 58890,
       "fundingPct": 0.0011,
-      "openInterest": 2084.8121,
+      "openInterest": 1999.2945,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1728,
-      "chg24hPct": 4.29,
+      "price": 1722.3,
+      "chg24hPct": 3.92,
       "high24h": 1750.8,
-      "low24h": 1654.1,
+      "low24h": 1655.6,
       "fundingPct": 0.0017,
-      "openInterest": 32762.562,
+      "openInterest": 32746.438,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
       "publishedAt": "2026-11-21T12:30:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Cardano holders are turning down a $4 million request for running its flagship event",
+      "link": "https://www.coindesk.com/markets/2026/11/23/cardano-holders-are-turning-down-a-usd4-million-request-for-running-its-flagship-event",
+      "publishedAt": "2026-11-23T06:15:45.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "The future of onchain FX could start with users, not institutional liquidity",
       "link": "https://cointelegraph.com/opinion/future-onchain-fx-could-start-with-users-not-institutional-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T14:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
-      "link": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
-      "publishedAt": "2026-11-22T14:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
