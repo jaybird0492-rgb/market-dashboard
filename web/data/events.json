@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T13:15:57.394Z",
+  "updatedAt": "2026-11-23T13:30:57.144Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61198,
-      "chg24hPct": 0.81,
+      "price": 61139,
+      "chg24hPct": 0.77,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": -0.0002,
-      "openInterest": 1948.1056,
+      "openInterest": 1943.2546,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1721.5,
-      "chg24hPct": 1.09,
+      "price": 1720.1,
+      "chg24hPct": 0.94,
       "high24h": 1750.8,
       "low24h": 1693.8,
       "fundingPct": -0.0002,
-      "openInterest": 34329.666,
+      "openInterest": 33900.273,
       "src": "Kraken perp"
     }
   ],
@@ -63,8 +63,15 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Critics of Netflix’s FTX drama point to Obama’s producer credit",
+      "link": "https://cointelegraph.com/news/netflix-ftx-scrutiny-obama-production-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T13:15:03.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
-      "title": "Live news: Tech futures rebound more than 3% as dollar index tops 104, a 20-month high",
+      "title": "Live updates: Tech futures rebound more than 3% as dollar index tops 104, a 20-month high",
       "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
       "publishedAt": "2026-11-23T13:01:20.000Z",
       "severity": "NORMAL"
@@ -116,13 +123,6 @@
       "title": "BTC price gains 12% from $55K: Three things to know in Bitcoin this week",
       "link": "https://cointelegraph.com/markets/btc-price-stock-futures-rebound-three-things-know-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T11:20:57.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad",
-      "link": "https://www.coindesk.com/policy/2026/11/23/south-korea-to-expand-cryptocurrency-account-freezes-and-curb-illicit-transfers-abroad",
-      "publishedAt": "2026-11-23T10:53:19.000Z",
       "severity": "NORMAL"
     }
   ],
