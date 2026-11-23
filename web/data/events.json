@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T03:41:57.006Z",
+  "updatedAt": "2026-11-23T03:45:56.209Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61204,
-      "chg24hPct": 3.59,
+      "price": 61146,
+      "chg24hPct": 3.46,
       "high24h": 61990,
       "low24h": 58639,
       "fundingPct": 0.0001,
-      "openInterest": 1912.9012,
+      "openInterest": 1917.0495,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1728.9,
-      "chg24hPct": 4.45,
+      "price": 1728.5,
+      "chg24hPct": 4.4,
       "high24h": 1750.8,
       "low24h": 1644.7,
       "fundingPct": -0.0003,
-      "openInterest": 32711.994,
+      "openInterest": 32782.791,
       "src": "Kraken perp"
     }
   ],
@@ -61,6 +61,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
       "publishedAt": "2026-11-21T12:30:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Trump renews call for Nvidia to rehire Jensen Huang as CEO",
+      "link": "https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T03:37:20.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain",
       "link": "https://www.coindesk.com/business/2026/11/21/cross-chain-protocol-chainflip-s-flip-tanks-30-after-suspected-usd4-86-million-vault-drain",
       "publishedAt": "2026-11-21T16:41:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "OpenAI, Anthropic and rivals seek AI agent rules to prevent commerce chaos",
-      "link": "https://www.coindesk.com/tech/2026/11/21/openai-anthropic-and-rivals-seek-ai-agent-rules-to-prevent-commerce-chaos",
-      "publishedAt": "2026-11-21T14:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
