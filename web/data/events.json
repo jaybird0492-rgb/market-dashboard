@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T18:00:59.824Z",
+  "updatedAt": "2026-11-23T18:15:57.507Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61572,
-      "chg24hPct": 1.36,
+      "price": 61443,
+      "chg24hPct": 1.22,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0023,
-      "openInterest": 2330.0359,
+      "openInterest": 2324.9096,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1740.7,
-      "chg24hPct": 1.67,
+      "price": 1740,
+      "chg24hPct": 1.5,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.0003,
-      "openInterest": 32863.563,
+      "openInterest": 32786.528,
       "src": "Kraken perp"
     }
   ],
@@ -84,6 +84,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Nvidia's Jensen Huang faces Senate scrutiny despite Trump-backed return as CEO",
+      "link": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
+      "publishedAt": "2026-11-23T18:12:05.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks",
       "link": "https://cointelegraph.com/news/cuomo-rivals-urged-companies-reject-okx-ice-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "How market depth shapes the price of a weekend Bitcoin sale",
       "link": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T15:57:55.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin",
-      "link": "https://www.coindesk.com/business/2026/11/23/eric-trump-backed-american-bitcoin-secures-usd150-million-loan-against-its-bitcoin",
-      "publishedAt": "2026-11-23T15:02:32.000Z",
       "severity": "NORMAL"
     }
   ],
