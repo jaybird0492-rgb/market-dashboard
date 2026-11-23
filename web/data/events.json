@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T17:31:00.714Z",
+  "updatedAt": "2026-11-23T17:46:00.082Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61652,
-      "chg24hPct": 1.43,
+      "price": 61251,
+      "chg24hPct": 0.72,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0012,
-      "openInterest": 2371.5834,
+      "openInterest": 2345.3537,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1753.4,
-      "chg24hPct": 2.36,
+      "price": 1728.7,
+      "chg24hPct": 0.89,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.001,
-      "openInterest": 32655.279,
+      "openInterest": 32629.071,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,20 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks",
+      "link": "https://cointelegraph.com/news/cuomo-rivals-urged-companies-reject-okx-ice-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T17:42:18.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin rebound already losing steam as AI trade returns with a bang",
+      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebound-already-losing-steam-as-ai-trade-returns-with-a-bank",
+      "publishedAt": "2026-11-23T17:31:27.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Cathie Wood's ARK Invest pulls the plug on two planned crypto ETFs",
       "link": "https://www.coindesk.com/business/2026/11/23/cathie-wood-s-ark-invest-pulls-the-plug-on-two-planned-crypto-etfs",
@@ -109,20 +123,6 @@
       "title": "How market depth shapes the price of a weekend Bitcoin sale",
       "link": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T15:57:55.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin",
-      "link": "https://www.coindesk.com/business/2026/11/23/eric-trump-backed-american-bitcoin-secures-usd150-million-loan-against-its-bitcoin",
-      "publishedAt": "2026-11-23T15:02:32.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe",
-      "link": "https://cointelegraph.com/news/nvidia-reinstates-jensen-huang-ceo-intelligence-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T14:47:00.000Z",
       "severity": "NORMAL"
     }
   ],
