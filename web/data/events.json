@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T17:16:01.282Z",
+  "updatedAt": "2026-11-23T17:31:00.714Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61913,
-      "chg24hPct": 2,
+      "price": 61652,
+      "chg24hPct": 1.43,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0012,
-      "openInterest": 2377.4682,
+      "openInterest": 2371.5834,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1762.8,
-      "chg24hPct": 3.06,
+      "price": 1753.4,
+      "chg24hPct": 2.36,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.001,
-      "openInterest": 32547.148,
+      "openInterest": 32655.279,
       "src": "Kraken perp"
     }
   ],
@@ -64,7 +64,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin climbs to $62,000 as Nasdaq soars 6% on Huang return",
+      "title": "Live updates: Bitcoin climbs only modestly as Nasdaq soars 6% on Huang return",
       "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
       "publishedAt": "2026-11-23T13:01:20.000Z",
       "severity": "HIGH"
