@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T09:00:57.243Z",
+  "updatedAt": "2026-11-23T09:15:56.723Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61385,
-      "chg24hPct": 2.75,
+      "price": 61631,
+      "chg24hPct": 3.36,
       "high24h": 61990,
-      "low24h": 59560,
+      "low24h": 59615,
       "fundingPct": -0.0002,
-      "openInterest": 2001.4482,
+      "openInterest": 2007.0139,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1721,
-      "chg24hPct": 2.02,
+      "price": 1728.5,
+      "chg24hPct": 2.8,
       "high24h": 1750.8,
-      "low24h": 1680.4,
+      "low24h": 1680.9,
       "fundingPct": -0.0002,
-      "openInterest": 32951.568,
+      "openInterest": 32967.657,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones",
+      "link": "https://cointelegraph.com/news/moldyroost-malware-drain-iphone-wallets-one-tap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T09:05:44.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow",
       "link": "https://cointelegraph.com/markets/bitcoin-etfs-third-largest-weekly-outflows-1-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T08:08:52.000Z",
@@ -116,13 +123,6 @@
       "title": "Trump renews call for Nvidia to rehire Jensen Huang as CEO",
       "link": "https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T03:37:20.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Half of wallets on Trump’s dinner list got tokens from non-US exchanges",
-      "link": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T00:53:49.000Z",
       "severity": "NORMAL"
     }
   ],
