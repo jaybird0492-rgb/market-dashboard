@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T13:30:57.144Z",
+  "updatedAt": "2026-11-23T13:40:56.956Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61139,
-      "chg24hPct": 0.77,
+      "price": 61222,
+      "chg24hPct": 0.72,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": -0.0002,
-      "openInterest": 1943.2546,
+      "openInterest": 1936.1135,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1720.1,
-      "chg24hPct": 0.94,
+      "price": 1723.7,
+      "chg24hPct": 1.03,
       "high24h": 1750.8,
       "low24h": 1693.8,
       "fundingPct": -0.0002,
-      "openInterest": 33900.273,
+      "openInterest": 33856.949,
       "src": "Kraken perp"
     }
   ],
@@ -61,6 +61,20 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
       "publishedAt": "2026-11-21T17:50:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Strategy buys 457 Bitcoin, spends $212M on preferred share buybacks",
+      "link": "https://cointelegraph.com/news/strategy-buy-457-bitcoin-btc-treasury-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T13:31:01.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "AI agents are using credit cards. Where does that leave crypto?",
+      "link": "https://cointelegraph.com/magazine/ai-agents-are-using-credit-cards-where-does-that-leave-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T13:30:00.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -109,20 +123,6 @@
       "title": "Japan to ramp up crypto tax audits after uncovering $24.5 million in hidden income",
       "link": "https://www.coindesk.com/business/2026/11/23/japan-to-ramp-up-crypto-tax-audits-after-uncovering-usd24-5-million-in-hidden-income",
       "publishedAt": "2026-11-23T11:33:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin climbs back above $61,000 as stocks rebound from AI rout",
-      "link": "https://www.coindesk.com/markets/2026/11/23/live-updates-bitcoin-climbs-back-above-usd61-000-as-stocks-rebound-from-ai-rout",
-      "publishedAt": "2026-11-23T11:29:09.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BTC price gains 12% from $55K: Three things to know in Bitcoin this week",
-      "link": "https://cointelegraph.com/markets/btc-price-stock-futures-rebound-three-things-know-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T11:20:57.000Z",
       "severity": "NORMAL"
     }
   ],
