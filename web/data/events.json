@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T11:30:56.416Z",
+  "updatedAt": "2026-11-23T11:41:19.268Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61351,
-      "chg24hPct": 0.77,
+      "price": 61460,
+      "chg24hPct": 0.86,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": 0.0001,
-      "openInterest": 2005.2271,
+      "openInterest": 2008.2072,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1725.1,
-      "chg24hPct": 1.11,
+      "price": 1726.2,
+      "chg24hPct": 1.24,
       "high24h": 1750.8,
       "low24h": 1693.2,
       "fundingPct": -0.0001,
-      "openInterest": 33989.172,
+      "openInterest": 33974.024,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Japan to ramp up crypto tax audits after uncovering $24.5 million in hidden income",
+      "link": "https://www.coindesk.com/business/2026/11/23/japan-to-ramp-up-crypto-tax-audits-after-uncovering-usd24-5-million-in-hidden-income",
+      "publishedAt": "2026-11-23T11:33:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Live updates: Bitcoin climbs back above $61,000 as stocks rebound from AI rout",
       "link": "https://www.coindesk.com/markets/2026/11/23/live-updates-bitcoin-climbs-back-above-usd61-000-as-stocks-rebound-from-ai-rout",
       "publishedAt": "2026-11-23T11:29:09.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow",
       "link": "https://cointelegraph.com/markets/bitcoin-etfs-third-largest-weekly-outflows-1-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T08:08:52.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Crypto thieves are using online ads to infect iPhones with a single tap, research finds",
-      "link": "https://www.coindesk.com/tech/2026/11/23/moldyroost-malvertizing-campaign-uses-one-tap-iphone-hacks-to-hunt-crypto-wallet-keys-research-shows",
-      "publishedAt": "2026-11-23T07:45:30.000Z",
       "severity": "NORMAL"
     }
   ],
