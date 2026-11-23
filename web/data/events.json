@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T21:00:56.550Z",
+  "updatedAt": "2026-11-23T21:15:56.727Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61291,
-      "chg24hPct": 0.77,
+      "price": 61337,
+      "chg24hPct": 0.69,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0018,
-      "openInterest": 2193.5063,
+      "openInterest": 2178.0564,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1725.7,
-      "chg24hPct": 0.46,
+      "price": 1724.4,
+      "chg24hPct": 0.11,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": 0,
-      "openInterest": 33997.412,
+      "openInterest": 33966.559,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack",
+      "link": "https://cointelegraph.com/news/us-seeks-11b-crypto-stolen-north-korea-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T21:04:03.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Binance hackers push $247 million through transactions designed to cloud the source",
@@ -116,13 +123,6 @@
       "title": "Nvidia's Jensen Huang faces Senate scrutiny despite Trump-backed return as CEO",
       "link": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
       "publishedAt": "2026-11-23T18:12:05.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks",
-      "link": "https://cointelegraph.com/news/cuomo-rivals-urged-companies-reject-okx-ice-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T17:42:18.000Z",
       "severity": "NORMAL"
     }
   ],
