@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T16:00:57.303Z",
+  "updatedAt": "2026-11-23T16:16:01.263Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 62855,
-      "chg24hPct": 3.33,
+      "price": 62613,
+      "chg24hPct": 2.74,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0012,
-      "openInterest": 2359.2321,
+      "openInterest": 2364.1683,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1772.4,
-      "chg24hPct": 3.26,
+      "price": 1766.1,
+      "chg24hPct": 2.95,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.0027,
-      "openInterest": 33431.979,
+      "openInterest": 32974.882,
       "src": "Kraken perp"
     }
   ],
@@ -77,6 +77,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "How market depth shapes the price of a weekend Bitcoin sale",
+      "link": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T15:57:55.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin",
       "link": "https://www.coindesk.com/business/2026/11/23/eric-trump-backed-american-bitcoin-secures-usd150-million-loan-against-its-bitcoin",
@@ -116,13 +123,6 @@
       "title": "OKX, ICE launch 113 tokenized assets despite issuer objections",
       "link": "https://cointelegraph.com/news/okxice-launch-113-tokenized-assets-objections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T14:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue",
-      "link": "https://www.coindesk.com/business/2026/11/23/fidelity-investments-strive-etoro-join-okx-ice-tokenized-securities-venue",
-      "publishedAt": "2026-11-23T13:49:44.000Z",
       "severity": "NORMAL"
     }
   ],
