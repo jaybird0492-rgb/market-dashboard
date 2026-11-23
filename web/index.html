@@ -46,6 +46,7 @@
   .badge-check { background: rgba(47,180,87,.12); color: var(--green); }
   .badge-warn { background: rgba(232,163,61,.15); color: var(--amber); }
   .badge-bad { background: rgba(239,83,80,.14); color: var(--red); }
+  .badge-hist { background: rgba(232,163,61,.18); color: var(--amber); border: 1px solid rgba(232,163,61,.45); }
   .table-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th { text-align: left; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 600; padding: 9px 12px; background: var(--panel-2); border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -157,6 +158,8 @@
   .review-timing { padding: 9px 14px; border-bottom: 1px solid var(--border); font-size: 11.5px; color: var(--muted); line-height: 1.55; }
   .review-timing:empty { display: none; }
   .review-timing b { color: var(--text); font-weight: 600; }
+  .review-refresh { padding: 7px 14px; border-bottom: 1px solid var(--border); font-size: 11px; color: var(--faint); line-height: 1.5; }
+  .review-refresh:empty { display: none; }
   .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
   .review-col { background: var(--panel); min-width: 0; }
   .review-strategy { padding: 9px 14px; background: rgba(74,158,218,.06); border-bottom: 1px solid var(--border); font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--blue); display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
@@ -169,6 +172,12 @@
   .rv-out b { font-weight: 650; }
   .rv-levels { margin-top: 6px; font-size: 11.5px; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
   .rv-levels b { color: var(--text); font-weight: 600; }
+  .rv-candles { display: grid; gap: 1px; margin-top: 8px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .rv-candle { background: var(--panel-2); padding: 7px 10px; display: flex; justify-content: space-between; gap: 4px 10px; align-items: baseline; flex-wrap: wrap; }
+  .rv-candle-label { flex: 1 1 100%; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); }
+  .rv-candle b { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .rv-candle-sub { font-size: 10.5px; color: var(--muted); }
+  .rv-hist { border-left: 3px solid var(--amber); }
   .rv-paper { margin-top: 7px; font-size: 12px; line-height: 1.5; color: var(--muted); }
   .rv-paper .badge { margin-right: 6px; }
   .rv-details { margin-top: 7px; }
@@ -250,6 +259,7 @@
         <span class="review-sub">read-only · explained from published snapshots</span>
       </div>
       <div class="review-timing" id="reviewTiming"></div>
+      <div class="review-refresh" id="reviewRefresh"></div>
       <div class="review-grid" id="reviewGrid"><div class="empty">Loading decision review…</div></div>
       <div class="review-foot">A confirmed signal, a blocked setup, a queued paper entry and an open paper position are separate records and are reported separately. Historical breakouts are never shown as the current signal. Nothing here can place, change or cancel an order.</div>
     </div>
@@ -319,62 +329,165 @@ const when = (iso) => iso ? new Date(iso).toLocaleString('en-AU', { day: '2-digi
 
 let D1 = null, H4 = null, SIG = null, EV = null;
 const LIVE = {}; // symbol -> browser-fetched price (display only)
-const MS_4H = 144e5, MS_DAY = 864e5;
-const SNAP_STALE_MS = 2 * 36e5;      // published snapshot older than this = stale
-const CANDLE_GRACE_MS = 15 * 6e4;    // grace after an expected 4H close before calling it overdue
 let FEED = null;
 
 /* ---------- published-data freshness ----------
-   Currency is judged from published candle timestamps, never from the browser
-   clock or a live quote alone. Three distinct states:
-     CURRENT     — latest expected close is published and the snapshot is fresh
-     STALE       — a published candle is overdue, or the snapshot is >2h old
-     UNAVAILABLE — feed/fields/timestamps missing or invalid (NOT "no breakout") */
+   Currency is judged from published candle timestamps and the UTC clock.
+   asOf is a candle OPEN time, so the processed close is asOf + interval.
+
+   Four states, per candle and aggregated per coin (the 4H decision drives
+   the coin state):
+     CURRENT     — the latest close the UTC clock says is due is published
+     AWAITING    — that close just became due and is inside PUBLISH_GRACE_MS
+     DELAYED     — it is past the grace window and still not published;
+                   any decision shown is historical, never current
+     UNAVAILABLE — feed/fields/timestamps missing or invalid (NOT "no breakout")
+
+   PUBLISH_GRACE_MS = 15 minutes, matching the producer's 15-minute
+   publication cadence. A close is not called late until 15 minutes after
+   the UTC interval boundary. */
+/* freshness-core:start */
+const MS_1H = 36e5;
+const MS_4H = 144e5;
+const MS_DAY = 864e5;
+const PUBLISH_GRACE_MS = 15 * 6e4;
+
 const stampUTC = (ms) => Number.isFinite(ms) ? new Date(ms).toISOString().slice(0, 16).replace('T', ' ') + ' UTC' : '—';
 const stampHM = (ms) => Number.isFinite(ms) ? new Date(ms).toISOString().slice(11, 16) + ' UTC' : '—';
 
-function feedState() {
-  if (!SIG || !Array.isArray(SIG.coins) || !SIG.coins.length) {
-    return { state: 'UNAVAILABLE', reason: 'signals.json is not published', coins: [], snapT: NaN, now: Date.now() };
+function floorTo(ms, span) {
+  return (Number.isFinite(ms) && Number.isFinite(span) && span > 0) ? Math.floor(ms / span) * span : NaN;
+}
+function expectedCloseAt(now, span) {
+  return floorTo(now, span);
+}
+function candleFreshness(openMs, span, now, graceMs = PUBLISH_GRACE_MS) {
+  const out = {
+    status: 'UNAVAILABLE', reason: 'missing published candle timestamp',
+    openMs: NaN, publishedCloseMs: NaN, expectedCloseMs: NaN, nextCloseMs: NaN, overdueMs: NaN, missingBars: 0,
+  };
+  if (!Number.isFinite(openMs) || !Number.isFinite(span) || span <= 0 || !Number.isFinite(now)) return out;
+  if (openMs % span !== 0) { out.reason = 'candle open is not aligned to its interval'; return out; }
+  const publishedCloseMs = openMs + span;
+  const expectedCloseMs = expectedCloseAt(now, span);
+  out.openMs = openMs;
+  out.publishedCloseMs = publishedCloseMs;
+  out.expectedCloseMs = expectedCloseMs;
+  out.nextCloseMs = expectedCloseMs + span;
+  if (publishedCloseMs > now) { out.reason = 'published candle close is in the future'; return out; }
+  if (publishedCloseMs >= expectedCloseMs) {
+    out.status = 'CURRENT';
+    out.overdueMs = 0;
+    out.reason = 'latest expected close is published';
+    return out;
   }
-  const snapT = Date.parse(SIG.updatedAt);
-  const now = Date.now();
-  const coins = SIG.coins.map((c) => {
-    const s = c && c.setup4h, x = c && c.context1d;
+  out.overdueMs = now - expectedCloseMs;
+  const missingBars = Math.round((expectedCloseMs - publishedCloseMs) / span);
+  out.missingBars = missingBars;
+  // One missing close gets the grace window; a gap of two or more intervals
+  // means an earlier close is already fully overdue, so it is delayed now.
+  if (missingBars <= 1 && out.overdueMs < graceMs) {
+    out.status = 'AWAITING';
+    out.reason = 'expected close is awaiting publication (inside grace)';
+    return out;
+  }
+  out.status = 'DELAYED';
+  out.reason = missingBars > 1
+    ? 'more than one expected close is missing'
+    : 'expected close has not been published';
+  return out;
+}
+function classify4h(fourH, setup) {
+  if (!fourH || fourH.status === 'UNAVAILABLE') return { state: 'UNAVAILABLE', current: false, kind: 'unavailable', chip: 'Data unavailable' };
+  if (fourH.status === 'DELAYED') return { state: 'DELAYED', current: false, kind: 'delayed', chip: 'Data delayed — historical' };
+  if (fourH.status === 'AWAITING') return { state: 'AWAITING', current: false, kind: 'awaiting', chip: 'Awaiting publication' };
+  const lb = setup && setup.lastBreakout;
+  const lbAt = lb ? Date.parse(lb.at) : NaN;
+  const asOf = setup ? Date.parse(setup.asOf) : NaN;
+  const isCurrent = Number.isFinite(lbAt) && Number.isFinite(asOf) && lbAt === asOf;
+  if (isCurrent && lb.allowed) return { state: 'CURRENT', current: true, kind: 'confirmed', chip: 'Confirmed signal — current' };
+  if (isCurrent && !lb.allowed) return { state: 'CURRENT', current: true, kind: 'blocked', chip: 'Blocked setup — current' };
+  return { state: 'CURRENT', current: true, kind: 'none', chip: 'Current — no breakout' };
+}
+function feedStateAt(sig, now, graceMs = PUBLISH_GRACE_MS) {
+  if (!sig || !Array.isArray(sig.coins) || !sig.coins.length) {
+    return { state: 'UNAVAILABLE', reason: 'signals.json is not published', coins: [], snapT: NaN, now };
+  }
+  const snapT = Date.parse(sig.updatedAt);
+  const coins = sig.coins.map((c) => {
+    const s = c && c.setup4h, x = c && c.context1d, w = c && c.warning1h;
+    const sym = c && c.sym;
+    const fourH = candleFreshness(s ? Date.parse(s.asOf) : NaN, MS_4H, now, graceMs);
+    const oneH = candleFreshness(w ? Date.parse(w.asOf) : NaN, MS_1H, now, graceMs);
+    let state = fourH.status, reason = fourH.reason;
     const complete = !!(s && x
       && Number.isFinite(s.longTrigger) && Number.isFinite(s.shortTrigger) && Number.isFinite(s.price) && s.gateAllows
       && Number.isFinite(x.longTrigger) && Number.isFinite(x.shortTrigger) && Number.isFinite(x.price));
-    if (!complete) return { sym: c && c.sym, state: 'UNAVAILABLE', reason: 'snapshot is missing trigger or gate fields' };
-    const barOpen = Date.parse(s.asOf);
-    if (!Number.isFinite(barOpen) || !Number.isFinite(snapT)) {
-      return { sym: c.sym, state: 'UNAVAILABLE', reason: 'missing published candle timestamp' };
-    }
-    const close = barOpen + MS_4H, next = close + MS_4H;
-    if (close > now) return { sym: c.sym, state: 'UNAVAILABLE', reason: 'published candle timestamp is in the future', close, next };
-    if (snapT > now) return { sym: c.sym, state: 'UNAVAILABLE', reason: 'snapshot timestamp is in the future', close, next };
-    if (now >= next + CANDLE_GRACE_MS) return { sym: c.sym, state: 'STALE', reason: 'expected 4H close not yet published', close, next };
-    if (now - snapT > SNAP_STALE_MS) return { sym: c.sym, state: 'STALE', reason: 'snapshot is more than 2h old', close, next };
-    return { sym: c.sym, state: 'CURRENT', close, next };
+    if (!complete) { state = 'UNAVAILABLE'; reason = 'snapshot is missing trigger or gate fields'; }
+    else if (!Number.isFinite(snapT)) { state = 'UNAVAILABLE'; reason = 'missing snapshot timestamp'; }
+    else if (snapT > now) { state = 'UNAVAILABLE'; reason = 'snapshot timestamp is in the future'; }
+    else if (fourH.status === 'UNAVAILABLE') { state = 'UNAVAILABLE'; reason = fourH.reason; }
+    return {
+      sym, state, reason, oneH, fourH,
+      close: fourH.publishedCloseMs,
+      next: fourH.nextCloseMs,
+      expected: fourH.expectedCloseMs,
+    };
   });
   const state = coins.some((c) => c.state === 'UNAVAILABLE') ? 'UNAVAILABLE'
-    : coins.some((c) => c.state === 'STALE') ? 'STALE' : 'CURRENT';
+    : coins.some((c) => c.state === 'DELAYED') ? 'DELAYED'
+      : coins.some((c) => c.state === 'AWAITING') ? 'AWAITING' : 'CURRENT';
   return { state, coins, snapT, now };
+}
+function shouldStartRefresh(state) {
+  return !!(state && state.visible && !state.refreshing);
+}
+function applyFetchResult(prev, result, atMs) {
+  const base = prev || { sig: null, lastGoodAt: null };
+  if (result && result.ok && result.data && Array.isArray(result.data.coins) && result.data.coins.length) {
+    return { sig: result.data, lastGoodAt: atMs, attemptedAt: atMs, failed: false, error: null };
+  }
+  return {
+    sig: base.sig,
+    lastGoodAt: base.lastGoodAt,
+    attemptedAt: atMs,
+    failed: true,
+    error: (result && result.error) || 'request failed',
+  };
+}
+function refreshStatusText(state) {
+  if (!state || state.attemptedAt == null) return 'Auto-refresh every 60 s while this tab is visible.';
+  if (state.failed) {
+    return 'Refresh failed at ' + stampHM(state.attemptedAt) + ' — showing the last good published data'
+      + (state.lastGoodAt != null ? ' (last successful refresh ' + stampHM(state.lastGoodAt) + ')' : '') + '. Retrying on the next 60 s tick.';
+  }
+  return 'Refreshed ' + stampHM(state.attemptedAt) + ' — next automatic check in 60 s.';
+}
+/* freshness-core:end */
+
+function feedState() {
+  return feedStateAt(SIG, Date.now(), PUBLISH_GRACE_MS);
 }
 
 function engineStatusText(f) {
   if (!f || f.state === 'UNAVAILABLE') {
     const why = (f && f.coins || []).filter((c) => c.state === 'UNAVAILABLE').map((c) => c.sym + ': ' + c.reason).join('; ')
       || (f && f.reason) || 'signal feed unavailable';
-    return '<span class="status-bad">UNAVAILABLE</span> — ' + esc(why) + '. This is not &ldquo;no breakout&rdquo;: no decision was published.';
+    return '<span class="status-bad">DATA UNAVAILABLE</span> — ' + esc(why) + '. This is not &ldquo;no breakout&rdquo;: no decision was published.';
   }
-  const nexts = f.coins.filter((c) => Number.isFinite(c.next)).map((c) => c.next);
-  const next = nexts.length ? Math.min(...nexts) : NaN;
-  const due = next - f.now;
-  const cadence = 'next expected 4H close ' + stampHM(next) + ' (' + (due > 0 ? 'in ' + timeUntil(due) : 'overdue') + ')';
-  const base = 'snapshot ' + stampUTC(f.snapT) + ' · ' + cadence;
-  if (f.state === 'STALE') {
-    const stale = f.coins.filter((c) => c.state === 'STALE').map((c) => c.sym + ' — ' + c.reason).join('; ');
-    return '<span class="status-warn">STALE</span> — ' + esc(stale) + ' · ' + base + '. Levels are from the last published snapshot, not a live signal.';
+  const sample = f.coins.find((c) => c.fourH && Number.isFinite(c.fourH.expectedCloseMs)) || {};
+  const exp = sample.fourH ? sample.fourH.expectedCloseMs : NaN;
+  const nxt = sample.fourH ? sample.fourH.nextCloseMs : NaN;
+  const base = 'snapshot ' + stampUTC(f.snapT) + ' · latest expected 4H close ' + stampHM(exp) + ' · next close ' + stampHM(nxt);
+  if (f.state === 'DELAYED') {
+    const late = f.coins.filter((c) => c.state === 'DELAYED')
+      .map((c) => c.sym + ' — published close ' + stampUTC(c.fourH.publishedCloseMs) + ', expected ' + stampHM(c.fourH.expectedCloseMs) + ' (' + timeUntil(c.fourH.overdueMs) + ' late' + (c.fourH.missingBars > 1 ? ', ' + c.fourH.missingBars + ' closes behind' : '') + ')')
+      .join('; ');
+    return '<span class="status-warn">DATA DELAYED</span> — ' + esc(late) + ' · ' + base + '. Any decision shown is historical, not current.';
+  }
+  if (f.state === 'AWAITING') {
+    return '<span class="status-warn">AWAITING PUBLICATION</span> — the expected 4H close is inside the ' +
+      (PUBLISH_GRACE_MS / 6e4) + '-minute grace window · ' + base + '. The latest published candle is shown; it is not yet the current decision.';
   }
   return '<span class="status-ok">CURRENT</span> — ' + f.coins.length + '/' + f.coins.length + ' coins on the latest published 4H close · ' + base;
 }
@@ -703,10 +816,10 @@ function timeUntil(ms) {
 function nextDecisionTxt() {
   if (!SIG || !Array.isArray(SIG.coins)) return 'unavailable — no published snapshot';
   const f = feedState();
-  const c = f.coins.find((x) => Number.isFinite(x.next));
+  const c = f.coins.find((x) => x.fourH && Number.isFinite(x.fourH.nextCloseMs));
   if (!c) return 'unavailable';
-  const due = c.next - Date.now();
-  return stampHM(c.next) + (due > 0 ? ' (in ' + timeUntil(due) + ')' : ' (overdue — snapshot stale)');
+  const due = c.fourH.nextCloseMs - Date.now();
+  return stampHM(c.fourH.nextCloseMs) + (due > 0 ? ' (in ' + timeUntil(due) + ')' : ' (due now)');
 }
 function renderCoins() {
   FEED = feedState();
@@ -742,10 +855,10 @@ function cardHtml(c, f) {
     : s.gateAllows === 'LONG' ? 'longs only (close above SMA50)'
       : s.gateAllows === 'SHORT' ? 'shorts only (close below SMA200)' : 'no side open';
   const livePx = (c.series1h && c.series1h.length) ? c.series1h[c.series1h.length - 1] : x.price;
-  const closeT = f.close, nextT = f.next;
-  const due = nextT - Date.now();
-  const nextTxt = due > 0 ? 'in ' + timeUntil(due) : 'overdue by ' + timeUntil(-due);
-  const feedTxt = stampHM(nextT) + ' (' + nextTxt + ')';
+  const closeT = f.close, nextT = f.next, expectedT = f.expected;
+  const due = expectedT - Date.now();
+  const expectedTxt = due > 0 ? 'in ' + timeUntil(due) : 'overdue by ' + timeUntil(-due);
+  const feedTxt = stampHM(expectedT) + ' (' + expectedTxt + ')';
 
   let verdict, vcls;
   if (inTrade) {
@@ -755,12 +868,17 @@ function cardHtml(c, f) {
     const tp = (n) => fmt$(inTrade.side === 'LONG' ? inTrade.entry + n * r1 : inTrade.entry - n * r1, 2);
     verdict = `<b>In position:</b> ${inTrade.side} from ${fmt$(inTrade.entry, 2)} · stop ${fmt$(inTrade.stop, 2)} · TP ${tp(1)} / ${tp(2)} / ${tp(3)} (reference only) · <span class="${cls(u.usd)}">${fmt$(u.usd, 2)}</span> (${fmtR(u.r)})`;
     vcls = 'trade';
-    if (state === 'STALE') {
-      verdict += ` <span class="status-warn">Stale snapshot — no decision for the current candle.</span> Last published close ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; next close was expected ${stampHM(nextT)}.`;
+    if (state === 'DELAYED') {
+      verdict += ` <span class="status-warn">Data delayed — historical.</span> The expected 4H close ${stampHM(expectedT)} has not been published; the last processed close is ${fmt$(s.price, 2)} at ${stampUTC(closeT)}.`;
+    } else if (state === 'AWAITING') {
+      verdict += ` <span class="status-warn">Awaiting publication.</span> The expected 4H close ${stampHM(expectedT)} is not published yet; the last processed close is ${fmt$(s.price, 2)} at ${stampUTC(closeT)}.`;
     }
-  } else if (state === 'STALE') {
-    verdict = `<b>No decision for the current candle — published data is stale.</b> Last published 4H close ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; the next close was expected at ${stampHM(nextT)}. The levels on this card are the last published snapshot, not a live signal. This is not &ldquo;no breakout.&rdquo;`;
+  } else if (state === 'DELAYED') {
+    verdict = `<b>Historical — data delayed. No current decision.</b> The expected 4H close ${stampHM(expectedT)} has not been published (${expectedTxt}${f.fourH && f.fourH.missingBars > 1 ? ', ' + f.fourH.missingBars + ' closes behind' : ''}). The last processed 4H close is ${fmt$(s.price, 2)} at ${stampUTC(closeT)}. The levels on this card are historical, not a live signal. This is not &ldquo;no breakout.&rdquo;`;
     vcls = 'blocked';
+  } else if (state === 'AWAITING') {
+    verdict = `<b>Awaiting publication — no current decision yet.</b> The expected 4H close ${stampHM(expectedT)} is inside the ${(PUBLISH_GRACE_MS / 6e4)}-minute grace window. The last processed 4H close is ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; nothing new is asserted until the expected close is published.`;
+    vcls = 'wait';
   } else {
     const longLine = `Long: 4H close &gt; ${fmt$(s.longTrigger, 2)} (+${s.pctToLong}%) — entry rule <b class="${allowLong ? 'pos' : 'neg'}">${allowLong ? 'open' : 'blocked'}</b>`;
     const shortLine = `Short: 4H close &lt; ${fmt$(s.shortTrigger, 2)} (${s.pctToShort}% lower) — entry rule <b class="${allowShort ? 'pos' : 'neg'}">${allowShort ? 'open' : 'blocked'}</b>`;
@@ -782,10 +900,10 @@ function cardHtml(c, f) {
   }
 
   const lb = s.lastBreakout;
-  const lbHtml = state === 'STALE'
-    ? `<b class="status-warn">Stale snapshot</b> — the breakout check is not current, so this is not &ldquo;no breakout.&rdquo; ` +
+  const lbHtml = (state === 'DELAYED' || state === 'AWAITING')
+    ? `<b class="status-warn">${state === 'DELAYED' ? 'Data delayed' : 'Awaiting publication'}</b> — the breakout check is not current, so this is not &ldquo;no breakout.&rdquo; ` +
       (lb ? `Last recorded: ${lb.dir} ${lb.allowed ? 'allowed' : 'blocked'} · ${when(lb.at)} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}.`
-        : `No breakout was recorded in the last snapshot (close ${stampUTC(closeT)}).`)
+        : `No breakout was recorded in the last published snapshot (close ${stampUTC(closeT)}).`)
     : lb
       ? `Last 4H breakout: <b class="${lb.allowed ? 'pos' : 'neg'}">${lb.dir} ${lb.allowed ? 'allowed' : 'BLOCKED by ' + (lb.blockedBy || 'rule')}</b> · ${when(lb.at)} · close ${fmt$(lb.close, 2)} vs level ${fmt$(lb.level, 2)}`
       : 'Last 4H breakout: none recorded in this snapshot (checked the last 7 4H closes).';
@@ -798,7 +916,7 @@ function cardHtml(c, f) {
     <canvas class="spark" id="spark-${c.sym}" height="42"></canvas>
     <div class="candle-strip">
       <div><span>Published 4H close</span><b>${fmt$(s.price, 2)}</b><span class="sub">${stampUTC(closeT)}</span></div>
-      <div><span>Next expected 4H close</span><b>${stampHM(nextT)}</b><span class="sub">${nextTxt} · published cadence</span></div>
+      <div><span>Expected 4H close (UTC clock)</span><b>${stampHM(expectedT)}</b><span class="sub">${expectedTxt} · next ${stampHM(nextT)}</span></div>
       <div><span>Published daily close</span><b>${fmt$(x.price, 2)}</b><span class="sub">${esc(String(x.asOf || '—'))}</span></div>
     </div>
     <div class="signal-grid">
@@ -873,12 +991,49 @@ function sideBlock4h(s, dir) {
   return { daily, native, effective, blockers };
 }
 
+function candleLine(label, fr, span, note) {
+  if (!fr || !Number.isFinite(fr.publishedCloseMs)) {
+    return `<div class="rv-candle"><span class="rv-candle-label">${label}</span><b>unavailable</b><span class="rv-candle-sub">no valid published candle timestamp${note ? ' · ' + note : ''}</span></div>`;
+  }
+  const cls = fr.status === 'CURRENT' ? 'pos' : fr.status === 'DELAYED' ? 'neg' : 'status-warn';
+  const status = fr.status === 'CURRENT' ? 'current'
+    : fr.status === 'DELAYED' ? 'delayed — historical'
+      : fr.status === 'AWAITING' ? 'awaiting publication' : 'unavailable';
+  return `<div class="rv-candle">
+    <span class="rv-candle-label">${label}</span>
+    <b>${stampUTC(fr.publishedCloseMs)}</b>
+    <span class="rv-candle-sub">bar ${barRange(fr.openMs, span)} · <span class="${cls}">${status}</span>${note ? ' · ' + note : ''}</span>
+  </div>`;
+}
+function expectedLine(fr) {
+  if (!fr || !Number.isFinite(fr.expectedCloseMs)) {
+    return `<div class="rv-candle"><span class="rv-candle-label">Expected 4H close (UTC clock)</span><b>unavailable</b><span class="rv-candle-sub">no valid candle timestamp</span></div>`;
+  }
+  const txt = fr.status === 'CURRENT' ? 'published'
+    : fr.status === 'AWAITING' ? 'awaiting publication (inside ' + (PUBLISH_GRACE_MS / 6e4) + '-minute grace)'
+      : fr.status === 'DELAYED' ? 'overdue by ' + timeUntil(fr.overdueMs) + (fr.missingBars > 1 ? ' · ' + fr.missingBars + ' closes behind' : '')
+        : 'unavailable';
+  return `<div class="rv-candle">
+    <span class="rv-candle-label">Expected 4H close (UTC clock)</span>
+    <b>${stampHM(fr.expectedCloseMs)}</b>
+    <span class="rv-candle-sub">${txt} · next ${stampHM(fr.nextCloseMs)}</span>
+  </div>`;
+}
+
 function rv4hCard(sym, c, f, snapT) {
   const s = c && c.setup4h, x = c && c.context1d;
   const paper = paperLine(H4, sym, '4H');
-  const shell = (chipCls, chip, out, why, levels) => `<div class="rv">
+  const fr4 = f && f.fourH ? f.fourH : null;
+  const fr1 = f && f.oneH ? f.oneH : null;
+  const candles = `<div class="rv-candles">
+    ${candleLine('1H warning — last processed close', fr1, MS_1H, 'warning only, never an entry')}
+    ${candleLine('4H decision — last processed close', fr4, MS_4H)}
+    ${expectedLine(fr4)}
+  </div>`;
+  const shell = (chipCls, chip, out, why, levels) => `<div class="rv${chipCls === 'badge-hist' ? ' rv-hist' : ''}">
     <div class="rv-head"><b>${sym}</b><span class="badge ${chipCls}">${chip}</span></div>
     <div class="rv-out">${out}</div>
+    ${candles}
     ${levels ? `<div class="rv-levels">${levels}</div>` : ''}
     ${paper}
     <details class="rv-details" data-rv="4h-${sym}"><summary>Why this status?</summary><div class="rv-why">${why}</div></details>
@@ -904,51 +1059,70 @@ function rv4hCard(sym, c, f, snapT) {
   }
 
   const asOf = Date.parse(s.asOf);
-  const closeT = asOf + MS_4H, nextT = closeT + MS_4H;
-  const due = nextT - Date.now();
-  const dueTxt = due > 0 ? `in ${timeUntil(due)}` : `overdue by ${timeUntil(-due)}`;
+  const closeT = fr4 && Number.isFinite(fr4.publishedCloseMs) ? fr4.publishedCloseMs : asOf + MS_4H;
+  const expectedT = fr4 && Number.isFinite(fr4.expectedCloseMs) ? fr4.expectedCloseMs : NaN;
+  const nextT = fr4 && Number.isFinite(fr4.nextCloseMs) ? fr4.nextCloseMs : closeT + MS_4H;
   const longB = sideBlock4h(s, 'long'), shortB = sideBlock4h(s, 'short');
   const sideTxt = (b) => b.effective ? 'allowed' : 'blocked' + (b.blockers.length ? ' by ' + b.blockers.join(' + ') : '');
-  const levelsLine = `Latest close <b>${fmt$(s.price, 2)}</b> at ${stampUTC(closeT)}<br>Long <b>${fmt$(s.longTrigger, 2)}</b> · ${sideTxt(longB)} &nbsp;|&nbsp; Short <b>${fmt$(s.shortTrigger, 2)}</b> · ${sideTxt(shortB)}`;
+  const levelsLine = `Last processed 4H close <b>${fmt$(s.price, 2)}</b> at ${stampUTC(closeT)}<br>Long <b>${fmt$(s.longTrigger, 2)}</b> · ${sideTxt(longB)} &nbsp;|&nbsp; Short <b>${fmt$(s.shortTrigger, 2)}</b> · ${sideTxt(shortB)}`;
 
-  if (state === 'STALE') {
+  const cls4 = classify4h(fr4, s);
+
+  if (cls4.state === 'DELAYED') {
     const why = [
-      whyRow('Last published 4H close', `${fmt$(s.price, 2)} · ${stampUTC(closeT)}`),
-      whyRow('Next expected 4H close', `${stampHM(nextT)} · ${dueTxt}`),
+      whyRow('Last processed 4H close (published)', `${fmt$(s.price, 2)} · ${stampUTC(closeT)}`),
+      whyRow('Expected 4H close (UTC clock)', `${stampHM(expectedT)} · overdue by ${timeUntil(fr4.overdueMs)}${fr4.missingBars > 1 ? ' · ' + fr4.missingBars + ' closes behind' : ''}`),
       whyRow('Published long trigger', `${fmt$(s.longTrigger, 2)} · ${s.longAllowed ? 'allowed' : 'blocked'}`),
       whyRow('Published short trigger', `${fmt$(s.shortTrigger, 2)} · ${s.shortAllowed ? 'allowed' : 'blocked'}`),
       whyRow('Published daily gate', esc(String(s.gateAllows || '—'))),
       whyRow('Risk veto', riskText(H4)),
       whyRow('Snapshot', stampUTC(snapT)),
+      `<div class="why-note">The expected 4H close is ${timeUntil(fr4.overdueMs)} past the ${(PUBLISH_GRACE_MS / 6e4)}-minute grace window. Every decision on this card is historical, not current.</div>`,
     ].join('');
-    return shell('badge-warn', 'No decision — stale data',
-      `No decision — stale data (${esc(f.reason)}). Last published close ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; the next close was expected ${stampHM(nextT)}. The levels below are the last published snapshot, not a current signal, and this is not &ldquo;no breakout.&rdquo;`,
+    return shell('badge-hist', 'Data delayed — historical',
+      `<b>Historical — data delayed. No current 4H decision.</b> The expected close ${stampHM(expectedT)} has not been published (${timeUntil(fr4.overdueMs)} late${fr4.missingBars > 1 ? ', ' + fr4.missingBars + ' closes behind' : ''}). The last processed 4H close is ${fmt$(s.price, 2)} at ${stampUTC(closeT)}. The decision below is historical and is not &ldquo;no breakout.&rdquo;`,
       why, levelsLine);
   }
 
+  if (cls4.state === 'AWAITING') {
+    const why = [
+      whyRow('Last processed 4H close (published)', `${fmt$(s.price, 2)} · ${stampUTC(closeT)}`),
+      whyRow('Expected 4H close (UTC clock)', `${stampHM(expectedT)} · inside the ${(PUBLISH_GRACE_MS / 6e4)}-minute publication grace`),
+      whyRow('Published long trigger', `${fmt$(s.longTrigger, 2)} · ${s.longAllowed ? 'allowed' : 'blocked'}`),
+      whyRow('Published short trigger', `${fmt$(s.shortTrigger, 2)} · ${s.shortAllowed ? 'allowed' : 'blocked'}`),
+      whyRow('Published daily gate', esc(String(s.gateAllows || '—'))),
+      whyRow('Risk veto', riskText(H4)),
+      whyRow('Snapshot', stampUTC(snapT)),
+      '<div class="why-note">The expected close is due but not yet published. The decision shown is the last published candle, not the expected one, and is not current.</div>',
+    ].join('');
+    return shell('badge-warn', 'Awaiting publication',
+      `<b>Awaiting publication — no current 4H decision yet.</b> The expected close ${stampHM(expectedT)} is inside the ${(PUBLISH_GRACE_MS / 6e4)}-minute grace window. The last processed 4H close is ${fmt$(s.price, 2)} at ${stampUTC(closeT)}; that is the most recent published decision, not the expected one.`,
+      why, levelsLine);
+  }
+
+  // CURRENT: the latest close the UTC clock says is due has been published.
   const lb = s.lastBreakout;
   const lbAt = lb ? Date.parse(lb.at) : NaN;
   const isCurrent = Number.isFinite(lbAt) && lbAt === asOf;
-
-  let chipCls, chip, out;
-  if (isCurrent) {
+  const chipCls = cls4.kind === 'confirmed' ? 'badge-check' : cls4.kind === 'blocked' ? 'badge-bad' : 'badge-none';
+  let out;
+  if (cls4.kind === 'confirmed') {
     const side = lb.dir === 'LONG' ? 'Long' : 'Short';
     const belowAbove = lb.dir === 'LONG' ? 'above' : 'below';
-    if (lb.allowed) {
-      chipCls = 'badge-check'; chip = 'Confirmed signal';
-      out = `<b>${side} breakout confirmed</b> on the latest published 4H close (${stampHM(closeT)}) — close ${fmt$(lb.close, 2)} was ${belowAbove} the ${fmt$(lb.level, 2)} trigger. The published daily gate and 4H trend filter both allowed it.`;
-    } else {
-      chipCls = 'badge-bad'; chip = 'Blocked setup';
-      out = `<b>${side} breakout on the latest published 4H close (${stampHM(closeT)})</b> — close ${fmt$(lb.close, 2)} was ${belowAbove} the ${fmt$(lb.level, 2)} trigger — but it was <b>blocked by ${esc(lb.blockedBy || 'a published filter')}</b>. The breakout happened; no entry follows.`;
-    }
+    out = `<b>Current — ${side} breakout confirmed</b> on the latest processed 4H close (${stampHM(closeT)}) — close ${fmt$(lb.close, 2)} was ${belowAbove} the ${fmt$(lb.level, 2)} trigger. The published daily gate and 4H trend filter both allowed it.`;
+  } else if (cls4.kind === 'blocked') {
+    const side = lb.dir === 'LONG' ? 'Long' : 'Short';
+    const belowAbove = lb.dir === 'LONG' ? 'above' : 'below';
+    out = `<b>Current — ${side} breakout on the latest processed 4H close (${stampHM(closeT)})</b> — close ${fmt$(lb.close, 2)} was ${belowAbove} the ${fmt$(lb.level, 2)} trigger — but it was <b>blocked by ${esc(lb.blockedBy || 'a published filter')}</b>. The breakout happened; no entry follows.`;
   } else {
-    chipCls = 'badge-none'; chip = 'No breakout';
-    out = `<b>No breakout on the latest published 4H close (${stampHM(closeT)}).</b> Long needs a close above ${fmt$(s.longTrigger, 2)} (${sideTxt(longB)}); short needs a close below ${fmt$(s.shortTrigger, 2)} (${sideTxt(shortB)}).`;
+    out = `<b>Current — no breakout on the latest processed 4H close (${stampHM(closeT)}).</b> Long needs a close above ${fmt$(s.longTrigger, 2)} (${sideTxt(longB)}); short needs a close below ${fmt$(s.shortTrigger, 2)} (${sideTxt(shortB)}).`;
+    if (lb && !isCurrent) out += ' An earlier breakout is recorded as history only and is not the current signal.';
   }
 
   const whyRows = [
-    whyRow('Latest published 4H close', `${fmt$(s.price, 2)} · ${stampUTC(closeT)} (bar ${barRange(asOf, MS_4H)})`),
-    whyRow('Next expected 4H close', `${stampHM(nextT)} · ${dueTxt}`),
+    whyRow('Last processed 4H close (published)', `${fmt$(s.price, 2)} · ${stampUTC(closeT)} (bar ${barRange(asOf, MS_4H)})`),
+    whyRow('Expected 4H close (UTC clock)', `${stampHM(expectedT)} · published · next ${stampHM(nextT)}`),
+    whyRow('1H warning close (never an entry)', fr1 && Number.isFinite(fr1.publishedCloseMs) ? `${stampUTC(fr1.publishedCloseMs)} · ${fr1.status === 'CURRENT' ? 'current' : fr1.status.toLowerCase()}` : 'unavailable'),
     whyRow('Breakout check (latest candle)', isCurrent
       ? `${lb.dir} close ${fmt$(lb.close, 2)} vs ${fmt$(lb.level, 2)} · ${lb.allowed ? 'allowed' : 'blocked by ' + esc(lb.blockedBy || 'filter')}`
       : 'no close outside either trigger'),
@@ -966,7 +1140,7 @@ function rv4hCard(sym, c, f, snapT) {
     whyRows.push(whyRow('Earlier breakout', 'none recorded in the last 7 published 4H candles'));
   }
 
-  return shell(chipCls, chip, out, whyRows.join(''), levelsLine);
+  return shell(chipCls, cls4.chip, out, whyRows.join(''), levelsLine);
 }
 
 function rvDailyCard(sym, c, snapT) {
@@ -1045,18 +1219,23 @@ function renderDecisionReview() {
   const fs = (sym) => {
     const one = (f.coins || []).find((z) => z && z.sym === sym);
     if (one) return one;
-    return { state: 'UNAVAILABLE', reason: (f.state === 'UNAVAILABLE' && f.reason) || 'coin is not present in the published snapshot' };
+    return {
+      state: 'UNAVAILABLE',
+      reason: (f.state === 'UNAVAILABLE' && f.reason) || 'coin is not present in the published snapshot',
+      oneH: null, fourH: null, close: NaN, next: NaN, expected: NaN,
+    };
   };
   const b = get('BTC'), e = get('ETH');
   const fb = fs('BTC'), fe = fs('ETH');
 
   if (timing) {
-    const bc = fb.close, ec = fe.close;
-    if (Number.isFinite(bc) && Number.isFinite(ec) && bc === ec) {
-      const next = Number.isFinite(fb.next) ? fb.next : bc + MS_4H;
-      const due = next - Date.now();
-      timing.innerHTML = `<b>Shared timing — BTC and ETH agree.</b> Latest published 4H candle closed ${stampUTC(bc)} · next expected ${stampHM(next)} (${due > 0 ? 'in ' + timeUntil(due) : 'overdue by ' + timeUntil(-due)}) · snapshot ${stampUTC(snapT)}.`;
-    } else if (Number.isFinite(bc) && Number.isFinite(ec)) {
+    const b4 = fb.fourH, e4 = fe.fourH;
+    if (b4 && e4 && Number.isFinite(b4.publishedCloseMs) && b4.publishedCloseMs === e4.publishedCloseMs) {
+      const expTxt = b4.status === 'CURRENT' ? 'published'
+        : b4.status === 'AWAITING' ? 'awaiting publication'
+          : b4.status === 'DELAYED' ? 'overdue by ' + timeUntil(b4.overdueMs) + (b4.missingBars > 1 ? ', ' + b4.missingBars + ' closes behind' : '') : 'unavailable';
+      timing.innerHTML = `<b>Shared timing — BTC and ETH agree.</b> Last processed 4H close ${stampUTC(b4.publishedCloseMs)} · expected from the UTC clock ${stampHM(b4.expectedCloseMs)} (${expTxt}) · next ${stampHM(b4.nextCloseMs)} · snapshot ${stampUTC(snapT)}.`;
+    } else if (b4 && e4 && Number.isFinite(b4.publishedCloseMs) && Number.isFinite(e4.publishedCloseMs)) {
       timing.innerHTML = '<b>BTC and ETH published 4H candles are not aligned.</b> Timing is shown per asset below.';
     } else {
       timing.innerHTML = '';
@@ -1153,11 +1332,69 @@ async function refreshLive() {
   renderPositions();
 }
 
+/* ---------- 60 s published-data refresh (Decision Review) ----------
+   Only signals.json is re-fetched: it is the published decision data the
+   review explains. Paper account payloads are deliberately not re-fetched
+   here, so this loop cannot change displayed positions. On failure the last
+   good SIG is kept and the review says the refresh failed. */
+let REFRESHING = false;
+let LAST_REFRESH = { sig: null, lastGoodAt: null, attemptedAt: null, failed: false, error: null };
+
+async function fetchJsonFresh(path) {
+  const res = await fetch(path + (path.includes('?') ? '&' : '?') + 'cb=' + Date.now(), { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return res.json();
+}
+
+function renderRefreshStatus() {
+  const el = $('reviewRefresh');
+  if (el) el.textContent = PREVIEW ? '' : refreshStatusText(LAST_REFRESH);
+}
+
+async function refreshPublished() {
+  if (PREVIEW) return;
+  if (!shouldStartRefresh({ visible: !document.hidden, refreshing: REFRESHING })) return;
+  REFRESHING = true;
+  const atMs = Date.now();
+  let result;
+  try {
+    result = { ok: true, data: await fetchJsonFresh('data/signals.json') };
+  } catch (e) {
+    result = { ok: false, error: (e && e.message) || 'network error' };
+  }
+  LAST_REFRESH = applyFetchResult({ sig: SIG, lastGoodAt: LAST_REFRESH.lastGoodAt }, result, atMs);
+  SIG = LAST_REFRESH.sig;
+  REFRESHING = false;
+  if (!LAST_REFRESH.failed) {
+    renderHeaderStatus();
+    renderCoins();
+    renderDecisionReview();
+  }
+  renderRefreshStatus();
+}
+
+function renderHeaderStatus() {
+  const upd = (SIG && SIG.updatedAt) || (D1 && D1.updatedAt) || (H4 && H4.updatedAt);
+  const ageMin = upd ? (Date.now() - Date.parse(upd)) / 6e4 : null;
+  const stale = !PREVIEW && ageMin !== null && ageMin > 120;
+  const noSig = !SIG || !Array.isArray(SIG.coins) || !SIG.coins.length;
+  $('updatedAt').innerHTML = PREVIEW
+    ? 'Preview replay'
+    : upd
+      ? 'Updated ' + when(upd) + (stale ? ` <span class="neg">(${(ageMin / 60).toFixed(1)}h old)</span>` : '')
+      : '—';
+  $('feedStatus').textContent = PREVIEW ? 'Preview'
+    : noSig ? 'Signals unavailable'
+      : (!D1 && !H4) ? 'Feed Error'
+        : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
+  $('feedStatus').className = 'pill ' + (PREVIEW ? 'pill-paper' : ((noSig || (!D1 && !H4) || stale) ? 'pill-stale' : 'pill-live'));
+}
+
 /* ---------- boot ---------- */
 Promise.all([
   fetch('data/v2.json').then((r) => r.json()).catch(() => null),
   fetch(PREVIEW ? 'data/preview_4h.json' : 'data/v2_4h.json').then((r) => r.json()).catch(() => null),
-  fetch('data/signals.json').then((r) => r.json()).catch(() => null),
+  fetch('data/signals.json', { cache: 'no-store' }).then((r) => r.json()).catch(() => null),
   fetch('data/events.json').then((r) => r.json()).catch(() => null),
 ]).then(([d1, h4, sig, ev]) => {
   D1 = d1; H4 = h4; SIG = sig; EV = ev;
@@ -1174,20 +1411,7 @@ Promise.all([
     $('journalSection').open = true;
   }
 
-  const upd = (sig && sig.updatedAt) || (d1 && d1.updatedAt) || (h4 && h4.updatedAt);
-  const ageMin = upd ? (Date.now() - Date.parse(upd)) / 6e4 : null;
-  const stale = !PREVIEW && ageMin !== null && ageMin > 120;
-  const noSig = !sig || !Array.isArray(sig.coins) || !sig.coins.length;
-  $('updatedAt').innerHTML = PREVIEW
-    ? 'Preview replay'
-    : upd
-      ? 'Updated ' + when(upd) + (stale ? ` <span class="neg">(${(ageMin / 60).toFixed(1)}h old)</span>` : '')
-      : '—';
-  $('feedStatus').textContent = PREVIEW ? 'Preview'
-    : noSig ? 'Signals unavailable'
-      : (!d1 && !h4) ? 'Feed Error'
-        : stale ? `Data ${(ageMin / 60).toFixed(1)}h old` : 'Feed OK';
-  $('feedStatus').className = 'pill ' + (PREVIEW ? 'pill-paper' : ((noSig || (!d1 && !h4) || stale) ? 'pill-stale' : 'pill-live'));
+  renderHeaderStatus();
 
   if (PREVIEW) $('nextClose').textContent = 'historical replay — not live signals';
 
@@ -1200,7 +1424,13 @@ Promise.all([
   renderMarket(ev);
   drawSparks();
   refreshLive();
+  LAST_REFRESH.lastGoodAt = sig ? Date.now() : null;
+  renderRefreshStatus();
   setInterval(refreshLive, 60000);
+  setInterval(refreshPublished, 60000);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) refreshPublished();
+  });
   setInterval(() => { renderAccounts(); renderPositions(); renderCoins(); renderDecisionReview(); }, 30000);
   // Charts inside <details> have zero width while closed — redraw on open.
   document.querySelectorAll('details.collapsible').forEach((d) => {
