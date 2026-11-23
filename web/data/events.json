@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T19:15:58.578Z",
+  "updatedAt": "2026-11-23T19:31:01.352Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61566,
-      "chg24hPct": 1.48,
+      "price": 61383,
+      "chg24hPct": 1.18,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0017,
-      "openInterest": 2285.9761,
+      "openInterest": 2294.5193,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1741.2,
-      "chg24hPct": 1.63,
+      "price": 1735.3,
+      "chg24hPct": 1.32,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": 0.0001,
-      "openInterest": 34069.291,
+      "openInterest": 34071.3,
       "src": "Kraken perp"
     }
   ],
@@ -84,6 +84,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Base makes quantum security a 2027 priority as regulators warn of risks",
+      "link": "https://cointelegraph.com/interview/base-quantum-security-2027-priority-regulators-warn-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T19:16:46.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "New York judge declines to block Kalshi from operating in the state for now",
       "link": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
@@ -116,13 +123,6 @@
       "title": "Cathie Wood's ARK Invest pulls the plug on two planned crypto ETFs",
       "link": "https://www.coindesk.com/business/2026/11/23/cathie-wood-s-ark-invest-pulls-the-plug-on-two-planned-crypto-etfs",
       "publishedAt": "2026-11-23T16:39:03.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Cross River Bank enters Bitcoin-backed lending with $250K loans",
-      "link": "https://cointelegraph.com/news/cross-river-bank-bitcoin-backed-lending-250k-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T16:23:37.000Z",
       "severity": "NORMAL"
     }
   ],
