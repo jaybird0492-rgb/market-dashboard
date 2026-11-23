@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T07:31:02.647Z",
+  "updatedAt": "2026-11-23T07:45:56.777Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61421,
+      "price": 61395,
       "chg24hPct": 4.12,
       "high24h": 61990,
-      "low24h": 58910,
+      "low24h": 58950,
       "fundingPct": 0.0009,
-      "openInterest": 2002.5396,
+      "openInterest": 2003.1247,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1723.6,
-      "chg24hPct": 3.82,
+      "price": 1719.6,
+      "chg24hPct": 3.48,
       "high24h": 1750.8,
-      "low24h": 1659.4,
+      "low24h": 1661.7,
       "fundingPct": 0.0012,
-      "openInterest": 32817.785,
+      "openInterest": 32826.069,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Crypto thieves are using online ads to infect iPhones with a single tap, research finds",
+      "link": "https://www.coindesk.com/tech/2026/11/23/moldyroost-malvertizing-campaign-uses-one-tap-iphone-hacks-to-hunt-crypto-wallet-keys-research-shows",
+      "publishedAt": "2026-11-23T07:45:30.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "This Swedish bitcoin treasury firm lost 30 BTC trading part of its own stack",
       "link": "https://www.coindesk.com/markets/2026/11/23/this-swedish-bitcoin-treasury-firm-lost-30-btc-trading-part-of-its-own-stack",
       "publishedAt": "2026-11-23T07:18:45.000Z",
@@ -116,13 +123,6 @@
       "title": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
       "link": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T22:47:09.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "More on the pending oversight hearings: State of Crypto",
-      "link": "https://www.coindesk.com/",
-      "publishedAt": "2026-11-22T19:30:00.000Z",
       "severity": "NORMAL"
     }
   ],
