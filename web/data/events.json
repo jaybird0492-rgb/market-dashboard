@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T15:15:58.242Z",
+  "updatedAt": "2026-11-23T15:30:59.401Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 62961,
-      "chg24hPct": 3.57,
+      "price": 63350,
+      "chg24hPct": 4.21,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0022,
-      "openInterest": 2292.3786,
+      "openInterest": 2269.9817,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1778.1,
-      "chg24hPct": 3.95,
+      "price": 1787.9,
+      "chg24hPct": 4.24,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": 0.0055,
-      "openInterest": 33177.451,
+      "openInterest": 33265.302,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Binance hackers push $247 million through transactions designed to cloud the source",
+      "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
+      "publishedAt": "2026-11-23T15:29:01.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
@@ -116,13 +123,6 @@
       "title": "Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue",
       "link": "https://www.coindesk.com/business/2026/11/23/fidelity-investments-strive-etoro-join-okx-ice-tokenized-securities-venue",
       "publishedAt": "2026-11-23T13:49:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Trump-linked American Bitcoin secures $150M credit line from FalconX",
-      "link": "https://cointelegraph.com/news/trumps-american-bitcoin-rises-150m-credit-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T13:44:16.000Z",
       "severity": "NORMAL"
     }
   ],
