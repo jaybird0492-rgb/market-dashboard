@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T07:15:57.168Z",
+  "updatedAt": "2026-11-23T07:31:02.647Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61439,
-      "chg24hPct": 4.11,
+      "price": 61421,
+      "chg24hPct": 4.12,
       "high24h": 61990,
       "low24h": 58910,
       "fundingPct": 0.0009,
-      "openInterest": 1996.8806,
+      "openInterest": 2002.5396,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1724.3,
-      "chg24hPct": 3.9,
+      "price": 1723.6,
+      "chg24hPct": 3.82,
       "high24h": 1750.8,
-      "low24h": 1659.3,
+      "low24h": 1659.4,
       "fundingPct": 0.0012,
-      "openInterest": 32822.276,
+      "openInterest": 32817.785,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "This Swedish bitcoin treasury firm lost 30 BTC trading part of its own stack",
+      "link": "https://www.coindesk.com/markets/2026/11/23/this-swedish-bitcoin-treasury-firm-lost-30-btc-trading-part-of-its-own-stack",
+      "publishedAt": "2026-11-23T07:18:45.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Cardano holders are turning down a $4 million request for running its flagship event",
       "link": "https://www.coindesk.com/markets/2026/11/23/cardano-holders-are-turning-down-a-usd4-million-request-for-running-its-flagship-event",
       "publishedAt": "2026-11-23T06:15:45.000Z",
@@ -116,13 +123,6 @@
       "title": "More on the pending oversight hearings: State of Crypto",
       "link": "https://www.coindesk.com/",
       "publishedAt": "2026-11-22T19:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "The future of onchain FX could start with users, not institutional liquidity",
-      "link": "https://cointelegraph.com/opinion/future-onchain-fx-could-start-with-users-not-institutional-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-22T14:30:00.000Z",
       "severity": "NORMAL"
     }
   ],
