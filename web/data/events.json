@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T16:16:01.263Z",
+  "updatedAt": "2026-11-23T16:30:57.930Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 62613,
-      "chg24hPct": 2.74,
+      "price": 62664,
+      "chg24hPct": 2.47,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0012,
-      "openInterest": 2364.1683,
+      "openInterest": 2364.3656,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1766.1,
-      "chg24hPct": 2.95,
+      "price": 1773.5,
+      "chg24hPct": 3.19,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.0027,
-      "openInterest": 32974.882,
+      "openInterest": 32793.865,
       "src": "Kraken perp"
     }
   ],
@@ -78,6 +78,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Cross River Bank enters Bitcoin-backed lending with $250K loans",
+      "link": "https://cointelegraph.com/news/cross-river-bank-bitcoin-backed-lending-250k-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T16:23:37.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "How market depth shapes the price of a weekend Bitcoin sale",
       "link": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T15:57:55.000Z",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T14:06:36.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "OKX, ICE launch 113 tokenized assets despite issuer objections",
-      "link": "https://cointelegraph.com/news/okxice-launch-113-tokenized-assets-objections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T14:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
