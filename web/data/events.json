@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T10:45:57.298Z",
+  "updatedAt": "2026-11-23T11:01:02.359Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61268,
+      "price": 61354,
       "chg24hPct": 0.96,
       "high24h": 61990,
       "low24h": 60225,
-      "fundingPct": 0.0008,
-      "openInterest": 2008.301,
+      "fundingPct": 0.0001,
+      "openInterest": 2007.5397,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1720.4,
-      "chg24hPct": 0.8,
+      "price": 1723.6,
+      "chg24hPct": 0.94,
       "high24h": 1750.8,
       "low24h": 1693.2,
-      "fundingPct": 0.0001,
-      "openInterest": 33798.112,
+      "fundingPct": -0.0001,
+      "openInterest": 33821.227,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad",
+      "link": "https://www.coindesk.com/policy/2026/11/23/south-korea-to-expand-cryptocurrency-account-freezes-and-curb-illicit-transfers-abroad",
+      "publishedAt": "2026-11-23T10:53:19.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Bitcoin breaks a record streak of 'lower highs.' Here's what it means",
       "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-breaks-a-record-streak-of-lower-highs-here-s-what-it-means",
       "publishedAt": "2026-11-23T10:31:02.000Z",
@@ -116,13 +123,6 @@
       "title": "Cardano holders are turning down a $4 million request for running its flagship event",
       "link": "https://www.coindesk.com/markets/2026/11/23/cardano-holders-are-turning-down-a-usd4-million-request-for-running-its-flagship-event",
       "publishedAt": "2026-11-23T06:15:45.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T06:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
