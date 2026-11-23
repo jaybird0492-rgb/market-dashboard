@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T19:45:56.408Z",
+  "updatedAt": "2026-11-23T20:00:57.522Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60978,
-      "chg24hPct": 0.55,
+      "price": 61271,
+      "chg24hPct": 1.04,
       "high24h": 64532,
       "low24h": 60225,
-      "fundingPct": 0.0017,
-      "openInterest": 2269.2099,
+      "fundingPct": 0.0015,
+      "openInterest": 2259.7486,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1720.8,
-      "chg24hPct": 0.46,
+      "price": 1731.5,
+      "chg24hPct": 1.11,
       "high24h": 1844.2,
       "low24h": 1693.8,
-      "fundingPct": 0.0001,
-      "openInterest": 33775.441,
+      "fundingPct": 0,
+      "openInterest": 33436.346,
       "src": "Kraken perp"
     }
   ],
