@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T14:30:56.799Z",
+  "updatedAt": "2026-11-23T14:46:05.198Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 63916,
-      "chg24hPct": 5.59,
+      "price": 63167,
+      "chg24hPct": 3.89,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0,
-      "openInterest": 2083.3107,
+      "openInterest": 2042.6277,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1823.2,
-      "chg24hPct": 7.18,
+      "price": 1793.7,
+      "chg24hPct": 4.89,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.0005,
-      "openInterest": 34351.309,
+      "openInterest": 36228.131,
       "src": "Kraken perp"
     }
   ],
@@ -40,6 +40,13 @@
       "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T05:28:43.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin climbs above $63,000 as Nasdaq soars 6% on Huang return",
+      "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
+      "publishedAt": "2026-11-23T13:01:20.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -61,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
       "publishedAt": "2026-11-21T17:50:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed",
+      "link": "https://www.coindesk.com/opinion/2026/11/23/bitcoin-s-5-year-return-is-nearly-zero-great-narratives-are-fading-and-what-s-left-is-the-fed",
+      "publishedAt": "2026-11-23T14:43:18.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -109,20 +123,6 @@
       "title": "AI agents are using credit cards. Where does that leave crypto?",
       "link": "https://cointelegraph.com/magazine/ai-agents-are-using-credit-cards-where-does-that-leave-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T13:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Critics of Netflix’s FTX drama point to Obama’s producer credit",
-      "link": "https://cointelegraph.com/news/netflix-ftx-scrutiny-obama-production-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T13:15:03.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live updates: Nasdaq jumps nearly 7% as Nvidia brings back Jensen Huang",
-      "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
-      "publishedAt": "2026-11-23T13:01:20.000Z",
       "severity": "NORMAL"
     }
   ],
