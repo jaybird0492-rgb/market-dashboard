@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T11:15:56.425Z",
+  "updatedAt": "2026-11-23T11:30:56.416Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61278,
-      "chg24hPct": 0.67,
+      "price": 61351,
+      "chg24hPct": 0.77,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": 0.0001,
-      "openInterest": 2006.0521,
+      "openInterest": 2005.2271,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1721,
-      "chg24hPct": 0.74,
+      "price": 1725.1,
+      "chg24hPct": 1.11,
       "high24h": 1750.8,
       "low24h": 1693.2,
       "fundingPct": -0.0001,
-      "openInterest": 33942.095,
+      "openInterest": 33989.172,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,20 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Live updates: Bitcoin climbs back above $61,000 as stocks rebound from AI rout",
+      "link": "https://www.coindesk.com/markets/2026/11/23/live-updates-bitcoin-climbs-back-above-usd61-000-as-stocks-rebound-from-ai-rout",
+      "publishedAt": "2026-11-23T11:29:09.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "BTC price gains 12% from $55K: Three things to know in Bitcoin this week",
+      "link": "https://cointelegraph.com/markets/btc-price-stock-futures-rebound-three-things-know-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T11:20:57.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad",
       "link": "https://www.coindesk.com/policy/2026/11/23/south-korea-to-expand-cryptocurrency-account-freezes-and-curb-illicit-transfers-abroad",
       "publishedAt": "2026-11-23T10:53:19.000Z",
@@ -109,20 +123,6 @@
       "title": "Crypto thieves are using online ads to infect iPhones with a single tap, research finds",
       "link": "https://www.coindesk.com/tech/2026/11/23/moldyroost-malvertizing-campaign-uses-one-tap-iphone-hacks-to-hunt-crypto-wallet-keys-research-shows",
       "publishedAt": "2026-11-23T07:45:30.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "This Swedish bitcoin treasury firm lost 30 BTC trading part of its own stack",
-      "link": "https://www.coindesk.com/markets/2026/11/23/this-swedish-bitcoin-treasury-firm-lost-30-btc-trading-part-of-its-own-stack",
-      "publishedAt": "2026-11-23T07:18:45.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Cardano holders are turning down a $4 million request for running its flagship event",
-      "link": "https://www.coindesk.com/markets/2026/11/23/cardano-holders-are-turning-down-a-usd4-million-request-for-running-its-flagship-event",
-      "publishedAt": "2026-11-23T06:15:45.000Z",
       "severity": "NORMAL"
     }
   ],
