@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T18:15:57.507Z",
+  "updatedAt": "2026-11-23T18:30:56.712Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61443,
-      "chg24hPct": 1.22,
+      "price": 61441,
+      "chg24hPct": 1.39,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0023,
-      "openInterest": 2324.9096,
+      "openInterest": 2307.3196,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1740,
-      "chg24hPct": 1.5,
+      "price": 1742.3,
+      "chg24hPct": 1.78,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": -0.0003,
-      "openInterest": 32786.528,
+      "openInterest": 32848.788,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "New York judge declines to block Kalshi from operating in the state for now",
+      "link": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
+      "publishedAt": "2026-11-23T18:22:03.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Nvidia's Jensen Huang faces Senate scrutiny despite Trump-backed return as CEO",
       "link": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
       "publishedAt": "2026-11-23T18:12:05.000Z",
@@ -116,13 +123,6 @@
       "title": "Cross River Bank enters Bitcoin-backed lending with $250K loans",
       "link": "https://cointelegraph.com/news/cross-river-bank-bitcoin-backed-lending-250k-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T16:23:37.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "How market depth shapes the price of a weekend Bitcoin sale",
-      "link": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T15:57:55.000Z",
       "severity": "NORMAL"
     }
   ],
