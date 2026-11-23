@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T15:01:08.186Z",
+  "updatedAt": "2026-11-23T15:15:58.242Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 62923,
-      "chg24hPct": 3.45,
+      "price": 62961,
+      "chg24hPct": 3.57,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0022,
-      "openInterest": 2281.6452,
+      "openInterest": 2292.3786,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1778.2,
-      "chg24hPct": 4.03,
+      "price": 1778.1,
+      "chg24hPct": 3.95,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": 0.0055,
-      "openInterest": 33571.197,
+      "openInterest": 33177.451,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
       "publishedAt": "2026-11-21T17:50:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin",
+      "link": "https://www.coindesk.com/business/2026/11/23/eric-trump-backed-american-bitcoin-secures-usd150-million-loan-against-its-bitcoin",
+      "publishedAt": "2026-11-23T15:02:32.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Trump-linked American Bitcoin secures $150M credit line from FalconX",
       "link": "https://cointelegraph.com/news/trumps-american-bitcoin-rises-150m-credit-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T13:44:16.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Strategy buys 457 Bitcoin, spends $212M on preferred share buybacks",
-      "link": "https://cointelegraph.com/news/strategy-buy-457-bitcoin-btc-treasury-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T13:31:01.000Z",
       "severity": "NORMAL"
     }
   ],
