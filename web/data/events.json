@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T21:30:57.399Z",
+  "updatedAt": "2026-11-23T21:45:56.067Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61353,
-      "chg24hPct": 0.75,
+      "price": 61092,
+      "chg24hPct": 0.29,
       "high24h": 64532,
       "low24h": 60225,
       "fundingPct": 0.0018,
-      "openInterest": 2176.7523,
+      "openInterest": 2176.4928,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1722.1,
-      "chg24hPct": -0.01,
+      "price": 1714.9,
+      "chg24hPct": -0.38,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": 0,
-      "openInterest": 34019.177,
+      "openInterest": 34074.036,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T21:40:44.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Kalshi secures temporary win in New York gambling law dispute",
       "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T20:38:43.000Z",
@@ -116,13 +123,6 @@
       "title": "New York judge declines to block Kalshi from operating in the state for now",
       "link": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
       "publishedAt": "2026-11-23T18:22:03.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Nvidia's Jensen Huang faces Senate scrutiny despite Trump-backed return as CEO",
-      "link": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
-      "publishedAt": "2026-11-23T18:12:05.000Z",
       "severity": "NORMAL"
     }
   ],
