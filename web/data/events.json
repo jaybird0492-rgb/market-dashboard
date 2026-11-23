@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T13:00:56.863Z",
+  "updatedAt": "2026-11-23T13:15:57.394Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61271,
-      "chg24hPct": 0.82,
+      "price": 61198,
+      "chg24hPct": 0.81,
       "high24h": 61990,
       "low24h": 60225,
       "fundingPct": -0.0002,
-      "openInterest": 1953.6837,
+      "openInterest": 1948.1056,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1721.4,
-      "chg24hPct": 0.96,
+      "price": 1721.5,
+      "chg24hPct": 1.09,
       "high24h": 1750.8,
       "low24h": 1693.8,
       "fundingPct": -0.0002,
-      "openInterest": 34338.2,
+      "openInterest": 34329.666,
       "src": "Kraken perp"
     }
   ],
@@ -61,6 +61,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
       "publishedAt": "2026-11-21T17:50:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live news: Tech futures rebound more than 3% as dollar index tops 104, a 20-month high",
+      "link": "https://www.coindesk.com/tech/2026/11/23/live-news-wall-street-rebounds-as-dollar-index-hits-highest-since-march-2025",
+      "publishedAt": "2026-11-23T13:01:20.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "South Korea to expand cryptocurrency account freezes and curb illicit transfers abroad",
       "link": "https://www.coindesk.com/policy/2026/11/23/south-korea-to-expand-cryptocurrency-account-freezes-and-curb-illicit-transfers-abroad",
       "publishedAt": "2026-11-23T10:53:19.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin breaks a record streak of 'lower highs.' Here's what it means",
-      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-breaks-a-record-streak-of-lower-highs-here-s-what-it-means",
-      "publishedAt": "2026-11-23T10:31:02.000Z",
       "severity": "NORMAL"
     }
   ],
