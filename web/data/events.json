@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T05:31:04.494Z",
+  "updatedAt": "2026-11-23T05:45:58.899Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61442,
-      "chg24hPct": 4.35,
+      "price": 61724,
+      "chg24hPct": 5.15,
       "high24h": 61990,
-      "low24h": 58639,
+      "low24h": 58694,
       "fundingPct": 0.0004,
-      "openInterest": 1983.0786,
+      "openInterest": 2076.5525,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1730.7,
-      "chg24hPct": 4.84,
+      "price": 1734.9,
+      "chg24hPct": 5.36,
       "high24h": 1750.8,
-      "low24h": 1644.7,
+      "low24h": 1646.6,
       "fundingPct": 0.0007,
-      "openInterest": 32684.02,
+      "openInterest": 32749.339,
       "src": "Kraken perp"
     }
   ],
@@ -70,6 +70,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Bitcoin sold for $17,000 on Kraken's Canadian dollar market, and the trades stand",
+      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-sold-for-usd17-000-on-kraken-s-canadian-dollar-market-and-the-trades-stand",
+      "publishedAt": "2026-11-23T05:42:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Trump renews call for Nvidia to rehire Jensen Huang as CEO",
       "link": "https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -109,13 +116,6 @@
       "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
       "link": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
       "publishedAt": "2026-11-22T14:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-22T11:25:27.000Z",
       "severity": "NORMAL"
     },
     {
