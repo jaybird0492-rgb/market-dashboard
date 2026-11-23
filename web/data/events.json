@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T11:45:57.285Z",
+  "updatedAt": "2026-11-23T12:00:58.089Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61444,
-      "chg24hPct": 0.84,
+      "price": 61302,
+      "chg24hPct": 0.48,
       "high24h": 61990,
       "low24h": 60225,
-      "fundingPct": 0.0001,
-      "openInterest": 2009.4986,
+      "fundingPct": 0,
+      "openInterest": 2004.58,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1725.5,
-      "chg24hPct": 1.13,
+      "price": 1721.9,
+      "chg24hPct": 0.9,
       "high24h": 1750.8,
       "low24h": 1693.2,
-      "fundingPct": -0.0001,
-      "openInterest": 33965.508,
+      "fundingPct": -0.0003,
+      "openInterest": 33941.771,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,20 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Bitcoin rebounds from 2-year low as Wall Street futures recover",
+      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebounds-from-2-year-low-as-wall-street-futures-recover",
+      "publishedAt": "2026-11-23T11:51:09.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "ECB to let banks pledge more tokenized securities as collateral",
+      "link": "https://cointelegraph.com/news/ecb-expands-eurosystem-collateral-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T11:49:38.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Japan to ramp up crypto tax audits after uncovering $24.5 million in hidden income",
       "link": "https://www.coindesk.com/business/2026/11/23/japan-to-ramp-up-crypto-tax-audits-after-uncovering-usd24-5-million-in-hidden-income",
       "publishedAt": "2026-11-23T11:33:00.000Z",
@@ -109,20 +123,6 @@
       "title": "U.S. inflation, Thanksgiving trading: Crypto Week Ahead",
       "link": "https://www.coindesk.com/markets/2026/11/23/u-s-inflation-thanksgiving-trading-crypto-week-ahead",
       "publishedAt": "2026-11-23T09:40:25.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones",
-      "link": "https://cointelegraph.com/news/moldyroost-malware-drain-iphone-wallets-one-tap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T09:05:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow",
-      "link": "https://cointelegraph.com/markets/bitcoin-etfs-third-largest-weekly-outflows-1-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T08:08:52.000Z",
       "severity": "NORMAL"
     }
   ],
