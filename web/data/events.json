@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T08:01:03.193Z",
+  "updatedAt": "2026-11-23T08:15:56.740Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61395,
-      "chg24hPct": 4.06,
+      "price": 61079,
+      "chg24hPct": 3.29,
       "high24h": 61990,
-      "low24h": 58965,
+      "low24h": 59131,
       "fundingPct": 0.0007,
-      "openInterest": 2002.9182,
+      "openInterest": 1986.718,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1722,
-      "chg24hPct": 3.53,
+      "price": 1714.4,
+      "chg24hPct": 2.7,
       "high24h": 1750.8,
-      "low24h": 1663,
+      "low24h": 1669.4,
       "fundingPct": 0.0006,
-      "openInterest": 32816.029,
+      "openInterest": 32905.819,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
       "publishedAt": "2026-11-21T12:30:00.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow",
+      "link": "https://cointelegraph.com/markets/bitcoin-etfs-third-largest-weekly-outflows-1-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T08:08:52.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Half of wallets on Trump’s dinner list got tokens from non-US exchanges",
       "link": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T00:53:49.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
-      "link": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-22T22:47:09.000Z",
       "severity": "NORMAL"
     }
   ],
