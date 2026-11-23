@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T04:45:56.204Z",
+  "updatedAt": "2026-11-23T05:00:56.835Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61095,
-      "chg24hPct": 3.22,
+      "price": 61180,
+      "chg24hPct": 3.4,
       "high24h": 61990,
       "low24h": 58639,
-      "fundingPct": 0.0007,
-      "openInterest": 1935.2996,
+      "fundingPct": 0.0004,
+      "openInterest": 1933.0387,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1725.2,
-      "chg24hPct": 3.92,
+      "price": 1725.4,
+      "chg24hPct": 3.91,
       "high24h": 1750.8,
       "low24h": 1644.7,
-      "fundingPct": 0.0004,
-      "openInterest": 32693.214,
+      "fundingPct": 0.0007,
+      "openInterest": 32678.909,
       "src": "Kraken perp"
     }
   ],
@@ -40,6 +40,13 @@
       "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T05:28:43.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Market rout kills 50 basis points December Fed rate hike bets",
+      "link": "https://www.coindesk.com/markets/2026/11/23/market-rout-kills-50-basis-points-december-fed-rate-hike-bets",
+      "publishedAt": "2026-11-23T04:45:47.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
       "link": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T09:33:06.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain",
-      "link": "https://www.coindesk.com/business/2026/11/21/cross-chain-protocol-chainflip-s-flip-tanks-30-after-suspected-usd4-86-million-vault-drain",
-      "publishedAt": "2026-11-21T16:41:00.000Z",
       "severity": "NORMAL"
     }
   ],
