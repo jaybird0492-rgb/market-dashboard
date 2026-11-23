@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T20:46:04.179Z",
+  "updatedAt": "2026-11-23T21:00:56.550Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61195,
-      "chg24hPct": 1.09,
+      "price": 61291,
+      "chg24hPct": 0.77,
       "high24h": 64532,
       "low24h": 60225,
-      "fundingPct": 0.0015,
-      "openInterest": 2202.8555,
+      "fundingPct": 0.0018,
+      "openInterest": 2193.5063,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1724.2,
-      "chg24hPct": 0.67,
+      "price": 1725.7,
+      "chg24hPct": 0.46,
       "high24h": 1844.2,
       "low24h": 1693.8,
       "fundingPct": 0,
-      "openInterest": 33721.328,
+      "openInterest": 33997.412,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Kalshi secures temporary win in New York gambling law dispute",
+      "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T20:38:43.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "BTCS offloads $44M in ETH to reduce DeFi debt amid market downturn",
       "link": "https://cointelegraph.com/news/btcs-offloads-44m-eth-reduce-defi-debt-market-downturn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T19:35:06.000Z",
@@ -116,13 +123,6 @@
       "title": "Cuomo says rivals urged companies to opt out of OKXICE tokenized stocks",
       "link": "https://cointelegraph.com/news/cuomo-rivals-urged-companies-reject-okx-ice-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T17:42:18.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin rebound already losing steam as AI trade returns with a bang",
-      "link": "https://www.coindesk.com/markets/2026/11/23/bitcoin-rebound-already-losing-steam-as-ai-trade-returns-with-a-bank",
-      "publishedAt": "2026-11-23T17:31:27.000Z",
       "severity": "NORMAL"
     }
   ],
