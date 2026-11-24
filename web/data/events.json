@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:46:02.181Z",
+  "updatedAt": "2026-11-24T14:00:56.788Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60077,
-      "chg24hPct": -1.86,
+      "price": 60044,
+      "chg24hPct": -5.3,
       "high24h": 64532,
       "low24h": 59307,
-      "fundingPct": 0.0005,
-      "openInterest": 2084.8217,
+      "fundingPct": 0.0004,
+      "openInterest": 2086.2558,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1693.3,
-      "chg24hPct": -1.75,
+      "price": 1689.8,
+      "chg24hPct": -6.07,
       "high24h": 1844.2,
       "low24h": 1667.1,
-      "fundingPct": -0.0008,
-      "openInterest": 30992.211,
+      "fundingPct": -0.0004,
+      "openInterest": 31062.331,
       "src": "Kraken perp"
     }
   ],
@@ -99,10 +99,10 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Billionaire Bill Ackman warns Fed will make a rate ‘mistake’ in December",
-      "link": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T02:47:39.000Z",
-      "severity": "HIGH"
+      "title": "Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals",
+      "link": "https://cointelegraph.com/news/sky-community-proposes-50m-buybacks-stusds-liquidity-crisis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T13:43:46.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
