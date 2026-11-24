@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T06:00:56.589Z",
+  "updatedAt": "2026-11-24T06:15:55.398Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60524,
-      "chg24hPct": -1.84,
+      "price": 60348,
+      "chg24hPct": -2.2,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": 0.0002,
-      "openInterest": 2092.5467,
+      "openInterest": 2095.593,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1702.6,
-      "chg24hPct": -1.67,
+      "price": 1696.9,
+      "chg24hPct": -1.81,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": 0.0005,
-      "openInterest": 31252.264,
+      "openInterest": 31372.635,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T06:00:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Why 42 Macro says it’s waiting to buy the Bitcoin dip",
       "link": "https://cointelegraph.com/markets/why-42-macro-says-its-waiting-to-buy-the-bitcoin-dip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T05:07:30.000Z",
@@ -116,13 +123,6 @@
       "title": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
       "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T23:43:34.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Kalshi secures temporary win in New York gambling law dispute",
-      "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T20:38:43.000Z",
       "severity": "NORMAL"
     }
   ],
