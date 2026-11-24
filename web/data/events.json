@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T18:00:59.260Z",
+  "updatedAt": "2026-11-24T18:15:56.404Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60059,
-      "chg24hPct": -2.45,
+      "price": 60048,
+      "chg24hPct": -2.27,
       "high24h": 61717,
       "low24h": 59193,
       "fundingPct": 0.0007,
-      "openInterest": 2049.2042,
+      "openInterest": 2042.0346,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1684.1,
-      "chg24hPct": -3.23,
+      "price": 1682.6,
+      "chg24hPct": -3.29,
       "high24h": 1748.1,
       "low24h": 1661.6,
       "fundingPct": -0.0009,
-      "openInterest": 30274.106,
+      "openInterest": 30403.691,
       "src": "Kraken perp"
     }
   ],
@@ -98,6 +98,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong",
+      "link": "https://cointelegraph.com/news/blackrock-launches-tokenized-money-market-fund-stablecoins-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T18:07:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there",
       "link": "https://www.coindesk.com/policy/2026/11/24/utah-moves-to-drop-criminal-pursuit-of-kalshi-after-the-firm-halted-services-there",
@@ -116,13 +123,6 @@
       "title": "How South Korea’s proposed 20% cap could change who runs Upbit",
       "link": "https://cointelegraph.com/news/how-south-koreas-proposed-20-cap-could-change-who-runs-upbit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T16:33:26.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story",
-      "link": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness",
-      "publishedAt": "2026-11-24T16:00:25.000Z",
       "severity": "NORMAL"
     }
   ],
