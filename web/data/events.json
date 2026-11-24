@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T07:15:56.599Z",
+  "updatedAt": "2026-11-24T07:30:56.272Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60411,
-      "chg24hPct": -1.67,
+      "price": 60352,
+      "chg24hPct": -1.73,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": -0.0001,
-      "openInterest": 2087.6039,
+      "openInterest": 2090.0478,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1698.3,
-      "chg24hPct": -1.51,
+      "price": 1694.2,
+      "chg24hPct": -1.69,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": 0,
-      "openInterest": 31611.579,
+      "openInterest": 31174.535,
       "src": "Kraken perp"
     }
   ],
@@ -39,13 +39,6 @@
       "title": "Binance hackers push $247 million through transactions designed to cloud the source",
       "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
       "publishedAt": "2026-11-23T15:29:01.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
-      "link": "https://cointelegraph.com/news/upbit-bithumb-suspend-cyber-transfers-bridge-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-22T07:24:05.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -123,6 +116,13 @@
       "title": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
       "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T23:43:34.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Kalshi secures temporary win in New York gambling law dispute",
+      "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T20:38:43.000Z",
       "severity": "NORMAL"
     }
   ],
