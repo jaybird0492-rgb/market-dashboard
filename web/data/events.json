@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T15:46:11.533Z",
+  "updatedAt": "2026-11-24T16:00:56.369Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59739,
-      "chg24hPct": -4.81,
-      "high24h": 62889,
+      "price": 59631,
+      "chg24hPct": -5.13,
+      "high24h": 62854,
       "low24h": 59307,
-      "fundingPct": -0.0007,
-      "openInterest": 2082.3843,
+      "fundingPct": -0.0004,
+      "openInterest": 2079.0738,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1676.7,
-      "chg24hPct": -5.26,
+      "price": 1674.7,
+      "chg24hPct": -5.51,
       "high24h": 1777.4,
       "low24h": 1665.7,
-      "fundingPct": -0.0011,
-      "openInterest": 30856.975,
+      "fundingPct": -0.0006,
+      "openInterest": 30956.985,
       "src": "Kraken perp"
     }
   ],
@@ -99,6 +99,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation another story",
+      "link": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness",
+      "publishedAt": "2026-11-24T16:00:25.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Anchorage Digital to unveil new asset-management subsidiary",
       "link": "https://www.coindesk.com/business/2026/11/24/anchorage-digital-to-unveil-new-asset-management-subsidiary",
       "publishedAt": "2026-11-24T15:06:32.000Z",
@@ -117,16 +124,17 @@
       "link": "https://cointelegraph.com/news/russia-usdt-buyer-face-22-tax-december-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T14:10:23.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Swiss central bank, UBS and SIX study ledger for tokenized settlement",
-      "link": "https://cointelegraph.com/news/swiss-central-bank-ubs-six-explore-ledger-tokenized-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T13:57:56.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-24T15:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.19,
+      "vsAvgMove": 2.8,
+      "volumeSpike": 1.2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-24T02:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": 1.11,
       "vsAvgMove": 2.7,
       "volumeSpike": 1.9
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-23T03:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.53,
-      "vsAvgMove": 4,
-      "volumeSpike": 2.3
     }
   ],
   "errors": []
