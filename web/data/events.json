@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T16:46:15.885Z",
+  "updatedAt": "2026-11-24T17:00:57.860Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59442,
-      "chg24hPct": -4.18,
-      "high24h": 62208,
+      "price": 59394,
+      "chg24hPct": -4.36,
+      "high24h": 62154,
       "low24h": 59263,
-      "fundingPct": -0.0004,
-      "openInterest": 2057.6648,
+      "fundingPct": 0.0013,
+      "openInterest": 2062.5081,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1668.4,
-      "chg24hPct": -5.16,
-      "high24h": 1768.2,
+      "price": 1668.6,
+      "chg24hPct": -5.47,
+      "high24h": 1767.5,
       "low24h": 1661.6,
-      "fundingPct": -0.0006,
-      "openInterest": 31484.606,
+      "fundingPct": 0.0002,
+      "openInterest": 31608.363,
       "src": "Kraken perp"
     }
   ],
@@ -57,7 +57,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin pulls back to $60,000, stock rally fades, as tariffs re-enter the picture",
+      "title": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
       "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
       "publishedAt": "2026-11-24T12:47:40.000Z",
       "severity": "HIGH"
@@ -106,7 +106,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation another story",
+      "title": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation is another story",
       "link": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness",
       "publishedAt": "2026-11-24T16:00:25.000Z",
       "severity": "NORMAL"
