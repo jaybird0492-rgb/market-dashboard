@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T10:55:18.858Z",
+  "updatedAt": "2026-11-24T11:01:07.067Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59569,
-      "chg24hPct": -2.98,
+      "price": 59665,
+      "chg24hPct": -2.77,
       "high24h": 64532,
       "low24h": 59307,
       "fundingPct": 0,
-      "openInterest": 2095.3869,
+      "openInterest": 2104.5071,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1677.6,
-      "chg24hPct": -2.74,
+      "price": 1680.1,
+      "chg24hPct": -2.53,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0016,
-      "openInterest": 31346.534,
+      "openInterest": 31291.431,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving",
+      "link": "https://www.coindesk.com/policy/2026/11/24/u-s-seeks-usd1-1-billion-seized-in-binance-hack-as-north-korean-funds-keep-moving",
+      "publishedAt": "2026-11-24T10:58:51.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack",
@@ -78,6 +85,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "BTCS sells more than half its ether to repay $43.8 million in Aave debt",
+      "link": "https://www.coindesk.com/business/2026/11/24/btcs-sells-more-than-half-its-ether-to-repay-usd43-8-million-in-aave-debt",
+      "publishedAt": "2026-11-24T10:55:30.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "South Korea regulator backs bank-controlled stablecoins after months of dispute",
       "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-regulator-backs-bank-controlled-stablecoins-after-months-of-dispute",
       "publishedAt": "2026-11-24T10:29:14.000Z",
@@ -109,20 +123,6 @@
       "title": "Why 42 Macro says it’s waiting to buy the Bitcoin dip",
       "link": "https://cointelegraph.com/markets/why-42-macro-says-its-waiting-to-buy-the-bitcoin-dip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T05:07:30.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Google wants to make you the star of your own AI slop movies",
-      "link": "https://cointelegraph.com/news/google-wants-make-you-star-your-own-ai-slop-movies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T03:13:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ethereum Foundation doubles protocol security team ahead of overhaul",
-      "link": "https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T00:36:26.000Z",
       "severity": "NORMAL"
     }
   ],
