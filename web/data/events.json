@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T03:15:56.145Z",
+  "updatedAt": "2026-11-24T03:31:05.220Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59480,
-      "chg24hPct": -2.48,
+      "price": 60141,
+      "chg24hPct": -2,
       "high24h": 64532,
-      "low24h": 59384,
+      "low24h": 59371,
       "fundingPct": 0.0006,
-      "openInterest": 2176.9613,
+      "openInterest": 2114.1126,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1673.2,
-      "chg24hPct": -2.57,
+      "price": 1689.1,
+      "chg24hPct": -2.31,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0002,
-      "openInterest": 30376.232,
+      "openInterest": 30309.04,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Google wants to make you the star of your own AI slop movies",
+      "link": "https://cointelegraph.com/news/google-wants-make-you-star-your-own-ai-slop-movies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T03:13:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Ethereum Foundation doubles protocol security team ahead of overhaul",
       "link": "https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T00:36:26.000Z",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T21:40:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Kalshi secures temporary win in New York gambling law dispute",
-      "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T20:38:43.000Z",
       "severity": "NORMAL"
     }
   ],
