@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T12:00:57.310Z",
+  "updatedAt": "2026-11-24T12:15:56.858Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60348,
-      "chg24hPct": -1.56,
+      "price": 60183,
+      "chg24hPct": -1.73,
       "high24h": 64532,
       "low24h": 59307,
       "fundingPct": -0.0003,
-      "openInterest": 2081.4045,
+      "openInterest": 2086.1525,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1700.4,
-      "chg24hPct": -1.24,
+      "price": 1694.7,
+      "chg24hPct": -1.44,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0017,
-      "openInterest": 30831.19,
+      "openInterest": 30966.911,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,20 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "JPMorgan, HSBC and StoneX complete first digital gold trades in London",
+      "link": "https://www.coindesk.com/business/2026/11/24/jpmorgan-hsbc-and-stonex-complete-first-digital-gold-trades-in-london",
+      "publishedAt": "2026-11-24T12:04:39.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes",
+      "link": "https://cointelegraph.com/news/south-korea-draft-bill-crypto-innovation-user-protection?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T12:04:16.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Bitcoin dipped on Huang’s Nvidia exit but jumped 5% on his return",
       "link": "https://cointelegraph.com/markets/bitcoin-huangs-return-18-below-pre-resignation-levels?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -109,20 +123,6 @@
       "title": "BTCS sells more than half its ether to repay $43.8 million in Aave debt",
       "link": "https://www.coindesk.com/business/2026/11/24/btcs-sells-more-than-half-its-ether-to-repay-usd43-8-million-in-aave-debt",
       "publishedAt": "2026-11-24T10:55:30.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "South Korea regulator backs bank-controlled stablecoins after months of dispute",
-      "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-regulator-backs-bank-controlled-stablecoins-after-months-of-dispute",
-      "publishedAt": "2026-11-24T10:29:14.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s",
-      "link": "https://cointelegraph.com/markets/bitcoin-dips-60k-gold-worst-60-day-loss-1980s?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T09:25:45.000Z",
       "severity": "NORMAL"
     }
   ],
