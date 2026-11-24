@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T17:45:57.526Z",
+  "updatedAt": "2026-11-24T18:00:59.260Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59994,
-      "chg24hPct": -2.02,
-      "high24h": 61794,
+      "price": 60059,
+      "chg24hPct": -2.45,
+      "high24h": 61717,
       "low24h": 59193,
-      "fundingPct": 0.0013,
-      "openInterest": 2050.9497,
+      "fundingPct": 0.0007,
+      "openInterest": 2049.2042,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1682.9,
-      "chg24hPct": -2.63,
+      "price": 1684.1,
+      "chg24hPct": -3.23,
       "high24h": 1748.1,
       "low24h": 1661.6,
-      "fundingPct": 0.0002,
-      "openInterest": 30249.929,
+      "fundingPct": -0.0009,
+      "openInterest": 30274.106,
       "src": "Kraken perp"
     }
   ],
@@ -98,6 +98,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there",
+      "link": "https://www.coindesk.com/policy/2026/11/24/utah-moves-to-drop-criminal-pursuit-of-kalshi-after-the-firm-halted-services-there",
+      "publishedAt": "2026-11-24T17:50:08.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price",
       "link": "https://cointelegraph.com/markets/bitcoin-slides-us-tariff-nerves-anthropic-falls-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -117,16 +124,17 @@
       "link": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness",
       "publishedAt": "2026-11-24T16:00:25.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Anchorage Digital to unveil new asset-management subsidiary",
-      "link": "https://www.coindesk.com/business/2026/11/24/anchorage-digital-to-unveil-new-asset-management-subsidiary",
-      "publishedAt": "2026-11-24T15:06:32.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-24T17:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.16,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 1
+    },
     {
       "sym": "BTC",
       "at": "2026-11-24T15:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": 5.12,
       "vsAvgMove": 17.6,
       "volumeSpike": 4.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-23T03:00:00.000Z",
-      "dir": "UP",
-      "movePct": 1.11,
-      "vsAvgMove": 2.7,
-      "volumeSpike": 1.9
     }
   ],
   "errors": []
