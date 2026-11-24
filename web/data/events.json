@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T05:15:56.507Z",
+  "updatedAt": "2026-11-24T05:30:56.937Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60529,
-      "chg24hPct": -0.98,
+      "price": 60652,
+      "chg24hPct": -1.31,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": -0.0003,
-      "openInterest": 2093.9857,
+      "openInterest": 2093.0097,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1702.9,
-      "chg24hPct": -1.21,
+      "price": 1707.2,
+      "chg24hPct": -1.35,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0003,
-      "openInterest": 31095.084,
+      "openInterest": 31206.612,
       "src": "Kraken perp"
     }
   ],
@@ -120,9 +120,9 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T21:40:44.000Z",
+      "title": "Kalshi secures temporary win in New York gambling law dispute",
+      "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T20:38:43.000Z",
       "severity": "NORMAL"
     }
   ],
