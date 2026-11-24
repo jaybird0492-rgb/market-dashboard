@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T06:45:56.780Z",
+  "updatedAt": "2026-11-24T07:00:55.826Z",
   "next4hCloseAt": "2026-11-24T08:00:00.000Z",
   "coins": [
     {
@@ -54,7 +54,6 @@
         }
       },
       "series1h": [
-        59160.01,
         59170.02,
         59800.04,
         61119.99,
@@ -101,13 +100,14 @@
         60074.9,
         60338.34,
         60379.66,
-        60628.99
+        60628.99,
+        60476.23
       ],
       "warning1h": {
         "state": "QUIET",
         "dir": 0,
-        "detail": "nearest 1H levels: +6.6% up / -2.0% down",
-        "asOf": "2026-11-24T05:00:00.000Z",
+        "detail": "nearest 1H levels: +6.8% up / -1.7% down",
+        "asOf": "2026-11-24T06:00:00.000Z",
         "stats180d": {
           "events": 121,
           "confirmed": 63,
@@ -167,7 +167,6 @@
         }
       },
       "series1h": [
-        1663.32,
         1666.35,
         1687.33,
         1717.19,
@@ -214,14 +213,14 @@
         1685.04,
         1696.44,
         1699.97,
-        1706
+        1706,
+        1700.37
       ],
       "warning1h": {
-        "state": "FAKEOUT",
-        "dir": -1,
-        "detail": "1H broke below $1702.26 within the last 12h and recovered inside — fake warning",
-        "level": 1702.26,
-        "asOf": "2026-11-24T05:00:00.000Z",
+        "state": "QUIET",
+        "dir": 0,
+        "detail": "nearest 1H levels: +8.5% up / -1.9% down",
+        "asOf": "2026-11-24T06:00:00.000Z",
         "stats180d": {
           "events": 102,
           "confirmed": 46,
