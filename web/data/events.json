@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T21:45:57.480Z",
+  "updatedAt": "2026-11-24T22:00:55.728Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59774,
-      "chg24hPct": -2.17,
+      "price": 59818,
+      "chg24hPct": -2.32,
       "high24h": 61603,
       "low24h": 59193,
-      "fundingPct": 0.0009,
-      "openInterest": 2081.1214,
+      "fundingPct": 0.001,
+      "openInterest": 2080.206,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1676.8,
-      "chg24hPct": -2.2,
-      "high24h": 1723.2,
+      "price": 1678.7,
+      "chg24hPct": -2.47,
+      "high24h": 1722.1,
       "low24h": 1661.6,
-      "fundingPct": 0.0009,
-      "openInterest": 31396.857,
+      "fundingPct": 0.0004,
+      "openInterest": 31254.315,
       "src": "Kraken perp"
     }
   ],
@@ -106,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Europol follows $28.5M crypto trail in streaming piracy crackdown",
+      "link": "https://cointelegraph.com/news/europol-crypto-trail-streaming-piracy-crackdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T21:50:25.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Utah moves to dismiss criminal charges against Kalshi after trading halt",
       "link": "https://cointelegraph.com/news/utah-moves-to-dismiss-criminal-charges-against-kalshi-after-trading-halt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T20:48:27.000Z",
@@ -116,13 +123,6 @@
       "title": "Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years",
       "link": "https://cointelegraph.com/news/coldcard-how-security-reviews-missed-bitcoin-wallet-flaw-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T19:04:26.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "CFTC sets new prediction market rules as more firms seek US entry",
-      "link": "https://cointelegraph.com/news/cftc-new-prediction-market-rules-firms-seek-us-entry?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T18:31:42.000Z",
       "severity": "NORMAL"
     }
   ],
