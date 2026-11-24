@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T23:45:56.952Z",
+  "updatedAt": "2026-11-24T00:01:07.982Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61171,
-      "chg24hPct": 0.03,
+      "price": 61167,
+      "chg24hPct": -0.01,
       "high24h": 64532,
       "low24h": 60225,
-      "fundingPct": 0.0013,
-      "openInterest": 2175.0501,
+      "fundingPct": 0.001,
+      "openInterest": 2176.4242,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1707.9,
-      "chg24hPct": -0.58,
+      "price": 1707.7,
+      "chg24hPct": -0.85,
       "high24h": 1844.2,
       "low24h": 1693.8,
-      "fundingPct": -0.0008,
-      "openInterest": 31782.603,
+      "fundingPct": -0.0025,
+      "openInterest": 31619.212,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
+      "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-23T23:43:34.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T21:40:44.000Z",
@@ -116,13 +123,6 @@
       "title": "Base makes quantum security a 2027 priority as regulators warn of risks",
       "link": "https://cointelegraph.com/interview/base-quantum-security-2027-priority-regulators-warn-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T19:16:46.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "New York judge declines to block Kalshi from operating in the state for now",
-      "link": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
-      "publishedAt": "2026-11-23T18:22:03.000Z",
       "severity": "NORMAL"
     }
   ],
