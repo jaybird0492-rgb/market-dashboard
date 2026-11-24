@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T12:31:05.807Z",
+  "updatedAt": "2026-11-24T12:45:56.096Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60232,
-      "chg24hPct": -1.68,
+      "price": 60404,
+      "chg24hPct": -1.25,
       "high24h": 64532,
       "low24h": 59307,
       "fundingPct": -0.0003,
-      "openInterest": 2083.5813,
+      "openInterest": 2076.9261,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1696.3,
-      "chg24hPct": -1.34,
+      "price": 1700.8,
+      "chg24hPct": -0.93,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0017,
-      "openInterest": 30909.054,
+      "openInterest": 31043.953,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/24/bitcoin-drops-as-november-spot-etf-outflows-increase-to-record-usd4-71-billion",
+      "publishedAt": "2026-11-24T12:36:28.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "JPMorgan, HSBC and StoneX complete first digital gold trades in London",
       "link": "https://www.coindesk.com/business/2026/11/24/jpmorgan-hsbc-and-stonex-complete-first-digital-gold-trades-in-london",
       "publishedAt": "2026-11-24T12:04:39.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater",
       "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater",
       "publishedAt": "2026-11-24T11:11:38.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "BTCS sells more than half its ether to repay $43.8 million in Aave debt",
-      "link": "https://www.coindesk.com/business/2026/11/24/btcs-sells-more-than-half-its-ether-to-repay-usd43-8-million-in-aave-debt",
-      "publishedAt": "2026-11-24T10:55:30.000Z",
       "severity": "NORMAL"
     }
   ],
