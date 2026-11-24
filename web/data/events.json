@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T10:00:56.035Z",
+  "updatedAt": "2026-11-24T10:15:56.742Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59957,
-      "chg24hPct": -2.32,
+      "price": 59952,
+      "chg24hPct": -2.23,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": 0,
-      "openInterest": 2125.9245,
+      "openInterest": 2123.2925,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1682.9,
-      "chg24hPct": -2.24,
+      "price": 1685.5,
+      "chg24hPct": -2.06,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0016,
-      "openInterest": 31534.063,
+      "openInterest": 31526.559,
       "src": "Kraken perp"
     }
   ],
@@ -40,6 +40,13 @@
       "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
       "publishedAt": "2026-11-23T15:29:01.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin falls below $60,000 as rally on Jensen Huang’s Nvidia return fades",
+      "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-falls-below-usd60-000-as-rally-on-jensen-huang-s-nvidia-return-fades",
+      "publishedAt": "2026-11-24T10:08:38.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Ethereum Foundation doubles protocol security team ahead of overhaul",
       "link": "https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T00:36:26.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "U.S. CFTC sets policies on event contract data, using crypto to check financial boxes",
-      "link": "https://www.coindesk.com/policy/2026/11/23/u-s-cftc-sets-policies-on-event-contract-data-using-crypto-to-check-financial-boxes",
-      "publishedAt": "2026-11-24T00:25:04.000Z",
       "severity": "NORMAL"
     }
   ],
