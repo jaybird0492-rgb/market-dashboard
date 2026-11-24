@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T07:46:05.248Z",
+  "updatedAt": "2026-11-24T08:01:01.382Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60380,
-      "chg24hPct": -1.66,
+      "price": 60315,
+      "chg24hPct": -1.76,
       "high24h": 64532,
       "low24h": 59371,
-      "fundingPct": -0.0001,
-      "openInterest": 2088.159,
+      "fundingPct": -0.0007,
+      "openInterest": 2086.4349,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1698.4,
-      "chg24hPct": -1.25,
+      "price": 1693.8,
+      "chg24hPct": -1.64,
       "high24h": 1844.2,
       "low24h": 1667.1,
-      "fundingPct": 0,
-      "openInterest": 30679.395,
+      "fundingPct": -0.0011,
+      "openInterest": 30621.545,
       "src": "Kraken perp"
     }
   ],
@@ -78,6 +78,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%",
+      "link": "https://cointelegraph.com/markets/bitcoin-etfs-bleed-ibit-shares-gain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T07:41:50.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T06:00:00.000Z",
@@ -116,13 +123,6 @@
       "title": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
       "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T23:43:34.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Kalshi secures temporary win in New York gambling law dispute",
-      "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T20:38:43.000Z",
       "severity": "NORMAL"
     }
   ],
