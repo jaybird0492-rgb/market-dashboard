@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T10:15:56.742Z",
+  "updatedAt": "2026-11-24T10:30:56.873Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59952,
-      "chg24hPct": -2.23,
+      "price": 59754,
+      "chg24hPct": -2.6,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": 0,
-      "openInterest": 2123.2925,
+      "openInterest": 2122.78,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1685.5,
-      "chg24hPct": -2.06,
+      "price": 1681.5,
+      "chg24hPct": -2.35,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0016,
-      "openInterest": 31526.559,
+      "openInterest": 31462.919,
       "src": "Kraken perp"
     }
   ],
@@ -70,18 +70,18 @@
       "severity": "HIGH"
     },
     {
-      "source": "CoinDesk",
-      "title": "Market rout kills 50 basis points December Fed rate hike bets",
-      "link": "https://www.coindesk.com/markets/2026/11/23/market-rout-kills-50-basis-points-december-fed-rate-hike-bets",
-      "publishedAt": "2026-11-23T04:45:47.000Z",
-      "severity": "HIGH"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Billionaire Bill Ackman warns Fed will make a rate ‘mistake’ in December",
       "link": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T02:47:39.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "South Korea regulator backs bank-controlled stablecoins after months of dispute",
+      "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-regulator-backs-bank-controlled-stablecoins-after-months-of-dispute",
+      "publishedAt": "2026-11-24T10:29:14.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
