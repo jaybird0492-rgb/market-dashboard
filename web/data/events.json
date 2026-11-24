@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:15:57.298Z",
+  "updatedAt": "2026-11-24T13:31:25.405Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59833,
-      "chg24hPct": -2.23,
+      "price": 60050,
+      "chg24hPct": -1.82,
       "high24h": 64532,
       "low24h": 59307,
       "fundingPct": 0.0005,
-      "openInterest": 2073.0006,
+      "openInterest": 2068.1537,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1683.3,
-      "chg24hPct": -2.22,
+      "price": 1691.3,
+      "chg24hPct": -1.71,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0008,
-      "openInterest": 31004.235,
+      "openInterest": 30932.561,
       "src": "Kraken perp"
     }
   ],
@@ -50,7 +50,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin pulls back to $60,000 as stock rally fails to budge crypto",
+      "title": "Live updates: Bitcoin pulls back to $60,000, stock rally fades, as tariffs re-enter the picture",
       "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
       "publishedAt": "2026-11-24T12:47:40.000Z",
       "severity": "HIGH"
@@ -98,6 +98,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Grayscale calls Bitcoin ‘oversold’ at $62K but warns of AI risks",
+      "link": "https://cointelegraph.com/markets/bitcoin-oversold-ai-risks-grayscale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T13:11:44.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion",
       "link": "https://www.coindesk.com/daybook-us/2026/11/24/bitcoin-drops-as-november-spot-etf-outflows-increase-to-record-usd4-71-billion",
@@ -116,13 +123,6 @@
       "title": "South Korea proposes bank-led stablecoins, 20% cap on crypto exchange stakes",
       "link": "https://cointelegraph.com/news/south-korea-draft-bill-crypto-innovation-user-protection?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T12:04:16.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin dipped on Huang’s Nvidia exit but jumped 5% on his return",
-      "link": "https://cointelegraph.com/markets/bitcoin-huangs-return-18-below-pre-resignation-levels?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T11:40:33.000Z",
       "severity": "NORMAL"
     }
   ],
