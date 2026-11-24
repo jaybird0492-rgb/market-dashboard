@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T05:00:56.083Z",
+  "updatedAt": "2026-11-24T05:15:56.507Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60313,
-      "chg24hPct": -1.41,
+      "price": 60529,
+      "chg24hPct": -0.98,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": -0.0003,
-      "openInterest": 2095.3271,
+      "openInterest": 2093.9857,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1697.6,
-      "chg24hPct": -1.63,
+      "price": 1702.9,
+      "chg24hPct": -1.21,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0003,
-      "openInterest": 31115.935,
+      "openInterest": 31095.084,
       "src": "Kraken perp"
     }
   ],
@@ -46,13 +46,6 @@
       "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
       "link": "https://cointelegraph.com/news/upbit-bithumb-suspend-cyber-transfers-bridge-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T07:24:05.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Chainflip confirms $12M hack, offers attacker 10% bounty",
-      "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-22T05:28:43.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -89,6 +82,13 @@
       "link": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-23T02:47:39.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Why 42 Macro says it’s waiting to buy the Bitcoin dip",
+      "link": "https://cointelegraph.com/markets/why-42-macro-says-its-waiting-to-buy-the-bitcoin-dip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T05:07:30.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
