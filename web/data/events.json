@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T11:45:56.850Z",
+  "updatedAt": "2026-11-24T12:00:57.310Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59898,
-      "chg24hPct": -2.52,
+      "price": 60348,
+      "chg24hPct": -1.56,
       "high24h": 64532,
       "low24h": 59307,
-      "fundingPct": 0,
-      "openInterest": 2112.9216,
+      "fundingPct": -0.0003,
+      "openInterest": 2081.4045,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1692.5,
-      "chg24hPct": -1.92,
+      "price": 1700.4,
+      "chg24hPct": -1.24,
       "high24h": 1844.2,
       "low24h": 1667.1,
-      "fundingPct": -0.0016,
-      "openInterest": 30477.897,
+      "fundingPct": -0.0017,
+      "openInterest": 30831.19,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Bitcoin dipped on Huang’s Nvidia exit but jumped 5% on his return",
+      "link": "https://cointelegraph.com/markets/bitcoin-huangs-return-18-below-pre-resignation-levels?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T11:40:33.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater",
       "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater",
@@ -116,13 +123,6 @@
       "title": "Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s",
       "link": "https://cointelegraph.com/markets/bitcoin-dips-60k-gold-worst-60-day-loss-1980s?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T09:25:45.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%",
-      "link": "https://cointelegraph.com/markets/bitcoin-etfs-bleed-ibit-shares-gain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T07:41:50.000Z",
       "severity": "NORMAL"
     }
   ],
