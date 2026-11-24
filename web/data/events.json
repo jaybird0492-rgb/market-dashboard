@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T09:15:56.459Z",
+  "updatedAt": "2026-11-24T09:30:57.299Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59847,
-      "chg24hPct": -2.89,
+      "price": 59912,
+      "chg24hPct": -2.74,
       "high24h": 64532,
       "low24h": 59371,
       "fundingPct": -0.0017,
-      "openInterest": 2111.6723,
+      "openInterest": 2129.3027,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1680.6,
-      "chg24hPct": -2.77,
+      "price": 1683.7,
+      "chg24hPct": -2.55,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0028,
-      "openInterest": 31578.029,
+      "openInterest": 31619.996,
       "src": "Kraken perp"
     }
   ],
@@ -78,6 +78,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Bitcoin dips back under $60K as gold seals worst 60-day loss since 1980s",
+      "link": "https://cointelegraph.com/markets/bitcoin-dips-60k-gold-worst-60-day-loss-1980s?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T09:25:45.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin ETFs keep bleeding as BlackRock’s IBIT shares gain nearly 5%",
       "link": "https://cointelegraph.com/markets/bitcoin-etfs-bleed-ibit-shares-gain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T07:41:50.000Z",
@@ -116,13 +123,6 @@
       "title": "U.S. CFTC sets policies on event contract data, using crypto to check financial boxes",
       "link": "https://www.coindesk.com/policy/2026/11/23/u-s-cftc-sets-policies-on-event-contract-data-using-crypto-to-check-financial-boxes",
       "publishedAt": "2026-11-24T00:25:04.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
-      "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T23:43:34.000Z",
       "severity": "NORMAL"
     }
   ],
