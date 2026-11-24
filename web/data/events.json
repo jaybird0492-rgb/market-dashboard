@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T12:45:56.096Z",
+  "updatedAt": "2026-11-24T13:00:57.963Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60404,
-      "chg24hPct": -1.25,
+      "price": 60386,
+      "chg24hPct": -1.42,
       "high24h": 64532,
       "low24h": 59307,
-      "fundingPct": -0.0003,
-      "openInterest": 2076.9261,
+      "fundingPct": 0.0005,
+      "openInterest": 2075.7869,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1700.8,
-      "chg24hPct": -0.93,
+      "price": 1701.7,
+      "chg24hPct": -1.12,
       "high24h": 1844.2,
       "low24h": 1667.1,
-      "fundingPct": -0.0017,
-      "openInterest": 31043.953,
+      "fundingPct": -0.0008,
+      "openInterest": 31065.177,
       "src": "Kraken perp"
     }
   ],
@@ -47,6 +47,13 @@
       "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
       "publishedAt": "2026-11-23T15:29:01.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin pulls back to $60,000 as stock rally fails to budge crypto",
+      "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
+      "publishedAt": "2026-11-24T12:47:40.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Bitcoin dipped on Huang’s Nvidia exit but jumped 5% on his return",
       "link": "https://cointelegraph.com/markets/bitcoin-huangs-return-18-below-pre-resignation-levels?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T11:40:33.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater",
-      "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater",
-      "publishedAt": "2026-11-24T11:11:38.000Z",
       "severity": "NORMAL"
     }
   ],
