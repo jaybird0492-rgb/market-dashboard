@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T20:45:56.612Z",
+  "updatedAt": "2026-11-24T20:57:32.701Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59560,
-      "chg24hPct": -2.7,
+      "price": 59743,
+      "chg24hPct": -2.26,
       "high24h": 61603,
       "low24h": 59193,
       "fundingPct": -0.0003,
-      "openInterest": 2058.7188,
+      "openInterest": 2065.2191,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1671.8,
-      "chg24hPct": -3.02,
+      "price": 1675.2,
+      "chg24hPct": -2.7,
       "high24h": 1727.8,
       "low24h": 1661.6,
       "fundingPct": -0.0007,
-      "openInterest": 30980.544,
+      "openInterest": 31232.858,
       "src": "Kraken perp"
     }
   ],
@@ -106,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Utah moves to dismiss criminal charges against Kalshi after trading halt",
+      "link": "https://cointelegraph.com/news/utah-moves-to-dismiss-criminal-charges-against-kalshi-after-trading-halt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T20:48:27.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years",
       "link": "https://cointelegraph.com/news/coldcard-how-security-reviews-missed-bitcoin-wallet-flaw-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T19:04:26.000Z",
@@ -116,13 +123,6 @@
       "title": "CFTC sets new prediction market rules as more firms seek US entry",
       "link": "https://cointelegraph.com/news/cftc-new-prediction-market-rules-firms-seek-us-entry?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T18:31:42.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong",
-      "link": "https://cointelegraph.com/news/blackrock-launches-tokenized-money-market-fund-stablecoins-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T18:07:22.000Z",
       "severity": "NORMAL"
     }
   ],
