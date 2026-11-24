@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T11:01:07.067Z",
+  "updatedAt": "2026-11-24T11:15:57.731Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59665,
-      "chg24hPct": -2.77,
+      "price": 59496,
+      "chg24hPct": -2.89,
       "high24h": 64532,
       "low24h": 59307,
       "fundingPct": 0,
-      "openInterest": 2104.5071,
+      "openInterest": 2107.4697,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1680.1,
-      "chg24hPct": -2.53,
+      "price": 1676.9,
+      "chg24hPct": -2.56,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0016,
-      "openInterest": 31291.431,
+      "openInterest": 30636.376,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Bitcoin’s drop to $55,000 left a record 11.6 million BTC underwater",
+      "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-s-drop-to-usd55-000-left-a-record-11-6-million-btc-underwater",
+      "publishedAt": "2026-11-24T11:11:38.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "BTCS sells more than half its ether to repay $43.8 million in Aave debt",
       "link": "https://www.coindesk.com/business/2026/11/24/btcs-sells-more-than-half-its-ether-to-repay-usd43-8-million-in-aave-debt",
       "publishedAt": "2026-11-24T10:55:30.000Z",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T06:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Why 42 Macro says it’s waiting to buy the Bitcoin dip",
-      "link": "https://cointelegraph.com/markets/why-42-macro-says-its-waiting-to-buy-the-bitcoin-dip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T05:07:30.000Z",
       "severity": "NORMAL"
     }
   ],
