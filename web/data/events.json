@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T15:00:57.094Z",
+  "updatedAt": "2026-11-24T15:17:00.544Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60356,
-      "chg24hPct": -4.06,
+      "price": 59668,
+      "chg24hPct": -5.2,
       "high24h": 63629,
       "low24h": 59307,
       "fundingPct": -0.0007,
-      "openInterest": 2072.0763,
+      "openInterest": 2074.7112,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1691.6,
-      "chg24hPct": -4.84,
+      "price": 1672.2,
+      "chg24hPct": -5.98,
       "high24h": 1795.2,
       "low24h": 1667.1,
       "fundingPct": -0.0011,
-      "openInterest": 30592.024,
+      "openInterest": 30911.42,
       "src": "Kraken perp"
     }
   ],
@@ -99,6 +99,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Anchorage Digital to unveil new asset-management subsidiary",
+      "link": "https://www.coindesk.com/business/2026/11/24/anchorage-digital-to-unveil-new-asset-management-subsidiary",
+      "publishedAt": "2026-11-24T15:06:32.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment",
       "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment",
       "publishedAt": "2026-11-24T14:40:53.000Z",
@@ -116,13 +123,6 @@
       "title": "Swiss central bank, UBS and SIX study ledger for tokenized settlement",
       "link": "https://cointelegraph.com/news/swiss-central-bank-ubs-six-explore-ledger-tokenized-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T13:57:56.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals",
-      "link": "https://cointelegraph.com/news/sky-community-proposes-50m-buybacks-stusds-liquidity-crisis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T13:43:46.000Z",
       "severity": "NORMAL"
     }
   ],
