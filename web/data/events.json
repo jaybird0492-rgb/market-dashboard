@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T19:45:57.797Z",
+  "updatedAt": "2026-11-24T20:00:55.675Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59742,
-      "chg24hPct": -2.03,
+      "price": 59601,
+      "chg24hPct": -2.73,
       "high24h": 61603,
       "low24h": 59193,
-      "fundingPct": 0.0008,
-      "openInterest": 2052.9027,
+      "fundingPct": -0.0003,
+      "openInterest": 2055.1423,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1674.4,
-      "chg24hPct": -2.69,
-      "high24h": 1734.1,
+      "price": 1671.8,
+      "chg24hPct": -3.45,
+      "high24h": 1733.5,
       "low24h": 1661.6,
-      "fundingPct": -0.0003,
-      "openInterest": 30768.789,
+      "fundingPct": -0.0007,
+      "openInterest": 30840.2,
       "src": "Kraken perp"
     }
   ],
@@ -54,6 +54,13 @@
       "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
       "publishedAt": "2026-11-23T15:29:01.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
+      "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T19:44:23.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -99,7 +106,7 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Coldcard reveals how security reviews missed Bitcoin wallet flaw for over 5 years",
+      "title": "Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years",
       "link": "https://cointelegraph.com/news/coldcard-how-security-reviews-missed-bitcoin-wallet-flaw-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T19:04:26.000Z",
       "severity": "NORMAL"
@@ -116,13 +123,6 @@
       "title": "BlackRock launches tokenized money market fund accepting stablecoins in Hong Kong",
       "link": "https://cointelegraph.com/news/blackrock-launches-tokenized-money-market-fund-stablecoins-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T18:07:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there",
-      "link": "https://www.coindesk.com/policy/2026/11/24/utah-moves-to-drop-criminal-pursuit-of-kalshi-after-the-firm-halted-services-there",
-      "publishedAt": "2026-11-24T17:50:08.000Z",
       "severity": "NORMAL"
     }
   ],
