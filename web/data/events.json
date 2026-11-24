@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T17:15:57.320Z",
+  "updatedAt": "2026-11-24T17:30:56.901Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59750,
-      "chg24hPct": -3.53,
-      "high24h": 62016,
+      "price": 60026,
+      "chg24hPct": -2.62,
+      "high24h": 61794,
       "low24h": 59193,
       "fundingPct": 0.0013,
-      "openInterest": 2056.3855,
+      "openInterest": 2046.3134,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1675.1,
-      "chg24hPct": -4.99,
-      "high24h": 1765.4,
+      "price": 1685,
+      "chg24hPct": -3.89,
+      "high24h": 1756.9,
       "low24h": 1661.6,
       "fundingPct": 0.0002,
-      "openInterest": 31569.157,
+      "openInterest": 31020.953,
       "src": "Kraken perp"
     }
   ],
@@ -99,6 +99,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price",
+      "link": "https://cointelegraph.com/markets/bitcoin-slides-us-tariff-nerves-anthropic-falls-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T17:09:11.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "How South Korea’s proposed 20% cap could change who runs Upbit",
       "link": "https://cointelegraph.com/news/how-south-koreas-proposed-20-cap-could-change-who-runs-upbit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T16:33:26.000Z",
@@ -116,13 +123,6 @@
       "title": "Anchorage Digital to unveil new asset-management subsidiary",
       "link": "https://www.coindesk.com/business/2026/11/24/anchorage-digital-to-unveil-new-asset-management-subsidiary",
       "publishedAt": "2026-11-24T15:06:32.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment",
-      "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment",
-      "publishedAt": "2026-11-24T14:40:53.000Z",
       "severity": "NORMAL"
     }
   ],
