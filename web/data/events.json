@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T19:00:56.852Z",
+  "updatedAt": "2026-11-24T19:15:57.193Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59809,
-      "chg24hPct": -2.45,
-      "high24h": 61717,
+      "price": 59944,
+      "chg24hPct": -2.63,
+      "high24h": 61637,
       "low24h": 59193,
       "fundingPct": 0.0008,
-      "openInterest": 2053.4567,
+      "openInterest": 2052.2356,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1677.1,
-      "chg24hPct": -3.48,
-      "high24h": 1748.1,
+      "price": 1680.3,
+      "chg24hPct": -3.5,
+      "high24h": 1742.1,
       "low24h": 1661.6,
       "fundingPct": -0.0003,
-      "openInterest": 30592.99,
+      "openInterest": 30535.592,
       "src": "Kraken perp"
     }
   ],
@@ -99,6 +99,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Coldcard reveals how security reviews missed Bitcoin wallet flaw for over 5 years",
+      "link": "https://cointelegraph.com/news/coldcard-how-security-reviews-missed-bitcoin-wallet-flaw-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T19:04:26.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "CFTC sets new prediction market rules as more firms seek US entry",
       "link": "https://cointelegraph.com/news/cftc-new-prediction-market-rules-firms-seek-us-entry?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T18:31:42.000Z",
@@ -116,13 +123,6 @@
       "title": "Utah moves to drop criminal pursuit of Kalshi after the firm halted services there",
       "link": "https://www.coindesk.com/policy/2026/11/24/utah-moves-to-drop-criminal-pursuit-of-kalshi-after-the-firm-halted-services-there",
       "publishedAt": "2026-11-24T17:50:08.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin slides amid US tariff nerves as Anthropic falls below IPO price",
-      "link": "https://cointelegraph.com/markets/bitcoin-slides-us-tariff-nerves-anthropic-falls-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T17:09:11.000Z",
       "severity": "NORMAL"
     }
   ],
