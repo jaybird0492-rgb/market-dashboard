@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T14:00:56.788Z",
+  "updatedAt": "2026-11-24T14:15:58.009Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60044,
-      "chg24hPct": -5.3,
+      "price": 60277,
+      "chg24hPct": -4.68,
       "high24h": 64532,
       "low24h": 59307,
       "fundingPct": 0.0004,
-      "openInterest": 2086.2558,
+      "openInterest": 2081.0153,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1689.8,
-      "chg24hPct": -6.07,
+      "price": 1693.9,
+      "chg24hPct": -5.92,
       "high24h": 1844.2,
       "low24h": 1667.1,
       "fundingPct": -0.0004,
-      "openInterest": 31062.331,
+      "openInterest": 30930.509,
       "src": "Kraken perp"
     }
   ],
@@ -99,6 +99,20 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "USDT buyers face 22% VAT when Moscow Exchange opens crypto trading",
+      "link": "https://cointelegraph.com/news/russia-usdt-buyer-face-22-tax-december-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T14:10:23.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Swiss central bank, UBS and SIX study ledger for tokenized settlement",
+      "link": "https://cointelegraph.com/news/swiss-central-bank-ubs-six-explore-ledger-tokenized-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T13:57:56.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Sky lender proposes buyback of up to $50M to fund stUSDS withdrawals",
       "link": "https://cointelegraph.com/news/sky-community-proposes-50m-buybacks-stusds-liquidity-crisis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T13:43:46.000Z",
@@ -109,20 +123,6 @@
       "title": "Grayscale calls Bitcoin ‘oversold’ at $62K but warns of AI risks",
       "link": "https://cointelegraph.com/markets/bitcoin-oversold-ai-risks-grayscale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T13:11:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/24/bitcoin-drops-as-november-spot-etf-outflows-increase-to-record-usd4-71-billion",
-      "publishedAt": "2026-11-24T12:36:28.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "JPMorgan, HSBC and StoneX complete first digital gold trades in London",
-      "link": "https://www.coindesk.com/business/2026/11/24/jpmorgan-hsbc-and-stonex-complete-first-digital-gold-trades-in-london",
-      "publishedAt": "2026-11-24T12:04:39.000Z",
       "severity": "NORMAL"
     }
   ],
