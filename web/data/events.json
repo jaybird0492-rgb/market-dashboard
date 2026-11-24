@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T16:30:57.487Z",
+  "updatedAt": "2026-11-24T16:46:15.885Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59464,
-      "chg24hPct": -5.11,
-      "high24h": 62731,
-      "low24h": 59307,
+      "price": 59442,
+      "chg24hPct": -4.18,
+      "high24h": 62208,
+      "low24h": 59263,
       "fundingPct": -0.0004,
-      "openInterest": 2065.0938,
+      "openInterest": 2057.6648,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1669.6,
-      "chg24hPct": -5.9,
-      "high24h": 1777.4,
-      "low24h": 1665.7,
+      "price": 1668.4,
+      "chg24hPct": -5.16,
+      "high24h": 1768.2,
+      "low24h": 1661.6,
       "fundingPct": -0.0006,
-      "openInterest": 31337.812,
+      "openInterest": 31484.606,
       "src": "Kraken perp"
     }
   ],
@@ -98,6 +98,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "How South Korea’s proposed 20% cap could change who runs Upbit",
+      "link": "https://cointelegraph.com/news/how-south-koreas-proposed-20-cap-could-change-who-runs-upbit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T16:33:26.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "'AI trade never died': Traders see room for market recovery, but bitcoin's participation another story",
       "link": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness",
@@ -116,13 +123,6 @@
       "title": "South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment",
       "link": "https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment",
       "publishedAt": "2026-11-24T14:40:53.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "USDT buyers face 22% VAT when Moscow Exchange opens crypto trading",
-      "link": "https://cointelegraph.com/news/russia-usdt-buyer-face-22-tax-december-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T14:10:23.000Z",
       "severity": "NORMAL"
     }
   ],
