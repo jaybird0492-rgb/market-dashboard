@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T15:15:56.206Z",
+  "updatedAt": "2026-11-25T15:30:55.668Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 57732,
-      "chg24hPct": -3.61,
+      "price": 57976,
+      "chg24hPct": -3.2,
       "high24h": 60242,
       "low24h": 57216,
       "fundingPct": 0.0001,
-      "openInterest": 2059.255,
+      "openInterest": 2092.0899,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1627.3,
-      "chg24hPct": -3.1,
+      "price": 1632.7,
+      "chg24hPct": -2.82,
       "high24h": 1688.3,
       "low24h": 1606.5,
       "fundingPct": -0.0009,
-      "openInterest": 33751.746,
+      "openInterest": 33791.585,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe",
+      "link": "https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe",
+      "publishedAt": "2026-11-25T14:47:17.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Hackers breach CIA intelligence network in latest US cyberattack",
@@ -81,13 +88,6 @@
       "title": "Bitcoin hands back Monday's Nvidia-driven gains, liquidations triple",
       "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple",
       "publishedAt": "2026-11-24T11:31:56.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin falls below $60,000 as rally on Jensen Huang’s Nvidia return fades",
-      "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-falls-below-usd60-000-as-rally-on-jensen-huang-s-nvidia-return-fades",
-      "publishedAt": "2026-11-24T10:08:38.000Z",
       "severity": "HIGH"
     },
     {
