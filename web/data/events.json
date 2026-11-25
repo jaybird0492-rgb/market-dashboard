@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T17:15:55.304Z",
+  "updatedAt": "2026-11-25T17:30:56.496Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59384,
-      "chg24hPct": -0.61,
+      "price": 59220,
+      "chg24hPct": -1.34,
       "high24h": 60218,
       "low24h": 57216,
       "fundingPct": 0.0003,
-      "openInterest": 1964.0196,
+      "openInterest": 2000.4048,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1663.4,
-      "chg24hPct": -0.73,
+      "price": 1661.2,
+      "chg24hPct": -1.32,
       "high24h": 1687.2,
       "low24h": 1606.5,
       "fundingPct": -0.0025,
-      "openInterest": 36006.739,
+      "openInterest": 35778.79,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures",
+      "link": "https://cointelegraph.com/news/nvidia-agrees-290m-settlement-crypto-mining-revenue-disclosures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T17:19:33.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers",
       "link": "https://cointelegraph.com/news/fcc-authorizes-spacex-1m-satellites-orbital-ai-data-centers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T17:10:53.000Z",
@@ -116,13 +123,6 @@
       "title": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal",
       "link": "https://cointelegraph.com/news/ftx-coo-netflix-portrayal-binance-founder-racist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T14:21:36.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T13:26:05.000Z",
       "severity": "NORMAL"
     }
   ],
