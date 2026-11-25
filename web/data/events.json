@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T21:46:00.350Z",
+  "updatedAt": "2026-11-25T22:00:57.643Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60218,
-      "chg24hPct": 0.73,
+      "price": 60073,
+      "chg24hPct": 0.42,
       "high24h": 60444,
       "low24h": 57216,
-      "fundingPct": 0.0012,
-      "openInterest": 2053.3916,
+      "fundingPct": 0.0014,
+      "openInterest": 2051.4798,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1686.7,
-      "chg24hPct": 0.56,
+      "price": 1680.7,
+      "chg24hPct": 0.11,
       "high24h": 1696.9,
       "low24h": 1606.5,
-      "fundingPct": 0.0005,
-      "openInterest": 35775.092,
+      "fundingPct": -0.0003,
+      "openInterest": 35772.914,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Switzerland clears 57 jurisdictions for crypto tax data sharing",
+      "link": "https://cointelegraph.com/news/switzerland-clears-57-jurisdictions-crypto-tax-data-sharing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T21:53:38.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Braiins warns of Bitcoin mining attacks affecting over 1,000 sites",
       "link": "https://cointelegraph.com/news/braiins-warns-bitcoin-mining-attacks-affecting-1000-sites?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T21:22:19.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
       "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T17:33:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures",
-      "link": "https://cointelegraph.com/news/nvidia-agrees-290m-settlement-crypto-mining-revenue-disclosures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T17:19:33.000Z",
       "severity": "NORMAL"
     }
   ],
