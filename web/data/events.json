@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T15:46:07.697Z",
+  "updatedAt": "2026-11-25T16:00:58.389Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 57993,
-      "chg24hPct": -2.86,
+      "price": 58372,
+      "chg24hPct": -2.09,
       "high24h": 60218,
       "low24h": 57216,
-      "fundingPct": 0.0001,
-      "openInterest": 2090.2722,
+      "fundingPct": -0.0004,
+      "openInterest": 2063.6058,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1638.4,
-      "chg24hPct": -2.21,
+      "price": 1648.2,
+      "chg24hPct": -1.59,
       "high24h": 1687.2,
       "low24h": 1606.5,
-      "fundingPct": -0.0009,
-      "openInterest": 33889.983,
+      "fundingPct": -0.0006,
+      "openInterest": 34361.349,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
+      "publishedAt": "2026-11-25T15:59:44.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal",
       "link": "https://cointelegraph.com/news/ftx-coo-netflix-portrayal-binance-founder-racist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Fed’s preferred inflation gauge lands with a December rate increase already priced in",
       "link": "https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in",
       "publishedAt": "2026-11-25T12:18:46.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%",
-      "link": "https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap",
-      "publishedAt": "2026-11-25T11:51:54.000Z",
       "severity": "NORMAL"
     }
   ],
