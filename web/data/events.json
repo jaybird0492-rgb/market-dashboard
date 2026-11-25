@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T04:45:56.161Z",
+  "updatedAt": "2026-11-25T05:00:56.695Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58981,
-      "chg24hPct": -2.52,
+      "price": 59196,
+      "chg24hPct": -1.86,
       "high24h": 60701,
       "low24h": 58863,
-      "fundingPct": 0.001,
-      "openInterest": 2150.6847,
+      "fundingPct": 0.0006,
+      "openInterest": 2116.891,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1653.5,
-      "chg24hPct": -2.94,
+      "price": 1660.8,
+      "chg24hPct": -2.19,
       "high24h": 1708,
       "low24h": 1647.1,
-      "fundingPct": 0.001,
-      "openInterest": 30894.962,
+      "fundingPct": 0.0009,
+      "openInterest": 30792.4,
       "src": "Kraken perp"
     }
   ],
@@ -99,10 +99,17 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Nvidia soars as Jensen Huang returns to lead company",
-      "link": "https://www.coindesk.com/markets/2026/11/23/jensen-huang-returns-as-nvidia-ceo-as-shares-jump-27",
-      "publishedAt": "2026-11-23T14:13:44.000Z",
-      "severity": "HIGH"
+      "title": "Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive",
+      "link": "https://www.coindesk.com/markets/2026/11/25/crypto-traders-can-now-hedge-nvidia-and-oil-bets-on-derive",
+      "publishedAt": "2026-11-25T04:57:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "A year after buying bitcoin, Czech central bank won't say what it's worth",
+      "link": "https://www.coindesk.com/markets/2026/11/23/a-year-after-buying-bitcoin-czech-central-bank-won-t-say-what-it-s-worth",
+      "publishedAt": "2026-11-25T04:50:08.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Trump says he's willing to give Nvidia's Huang a pardon, doesn't think he needs one",
       "link": "https://www.coindesk.com/policy/2026/11/24/trump-says-he-s-willing-to-give-nvidia-s-huang-a-pardon-doesn-t-think-he-needs-one",
       "publishedAt": "2026-11-25T03:35:20.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "CleanSpark weighs selling more Bitcoin than it mines to de-risk books",
-      "link": "https://cointelegraph.com/news/cleanspark-weighs-selling-more-bitcoin-than-it-mines-to-de-risk-books?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T01:40:59.000Z",
       "severity": "NORMAL"
     }
   ],
