@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T08:45:56.688Z",
+  "updatedAt": "2026-11-25T09:00:56.733Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59188,
-      "chg24hPct": -1.93,
+      "price": 59212,
+      "chg24hPct": -1.28,
       "high24h": 60609,
       "low24h": 58538,
-      "fundingPct": 0.0008,
-      "openInterest": 2121.8157,
+      "fundingPct": -0.0005,
+      "openInterest": 2129.5301,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1647.1,
-      "chg24hPct": -2.99,
+      "price": 1646,
+      "chg24hPct": -2.29,
       "high24h": 1706.5,
       "low24h": 1630.8,
-      "fundingPct": -0.0003,
-      "openInterest": 32119.152,
+      "fundingPct": -0.0014,
+      "openInterest": 32128.176,
       "src": "Kraken perp"
     }
   ],
@@ -56,13 +56,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Binance hackers push $247 million through transactions designed to cloud the source",
-      "link": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
-      "publishedAt": "2026-11-23T15:29:01.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
       "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -92,6 +85,20 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "EU seeks up to $55B for AI and quantum computing fund: Report",
+      "link": "https://cointelegraph.com/news/eu-55-billion-ai-quantum-computing-investment-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T08:40:28.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin slips back under $60,000 as HYPE leads altcoins lower",
+      "link": "https://www.coindesk.com/business/2026/11/25/live-updates-bitcoin-slips-back-under-usd60-000-as-hype-leads-altcoins-lower",
+      "publishedAt": "2026-11-25T08:35:47.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "South Korea’s crypto bill could move stablecoin race beyond token issuance",
       "link": "https://cointelegraph.com/news/south-korea-crypto-bill-stablecoin-race-beyond-issuance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T06:54:59.000Z",
@@ -117,16 +124,17 @@
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T05:50:43.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Solana DEX Velocity halts trading over bug just months after relaunch",
-      "link": "https://cointelegraph.com/news/solana-dex-velocity-halts-transactions-over-bug-coming-2-months-after-relaunch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T05:32:55.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-25T08:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.18,
+      "vsAvgMove": 2.6,
+      "volumeSpike": 2.5
+    },
     {
       "sym": "ETH",
       "at": "2026-11-25T07:00:00.000Z",
@@ -182,14 +190,6 @@
       "movePct": -1.72,
       "vsAvgMove": 3.5,
       "volumeSpike": 10.5
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-23T13:00:00.000Z",
-      "dir": "UP",
-      "movePct": 4.1,
-      "vsAvgMove": 14.3,
-      "volumeSpike": 4.5
     }
   ],
   "errors": []
