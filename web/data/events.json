@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T09:46:04.179Z",
+  "updatedAt": "2026-11-25T10:01:03.384Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58849,
-      "chg24hPct": -2.05,
+      "price": 58964,
+      "chg24hPct": -1.61,
       "high24h": 60609,
       "low24h": 58538,
-      "fundingPct": -0.0005,
-      "openInterest": 2126.4153,
+      "fundingPct": 0.001,
+      "openInterest": 2126.9656,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1637.1,
-      "chg24hPct": -3.02,
+      "price": 1641.2,
+      "chg24hPct": -2.43,
       "high24h": 1706.5,
       "low24h": 1630.8,
-      "fundingPct": -0.0014,
-      "openInterest": 32181.437,
+      "fundingPct": -0.0009,
+      "openInterest": 32295.088,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market",
+      "link": "https://cointelegraph.com/markets/stablecoin-cash-out-2022-bear-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T09:52:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "EU seeks up to $55B for AI and quantum computing fund: Report",
       "link": "https://cointelegraph.com/news/eu-55-billion-ai-quantum-computing-investment-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T08:40:28.000Z",
@@ -116,13 +123,6 @@
       "title": "Just 10 accounts drove all of the XRP Ledger's trading growth last quarter",
       "link": "https://www.coindesk.com/markets/2026/11/25/ten-accounts-drove-all-of-the-xrp-ledger-s-trading-growth-last-quarter",
       "publishedAt": "2026-11-25T06:15:08.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T05:50:43.000Z",
       "severity": "NORMAL"
     }
   ],
