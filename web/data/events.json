@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T11:31:03.974Z",
+  "updatedAt": "2026-11-25T11:45:57.413Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58430,
-      "chg24hPct": -2.31,
+      "price": 58575,
+      "chg24hPct": -2.21,
       "high24h": 60609,
-      "low24h": 58424,
+      "low24h": 58373,
       "fundingPct": 0.0016,
-      "openInterest": 2205.5029,
+      "openInterest": 2199.446,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1634.2,
+      "price": 1640.9,
       "chg24hPct": -3.04,
       "high24h": 1706.5,
       "low24h": 1630.8,
       "fundingPct": -0.0008,
-      "openInterest": 32358.583,
+      "openInterest": 32339.786,
       "src": "Kraken perp"
     }
   ],
@@ -78,6 +78,20 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Hong Kong launches tokenized debt platform with 24-hour settlement",
+      "link": "https://cointelegraph.com/news/hong-kong-central-bank-platform-tokenized-debt-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T11:31:10.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Gold's haven status has lost its edge over bitcoin, and the Fed's to blame",
+      "link": "https://www.coindesk.com/markets/2026/11/25/bitcoin-hasn-t-paid-its-holders-for-the-risk-it-carries-and-now-gold-is-doing-the-same",
+      "publishedAt": "2026-11-25T11:30:32.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout",
       "link": "https://cointelegraph.com/markets/bitcoin-etfs-near-record-5-billion-monthly-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T11:12:26.000Z",
@@ -109,20 +123,6 @@
       "title": "French Senate rejects 100K euro crypto wallet disclosure requirement",
       "link": "https://cointelegraph.com/news/french-senate-rejects-disclosing-self-custodied-crypto-wallets-100k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T09:58:12.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market",
-      "link": "https://cointelegraph.com/markets/stablecoin-cash-out-2022-bear-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T09:52:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "EU seeks up to $55B for AI and quantum computing fund: Report",
-      "link": "https://cointelegraph.com/news/eu-55-billion-ai-quantum-computing-investment-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T08:40:28.000Z",
       "severity": "NORMAL"
     }
   ],
