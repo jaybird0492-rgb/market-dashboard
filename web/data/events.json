@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T22:30:56.506Z",
+  "updatedAt": "2026-11-25T22:45:56.006Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60074,
-      "chg24hPct": 0.24,
+      "price": 60138,
+      "chg24hPct": 0.23,
       "high24h": 60444,
       "low24h": 57216,
       "fundingPct": 0.0014,
-      "openInterest": 2040.9762,
+      "openInterest": 2046.2003,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1683.1,
-      "chg24hPct": 0.07,
+      "price": 1685.9,
+      "chg24hPct": 0.09,
       "high24h": 1696.9,
       "low24h": 1606.5,
       "fundingPct": -0.0003,
-      "openInterest": 35789.836,
+      "openInterest": 35810.606,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T22:33:13.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Switzerland clears 57 jurisdictions for crypto tax data sharing",
       "link": "https://cointelegraph.com/news/switzerland-clears-57-jurisdictions-crypto-tax-data-sharing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T21:53:38.000Z",
@@ -116,13 +123,6 @@
       "title": "French Senate blocks new crypto tax and wallet list critics called a kidnapping risk",
       "link": "https://www.coindesk.com/business/2026/11/25/french-senate-blocks-new-crypto-tax-and-wallet-list-critics-called-a-kidnapping-risk",
       "publishedAt": "2026-11-25T18:24:47.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
-      "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T17:33:22.000Z",
       "severity": "NORMAL"
     }
   ],
