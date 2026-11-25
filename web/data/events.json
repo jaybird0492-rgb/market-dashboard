@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T18:16:00.824Z",
+  "updatedAt": "2026-11-25T18:30:57.043Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59810,
-      "chg24hPct": -0.37,
-      "high24h": 60133,
+      "price": 59566,
+      "chg24hPct": -0.86,
+      "high24h": 60093,
       "low24h": 57216,
       "fundingPct": 0.0018,
-      "openInterest": 2028.9047,
+      "openInterest": 2042.5314,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1683.8,
-      "chg24hPct": 0.04,
-      "high24h": 1686.2,
+      "price": 1677.5,
+      "chg24hPct": -0.45,
+      "high24h": 1694.3,
       "low24h": 1606.5,
       "fundingPct": -0.0014,
-      "openInterest": 35754.909,
+      "openInterest": 36152.27,
       "src": "Kraken perp"
     }
   ],
@@ -85,10 +85,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Bitcoin hands back Monday's Nvidia-driven gains, liquidations triple",
-      "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple",
-      "publishedAt": "2026-11-24T11:31:56.000Z",
-      "severity": "HIGH"
+      "title": "French Senate blocks new crypto tax and wallet list critics called a kidnapping risk",
+      "link": "https://www.coindesk.com/business/2026/11/25/french-senate-blocks-new-crypto-tax-and-wallet-list-critics-called-a-kidnapping-risk",
+      "publishedAt": "2026-11-25T18:24:47.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
