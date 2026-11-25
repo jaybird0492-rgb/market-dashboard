@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T05:45:56.132Z",
+  "updatedAt": "2026-11-25T06:01:02.474Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58962,
-      "chg24hPct": -2.81,
-      "high24h": 60666,
+      "price": 59025,
+      "chg24hPct": -2.44,
+      "high24h": 60609,
       "low24h": 58863,
-      "fundingPct": 0.0006,
-      "openInterest": 2105.9863,
+      "fundingPct": 0.0011,
+      "openInterest": 2108.8766,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1653.3,
-      "chg24hPct": -3.19,
-      "high24h": 1707.9,
+      "price": 1652.9,
+      "chg24hPct": -2.86,
+      "high24h": 1706.5,
       "low24h": 1647.1,
-      "fundingPct": 0.0009,
-      "openInterest": 30780.96,
+      "fundingPct": 0.0004,
+      "openInterest": 30742.735,
       "src": "Kraken perp"
     }
   ],
@@ -92,10 +92,17 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Bitcoin rebounds 17% from $55K lows as Nvidia rally sparks $500M crypto liquidations",
-      "link": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T16:51:17.000Z",
-      "severity": "HIGH"
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T05:50:43.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Solana DEX Velocity halts trading over bug just months after relaunch",
+      "link": "https://cointelegraph.com/news/solana-dex-velocity-halts-transactions-over-bug-coming-2-months-after-relaunch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T05:32:55.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Trump willing to pardon Jensen Huang, says it won’t be necessary",
       "link": "https://cointelegraph.com/news/trump-willing-to-pardon-jensen-huang-but-says-it-wont-be-necessary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T04:14:42.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Trump says he's willing to give Nvidia's Huang a pardon, doesn't think he needs one",
-      "link": "https://www.coindesk.com/policy/2026/11/24/trump-says-he-s-willing-to-give-nvidia-s-huang-a-pardon-doesn-t-think-he-needs-one",
-      "publishedAt": "2026-11-25T03:35:20.000Z",
       "severity": "NORMAL"
     }
   ],
