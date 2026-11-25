@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T13:15:57.875Z",
+  "updatedAt": "2026-11-25T13:30:55.516Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58687,
-      "chg24hPct": -1.89,
+      "price": 58457,
+      "chg24hPct": -2.67,
       "high24h": 60609,
       "low24h": 58373,
       "fundingPct": 0.0007,
-      "openInterest": 2167.9067,
+      "openInterest": 2145.6533,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1645.6,
-      "chg24hPct": -2.2,
+      "price": 1636.4,
+      "chg24hPct": -3.29,
       "high24h": 1703.9,
       "low24h": 1630.8,
       "fundingPct": -0.0011,
-      "openInterest": 32637.502,
+      "openInterest": 32493.842,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T13:26:05.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Ukraine passes bill to legalize crypto and tax profits at 23%",
       "link": "https://cointelegraph.com/news/ukraine-passes-bill-crypto-regulation-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T13:02:09.000Z",
@@ -116,13 +123,6 @@
       "title": "Hong Kong launches tokenized debt platform with 24-hour settlement",
       "link": "https://cointelegraph.com/news/hong-kong-central-bank-platform-tokenized-debt-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T11:31:10.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Gold's haven status has lost its edge over bitcoin, and the Fed's to blame",
-      "link": "https://www.coindesk.com/markets/2026/11/25/bitcoin-hasn-t-paid-its-holders-for-the-risk-it-carries-and-now-gold-is-doing-the-same",
-      "publishedAt": "2026-11-25T11:30:32.000Z",
       "severity": "NORMAL"
     }
   ],
