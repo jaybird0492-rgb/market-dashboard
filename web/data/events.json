@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T16:00:58.389Z",
+  "updatedAt": "2026-11-25T16:15:57.537Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58372,
-      "chg24hPct": -2.09,
+      "price": 58394,
+      "chg24hPct": -1.74,
       "high24h": 60218,
       "low24h": 57216,
       "fundingPct": -0.0004,
-      "openInterest": 2063.6058,
+      "openInterest": 2008.8256,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1648.2,
-      "chg24hPct": -1.59,
+      "price": 1646.3,
+      "chg24hPct": -1.25,
       "high24h": 1687.2,
       "low24h": 1606.5,
       "fundingPct": -0.0006,
-      "openInterest": 34361.349,
+      "openInterest": 34382.893,
       "src": "Kraken perp"
     }
   ],
@@ -50,13 +50,6 @@
     },
     {
       "source": "CoinDesk",
-      "title": "U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving",
-      "link": "https://www.coindesk.com/policy/2026/11/24/u-s-seeks-usd1-1-billion-seized-in-binance-hack-as-north-korean-funds-keep-moving",
-      "publishedAt": "2026-11-24T10:58:51.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
       "title": "Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes",
       "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
       "publishedAt": "2026-11-25T11:57:50.000Z",
@@ -64,7 +57,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin tumbles under $58,000 alongside continuing tech rout",
+      "title": "Live updates: Bitcoin tumbles to $58,000 alongside continuing tech rout",
       "link": "https://www.coindesk.com/business/2026/11/25/live-updates-bitcoin-slips-back-under-usd60-000-as-hype-leads-altcoins-lower",
       "publishedAt": "2026-11-25T08:35:47.000Z",
       "severity": "HIGH"
@@ -92,6 +85,20 @@
     },
     {
       "source": "CoinDesk",
+      "title": "EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending",
+      "link": "https://www.coindesk.com/policy/2026/11/25/eu-bank-watchdog-seeks-european-commission-rules-for-crypto-firms-offering-defi-lending",
+      "publishedAt": "2026-11-25T16:02:31.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million",
+      "link": "https://www.coindesk.com/business/2026/11/25/ukrainian-lawmakers-pass-crypto-tax-and-regulation-bill-expected-to-bring-in-usd330-million",
+      "publishedAt": "2026-11-25T16:02:07.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan",
       "link": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
       "publishedAt": "2026-11-25T15:59:44.000Z",
@@ -116,13 +123,6 @@
       "title": "Ukraine passes bill to legalize crypto and tax profits at 23%",
       "link": "https://cointelegraph.com/news/ukraine-passes-bill-crypto-regulation-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T13:02:09.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Fed’s preferred inflation gauge lands with a December rate increase already priced in",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in",
-      "publishedAt": "2026-11-25T12:18:46.000Z",
       "severity": "NORMAL"
     }
   ],
