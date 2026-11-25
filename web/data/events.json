@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T06:01:02.474Z",
+  "updatedAt": "2026-11-25T06:15:57.581Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59025,
-      "chg24hPct": -2.44,
+      "price": 59208,
+      "chg24hPct": -1.89,
       "high24h": 60609,
       "low24h": 58863,
       "fundingPct": 0.0011,
-      "openInterest": 2108.8766,
+      "openInterest": 2109.9442,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1652.9,
-      "chg24hPct": -2.86,
+      "price": 1658.3,
+      "chg24hPct": -2.27,
       "high24h": 1706.5,
       "low24h": 1647.1,
       "fundingPct": 0.0004,
-      "openInterest": 30742.735,
+      "openInterest": 30785.568,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Ten accounts drove all of the XRP Ledger's trading growth last quarter",
+      "link": "https://www.coindesk.com/markets/2026/11/25/ten-accounts-drove-all-of-the-xrp-ledger-s-trading-growth-last-quarter",
+      "publishedAt": "2026-11-25T06:15:08.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "A year after buying bitcoin, Czech central bank won't say what it's worth",
       "link": "https://www.coindesk.com/markets/2026/11/23/a-year-after-buying-bitcoin-czech-central-bank-won-t-say-what-it-s-worth",
       "publishedAt": "2026-11-25T04:50:08.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Trump willing to pardon Jensen Huang, says it won’t be necessary",
-      "link": "https://cointelegraph.com/news/trump-willing-to-pardon-jensen-huang-but-says-it-wont-be-necessary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T04:14:42.000Z",
       "severity": "NORMAL"
     }
   ],
