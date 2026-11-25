@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T17:30:56.496Z",
+  "updatedAt": "2026-11-25T17:46:07.909Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59220,
-      "chg24hPct": -1.34,
+      "price": 59692,
+      "chg24hPct": -0.47,
       "high24h": 60218,
       "low24h": 57216,
       "fundingPct": 0.0003,
-      "openInterest": 2000.4048,
+      "openInterest": 2009.0642,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1661.2,
-      "chg24hPct": -1.32,
+      "price": 1676.4,
+      "chg24hPct": -0.32,
       "high24h": 1687.2,
       "low24h": 1606.5,
       "fundingPct": -0.0025,
-      "openInterest": 35778.79,
+      "openInterest": 35605.903,
       "src": "Kraken perp"
     }
   ],
@@ -50,16 +50,16 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes",
-      "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
-      "publishedAt": "2026-11-25T11:57:50.000Z",
+      "title": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles",
+      "link": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles",
+      "publishedAt": "2026-11-25T17:38:33.000Z",
       "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin tumbles to $58,000 alongside continuing tech rout",
-      "link": "https://www.coindesk.com/business/2026/11/25/live-updates-bitcoin-slips-back-under-usd60-000-as-hype-leads-altcoins-lower",
-      "publishedAt": "2026-11-25T08:35:47.000Z",
+      "title": "Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes",
+      "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
+      "publishedAt": "2026-11-25T11:57:50.000Z",
       "severity": "HIGH"
     },
     {
@@ -82,6 +82,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple",
       "publishedAt": "2026-11-24T11:31:56.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
+      "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T17:33:22.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan",
       "link": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
       "publishedAt": "2026-11-25T15:59:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal",
-      "link": "https://cointelegraph.com/news/ftx-coo-netflix-portrayal-binance-founder-racist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T14:21:36.000Z",
       "severity": "NORMAL"
     }
   ],
