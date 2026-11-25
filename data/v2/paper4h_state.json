@@ -1,36 +1,66 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-25T11:45:57.280Z",
+  "updatedAt": "2026-11-25T12:01:05.054Z",
   "strategy": "4H Donchian 20/10 futures (simulated perps), dual daily gate (longs > SMA50, shorts < SMA200, both in the band), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "rules": "4H Donchian 20/10 + dual daily gate (long > SMA50, short < SMA200, both in band) + native 4H SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-11-04T16:00:00.000Z",
   "startEquity": 10000,
-  "equity": 10813.99,
+  "equity": 10817.7,
   "realizedEquity": 10813.99,
-  "openRiskUsd": 0,
-  "openRiskPct": 0,
-  "openNotionalUsd": 0,
+  "openRiskUsd": 162.21,
+  "openRiskPct": 1.5,
+  "openNotionalUsd": 2874.67,
   "drawdownFromPeak": -3.27,
   "losingStreak": 0,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
   "daysElapsed": 21,
   "daysTotal": 42,
-  "open": [],
-  "pending": [
+  "open": [
     {
       "sym": "BTC",
       "side": "SHORT",
-      "signalAt": "2026-11-25T04:00:00.000Z",
-      "fillsAt": "2026-11-25T08:00:00.000Z"
+      "entry": 58726.58,
+      "stop": 61839.63,
+      "mark": 58640.34,
+      "markAt": "2026-11-25T08:00:00.000Z",
+      "qty": 0.02605322,
+      "notionalUsd": 1530.02,
+      "riskUsd": 81.1,
+      "riskPct": 0.75,
+      "stopDistPct": 5.3,
+      "pctToStop": 5.46,
+      "unrealUsd": 2.25,
+      "unrealR": 0.03,
+      "openedAt": "2026-11-25T08:00:00.000Z",
+      "barsHeld": 0,
+      "holdHours": 4.02,
+      "mfeR": 0.09,
+      "maeR": -0.25
     },
     {
       "sym": "ETH",
       "side": "SHORT",
-      "signalAt": "2026-11-25T04:00:00.000Z",
-      "fillsAt": "2026-11-25T08:00:00.000Z"
+      "entry": 1640.62,
+      "stop": 1739.58,
+      "mark": 1638.83,
+      "markAt": "2026-11-25T08:00:00.000Z",
+      "qty": 0.81960044,
+      "notionalUsd": 1344.65,
+      "riskUsd": 81.1,
+      "riskPct": 0.75,
+      "stopDistPct": 6.03,
+      "pctToStop": 6.15,
+      "unrealUsd": 1.47,
+      "unrealR": 0.02,
+      "openedAt": "2026-11-25T08:00:00.000Z",
+      "barsHeld": 0,
+      "holdHours": 4.02,
+      "mfeR": 0.06,
+      "maeR": -0.16
     }
   ],
+  "pending": [],
   "closed": [
     {
       "id": "BTC-1794182400000--1",
@@ -79,7 +109,7 @@
   ],
   "stats": {
     "closed": 2,
-    "open": 0,
+    "open": 2,
     "wins": 2,
     "losses": 0,
     "winRatePct": 100,
@@ -89,13 +119,13 @@
     "profitFactor": null,
     "totalR": 10.85,
     "totalPnlUsd": 813.99,
-    "netPnlUsd": 813.99,
+    "netPnlUsd": 817.7,
     "maxDDPct": -3.27,
     "currentStreak": 0,
     "bestR": 6.99,
     "worstR": 3.86,
     "avgHoldHours": 338,
-    "openRiskUsd": 0,
+    "openRiskUsd": 162.21,
     "since": "2026-11-04T16:00:00.000Z",
     "lastTradeAt": "2026-11-23T16:00:00.000Z",
     "sampleStatus": "insufficient"
@@ -598,8 +628,12 @@
       "equity": 10813.99
     },
     {
-      "t": "2026-11-25T11:45:57.280Z",
-      "equity": 10813.99
+      "t": "2026-11-25T08:00:00.000Z",
+      "equity": 10817.7
+    },
+    {
+      "t": "2026-11-25T12:01:05.054Z",
+      "equity": 10817.7
     }
   ],
   "reference": {
