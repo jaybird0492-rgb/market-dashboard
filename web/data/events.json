@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T17:46:07.909Z",
+  "updatedAt": "2026-11-25T18:00:57.155Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59692,
-      "chg24hPct": -0.47,
+      "price": 59558,
+      "chg24hPct": -0.83,
       "high24h": 60218,
       "low24h": 57216,
-      "fundingPct": 0.0003,
-      "openInterest": 2009.0642,
+      "fundingPct": 0.0018,
+      "openInterest": 2014.1869,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1676.4,
-      "chg24hPct": -0.32,
+      "price": 1676.5,
+      "chg24hPct": -0.42,
       "high24h": 1687.2,
       "low24h": 1606.5,
-      "fundingPct": -0.0025,
-      "openInterest": 35605.903,
+      "fundingPct": -0.0014,
+      "openInterest": 35777.996,
       "src": "Kraken perp"
     }
   ],
@@ -47,6 +47,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/24/a-wallet-linked-to-popular-crypto-trader-ansem-sold-usd2-million-in-memecoins-as-his-namesake-token-cratered",
       "publishedAt": "2026-11-24T12:47:49.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
+      "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T17:53:10.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -117,16 +124,25 @@
       "link": "https://www.coindesk.com/business/2026/11/25/ukrainian-lawmakers-pass-crypto-tax-and-regulation-bill-expected-to-bring-in-usd330-million",
       "publishedAt": "2026-11-25T16:02:07.000Z",
       "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Crypto Long & Short: Bitcoin investors can’t keep ignoring Japan",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
-      "publishedAt": "2026-11-25T15:59:44.000Z",
-      "severity": "NORMAL"
     }
   ],
   "shocks": [
+    {
+      "sym": "BTC",
+      "at": "2026-11-25T17:00:00.000Z",
+      "dir": "UP",
+      "movePct": 1.7,
+      "vsAvgMove": 4,
+      "volumeSpike": 2.3
+    },
+    {
+      "sym": "ETH",
+      "at": "2026-11-25T17:00:00.000Z",
+      "dir": "UP",
+      "movePct": 2.05,
+      "vsAvgMove": 4.4,
+      "volumeSpike": 2.2
+    },
     {
       "sym": "BTC",
       "at": "2026-11-25T08:00:00.000Z",
@@ -174,22 +190,6 @@
       "movePct": -1.5,
       "vsAvgMove": 2.8,
       "volumeSpike": 1.9
-    },
-    {
-      "sym": "BTC",
-      "at": "2026-11-23T14:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.48,
-      "vsAvgMove": 3.3,
-      "volumeSpike": 8.8
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-23T14:00:00.000Z",
-      "dir": "DOWN",
-      "movePct": -1.72,
-      "vsAvgMove": 3.5,
-      "volumeSpike": 10.5
     }
   ],
   "errors": []
