@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T10:46:08.223Z",
+  "updatedAt": "2026-11-25T11:01:01.698Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58896,
-      "chg24hPct": -1.16,
+      "price": 58819,
+      "chg24hPct": -1.43,
       "high24h": 60609,
       "low24h": 58538,
-      "fundingPct": 0.001,
-      "openInterest": 2125.6197,
+      "fundingPct": 0.0016,
+      "openInterest": 2163.3246,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1644.3,
-      "chg24hPct": -2.01,
+      "price": 1645.6,
+      "chg24hPct": -2.08,
       "high24h": 1706.5,
       "low24h": 1630.8,
-      "fundingPct": -0.0009,
-      "openInterest": 32259.196,
+      "fundingPct": -0.0008,
+      "openInterest": 32252.572,
       "src": "Kraken perp"
     }
   ],
@@ -46,13 +46,6 @@
       "title": "U.S. seeks $1.1 billion seized in Binance hack as North Korean funds keep moving",
       "link": "https://www.coindesk.com/policy/2026/11/24/u-s-seeks-usd1-1-billion-seized-in-binance-hack-as-north-korean-funds-keep-moving",
       "publishedAt": "2026-11-24T10:58:51.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack",
-      "link": "https://cointelegraph.com/news/us-seeks-11b-crypto-stolen-north-korea-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-23T21:04:03.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -82,6 +75,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/24/bitcoin-falls-below-usd60-000-as-rally-on-jensen-huang-s-nvidia-return-fades",
       "publishedAt": "2026-11-24T10:08:38.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "HYPE drops 8% as Trump bump gives way to 40% slide from peak",
+      "link": "https://cointelegraph.com/markets/hyperliquid-hype-price-falls-abraxas-capital-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T10:57:52.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
