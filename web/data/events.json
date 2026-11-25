@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T07:00:56.397Z",
+  "updatedAt": "2026-11-25T07:16:00.108Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59120,
-      "chg24hPct": -2.04,
+      "price": 59159,
+      "chg24hPct": -2.06,
       "high24h": 60609,
       "low24h": 58863,
       "fundingPct": 0.0011,
-      "openInterest": 2124.9813,
+      "openInterest": 2127.748,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1656.6,
-      "chg24hPct": -2.39,
+      "price": 1658.2,
+      "chg24hPct": -2.36,
       "high24h": 1706.5,
       "low24h": 1647.1,
       "fundingPct": 0.0004,
-      "openInterest": 31020.492,
+      "openInterest": 31057.946,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "South Korea’s crypto bill could move stablecoin race beyond token issuance",
+      "link": "https://cointelegraph.com/news/south-korea-crypto-bill-stablecoin-race-beyond-issuance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T06:54:59.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Solana developers move to stop validators finishing work on blocks that already lost",
       "link": "https://www.coindesk.com/tech/2026/11/25/solana-developers-move-to-stop-validators-finishing-work-on-blocks-that-already-lost",
@@ -116,13 +123,6 @@
       "title": "Solana DEX Velocity halts trading over bug just months after relaunch",
       "link": "https://cointelegraph.com/news/solana-dex-velocity-halts-transactions-over-bug-coming-2-months-after-relaunch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T05:32:55.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive",
-      "link": "https://www.coindesk.com/markets/2026/11/25/crypto-traders-can-now-hedge-nvidia-and-oil-bets-on-derive",
-      "publishedAt": "2026-11-25T04:57:22.000Z",
       "severity": "NORMAL"
     }
   ],
