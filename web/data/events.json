@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T11:01:01.698Z",
+  "updatedAt": "2026-11-25T11:15:58.826Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58819,
-      "chg24hPct": -1.43,
+      "price": 58710,
+      "chg24hPct": -1.29,
       "high24h": 60609,
       "low24h": 58538,
       "fundingPct": 0.0016,
-      "openInterest": 2163.3246,
+      "openInterest": 2169.786,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1645.6,
-      "chg24hPct": -2.08,
+      "price": 1644.7,
+      "chg24hPct": -1.89,
       "high24h": 1706.5,
       "low24h": 1630.8,
       "fundingPct": -0.0008,
-      "openInterest": 32252.572,
+      "openInterest": 32364.239,
       "src": "Kraken perp"
     }
   ],
@@ -77,6 +77,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "EU proposes $54.7 billion fund for AI, quantum startups alongside post-quantum security push",
+      "link": "https://www.coindesk.com/business/2026/11/25/eu-proposes-usd54-7-billion-fund-for-ai-quantum-startups-alongside-post-quantum-security-push",
+      "publishedAt": "2026-11-25T11:00:27.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "HYPE drops 8% as Trump bump gives way to 40% slide from peak",
       "link": "https://cointelegraph.com/markets/hyperliquid-hype-price-falls-abraxas-capital-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "South Korea’s crypto bill could move stablecoin race beyond token issuance",
       "link": "https://cointelegraph.com/news/south-korea-crypto-bill-stablecoin-race-beyond-issuance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T06:54:59.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Solana developers move to stop validators finishing work on blocks that already lost",
-      "link": "https://www.coindesk.com/tech/2026/11/25/solana-developers-move-to-stop-validators-finishing-work-on-blocks-that-already-lost",
-      "publishedAt": "2026-11-25T06:33:10.000Z",
       "severity": "NORMAL"
     }
   ],
