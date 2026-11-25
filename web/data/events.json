@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T14:30:56.361Z",
+  "updatedAt": "2026-11-25T14:45:56.198Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58166,
-      "chg24hPct": -3.98,
-      "high24h": 60609,
-      "low24h": 57888,
+      "price": 57500,
+      "chg24hPct": -4.91,
+      "high24h": 60493,
+      "low24h": 57216,
       "fundingPct": 0.0006,
-      "openInterest": 2097.4567,
+      "openInterest": 2156.3,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1633.5,
-      "chg24hPct": -4.06,
-      "high24h": 1703.4,
-      "low24h": 1621.6,
+      "price": 1617.6,
+      "chg24hPct": -4.62,
+      "high24h": 1698.6,
+      "low24h": 1606.5,
       "fundingPct": -0.0003,
-      "openInterest": 32641.649,
+      "openInterest": 32952.312,
       "src": "Kraken perp"
     }
   ],
@@ -56,6 +56,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin tumbles under $58,000 alongside continuing tech rout",
+      "link": "https://www.coindesk.com/business/2026/11/25/live-updates-bitcoin-slips-back-under-usd60-000-as-hype-leads-altcoins-lower",
+      "publishedAt": "2026-11-25T08:35:47.000Z",
+      "severity": "HIGH"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
       "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -85,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal",
+      "link": "https://cointelegraph.com/news/ftx-coo-netflix-portrayal-binance-founder-racist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T14:21:36.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T13:26:05.000Z",
@@ -109,20 +123,6 @@
       "title": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%",
       "link": "https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap",
       "publishedAt": "2026-11-25T11:51:54.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization",
-      "link": "https://cointelegraph.com/news/sbi-smfg-solana-global-stablecoin-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T11:49:54.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Hong Kong launches tokenized debt platform with 24-hour settlement",
-      "link": "https://cointelegraph.com/news/hong-kong-central-bank-platform-tokenized-debt-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T11:31:10.000Z",
       "severity": "NORMAL"
     }
   ],
