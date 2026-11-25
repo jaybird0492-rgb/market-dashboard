@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T17:01:03.775Z",
+  "updatedAt": "2026-11-25T17:15:55.304Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58415,
-      "chg24hPct": -1.64,
+      "price": 59384,
+      "chg24hPct": -0.61,
       "high24h": 60218,
       "low24h": 57216,
       "fundingPct": 0.0003,
-      "openInterest": 1985.0316,
+      "openInterest": 1964.0196,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1641.2,
-      "chg24hPct": -1.64,
+      "price": 1663.4,
+      "chg24hPct": -0.73,
       "high24h": 1687.2,
       "low24h": 1606.5,
       "fundingPct": -0.0025,
-      "openInterest": 35145.502,
+      "openInterest": 36006.739,
       "src": "Kraken perp"
     }
   ],
@@ -84,6 +84,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers",
+      "link": "https://cointelegraph.com/news/fcc-authorizes-spacex-1m-satellites-orbital-ai-data-centers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T17:10:53.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending",
       "link": "https://www.coindesk.com/policy/2026/11/25/eu-bank-watchdog-seeks-european-commission-rules-for-crypto-firms-offering-defi-lending",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T13:26:05.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ukraine passes bill to legalize crypto and tax profits at 23%",
-      "link": "https://cointelegraph.com/news/ukraine-passes-bill-crypto-regulation-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T13:02:09.000Z",
       "severity": "NORMAL"
     }
   ],
