@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T12:15:57.675Z",
+  "updatedAt": "2026-11-25T12:30:58.926Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58508,
-      "chg24hPct": -2.8,
+      "price": 58599,
+      "chg24hPct": -2.71,
       "high24h": 60609,
       "low24h": 58373,
       "fundingPct": 0.001,
-      "openInterest": 2208.2033,
+      "openInterest": 2203.566,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1639.9,
-      "chg24hPct": -3.24,
+      "price": 1643.9,
+      "chg24hPct": -3.09,
       "high24h": 1706.5,
       "low24h": 1630.8,
       "fundingPct": -0.0012,
-      "openInterest": 32619.934,
+      "openInterest": 32619.82,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Fed’s preferred inflation gauge lands with a December rate increase already priced in",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in",
+      "publishedAt": "2026-11-25T12:18:46.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%",
       "link": "https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap",
       "publishedAt": "2026-11-25T11:51:54.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout",
       "link": "https://cointelegraph.com/markets/bitcoin-etfs-near-record-5-billion-monthly-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T11:12:26.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin price may fall below $53K if bear-market history repeats",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-bear-market-history-repeats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T11:09:38.000Z",
       "severity": "NORMAL"
     }
   ],
