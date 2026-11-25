@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T06:30:56.745Z",
+  "updatedAt": "2026-11-25T06:46:06.229Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58945,
-      "chg24hPct": -2.43,
+      "price": 59119,
+      "chg24hPct": -2.03,
       "high24h": 60609,
       "low24h": 58863,
       "fundingPct": 0.0011,
-      "openInterest": 2108.5985,
+      "openInterest": 2123.0586,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1653.5,
-      "chg24hPct": -2.64,
+      "price": 1657.6,
+      "chg24hPct": -2.33,
       "high24h": 1706.5,
       "low24h": 1647.1,
       "fundingPct": 0.0004,
-      "openInterest": 30790.822,
+      "openInterest": 30745.601,
       "src": "Kraken perp"
     }
   ],
@@ -92,7 +92,14 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Ten accounts drove all of the XRP Ledger's trading growth last quarter",
+      "title": "Solana developers move to stop validators finishing work on blocks that already lost",
+      "link": "https://www.coindesk.com/tech/2026/11/25/solana-developers-move-to-stop-validators-finishing-work-on-blocks-that-already-lost",
+      "publishedAt": "2026-11-25T06:33:10.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Just 10 accounts drove all of the XRP Ledger's trading growth last quarter",
       "link": "https://www.coindesk.com/markets/2026/11/25/ten-accounts-drove-all-of-the-xrp-ledger-s-trading-growth-last-quarter",
       "publishedAt": "2026-11-25T06:15:08.000Z",
       "severity": "NORMAL"
@@ -116,13 +123,6 @@
       "title": "Crypto traders can now hedge Nvidia, Anthropic and oil bets on Derive",
       "link": "https://www.coindesk.com/markets/2026/11/25/crypto-traders-can-now-hedge-nvidia-and-oil-bets-on-derive",
       "publishedAt": "2026-11-25T04:57:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "A year after buying bitcoin, Czech central bank won't say what it's worth",
-      "link": "https://www.coindesk.com/markets/2026/11/23/a-year-after-buying-bitcoin-czech-central-bank-won-t-say-what-it-s-worth",
-      "publishedAt": "2026-11-25T04:50:08.000Z",
       "severity": "NORMAL"
     }
   ],
