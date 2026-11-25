@@ -1,32 +1,39 @@
 {
-  "updatedAt": "2026-11-24T23:45:55.449Z",
+  "updatedAt": "2026-11-25T00:00:56.612Z",
   "fearGreed": {
-    "value": 11,
+    "value": 13,
     "label": "Extreme Fear"
   },
   "market": [
     {
       "sym": "BTC",
-      "price": 59747,
-      "chg24hPct": -2.32,
+      "price": 59691,
+      "chg24hPct": -2.41,
       "high24h": 61603,
       "low24h": 59193,
-      "fundingPct": 0.0011,
-      "openInterest": 2078.7496,
+      "fundingPct": 0.0015,
+      "openInterest": 2082.8811,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1676.6,
-      "chg24hPct": -1.79,
+      "price": 1675.7,
+      "chg24hPct": -1.89,
       "high24h": 1719.8,
       "low24h": 1661.6,
-      "fundingPct": 0.0002,
-      "openInterest": 30940.388,
+      "fundingPct": 0.0013,
+      "openInterest": 30838.841,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Hackers breach CIA intelligence network in latest US cyberattack",
+      "link": "https://cointelegraph.com/news/hackers-breach-cia-intelligence-network-in-latest-us-cyberattack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T23:48:16.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold",
@@ -116,13 +123,6 @@
       "title": "Europol follows $28.5M crypto trail in streaming piracy crackdown",
       "link": "https://cointelegraph.com/news/europol-crypto-trail-streaming-piracy-crackdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-24T21:50:25.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Utah moves to dismiss criminal charges against Kalshi after trading halt",
-      "link": "https://cointelegraph.com/news/utah-moves-to-dismiss-criminal-charges-against-kalshi-after-trading-halt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T20:48:27.000Z",
       "severity": "NORMAL"
     }
   ],
