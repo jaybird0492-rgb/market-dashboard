@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T07:45:58.838Z",
+  "updatedAt": "2026-11-25T08:00:56.726Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58777,
-      "chg24hPct": -2.65,
+      "price": 58759,
+      "chg24hPct": -2.57,
       "high24h": 60609,
       "low24h": 58538,
-      "fundingPct": 0.0011,
-      "openInterest": 2151.8679,
+      "fundingPct": 0.0008,
+      "openInterest": 2158.0291,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1640,
-      "chg24hPct": -3.44,
+      "price": 1639.3,
+      "chg24hPct": -3.25,
       "high24h": 1706.5,
       "low24h": 1630.8,
-      "fundingPct": 0.0004,
-      "openInterest": 32284.57,
+      "fundingPct": -0.0003,
+      "openInterest": 32363.728,
       "src": "Kraken perp"
     }
   ],
@@ -128,6 +128,14 @@
   ],
   "shocks": [
     {
+      "sym": "ETH",
+      "at": "2026-11-25T07:00:00.000Z",
+      "dir": "DOWN",
+      "movePct": -1.16,
+      "vsAvgMove": 2.7,
+      "volumeSpike": 2.4
+    },
+    {
       "sym": "BTC",
       "at": "2026-11-24T17:00:00.000Z",
       "dir": "UP",
@@ -181,14 +189,6 @@
       "dir": "UP",
       "movePct": 4.1,
       "vsAvgMove": 14.3,
-      "volumeSpike": 4.5
-    },
-    {
-      "sym": "ETH",
-      "at": "2026-11-23T13:00:00.000Z",
-      "dir": "UP",
-      "movePct": 5.12,
-      "vsAvgMove": 17.6,
       "volumeSpike": 4.5
     }
   ],
