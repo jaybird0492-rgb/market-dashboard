@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T10:01:03.384Z",
+  "updatedAt": "2026-11-25T10:15:57.592Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58964,
-      "chg24hPct": -1.61,
+      "price": 58926,
+      "chg24hPct": -1.71,
       "high24h": 60609,
       "low24h": 58538,
       "fundingPct": 0.001,
-      "openInterest": 2126.9656,
+      "openInterest": 2125.5749,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1641.2,
-      "chg24hPct": -2.43,
+      "price": 1643,
+      "chg24hPct": -2.5,
       "high24h": 1706.5,
       "low24h": 1630.8,
       "fundingPct": -0.0009,
-      "openInterest": 32295.088,
+      "openInterest": 32244.177,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "French Senate rejects 100K euro crypto wallet disclosure requirement",
+      "link": "https://cointelegraph.com/news/french-senate-rejects-disclosing-self-custodied-crypto-wallets-100k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T09:58:12.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market",
       "link": "https://cointelegraph.com/markets/stablecoin-cash-out-2022-bear-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T09:52:22.000Z",
@@ -116,13 +123,6 @@
       "title": "Solana developers move to stop validators finishing work on blocks that already lost",
       "link": "https://www.coindesk.com/tech/2026/11/25/solana-developers-move-to-stop-validators-finishing-work-on-blocks-that-already-lost",
       "publishedAt": "2026-11-25T06:33:10.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Just 10 accounts drove all of the XRP Ledger's trading growth last quarter",
-      "link": "https://www.coindesk.com/markets/2026/11/25/ten-accounts-drove-all-of-the-xrp-ledger-s-trading-growth-last-quarter",
-      "publishedAt": "2026-11-25T06:15:08.000Z",
       "severity": "NORMAL"
     }
   ],
