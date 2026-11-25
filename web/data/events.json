@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T18:45:56.130Z",
+  "updatedAt": "2026-11-25T19:00:57.264Z",
   "fearGreed": {
     "value": 13,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59678,
-      "chg24hPct": -0.34,
-      "high24h": 60062,
+      "price": 59654,
+      "chg24hPct": -0.27,
+      "high24h": 60038,
       "low24h": 57216,
-      "fundingPct": 0.0018,
-      "openInterest": 2034.4662,
+      "fundingPct": 0.0011,
+      "openInterest": 2033.6055,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1681.4,
-      "chg24hPct": 0.05,
+      "price": 1678.5,
+      "chg24hPct": 0.08,
       "high24h": 1694.3,
       "low24h": 1606.5,
-      "fundingPct": -0.0014,
-      "openInterest": 36278.677,
+      "fundingPct": 0.0002,
+      "openInterest": 36239.163,
       "src": "Kraken perp"
     }
   ],
@@ -84,6 +84,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Ethereum Foundation backs Keccak-256 to counter quantum, AI threats",
+      "link": "https://cointelegraph.com/news/ethereum-foundation-keccak-256-counter-quantum-ai-threats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-25T18:54:51.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "French Senate blocks new crypto tax and wallet list critics called a kidnapping risk",
       "link": "https://www.coindesk.com/business/2026/11/25/french-senate-blocks-new-crypto-tax-and-wallet-list-critics-called-a-kidnapping-risk",
@@ -116,13 +123,6 @@
       "title": "EU bank watchdog seeks European Commission rules for crypto firms offering DeFi lending",
       "link": "https://www.coindesk.com/policy/2026/11/25/eu-bank-watchdog-seeks-european-commission-rules-for-crypto-firms-offering-defi-lending",
       "publishedAt": "2026-11-25T16:02:31.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Ukrainian lawmakers pass crypto tax and regulation bill expected to bring in $330 million",
-      "link": "https://www.coindesk.com/business/2026/11/25/ukrainian-lawmakers-pass-crypto-tax-and-regulation-bill-expected-to-bring-in-usd330-million",
-      "publishedAt": "2026-11-25T16:02:07.000Z",
       "severity": "NORMAL"
     }
   ],
