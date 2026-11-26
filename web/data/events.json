@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:30:57.318Z",
+  "updatedAt": "2026-11-26T13:46:03.573Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60778,
-      "chg24hPct": 4,
+      "price": 60854,
+      "chg24hPct": 4.74,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0008,
-      "openInterest": 2094.3583,
+      "openInterest": 2122.4506,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1703.7,
-      "chg24hPct": 4.05,
+      "price": 1703.5,
+      "chg24hPct": 4.59,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0019,
-      "openInterest": 34928.179,
+      "openInterest": 35154.358,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "7 bizarre things crypto whales spent a fortune on",
+      "link": "https://cointelegraph.com/magazine/7-bizarre-things-crypto-whales-spent-a-fortune-on?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T13:30:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve",
       "link": "https://cointelegraph.com/news/vitalik-buterin-verifiable-chips-hardware-wallet-threats-evolve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T12:13:59.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving",
       "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
       "publishedAt": "2026-11-26T11:17:22.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure",
-      "link": "https://www.coindesk.com/markets/2026/11/26/nvidia-shipment-freeze-and-u-s-chip-curbs-put-ai-stocks-under-pressure",
-      "publishedAt": "2026-11-26T10:56:08.000Z",
       "severity": "NORMAL"
     }
   ],
