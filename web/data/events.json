@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T10:15:55.933Z",
+  "updatedAt": "2026-11-26T10:30:59.292Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60860,
-      "chg24hPct": 3.27,
+      "price": 60768,
+      "chg24hPct": 3.19,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.001,
-      "openInterest": 2195.611,
+      "openInterest": 2195.617,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1702.4,
-      "chg24hPct": 3.6,
+      "price": 1701,
+      "chg24hPct": 3.54,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0011,
-      "openInterest": 34451.931,
+      "openInterest": 34404.053,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement",
+      "link": "https://cointelegraph.com/news/zcash-users-migrate-zec-supply-sapling-pool-retirement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T10:15:28.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
       "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T09:42:34.000Z",
@@ -116,13 +123,6 @@
       "title": "Ripple is worth $90 a share to one fund and $300 to another, SEC filings show",
       "link": "https://www.coindesk.com/markets/2026/11/26/ripple-is-worth-usd90-a-share-to-one-fund-and-usd300-to-another-sec-filings-show",
       "publishedAt": "2026-11-26T05:30:38.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Sky proposes emergency vote on $25M transfer amid liquidity stress",
-      "link": "https://cointelegraph.com/news/sky-emergency-vote-25m-transfer-stusds-liquidity-stress?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T05:29:26.000Z",
       "severity": "NORMAL"
     }
   ],
