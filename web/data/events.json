@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:46:03.573Z",
+  "updatedAt": "2026-11-26T14:00:56.733Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60854,
-      "chg24hPct": 4.74,
+      "price": 60770,
+      "chg24hPct": 4.8,
       "high24h": 61553,
       "low24h": 57216,
-      "fundingPct": 0.0008,
-      "openInterest": 2122.4506,
+      "fundingPct": 0.0003,
+      "openInterest": 2122.3175,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1703.5,
-      "chg24hPct": 4.59,
+      "price": 1701.2,
+      "chg24hPct": 4.43,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0019,
-      "openInterest": 35154.358,
+      "openInterest": 34547.112,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,20 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Nasdaq exec pushes for common EU rules on tokenized securities",
+      "link": "https://cointelegraph.com/news/nasdaq-exec-eu-wide-legal-framework-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T13:47:56.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T13:45:04.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "7 bizarre things crypto whales spent a fortune on",
       "link": "https://cointelegraph.com/magazine/7-bizarre-things-crypto-whales-spent-a-fortune-on?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T13:30:00.000Z",
@@ -109,20 +123,6 @@
       "title": "Hong Kong-based crypto trading firm Auros is winding down operations",
       "link": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
       "publishedAt": "2026-11-26T11:27:50.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-talos-warns-thin-thanksgiving-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T11:22:59.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving",
-      "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
-      "publishedAt": "2026-11-26T11:17:22.000Z",
       "severity": "NORMAL"
     }
   ],
