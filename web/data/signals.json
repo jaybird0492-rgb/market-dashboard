@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-26T11:46:01.862Z",
-  "next4hCloseAt": "2026-11-26T12:00:00.000Z",
+  "updatedAt": "2026-11-26T12:01:01.181Z",
+  "next4hCloseAt": "2026-11-26T16:00:00.000Z",
   "coins": [
     {
       "sym": "BTC",
@@ -24,26 +24,26 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, dual daily gate (long above SMA50, short below SMA200, both in between) + native 4H SMA200 filter",
-        "price": 60521.78,
-        "asOf": "2026-11-26T04:00:00.000Z",
+        "price": 60714.01,
+        "asOf": "2026-11-26T08:00:00.000Z",
         "longTrigger": 64603.12,
-        "pctToLong": 6.74,
+        "pctToLong": 6.41,
         "shortTrigger": 57300.38,
-        "pctToShort": 5.62,
+        "pctToShort": 5.96,
         "dailyLong": false,
         "dailyShort": true,
         "gateAllows": "SHORT",
-        "sma200_4h": 71646.7,
-        "pctTo4hSma200": 18.38,
+        "sma200_4h": 71545.38,
+        "pctTo4hSma200": 17.84,
         "nativeLong": false,
         "nativeShort": true,
         "longAllowed": false,
         "shortAllowed": true,
         "effectiveAllows": "SHORT",
-        "atr": 1250.47,
-        "stopDistPct": 5.17,
+        "atr": 1204.3,
+        "stopDistPct": 4.96,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 1452,
+        "approxSizeUsd": 1512,
         "lastBreakout": {
           "dir": "SHORT",
           "at": "2026-11-25T12:00:00.000Z",
@@ -54,7 +54,6 @@
         }
       },
       "series1h": [
-        60424.37,
         60484.95,
         60014.6,
         60440,
@@ -101,13 +100,14 @@
         60521.78,
         60900.92,
         60936.26,
-        60518.01
+        60518.01,
+        60714.01
       ],
       "warning1h": {
         "state": "QUIET",
         "dir": 0,
-        "detail": "nearest 1H levels: +1.8% up / -4.9% down",
-        "asOf": "2026-11-26T10:00:00.000Z",
+        "detail": "nearest 1H levels: +1.5% up / -4.5% down",
+        "asOf": "2026-11-26T11:00:00.000Z",
         "stats180d": {
           "events": 122,
           "confirmed": 65,
@@ -137,37 +137,29 @@
       },
       "setup4h": {
         "rules": "Donchian 20/10, dual daily gate (long above SMA50, short below SMA200, both in between) + native 4H SMA200 filter",
-        "price": 1689.76,
-        "asOf": "2026-11-26T04:00:00.000Z",
+        "price": 1700.36,
+        "asOf": "2026-11-26T08:00:00.000Z",
         "longTrigger": 1845.07,
-        "pctToLong": 9.19,
+        "pctToLong": 8.51,
         "shortTrigger": 1608.86,
-        "pctToShort": 5.03,
+        "pctToShort": 5.69,
         "dailyLong": false,
         "dailyShort": true,
         "gateAllows": "SHORT",
-        "sma200_4h": 2055.92,
-        "pctTo4hSma200": 21.67,
+        "sma200_4h": 2052.51,
+        "pctTo4hSma200": 20.71,
         "nativeLong": false,
         "nativeShort": true,
         "longAllowed": false,
         "shortAllowed": true,
         "effectiveAllows": "SHORT",
-        "atr": 39.2,
-        "stopDistPct": 5.8,
+        "atr": 37.73,
+        "stopDistPct": 5.55,
         "riskUsdPerTrade": 75,
-        "approxSizeUsd": 1293,
-        "lastBreakout": {
-          "dir": "SHORT",
-          "at": "2026-11-25T04:00:00.000Z",
-          "close": 1640.95,
-          "level": 1648.35,
-          "allowed": true,
-          "blockedBy": null
-        }
+        "approxSizeUsd": 1352,
+        "lastBreakout": null
       },
       "series1h": [
-        1702.63,
         1704.3,
         1689.62,
         1693.71,
@@ -214,13 +206,14 @@
         1689.76,
         1701.18,
         1703.91,
-        1695.04
+        1695.04,
+        1700.36
       ],
       "warning1h": {
         "state": "QUIET",
         "dir": 0,
-        "detail": "nearest 1H levels: +2.1% up / -4.3% down",
-        "asOf": "2026-11-26T10:00:00.000Z",
+        "detail": "nearest 1H levels: +1.7% up / -4.3% down",
+        "asOf": "2026-11-26T11:00:00.000Z",
         "stats180d": {
           "events": 105,
           "confirmed": 48,

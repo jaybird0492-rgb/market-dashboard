@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T11:46:02.218Z",
+  "updatedAt": "2026-11-26T12:01:01.534Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60636,
-      "chg24hPct": 3.52,
+      "price": 60679,
+      "chg24hPct": 3.7,
       "high24h": 61553,
       "low24h": 57216,
-      "fundingPct": 0,
-      "openInterest": 2164.635,
+      "fundingPct": -0.0001,
+      "openInterest": 2163.5582,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1699,
-      "chg24hPct": 3.53,
+      "price": 1700.3,
+      "chg24hPct": 4.02,
       "high24h": 1727.5,
       "low24h": 1606.5,
-      "fundingPct": 0.0008,
-      "openInterest": 34320.13,
+      "fundingPct": 0.0011,
+      "openInterest": 34633.383,
       "src": "Kraken perp"
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Hong Kong-based crypto trading firm Auros is winding down operations: Sources",
+      "title": "Hong Kong-based crypto trading firm Auros is winding down operations",
       "link": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
       "publishedAt": "2026-11-26T11:27:50.000Z",
       "severity": "NORMAL"
