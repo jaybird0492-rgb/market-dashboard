@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:16:05.349Z",
+  "updatedAt": "2026-11-26T04:31:05.699Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60900,
-      "chg24hPct": 2.77,
+      "price": 60958,
+      "chg24hPct": 3.09,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0018,
-      "openInterest": 2167.0335,
+      "openInterest": 2188.9586,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1701.1,
-      "chg24hPct": 2.36,
+      "price": 1700.9,
+      "chg24hPct": 2.61,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0006,
-      "openInterest": 34843.626,
+      "openInterest": 33907.61,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions",
+      "link": "https://cointelegraph.com/news/senate-democrats-urge-sec-to-scrap-crypto-tokenized-stock-exemptions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T04:24:45.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says",
       "link": "https://cointelegraph.com/news/ai-labs-likely-sitting-on-cryptography-bombshells-computer-scientist-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T01:33:20.000Z",
@@ -116,13 +123,6 @@
       "title": "Why ECB collateral eligibility could boost demand for tokenized bonds",
       "link": "https://cointelegraph.com/news/why-ecb-collateral-eligibility-could-boost-demand-tokenized-bonds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T21:11:39.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Ethereum Foundation backs Keccak-256 to counter quantum, AI threats",
-      "link": "https://cointelegraph.com/news/ethereum-foundation-keccak-256-counter-quantum-ai-threats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T18:54:51.000Z",
       "severity": "NORMAL"
     }
   ],
