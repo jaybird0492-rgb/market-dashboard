@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T20:01:01.523Z",
+  "updatedAt": "2026-11-26T20:15:55.035Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60604,
-      "chg24hPct": 1.27,
+      "price": 60651,
+      "chg24hPct": 1.09,
       "high24h": 61553,
       "low24h": 59734,
       "fundingPct": 0.0003,
-      "openInterest": 2075.4778,
+      "openInterest": 2075.9058,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1701,
-      "chg24hPct": 1.06,
+      "price": 1701.6,
+      "chg24hPct": 1,
       "high24h": 1727.5,
       "low24h": 1665.8,
       "fundingPct": 0,
-      "openInterest": 30622.12,
+      "openInterest": 30677.393,
       "src": "Kraken perp"
     }
   ],
@@ -99,6 +99,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Japan weighs tighter oversight of DeFi, self-custodial wallets",
+      "link": "https://cointelegraph.com/news/japan-tighter-oversight-defi-self-custodial-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T20:05:18.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Spain moves to grant financial watchdog power to freeze crypto accounts",
       "link": "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T18:26:31.000Z",
@@ -116,13 +123,6 @@
       "title": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases",
       "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-s-dormant-supply-rises-a-behavior-seen-during-previous-bear-market-bottoming-phases",
       "publishedAt": "2026-11-26T16:50:23.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BIS chief Pablo Hernández de Cos set to become next ECB president: FT",
-      "link": "https://cointelegraph.com/news/bis-chief-pablo-hernndez-de-cos-next-ecb-president?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T16:40:44.000Z",
       "severity": "NORMAL"
     }
   ],
