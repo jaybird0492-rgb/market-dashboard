@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T11:16:05.672Z",
+  "updatedAt": "2026-11-26T11:30:56.690Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60567,
-      "chg24hPct": 3.17,
+      "price": 60564,
+      "chg24hPct": 3.54,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0,
-      "openInterest": 2169.6928,
+      "openInterest": 2167.0501,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1695.7,
-      "chg24hPct": 3.12,
+      "price": 1697.7,
+      "chg24hPct": 3.78,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0008,
-      "openInterest": 34331.094,
+      "openInterest": 34324.43,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,27 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Major crypto trading firm Auros is winding down operations: Sources",
+      "link": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
+      "publishedAt": "2026-11-26T11:27:50.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-talos-warns-thin-thanksgiving-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T11:22:59.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin little changed, DeFi tokens lead the bounce as U.S. marks Thanksgiving",
+      "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
+      "publishedAt": "2026-11-26T11:17:22.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure",
       "link": "https://www.coindesk.com/markets/2026/11/26/nvidia-shipment-freeze-and-u-s-chip-curbs-put-ai-stocks-under-pressure",
       "publishedAt": "2026-11-26T10:56:08.000Z",
@@ -102,27 +123,6 @@
       "title": "Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour",
       "link": "https://cointelegraph.com/markets/bit-debuts-switzerlands-first-spot-bitcoin-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T09:18:15.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "$7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October",
-      "link": "https://www.coindesk.com/markets/2026/11/26/usd7-billion-of-bitcoin-options-expire-friday-and-the-biggest-bets-look-starkly-different-from-october",
-      "publishedAt": "2026-11-26T08:01:33.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Zcash developers want users to move $300 million out of an older privacy system",
-      "link": "https://www.coindesk.com/tech/2026/11/26/zcash-developers-want-users-to-move-usd300-million-out-of-an-older-privacy-system",
-      "publishedAt": "2026-11-26T07:09:25.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Over 1,000 Bitcoin miners were tricked into working for a thief by a fake internet route",
-      "link": "https://www.coindesk.com/markets/2026/11/26/hackers-hijacked-1-000-plus-bitcoin-mines-in-one-second-by-faking-internet-routes",
-      "publishedAt": "2026-11-26T06:19:09.000Z",
       "severity": "NORMAL"
     }
   ],
