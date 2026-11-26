@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T07:45:56.147Z",
+  "updatedAt": "2026-11-26T08:00:54.311Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,23 +7,23 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60549,
-      "chg24hPct": 3.01,
-      "high24h": 61553,
-      "low24h": 57216,
-      "fundingPct": 0.0011,
-      "openInterest": 2166.4077,
-      "src": "Kraken perp"
+      "price": 60506.26,
+      "chg24hPct": 1.96,
+      "high24h": 61524.42,
+      "low24h": 57208.75,
+      "fundingPct": null,
+      "openInterest": null,
+      "src": "Coinbase spot"
     },
     {
       "sym": "ETH",
-      "price": 1691.4,
-      "chg24hPct": 3.13,
-      "high24h": 1727.5,
+      "price": 1688.13,
+      "chg24hPct": 2.24,
+      "high24h": 1727.7,
       "low24h": 1606.5,
-      "fundingPct": 0.002,
-      "openInterest": 34737.843,
-      "src": "Kraken perp"
+      "fundingPct": null,
+      "openInterest": null,
+      "src": "Coinbase spot"
     }
   ],
   "headlines": [
@@ -58,7 +58,7 @@
     {
       "source": "Cointelegraph",
       "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
-      "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "link": "https://cointelegraph.com/markets/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T17:53:10.000Z",
       "severity": "HIGH"
     },
