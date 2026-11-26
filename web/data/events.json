@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T08:00:54.311Z",
+  "updatedAt": "2026-11-26T08:15:55.573Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,23 +7,23 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60506.26,
-      "chg24hPct": 1.96,
-      "high24h": 61524.42,
-      "low24h": 57208.75,
-      "fundingPct": null,
-      "openInterest": null,
-      "src": "Coinbase spot"
+      "price": 60549,
+      "chg24hPct": 2.94,
+      "high24h": 61553,
+      "low24h": 57216,
+      "fundingPct": 0.0013,
+      "openInterest": 2169.8852,
+      "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1688.13,
-      "chg24hPct": 2.24,
-      "high24h": 1727.7,
+      "price": 1689.2,
+      "chg24hPct": 3.07,
+      "high24h": 1727.5,
       "low24h": 1606.5,
-      "fundingPct": null,
-      "openInterest": null,
-      "src": "Coinbase spot"
+      "fundingPct": 0.0017,
+      "openInterest": 34691.839,
+      "src": "Kraken perp"
     }
   ],
   "headlines": [
@@ -78,6 +78,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "$7 billion of bitcoin options expire Friday, and the biggest bets look starkly different from October",
+      "link": "https://www.coindesk.com/markets/2026/11/26/usd7-billion-of-bitcoin-options-expire-friday-and-the-biggest-bets-look-starkly-different-from-october",
+      "publishedAt": "2026-11-26T08:01:33.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Zcash developers want users to move $300 million out of an older privacy system",
       "link": "https://www.coindesk.com/tech/2026/11/26/zcash-developers-want-users-to-move-usd300-million-out-of-an-older-privacy-system",
       "publishedAt": "2026-11-26T07:09:25.000Z",
@@ -116,13 +123,6 @@
       "title": "Bill to lock up U.S. government bitcoin for 20 years advances to full House",
       "link": "https://www.coindesk.com/policy/2026/11/26/strategic-bitcoin-reserve-bill-to-lock-up-u-s-government-held-bitcoin-for-20-years-goes-to-full-house",
       "publishedAt": "2026-11-26T04:46:01.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions",
-      "link": "https://cointelegraph.com/news/senate-democrats-urge-sec-to-scrap-crypto-tokenized-stock-exemptions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T04:24:45.000Z",
       "severity": "NORMAL"
     }
   ],
