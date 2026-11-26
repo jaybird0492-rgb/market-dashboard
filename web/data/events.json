@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T22:01:00.024Z",
+  "updatedAt": "2026-11-26T22:15:56.866Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60667,
-      "chg24hPct": 0.99,
+      "price": 60545,
+      "chg24hPct": 0.8,
       "high24h": 61553,
       "low24h": 59845,
       "fundingPct": 0.0009,
-      "openInterest": 2101.4861,
+      "openInterest": 2100.8142,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1700,
-      "chg24hPct": 1.1,
+      "price": 1696,
+      "chg24hPct": 0.8,
       "high24h": 1727.5,
       "low24h": 1665.8,
       "fundingPct": 0.0006,
-      "openInterest": 30784.965,
+      "openInterest": 31071.811,
       "src": "Kraken perp"
     }
   ],
@@ -106,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T22:12:06.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "BNB Chain details new layer-1 for trading, private finance and AI",
       "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T21:42:43.000Z",
@@ -116,13 +123,6 @@
       "title": "UK is ‘getting it wrong’ on DeFi regulation, says Coinbase",
       "link": "https://cointelegraph.com/news/uk-wrong-defi-regulation-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T21:13:53.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Japan weighs tighter oversight of DeFi, self-custodial wallets",
-      "link": "https://cointelegraph.com/news/japan-tighter-oversight-defi-self-custodial-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T20:05:18.000Z",
       "severity": "NORMAL"
     }
   ],
