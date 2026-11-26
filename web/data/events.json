@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T18:30:55.742Z",
+  "updatedAt": "2026-11-26T18:45:55.517Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60597,
-      "chg24hPct": 1.77,
+      "price": 60573,
+      "chg24hPct": 1.5,
       "high24h": 61553,
-      "low24h": 59417,
+      "low24h": 59620,
       "fundingPct": 0.0008,
-      "openInterest": 2059.3339,
+      "openInterest": 2061.485,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1696.8,
-      "chg24hPct": 1.13,
+      "price": 1699.3,
+      "chg24hPct": 1.06,
       "high24h": 1727.5,
       "low24h": 1665.8,
       "fundingPct": -0.0006,
-      "openInterest": 30926.279,
+      "openInterest": 30830.412,
       "src": "Kraken perp"
     }
   ],
@@ -98,6 +98,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Spain moves to grant financial watchdog power to freeze crypto accounts",
+      "link": "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T18:26:31.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "A tiny payment can expose the IP address behind a bitcoin wallet, developer finds",
       "link": "https://www.coindesk.com/tech/2026/11/26/a-tiny-payment-can-expose-the-ip-address-behind-a-bitcoin-wallet-developer-finds",
@@ -116,13 +123,6 @@
       "title": "BIS chief Pablo Hernández de Cos set to become next ECB president: FT",
       "link": "https://cointelegraph.com/news/bis-chief-pablo-hernndez-de-cos-next-ecb-president?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T16:40:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "How EU brokers could lose access to Kyrgyz crypto exchanges",
-      "link": "https://cointelegraph.com/news/how-eu-brokers-could-lose-access-to-kyrgyz-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T15:45:07.000Z",
       "severity": "NORMAL"
     }
   ],
