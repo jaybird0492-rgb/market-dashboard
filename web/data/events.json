@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T10:46:04.749Z",
+  "updatedAt": "2026-11-26T11:00:58.116Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60399,
-      "chg24hPct": 2.55,
+      "price": 60435,
+      "chg24hPct": 2.75,
       "high24h": 61553,
       "low24h": 57216,
-      "fundingPct": 0.001,
-      "openInterest": 2170.2212,
+      "fundingPct": 0,
+      "openInterest": 2166.6494,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1691.9,
-      "chg24hPct": 2.9,
+      "price": 1692.2,
+      "chg24hPct": 2.79,
       "high24h": 1727.5,
       "low24h": 1606.5,
-      "fundingPct": 0.0011,
-      "openInterest": 34325.636,
+      "fundingPct": 0.0008,
+      "openInterest": 34353.13,
       "src": "Kraken perp"
     }
   ],
@@ -71,6 +71,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "Nvidia shipment freeze and U.S. chip curbs put AI stocks under pressure",
+      "link": "https://www.coindesk.com/markets/2026/11/26/nvidia-shipment-freeze-and-u-s-chip-curbs-put-ai-stocks-under-pressure",
+      "publishedAt": "2026-11-26T10:56:08.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech",
       "link": "https://www.coindesk.com/policy/2026/11/26/new-york-attorney-general-wins-usd1-4-billion-ruling-against-founders-of-crypto-trading-firm-novatech",
       "publishedAt": "2026-11-26T10:40:33.000Z",
@@ -116,13 +123,6 @@
       "title": "Over 1,000 Bitcoin miners were tricked into working for a thief by a fake internet route",
       "link": "https://www.coindesk.com/markets/2026/11/26/hackers-hijacked-1-000-plus-bitcoin-mines-in-one-second-by-faking-internet-routes",
       "publishedAt": "2026-11-26T06:19:09.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T06:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
