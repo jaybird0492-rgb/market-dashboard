@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T16:30:55.908Z",
+  "updatedAt": "2026-11-26T16:46:04.609Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60419,
-      "chg24hPct": 3.12,
+      "price": 60493,
+      "chg24hPct": 4,
       "high24h": 61553,
-      "low24h": 58032,
+      "low24h": 58162,
       "fundingPct": 0.0006,
-      "openInterest": 2046.5515,
+      "openInterest": 2043.8077,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1684.6,
-      "chg24hPct": 2.51,
+      "price": 1690.9,
+      "chg24hPct": 3.62,
       "high24h": 1727.5,
-      "low24h": 1627.7,
+      "low24h": 1630.2,
       "fundingPct": -0.0001,
-      "openInterest": 31083.064,
+      "openInterest": 31066.598,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "BIS chief Pablo Hernández de Cos set to become next ECB president: FT",
+      "link": "https://cointelegraph.com/news/bis-chief-pablo-hernndez-de-cos-next-ecb-president?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T16:40:44.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "How EU brokers could lose access to Kyrgyz crypto exchanges",
       "link": "https://cointelegraph.com/news/how-eu-brokers-could-lose-access-to-kyrgyz-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T15:45:07.000Z",
@@ -116,13 +123,6 @@
       "title": "Nasdaq exec pushes for common EU rules on tokenized securities",
       "link": "https://cointelegraph.com/news/nasdaq-exec-eu-wide-legal-framework-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T13:47:56.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T13:45:04.000Z",
       "severity": "NORMAL"
     }
   ],
