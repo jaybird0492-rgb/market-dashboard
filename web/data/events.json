@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T05:15:56.060Z",
+  "updatedAt": "2026-11-26T05:30:56.066Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60843,
-      "chg24hPct": 3.05,
+      "price": 60892,
+      "chg24hPct": 3.2,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0026,
-      "openInterest": 2184.4072,
+      "openInterest": 2179.3801,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1698.2,
-      "chg24hPct": 2.55,
+      "price": 1696.9,
+      "chg24hPct": 2.59,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0028,
-      "openInterest": 34508.555,
+      "openInterest": 34931.781,
       "src": "Kraken perp"
     }
   ],
@@ -77,18 +77,25 @@
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
-      "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T19:44:23.000Z",
-      "severity": "HIGH"
-    },
-    {
       "source": "CoinDesk",
       "title": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
       "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
       "publishedAt": "2026-11-24T12:47:40.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Ripple is worth $90 a share to one fund and $300 to another, SEC filings show",
+      "link": "https://www.coindesk.com/markets/2026/11/26/ripple-is-worth-usd90-a-share-to-one-fund-and-usd300-to-another-sec-filings-show",
+      "publishedAt": "2026-11-26T05:30:38.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Sky proposes emergency vote on $25M transfer amid liquidity stress",
+      "link": "https://cointelegraph.com/news/sky-emergency-vote-25m-transfer-stusds-liquidity-stress?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T05:29:26.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T22:33:13.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Switzerland clears 57 jurisdictions for crypto tax data sharing",
-      "link": "https://cointelegraph.com/news/switzerland-clears-57-jurisdictions-crypto-tax-data-sharing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T21:53:38.000Z",
       "severity": "NORMAL"
     }
   ],
