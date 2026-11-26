@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T22:30:55.308Z",
+  "updatedAt": "2026-11-26T22:45:54.568Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60517,
-      "chg24hPct": 0.74,
+      "price": 60554,
+      "chg24hPct": 0.69,
       "high24h": 61553,
       "low24h": 59845,
       "fundingPct": 0.0009,
-      "openInterest": 2115.1964,
+      "openInterest": 2111.7989,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1695.4,
-      "chg24hPct": 0.71,
+      "price": 1695.6,
+      "chg24hPct": 0.57,
       "high24h": 1727.5,
       "low24h": 1665.8,
       "fundingPct": 0.0006,
-      "openInterest": 31056.922,
+      "openInterest": 31038.687,
       "src": "Kraken perp"
     }
   ],
@@ -106,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express",
+      "link": "https://cointelegraph.com/magazine/very-racist-netflix-sbf-series-bitmarts-319m-shortfall-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T22:39:46.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T22:12:06.000Z",
@@ -116,13 +123,6 @@
       "title": "BNB Chain details new layer-1 for trading, private finance and AI",
       "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T21:42:43.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "UK is ‘getting it wrong’ on DeFi regulation, says Coinbase",
-      "link": "https://cointelegraph.com/news/uk-wrong-defi-regulation-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T21:13:53.000Z",
       "severity": "NORMAL"
     }
   ],
