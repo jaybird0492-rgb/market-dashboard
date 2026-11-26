@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T15:45:56.747Z",
+  "updatedAt": "2026-11-26T16:00:58.457Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60333,
-      "chg24hPct": 4.09,
+      "price": 60685,
+      "chg24hPct": 3.96,
       "high24h": 61553,
-      "low24h": 57918,
+      "low24h": 58032,
       "fundingPct": 0.0006,
-      "openInterest": 2128.0251,
+      "openInterest": 2055.1475,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1684.8,
-      "chg24hPct": 2.83,
+      "price": 1692.9,
+      "chg24hPct": 2.7,
       "high24h": 1727.5,
       "low24h": 1627.7,
-      "fundingPct": 0.0007,
-      "openInterest": 31173.02,
+      "fundingPct": -0.0001,
+      "openInterest": 31093.094,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,20 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "How EU brokers could lose access to Kyrgyz crypto exchanges",
+      "link": "https://cointelegraph.com/news/how-eu-brokers-could-lose-access-to-kyrgyz-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T15:45:07.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Crypto for Advisors: Four questions to ask before trusting a crypto exchange",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/11/26/crypto-for-advisors-four-questions-to-ask-before-trusting-a-crypto-exchange",
+      "publishedAt": "2026-11-26T15:42:43.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge",
       "link": "https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge",
@@ -109,20 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T13:45:04.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "7 bizarre things crypto whales spent a fortune on",
-      "link": "https://cointelegraph.com/magazine/7-bizarre-things-crypto-whales-spent-a-fortune-on?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T13:30:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve",
-      "link": "https://cointelegraph.com/news/vitalik-buterin-verifiable-chips-hardware-wallet-threats-evolve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T12:13:59.000Z",
       "severity": "NORMAL"
     }
   ],
