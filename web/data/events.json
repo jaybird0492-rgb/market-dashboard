@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T11:30:56.690Z",
+  "updatedAt": "2026-11-26T11:46:02.218Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60564,
-      "chg24hPct": 3.54,
+      "price": 60636,
+      "chg24hPct": 3.52,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0,
-      "openInterest": 2167.0501,
+      "openInterest": 2164.635,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1697.7,
-      "chg24hPct": 3.78,
+      "price": 1699,
+      "chg24hPct": 3.53,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0008,
-      "openInterest": 34324.43,
+      "openInterest": 34320.13,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Standard Chartered’s Zodia Custody suffers data breach: Report",
+      "link": "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T11:37:06.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report",
@@ -71,7 +78,7 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Major crypto trading firm Auros is winding down operations: Sources",
+      "title": "Hong Kong-based crypto trading firm Auros is winding down operations: Sources",
       "link": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
       "publishedAt": "2026-11-26T11:27:50.000Z",
       "severity": "NORMAL"
@@ -116,13 +123,6 @@
       "title": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
       "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T09:42:34.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour",
-      "link": "https://cointelegraph.com/markets/bit-debuts-switzerlands-first-spot-bitcoin-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T09:18:15.000Z",
       "severity": "NORMAL"
     }
   ],
