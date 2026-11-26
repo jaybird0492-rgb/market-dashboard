@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T09:45:55.193Z",
+  "updatedAt": "2026-11-26T10:00:57.140Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60905,
-      "chg24hPct": 3.46,
+      "price": 60790,
+      "chg24hPct": 3.04,
       "high24h": 61553,
       "low24h": 57216,
-      "fundingPct": 0.0006,
-      "openInterest": 2190.3374,
+      "fundingPct": 0.001,
+      "openInterest": 2193.3779,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1702.8,
-      "chg24hPct": 3.97,
+      "price": 1700,
+      "chg24hPct": 3.53,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0011,
-      "openInterest": 34412.765,
+      "openInterest": 34471.829,
       "src": "Kraken perp"
     }
   ],
@@ -50,13 +50,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Hackers breach CIA intelligence network in latest US cyberattack",
-      "link": "https://cointelegraph.com/news/hackers-breach-cia-intelligence-network-in-latest-us-cyberattack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T23:48:16.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
       "link": "https://cointelegraph.com/markets/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-25T17:53:10.000Z",
@@ -75,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
       "publishedAt": "2026-11-25T11:57:50.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
+      "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T09:42:34.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
