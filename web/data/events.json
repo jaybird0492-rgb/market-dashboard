@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T21:30:56.684Z",
+  "updatedAt": "2026-11-26T21:45:54.716Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60868,
-      "chg24hPct": 0.98,
+      "price": 60816,
+      "chg24hPct": 1.01,
       "high24h": 61553,
       "low24h": 59845,
       "fundingPct": 0.0005,
-      "openInterest": 2059.7191,
+      "openInterest": 2091.1059,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1705.2,
-      "chg24hPct": 0.94,
+      "price": 1705.9,
+      "chg24hPct": 1.12,
       "high24h": 1727.5,
       "low24h": 1665.8,
       "fundingPct": 0.0001,
-      "openInterest": 30738.666,
+      "openInterest": 30967.533,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Binance completes withdrawal recovery four weeks after $6.3B hack",
+      "link": "https://cointelegraph.com/news/binance-completes-withdrawal-recovery-four-weeks-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T21:33:47.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Standard Chartered's Zodia Custody suffers data breach, exposing client information",
@@ -99,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "BNB Chain details new layer-1 for trading, private finance and AI",
+      "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T21:42:43.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "UK is ‘getting it wrong’ on DeFi regulation, says Coinbase",
       "link": "https://cointelegraph.com/news/uk-wrong-defi-regulation-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T21:13:53.000Z",
@@ -109,20 +123,6 @@
       "title": "Japan weighs tighter oversight of DeFi, self-custodial wallets",
       "link": "https://cointelegraph.com/news/japan-tighter-oversight-defi-self-custodial-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T20:05:18.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Spain moves to grant financial watchdog power to freeze crypto accounts",
-      "link": "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T18:26:31.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "A tiny payment can expose the IP address behind a bitcoin wallet, developer finds",
-      "link": "https://www.coindesk.com/tech/2026/11/26/a-tiny-payment-can-expose-the-ip-address-behind-a-bitcoin-wallet-developer-finds",
-      "publishedAt": "2026-11-26T17:30:00.000Z",
       "severity": "NORMAL"
     }
   ],
