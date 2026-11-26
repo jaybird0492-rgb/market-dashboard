@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T10:30:59.292Z",
+  "updatedAt": "2026-11-26T10:46:04.749Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60768,
-      "chg24hPct": 3.19,
+      "price": 60399,
+      "chg24hPct": 2.55,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.001,
-      "openInterest": 2195.617,
+      "openInterest": 2170.2212,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1701,
-      "chg24hPct": 3.54,
+      "price": 1691.9,
+      "chg24hPct": 2.9,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0011,
-      "openInterest": 34404.053,
+      "openInterest": 34325.636,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
       "publishedAt": "2026-11-25T11:57:50.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech",
+      "link": "https://www.coindesk.com/policy/2026/11/26/new-york-attorney-general-wins-usd1-4-billion-ruling-against-founders-of-crypto-trading-firm-novatech",
+      "publishedAt": "2026-11-26T10:40:33.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T06:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Ripple is worth $90 a share to one fund and $300 to another, SEC filings show",
-      "link": "https://www.coindesk.com/markets/2026/11/26/ripple-is-worth-usd90-a-share-to-one-fund-and-usd300-to-another-sec-filings-show",
-      "publishedAt": "2026-11-26T05:30:38.000Z",
       "severity": "NORMAL"
     }
   ],
