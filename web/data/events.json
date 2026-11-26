@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T12:01:01.534Z",
+  "updatedAt": "2026-11-26T12:15:55.965Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60679,
-      "chg24hPct": 3.7,
+      "price": 60567,
+      "chg24hPct": 3.52,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": -0.0001,
-      "openInterest": 2163.5582,
+      "openInterest": 2163.7116,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1700.3,
-      "chg24hPct": 4.02,
+      "price": 1698.9,
+      "chg24hPct": 3.59,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0011,
-      "openInterest": 34633.383,
+      "openInterest": 34673.317,
       "src": "Kraken perp"
     }
   ],
@@ -54,6 +54,13 @@
       "link": "https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe",
       "publishedAt": "2026-11-25T14:47:17.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin ETFs are bleeding cash and the Fed is unlikely to help",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help",
+      "publishedAt": "2026-11-26T12:14:46.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement",
       "link": "https://cointelegraph.com/news/zcash-users-migrate-zec-supply-sapling-pool-retirement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T10:15:28.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
-      "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T09:42:34.000Z",
       "severity": "NORMAL"
     }
   ],
