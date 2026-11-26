@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T17:31:06.735Z",
+  "updatedAt": "2026-11-26T17:45:56.494Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60364,
-      "chg24hPct": 1.92,
+      "price": 60356,
+      "chg24hPct": 1.25,
       "high24h": 61553,
-      "low24h": 59219,
+      "low24h": 59391,
       "fundingPct": 0.0006,
-      "openInterest": 2117.3632,
+      "openInterest": 2116.9724,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1689,
-      "chg24hPct": 1.7,
+      "price": 1688.1,
+      "chg24hPct": 0.82,
       "high24h": 1727.5,
-      "low24h": 1660.5,
+      "low24h": 1665.8,
       "fundingPct": -0.0001,
-      "openInterest": 31098.399,
+      "openInterest": 31082.233,
       "src": "Kraken perp"
     }
   ],
@@ -61,6 +61,13 @@
       "link": "https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe",
       "publishedAt": "2026-11-25T14:47:17.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
+      "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T17:39:53.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "How EU brokers could lose access to Kyrgyz crypto exchanges",
       "link": "https://cointelegraph.com/news/how-eu-brokers-could-lose-access-to-kyrgyz-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T15:45:07.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Crypto for Advisors: Four questions to ask before trusting a crypto exchange",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/11/26/crypto-for-advisors-four-questions-to-ask-before-trusting-a-crypto-exchange",
-      "publishedAt": "2026-11-26T15:42:43.000Z",
       "severity": "NORMAL"
     }
   ],
