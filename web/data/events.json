@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:01:00.677Z",
+  "updatedAt": "2026-11-26T13:15:55.832Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60755,
-      "chg24hPct": 3.73,
+      "price": 60777,
+      "chg24hPct": 3.55,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0008,
-      "openInterest": 2088.5554,
+      "openInterest": 2089.8296,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1703.8,
-      "chg24hPct": 3.68,
+      "price": 1705,
+      "chg24hPct": 3.61,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0019,
-      "openInterest": 34672.747,
+      "openInterest": 34775.565,
       "src": "Kraken perp"
     }
   ],
@@ -36,7 +36,7 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Standard Chartered’s Zodia Custody suffers data breach: Report",
+      "title": "Standard Chartered’s Zodia Custody suffers data breach",
       "link": "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T11:37:06.000Z",
       "severity": "CRITICAL"
