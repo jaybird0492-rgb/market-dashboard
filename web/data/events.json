@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T14:00:56.733Z",
+  "updatedAt": "2026-11-26T14:16:01.965Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60770,
-      "chg24hPct": 4.8,
+      "price": 60735,
+      "chg24hPct": 4.24,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0003,
-      "openInterest": 2122.3175,
+      "openInterest": 2124.0604,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1701.2,
-      "chg24hPct": 4.43,
+      "price": 1701.7,
+      "chg24hPct": 4.09,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0019,
-      "openInterest": 34547.112,
+      "openInterest": 34626.531,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge",
+      "link": "https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge",
+      "publishedAt": "2026-11-26T14:05:58.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Nasdaq exec pushes for common EU rules on tokenized securities",
       "link": "https://cointelegraph.com/news/nasdaq-exec-eu-wide-legal-framework-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve",
       "link": "https://cointelegraph.com/news/vitalik-buterin-verifiable-chips-hardware-wallet-threats-evolve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T12:13:59.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Hong Kong-based crypto trading firm Auros is winding down operations",
-      "link": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
-      "publishedAt": "2026-11-26T11:27:50.000Z",
       "severity": "NORMAL"
     }
   ],
