@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T06:16:00.312Z",
+  "updatedAt": "2026-11-26T06:30:56.385Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60462,
-      "chg24hPct": 2.11,
+      "price": 60563,
+      "chg24hPct": 2.73,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0014,
-      "openInterest": 2174.0614,
+      "openInterest": 2174.7867,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1683,
-      "chg24hPct": 1.48,
+      "price": 1687.1,
+      "chg24hPct": 2,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0034,
-      "openInterest": 34942.869,
+      "openInterest": 34809.129,
       "src": "Kraken perp"
     }
   ],
@@ -85,10 +85,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
-      "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
-      "publishedAt": "2026-11-24T12:47:40.000Z",
-      "severity": "HIGH"
+      "title": "Over 1,000 Bitcoin miners were tricked into working for a thief by a fake internet route",
+      "link": "https://www.coindesk.com/markets/2026/11/26/hackers-hijacked-1-000-plus-bitcoin-mines-in-one-second-by-faking-internet-routes",
+      "publishedAt": "2026-11-26T06:19:09.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
