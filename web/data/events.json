@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T07:00:58.361Z",
+  "updatedAt": "2026-11-26T07:15:59.661Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60458,
-      "chg24hPct": 2.27,
+      "price": 60433,
+      "chg24hPct": 2.16,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0011,
-      "openInterest": 2169.2367,
+      "openInterest": 2169.3527,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1685.5,
-      "chg24hPct": 1.75,
+      "price": 1686,
+      "chg24hPct": 1.68,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.002,
-      "openInterest": 35089.239,
+      "openInterest": 34831.832,
       "src": "Kraken perp"
     }
   ],
@@ -56,13 +56,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold",
-      "link": "https://www.coindesk.com/markets/2026/11/24/a-wallet-linked-to-popular-crypto-trader-ansem-sold-usd2-million-in-memecoins-as-his-namesake-token-cratered",
-      "publishedAt": "2026-11-24T12:47:49.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
       "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -82,6 +75,13 @@
       "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
       "publishedAt": "2026-11-25T11:57:50.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Zcash developers want users to move $300 million out of an older privacy system",
+      "link": "https://www.coindesk.com/tech/2026/11/26/zcash-developers-want-users-to-move-usd300-million-out-of-an-older-privacy-system",
+      "publishedAt": "2026-11-26T07:09:25.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
