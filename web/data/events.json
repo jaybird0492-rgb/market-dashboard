@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T12:15:55.965Z",
+  "updatedAt": "2026-11-26T12:30:56.427Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60567,
-      "chg24hPct": 3.52,
+      "price": 60554,
+      "chg24hPct": 3.33,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": -0.0001,
-      "openInterest": 2163.7116,
+      "openInterest": 2161.7046,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1698.9,
-      "chg24hPct": 3.59,
+      "price": 1699.6,
+      "chg24hPct": 3.37,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0011,
-      "openInterest": 34673.317,
+      "openInterest": 34687.255,
       "src": "Kraken perp"
     }
   ],
@@ -84,6 +84,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve",
+      "link": "https://cointelegraph.com/news/vitalik-buterin-verifiable-chips-hardware-wallet-threats-evolve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T12:13:59.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Hong Kong-based crypto trading firm Auros is winding down operations",
       "link": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
@@ -116,13 +123,6 @@
       "title": "New York Attorney General wins $1.4 billion ruling against founders of crypto trading firm NovaTech",
       "link": "https://www.coindesk.com/policy/2026/11/26/new-york-attorney-general-wins-usd1-4-billion-ruling-against-founders-of-crypto-trading-firm-novatech",
       "publishedAt": "2026-11-26T10:40:33.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement",
-      "link": "https://cointelegraph.com/news/zcash-users-migrate-zec-supply-sapling-pool-retirement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T10:15:28.000Z",
       "severity": "NORMAL"
     }
   ],
