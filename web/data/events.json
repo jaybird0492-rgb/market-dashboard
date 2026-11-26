@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T06:00:56.360Z",
+  "updatedAt": "2026-11-26T06:16:00.312Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60600,
-      "chg24hPct": 2.69,
+      "price": 60462,
+      "chg24hPct": 2.11,
       "high24h": 61553,
       "low24h": 57216,
       "fundingPct": 0.0014,
-      "openInterest": 2171.9912,
+      "openInterest": 2174.0614,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1686.4,
-      "chg24hPct": 2.08,
+      "price": 1683,
+      "chg24hPct": 1.48,
       "high24h": 1727.5,
       "low24h": 1606.5,
       "fundingPct": 0.0034,
-      "openInterest": 34848.939,
+      "openInterest": 34942.869,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report",
+      "link": "https://cointelegraph.com/news/uk-fca-defi-regulation-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T05:53:08.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "1Password hacker stole customer names and emails, but vaults safe",
@@ -77,18 +84,18 @@
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
-      "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-24T19:44:23.000Z",
-      "severity": "HIGH"
-    },
-    {
       "source": "CoinDesk",
       "title": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
       "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
       "publishedAt": "2026-11-24T12:47:40.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-26T06:00:00.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "CoinDesk",
@@ -116,13 +123,6 @@
       "title": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions",
       "link": "https://cointelegraph.com/news/senate-democrats-urge-sec-to-scrap-crypto-tokenized-stock-exemptions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T04:24:45.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says",
-      "link": "https://cointelegraph.com/news/ai-labs-likely-sitting-on-cryptography-bombshells-computer-scientist-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T01:33:20.000Z",
       "severity": "NORMAL"
     }
   ],
