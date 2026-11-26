@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T05:30:56.066Z",
+  "updatedAt": "2026-11-26T05:45:59.622Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,23 +7,23 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60892,
-      "chg24hPct": 3.2,
-      "high24h": 61553,
-      "low24h": 57216,
-      "fundingPct": 0.0026,
-      "openInterest": 2179.3801,
-      "src": "Kraken perp"
+      "price": 60783.8,
+      "chg24hPct": 2.99,
+      "high24h": 61630.8,
+      "low24h": 57257,
+      "fundingPct": 0.01,
+      "openInterest": 71060.74,
+      "src": "Bybit perp"
     },
     {
       "sym": "ETH",
-      "price": 1696.9,
-      "chg24hPct": 2.59,
-      "high24h": 1727.5,
-      "low24h": 1606.5,
-      "fundingPct": 0.0028,
-      "openInterest": 34931.781,
-      "src": "Kraken perp"
+      "price": 1695.44,
+      "chg24hPct": 2.52,
+      "high24h": 1729.69,
+      "low24h": 1607.65,
+      "fundingPct": 0.01,
+      "openInterest": 749659.97,
+      "src": "Bybit perp"
     }
   ],
   "headlines": [
@@ -77,6 +77,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Bitcoin sell-off driven by weak demand, forced liquidations: 21Shares",
+      "link": "https://cointelegraph.com/news/bitcoin-selloff-weak-demand-forced-liquidations-21shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-24T19:44:23.000Z",
+      "severity": "HIGH"
+    },
+    {
       "source": "CoinDesk",
       "title": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
       "link": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
@@ -116,13 +123,6 @@
       "title": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says",
       "link": "https://cointelegraph.com/news/ai-labs-likely-sitting-on-cryptography-bombshells-computer-scientist-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T01:33:20.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T22:33:13.000Z",
       "severity": "NORMAL"
     }
   ],
