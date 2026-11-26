@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T17:15:56.029Z",
+  "updatedAt": "2026-11-26T17:31:06.735Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60460,
-      "chg24hPct": 1.84,
+      "price": 60364,
+      "chg24hPct": 1.92,
       "high24h": 61553,
-      "low24h": 58946,
+      "low24h": 59219,
       "fundingPct": 0.0006,
-      "openInterest": 2043.0106,
+      "openInterest": 2117.3632,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1691.7,
-      "chg24hPct": 1.72,
+      "price": 1689,
+      "chg24hPct": 1.7,
       "high24h": 1727.5,
-      "low24h": 1652.5,
+      "low24h": 1660.5,
       "fundingPct": -0.0001,
-      "openInterest": 31102.267,
+      "openInterest": 31098.399,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "CoinDesk",
+      "title": "A tiny payment can expose the IP address behind a bitcoin wallet, developer finds",
+      "link": "https://www.coindesk.com/tech/2026/11/26/a-tiny-payment-can-expose-the-ip-address-behind-a-bitcoin-wallet-developer-finds",
+      "publishedAt": "2026-11-26T17:30:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
       "title": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases",
       "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-s-dormant-supply-rises-a-behavior-seen-during-previous-bear-market-bottoming-phases",
       "publishedAt": "2026-11-26T16:50:23.000Z",
@@ -116,13 +123,6 @@
       "title": "Crypto for Advisors: Four questions to ask before trusting a crypto exchange",
       "link": "https://www.coindesk.com/coindesk-indices/2026/11/26/crypto-for-advisors-four-questions-to-ask-before-trusting-a-crypto-exchange",
       "publishedAt": "2026-11-26T15:42:43.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge",
-      "link": "https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge",
-      "publishedAt": "2026-11-26T14:05:58.000Z",
       "severity": "NORMAL"
     }
   ],
