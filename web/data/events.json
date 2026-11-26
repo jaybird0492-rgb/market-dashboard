@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T16:46:04.609Z",
+  "updatedAt": "2026-11-26T17:00:56.677Z",
   "fearGreed": {
     "value": 11,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60493,
-      "chg24hPct": 4,
+      "price": 60522,
+      "chg24hPct": 3.52,
       "high24h": 61553,
-      "low24h": 58162,
+      "low24h": 58390,
       "fundingPct": 0.0006,
-      "openInterest": 2043.8077,
+      "openInterest": 2043.1176,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1690.9,
-      "chg24hPct": 3.62,
+      "price": 1692.8,
+      "chg24hPct": 3.07,
       "high24h": 1727.5,
-      "low24h": 1630.2,
+      "low24h": 1640,
       "fundingPct": -0.0001,
-      "openInterest": 31066.598,
+      "openInterest": 31012.173,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases",
+      "link": "https://www.coindesk.com/markets/2026/11/26/bitcoin-s-dormant-supply-rises-a-behavior-seen-during-previous-bear-market-bottoming-phases",
+      "publishedAt": "2026-11-26T16:50:23.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "BIS chief Pablo Hernández de Cos set to become next ECB president: FT",
       "link": "https://cointelegraph.com/news/bis-chief-pablo-hernndez-de-cos-next-ecb-president?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge",
       "link": "https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge",
       "publishedAt": "2026-11-26T14:05:58.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Nasdaq exec pushes for common EU rules on tokenized securities",
-      "link": "https://cointelegraph.com/news/nasdaq-exec-eu-wide-legal-framework-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T13:47:56.000Z",
       "severity": "NORMAL"
     }
   ],
