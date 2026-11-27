@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T07:30:56.260Z",
+  "updatedAt": "2026-11-27T07:45:59.288Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61758,
-      "chg24hPct": 2.19,
+      "price": 61466,
+      "chg24hPct": 1.52,
       "high24h": 61988,
       "low24h": 59845,
       "fundingPct": 0.0019,
-      "openInterest": 2111.3825,
+      "openInterest": 2142.4307,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1731.7,
-      "chg24hPct": 2.69,
+      "price": 1726.9,
+      "chg24hPct": 2.12,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0004,
-      "openInterest": 33080.337,
+      "openInterest": 33238.01,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Monero suffers biggest single-day slide in over 5 months. Here’s why",
+      "link": "https://www.coindesk.com/markets/2026/11/27/monero-suffers-biggest-single-day-slide-in-over-5-months-here-s-why",
+      "publishedAt": "2026-11-27T07:33:01.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "New York AG secures $1.37B court judgment against NovaTech founders",
       "link": "https://cointelegraph.com/news/new-york-ag-137b-court-judgment-novatech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T06:00:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins",
-      "link": "https://www.coindesk.com/markets/2026/11/27/ripple-s-lending-plan-moves-closer-to-tapping-xrp-ledger-s-usd950-million-in-stablecoins",
-      "publishedAt": "2026-11-27T05:06:32.000Z",
       "severity": "NORMAL"
     }
   ],
