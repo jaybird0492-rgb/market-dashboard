@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T05:15:55.717Z",
+  "updatedAt": "2026-11-27T05:30:55.566Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61615,
-      "chg24hPct": 1.27,
+      "price": 61802,
+      "chg24hPct": 1.49,
       "high24h": 61988,
       "low24h": 59845,
       "fundingPct": 0.0014,
-      "openInterest": 2045.6451,
+      "openInterest": 1998.3648,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1740.3,
-      "chg24hPct": 2.49,
-      "high24h": 1744.7,
+      "price": 1748.5,
+      "chg24hPct": 3.04,
+      "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0007,
-      "openInterest": 31117.889,
+      "openInterest": 31240.936,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "Cointelegraph",
+      "title": "Japan’s crypto security group taps SEAL to speed up hack response",
+      "link": "https://cointelegraph.com/news/japans-crypto-security-group-taps-seal-to-speed-up-hack-response?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T05:22:36.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack",
@@ -116,13 +123,6 @@
       "title": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
       "link": "https://www.coindesk.com/tech/2026/11/27/ethereum-s-much-awaited-glamsterdam-upgrade-cleared-for-december-test-here-s-what-to-know",
       "publishedAt": "2026-11-27T04:29:47.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "AI is driving a flood of crypto bug reports. Now it’s helping sort them",
-      "link": "https://cointelegraph.com/news/ai-driving-flood-of-crypto-bug-reports-now-helping-sort-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T01:47:38.000Z",
       "severity": "NORMAL"
     }
   ],
