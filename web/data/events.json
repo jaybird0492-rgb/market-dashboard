@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T06:00:56.316Z",
+  "updatedAt": "2026-11-27T06:16:06.932Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61692,
-      "chg24hPct": 1.8,
+      "price": 61807,
+      "chg24hPct": 2.27,
       "high24h": 61988,
       "low24h": 59845,
       "fundingPct": 0.0014,
-      "openInterest": 1997.1736,
+      "openInterest": 2003.8906,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1739.9,
-      "chg24hPct": 3.15,
+      "price": 1736.8,
+      "chg24hPct": 3.21,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0015,
-      "openInterest": 31320.761,
+      "openInterest": 31538.891,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T06:00:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins",
       "link": "https://www.coindesk.com/markets/2026/11/27/ripple-s-lending-plan-moves-closer-to-tapping-xrp-ledger-s-usd950-million-in-stablecoins",
@@ -116,13 +123,6 @@
       "title": "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays",
       "link": "https://cointelegraph.com/news/ethereum-devs-set-glamsterdams-hoodi-rollout-for-mid-december-after-delays?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T04:47:36.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
-      "link": "https://www.coindesk.com/tech/2026/11/27/ethereum-s-much-awaited-glamsterdam-upgrade-cleared-for-december-test-here-s-what-to-know",
-      "publishedAt": "2026-11-27T04:29:47.000Z",
       "severity": "NORMAL"
     }
   ],
