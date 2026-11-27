@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T19:15:57.954Z",
+  "updatedAt": "2026-11-27T19:30:56.434Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59820,
-      "chg24hPct": -1.03,
+      "price": 59903,
+      "chg24hPct": -1.08,
       "high24h": 62145,
       "low24h": 58726,
       "fundingPct": -0.0003,
-      "openInterest": 2068.659,
+      "openInterest": 2069.3983,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1669.8,
-      "chg24hPct": -1.71,
+      "price": 1671.4,
+      "chg24hPct": -1.79,
       "high24h": 1752.9,
       "low24h": 1631.6,
       "fundingPct": -0.0014,
-      "openInterest": 34009.248,
+      "openInterest": 34007.433,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Bitcoin whales pile into BTC despite shrinking profit cushion",
+      "link": "https://cointelegraph.com/markets/bitcoin-whales-pile-btc-despite-shrinking-profit-cushion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T19:23:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "China sets March 2027 rollout for blockchain identity regulations",
       "link": "https://cointelegraph.com/news/china-march-2027-rollout-blockchain-identity-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T17:37:23.000Z",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T13:28:26.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Kalshi turns to small businesses as legal battles threaten forecasts on sports",
-      "link": "https://www.coindesk.com/business/2026/11/27/kalshi-turns-to-small-businesses-as-legal-battles-threaten-forecasts-on-sports",
-      "publishedAt": "2026-11-27T13:19:10.000Z",
       "severity": "NORMAL"
     }
   ],
