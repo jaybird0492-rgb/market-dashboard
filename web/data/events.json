@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T08:15:54.440Z",
+  "updatedAt": "2026-11-27T08:30:55.158Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61840,
-      "chg24hPct": 2.13,
-      "high24h": 61988,
+      "price": 61714,
+      "chg24hPct": 1.77,
+      "high24h": 62145,
       "low24h": 59845,
       "fundingPct": 0.0008,
-      "openInterest": 2116.5473,
+      "openInterest": 2104.6678,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1734.9,
-      "chg24hPct": 2.86,
+      "price": 1730,
+      "chg24hPct": 2.47,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0007,
-      "openInterest": 33264.443,
+      "openInterest": 33373.178,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
+      "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T08:04:39.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Monero suffers biggest single-day slide in over 5 months. Here’s why",
       "link": "https://www.coindesk.com/markets/2026/11/27/monero-suffers-biggest-single-day-slide-in-over-5-months-here-s-why",
@@ -116,13 +123,6 @@
       "title": "New York AG secures $1.37B court judgment against NovaTech founders",
       "link": "https://cointelegraph.com/news/new-york-ag-137b-court-judgment-novatech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T07:19:44.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T06:00:00.000Z",
       "severity": "NORMAL"
     }
   ],
