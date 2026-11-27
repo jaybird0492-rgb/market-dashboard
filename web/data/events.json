@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:15:54.702Z",
+  "updatedAt": "2026-11-27T04:30:55.090Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61435,
-      "chg24hPct": 0.9,
+      "price": 61405,
+      "chg24hPct": 0.72,
       "high24h": 61988,
       "low24h": 59845,
       "fundingPct": 0.0011,
-      "openInterest": 2035.3443,
+      "openInterest": 2069.9842,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1730.6,
-      "chg24hPct": 1.73,
+      "price": 1729.3,
+      "chg24hPct": 1.66,
       "high24h": 1737.5,
       "low24h": 1665.8,
       "fundingPct": 0.0003,
-      "openInterest": 30773.366,
+      "openInterest": 30783.405,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
+      "link": "https://www.coindesk.com/tech/2026/11/27/ethereum-s-much-awaited-glamsterdam-upgrade-cleared-for-december-test-here-s-what-to-know",
+      "publishedAt": "2026-11-27T04:29:47.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "AI is driving a flood of crypto bug reports. Now it’s helping sort them",
       "link": "https://cointelegraph.com/news/ai-driving-flood-of-crypto-bug-reports-now-helping-sort-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero",
       "link": "https://cointelegraph.com/news/privacy-coins-kucoin-drop-monero-grayscale-zcash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T00:35:39.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express",
-      "link": "https://cointelegraph.com/magazine/very-racist-netflix-sbf-series-bitmarts-319m-shortfall-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T22:39:46.000Z",
       "severity": "NORMAL"
     }
   ],
