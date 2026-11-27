@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T10:15:59.898Z",
+  "updatedAt": "2026-11-27T10:30:57.523Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61549,
-      "chg24hPct": 1.14,
+      "price": 61659,
+      "chg24hPct": 1.47,
       "high24h": 62145,
       "low24h": 59845,
       "fundingPct": -0.0007,
-      "openInterest": 2090.3558,
+      "openInterest": 2083.5588,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1725.1,
-      "chg24hPct": 1.36,
+      "price": 1729.3,
+      "chg24hPct": 1.68,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0008,
-      "openInterest": 32325.159,
+      "openInterest": 32265.287,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs",
+      "link": "https://cointelegraph.com/news/bluefin-shut-down-perps-refocus-spot-trading-tokenized-rwas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T10:26:06.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound",
       "link": "https://www.coindesk.com/markets/2026/11/27/bitcoin-tops-usd61-000-as-nasdaq-futures-extend-wednesday-s-rebound",
@@ -116,13 +123,6 @@
       "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
       "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T08:04:39.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Monero suffers biggest single-day slide in over 5 months. Here’s why",
-      "link": "https://www.coindesk.com/markets/2026/11/27/monero-suffers-biggest-single-day-slide-in-over-5-months-here-s-why",
-      "publishedAt": "2026-11-27T07:33:01.000Z",
       "severity": "NORMAL"
     }
   ],

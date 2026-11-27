@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-27T10:15:59.488Z",
+  "updatedAt": "2026-11-27T10:30:57.359Z",
   "strategy": "4H Donchian 20/10 futures (simulated perps), dual daily gate (longs > SMA50, shorts < SMA200, both in the band), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "rules": "4H Donchian 20/10 + dual daily gate (long > SMA50, short < SMA200, both in band) + native 4H SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-11-04T16:00:00.000Z",
@@ -677,7 +677,7 @@
       "equity": 10674.72
     },
     {
-      "t": "2026-11-27T10:15:59.488Z",
+      "t": "2026-11-27T10:30:57.359Z",
       "equity": 10674.72
     }
   ],
