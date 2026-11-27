@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:45:56.220Z",
+  "updatedAt": "2026-11-27T14:00:59.485Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61353,
-      "chg24hPct": 0.82,
+      "price": 61371,
+      "chg24hPct": 0.99,
       "high24h": 62145,
       "low24h": 59845,
-      "fundingPct": 0.0009,
-      "openInterest": 2043.127,
+      "fundingPct": 0.0004,
+      "openInterest": 2038.0956,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1719.9,
-      "chg24hPct": 0.97,
+      "price": 1721.5,
+      "chg24hPct": 1.21,
       "high24h": 1752.9,
       "low24h": 1665.8,
-      "fundingPct": 0.0009,
-      "openInterest": 32528.592,
+      "fundingPct": -0.0002,
+      "openInterest": 32487.102,
       "src": "Kraken perp"
     }
   ],
@@ -92,6 +92,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Binance to launch tokenized IPO program after regulatory approval: Yi He",
+      "link": "https://cointelegraph.com/news/binance-ipo-program-regulatory-approval-yi-he?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T13:44:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T13:28:26.000Z",
@@ -116,13 +123,6 @@
       "title": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume",
       "link": "https://cointelegraph.com/news/austria-supervised-crypto-firms-report-204b-h1-volume?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T12:20:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Bitcoin 'death cross' is coming. Here's what happened after previous 13.",
-      "link": "https://www.coindesk.com/daybook-us/2026/11/27/bitcoin-death-cross-is-coming-here-s-what-happened-after-previous-13",
-      "publishedAt": "2026-11-27T12:16:07.000Z",
       "severity": "NORMAL"
     }
   ],
