@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T01:45:56.509Z",
+  "updatedAt": "2026-11-27T02:00:59.313Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60644,
-      "chg24hPct": -0.09,
+      "price": 60787,
+      "chg24hPct": 0.15,
       "high24h": 61064,
       "low24h": 59845,
-      "fundingPct": 0.0005,
-      "openInterest": 2111.1858,
+      "fundingPct": 0.001,
+      "openInterest": 2109.1371,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1698.7,
-      "chg24hPct": 0,
+      "price": 1703,
+      "chg24hPct": 0.34,
       "high24h": 1710.2,
       "low24h": 1665.8,
-      "fundingPct": 0,
-      "openInterest": 30852.056,
+      "fundingPct": 0.0002,
+      "openInterest": 30748.867,
       "src": "Kraken perp"
     }
   ],
@@ -106,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "AI is driving a flood of crypto bug reports. Now it’s helping sort them",
+      "link": "https://cointelegraph.com/news/ai-driving-flood-of-crypto-bug-reports-now-helping-sort-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T01:47:38.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero",
       "link": "https://cointelegraph.com/news/privacy-coins-kucoin-drop-monero-grayscale-zcash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T00:35:39.000Z",
@@ -116,13 +123,6 @@
       "title": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express",
       "link": "https://cointelegraph.com/magazine/very-racist-netflix-sbf-series-bitmarts-319m-shortfall-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T22:39:46.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T22:12:06.000Z",
       "severity": "NORMAL"
     }
   ],
