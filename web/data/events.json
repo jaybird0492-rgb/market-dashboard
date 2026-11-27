@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T05:01:44.395Z",
+  "updatedAt": "2026-11-27T05:15:55.717Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61437,
-      "chg24hPct": 0.86,
+      "price": 61615,
+      "chg24hPct": 1.27,
       "high24h": 61988,
       "low24h": 59845,
       "fundingPct": 0.0014,
-      "openInterest": 2044.3206,
+      "openInterest": 2045.6451,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1733.9,
-      "chg24hPct": 1.93,
-      "high24h": 1739.7,
+      "price": 1740.3,
+      "chg24hPct": 2.49,
+      "high24h": 1744.7,
       "low24h": 1665.8,
       "fundingPct": 0.0007,
-      "openInterest": 31091.471,
+      "openInterest": 31117.889,
       "src": "Kraken perp"
     }
   ],
@@ -99,10 +99,10 @@
     },
     {
       "source": "CoinDesk",
-      "title": "Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes",
-      "link": "https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes",
-      "publishedAt": "2026-11-25T11:57:50.000Z",
-      "severity": "HIGH"
+      "title": "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins",
+      "link": "https://www.coindesk.com/markets/2026/11/27/ripple-s-lending-plan-moves-closer-to-tapping-xrp-ledger-s-usd950-million-in-stablecoins",
+      "publishedAt": "2026-11-27T05:06:32.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
