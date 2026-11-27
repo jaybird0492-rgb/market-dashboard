@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T21:15:54.542Z",
+  "updatedAt": "2026-11-27T21:30:55.567Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59795,
-      "chg24hPct": -1.53,
+      "price": 59746,
+      "chg24hPct": -1.84,
       "high24h": 62145,
       "low24h": 58726,
       "fundingPct": 0.0001,
-      "openInterest": 2056.6112,
+      "openInterest": 2057.1545,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1665.4,
-      "chg24hPct": -2.17,
+      "price": 1663.2,
+      "chg24hPct": -2.41,
       "high24h": 1752.9,
       "low24h": 1631.6,
       "fundingPct": -0.0032,
-      "openInterest": 31113.113,
+      "openInterest": 31033.276,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Franklin Templeton makes room for HYPE in crypto index ETF",
+      "link": "https://cointelegraph.com/news/franklin-templeton-hype-crypto-index-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T21:15:29.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin whales pile into BTC despite shrinking profit cushion",
       "link": "https://cointelegraph.com/markets/bitcoin-whales-pile-btc-despite-shrinking-profit-cushion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T19:23:00.000Z",
@@ -116,13 +123,6 @@
       "title": "Binance to launch tokenized IPO program after regulatory approval: Yi He",
       "link": "https://cointelegraph.com/news/binance-ipo-program-regulatory-approval-yi-he?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T13:44:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T13:28:26.000Z",
       "severity": "NORMAL"
     }
   ],
