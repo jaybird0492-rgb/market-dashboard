@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:45:59.624Z",
+  "updatedAt": "2026-11-27T05:00:59.137Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61432,
-      "chg24hPct": 0.79,
+      "price": 61391,
+      "chg24hPct": 0.75,
       "high24h": 61988,
       "low24h": 59845,
-      "fundingPct": 0.0011,
-      "openInterest": 2044.3572,
+      "fundingPct": 0.0014,
+      "openInterest": 2044.3292,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1733.6,
-      "chg24hPct": 1.84,
+      "price": 1732.9,
+      "chg24hPct": 1.85,
       "high24h": 1739.7,
       "low24h": 1665.8,
-      "fundingPct": 0.0003,
-      "openInterest": 31108.527,
+      "fundingPct": 0.0007,
+      "openInterest": 31095.169,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Binance says customer withdrawals are fully restored, four weeks after the $6.3 billion hack",
+      "link": "https://www.coindesk.com/markets/2026/11/27/binance-says-its-withdrawal-suspension-is-over-four-weeks-after-a-usd6-3-billion-hack",
+      "publishedAt": "2026-11-27T04:45:47.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Binance completes withdrawal recovery four weeks after $6.3B hack",
@@ -84,13 +91,6 @@
       "severity": "HIGH"
     },
     {
-      "source": "Cointelegraph",
-      "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
-      "link": "https://cointelegraph.com/markets/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-25T17:53:10.000Z",
-      "severity": "HIGH"
-    },
-    {
       "source": "CoinDesk",
       "title": "'This time actually seems different': Crypto veterans brace for more pain as bitcoin tumbles",
       "link": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles",
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays",
+      "link": "https://cointelegraph.com/news/ethereum-devs-set-glamsterdams-hoodi-rollout-for-mid-december-after-delays?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T04:47:36.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
       "link": "https://www.coindesk.com/tech/2026/11/27/ethereum-s-much-awaited-glamsterdam-upgrade-cleared-for-december-test-here-s-what-to-know",
@@ -116,13 +123,6 @@
       "title": "AI is driving a flood of crypto bug reports. Now it’s helping sort them",
       "link": "https://cointelegraph.com/news/ai-driving-flood-of-crypto-bug-reports-now-helping-sort-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T01:47:38.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero",
-      "link": "https://cointelegraph.com/news/privacy-coins-kucoin-drop-monero-grayscale-zcash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T00:35:39.000Z",
       "severity": "NORMAL"
     }
   ],

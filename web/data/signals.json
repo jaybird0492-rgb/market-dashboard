@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:45:59.315Z",
+  "updatedAt": "2026-11-27T05:00:58.902Z",
   "next4hCloseAt": "2026-11-27T08:00:00.000Z",
   "coins": [
     {
@@ -47,7 +47,6 @@
         "lastBreakout": null
       },
       "series1h": [
-        59222.54,
         59157.43,
         59236,
         58738.33,
@@ -94,14 +93,15 @@
         60696.01,
         60733.31,
         61319.44,
-        61411
+        61411,
+        61419.47
       ],
       "warning1h": {
         "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H is 0.77% below its breakout level",
+        "detail": "1H is 0.75% below its breakout level",
         "level": 61881.03,
-        "asOf": "2026-11-27T03:00:00.000Z",
+        "asOf": "2026-11-27T04:00:00.000Z",
         "stats180d": {
           "events": 123,
           "confirmed": 65,
@@ -154,7 +154,6 @@
         "lastBreakout": null
       },
       "series1h": [
-        1660.33,
         1657.3,
         1660.17,
         1640.95,
@@ -201,14 +200,15 @@
         1701.3,
         1702,
         1722.15,
-        1728.64
+        1728.64,
+        1732.25
       ],
       "warning1h": {
         "state": "APPROACHING",
         "dir": 1,
-        "detail": "1H is 0.60% below its breakout level",
-        "level": 1739.02,
-        "asOf": "2026-11-27T03:00:00.000Z",
+        "detail": "1H is 0.58% below its breakout level",
+        "level": 1742.25,
+        "asOf": "2026-11-27T04:00:00.000Z",
         "stats180d": {
           "events": 106,
           "confirmed": 48,
