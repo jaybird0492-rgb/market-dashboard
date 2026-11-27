@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T17:31:04.710Z",
+  "updatedAt": "2026-11-27T17:45:56.357Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59593,
-      "chg24hPct": -1.32,
+      "price": 59499,
+      "chg24hPct": -1.43,
       "high24h": 62145,
       "low24h": 58726,
       "fundingPct": -0.0012,
-      "openInterest": 2061.6209,
+      "openInterest": 2066.8022,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1663.8,
-      "chg24hPct": -1.5,
+      "price": 1656.8,
+      "chg24hPct": -1.86,
       "high24h": 1752.9,
       "low24h": 1631.6,
       "fundingPct": -0.0015,
-      "openInterest": 34049.153,
+      "openInterest": 34051.909,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "China sets March 2027 rollout for blockchain identity regulations",
+      "link": "https://cointelegraph.com/news/china-march-2027-rollout-blockchain-identity-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T17:37:23.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
       "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T16:48:51.000Z",
@@ -116,13 +123,6 @@
       "title": "Kalshi turns to small businesses as legal battles threaten forecasts on sports",
       "link": "https://www.coindesk.com/business/2026/11/27/kalshi-turns-to-small-businesses-as-legal-battles-threaten-forecasts-on-sports",
       "publishedAt": "2026-11-27T13:19:10.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Brazil’s stock exchange pushes stablecoin launch back to 2027",
-      "link": "https://cointelegraph.com/news/brazil-b3-stablecoin-tokenization-launch-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T12:39:54.000Z",
       "severity": "NORMAL"
     }
   ],
