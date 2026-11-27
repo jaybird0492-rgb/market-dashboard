@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T12:15:54.483Z",
+  "updatedAt": "2026-11-27T12:30:56.419Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61588,
-      "chg24hPct": 1.69,
+      "price": 61462,
+      "chg24hPct": 1.5,
       "high24h": 62145,
       "low24h": 59845,
       "fundingPct": 0,
-      "openInterest": 2042.7367,
+      "openInterest": 2058.2451,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1720.9,
-      "chg24hPct": 1.31,
+      "price": 1717.9,
+      "chg24hPct": 1.06,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0012,
-      "openInterest": 32465.626,
+      "openInterest": 32450.889,
       "src": "Kraken perp"
     }
   ],
@@ -98,6 +98,20 @@
       "severity": "HIGH"
     },
     {
+      "source": "Cointelegraph",
+      "title": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume",
+      "link": "https://cointelegraph.com/news/austria-supervised-crypto-firms-report-204b-h1-volume?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T12:20:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin 'death cross' is coming. Here's what happened after previous 13.",
+      "link": "https://www.coindesk.com/daybook-us/2026/11/27/bitcoin-death-cross-is-coming-here-s-what-happened-after-previous-13",
+      "publishedAt": "2026-11-27T12:16:07.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "CoinDesk",
       "title": "Bitcoin on course to end seven-week losing streak while trailing stock rebound",
       "link": "https://www.coindesk.com/markets/2026/11/27/bitcoin-on-course-to-end-seven-week-losing-streak-while-trailing-stock-rebound",
@@ -109,20 +123,6 @@
       "title": "Live news: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains",
       "link": "https://www.coindesk.com/tech/2026/11/27/live-news-bitcoin-rebounds-above-usd61-000-as-ai-stocks-lead-premarket-gains",
       "publishedAt": "2026-11-27T11:34:37.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin",
-      "link": "https://www.coindesk.com/policy/2026/11/27/next-ecb-chief-favors-tokenized-bank-deposits-over-stablecoins-and-bitcoin",
-      "publishedAt": "2026-11-27T11:22:42.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives",
-      "link": "https://cointelegraph.com/markets/bitcoin-supply-metric-new-capitulation-signal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T11:14:28.000Z",
       "severity": "NORMAL"
     }
   ],
