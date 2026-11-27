@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:15:57.654Z",
+  "updatedAt": "2026-11-27T13:31:02.738Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61386,
-      "chg24hPct": 0.99,
+      "price": 61369,
+      "chg24hPct": 0.96,
       "high24h": 62145,
       "low24h": 59845,
       "fundingPct": 0.0009,
-      "openInterest": 2062.3636,
+      "openInterest": 2039.1745,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1718.7,
-      "chg24hPct": 0.8,
+      "price": 1716.2,
+      "chg24hPct": 0.76,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0009,
-      "openInterest": 32408.772,
+      "openInterest": 32410.592,
       "src": "Kraken perp"
     }
   ],
@@ -91,6 +91,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Kalshi turns to small businesses as legal battles threaten forecasts on sports",
+      "link": "https://www.coindesk.com/business/2026/11/27/kalshi-turns-to-small-businesses-as-legal-battles-threaten-forecasts-on-sports",
+      "publishedAt": "2026-11-27T13:19:10.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Brazil’s stock exchange pushes stablecoin launch back to 2027",
       "link": "https://cointelegraph.com/news/brazil-b3-stablecoin-tokenization-launch-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Bitcoin on course to end seven-week losing streak while trailing stock rebound",
       "link": "https://www.coindesk.com/markets/2026/11/27/bitcoin-on-course-to-end-seven-week-losing-streak-while-trailing-stock-rebound",
       "publishedAt": "2026-11-27T11:45:47.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Live news: Bitcoin rebounds above $61,000 as AI stocks lead premarket gains",
-      "link": "https://www.coindesk.com/tech/2026/11/27/live-news-bitcoin-rebounds-above-usd61-000-as-ai-stocks-lead-premarket-gains",
-      "publishedAt": "2026-11-27T11:34:37.000Z",
       "severity": "NORMAL"
     }
   ],
