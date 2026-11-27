@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T16:45:55.598Z",
+  "updatedAt": "2026-11-27T17:00:55.921Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60218,
-      "chg24hPct": -0.45,
+      "price": 59883,
+      "chg24hPct": -1.06,
       "high24h": 62145,
       "low24h": 58726,
-      "fundingPct": -0.0022,
-      "openInterest": 2039.46,
+      "fundingPct": -0.0012,
+      "openInterest": 2088.7887,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1678.9,
-      "chg24hPct": -0.69,
+      "price": 1667.1,
+      "chg24hPct": -1.52,
       "high24h": 1752.9,
       "low24h": 1631.6,
       "fundingPct": -0.0015,
-      "openInterest": 34165.83,
+      "openInterest": 34165.488,
       "src": "Kraken perp"
     }
   ],
@@ -85,6 +85,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
+      "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T16:48:51.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "What was Coinbase worth while Nasdaq was closed?",
       "link": "https://cointelegraph.com/news/what-was-coinbase-worth-while-nasdaq-was-closed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T14:40:54.000Z",
@@ -116,13 +123,6 @@
       "title": "Brazil’s stock exchange pushes stablecoin launch back to 2027",
       "link": "https://cointelegraph.com/news/brazil-b3-stablecoin-tokenization-launch-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T12:39:54.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume",
-      "link": "https://cointelegraph.com/news/austria-supervised-crypto-firms-report-204b-h1-volume?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T12:20:00.000Z",
       "severity": "NORMAL"
     }
   ],
