@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T12:30:56.419Z",
+  "updatedAt": "2026-11-27T12:46:10.075Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61462,
-      "chg24hPct": 1.5,
+      "price": 61474,
+      "chg24hPct": 0.97,
       "high24h": 62145,
       "low24h": 59845,
       "fundingPct": 0,
-      "openInterest": 2058.2451,
+      "openInterest": 2027.9341,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1717.9,
-      "chg24hPct": 1.06,
+      "price": 1720.3,
+      "chg24hPct": 0.74,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": 0.0012,
-      "openInterest": 32450.889,
+      "openInterest": 32453.31,
       "src": "Kraken perp"
     }
   ],
@@ -78,13 +78,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "1Password hacker stole customer names and emails, but vaults safe",
-      "link": "https://cointelegraph.com/news/1password-hacker-stole-customer-names-and-emails-but-vaults-safe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T04:55:16.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
       "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T17:39:53.000Z",
@@ -96,6 +89,13 @@
       "link": "https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help",
       "publishedAt": "2026-11-26T12:14:46.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Brazil’s stock exchange pushes stablecoin launch back to 2027",
+      "link": "https://cointelegraph.com/news/brazil-b3-stablecoin-tokenization-launch-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T12:39:54.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
