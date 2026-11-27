@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T09:45:58.598Z",
+  "updatedAt": "2026-11-27T10:01:07.891Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61638,
-      "chg24hPct": 1.21,
+      "price": 61532,
+      "chg24hPct": 1.19,
       "high24h": 62145,
       "low24h": 59845,
-      "fundingPct": -0.0009,
-      "openInterest": 2081.3299,
+      "fundingPct": -0.0007,
+      "openInterest": 2083.3268,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1729.1,
-      "chg24hPct": 1.56,
+      "price": 1725.3,
+      "chg24hPct": 1.45,
       "high24h": 1752.9,
       "low24h": 1665.8,
-      "fundingPct": 0.0005,
-      "openInterest": 32413.879,
+      "fundingPct": 0.0008,
+      "openInterest": 32538.173,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Tether can freeze stolen crypto in minutes. Getting it back can take years.",
+      "link": "https://www.coindesk.com/business/2026/11/27/tether-can-freeze-stolen-crypto-in-minutes-getting-it-back-can-take-years",
+      "publishedAt": "2026-11-27T10:00:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "Cointelegraph",
       "title": "Japan’s crypto security group taps SEAL to speed up hack response",
@@ -77,13 +84,6 @@
       "severity": "CRITICAL"
     },
     {
-      "source": "CoinDesk",
-      "title": "South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe",
-      "link": "https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe",
-      "publishedAt": "2026-11-25T14:47:17.000Z",
-      "severity": "CRITICAL"
-    },
-    {
       "source": "Cointelegraph",
       "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
       "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound",
+      "link": "https://www.coindesk.com/markets/2026/11/27/bitcoin-tops-usd61-000-as-nasdaq-futures-extend-wednesday-s-rebound",
+      "publishedAt": "2026-11-27T09:49:55.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
       "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Monero suffers biggest single-day slide in over 5 months. Here’s why",
       "link": "https://www.coindesk.com/markets/2026/11/27/monero-suffers-biggest-single-day-slide-in-over-5-months-here-s-why",
       "publishedAt": "2026-11-27T07:33:01.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "New York AG secures $1.37B court judgment against NovaTech founders",
-      "link": "https://cointelegraph.com/news/new-york-ag-137b-court-judgment-novatech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T07:19:44.000Z",
       "severity": "NORMAL"
     }
   ],
