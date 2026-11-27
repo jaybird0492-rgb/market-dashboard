@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T14:30:59.096Z",
+  "updatedAt": "2026-11-27T14:45:57.957Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61090,
-      "chg24hPct": 0.64,
+      "price": 60033,
+      "chg24hPct": -1.14,
       "high24h": 62145,
-      "low24h": 59845,
+      "low24h": 59735,
       "fundingPct": 0.0004,
-      "openInterest": 2036.3009,
+      "openInterest": 2076.4355,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1713.2,
-      "chg24hPct": 0.76,
+      "price": 1683.8,
+      "chg24hPct": -0.85,
       "high24h": 1752.9,
       "low24h": 1665.8,
       "fundingPct": -0.0002,
-      "openInterest": 32572.157,
+      "openInterest": 31735.596,
       "src": "Kraken perp"
     }
   ],
@@ -71,13 +71,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report",
-      "link": "https://cointelegraph.com/news/uk-fca-defi-regulation-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T05:53:08.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
       "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T17:39:53.000Z",
@@ -89,6 +82,13 @@
       "link": "https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help",
       "publishedAt": "2026-11-26T12:14:46.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "What was Coinbase worth while Nasdaq was closed?",
+      "link": "https://cointelegraph.com/news/what-was-coinbase-worth-while-nasdaq-was-closed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T14:40:54.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
