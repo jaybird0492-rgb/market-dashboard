@@ -1,16 +1,16 @@
 {
   "schema": 3,
-  "updatedAt": "2026-11-27T03:45:54.457Z",
+  "updatedAt": "2026-11-27T04:00:55.760Z",
   "strategy": "4H Donchian 20/10 futures (simulated perps), dual daily gate (longs > SMA50, shorts < SMA200, both in the band), 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "rules": "4H Donchian 20/10 + dual daily gate (long > SMA50, short < SMA200, both in band) + native 4H SMA200 filter, 2.5xATR stop, 0.75% risk/trade, BTC+ETH shared",
   "paperStart": "2026-11-04T16:00:00.000Z",
   "startEquity": 10000,
-  "equity": 10717.89,
+  "equity": 10686.09,
   "realizedEquity": 10758.23,
   "openRiskUsd": 81.1,
   "openRiskPct": 0.76,
   "openNotionalUsd": 1344.65,
-  "drawdownFromPeak": -4.23,
+  "drawdownFromPeak": -4.41,
   "losingStreak": 1,
   "halted": false,
   "killRule": "Halt if drawdown from peak > 25% or 15 consecutive losers",
@@ -22,21 +22,21 @@
       "side": "SHORT",
       "entry": 1640.62,
       "stop": 1739.58,
-      "mark": 1689.85,
-      "markAt": "2026-11-26T20:00:00.000Z",
+      "mark": 1728.64,
+      "markAt": "2026-11-27T00:00:00.000Z",
       "qty": 0.81960044,
       "notionalUsd": 1344.65,
       "riskUsd": 81.1,
       "riskPct": 0.76,
       "stopDistPct": 6.03,
-      "pctToStop": 2.94,
-      "unrealUsd": -40.35,
-      "unrealR": -0.5,
+      "pctToStop": 0.63,
+      "unrealUsd": -72.14,
+      "unrealR": -0.89,
       "openedAt": "2026-11-25T08:00:00.000Z",
-      "barsHeld": 9,
-      "holdHours": 43.77,
+      "barsHeld": 10,
+      "holdHours": 44.02,
       "mfeR": 0.32,
-      "maeR": -0.9
+      "maeR": -0.99
     }
   ],
   "pending": [],
@@ -120,8 +120,8 @@
     "profitFactor": 14.6,
     "totalR": 10.17,
     "totalPnlUsd": 758.23,
-    "netPnlUsd": 717.89,
-    "maxDDPct": -4.23,
+    "netPnlUsd": 686.09,
+    "maxDDPct": -4.41,
     "currentStreak": 1,
     "bestR": 6.99,
     "worstR": -0.69,
@@ -669,8 +669,12 @@
       "equity": 10717.89
     },
     {
-      "t": "2026-11-27T03:45:54.457Z",
-      "equity": 10717.89
+      "t": "2026-11-27T00:00:00.000Z",
+      "equity": 10686.09
+    },
+    {
+      "t": "2026-11-27T04:00:55.760Z",
+      "equity": 10686.09
     }
   ],
   "reference": {
