@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T10:45:55.704Z",
+  "updatedAt": "2026-11-27T11:00:57.324Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 61550,
-      "chg24hPct": 1.88,
+      "price": 61511,
+      "chg24hPct": 1.78,
       "high24h": 62145,
       "low24h": 59845,
-      "fundingPct": -0.0007,
-      "openInterest": 2079.487,
+      "fundingPct": -0.0013,
+      "openInterest": 2084.7527,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1727.2,
-      "chg24hPct": 2.07,
+      "price": 1724.7,
+      "chg24hPct": 1.92,
       "high24h": 1752.9,
       "low24h": 1665.8,
-      "fundingPct": 0.0008,
-      "openInterest": 32258.779,
+      "fundingPct": 0.0007,
+      "openInterest": 32169.106,
       "src": "Kraken perp"
     }
   ],
@@ -105,6 +105,13 @@
       "severity": "HIGH"
     },
     {
+      "source": "CoinDesk",
+      "title": "Brazil’s stock exchange teams up with major banks to launch real-pegged stablecoin",
+      "link": "https://www.coindesk.com/business/2026/11/27/brazil-s-stock-exchange-teams-up-with-major-banks-to-launch-real-pegged-stablecoin",
+      "publishedAt": "2026-11-27T10:51:27.000Z",
+      "severity": "NORMAL"
+    },
+    {
       "source": "Cointelegraph",
       "title": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs",
       "link": "https://cointelegraph.com/news/bluefin-shut-down-perps-refocus-spot-trading-tokenized-rwas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -116,13 +123,6 @@
       "title": "Bitcoin tops $61,000 as Nasdaq futures extend Wednesday’s rebound",
       "link": "https://www.coindesk.com/markets/2026/11/27/bitcoin-tops-usd61-000-as-nasdaq-futures-extend-wednesday-s-rebound",
       "publishedAt": "2026-11-27T09:49:55.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
-      "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T08:04:39.000Z",
       "severity": "NORMAL"
     }
   ],
