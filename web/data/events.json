@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T00:30:55.756Z",
+  "updatedAt": "2026-11-27T00:45:54.431Z",
   "fearGreed": {
     "value": 12,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 60499,
-      "chg24hPct": -0.4,
+      "price": 60673,
+      "chg24hPct": 0.26,
       "high24h": 61064,
       "low24h": 59845,
       "fundingPct": 0.0007,
-      "openInterest": 2108.9353,
+      "openInterest": 2111.5086,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1689.9,
-      "chg24hPct": -0.71,
+      "price": 1698.2,
+      "chg24hPct": 0.23,
       "high24h": 1710.2,
       "low24h": 1665.8,
       "fundingPct": -0.0005,
-      "openInterest": 31254.684,
+      "openInterest": 30941.705,
       "src": "Kraken perp"
     }
   ],
@@ -106,6 +106,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero",
+      "link": "https://cointelegraph.com/news/privacy-coins-kucoin-drop-monero-grayscale-zcash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T00:35:39.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express",
       "link": "https://cointelegraph.com/magazine/very-racist-netflix-sbf-series-bitmarts-319m-shortfall-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T22:39:46.000Z",
@@ -116,13 +123,6 @@
       "title": "Here’s what happened in crypto today",
       "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T22:12:06.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "BNB Chain details new layer-1 for trading, private finance and AI",
-      "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T21:42:43.000Z",
       "severity": "NORMAL"
     }
   ],
