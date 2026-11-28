@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T13:00:56.321Z",
+  "updatedAt": "2026-11-28T13:15:56.965Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59158,
-      "chg24hPct": -3.88,
-      "high24h": 61544,
+      "price": 59157,
+      "chg24hPct": -3.63,
+      "high24h": 61496,
       "low24h": 58726,
       "fundingPct": -0.0003,
-      "openInterest": 2111.0256,
+      "openInterest": 2112.3625,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1645.7,
-      "chg24hPct": -4.47,
+      "price": 1645.8,
+      "chg24hPct": -4.25,
       "high24h": 1726.8,
       "low24h": 1631.6,
       "fundingPct": -0.0006,
-      "openInterest": 33683.217,
+      "openInterest": 33690.342,
       "src": "Kraken perp"
     }
   ],
@@ -68,6 +68,13 @@
       "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T17:39:53.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Bitcoin not delivering: The bear market has digital asset veteran questioning BTC's value",
+      "link": "https://www.coindesk.com/markets/2026/11/28/bitcoin-not-delivering-the-bear-market-has-digital-asset-veteran-questioning-btc-s-value",
+      "publishedAt": "2026-11-28T13:02:18.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
       "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T16:48:51.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "What was Coinbase worth while Nasdaq was closed?",
-      "link": "https://cointelegraph.com/news/what-was-coinbase-worth-while-nasdaq-was-closed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T14:40:54.000Z",
       "severity": "NORMAL"
     }
   ],
