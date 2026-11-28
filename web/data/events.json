@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T09:30:56.051Z",
+  "updatedAt": "2026-11-28T09:45:55.912Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59599,
-      "chg24hPct": -3.31,
-      "high24h": 61787,
+      "price": 59486,
+      "chg24hPct": -3.49,
+      "high24h": 61749,
       "low24h": 58726,
       "fundingPct": -0.0007,
-      "openInterest": 2038.7531,
+      "openInterest": 2039.5608,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1651,
-      "chg24hPct": -4.58,
-      "high24h": 1734.8,
+      "price": 1648.4,
+      "chg24hPct": -4.67,
+      "high24h": 1730.7,
       "low24h": 1631.6,
       "fundingPct": -0.0016,
-      "openInterest": 31251.483,
+      "openInterest": 31257.32,
       "src": "Kraken perp"
     }
   ],
@@ -61,6 +61,13 @@
       "link": "https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information",
       "publishedAt": "2026-11-26T12:38:51.000Z",
       "severity": "CRITICAL"
+    },
+    {
+      "source": "CoinDesk",
+      "title": "Trump-linked crypto token WLFI plunges 50% to record lows",
+      "link": "https://www.coindesk.com/markets/2026/11/28/trump-linked-crypto-token-wlfi-plunges-over-50",
+      "publishedAt": "2026-11-28T09:32:51.000Z",
+      "severity": "HIGH"
     },
     {
       "source": "Cointelegraph",
@@ -116,13 +123,6 @@
       "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
       "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T16:48:51.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "What was Coinbase worth while Nasdaq was closed?",
-      "link": "https://cointelegraph.com/news/what-was-coinbase-worth-while-nasdaq-was-closed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T14:40:54.000Z",
       "severity": "NORMAL"
     }
   ],
