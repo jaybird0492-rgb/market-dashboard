@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T13:48:02.069Z",
+  "updatedAt": "2026-11-28T14:01:04.698Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,26 +7,33 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 58990,
-      "chg24hPct": -3.99,
-      "high24h": 61496,
+      "price": 59077,
+      "chg24hPct": -3.76,
+      "high24h": 61453,
       "low24h": 58726,
-      "fundingPct": -0.0003,
-      "openInterest": 2120.8225,
+      "fundingPct": -0.0004,
+      "openInterest": 2108.8998,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1638.4,
-      "chg24hPct": -4.92,
-      "high24h": 1726.8,
+      "price": 1640.9,
+      "chg24hPct": -4.71,
+      "high24h": 1724.5,
       "low24h": 1631.6,
-      "fundingPct": -0.0006,
-      "openInterest": 34025.862,
+      "fundingPct": -0.0005,
+      "openInterest": 34017.275,
       "src": "Kraken perp"
     }
   ],
   "headlines": [
+    {
+      "source": "CoinDesk",
+      "title": "Bybit’s $1.4 billion hack postmortem is ready. You won’t get to see it.",
+      "link": "https://www.coindesk.com/business/2026/11/28/bybit-s-usd1-4-billion-hack-postmortem-is-ready-you-won-t-get-to-see-it",
+      "publishedAt": "2026-11-28T14:00:00.000Z",
+      "severity": "CRITICAL"
+    },
     {
       "source": "CoinDesk",
       "title": "Tether can freeze stolen crypto in minutes. Getting it back can take years.",
@@ -116,13 +123,6 @@
       "title": "Bitcoin whales pile into BTC despite shrinking profit cushion",
       "link": "https://cointelegraph.com/markets/bitcoin-whales-pile-btc-despite-shrinking-profit-cushion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T19:23:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "China sets March 2027 rollout for blockchain identity regulations",
-      "link": "https://cointelegraph.com/news/china-march-2027-rollout-blockchain-identity-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T17:37:23.000Z",
       "severity": "NORMAL"
     }
   ],
