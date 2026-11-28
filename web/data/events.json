@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T14:01:04.698Z",
+  "updatedAt": "2026-11-28T14:15:55.583Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59077,
-      "chg24hPct": -3.76,
-      "high24h": 61453,
+      "price": 59131,
+      "chg24hPct": -3.66,
+      "high24h": 61415,
       "low24h": 58726,
       "fundingPct": -0.0004,
-      "openInterest": 2108.8998,
+      "openInterest": 2114.4418,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1640.9,
-      "chg24hPct": -4.71,
-      "high24h": 1724.5,
+      "price": 1643.1,
+      "chg24hPct": -4.53,
+      "high24h": 1722.9,
       "low24h": 1631.6,
       "fundingPct": -0.0005,
-      "openInterest": 34017.275,
+      "openInterest": 34012.418,
       "src": "Kraken perp"
     }
   ],
@@ -78,6 +78,13 @@
     },
     {
       "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-28T13:55:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
       "title": "Justin Sun calls for Trump family-linked WLFI token to be delisted",
       "link": "https://cointelegraph.com/news/justin-sun-calls-for-trump-family-linked-wlfi-token-to-be-delisted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-28T13:28:00.000Z",
@@ -102,13 +109,6 @@
       "title": "Binance plans Asia hub in Bhutan, receives preliminary approval",
       "link": "https://cointelegraph.com/news/binance-receives-in-principle-approval-plans-asia-hub-in-bhutan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-28T07:43:00.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T22:12:51.000Z",
       "severity": "NORMAL"
     },
     {
