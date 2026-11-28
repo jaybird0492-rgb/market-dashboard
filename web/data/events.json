@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T07:45:57.354Z",
+  "updatedAt": "2026-11-28T08:00:54.711Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59721,
-      "chg24hPct": -2.84,
+      "price": 59795,
+      "chg24hPct": -2.88,
       "high24h": 62145,
       "low24h": 58726,
-      "fundingPct": 0.0001,
-      "openInterest": 2075.9849,
+      "fundingPct": -0.0008,
+      "openInterest": 2078.2099,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1655.6,
-      "chg24hPct": -4.13,
+      "price": 1657.2,
+      "chg24hPct": -4.26,
       "high24h": 1741.9,
       "low24h": 1631.6,
-      "fundingPct": -0.001,
-      "openInterest": 30978.431,
+      "fundingPct": -0.0011,
+      "openInterest": 30987.446,
       "src": "Kraken perp"
     }
   ],
@@ -64,13 +64,6 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Standard Chartered’s Zodia Custody suffers data breach",
-      "link": "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T11:37:06.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "Cointelegraph",
       "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
       "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T17:39:53.000Z",
@@ -82,6 +75,13 @@
       "link": "https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help",
       "publishedAt": "2026-11-26T12:14:46.000Z",
       "severity": "HIGH"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance receives in-principle approval, plans Asia hub in Bhutan",
+      "link": "https://cointelegraph.com/news/binance-receives-in-principle-approval-plans-asia-hub-in-bhutan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-28T07:43:00.000Z",
+      "severity": "NORMAL"
     },
     {
       "source": "Cointelegraph",
