@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T12:30:55.487Z",
+  "updatedAt": "2026-11-28T12:45:54.409Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59261,
-      "chg24hPct": -3.58,
+      "price": 59163,
+      "chg24hPct": -3.75,
       "high24h": 61563,
       "low24h": 58726,
       "fundingPct": -0.0007,
-      "openInterest": 2103.7825,
+      "openInterest": 2108.9893,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1649.9,
-      "chg24hPct": -3.97,
+      "price": 1646.8,
+      "chg24hPct": -4.26,
       "high24h": 1726.8,
       "low24h": 1631.6,
       "fundingPct": -0.0006,
-      "openInterest": 33673.467,
+      "openInterest": 33682.225,
       "src": "Kraken perp"
     }
   ],
@@ -53,13 +53,6 @@
       "title": "Binance completes withdrawal recovery four weeks after $6.3B hack",
       "link": "https://cointelegraph.com/news/binance-completes-withdrawal-recovery-four-weeks-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-26T21:33:47.000Z",
-      "severity": "CRITICAL"
-    },
-    {
-      "source": "CoinDesk",
-      "title": "Standard Chartered's Zodia Custody suffers data breach, exposing client information",
-      "link": "https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information",
-      "publishedAt": "2026-11-26T12:38:51.000Z",
       "severity": "CRITICAL"
     },
     {
@@ -123,6 +116,13 @@
       "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
       "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T16:48:51.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "What was Coinbase worth while Nasdaq was closed?",
+      "link": "https://cointelegraph.com/news/what-was-coinbase-worth-while-nasdaq-was-closed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T14:40:54.000Z",
       "severity": "NORMAL"
     }
   ],
