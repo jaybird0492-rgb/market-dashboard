@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T10:31:01.136Z",
+  "updatedAt": "2026-11-28T10:45:54.738Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,22 +7,22 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59304,
-      "chg24hPct": -3.83,
+      "price": 59156,
+      "chg24hPct": -3.89,
       "high24h": 61749,
       "low24h": 58726,
       "fundingPct": -0.0005,
-      "openInterest": 2084.9273,
+      "openInterest": 2090.2346,
       "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1652.2,
-      "chg24hPct": -4.45,
+      "price": 1647.7,
+      "chg24hPct": -4.6,
       "high24h": 1729.7,
       "low24h": 1631.6,
       "fundingPct": -0.0013,
-      "openInterest": 32836.123,
+      "openInterest": 32944.602,
       "src": "Kraken perp"
     }
   ],
@@ -85,7 +85,14 @@
     },
     {
       "source": "Cointelegraph",
-      "title": "Binance receives in-principle approval, plans Asia hub in Bhutan",
+      "title": "ASEAN+3 agrees on initiative to explore crypto payments cooperation",
+      "link": "https://cointelegraph.com/news/asean3-agrees-on-initiative-to-explore-crypto-payments-cooperation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-28T10:31:00.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Binance plans Asia hub in Bhutan, receives preliminary approval",
       "link": "https://cointelegraph.com/news/binance-receives-in-principle-approval-plans-asia-hub-in-bhutan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-28T07:43:00.000Z",
       "severity": "NORMAL"
@@ -116,13 +123,6 @@
       "title": "China sets March 2027 rollout for blockchain identity regulations",
       "link": "https://cointelegraph.com/news/china-march-2027-rollout-blockchain-identity-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T17:37:23.000Z",
-      "severity": "NORMAL"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
-      "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-27T16:48:51.000Z",
       "severity": "NORMAL"
     }
   ],
