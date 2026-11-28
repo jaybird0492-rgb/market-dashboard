@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T17:30:55.959Z",
+  "updatedAt": "2026-11-28T17:45:55.243Z",
   "fearGreed": {
     "value": 10,
     "label": "Extreme Fear"
@@ -7,23 +7,23 @@
   "market": [
     {
       "sym": "BTC",
-      "price": 59478,
-      "chg24hPct": -0.2,
-      "high24h": 60245.2,
-      "low24h": 58885.8,
-      "fundingPct": 0.0002,
-      "openInterest": 70205.373,
-      "src": "Bybit perp"
+      "price": 59300,
+      "chg24hPct": -0.34,
+      "high24h": 60208,
+      "low24h": 58880,
+      "fundingPct": -0.0004,
+      "openInterest": 2175.589,
+      "src": "Kraken perp"
     },
     {
       "sym": "ETH",
-      "price": 1649.85,
-      "chg24hPct": -0.83,
-      "high24h": 1674.91,
-      "low24h": 1633.36,
-      "fundingPct": -0.0022,
-      "openInterest": 780176.34,
-      "src": "Bybit perp"
+      "price": 1643.5,
+      "chg24hPct": -0.81,
+      "high24h": 1673.9,
+      "low24h": 1632.7,
+      "fundingPct": -0.0004,
+      "openInterest": 34709.976,
+      "src": "Kraken perp"
     }
   ],
   "headlines": [
@@ -67,13 +67,6 @@
       "title": "Trump-linked crypto token WLFI plunges 50% to record lows",
       "link": "https://www.coindesk.com/markets/2026/11/28/trump-linked-crypto-token-wlfi-plunges-over-50",
       "publishedAt": "2026-11-28T09:32:51.000Z",
-      "severity": "HIGH"
-    },
-    {
-      "source": "Cointelegraph",
-      "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
-      "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-26T17:39:53.000Z",
       "severity": "HIGH"
     },
     {
@@ -123,6 +116,13 @@
       "title": "Franklin Templeton makes room for HYPE in crypto index ETF",
       "link": "https://cointelegraph.com/news/franklin-templeton-hype-crypto-index-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-27T21:15:29.000Z",
+      "severity": "NORMAL"
+    },
+    {
+      "source": "Cointelegraph",
+      "title": "Bitcoin whales pile into BTC despite shrinking profit cushion",
+      "link": "https://cointelegraph.com/markets/bitcoin-whales-pile-btc-despite-shrinking-profit-cushion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-27T19:23:00.000Z",
       "severity": "NORMAL"
     }
   ],
